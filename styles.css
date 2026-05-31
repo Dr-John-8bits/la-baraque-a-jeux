@@ -250,6 +250,39 @@ h2 {
   color: #fffdf7;
 }
 
+.about-section {
+  border-top: 1px solid var(--line);
+  background: #fffaf1;
+}
+
+.about-section__inner {
+  width: min(820px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 42px 0 48px;
+}
+
+.about-section .eyebrow {
+  color: var(--red);
+}
+
+.about-section h2 {
+  max-width: 680px;
+  margin-top: 6px;
+}
+
+.about-section__text {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  color: #444b50;
+  font-size: 1.04rem;
+  line-height: 1.68;
+}
+
+.about-section__text p {
+  margin: 0;
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -311,6 +344,16 @@ h2 {
 
   .game-card__body {
     padding: 20px;
+  }
+
+  .about-section__inner {
+    width: min(100% - 32px, 820px);
+    padding: 34px 0 38px;
+  }
+
+  .about-section__text {
+    font-size: 1rem;
+    line-height: 1.62;
   }
 
   .game-card--word .game-card__visual {
