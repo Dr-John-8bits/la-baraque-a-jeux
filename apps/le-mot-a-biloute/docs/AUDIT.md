@@ -1,14 +1,14 @@
 # Audit complet du jeu
 
-Version auditée : `26.06.01.4`
+Version auditée : `26.06.01.5`
 
 ## Résumé
 
-**Le mot à Biloute** dispose déjà d'une base solide : le jeu est jouable, mobile-first, sans backend, avec score, Rab de Biloute, coups d'pouce, sauvegarde locale, partage, PWA minimale et documentation projet.
+**Le mot à Biloute** dispose déjà d'une base solide : le jeu est jouable, mobile-first, sans backend, avec score, Rab de Biloute, coups d'pouce, archives, sauvegarde locale, partage, PWA minimale et documentation projet.
 
 Le prochain cap consiste à sortir du prototype éditorial court pour devenir un vrai jeu quotidien durable. Cela demande deux chantiers menés en parallèle :
 
-- **Technique** : enrichir les données extraites dans le corpus commun, préparer une validation stricte des propositions, finaliser les assets dédiés et renforcer les tests.
+- **Technique** : enrichir les données extraites dans le corpus commun, durcir progressivement la liste de propositions acceptées, finaliser les assets dédiés et renforcer les tests.
 - **Éditorial** : construire un corpus vérifié, local, riche, équilibré et exploitable par le moteur.
 
 ## État actuel
@@ -24,9 +24,13 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 - Score basé sur essais et coups d'pouce, avec détail en fin de partie.
 - Bonus final.
 - Statistiques locales avec taux de réussite et historique simple.
+- Graphique de performance et import/export du calepin.
 - Partage avec score et URL publique.
 - Navigation globale commune.
-- Validation des propositions en mode découverte.
+- Validation stricte locale des propositions.
+- Mode archive sans impact sur les statistiques officielles.
+- Compte à rebours du prochain mot.
+- Animation de révélation lettre par lettre.
 - Labels accessibles enrichis sur les cases validées.
 - Métadonnées sociales, manifeste PWA et `404.html`.
 - Versioning public centralisé dans le blog mutualisé.
@@ -50,7 +54,7 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 - Application statique.
 - Pas de build.
 - Pas de framework.
-- Données chargées depuis `../../packages/corpus/le-mot-a-biloute/words.json`.
+- Données chargées depuis `../../packages/corpus/le-mot-a-biloute/words.json` et `accepted-guesses.json`.
 - Stockage dans `localStorage`.
 - Tests manuels et Playwright possibles via `window.render_game_to_text()`.
 
@@ -84,18 +88,17 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 
 ### Contenu
 
-- Corpus actuel trop court : 10 mots.
-- Séparation moteur/corpus réalisée, mais le corpus reste à enrichir.
+- Corpus actuel encore trop court pour une année complète : 40 mots, soit 20 jours à deux mots par jour.
+- Séparation moteur/corpus réalisée, mais le corpus reste à enrichir fortement.
 - Validation automatique des mots en place dans le monorepo.
-- Politique de validation des propositions isolée dans `guess-policy.json`, mais pas encore alimentée par un dictionnaire complet.
+- Politique de validation des propositions alimentée par une liste locale générée, encore à relire et enrichir.
 - Sources documentaires partiellement associées aux mots.
 - Pas de gestion riche des variantes orthographiques.
 
 ### Gameplay
 
-- Le mode découverte bloque les suites les plus absurdes, mais accepte encore des propositions qui ne sont pas de vrais mots.
+- Le mode strict local peut refuser des mots français valides qui ne sont pas encore dans le corpus accepté.
 - Les mots de longueurs différentes changent la taille de la grille, ce qui peut compliquer l'équilibrage.
-- Pas encore de mode archive.
 - Pas encore d'expérience en cas de retour le lendemain après une série.
 
 ### Accessibilité
@@ -138,7 +141,7 @@ Objectif : accueillir ton corpus documentaire sans dette technique.
 - Définir les champs obligatoires d'un mot.
 - Gérer les variantes acceptées.
 - Classer les mots par thème, difficulté, longueur et type.
-- Préparer une archive de mots déjà joués.
+- Enrichir et relire la liste de propositions acceptées.
 - Maintenir le panneau de règles intégré.
 - Ajouter un indicateur de difficulté.
 
@@ -150,7 +153,6 @@ Objectif : augmenter le plaisir de retour quotidien.
 - Continuer à améliorer l'écran de fin.
 - Transformer le calepin en vraie page stats si nécessaire.
 - Étendre l'historique local.
-- Ajouter un mode archive.
 - Prévoir un mode chronométré séparé, pas dans le score principal.
 
 ## P3 — Préparer lancement public
@@ -174,13 +176,13 @@ Raison : c'est confortable sur mobile et compatible avec une grille stable.
 
 ### Dictionnaire de saisie
 
-Trois options :
+Trois options étudiées :
 
 - mode découverte permissif mais cadré ;
 - liste locale de propositions acceptées ;
 - dictionnaire strict.
 
-Décision actuelle : mode découverte permissif mais cadré. Recommandation MVP public : ajouter une liste de mots acceptés par longueur, afin d'éviter les suites de lettres absurdes sans exclure les mots régionaux du corpus.
+Décision actuelle : validation stricte via une liste locale de propositions acceptées. Cette liste est générée depuis le corpus traité et doit rester facilement enrichissable quand un mot légitime manque.
 
 ### Indices
 
@@ -234,9 +236,8 @@ Le fichier de référence pour ce chantier est [EDITORIAL_CORPUS_REQUEST.md](EDI
 
 ## Prochaine séquence recommandée
 
-1. Ajouter 20 mots fournis par le corpus éditorial dans `../../packages/corpus/le-mot-a-biloute/words.json`.
-2. Associer les mots à des sources communes quand c'est possible.
-3. Alimenter une liste de propositions acceptées par longueur.
+1. Porter le corpus à au moins 730 mots relus pour tenir 2 mots par jour pendant une année.
+2. Associer les nouveaux mots à des sources communes.
+3. Enrichir la liste de propositions acceptées quand les tests joueurs révèlent des manques.
 4. Tester longueurs, variantes et coups d'pouce.
-5. Étendre les tests navigateur sur une partie complète.
-6. Préparer une version `0.2` avec 30 mots propres.
+5. Étendre les tests navigateur sur une partie complète avec archive et import/export.

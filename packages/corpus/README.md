@@ -6,6 +6,7 @@ Source de verite editoriale commune au portail et aux jeux.
 
 - `sources.json` : registre commun des sources documentaires.
 - `le-mot-a-biloute/words.json` : mots, indices et bonus du Mot a Biloute.
+- `le-mot-a-biloute/accepted-guesses.json` : propositions acceptees pour le Mot a Biloute, separees des reponses du jour.
 - `lille-mele/puzzles.json` : grilles, familles et bonus de Lille-Mele.
 - `schema/` : schemas de reference pour cadrer les donnees.
 

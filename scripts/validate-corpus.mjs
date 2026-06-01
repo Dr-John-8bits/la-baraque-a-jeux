@@ -5,11 +5,13 @@ const errors = [];
 const sources = await readJson("packages/corpus/sources.json");
 const words = await readJson("packages/corpus/le-mot-a-biloute/words.json");
 const guessPolicy = await readJson("packages/corpus/le-mot-a-biloute/guess-policy.json");
+const acceptedGuesses = await readJson("packages/corpus/le-mot-a-biloute/accepted-guesses.json");
 const puzzles = await readJson("packages/corpus/lille-mele/puzzles.json");
 
 const sourceIds = validateSources(sources);
 validateWords(words, sourceIds);
 validateGuessPolicy(guessPolicy);
+validateAcceptedGuesses(acceptedGuesses, sourceIds);
 validatePuzzles(puzzles, sourceIds);
 
 if (errors.length > 0) {
@@ -121,6 +123,18 @@ function validateGuessPolicy(value) {
     requireString(value.messages.unknown, "guessPolicy.messages.unknown", { max: 100 });
   }
   requireAnswerArray(value.words, "guessPolicy.words", { min: 0 });
+}
+
+function validateAcceptedGuesses(value, sourceIds) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push("packages/corpus/le-mot-a-biloute/accepted-guesses.json doit etre un objet.");
+    return;
+  }
+
+  requireDate(value.generatedAt, "acceptedGuesses.generatedAt");
+  requireString(value.description, "acceptedGuesses.description", { max: 320 });
+  requireSourceRefs(value.sourceIds, "acceptedGuesses.sourceIds", sourceIds);
+  requireAnswerArray(value.words, "acceptedGuesses.words", { min: 1 });
 }
 
 function validatePuzzles(value, sourceIds) {

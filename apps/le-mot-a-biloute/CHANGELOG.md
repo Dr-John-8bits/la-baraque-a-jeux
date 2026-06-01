@@ -4,6 +4,14 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## 26.06.01.5
+
+- Ajout d'une liste séparée de propositions acceptées, générée depuis le corpus traité.
+- Passage de la validation en mode strict local.
+- Ajout du mode archive, du compte à rebours, de la révélation flip lettre par lettre.
+- Enrichissement du calepin avec import/export JSON et graphique de performance.
+- Exclusion du dossier temporaire `POUR INSPIRATION/` du versionnement.
+
 ## 26.06.01.4
 
 - Ajout de sources web explicites pour vocabulaire ch'ti, gastronomie et bières du Nord.

@@ -27,16 +27,18 @@ Le jeu se joue directement dans le navigateur, sur mobile en priorité, sans com
 9. S'il échoue après 6 essais, la série est perdue et le Rab de Biloute commence.
 10. Dans le Rab de Biloute, il peut continuer à proposer des mots jusqu'à trouver.
 11. Il découvre le bonus local et le détail du score.
-12. Il peut partager son résultat.
+12. Il voit le compte à rebours du prochain mot.
+13. Il peut partager son résultat.
+14. Il peut rejouer une ancienne date en mode archive, hors statistiques officielles.
 
 ## Validation des propositions
 
-La version actuelle utilise un **mode découverte** défini dans `packages/corpus/le-mot-a-biloute/guess-policy.json`.
+La version actuelle utilise un **mode strict local** défini dans `packages/corpus/le-mot-a-biloute/guess-policy.json`.
 
-- Le jeu accepte les propositions plausibles de la bonne longueur.
-- Il refuse les suites manifestement non jouables, par exemple une même lettre répétée partout ou une proposition sans voyelle ni `Y`.
-- Les réponses acceptées du mot du jour restent toujours valides.
-- Le mode pourra passer en `strict` quand un dictionnaire ou une liste de propositions validées sera fourni avec le corpus éditorial.
+- `words.json` contient uniquement les réponses du jour relues.
+- `accepted-guesses.json` contient les propositions acceptées, générées depuis les réponses relues et le corpus documentaire traité.
+- Les réponses acceptées du mot du jour restent toujours valides, même si elles ne figurent pas encore dans la liste générée.
+- Les suites manifestement non jouables restent bloquées par les règles de `guess-policy.json`.
 
 ## Scoring
 
@@ -50,6 +52,12 @@ Score de base : 1000 points.
 - Série : elle progresse uniquement en cas de victoire dans les 6 essais officiels ; elle est perdue dès l'entrée dans le Rab de Biloute.
 
 Le temps ne fait pas partie du score principal.
+
+## Archive et calepin
+
+- Le mode archive permet de rejouer une ancienne date depuis le 1er janvier 2026.
+- Une partie d'archive ne modifie ni série, ni meilleur score, ni historique officiel.
+- Le calepin local affiche un historique court, un graphique de performance, et peut être exporté/importé en JSON.
 
 ## Partage
 
@@ -75,6 +83,6 @@ https://exemple.fr/le-mot-a-biloute/
 
 ## Version
 
-Version courante : `26.06.01.4`.
+Version courante : `26.06.01.5`.
 
 Le format est `AA.MM.JJ.i`.

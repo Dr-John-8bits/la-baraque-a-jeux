@@ -82,7 +82,7 @@
         </div>
       </section>
 
-      <section class="utility-actions" aria-label="Règles et statistiques">
+      <section class="utility-actions" aria-label="Règles, archives et statistiques">
         <button
           class="utility-button utility-button--help"
           id="helpButton"
@@ -91,6 +91,15 @@
           title="Règles du jeu"
         >
           Hein ?
+        </button>
+        <button
+          class="utility-button utility-button--archive"
+          id="archiveButton"
+          type="button"
+          aria-label="Ouvrir les archives"
+          title="Archives"
+        >
+          Archives
         </button>
         <button
           class="utility-button utility-button--stats"
@@ -126,6 +135,7 @@
           <h2 id="resultTitle">Réponse</h2>
           <p class="result-summary" id="resultSummary"></p>
           <dl class="result-details" id="resultDetails" aria-label="Détails du résultat"></dl>
+          <p class="next-word-countdown" id="nextWordCountdown"></p>
           <div class="bonus">
             <p class="label">Bonus local</p>
             <h3 id="bonusTitle"></h3>
@@ -189,10 +199,32 @@
             </section>
             <section>
               <h3>Propositions</h3>
-              <p>Pour l'instant, le jeu est en mode découverte : il accepte les propositions plausibles de bonne longueur et bloque surtout les suites de lettres manifestement non jouables.</p>
+              <p>Les réponses du jour viennent d'une liste relue. Les propositions sont vérifiées dans une liste locale issue du corpus, séparée des réponses.</p>
             </section>
           </div>
           <div class="dialog-actions dialog-actions--single">
+            <button value="close">Fermer</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog class="result-dialog archive-dialog" id="archiveDialog" aria-labelledby="archiveTitle">
+        <form method="dialog">
+          <p class="eyebrow">Archives</p>
+          <h2 id="archiveTitle">Rejouer une ancienne partie</h2>
+          <div class="archive-picker" aria-live="polite">
+            <button id="archivePrevButton" type="button" aria-label="Jour précédent">‹</button>
+            <div>
+              <p class="archive-date" id="archiveDateLabel"></p>
+              <p class="archive-meta" id="archiveWordMeta"></p>
+            </div>
+            <button id="archiveNextButton" type="button" aria-label="Jour suivant">›</button>
+          </div>
+          <div class="dialog-actions">
+            <button id="archivePlayButton" type="button">Jouer</button>
+            <button id="archiveTodayButton" type="button">Aujourd'hui</button>
+          </div>
+          <div class="dialog-actions dialog-actions--single archive-close">
             <button value="close">Fermer</button>
           </div>
         </form>
@@ -202,6 +234,27 @@
         <form method="dialog">
           <p class="eyebrow">Stats locales</p>
           <h2 id="statsTitle">Ton calepin</h2>
+          <div class="calepin-tools" aria-label="Importer ou exporter le calepin">
+            <button
+              class="icon-tool"
+              id="exportStatsButton"
+              type="button"
+              aria-label="Exporter le calepin"
+              title="Exporter le calepin"
+            >
+              <span aria-hidden="true">↓</span>
+            </button>
+            <button
+              class="icon-tool"
+              id="importStatsButton"
+              type="button"
+              aria-label="Importer le calepin"
+              title="Importer le calepin"
+            >
+              <span aria-hidden="true">↑</span>
+            </button>
+            <input id="importStatsInput" type="file" accept="application/json" />
+          </div>
           <dl class="stats-list">
             <div>
               <dt>Parties</dt>
@@ -227,6 +280,10 @@
           <section class="history-block" aria-labelledby="historyTitle">
             <h3 id="historyTitle">Dernières parties</h3>
             <ol id="statHistory"></ol>
+          </section>
+          <section class="performance-block" aria-labelledby="performanceTitle">
+            <h3 id="performanceTitle">Performance</h3>
+            <div class="performance-chart" id="performanceChart"></div>
           </section>
           <div class="dialog-actions dialog-actions--single">
             <button value="close">Fermer</button>

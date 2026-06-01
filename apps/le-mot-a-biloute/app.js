@@ -3,8 +3,9 @@ import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
-const APP_VERSION = "26.06.01.4";
+const APP_VERSION = "26.06.01.5";
 const GAME_URL = new URL(".", window.location.href).href;
+const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
 const BASE_SCORE = 1000;
@@ -16,9 +17,13 @@ const RECOVERY_RESUME_LABEL = "Prendre du rab";
 
 const WORDS = await fetchJson("../../packages/corpus/le-mot-a-biloute/words.json");
 const GUESS_POLICY = await fetchJson("../../packages/corpus/le-mot-a-biloute/guess-policy.json");
+const ACCEPTED_GUESSES = await fetchJson(
+  "../../packages/corpus/le-mot-a-biloute/accepted-guesses.json"
+);
 
 const MAX_GUESSES = 6;
 const STORAGE_PREFIX = "mot-a-biloute";
+const statsKey = `${STORAGE_PREFIX}:stats`;
 const KEYBOARD_ROWS = [
   ["A", "Z", "E", "R", "T", "Y", "U", "I", "O", "P"],
   ["Q", "S", "D", "F", "G", "H", "J", "K", "L", "M"],
@@ -49,65 +54,53 @@ const els = {
   resultDetails: document.getElementById("resultDetails"),
   bonusTitle: document.getElementById("bonusTitle"),
   bonusText: document.getElementById("bonusText"),
+  nextWordCountdown: document.getElementById("nextWordCountdown"),
   dialogShareButton: document.getElementById("dialogShareButton"),
   helpButton: document.getElementById("helpButton"),
   helpDialog: document.getElementById("helpDialog"),
+  archiveButton: document.getElementById("archiveButton"),
+  archiveDialog: document.getElementById("archiveDialog"),
+  archivePrevButton: document.getElementById("archivePrevButton"),
+  archiveNextButton: document.getElementById("archiveNextButton"),
+  archiveDateLabel: document.getElementById("archiveDateLabel"),
+  archiveWordMeta: document.getElementById("archiveWordMeta"),
+  archivePlayButton: document.getElementById("archivePlayButton"),
+  archiveTodayButton: document.getElementById("archiveTodayButton"),
   statsButton: document.getElementById("statsButton"),
   statsDialog: document.getElementById("statsDialog"),
+  exportStatsButton: document.getElementById("exportStatsButton"),
+  importStatsButton: document.getElementById("importStatsButton"),
+  importStatsInput: document.getElementById("importStatsInput"),
   statPlayed: document.getElementById("statPlayed"),
   statWon: document.getElementById("statWon"),
   statStreak: document.getElementById("statStreak"),
   statBestScore: document.getElementById("statBestScore"),
   statWinRate: document.getElementById("statWinRate"),
   statHistory: document.getElementById("statHistory"),
+  performanceChart: document.getElementById("performanceChart"),
 };
 
 const todayId = getBilouteDateId();
-const word = selectDailyItem(WORDS, todayId, { epochId: "2026-01-01" });
-const wordLength = word.answer.length;
-const acceptedAnswers = word.acceptedAnswers.map(normalize);
-const gameKey = `${STORAGE_PREFIX}:game:${todayId}:${word.id}`;
-const statsKey = `${STORAGE_PREFIX}:stats`;
-const loadedGame = loadGame();
-let showRecoveryResumeAction = loadedGame?.result === "recovery";
+let activeDateId = todayId;
+let archiveMode = false;
+let archiveSelectedDateId = todayId;
+let word = null;
+let wordLength = 0;
+let acceptedAnswers = [];
+let acceptedGuessSet = new Set();
+let gameKey = "";
+let showRecoveryResumeAction = false;
 let primaryActionMode = null;
+let revealRowIndex = null;
+let revealCleanupTimer = null;
+let state = null;
 
-const state = loadedGame || {
-  guesses: [],
-  current: "",
-  statuses: [],
-  keyStatuses: {},
-  starterHintSeen: false,
-  extraHintsUsed: 0,
-  startedAt: Date.now(),
-  endedAt: null,
-  result: "playing",
-  score: null,
-  shareText: "",
-  officialResultRecorded: false,
-  recoveryPromptSeen: false,
-  recoveryStartedAt: null,
-};
-
-state.extraHintsUsed = Number.isInteger(state.extraHintsUsed)
-  ? state.extraHintsUsed
-  : state.hintUsed
-    ? 1
-    : 0;
-state.starterHintSeen = Boolean(state.starterHintSeen || state.extraHintsUsed > 0);
-state.officialResultRecorded = Boolean(
-  state.officialResultRecorded || ["won", "lost", "recovered"].includes(state.result)
-);
-state.recoveryPromptSeen = Boolean(state.recoveryPromptSeen);
-state.recoveryStartedAt = state.recoveryStartedAt || null;
-if (!isGameActive()) {
-  state.score = state.score ?? calculateScore(state.result);
-  state.shareText = buildShareText();
-}
+activateDate(todayId);
 
 render();
 bindEvents();
 scheduleDailyRefresh();
+scheduleCountdownRefresh();
 
 function bindEvents() {
   document.addEventListener("keydown", (event) => {
@@ -145,13 +138,83 @@ function bindEvents() {
   els.helpButton.addEventListener("click", () => {
     els.helpDialog.showModal();
   });
+  els.archiveButton.addEventListener("click", openArchiveDialog);
+  els.archivePrevButton.addEventListener("click", () => moveArchiveSelection(-1));
+  els.archiveNextButton.addEventListener("click", () => moveArchiveSelection(1));
+  els.archivePlayButton.addEventListener("click", playSelectedArchive);
+  els.archiveTodayButton.addEventListener("click", returnToToday);
   els.statsButton.addEventListener("click", () => {
     renderStats();
     els.statsDialog.showModal();
   });
+  els.exportStatsButton.addEventListener("click", exportStats);
+  els.importStatsButton.addEventListener("click", () => els.importStatsInput.click());
+  els.importStatsInput.addEventListener("change", importStats);
 
   window.advanceTime = () => render();
   window.render_game_to_text = renderGameToText;
+}
+
+function activateDate(dateId, options = {}) {
+  activeDateId = dateId;
+  archiveMode = Boolean(options.archive && dateId !== todayId);
+  word = selectDailyItem(WORDS, activeDateId, { epochId: DAILY_EPOCH_ID });
+  wordLength = word.answer.length;
+  acceptedAnswers = word.acceptedAnswers.map(normalize);
+  acceptedGuessSet = buildAcceptedGuessSet();
+  gameKey = `${STORAGE_PREFIX}:game:${activeDateId}:${word.id}`;
+
+  const loadedGame = archiveMode ? null : loadGame();
+  state = hydrateGameState(loadedGame || createInitialState());
+  showRecoveryResumeAction = !archiveMode && loadedGame?.result === "recovery";
+  primaryActionMode = null;
+  revealRowIndex = null;
+}
+
+function createInitialState() {
+  return {
+    guesses: [],
+    current: "",
+    statuses: [],
+    keyStatuses: {},
+    starterHintSeen: false,
+    extraHintsUsed: 0,
+    startedAt: Date.now(),
+    endedAt: null,
+    result: "playing",
+    score: null,
+    shareText: "",
+    officialResultRecorded: false,
+    recoveryPromptSeen: false,
+    recoveryStartedAt: null,
+  };
+}
+
+function hydrateGameState(gameState) {
+  gameState.extraHintsUsed = Number.isInteger(gameState.extraHintsUsed)
+    ? gameState.extraHintsUsed
+    : gameState.hintUsed
+      ? 1
+      : 0;
+  gameState.starterHintSeen = Boolean(gameState.starterHintSeen || gameState.extraHintsUsed > 0);
+  gameState.officialResultRecorded = Boolean(
+    gameState.officialResultRecorded || ["won", "lost", "recovered"].includes(gameState.result)
+  );
+  gameState.recoveryPromptSeen = Boolean(gameState.recoveryPromptSeen);
+  gameState.recoveryStartedAt = gameState.recoveryStartedAt || null;
+  if (!isGameActive(gameState.result)) {
+    gameState.score = gameState.score ?? calculateScore(gameState.result, gameState);
+    gameState.shareText = buildShareText(gameState);
+  }
+  return gameState;
+}
+
+function buildAcceptedGuessSet() {
+  return new Set([
+    ...acceptedAnswers,
+    ...(ACCEPTED_GUESSES.words || []).map(normalize),
+    ...(GUESS_POLICY.words || []).map(normalize),
+  ]);
 }
 
 function normalize(value) {
@@ -164,6 +227,10 @@ function normalize(value) {
 
 function isGameActive(result = state.result) {
   return result === "playing" || result === "recovery";
+}
+
+function isOfficialDailyGame() {
+  return !archiveMode && activeDateId === todayId;
 }
 
 function isRecoveryState(result = state.result) {
@@ -206,6 +273,8 @@ function submitGuess() {
   const statuses = scoreGuess(guess, word.answer);
   state.guesses.push(guess);
   state.statuses.push(statuses);
+  revealRowIndex = state.guesses.length - 1;
+  scheduleRevealCleanup();
   updateKeyStatuses(guess, statuses);
   state.current = "";
 
@@ -229,8 +298,7 @@ function validateGuess(guess) {
 
   const rules = GUESS_POLICY.rules || {};
   if (GUESS_POLICY.mode === "strict") {
-    const validGuesses = new Set((GUESS_POLICY.words || []).map(normalize));
-    if (!validGuesses.has(guess)) {
+    if (!acceptedGuessSet.has(guess)) {
       return {
         valid: false,
         message: GUESS_POLICY.messages?.unknown || "Ce mot n'est pas dans le calepin.",
@@ -294,12 +362,14 @@ function finishGame(result) {
   state.endedAt = Date.now();
   state.score = calculateScore(result);
   state.shareText = buildShareText();
-  if (result === "won") {
-    recordOfficialResult("won");
-  } else if (result === "lost" || result === "recovered") {
-    recordOfficialResult("lost");
+  if (isOfficialDailyGame()) {
+    if (result === "won") {
+      recordOfficialResult("won");
+    } else if (result === "lost" || result === "recovered") {
+      recordOfficialResult("lost");
+    }
+    recordHistory(result);
   }
-  recordHistory(result);
   saveGame();
   render();
   showResultDialog();
@@ -307,7 +377,7 @@ function finishGame(result) {
 
 function render() {
   const active = isGameActive();
-  els.categoryLabel.textContent = word.category;
+  els.categoryLabel.textContent = archiveMode ? `Archive · ${word.category}` : word.category;
   els.tryCount.textContent = formatTryCount();
   els.scoreCount.textContent = String(calculateScore(state.result));
   els.streakCount.textContent = String(getStats().streak || 0);
@@ -325,6 +395,7 @@ function render() {
   renderBoard();
   renderKeyboard();
   renderHintDialog();
+  renderCountdown();
 }
 
 function shouldShowRecoveryResumeAction() {
@@ -453,6 +524,10 @@ function renderBoard() {
       if (status) {
         tile.classList.add(status);
         tile.dataset.mark = getStatusMark(status);
+        if (row === revealRowIndex) {
+          tile.classList.add("flip");
+          tile.style.setProperty("--flip-delay", `${col * 82}ms`);
+        }
       }
       rowEl.append(tile);
     }
@@ -514,6 +589,14 @@ function shakeCurrentRow() {
   });
 }
 
+function scheduleRevealCleanup() {
+  window.clearTimeout(revealCleanupTimer);
+  revealCleanupTimer = window.setTimeout(() => {
+    revealRowIndex = null;
+    renderBoard();
+  }, 980);
+}
+
 function announce(message) {
   els.statusAnnouncer.textContent = message;
 }
@@ -525,7 +608,7 @@ function enterRecoveryMode() {
   state.recoveryStartedAt = state.recoveryStartedAt || Date.now();
   state.recoveryPromptSeen = true;
   showRecoveryResumeAction = false;
-  recordOfficialResult("lost");
+  if (isOfficialDailyGame()) recordOfficialResult("lost");
   saveGame();
   render();
   announce("T'as perdu, Biloute ! Rab de Biloute lancé.");
@@ -566,25 +649,27 @@ function renderResultDetails(result) {
   const scoreFormula = result === "won" && score !== rawScore
     ? `${BASE_SCORE} - ${guessPenalty} - ${hintPenalty}, minimum ${score}`
     : `${BASE_SCORE} - ${guessPenalty} - ${hintPenalty} = ${score}`;
-  const officialLabel = result === "won"
-    ? "Victoire officielle"
-    : result === "recovered"
-      ? "Rab, série perdue"
-      : "Série perdue";
+  const officialLabel = archiveMode
+    ? "Archive, hors série"
+    : result === "won"
+      ? "Victoire officielle"
+      : result === "recovered"
+        ? "Rab, série perdue"
+        : "Série perdue";
 
   appendDefinitionItems(els.resultDetails, [
     ["Essais", result === "recovered" ? `${tries} dont ${tries - MAX_GUESSES} au rab` : `${tries}/${MAX_GUESSES}`],
     ["Coups d'pouce", formatPaidHintCount()],
     ["Calcul", scoreFormula],
     ["Officiel", officialLabel],
-    ["Série", String(stats.streak || 0)],
-    ["Meilleur", stats.bestScore ? String(stats.bestScore) : "-"],
+    ["Série", archiveMode ? "-" : String(stats.streak || 0)],
+    ["Meilleur", archiveMode ? "-" : stats.bestScore ? String(stats.bestScore) : "-"],
   ]);
 }
 
-function buildShareText() {
-  const score = state.score ?? calculateScore(state.result);
-  const rows = state.statuses.map((statuses) =>
+function buildShareText(gameState = state) {
+  const score = gameState.score ?? calculateScore(gameState.result, gameState);
+  const rows = gameState.statuses.map((statuses) =>
     statuses
       .map((status) => {
         if (status === "correct") return "🟩";
@@ -593,11 +678,12 @@ function buildShareText() {
       })
       .join("")
   );
-  const summary = state.result === "recovered"
-    ? `${score} points · Rab de Biloute · ${state.guesses.length} essais · ${formatPaidHintCount()}`
-    : `${score} points · ${state.result === "won" ? state.guesses.length : "X"}/${MAX_GUESSES} · ${formatPaidHintCount()}`;
+  const summary = gameState.result === "recovered"
+    ? `${score} points · Rab de Biloute · ${gameState.guesses.length} essais · ${formatPaidHintCount(gameState)}`
+    : `${score} points · ${gameState.result === "won" ? gameState.guesses.length : "X"}/${MAX_GUESSES} · ${formatPaidHintCount(gameState)}`;
+  const archiveLabel = archiveMode ? " archive" : "";
   return [
-    `Le mot à Biloute ${todayId}`,
+    `Le mot à Biloute${archiveLabel} ${activeDateId}`,
     summary,
     ...rows,
     GAME_URL,
@@ -622,16 +708,127 @@ function handlePrimaryAction() {
   }
 }
 
+function openArchiveDialog() {
+  archiveSelectedDateId = activeDateId;
+  renderArchiveDialog();
+  els.archiveDialog.showModal();
+}
+
+function moveArchiveSelection(offset) {
+  archiveSelectedDateId = getRelativeIdFromDateId(offset, archiveSelectedDateId);
+  if (archiveSelectedDateId < DAILY_EPOCH_ID) archiveSelectedDateId = DAILY_EPOCH_ID;
+  if (archiveSelectedDateId > todayId) archiveSelectedDateId = todayId;
+  renderArchiveDialog();
+}
+
+function playSelectedArchive() {
+  const archive = archiveSelectedDateId !== todayId;
+  activateDate(archiveSelectedDateId, { archive });
+  els.archiveDialog.close();
+  render();
+  announce(archive ? `Archive du ${formatDateLabel(activeDateId)} chargée.` : "Mot du jour chargé.");
+}
+
+function returnToToday() {
+  activateDate(todayId);
+  archiveSelectedDateId = todayId;
+  els.archiveDialog.close();
+  render();
+  announce("Mot du jour chargé.");
+}
+
+function renderArchiveDialog() {
+  const selectedWord = selectDailyItem(WORDS, archiveSelectedDateId, { epochId: DAILY_EPOCH_ID });
+  els.archiveDateLabel.textContent = formatDateLabel(archiveSelectedDateId);
+  els.archiveWordMeta.textContent = `${selectedWord.category} · ${selectedWord.answer.length} lettres`;
+  els.archivePrevButton.disabled = archiveSelectedDateId <= DAILY_EPOCH_ID;
+  els.archiveNextButton.disabled = archiveSelectedDateId >= todayId;
+}
+
 function getStats() {
   return readJson(statsKey, {});
 }
 
-function formatPaidHintCount() {
-  const plural = state.extraHintsUsed === 1 ? "" : "s";
-  return `${state.extraHintsUsed} coup${plural} d'pouce payant${plural}`;
+function exportStats() {
+  const payload = {
+    game: "le-mot-a-biloute",
+    version: APP_VERSION,
+    exportedAt: new Date().toISOString(),
+    stats: getStats(),
+  };
+  const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `calepin-biloute-${todayId}.json`;
+  link.click();
+  URL.revokeObjectURL(url);
+  announce("Calepin exporté.");
+}
+
+async function importStats(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+  try {
+    const payload = JSON.parse(await file.text());
+    const stats = sanitizeImportedStats(payload.stats || payload);
+    writeJson(statsKey, stats);
+    renderStats();
+    render();
+    announce("Calepin importé.");
+  } catch (error) {
+    announce("Import impossible : fichier invalide.");
+  } finally {
+    event.target.value = "";
+  }
+}
+
+function sanitizeImportedStats(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error("Invalid stats payload.");
+  }
+
+  return {
+    played: toPositiveInteger(value.played),
+    won: toPositiveInteger(value.won),
+    streak: toPositiveInteger(value.streak),
+    bestScore: Number.isFinite(value.bestScore) ? Math.round(value.bestScore) : null,
+    lastPlayed: isDateId(value.lastPlayed) ? value.lastPlayed : null,
+    lastWin: isDateId(value.lastWin) ? value.lastWin : null,
+    history: Array.isArray(value.history)
+      ? value.history.slice(0, 7).map(sanitizeHistoryEntry).filter(Boolean)
+      : [],
+  };
+}
+
+function sanitizeHistoryEntry(entry) {
+  if (!entry || typeof entry !== "object") return null;
+  const result = ["won", "lost", "recovered"].includes(entry.result) ? entry.result : "lost";
+  return {
+    date: isDateId(entry.date) ? entry.date : todayId,
+    answer: normalize(entry.answer).slice(0, 12),
+    result,
+    score: Number.isFinite(entry.score) ? Math.round(entry.score) : 0,
+    tries: toPositiveInteger(entry.tries),
+    extraHintsUsed: toPositiveInteger(entry.extraHintsUsed),
+  };
+}
+
+function toPositiveInteger(value) {
+  return Number.isInteger(value) && value > 0 ? value : 0;
+}
+
+function isDateId(value) {
+  return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
+}
+
+function formatPaidHintCount(gameState = state) {
+  const plural = gameState.extraHintsUsed === 1 ? "" : "s";
+  return `${gameState.extraHintsUsed} coup${plural} d'pouce payant${plural}`;
 }
 
 function recordHistory(result) {
+  if (!isOfficialDailyGame()) return;
   const stats = {
     played: 0,
     won: 0,
@@ -643,19 +840,20 @@ function recordHistory(result) {
   const history = Array.isArray(stats.history) ? stats.history : [];
   stats.history = [
     {
-      date: todayId,
+      date: activeDateId,
       answer: word.answer,
       result,
       score: state.score ?? calculateScore(result),
       tries: state.guesses.length,
       extraHintsUsed: state.extraHintsUsed,
     },
-    ...history.filter((entry) => entry?.date !== todayId),
+    ...history.filter((entry) => entry?.date !== activeDateId),
   ].slice(0, 7);
   writeJson(statsKey, stats);
 }
 
 function recordOfficialResult(result) {
+  if (!isOfficialDailyGame()) return;
   if (state.officialResultRecorded) return;
 
   const stats = {
@@ -666,19 +864,19 @@ function recordOfficialResult(result) {
     lastPlayed: null,
     ...getStats(),
   };
-  if (stats.lastPlayed === todayId) {
+  if (stats.lastPlayed === activeDateId) {
     state.officialResultRecorded = true;
     return;
   }
 
   stats.played += 1;
-  stats.lastPlayed = todayId;
+  stats.lastPlayed = activeDateId;
 
   if (result === "won") {
-    const yesterday = getPreviousDailyId(todayId);
+    const yesterday = getPreviousDailyId(activeDateId);
     stats.won += 1;
     stats.streak = stats.lastWin === yesterday ? (stats.streak || 0) + 1 : 1;
-    stats.lastWin = todayId;
+    stats.lastWin = activeDateId;
     stats.bestScore = stats.bestScore ? Math.max(stats.bestScore, state.score) : state.score;
   } else {
     stats.streak = 0;
@@ -698,6 +896,7 @@ function renderStats() {
   els.statBestScore.textContent = stats.bestScore ? String(stats.bestScore) : "-";
   els.statWinRate.textContent = played ? `${Math.round((won / played) * 100)}%` : "-";
   renderHistory(stats.history);
+  renderPerformance(stats.history);
 }
 
 function renderHistory(history = []) {
@@ -711,14 +910,52 @@ function renderHistory(history = []) {
 
   history.slice(0, 5).forEach((entry) => {
     const item = document.createElement("li");
-    const resultLabel = entry.result === "won"
-      ? "gagné"
-      : entry.result === "recovered"
-        ? "rab"
-        : "perdu";
+    const resultLabel = formatHistoryResult(entry.result);
     item.textContent = `${entry.date} · ${entry.answer} · ${entry.score} pts · ${resultLabel}`;
     els.statHistory.append(item);
   });
+}
+
+function renderPerformance(history = []) {
+  els.performanceChart.innerHTML = "";
+  if (!Array.isArray(history) || history.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "performance-empty";
+    empty.textContent = "Pas encore assez de parties.";
+    els.performanceChart.append(empty);
+    return;
+  }
+
+  const recent = history.slice(0, 7).reverse();
+  const scores = recent.map((entry) => Number(entry.score) || 0);
+  const min = Math.min(0, ...scores);
+  const max = Math.max(BASE_SCORE, ...scores);
+  const range = Math.max(1, max - min);
+
+  recent.forEach((entry) => {
+    const score = Number(entry.score) || 0;
+    const bar = document.createElement("div");
+    bar.className = `performance-bar is-${entry.result}`;
+    bar.setAttribute(
+      "aria-label",
+      `${entry.date}, ${score} points, ${formatHistoryResult(entry.result)}`
+    );
+
+    const fill = document.createElement("span");
+    fill.style.height = `${Math.max(8, ((score - min) / range) * 104)}px`;
+
+    const label = document.createElement("span");
+    label.textContent = String(score);
+
+    bar.append(fill, label);
+    els.performanceChart.append(bar);
+  });
+}
+
+function formatHistoryResult(result) {
+  if (result === "won") return "gagné";
+  if (result === "recovered") return "rab";
+  return "perdu";
 }
 
 function appendDefinitionItems(list, items) {
@@ -734,6 +971,7 @@ function appendDefinitionItems(list, items) {
 }
 
 function saveGame() {
+  if (!isOfficialDailyGame()) return;
   writeJson(gameKey, state);
 }
 
@@ -743,11 +981,13 @@ function loadGame() {
   return loaded;
 }
 
-function calculateScore(result = state.result) {
+function calculateScore(result = state.result, gameState = state) {
   if (result === "lost") return 0;
-  const effectiveGuessCount = isGameActive(result) ? state.guesses.length + 1 : state.guesses.length;
+  const effectiveGuessCount = isGameActive(result)
+    ? gameState.guesses.length + 1
+    : gameState.guesses.length;
   const guessPenalty = Math.max(0, effectiveGuessCount - 1) * POINTS_PER_EXTRA_GUESS;
-  const hintPenalty = state.extraHintsUsed * POINTS_PER_EXTRA_HINT;
+  const hintPenalty = gameState.extraHintsUsed * POINTS_PER_EXTRA_HINT;
   const score = BASE_SCORE - guessPenalty - hintPenalty;
   if (result === "won") return Math.max(50, score);
   if (isRecoveryState(result)) return score;
@@ -762,7 +1002,11 @@ function getBilouteDateId(date = new Date()) {
 }
 
 function getPreviousDailyId(dateId) {
-  return getRelativeDateId(-1, new Date(`${dateId}T00:00:00Z`), { timeZone: "UTC" });
+  return getRelativeIdFromDateId(-1, dateId);
+}
+
+function getRelativeIdFromDateId(offset, dateId) {
+  return getRelativeDateId(offset, new Date(`${dateId}T00:00:00Z`), { timeZone: "UTC" });
 }
 
 function scheduleDailyRefresh() {
@@ -773,13 +1017,92 @@ function scheduleDailyRefresh() {
   }, 60 * 1000);
 }
 
+function scheduleCountdownRefresh() {
+  window.setInterval(renderCountdown, 1000);
+}
+
+function renderCountdown() {
+  if (!els.nextWordCountdown) return;
+  els.nextWordCountdown.textContent = `Prochain mot à 12 h : ${formatDuration(
+    getNextRolloverDate().getTime() - Date.now()
+  )}`;
+}
+
+function getNextRolloverDate(now = new Date()) {
+  const parts = getZonedDateTimeParts(now, DAILY_TIME_ZONE);
+  const currentDateId = `${parts.year}-${parts.month}-${parts.day}`;
+  const targetDateId =
+    Number(parts.hour) < DAILY_ROLLOVER_HOUR
+      ? currentDateId
+      : getRelativeIdFromDateId(1, currentDateId);
+  const [year, month, day] = targetDateId.split("-").map(Number);
+  return zonedTimeToUtc(year, month, day, DAILY_ROLLOVER_HOUR, 0, DAILY_TIME_ZONE);
+}
+
+function zonedTimeToUtc(year, month, day, hour, minute, timeZone) {
+  const wallTime = Date.UTC(year, month - 1, day, hour, minute, 0);
+  let utcTime = wallTime;
+  for (let index = 0; index < 3; index += 1) {
+    utcTime = wallTime - getTimeZoneOffsetMs(new Date(utcTime), timeZone);
+  }
+  return new Date(utcTime);
+}
+
+function getTimeZoneOffsetMs(date, timeZone) {
+  const parts = getZonedDateTimeParts(date, timeZone);
+  const asUtc = Date.UTC(
+    Number(parts.year),
+    Number(parts.month) - 1,
+    Number(parts.day),
+    Number(parts.hour),
+    Number(parts.minute),
+    Number(parts.second)
+  );
+  return asUtc - date.getTime();
+}
+
+function getZonedDateTimeParts(date, timeZone) {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hourCycle: "h23",
+  });
+  return Object.fromEntries(formatter.formatToParts(date).map((part) => [part.type, part.value]));
+}
+
+function formatDuration(ms) {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  return `${String(hours).padStart(2, "0")} h ${String(minutes).padStart(2, "0")} min ${String(seconds).padStart(2, "0")} s`;
+}
+
+function formatDateLabel(dateId) {
+  return new Intl.DateTimeFormat("fr-FR", {
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${dateId}T00:00:00Z`));
+}
+
 function renderGameToText() {
   return JSON.stringify({
     screen: "game",
-    date: todayId,
+    date: activeDateId,
+    today: todayId,
+    archiveMode,
     dailyRollover: {
       hour: DAILY_ROLLOVER_HOUR,
       timeZone: DAILY_TIME_ZONE,
+      nextAt: getNextRolloverDate().toISOString(),
     },
     answerLength: wordLength,
     category: word.category,
@@ -792,6 +1115,7 @@ function renderGameToText() {
     validation: {
       mode: GUESS_POLICY.mode,
       label: GUESS_POLICY.label,
+      acceptedGuesses: acceptedGuessSet.size,
     },
     score: state.score ?? calculateScore(state.result),
     triesUsed: state.guesses.length,

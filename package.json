@@ -8,6 +8,7 @@
     "packages/*"
   ],
   "scripts": {
+    "build:biloute-guesses": "node packages/corpus/le-mot-a-biloute/tools/build-accepted-guesses.mjs",
     "build:blog": "node scripts/build-news.mjs",
     "check": "npm run check:js && npm run check:corpus && npm run check:blog && npm run check:static",
     "check:blog": "node scripts/build-news.mjs --check",

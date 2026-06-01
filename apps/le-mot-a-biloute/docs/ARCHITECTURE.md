@@ -19,6 +19,8 @@ Il n'y a actuellement :
 - `manifest.webmanifest` : manifeste PWA minimal.
 - `../../packages/corpus/le-mot-a-biloute/words.json` : corpus des mots.
 - `../../packages/corpus/le-mot-a-biloute/guess-policy.json` : politique de validation des propositions.
+- `../../packages/corpus/le-mot-a-biloute/accepted-guesses.json` : liste locale des propositions acceptées.
+- `../../packages/corpus/le-mot-a-biloute/tools/build-accepted-guesses.mjs` : génération de la liste de propositions depuis le corpus traité.
 - `../../packages/game-utils/` : helpers partagés avec les autres jeux.
 - `../../packages/ui/` : tokens, base visuelle et menu commun.
 
@@ -32,7 +34,7 @@ Contenus stockés :
 - essais ;
 - indices utilisés ;
 - statut victoire/défaite ;
-- statistiques locales.
+- statistiques locales ;
 - historique local simple des dernières parties.
 
 ## Moteur de jeu
@@ -40,6 +42,7 @@ Contenus stockés :
 Le moteur :
 
 - sélectionne un mot quotidien déterministe ;
+- permet de rejouer une date passée en mode archive, sans modifier les statistiques officielles ;
 - normalise les entrées ;
 - valide les propositions selon la politique active ;
 - compare les lettres avec gestion des doublons ;

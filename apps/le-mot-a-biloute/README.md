@@ -17,10 +17,13 @@ Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu co
 - score basé sur les essais et les coups d'pouce, y compris dans le Rab de Biloute ;
 - clavier virtuel AZERTY ;
 - saisie au clavier physique ;
-- validation de proposition en mode découverte ;
+- validation stricte des propositions avec une liste locale séparée des réponses ;
 - retour correcte / présente / absente ;
+- animation de révélation lettre par lettre ;
+- mode archive pour rejouer d'anciens mots ;
 - bonus final ;
-- sauvegarde, statistiques et historique local dans `localStorage` ;
+- sauvegarde, statistiques, graphique de performance et historique local dans `localStorage` ;
+- import/export du calepin local ;
 - partage texte avec score et lien public.
 
 ## Structure

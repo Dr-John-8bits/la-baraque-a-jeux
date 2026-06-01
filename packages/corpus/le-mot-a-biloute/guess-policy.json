@@ -1,7 +1,7 @@
 {
-  "mode": "guided-permissive",
-  "label": "Mode découverte",
-  "description": "Le corpus public n'est pas encore assez large pour imposer un dictionnaire strict. Le jeu accepte donc les propositions plausibles de bonne longueur et bloque seulement les suites manifestement non jouables.",
+  "mode": "strict",
+  "label": "Corpus local",
+  "description": "Les réponses du jour restent dans words.json. Les propositions sont vérifiées dans accepted-guesses.json, une liste locale générée depuis le corpus documentaire traité et les variantes relues.",
   "rules": {
     "rejectSingleRepeatedLetter": true,
     "requireVowelLikeLetter": true

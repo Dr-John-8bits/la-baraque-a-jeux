@@ -1,10 +1,14 @@
 node_modules/
+output/
 test-results/
 playwright-report/
 
 # macOS Finder metadata
 .DS_Store
 **/.DS_Store
+
+# Temporary reference projects kept outside version control.
+POUR INSPIRATION/
 
 # Downloaded documentary corpus sources.
 # These files are kept locally to regenerate processed corpus exports, but the

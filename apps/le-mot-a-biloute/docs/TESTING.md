@@ -25,14 +25,18 @@ apps/le-mot-a-biloute/
 - Cliquer sur un coup d'pouce payant et vérifier la perte de points.
 - Taper une réponse trop courte.
 - Taper une proposition manifestement invalide, par exemple une seule lettre répétée.
+- Taper une proposition absente de la liste acceptée et vérifier le message de refus.
 - Taper une mauvaise réponse.
+- Vérifier l'animation de révélation lettre par lettre.
 - Vérifier qu'au 6e échec la modale `Rab de Biloute` apparaît, que la série passe à 0 et que le jeu reste jouable.
 - Continuer dans le Rab de Biloute et vérifier que le score peut devenir négatif.
 - Taper la bonne réponse.
 - Vérifier le bonus final.
+- Vérifier le compte à rebours du prochain mot.
 - Vérifier le détail du score dans la modale de fin.
 - Vérifier le partage.
-- Vérifier les statistiques et l'historique local.
+- Vérifier le mode archive.
+- Vérifier les statistiques, l'historique local, le graphique de performance et l'import/export du calepin.
 
 ## Points de contrôle visuel
 

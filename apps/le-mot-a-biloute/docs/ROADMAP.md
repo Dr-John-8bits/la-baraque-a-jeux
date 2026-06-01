@@ -23,6 +23,8 @@
 - Relire les coups d'pouce.
 - Vérifier les bonus.
 
+État : fait pour le premier lot. Le jeu dispose de 40 mots relus et d'une liste séparée de propositions acceptées générée depuis le corpus traité.
+
 ## 0.3 — Identité visuelle
 
 - Intégrer le visuel fourni.
@@ -34,16 +36,19 @@
 
 ## 0.4 — Qualité de jeu
 
-- Validation des propositions en mode découverte.
+- Validation stricte des propositions avec liste locale dédiée.
 - Labels accessibles enrichis sur les cases.
 - Marqueurs visuels complémentaires aux couleurs.
 - Écran de fin avec détail du score.
-- Calepin enrichi avec taux de réussite et historique local.
+- Calepin enrichi avec taux de réussite, historique local, graphique de performance et import/export.
+- Mode archive.
+- Animation de révélation lettre par lettre.
+- Compte à rebours du prochain mot.
 - Renforcer l'aide intégrée au fil des mécaniques.
 - Tester sur plusieurs tailles mobiles.
 - Étendre les tests navigateur automatisés depuis la racine du monorepo.
 
-État : en cours. Le mode découverte évite les suites de lettres les plus absurdes sans imposer un dictionnaire incomplet. Le passage à une validation stricte dépendra du corpus éditorial et d'une liste de propositions acceptées.
+État : bien avancé. Il reste surtout à tester finement l'accessibilité clavier/lecteur d'écran et à élargir le corpus pour tenir une année complète.
 
 ## 1.0 — Lancement public
 
