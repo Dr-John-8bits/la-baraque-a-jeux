@@ -10,7 +10,7 @@ Un mot du Nord à deviner chaque jour.
 
 ## Concept
 
-Le jeu propose chaque jour un mot lié à Lille, à la métropole lilloise, au Nord ou au parler ch'ti. Le joueur dispose de 6 essais et reçoit un retour visuel après chaque proposition.
+Le jeu propose chaque jour un mot lié à Lille, à la métropole lilloise, au Nord ou au parler ch'ti. Le nouveau mot arrive à 12 h, heure de Paris, et reste jouable jusqu'au lendemain à midi. Le joueur dispose de 6 essais et reçoit un retour visuel après chaque proposition.
 
 Le jeu se joue directement dans le navigateur, sur mobile en priorité, sans compte et sans backend.
 

@@ -1,10 +1,12 @@
-import { getDateId, getRelativeDateId, selectDailyItem } from "../../packages/game-utils/daily.js";
+import { getDailyDateId, getRelativeDateId, selectDailyItem } from "../../packages/game-utils/daily.js";
 import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
 const APP_VERSION = "26.05.31.5";
 const GAME_URL = new URL(".", window.location.href).href;
+const DAILY_TIME_ZONE = "Europe/Paris";
+const DAILY_ROLLOVER_HOUR = 12;
 const BASE_SCORE = 1000;
 const POINTS_PER_EXTRA_GUESS = 120;
 const POINTS_PER_EXTRA_HINT = 180;
@@ -50,7 +52,7 @@ const els = {
   statBestScore: document.getElementById("statBestScore"),
 };
 
-const todayId = getDateId();
+const todayId = getBilouteDateId();
 const word = selectDailyItem(WORDS, todayId, { epochId: "2026-01-01" });
 const wordLength = word.answer.length;
 const gameKey = `${STORAGE_PREFIX}:game:${todayId}:${word.id}`;
@@ -81,6 +83,7 @@ if (state.result !== "playing") {
 
 render();
 bindEvents();
+scheduleDailyRefresh();
 
 function bindEvents() {
   document.addEventListener("keydown", (event) => {
@@ -375,7 +378,7 @@ function updateStats(result) {
   stats.lastPlayed = todayId;
 
   if (result === "won") {
-    const yesterday = getRelativeDateId(-1);
+    const yesterday = getPreviousDailyId(todayId);
     stats.won += 1;
     stats.streak = stats.lastWin === yesterday ? (stats.streak || 0) + 1 : 1;
     stats.lastWin = todayId;
@@ -414,10 +417,33 @@ function calculateScore(result = state.result) {
   return Math.max(result === "playing" ? 0 : 50, score);
 }
 
+function getBilouteDateId(date = new Date()) {
+  return getDailyDateId(date, {
+    rolloverHour: DAILY_ROLLOVER_HOUR,
+    timeZone: DAILY_TIME_ZONE,
+  });
+}
+
+function getPreviousDailyId(dateId) {
+  return getRelativeDateId(-1, new Date(`${dateId}T00:00:00Z`), { timeZone: "UTC" });
+}
+
+function scheduleDailyRefresh() {
+  window.setInterval(() => {
+    if (getBilouteDateId() !== todayId) {
+      window.location.reload();
+    }
+  }, 60 * 1000);
+}
+
 function renderGameToText() {
   return JSON.stringify({
     screen: "game",
     date: todayId,
+    dailyRollover: {
+      hour: DAILY_ROLLOVER_HOUR,
+      timeZone: DAILY_TIME_ZONE,
+    },
     answerLength: wordLength,
     category: word.category,
     guesses: state.guesses,
