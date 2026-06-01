@@ -31,7 +31,7 @@ const els = {
   streakCount: document.getElementById("streakCount"),
   statusAnnouncer: document.getElementById("statusAnnouncer"),
   hintButton: document.getElementById("hintButton"),
-  shareButton: document.getElementById("shareButton"),
+  primaryActionButton: document.getElementById("primaryActionButton"),
   hintDialog: document.getElementById("hintDialog"),
   hintTitle: document.getElementById("hintTitle"),
   hintList: document.getElementById("hintList"),
@@ -59,6 +59,7 @@ const word = selectDailyItem(WORDS, todayId, { epochId: "2026-01-01" });
 const wordLength = word.answer.length;
 const gameKey = `${STORAGE_PREFIX}:game:${todayId}:${word.id}`;
 const statsKey = `${STORAGE_PREFIX}:stats`;
+let primaryActionMode = null;
 
 const state = loadGame() || {
   guesses: [],
@@ -120,7 +121,7 @@ function bindEvents() {
   els.hintButton.addEventListener("click", openHintDialog);
   els.nextHintButton.addEventListener("click", revealPaidHint);
 
-  els.shareButton.addEventListener("click", shareResult);
+  els.primaryActionButton.addEventListener("click", handlePrimaryAction);
   els.dialogShareButton.addEventListener("click", shareResult);
   els.helpButton.addEventListener("click", () => {
     els.helpDialog.showModal();
@@ -239,10 +240,33 @@ function render() {
   els.streakCount.textContent = String(getStats().streak || 0);
   els.hintButton.textContent = state.starterHintSeen ? "Indice" : "Indice gratuit";
   els.hintButton.disabled = state.result !== "playing";
-  els.shareButton.disabled = state.result === "playing";
+  renderPrimaryAction();
   renderBoard();
   renderKeyboard();
   renderHintDialog();
+}
+
+function renderPrimaryAction() {
+  const playing = state.result === "playing";
+  const nextMode = playing ? "validate" : "share";
+  els.primaryActionButton.textContent = playing ? "Valider" : "Partager";
+  els.primaryActionButton.disabled = playing && state.current.length !== wordLength;
+  els.primaryActionButton.setAttribute(
+    "aria-label",
+    playing ? "Valider la proposition" : "Partager le résultat"
+  );
+  els.primaryActionButton.classList.toggle("share-ready", !playing);
+
+  if (primaryActionMode === "validate" && nextMode === "share") {
+    highlightShareButton(els.primaryActionButton);
+  }
+  primaryActionMode = nextMode;
+}
+
+function highlightShareButton(button) {
+  button.classList.add("share-ready");
+  button.classList.remove("share-pop");
+  window.requestAnimationFrame(() => button.classList.add("share-pop"));
 }
 
 function renderHintDialog() {
@@ -372,6 +396,7 @@ function showResultDialog() {
   els.bonusTitle.textContent = word.bonus.title;
   els.bonusText.textContent = word.bonus.text;
   if (!els.resultDialog.open) els.resultDialog.showModal();
+  highlightShareButton(els.dialogShareButton);
 }
 
 function buildShareText() {
@@ -401,6 +426,14 @@ async function shareResult() {
     announce("Résultat copié.");
   } else if (status === "failed") {
     announce(text);
+  }
+}
+
+function handlePrimaryAction() {
+  if (state.result === "playing") {
+    submitGuess();
+  } else {
+    shareResult();
   }
 }
 

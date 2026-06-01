@@ -232,8 +232,37 @@ h3 {
   background: var(--blue);
 }
 
-.actions button:last-child {
+#primaryActionButton {
   background: var(--green);
+}
+
+#primaryActionButton.share-ready,
+#dialogShareButton.share-ready {
+  background: var(--brick);
+}
+
+#primaryActionButton.share-pop,
+#dialogShareButton.share-pop {
+  animation: share-pop 680ms ease both;
+}
+
+@keyframes share-pop {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(212, 55, 49, 0);
+  }
+  32% {
+    transform: scale(1.045);
+    box-shadow: 0 0 0 6px rgba(212, 55, 49, 0.24);
+  }
+  68% {
+    transform: scale(0.99);
+    box-shadow: 0 0 0 10px rgba(212, 55, 49, 0.08);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(212, 55, 49, 0);
+  }
 }
 
 .keyboard {
