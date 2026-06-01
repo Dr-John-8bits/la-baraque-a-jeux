@@ -4,6 +4,18 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## [26.06.01.4] - 2026-06-01
+
+### Ajouté
+
+- Deux grilles `reviewed` supplémentaires à partir des familles candidates sans doublon.
+- Une famille `Douceurs et habitudes du Nord` issue des graines régionales et gastronomiques relues.
+- Une grille corsée autour des premiers arrêts de Lianes.
+
+### Modifié
+
+- Version courante passée à `26.06.01.4`.
+
 ## [26.06.01.3] - 2026-06-01
 
 ### Ajouté

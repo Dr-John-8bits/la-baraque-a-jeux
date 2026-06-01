@@ -878,5 +878,156 @@
         "note": "Des espaces et repères verts sortis du corpus parcs et jardins."
       }
     ]
+  },
+  {
+    "id": "couronnes-jardins-douceurs-001",
+    "number": 13,
+    "title": "Couronnes, jardins et douceurs",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Cette grille combine des familles to-review sans doublon et une famille régionale issue des graines relues côté vocabulaire et gastronomie.",
+    "status": "reviewed",
+    "tags": ["communes", "espaces-verts", "gastronomie", "parler-regional"],
+    "sourceIds": [
+      "mel-communes-datamel",
+      "ville-lille-parcs-jardins-data-gouv",
+      "banque-chtimi-gastronomie-jeux",
+      "comptoir-flandres-dictionnaire-chti",
+      "regional-words-source-index"
+    ],
+    "bonus": {
+      "question": "Cassonade, speculoos, babelutte et chicorée figurent dans le corpus régional relu.",
+      "answer": true,
+      "explanation": "Vrai. Ces entrées viennent des graines régionales vérifiées et reformulées avant usage."
+    },
+    "groups": [
+      {
+        "id": "communes-couronne-sud-emmerin",
+        "title": "Territoire de la couronne Sud",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Emmerin",
+          "Faches-Thumesnil",
+          "Fretin",
+          "Houplin-Ancoisne"
+        ],
+        "note": "Quatre communes supplémentaires du territoire de la couronne Sud."
+      },
+      {
+        "id": "communes-tourquennois-linselles",
+        "title": "Tourquennois - Vallée de la Lys",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Linselles",
+          "Mouvaux",
+          "Neuville-en-Ferrain",
+          "Roncq"
+        ],
+        "note": "Quatre communes du territoire Tourquennois - Vallée de la Lys."
+      },
+      {
+        "id": "jardins-comtesse-boulay",
+        "title": "Parcs et jardins",
+        "difficulty": "hard",
+        "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
+        "items": [
+          "Îlot Comtesse",
+          "Jardin André Ballet",
+          "Jardin Au fil du temps…du Moulin d'Or",
+          "Jardin botanique Nicolas Boulay"
+        ],
+        "note": "Des entrées du corpus parcs et jardins, sans reprendre de texte descriptif."
+      },
+      {
+        "id": "douceurs-habitudes-nord",
+        "title": "Douceurs et habitudes du Nord",
+        "difficulty": "medium",
+        "sourceIds": [
+          "banque-chtimi-gastronomie-jeux",
+          "comptoir-flandres-dictionnaire-chti",
+          "regional-words-source-index"
+        ],
+        "items": [
+          "Cassonade",
+          "Speculoos",
+          "Babelutte",
+          "Chicorée"
+        ],
+        "note": "Une famille gourmande et régionale, reformulée depuis les graines relues."
+      }
+    ]
+  },
+  {
+    "id": "premiers-arrets-lianes-001",
+    "number": 14,
+    "title": "Premiers arrêts de Lianes",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Cette grille est plus corsée : elle exploite des familles bus non doublonnées, utiles pour élargir Lille-Mêle au-delà du métro.",
+    "status": "reviewed",
+    "tags": ["transport", "bus", "liane"],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel"
+    ],
+    "bonus": {
+      "question": "Les Lianes du corpus viennent des données Ilévia structurées.",
+      "answer": true,
+      "explanation": "Vrai. Les arrêts sont extraits des exports transport dérivés du GTFS Ilévia."
+    },
+    "groups": [
+      {
+        "id": "liane-1-premiers-arrets",
+        "title": "Arrêts de la Liane 1",
+        "difficulty": "hard",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Agrippin",
+          "Ghesquiere",
+          "Pare",
+          "Leclerc"
+        ],
+        "note": "Quatre premiers arrêts candidats de la Liane 1."
+      },
+      {
+        "id": "liane-3-premiers-arrets",
+        "title": "Arrêts de la Liane 3",
+        "difficulty": "hard",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Quart. Beaulieu",
+          "Herriot",
+          "Foch",
+          "Vallon"
+        ],
+        "note": "Quatre premiers arrêts candidats de la Liane 3."
+      },
+      {
+        "id": "liane-4-premiers-arrets",
+        "title": "Arrêts de la Liane 4",
+        "difficulty": "hard",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Gounod",
+          "Lp Colbras",
+          "Semard",
+          "Hotel de Ville"
+        ],
+        "note": "Quatre premiers arrêts candidats de la Liane 4."
+      },
+      {
+        "id": "liane-5-premiers-arrets",
+        "title": "Arrêts de la Liane 5",
+        "difficulty": "hard",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Ferme aux Oies",
+          "Bailly",
+          "Place",
+          "Quesne Mairie"
+        ],
+        "note": "Quatre premiers arrêts candidats de la Liane 5."
+      }
+    ]
   }
 ]

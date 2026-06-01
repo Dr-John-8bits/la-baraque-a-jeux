@@ -58,3 +58,8 @@ Original prompt: Commence à développer le jeu index.hmtl, on verra pour le con
   - cartes `reviewed` : 128 emplacements, 124 cartes uniques ;
   - nouvelles familles jouables : ligne 2, tramway, Lianes, territoires MEL, patrimoine civil, parcs et jardins ;
   - validateur renforcé avec un filtre textuel contre les références religieuses évidentes non listées dans les exclusions.
+- Itération 26.06.01.4 :
+  - ajout de 2 grilles `reviewed` supplémentaires avec les familles candidates non doublonnées restantes les plus exploitables ;
+  - ajout d'une famille régionale/gastronomique issue des graines relues et des sources web indexées ;
+  - corpus Lille-Mêle à 14 grilles, dont 10 `reviewed` ;
+  - cartes `reviewed` : 160 emplacements, 156 cartes uniques.
