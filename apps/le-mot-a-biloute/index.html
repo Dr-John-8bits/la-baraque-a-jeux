@@ -49,15 +49,7 @@
     </header>
 
     <main class="app-shell" aria-live="polite">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">Mot du jour</p>
-          <h1>Le mot à Biloute</h1>
-        </div>
-        <button class="icon-button" id="statsButton" type="button" aria-label="Voir les statistiques" title="Statistiques">
-          <span aria-hidden="true">#</span>
-        </button>
-      </header>
+      <h1 class="visually-hidden">Le mot à Biloute</h1>
 
       <section class="status-panel" id="statusPanel">
         <div>
@@ -80,7 +72,27 @@
         </div>
       </section>
 
-      <section class="message-row" id="messageRow" role="status">À toi de jouer.</section>
+      <section class="utility-actions" aria-label="Aide et statistiques">
+        <button
+          class="utility-button utility-button--help"
+          id="helpButton"
+          type="button"
+          aria-label="Ouvrir les règles du jeu"
+          title="Règles du jeu"
+        >
+          Aide
+        </button>
+        <button
+          class="utility-button utility-button--stats"
+          id="statsButton"
+          type="button"
+          aria-label="Ouvrir le carnet de statistiques"
+          title="Carnet de statistiques"
+        >
+          Carnet
+        </button>
+      </section>
+      <p class="visually-hidden" id="statusAnnouncer" role="status" aria-live="polite"></p>
 
       <section class="board-wrap" aria-label="Grille de jeu">
         <div class="board" id="board"></div>
@@ -116,6 +128,38 @@
         </form>
       </dialog>
 
+      <dialog class="result-dialog help-dialog" id="helpDialog">
+        <form method="dialog">
+          <p class="eyebrow">Règles</p>
+          <h2>Comment jouer</h2>
+          <div class="help-content">
+            <section>
+              <h3>But du jeu</h3>
+              <p>Devine le mot du jour en 6 essais maximum. Le mot est lié à Lille, au Nord ou au parler ch'ti.</p>
+            </section>
+            <section>
+              <h3>Couleurs</h3>
+              <ul>
+                <li>Vert : bonne lettre, bonne place.</li>
+                <li>Jaune : bonne lettre, autre place.</li>
+                <li>Gris : lettre absente du mot.</li>
+              </ul>
+            </section>
+            <section>
+              <h3>Points</h3>
+              <p>Tu démarres à 1000 points. Chaque essai après le premier retire 120 points. Chaque indice payant retire 180 points. Une partie perdue vaut 0 point.</p>
+            </section>
+            <section>
+              <h3>Indices et série</h3>
+              <p>L'indice de départ est gratuit. Les indices suivants coûtent des points. La série compte les jours gagnés d'affilée ; elle retombe à 0 après une partie perdue.</p>
+            </section>
+          </div>
+          <div class="dialog-actions dialog-actions--single">
+            <button value="close">Fermer</button>
+          </div>
+        </form>
+      </dialog>
+
       <dialog class="result-dialog" id="statsDialog">
         <form method="dialog">
           <p class="eyebrow">Stats locales</p>
@@ -138,7 +182,7 @@
               <dd id="statBestScore">-</dd>
             </div>
           </dl>
-          <div class="dialog-actions">
+          <div class="dialog-actions dialog-actions--single">
             <button value="close">Fermer</button>
           </div>
         </form>

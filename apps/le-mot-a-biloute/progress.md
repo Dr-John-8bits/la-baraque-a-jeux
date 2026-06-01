@@ -22,3 +22,5 @@ Original prompt: Aligne les documents, et fais une première version du jeu.
 - Mutualisation monorepo : les mots du jeu sont extraits dans `packages/corpus/le-mot-a-biloute/words.json`.
 - Le jeu charge désormais son corpus en statique et utilise les helpers communs pour la date quotidienne, le stockage local et le partage.
 - À surveiller : le jeu dépend maintenant d'un chargement HTTP statique du JSON, ce qui correspond à GitHub Pages.
+- Itération UI : suppression du titre interne redondant, conservation d'un `h1` accessible masqué, et déplacement du bouton `Carnet` dans la ligne de message de partie pour réduire l'espace perdu sans charger le menu sticky global.
+- Itération UI suivante : suppression de la bannière de message visible, ajout d'une rangée `Aide` / `Carnet`, création d'une modale d'aide avec règles, points, indices et série. Les retours courts passent par un annonceur accessible masqué ; la validation trop courte garde le secouement de ligne.

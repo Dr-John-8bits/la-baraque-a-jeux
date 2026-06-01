@@ -41,12 +41,14 @@ button:disabled {
   gap: 7px;
 }
 
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding-top: 4px;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .eyebrow,
@@ -56,6 +58,7 @@ button:disabled {
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0;
+  overflow-wrap: normal;
   text-transform: uppercase;
 }
 
@@ -83,16 +86,6 @@ h3 {
   font-size: 1.05rem;
 }
 
-.icon-button {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 auto;
-  border: 2px solid var(--ink);
-  background: var(--yellow);
-  color: var(--ink);
-  font-size: 1.2rem;
-}
-
 .status-panel {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -101,12 +94,17 @@ h3 {
 }
 
 .status-panel > div,
-.hint-panel,
-.message-row {
+.hint-panel {
   border: 2px solid var(--ink);
   border-radius: 8px;
   background: var(--tile);
   box-shadow: 4px 4px 0 var(--ink);
+}
+
+.utility-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 
 .status-panel > div {
@@ -126,10 +124,26 @@ h3 {
   gap: 6px;
 }
 
-.message-row {
+.utility-button {
   min-height: 38px;
-  padding: 8px 10px;
-  font-weight: 800;
+  border: 2px solid var(--ink);
+  padding: 0 12px;
+  box-shadow: 4px 4px 0 var(--ink);
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.utility-button--help {
+  background: var(--blue);
+}
+
+.utility-button--stats {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.utility-button:hover {
+  transform: translateY(-1px);
 }
 
 .board-wrap {
@@ -326,8 +340,38 @@ h3 {
   gap: 10px;
 }
 
+.dialog-actions--single {
+  grid-template-columns: 1fr;
+}
+
 .dialog-actions button:first-child {
   background: var(--green);
+}
+
+.help-dialog section {
+  margin: 0;
+}
+
+.help-content {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.help-content h3 {
+  margin: 0 0 3px;
+}
+
+.help-content p,
+.help-content ul {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 720;
+  line-height: 1.42;
+}
+
+.help-content ul {
+  padding-left: 18px;
 }
 
 .stats-list {
@@ -359,7 +403,7 @@ h3 {
 
 @media (min-width: 680px) {
   .app-shell {
-    padding-top: 24px;
+    padding-top: 16px;
     padding-bottom: 24px;
     gap: 10px;
   }
@@ -412,5 +456,16 @@ h3 {
 
   .key {
     height: 38px;
+  }
+}
+
+@media (max-width: 360px) {
+  .utility-actions {
+    gap: 6px;
+  }
+
+  .utility-button {
+    padding: 0 8px;
+    font-size: 0.78rem;
   }
 }

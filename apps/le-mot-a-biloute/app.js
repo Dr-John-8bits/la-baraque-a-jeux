@@ -27,7 +27,7 @@ const els = {
   tryCount: document.getElementById("tryCount"),
   scoreCount: document.getElementById("scoreCount"),
   streakCount: document.getElementById("streakCount"),
-  messageRow: document.getElementById("messageRow"),
+  statusAnnouncer: document.getElementById("statusAnnouncer"),
   hintButton: document.getElementById("hintButton"),
   shareButton: document.getElementById("shareButton"),
   hintPanel: document.getElementById("hintPanel"),
@@ -40,6 +40,8 @@ const els = {
   bonusTitle: document.getElementById("bonusTitle"),
   bonusText: document.getElementById("bonusText"),
   dialogShareButton: document.getElementById("dialogShareButton"),
+  helpButton: document.getElementById("helpButton"),
+  helpDialog: document.getElementById("helpDialog"),
   statsButton: document.getElementById("statsButton"),
   statsDialog: document.getElementById("statsDialog"),
   statPlayed: document.getElementById("statPlayed"),
@@ -79,7 +81,6 @@ if (state.result !== "playing") {
 
 render();
 bindEvents();
-announce("À toi de jouer.");
 
 function bindEvents() {
   document.addEventListener("keydown", (event) => {
@@ -115,11 +116,13 @@ function bindEvents() {
     state.extraHintsUsed += 1;
     saveGame();
     render();
-    announce(`Indice ${state.extraHintsUsed + 1} révélé. ${POINTS_PER_EXTRA_HINT} points en moins.`);
   });
 
   els.shareButton.addEventListener("click", shareResult);
   els.dialogShareButton.addEventListener("click", shareResult);
+  els.helpButton.addEventListener("click", () => {
+    els.helpDialog.showModal();
+  });
   els.statsButton.addEventListener("click", () => {
     renderStats();
     els.statsDialog.showModal();
@@ -175,7 +178,6 @@ function submitGuess() {
   } else if (state.guesses.length >= MAX_GUESSES) {
     finishGame("lost");
   } else {
-    announce(nextPrompt());
     saveGame();
     render();
   }
@@ -228,13 +230,6 @@ function finishGame(result) {
   showResultDialog();
 }
 
-function nextPrompt() {
-  const remaining = MAX_GUESSES - state.guesses.length;
-  if (remaining === 1) return "Dernier essai.";
-  if (remaining <= 3) return `${remaining} essais restants.`;
-  return "On garde le cap.";
-}
-
 function render() {
   els.categoryLabel.textContent = word.category;
   els.tryCount.textContent = `${state.guesses.length}/${MAX_GUESSES}`;
@@ -247,9 +242,6 @@ function render() {
   els.shareButton.disabled = state.result === "playing";
   renderBoard();
   renderKeyboard();
-  if (state.result !== "playing") {
-    announce(state.result === "won" ? "Trouvé. Bien joué." : `Réponse : ${word.answer}.`);
-  }
 }
 
 function renderHints() {
@@ -319,7 +311,7 @@ function shakeCurrentRow() {
 }
 
 function announce(message) {
-  els.messageRow.textContent = message;
+  els.statusAnnouncer.textContent = message;
 }
 
 function showResultDialog() {
@@ -437,7 +429,7 @@ function renderGameToText() {
     starterHint: word.starterHint,
     extraHintsUsed: state.extraHintsUsed,
     visibleHints: word.hints.slice(0, state.extraHintsUsed),
-    message: els.messageRow.textContent,
+    message: els.statusAnnouncer.textContent,
     keyboard: state.keyStatuses,
     version: APP_VERSION,
   });
