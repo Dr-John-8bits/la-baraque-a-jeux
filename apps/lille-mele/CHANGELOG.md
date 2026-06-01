@@ -4,6 +4,32 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## [26.06.01.2] - 2026-06-01
+
+### Modifié
+
+- Version courante passée à `26.06.01.2`.
+- Feedback "3 sur 4" rendu plus explicite avec le message `Tout près : 3 cartes sont dans la même famille.`
+- Effet visuel jaune prolongé sur les cartes de la tentative presque correcte.
+- Aide mise à jour pour décrire précisément le signal affiché.
+
+### Vérifié
+
+- Smoke test Playwright enrichi avec un cas "3 sur 4".
+
+## [26.06.01.1] - 2026-06-01
+
+### Ajouté
+
+- Trois grilles Lille-Mêle relues à partir du corpus documentaire structuré.
+- Sources renseignées au niveau des familles de puzzles.
+
+### Modifié
+
+- Version courante passée à `26.06.01.1`.
+- Schéma `Puzzle` renforcé : statut, tags, sources de puzzle et sources de familles deviennent obligatoires.
+- Validateur de corpus enrichi pour refuser les items exclus/sensibles et les doublons normalisés dans les grilles.
+
 ## [26.05.31.5] - 2026-05-31
 
 ### Ajouté

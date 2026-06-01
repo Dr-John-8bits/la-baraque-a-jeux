@@ -88,7 +88,7 @@ Chaque grille destinée au public doit avoir une fiche de vérification :
 Exemples de ton acceptable :
 
 - `Bonne correspondance.`
-- `Trois sur quatre. Une carte fraude dans la rame.`
+- `Tout près : 3 cartes sont dans la même famille.`
 - `Grille démêlée. Tu peux descendre à la prochaine.`
 - `Une nouvelle grille demain. Même quai, autre piège.`
 

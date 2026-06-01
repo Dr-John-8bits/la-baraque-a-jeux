@@ -23,6 +23,7 @@
         "id": "ligne-1-lille",
         "title": "Stations de la ligne 1",
         "difficulty": "easy",
+        "sourceIds": ["ilevia-metro-ligne-1"],
         "items": [
           "Rihour",
           "Caulier",
@@ -35,6 +36,7 @@
         "id": "ligne-2-ouest",
         "title": "Stations de la ligne 2",
         "difficulty": "medium",
+        "sourceIds": ["ilevia-metro-ligne-2"],
         "items": [
           "Montebello",
           "Cormontaigne",
@@ -47,6 +49,7 @@
         "id": "quartiers-lille",
         "title": "Quartiers lillois",
         "difficulty": "easy",
+        "sourceIds": ["ville-lille"],
         "items": [
           "Vieux-Lille",
           "Lille-Sud",
@@ -59,6 +62,7 @@
         "id": "specialites-nord",
         "title": "Spécialités du Nord",
         "difficulty": "medium",
+        "sourceIds": ["hello-lille"],
         "items": [
           "Welsh",
           "Carbonnade",
@@ -92,6 +96,7 @@
         "id": "communes-mel",
         "title": "Communes de la MEL",
         "difficulty": "easy",
+        "sourceIds": ["mel-territoire"],
         "items": [
           "Roubaix",
           "Tourcoing",
@@ -104,6 +109,7 @@
         "id": "lieux-culturels-mel",
         "title": "Lieux culturels métropolitains",
         "difficulty": "medium",
+        "sourceIds": ["hello-lille"],
         "items": [
           "La Piscine",
           "La Condition Publique",
@@ -116,6 +122,7 @@
         "id": "braderie",
         "title": "Braderie de Lille",
         "difficulty": "medium",
+        "sourceIds": ["ville-lille-braderie"],
         "items": [
           "Moules",
           "Frites",
@@ -128,6 +135,7 @@
         "id": "eau-fortifs",
         "title": "Eau et fortifications",
         "difficulty": "tricky",
+        "sourceIds": ["ville-lille"],
         "items": [
           "Deûle",
           "Citadelle",
@@ -161,6 +169,7 @@
         "id": "grand-place",
         "title": "Autour de la Grand'Place",
         "difficulty": "medium",
+        "sourceIds": ["ville-lille-grand-place"],
         "items": [
           "Furet du Nord",
           "Vieille Bourse",
@@ -173,6 +182,7 @@
         "id": "ligne-1-va",
         "title": "Stations ligne 1 à Villeneuve-d'Ascq",
         "difficulty": "hard",
+        "sourceIds": ["ilevia-metro-ligne-1", "gtfs-ilevia-data-gouv"],
         "items": [
           "4 Cantons",
           "Cité Scientifique",
@@ -185,6 +195,7 @@
         "id": "noms-composes",
         "title": "Communes aux noms en plusieurs morceaux",
         "difficulty": "medium",
+        "sourceIds": ["mel-territoire"],
         "items": [
           "Marcq-en-Barœul",
           "Mons-en-Barœul",
@@ -197,6 +208,7 @@
         "id": "musees-lieux",
         "title": "Musées ou lieux de visite",
         "difficulty": "easy",
+        "sourceIds": ["hello-lille"],
         "items": [
           "Palais des Beaux-Arts",
           "Villa Cavrois",
@@ -231,6 +243,7 @@
         "id": "stations-porte",
         "title": "Stations contenant Porte",
         "difficulty": "easy",
+        "sourceIds": ["ilevia-metro-ligne-2", "gtfs-ilevia-data-gouv"],
         "items": [
           "Porte d'Arras",
           "Porte de Douai",
@@ -243,6 +256,7 @@
         "id": "marches-places",
         "title": "Marchés et places",
         "difficulty": "medium",
+        "sourceIds": ["ville-lille", "hello-lille"],
         "items": [
           "Wazemmes",
           "Place du Concert",
@@ -255,6 +269,7 @@
         "id": "campus-savoirs",
         "title": "Campus et pôles d'innovation",
         "difficulty": "hard",
+        "sourceIds": ["hello-lille"],
         "items": [
           "Cité Scientifique",
           "Pont de Bois",
@@ -267,6 +282,7 @@
         "id": "mots-nord",
         "title": "Mots et saveurs du Nord",
         "difficulty": "tricky",
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "regional-words-source-index"],
         "items": [
           "Chicon",
           "Drache",
@@ -274,6 +290,224 @@
           "Maroilles"
         ],
         "note": "À manier avec parcimonie, mais pas à bannir."
+      }
+    ]
+  },
+  {
+    "id": "rails-metro-tram-001",
+    "number": 5,
+    "title": "Sur les rails",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Cette grille vient des exports structurés Ilévia et MEL : stations, lignes et communes desservies, sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "tramway", "metropole"],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 1 dessert Villeneuve-d'Ascq et Lille.",
+      "answer": true,
+      "explanation": "Vrai. Les exports structurés rattachent des stations de la ligne 1 à Villeneuve-d'Ascq, Hellemmes-Lille et Lille."
+    },
+    "groups": [
+      {
+        "id": "m1-villeneuve-ascq",
+        "title": "Stations de la ligne 1",
+        "difficulty": "easy",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "4 Cantons Stade P. Mauroy",
+          "Cité Scientifique",
+          "Triolo",
+          "Pont de Bois"
+        ],
+        "note": "Quatre stations de la ligne 1 côté Villeneuve-d'Ascq."
+      },
+      {
+        "id": "m2-tourcoing-nord",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "C.H. Dron",
+          "Bourgogne",
+          "Pont de Neuville",
+          "Phalempins"
+        ],
+        "note": "Un paquet de stations au nord de la ligne 2."
+      },
+      {
+        "id": "tram-wasquehal",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Clemenceau Hippodrome",
+          "Croisé Laroche",
+          "Acacias",
+          "Pont de Wasquehal"
+        ],
+        "note": "Le tramway file aussi par des repères de la métropole nord-est."
+      },
+      {
+        "id": "communes-metro-mel",
+        "title": "Communes desservies par le métro",
+        "difficulty": "tricky",
+        "sourceIds": ["mel-communes-datamel", "gtfs-ilevia-data-gouv"],
+        "items": [
+          "Mons-en-Barœul",
+          "Roubaix",
+          "Tourcoing",
+          "Villeneuve-d'Ascq"
+        ],
+        "note": "Des communes MEL où le métro laisse une trace nette dans les données."
+      }
+    ]
+  },
+  {
+    "id": "quartiers-territoires-001",
+    "number": 6,
+    "title": "Quartiers et territoires",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "La grille mélange quartiers officiels et territoires MEL : le piège est de séparer Lille, Lomme, Hellemmes et le reste de la métropole.",
+    "status": "reviewed",
+    "tags": ["quartiers", "communes", "metropole"],
+    "sourceIds": [
+      "ville-lille-quartiers-data-gouv",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "Les exports de quartiers distinguent Lille, Lomme et Hellemmes.",
+      "answer": true,
+      "explanation": "Vrai. Le corpus structuré conserve la commune associée à chaque quartier officiel."
+    },
+    "groups": [
+      {
+        "id": "quartiers-officiels-est",
+        "title": "Quartiers officiels",
+        "difficulty": "easy",
+        "sourceIds": ["ville-lille-quartiers-data-gouv"],
+        "items": [
+          "Bois-Blancs",
+          "Faubourg de Béthune",
+          "Fives",
+          "Hellemmes"
+        ],
+        "note": "Quatre entrées du jeu de données des quartiers Lille-Lomme-Hellemmes."
+      },
+      {
+        "id": "quartiers-officiels-sud-ouest",
+        "title": "Quartiers officiels",
+        "difficulty": "easy",
+        "sourceIds": ["ville-lille-quartiers-data-gouv"],
+        "items": [
+          "Lille-Centre",
+          "Lille-Moulins",
+          "Lille-Sud",
+          "Lomme"
+        ],
+        "note": "Encore des quartiers officiels, avec deux noms qui portent Lille sans se cacher."
+      },
+      {
+        "id": "communes-couronne-sud",
+        "title": "Territoire de la couronne Sud",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Allennes-les-Marais",
+          "Annœullin",
+          "Bauvin",
+          "Carnin"
+        ],
+        "note": "Quatre communes rattachées à la couronne Sud dans l'export MEL."
+      },
+      {
+        "id": "communes-territoire-est",
+        "title": "Territoire Est",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Anstaing",
+          "Baisieux",
+          "Bouvines",
+          "Chéreng"
+        ],
+        "note": "Un groupe de communes du territoire Est, utile pour sortir du centre-ville."
+      }
+    ]
+  },
+  {
+    "id": "rames-rives-001",
+    "number": 7,
+    "title": "Rames et rives",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Ici, le corpus joue la carte des lignes : deux séries métro, une série tram et un groupe de communes du Tourquennois.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "tramway", "communes"],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "Villa Cavrois et Parc Barbieux apparaissent dans les données tramway.",
+      "answer": true,
+      "explanation": "Vrai. Ces deux arrêts figurent dans l'export structuré métro-tram utilisé pour le corpus."
+    },
+    "groups": [
+      {
+        "id": "m1-centre-lille",
+        "title": "Stations de la ligne 1",
+        "difficulty": "easy",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Fives",
+          "Madeleine Caulier",
+          "Gare Lille Flandres",
+          "Rihour"
+        ],
+        "note": "Quatre stations de la ligne 1 dans la traversée lilloise."
+      },
+      {
+        "id": "m2-ouest-lille",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Porte des Postes",
+          "Montebello",
+          "Cormontaigne",
+          "Port de Lille"
+        ],
+        "note": "La ligne 2, côté ouest lillois, avant de filer plus loin."
+      },
+      {
+        "id": "tram-barbieux-cavrois",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "La Marque",
+          "Villa Cavrois",
+          "Bol d'Air",
+          "Parc Barbieux"
+        ],
+        "note": "Quatre arrêts du tramway entre repères verts et architecture connue."
+      },
+      {
+        "id": "communes-tourquennois-lys",
+        "title": "Tourquennois - Vallée de la Lys",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Bondues",
+          "Bousbecque",
+          "Comines",
+          "Halluin"
+        ],
+        "note": "Quatre communes du territoire Tourquennois - Vallée de la Lys."
       }
     ]
   }

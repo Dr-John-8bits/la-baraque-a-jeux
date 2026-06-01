@@ -41,3 +41,14 @@ Original prompt: Commence à développer le jeu index.hmtl, on verra pour le con
 - Les puzzles sont extraits dans `packages/corpus/lille-mele/puzzles.json`, les sources communes dans `packages/corpus/sources.json`.
 - Le jeu utilise désormais les helpers communs pour la sélection quotidienne, le stockage local, le partage, le mélange déterministe et l'échappement HTML.
 - Bug latent corrigé : la référence JavaScript à l'ancien footer `#credits` a été retirée.
+- Itération 26.06.01.1 :
+  - ajout de 3 puzzles `reviewed` construits à partir des exports `processed/` transport, quartiers et communes ;
+  - ajout de `sourceIds` au niveau des familles, y compris sur les 4 puzzles prototype existants ;
+  - schéma `Puzzle` renforcé pour rendre `status`, `tags`, `sourceIds` et les sources de familles obligatoires ;
+  - validateur enrichi : refus des items exclus/sensibles et des doublons de libellés après normalisation ;
+  - prochaine priorité : poursuivre l'enrichissement avec des familles relues, puis brancher les sources de groupe dans l'affichage si utile.
+- Itération 26.06.01.2 :
+  - feedback "3 sur 4" rendu explicite : message `Tout près : 3 cartes sont dans la même famille.` ;
+  - flash jaune des cartes prolongé et rendu plus visible ;
+  - aide et microcopy éditoriale alignées ;
+  - smoke test enrichi avec un scénario "3 sur 4".

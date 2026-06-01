@@ -7,7 +7,7 @@ import { escapeHtml } from "../../packages/game-utils/text-render.js";
 
 const MAX_MISTAKES = 4;
 const STORAGE_PREFIX = "lillemele.v1.";
-const APP_VERSION = "26.05.31.5";
+const APP_VERSION = "26.06.01.2";
 const DEFAULT_STATS = {
   played: 0,
   won: 0,
@@ -322,7 +322,7 @@ function submitSelection() {
   } else if (overlap === 3) {
     messageTone = "near";
     showSelectionFeedback(selected, "one-away");
-    els.message.textContent = "Trois sur quatre. Une carte fraude dans la rame.";
+    els.message.textContent = "Tout près : 3 cartes sont dans la même famille.";
   } else {
     messageTone = "wrong";
     showSelectionFeedback(selected, "wrong");
@@ -337,7 +337,7 @@ function showSelectionFeedback(items, type) {
   visualFeedbackTimer = setTimeout(() => {
     visualFeedback = { items: [], type: "" };
     render();
-  }, 760);
+  }, type === "one-away" ? 1300 : 760);
 }
 
 function getMaxOverlap(selected) {

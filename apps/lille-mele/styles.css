@@ -207,8 +207,9 @@ h1 {
 
 .tile.feedback-one-away {
   border-color: var(--yellow);
-  background: color-mix(in srgb, var(--yellow), var(--surface) 58%);
-  animation: near-pulse 520ms ease-in-out 1;
+  background: color-mix(in srgb, var(--yellow), var(--surface) 44%);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow), transparent 64%);
+  animation: near-pulse 640ms ease-in-out 2;
 }
 
 .tile:disabled {
@@ -267,7 +268,8 @@ h1 {
 
 .message.near {
   border-color: var(--yellow);
-  background: color-mix(in srgb, var(--yellow), var(--surface) 78%);
+  background: color-mix(in srgb, var(--yellow), var(--surface) 64%);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--yellow), transparent 76%);
 }
 
 .message.wrong {

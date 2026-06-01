@@ -7,12 +7,19 @@ const words = await readJson("packages/corpus/le-mot-a-biloute/words.json");
 const guessPolicy = await readJson("packages/corpus/le-mot-a-biloute/guess-policy.json");
 const acceptedGuesses = await readJson("packages/corpus/le-mot-a-biloute/accepted-guesses.json");
 const puzzles = await readJson("packages/corpus/lille-mele/puzzles.json");
+const excludedSensitiveItems = await readJson(
+  "packages/corpus/documentation/processed/editorial/excluded-sensitive-items.json"
+);
+const candidateItems = await readJson(
+  "packages/corpus/documentation/processed/editorial/candidate-items.json"
+);
 
 const sourceIds = validateSources(sources);
+const forbiddenLabels = buildForbiddenLabels(excludedSensitiveItems, candidateItems);
 validateWords(words, sourceIds);
 validateGuessPolicy(guessPolicy);
 validateAcceptedGuesses(acceptedGuesses, sourceIds);
-validatePuzzles(puzzles, sourceIds);
+validatePuzzles(puzzles, sourceIds, forbiddenLabels);
 
 if (errors.length > 0) {
   console.error("Corpus invalide :");
@@ -137,7 +144,7 @@ function validateAcceptedGuesses(value, sourceIds) {
   requireAnswerArray(value.words, "acceptedGuesses.words", { min: 1 });
 }
 
-function validatePuzzles(value, sourceIds) {
+function validatePuzzles(value, sourceIds, forbiddenLabels) {
   if (!Array.isArray(value)) {
     errors.push("packages/corpus/lille-mele/puzzles.json doit etre un tableau.");
     return;
@@ -153,10 +160,10 @@ function validatePuzzles(value, sourceIds) {
     requireString(puzzle?.intro, `${scope}.intro`, { max: 140 });
     requireString(puzzle?.finalNote, `${scope}.finalNote`, { max: 320 });
     requireEnum(puzzle?.status, `${scope}.status`, ["prototype", "reviewed", "published"], {
-      optional: true,
+      optional: false,
     });
-    requireKebabArray(puzzle?.tags, `${scope}.tags`, { optional: true });
-    requireSourceRefs(puzzle?.sourceIds, `${scope}.sourceIds`, sourceIds, { optional: true });
+    requireKebabArray(puzzle?.tags, `${scope}.tags`, { min: 1 });
+    requireSourceRefs(puzzle?.sourceIds, `${scope}.sourceIds`, sourceIds, { min: 1 });
     requireArray(puzzle?.groups, `${scope}.groups`, 4);
     requireString(puzzle?.bonus?.question, `${scope}.bonus.question`, { max: 140 });
     if (typeof puzzle?.bonus?.answer !== "boolean") {
@@ -169,6 +176,7 @@ function validatePuzzles(value, sourceIds) {
 
     const groupIds = new Set();
     const itemIds = new Set();
+    const normalizedItemIds = new Set();
     puzzle?.groups?.forEach((group, groupIndex) => {
       const groupScope = `${scope}.groups[${groupIndex}]`;
       requireKebabId(group?.id, `${groupScope}.id`);
@@ -179,7 +187,7 @@ function validatePuzzles(value, sourceIds) {
         "hard",
         "tricky",
       ]);
-      requireSourceRefs(group?.sourceIds, `${groupScope}.sourceIds`, sourceIds, { optional: true });
+      requireSourceRefs(group?.sourceIds, `${groupScope}.sourceIds`, sourceIds, { min: 1 });
       requireKebabArray(group?.tags, `${groupScope}.tags`, { optional: true });
       requireStringArray(group?.items, `${groupScope}.items`, {
         length: 4,
@@ -189,13 +197,63 @@ function validatePuzzles(value, sourceIds) {
       requireString(group?.note, `${groupScope}.note`, { max: 180 });
 
       addUnique(groupIds, group?.id, `${groupScope}.id`);
-      group?.items?.forEach((item) => addUnique(itemIds, item, `${groupScope}.items`));
+      group?.items?.forEach((item, itemIndex) => {
+        const itemLabel = `${groupScope}.items[${itemIndex}]`;
+        addUnique(itemIds, item, itemLabel);
+        const normalized = normalizeLabel(item);
+        addUnique(normalizedItemIds, normalized, itemLabel);
+        if (forbiddenLabels.has(normalized)) {
+          errors.push(`${itemLabel} utilise un item exclu ou sensible : ${forbiddenLabels.get(normalized)}.`);
+        }
+      });
     });
 
     if (itemIds.size !== 16) {
       errors.push(`${scope}.groups doit contenir 16 items distincts au total.`);
     }
+    if (normalizedItemIds.size !== 16) {
+      errors.push(`${scope}.groups doit contenir 16 items distincts apres normalisation.`);
+    }
   });
+}
+
+function buildForbiddenLabels(excludedSensitiveItems, candidateItems) {
+  const labels = new Map();
+  collectForbiddenLabels(labels, excludedSensitiveItems?.items, "excluded-sensitive-items.json");
+  collectForbiddenLabels(
+    labels,
+    candidateItems?.items?.filter((item) => item?.editorialStatus === "avoid" || item?.validation === "avoid"),
+    "candidate-items.json"
+  );
+  return labels;
+}
+
+function collectForbiddenLabels(labels, items, sourceLabel) {
+  if (items === undefined) return;
+  if (!Array.isArray(items)) {
+    errors.push(`${sourceLabel} doit exposer un tableau items.`);
+    return;
+  }
+  items.forEach((item, index) => {
+    const label = item?.label;
+    if (typeof label !== "string" || label.trim() === "") {
+      errors.push(`${sourceLabel}.items[${index}].label est obligatoire.`);
+      return;
+    }
+    labels.set(normalizeLabel(label), label);
+  });
+}
+
+function normalizeLabel(value) {
+  if (typeof value !== "string") return "";
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/['’.-]/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
 }
 
 function requireString(value, label, options = {}) {
@@ -253,6 +311,9 @@ function requireStringArray(value, label, options = {}) {
 function requireKebabArray(value, label, options = {}) {
   if (options.optional && value === undefined) return;
   if (!requireArray(value, label)) return;
+  if (options.min !== undefined && value.length < options.min) {
+    errors.push(`${label} doit contenir au moins ${options.min} element(s).`);
+  }
 
   const seen = new Set();
   value.forEach((item, index) => {
@@ -314,6 +375,9 @@ function requireEnum(value, label, allowed, options = {}) {
 function requireSourceRefs(value, label, sourceIds, options = {}) {
   if (options.optional && value === undefined) return;
   if (!requireArray(value, label)) return;
+  if (options.min !== undefined && value.length < options.min) {
+    errors.push(`${label} doit contenir au moins ${options.min} source(s).`);
+  }
 
   const seen = new Set();
   value.forEach((sourceId, index) => {

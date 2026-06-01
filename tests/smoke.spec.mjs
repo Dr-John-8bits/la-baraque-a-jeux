@@ -15,7 +15,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await expect(page.getByRole("link", { name: "Le mot à Biloute", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Lille-Mêle", exact: true })).toBeVisible();
   await expect(
-    page.getByRole("link", { name: "Biloute · Bière · Braderie", exact: true })
+    page.getByRole("link", { name: "Ouvrir Biloute Bière Braderie", exact: true })
   ).toBeVisible();
 
   await page.goto(`${base}blog.html`);
@@ -43,6 +43,14 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   const puzzles = JSON.parse(await readFile("packages/corpus/lille-mele/puzzles.json", "utf8"));
   const puzzle = puzzles.find((candidate) => candidate.id === lilleState.puzzle.id);
   const group = puzzle.groups[0];
+  const nearMiss = [...group.items.slice(0, 3), puzzle.groups[1].items[0]];
+
+  for (const item of nearMiss) {
+    await page.getByRole("button", { name: item }).click();
+  }
+
+  await page.getByRole("button", { name: "Valider" }).click();
+  await expect(page.locator("#message")).toContainText("Tout près");
 
   for (const item of group.items) {
     await page.getByRole("button", { name: item }).click();
