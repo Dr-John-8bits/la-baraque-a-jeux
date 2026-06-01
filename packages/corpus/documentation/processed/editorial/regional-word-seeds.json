@@ -1,0 +1,369 @@
+{
+  "generatedAt": "2026-06-01",
+  "description": "Graines de vocabulaire regional et gastronomique. Elles indexent les sources web fournies sans recopier leurs textes.",
+  "sourceIds": [
+    "regional-words-source-index"
+  ],
+  "items": [
+    {
+      "id": "biloute",
+      "label": "Biloute",
+      "answer": "BILOUTE",
+      "definition": "Mot affectueux du parler populaire du Nord.",
+      "themes": [
+        "vocabulaire",
+        "parler-regional"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "drache",
+      "label": "Drache",
+      "answer": "DRACHE",
+      "definition": "Grosse pluie, souvent employee pour une averse bien marquee.",
+      "themes": [
+        "meteo",
+        "parler-regional"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "chicon",
+      "label": "Chicon",
+      "answer": "CHICON",
+      "definition": "Nom regional courant de l'endive.",
+      "themes": [
+        "gastronomie",
+        "legume"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "quinquin",
+      "label": "Quinquin",
+      "answer": "QUINQUIN",
+      "definition": "Petit enfant dans le parler regional.",
+      "themes": [
+        "famille",
+        "parler-regional"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "ducasse",
+      "label": "Ducasse",
+      "answer": "DUCASSE",
+      "definition": "Fete populaire locale, souvent associee aux maneges.",
+      "themes": [
+        "tradition",
+        "fete"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "baraque",
+      "label": "Baraque",
+      "answer": "BARAQUE",
+      "definition": "Stand ou petite installation de vente, frequent dans le vocabulaire de fete ou de marche.",
+      "themes": [
+        "quotidien",
+        "marche"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "braderie",
+      "label": "Braderie",
+      "answer": "BRADERIE",
+      "definition": "Grande vente populaire, particulierement associee a Lille.",
+      "themes": [
+        "lille",
+        "evenement"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "estaminet",
+      "label": "Estaminet",
+      "answer": "ESTAMINET",
+      "definition": "Cafe ou lieu convivial traditionnel du Nord et de Flandre.",
+      "themes": [
+        "sortie",
+        "tradition"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "welsh",
+      "label": "Welsh",
+      "answer": "WELSH",
+      "definition": "Plat de brasserie tres present dans le Nord, a base de fromage fondu.",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "carbonnade",
+      "label": "Carbonnade",
+      "answer": "CARBONNADE",
+      "definition": "Plat mijote au boeuf, souvent associe aux tables du Nord.",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "potjevleesch",
+      "label": "Potjevleesch",
+      "answer": "POTJEVLEESCH",
+      "definition": "Specialite froide en gelee, typique de la tradition flamande regionale.",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "merveilleux",
+      "label": "Merveilleux",
+      "answer": "MERVEILLEUX",
+      "definition": "Dessert a base de meringue et de creme, tres associe au Nord.",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "maroilles",
+      "label": "Maroilles",
+      "answer": "MAROILLES",
+      "definition": "Fromage du Nord au caractere bien identifiable.",
+      "themes": [
+        "gastronomie",
+        "fromage"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "genievre",
+      "label": "Genièvre",
+      "answer": "GENIEVRE",
+      "definition": "Eau-de-vie traditionnelle du Nord.",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "cassonade",
+      "label": "Cassonade",
+      "answer": "CASSONADE",
+      "definition": "Sucre roux utilise dans plusieurs douceurs regionales.",
+      "themes": [
+        "gastronomie",
+        "sucre"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "speculoos",
+      "label": "Speculoos",
+      "answer": "SPECULOOS",
+      "definition": "Biscuit epice tres present dans le Nord et la Belgique voisine.",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "babelutte",
+      "label": "Babelutte",
+      "answer": "BABELUTTE",
+      "definition": "Confiserie dure au caramel connue dans le Nord.",
+      "themes": [
+        "gastronomie",
+        "confiserie"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "flamiche",
+      "label": "Flamiche",
+      "answer": "FLAMICHE",
+      "definition": "Tarte salee regionale, souvent associee au poireau ou au fromage.",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "waterzoi",
+      "label": "Waterzoï",
+      "answer": "WATERZOI",
+      "definition": "Plat flamand mijote, souvent au poisson ou a la volaille.",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "houblon",
+      "label": "Houblon",
+      "answer": "HOUBLON",
+      "definition": "Plante associee aux traditions brassicoles du Nord.",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "brassin",
+      "label": "Brassin",
+      "answer": "BRASSIN",
+      "definition": "Cuvee ou production de biere, utile pour un angle brassicole non marque.",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "carnaval",
+      "label": "Carnaval",
+      "answer": "CARNAVAL",
+      "definition": "Fete populaire majeure dans plusieurs villes du Nord.",
+      "themes": [
+        "tradition",
+        "fete"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "beffroi",
+      "label": "Beffroi",
+      "answer": "BEFFROI",
+      "definition": "Tour civile emblematique de nombreuses villes du Nord.",
+      "themes": [
+        "patrimoine",
+        "architecture"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "friterie",
+      "label": "Friterie",
+      "answer": "FRITERIE",
+      "definition": "Lieu de restauration populaire autour des frites.",
+      "themes": [
+        "gastronomie",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    }
+  ]
+}

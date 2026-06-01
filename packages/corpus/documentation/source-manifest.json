@@ -1,0 +1,147 @@
+{
+  "generatedAt": "2026-06-01",
+  "description": "Manifest des sources brutes telechargees pour le corpus documentaire des deux jeux.",
+  "sources": [
+    {
+      "id": "gtfs-ilevia-data-gouv",
+      "title": "GTFS Ilévia",
+      "publisher": "Ilévia / Métropole Européenne de Lille",
+      "license": "Licence Ouverte 2.0",
+      "url": "https://media.ilevia.fr/opendata/gtfs.zip",
+      "metadataPath": "raw/data-gouv/ilevia-gtfs.metadata.json",
+      "localPaths": [
+        "raw/transport/ilevia-gtfs.zip",
+        "raw/transport/ilevia-gtfs/"
+      ],
+      "usage": "Arrets ordonnes par ligne, terminus, correspondances potentielles et familles transport."
+    },
+    {
+      "id": "ilevia-arret-point-datamel",
+      "title": "Arrets Ilévia avec commune",
+      "publisher": "Métropole Européenne de Lille",
+      "license": "Licence Ouverte 2.0",
+      "url": "https://data.lillemetropole.fr/geoserver/ogc/features/v1/collections/dsp_ilevia:arret_point/items",
+      "metadataPath": "raw/data-gouv/ilevia-gtfs.metadata.json",
+      "localPaths": ["raw/transport/ilevia-arret-point.geojson"],
+      "usage": "Rattachement des arrets et stations aux communes."
+    },
+    {
+      "id": "mel-communes-datamel",
+      "title": "Communes de la MEL",
+      "publisher": "Métropole Européenne de Lille",
+      "license": "Licence Ouverte 2.0",
+      "url": "https://data.lillemetropole.fr/geoserver/ogc/features/v1/collections/mel_limite_administrative:mel_comm_orga/items",
+      "metadataPath": "raw/data-gouv/mel-communes.metadata.json",
+      "localPaths": ["raw/data-gouv/mel-communes.geojson"],
+      "usage": "Liste des 95 communes, territoires et surfaces."
+    },
+    {
+      "id": "mel-communes-associees-datamel",
+      "title": "Communes et communes associees de la MEL",
+      "publisher": "Métropole Européenne de Lille",
+      "license": "Licence Ouverte 2.0",
+      "url": "https://data.lillemetropole.fr/geoserver/ogc/features/v1/collections/mel_limite_administrative:mel_comm_llh_orga/items",
+      "metadataPath": "raw/data-gouv/mel-communes-associees.metadata.json",
+      "localPaths": ["raw/data-gouv/mel-communes-associees.geojson"],
+      "usage": "Normalisation des noms Lomme et Hellemmes-Lille."
+    },
+    {
+      "id": "mel-populations-datamel",
+      "title": "Populations des communes et de la MEL",
+      "publisher": "Métropole Européenne de Lille",
+      "license": "Licence Ouverte 2.0",
+      "url": "https://data.lillemetropole.fr/geoserver/ogc/features/v1/collections/mel_limite_administrative:commune_population/items",
+      "metadataPath": "raw/data-gouv/mel-populations.metadata.json",
+      "localPaths": ["raw/data-gouv/mel-populations.geojson"],
+      "usage": "Anecdotes et familles autour des communes."
+    },
+    {
+      "id": "ville-lille-quartiers-data-gouv",
+      "title": "Limites des quartiers de Lille, Lomme et Hellemmes",
+      "publisher": "Mairie de Lille",
+      "license": "Licence Ouverte",
+      "url": "https://tabular-api.data.gouv.fr/api/resources/b4c07592-b5f1-4ca4-8259-e1413b2e90bb/data/json/",
+      "metadataPath": "raw/data-gouv/lille-quartiers.metadata.json",
+      "localPaths": ["raw/data-gouv/lille-quartiers.records.json"],
+      "usage": "Quartiers officiels pour Lille-Mele et Le mot a Biloute."
+    },
+    {
+      "id": "ville-lille-equipements-publics-data-gouv",
+      "title": "Equipements publics Lille-Hellemmes-Lomme",
+      "publisher": "Mairie de Lille",
+      "license": "Licence Ouverte",
+      "url": "https://tabular-api.data.gouv.fr/api/resources/8676e274-e981-410f-aaa9-9bdc17988b19/data/json/",
+      "metadataPath": "raw/data-gouv/lille-equipements-publics.metadata.json",
+      "localPaths": ["raw/data-gouv/lille-equipements-publics.records.json"],
+      "usage": "Lieux culturels, sportifs, sociaux et administratifs, avec filtrage editorial."
+    },
+    {
+      "id": "ville-lille-monuments-historiques-data-gouv",
+      "title": "Monuments historiques Lille-Hellemmes-Lomme",
+      "publisher": "Mairie de Lille",
+      "license": "Licence Ouverte",
+      "url": "https://tabular-api.data.gouv.fr/api/resources/ad62eceb-4620-461e-8699-0466546eefce/data/json/",
+      "metadataPath": "raw/data-gouv/lille-monuments-historiques.metadata.json",
+      "localPaths": ["raw/data-gouv/lille-monuments-historiques.records.json"],
+      "usage": "Patrimoine civil et historique, avec exclusions religieuses."
+    },
+    {
+      "id": "ville-lille-parcs-jardins-data-gouv",
+      "title": "Parcs et jardins Lille-Hellemmes-Lomme",
+      "publisher": "Mairie de Lille",
+      "license": "Licence Ouverte",
+      "url": "https://tabular-api.data.gouv.fr/api/resources/6d2c405d-f8ae-45dd-a85f-9a52ff4d9082/data/json/",
+      "metadataPath": "raw/data-gouv/lille-parcs-jardins-emprise.metadata.json",
+      "localPaths": ["raw/data-gouv/lille-parcs-jardins.records.json"],
+      "usage": "Familles de parcs, jardins, squares et reperes de quartier."
+    },
+    {
+      "id": "ville-lille-troncons-rue-data-gouv",
+      "title": "Troncons de rue a Lille, Lomme et Hellemmes",
+      "publisher": "Mairie de Lille",
+      "license": "Licence Ouverte",
+      "url": "https://tabular-api.data.gouv.fr/api/resources/7a333237-ecc6-4c04-96b7-73b46531bf19/data/json/",
+      "metadataPath": "raw/data-gouv/lille-troncons-rue.metadata.json",
+      "localPaths": ["raw/data-gouv/lille-troncons-rue.records.json"],
+      "usage": "Reserve de noms de rues et reperes urbains."
+    },
+    {
+      "id": "ville-lille-aires-jeux-data-gouv",
+      "title": "Aires de jeux a Lille",
+      "publisher": "Mairie de Lille",
+      "license": "Licence Ouverte",
+      "url": "https://tabular-api.data.gouv.fr/api/resources/74a354d4-5f2d-4ace-9518-f816736c6803/data/json/",
+      "metadataPath": "raw/data-gouv/lille-aires-jeux.metadata.json",
+      "localPaths": ["raw/data-gouv/lille-aires-jeux.records.json"],
+      "usage": "Reperes locaux non sensibles."
+    },
+    {
+      "id": "ville-lille-stations-reparation-velo-data-gouv",
+      "title": "Stations de reparation de velo a Lille",
+      "publisher": "Mairie de Lille",
+      "license": "Licence Ouverte",
+      "url": "https://tabular-api.data.gouv.fr/api/resources/8054cfae-9dc2-49b6-b568-aea0d2201071/data/json/",
+      "metadataPath": "raw/data-gouv/lille-stations-reparation-velo.metadata.json",
+      "localPaths": ["raw/data-gouv/lille-stations-reparation-velo.records.json"],
+      "usage": "Mobilite douce et reperes de quartier."
+    },
+    {
+      "id": "mel-ipap-2018",
+      "title": "Inventaire du patrimoine architectural et paysager",
+      "publisher": "Métropole Européenne de Lille",
+      "license": "Consultation publique",
+      "url": "https://www.lillemetropole.fr/sites/plu/files/2018-10/IPAP.pdf",
+      "localPaths": ["raw/pdf/mel-ipap-2018.pdf"],
+      "usage": "Verification patrimoniale manuelle, sans extraction automatique pour les jeux."
+    },
+    {
+      "id": "nord-depliant-tourisme",
+      "title": "Depliant tourisme du Nord",
+      "publisher": "Departement du Nord",
+      "license": "Consultation publique",
+      "url": "https://lenord.fr/upload/lenorddocuments/De%CC%81pliant%20Tourisme.pdf",
+      "localPaths": ["raw/pdf/nord-depliant-tourisme.pdf"],
+      "usage": "Reserve touristique et culturelle a verifier manuellement."
+    }
+  ]
+}

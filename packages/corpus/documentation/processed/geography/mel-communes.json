@@ -1,0 +1,3138 @@
+{
+  "generatedAt": "2026-06-01",
+  "sourceIds": [
+    "mel-communes-datamel",
+    "mel-populations-datamel",
+    "gtfs-ilevia-data-gouv"
+  ],
+  "communes": [
+    {
+      "name": "Allennes-les-Marais",
+      "codeInsee": "59005",
+      "type": "Commune",
+      "population": 3460,
+      "populationHistory": {
+        "pop2006": 3407,
+        "pop2015": 3413,
+        "pop2020": 3532
+      },
+      "surfaceKm2": 5.54,
+      "densityPerKm2": 624.55,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": []
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Annœullin",
+      "codeInsee": "59011",
+      "type": "Commune",
+      "population": 10428,
+      "populationHistory": {
+        "pop2006": 9802,
+        "pop2015": 10407,
+        "pop2020": 10679
+      },
+      "surfaceKm2": 8.98,
+      "densityPerKm2": 1161.25,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": []
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Anstaing",
+      "codeInsee": "59013",
+      "type": "Commune",
+      "population": 1469,
+      "populationHistory": {
+        "pop2006": 1195,
+        "pop2015": 1404,
+        "pop2020": 1559
+      },
+      "surfaceKm2": 2.31,
+      "densityPerKm2": 635.93,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "20R",
+          "69R",
+          "73"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Armentières",
+      "codeInsee": "59017",
+      "type": "Commune",
+      "population": 24882,
+      "populationHistory": {
+        "pop2006": 24836,
+        "pop2015": 25066,
+        "pop2020": 25225
+      },
+      "surfaceKm2": 6.28,
+      "densityPerKm2": 3962.1,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "27R",
+          "65",
+          "65R",
+          "74R",
+          "80",
+          "81",
+          "82",
+          "82R",
+          "236",
+          "938",
+          "CITA",
+          "L99"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Aubers",
+      "codeInsee": "59025",
+      "type": "Commune",
+      "population": 1651,
+      "populationHistory": {
+        "pop2006": 1527,
+        "pop2015": 1586,
+        "pop2020": 1698
+      },
+      "surfaceKm2": 10.12,
+      "densityPerKm2": 163.14,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "29R",
+          "62",
+          "62R",
+          "74R",
+          "236"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Baisieux",
+      "codeInsee": "59044",
+      "type": "Commune",
+      "population": 4765,
+      "populationHistory": {
+        "pop2006": 4078,
+        "pop2015": 4735,
+        "pop2020": 4993
+      },
+      "surfaceKm2": 8.69,
+      "densityPerKm2": 548.33,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "26R",
+          "66",
+          "72",
+          "73",
+          "78"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Bauvin",
+      "codeInsee": "59052",
+      "type": "Commune",
+      "population": 5180,
+      "populationHistory": {
+        "pop2006": 5322,
+        "pop2015": 5279,
+        "pop2020": 5044
+      },
+      "surfaceKm2": 3.87,
+      "densityPerKm2": 1338.5,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": []
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Beaucamps-Ligny",
+      "codeInsee": "59056",
+      "type": "Commune",
+      "population": 856,
+      "populationHistory": {
+        "pop2006": 912,
+        "pop2015": 857,
+        "pop2020": 844
+      },
+      "surfaceKm2": 5.05,
+      "densityPerKm2": 169.5,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "22R",
+          "29R",
+          "64",
+          "64R",
+          "236",
+          "928",
+          "929",
+          "933",
+          "934"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Bois-Grenier",
+      "codeInsee": "59088",
+      "type": "Commune",
+      "population": 1612,
+      "populationHistory": {
+        "pop2006": 1405,
+        "pop2015": 1589,
+        "pop2020": 1802
+      },
+      "surfaceKm2": 7.42,
+      "densityPerKm2": 217.25,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "65",
+          "65R",
+          "74R",
+          "236"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Bondues",
+      "codeInsee": "59090",
+      "type": "Commune",
+      "population": 10103,
+      "populationHistory": {
+        "pop2006": 10151,
+        "pop2015": 9999,
+        "pop2020": 9759
+      },
+      "surfaceKm2": 13.01,
+      "densityPerKm2": 776.56,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "33",
+          "86",
+          "89",
+          "902",
+          "903",
+          "904",
+          "940",
+          "978",
+          "L91",
+          "Z4"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Bousbecque",
+      "codeInsee": "59098",
+      "type": "Commune",
+      "population": 4831,
+      "populationHistory": {
+        "pop2006": 4599,
+        "pop2015": 4908,
+        "pop2020": 4791
+      },
+      "surfaceKm2": 6.46,
+      "densityPerKm2": 747.83,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "82",
+          "82R",
+          "84",
+          "86",
+          "940",
+          "941",
+          "942",
+          "943",
+          "944"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Bouvines",
+      "codeInsee": "59106",
+      "type": "Commune",
+      "population": 775,
+      "populationHistory": {
+        "pop2006": 723,
+        "pop2015": 696,
+        "pop2020": 746
+      },
+      "surfaceKm2": 2.71,
+      "densityPerKm2": 285.98,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "69R"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Capinghem",
+      "codeInsee": "59128",
+      "type": "Commune",
+      "population": 2495,
+      "populationHistory": {
+        "pop2006": 1596,
+        "pop2015": 2354,
+        "pop2020": 2506
+      },
+      "surfaceKm2": 1.87,
+      "densityPerKm2": 1334.22,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "61",
+          "61R",
+          "62",
+          "62R",
+          "64",
+          "64R",
+          "65",
+          "65R",
+          "80",
+          "CO2",
+          "L99"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Carnin",
+      "codeInsee": "59133",
+      "type": "Commune",
+      "population": 1008,
+      "populationHistory": {
+        "pop2006": 1033,
+        "pop2015": 975,
+        "pop2020": 1054
+      },
+      "surfaceKm2": 2.34,
+      "densityPerKm2": 430.77,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": []
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Chéreng",
+      "codeInsee": "59146",
+      "type": "Commune",
+      "population": 2990,
+      "populationHistory": {
+        "pop2006": 3020,
+        "pop2015": 2988,
+        "pop2020": 2978
+      },
+      "surfaceKm2": 4.2,
+      "densityPerKm2": 711.9,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "66",
+          "72",
+          "73"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Comines",
+      "codeInsee": "59152",
+      "type": "Commune",
+      "population": 12358,
+      "populationHistory": {
+        "pop2006": 12107,
+        "pop2015": 12420,
+        "pop2020": 12749
+      },
+      "surfaceKm2": 16.07,
+      "densityPerKm2": 769.01,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "75",
+          "75R",
+          "82",
+          "82R",
+          "84",
+          "86",
+          "940",
+          "943",
+          "944",
+          "L90"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Croix",
+      "codeInsee": "59163",
+      "type": "Commune",
+      "population": 21041,
+      "populationHistory": {
+        "pop2006": 20926,
+        "pop2015": 21239,
+        "pop2020": 20574
+      },
+      "surfaceKm2": 4.45,
+      "densityPerKm2": 4728.31,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [
+          "M2"
+        ],
+        "tramway": [
+          "TRAM"
+        ],
+        "bus": [
+          "30",
+          "32",
+          "36",
+          "C11"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Deûlémont",
+      "codeInsee": "59173",
+      "type": "Commune",
+      "population": 1769,
+      "populationHistory": {
+        "pop2006": 1460,
+        "pop2015": 1673,
+        "pop2020": 1843
+      },
+      "surfaceKm2": 9.98,
+      "densityPerKm2": 177.25,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "75",
+          "75R",
+          "82",
+          "82R",
+          "975"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Don",
+      "codeInsee": "59670",
+      "type": "Commune",
+      "population": 1287,
+      "populationHistory": {
+        "pop2006": 1319,
+        "pop2015": 1322,
+        "pop2020": 1362
+      },
+      "surfaceKm2": 2.31,
+      "densityPerKm2": 557.14,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "61",
+          "61R",
+          "917"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Emmerin",
+      "codeInsee": "59193",
+      "type": "Commune",
+      "population": 3172,
+      "populationHistory": {
+        "pop2006": 2933,
+        "pop2015": 3173,
+        "pop2020": 3077
+      },
+      "surfaceKm2": 4.95,
+      "densityPerKm2": 640.81,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "21R",
+          "58",
+          "912",
+          "913"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Englos",
+      "codeInsee": "59195",
+      "type": "Commune",
+      "population": 609,
+      "populationHistory": {
+        "pop2006": 559,
+        "pop2015": 602,
+        "pop2020": 615
+      },
+      "surfaceKm2": 1.34,
+      "densityPerKm2": 454.48,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "61",
+          "61R",
+          "62",
+          "62R",
+          "64",
+          "64R",
+          "65",
+          "65R",
+          "934"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Ennetières-en-Weppes",
+      "codeInsee": "59196",
+      "type": "Commune",
+      "population": 1311,
+      "populationHistory": {
+        "pop2006": 1088,
+        "pop2015": 1302,
+        "pop2020": 1299
+      },
+      "surfaceKm2": 10.48,
+      "densityPerKm2": 125.1,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "61",
+          "61R",
+          "62",
+          "62R",
+          "64",
+          "64R",
+          "65",
+          "65R",
+          "CO2",
+          "CO3",
+          "L99"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Erquinghem-le-Sec",
+      "codeInsee": "59201",
+      "type": "Commune",
+      "population": 600,
+      "populationHistory": {
+        "pop2006": 512,
+        "pop2015": 580,
+        "pop2020": 595
+      },
+      "surfaceKm2": 1.75,
+      "densityPerKm2": 342.86,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "22R",
+          "64",
+          "64R",
+          "934"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Erquinghem-Lys",
+      "codeInsee": "59202",
+      "type": "Commune",
+      "population": 5158,
+      "populationHistory": {
+        "pop2006": 4507,
+        "pop2015": 5005,
+        "pop2020": 5364
+      },
+      "surfaceKm2": 9.09,
+      "densityPerKm2": 567.44,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "80"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Escobecques",
+      "codeInsee": "59208",
+      "type": "Commune",
+      "population": 299,
+      "populationHistory": {
+        "pop2006": 308,
+        "pop2015": 300,
+        "pop2020": 304
+      },
+      "surfaceKm2": 1.85,
+      "densityPerKm2": 161.62,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "22R",
+          "64",
+          "64R",
+          "934"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Faches-Thumesnil",
+      "codeInsee": "59220",
+      "type": "Commune",
+      "population": 17835,
+      "populationHistory": {
+        "pop2006": 16356,
+        "pop2015": 17381,
+        "pop2020": 18160
+      },
+      "surfaceKm2": 4.62,
+      "densityPerKm2": 3860.39,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "14",
+          "67",
+          "919",
+          "920",
+          "921",
+          "CITL",
+          "CO1",
+          "L1",
+          "L7",
+          "Z2"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Forest-sur-Marque",
+      "codeInsee": "59247",
+      "type": "Commune",
+      "population": 1457,
+      "populationHistory": {
+        "pop2006": 1483,
+        "pop2015": 1437,
+        "pop2020": 1503
+      },
+      "surfaceKm2": 1.06,
+      "densityPerKm2": 1374.53,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "36",
+          "73",
+          "910"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Fournes-en-Weppes",
+      "codeInsee": "59250",
+      "type": "Commune",
+      "population": 2220,
+      "populationHistory": {
+        "pop2006": 1945,
+        "pop2015": 2183,
+        "pop2020": 2220
+      },
+      "surfaceKm2": 8.33,
+      "densityPerKm2": 266.51,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "22R",
+          "25R",
+          "28R",
+          "64",
+          "64R",
+          "236",
+          "929",
+          "931",
+          "933",
+          "934",
+          "935"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Frelinghien",
+      "codeInsee": "59252",
+      "type": "Commune",
+      "population": 2415,
+      "populationHistory": {
+        "pop2006": 2566,
+        "pop2015": 2420,
+        "pop2020": 2482
+      },
+      "surfaceKm2": 11.23,
+      "densityPerKm2": 215.05,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "27R",
+          "75",
+          "75R",
+          "76R",
+          "80",
+          "81",
+          "82",
+          "82R"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Fretin",
+      "codeInsee": "59256",
+      "type": "Commune",
+      "population": 3380,
+      "populationHistory": {
+        "pop2006": 3239,
+        "pop2015": 3377,
+        "pop2020": 3245
+      },
+      "surfaceKm2": 13.31,
+      "densityPerKm2": 253.94,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "69R",
+          "Z2",
+          "Z8"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Fromelles",
+      "codeInsee": "59257",
+      "type": "Commune",
+      "population": 958,
+      "populationHistory": {
+        "pop2006": 893,
+        "pop2015": 906,
+        "pop2020": 1065
+      },
+      "surfaceKm2": 8.67,
+      "densityPerKm2": 110.5,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "29R",
+          "62",
+          "62R",
+          "74R",
+          "236"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Gruson",
+      "codeInsee": "59275",
+      "type": "Commune",
+      "population": 1309,
+      "populationHistory": {
+        "pop2006": 1131,
+        "pop2015": 1143,
+        "pop2020": 1246
+      },
+      "surfaceKm2": 3.14,
+      "densityPerKm2": 416.88,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "69R",
+          "73"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Hallennes-lez-Haubourdin",
+      "codeInsee": "59278",
+      "type": "Commune",
+      "population": 4436,
+      "populationHistory": {
+        "pop2006": 4101,
+        "pop2015": 4144,
+        "pop2020": 4697
+      },
+      "surfaceKm2": 4.35,
+      "densityPerKm2": 1019.77,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "58",
+          "61",
+          "61R",
+          "901",
+          "915",
+          "931",
+          "934"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Halluin",
+      "codeInsee": "59279",
+      "type": "Commune",
+      "population": 20800,
+      "populationHistory": {
+        "pop2006": 19879,
+        "pop2015": 20662,
+        "pop2020": 20812
+      },
+      "surfaceKm2": 12.61,
+      "densityPerKm2": 1649.48,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "82",
+          "82R",
+          "941",
+          "944",
+          "CITH",
+          "L4",
+          "L91",
+          "L91E"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Hantay",
+      "codeInsee": "59281",
+      "type": "Commune",
+      "population": 1304,
+      "populationHistory": {
+        "pop2006": 962,
+        "pop2015": 1284,
+        "pop2020": 1269
+      },
+      "surfaceKm2": 2.11,
+      "densityPerKm2": 618.01,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "61",
+          "61R",
+          "928",
+          "930"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Haubourdin",
+      "codeInsee": "59286",
+      "type": "Commune",
+      "population": 14936,
+      "populationHistory": {
+        "pop2006": 14850,
+        "pop2015": 14804,
+        "pop2020": 14556
+      },
+      "surfaceKm2": 5.39,
+      "densityPerKm2": 2771.06,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "25R",
+          "58",
+          "61",
+          "61R",
+          "901",
+          "912",
+          "913",
+          "914",
+          "915",
+          "916",
+          "930",
+          "931",
+          "934",
+          "935",
+          "CO2",
+          "L5"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Hem",
+      "codeInsee": "59299",
+      "type": "Commune",
+      "population": 18617,
+      "populationHistory": {
+        "pop2006": 18248,
+        "pop2015": 19010,
+        "pop2020": 18462
+      },
+      "surfaceKm2": 9.68,
+      "densityPerKm2": 1923.24,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "34",
+          "36",
+          "60E",
+          "66",
+          "78",
+          "910",
+          "911",
+          "945",
+          "967",
+          "968",
+          "C12",
+          "L8"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Herlies",
+      "codeInsee": "59303",
+      "type": "Commune",
+      "population": 2399,
+      "populationHistory": {
+        "pop2006": 2065,
+        "pop2015": 2378,
+        "pop2020": 2358
+      },
+      "surfaceKm2": 7.13,
+      "densityPerKm2": 336.47,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "25R",
+          "28R",
+          "64",
+          "64R",
+          "74R",
+          "236",
+          "933",
+          "934",
+          "935"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Houplin-Ancoisne",
+      "codeInsee": "59316",
+      "type": "Commune",
+      "population": 3409,
+      "populationHistory": {
+        "pop2006": 3517,
+        "pop2015": 3470,
+        "pop2020": 3299
+      },
+      "surfaceKm2": 6.48,
+      "densityPerKm2": 526.08,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "912",
+          "927"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Houplines",
+      "codeInsee": "59317",
+      "type": "Commune",
+      "population": 7805,
+      "populationHistory": {
+        "pop2006": 7607,
+        "pop2015": 7888,
+        "pop2020": 7870
+      },
+      "surfaceKm2": 11.29,
+      "densityPerKm2": 691.32,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "80",
+          "81",
+          "82",
+          "82R",
+          "938"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Illies",
+      "codeInsee": "59320",
+      "type": "Commune",
+      "population": 1624,
+      "populationHistory": {
+        "pop2006": 1388,
+        "pop2015": 1469,
+        "pop2020": 1640
+      },
+      "surfaceKm2": 7.98,
+      "densityPerKm2": 203.51,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "25R",
+          "28R",
+          "62",
+          "62R",
+          "74R",
+          "236",
+          "932",
+          "933",
+          "934",
+          "935"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "La Bassée",
+      "codeInsee": "59051",
+      "type": "Commune",
+      "population": 6402,
+      "populationHistory": {
+        "pop2006": 5888,
+        "pop2015": 6469,
+        "pop2020": 6565
+      },
+      "surfaceKm2": 3.54,
+      "densityPerKm2": 1808.47,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "22R",
+          "61",
+          "61R",
+          "62",
+          "62R",
+          "64",
+          "64R",
+          "74R",
+          "236",
+          "931",
+          "932",
+          "933",
+          "934",
+          "935"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "La Chapelle-d'Armentières",
+      "codeInsee": "59143",
+      "type": "Commune",
+      "population": 8590,
+      "populationHistory": {
+        "pop2006": 7971,
+        "pop2015": 8459,
+        "pop2020": 8656
+      },
+      "surfaceKm2": 10.7,
+      "densityPerKm2": 802.8,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "65",
+          "65R",
+          "236",
+          "938",
+          "L99"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "La Madeleine",
+      "codeInsee": "59368",
+      "type": "Commune",
+      "population": 21173,
+      "populationHistory": {
+        "pop2006": 22681,
+        "pop2015": 21533,
+        "pop2020": 22214
+      },
+      "surfaceKm2": 2.69,
+      "densityPerKm2": 7871,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [
+          "TRAM"
+        ],
+        "bus": [
+          "14",
+          "50",
+          "77R",
+          "86",
+          "88",
+          "CO3",
+          "L5",
+          "L91"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Lambersart",
+      "codeInsee": "59328",
+      "type": "Commune",
+      "population": 27649,
+      "populationHistory": {
+        "pop2006": 28543,
+        "pop2015": 27517,
+        "pop2020": 27425
+      },
+      "surfaceKm2": 6.08,
+      "densityPerKm2": 4547.53,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [
+          "M2"
+        ],
+        "tramway": [],
+        "bus": [
+          "10",
+          "51",
+          "76",
+          "923",
+          "924",
+          "CO3"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Lannoy",
+      "codeInsee": "59332",
+      "type": "Commune",
+      "population": 1773,
+      "populationHistory": {
+        "pop2006": 1672,
+        "pop2015": 1766,
+        "pop2020": 1810
+      },
+      "surfaceKm2": 0.18,
+      "densityPerKm2": 9850,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "60E",
+          "66",
+          "78",
+          "945",
+          "967",
+          "968",
+          "L3"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Le Maisnil",
+      "codeInsee": "59371",
+      "type": "Commune",
+      "population": 642,
+      "populationHistory": {
+        "pop2006": 538,
+        "pop2015": 643,
+        "pop2020": 634
+      },
+      "surfaceKm2": 3.51,
+      "densityPerKm2": 182.91,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "29R",
+          "62",
+          "62R",
+          "74R"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Leers",
+      "codeInsee": "59339",
+      "type": "Commune",
+      "population": 9473,
+      "populationHistory": {
+        "pop2006": 9290,
+        "pop2015": 9620,
+        "pop2020": 9548
+      },
+      "surfaceKm2": 5.41,
+      "densityPerKm2": 1751.02,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "23R",
+          "33",
+          "35",
+          "60E",
+          "945",
+          "967"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Lesquin",
+      "codeInsee": "59343",
+      "type": "Commune",
+      "population": 8259,
+      "populationHistory": {
+        "pop2006": 6432,
+        "pop2015": 7463,
+        "pop2020": 9113
+      },
+      "surfaceKm2": 8.48,
+      "densityPerKm2": 973.94,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "15",
+          "67",
+          "68",
+          "919",
+          "920",
+          "921",
+          "L1",
+          "L7",
+          "Z2",
+          "Z3",
+          "Z8"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Lezennes",
+      "codeInsee": "59346",
+      "type": "Commune",
+      "population": 3104,
+      "populationHistory": {
+        "pop2006": 3122,
+        "pop2015": 3117,
+        "pop2020": 3038
+      },
+      "surfaceKm2": 2.15,
+      "densityPerKm2": 1443.72,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [
+          "M1"
+        ],
+        "tramway": [],
+        "bus": [
+          "18",
+          "919",
+          "CO1",
+          "N1"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Lille",
+      "codeInsee": "59350",
+      "type": "Chef-lieu de Région",
+      "population": 232787,
+      "populationHistory": {
+        "pop2006": 180165,
+        "pop2015": 187166,
+        "pop2020": 189636
+      },
+      "surfaceKm2": 34.79,
+      "densityPerKm2": 6691.2,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire Lillois",
+      "servedBy": {
+        "metro": [
+          "M1",
+          "M2"
+        ],
+        "tramway": [
+          "TRAM"
+        ],
+        "bus": [
+          "9",
+          "10",
+          "13",
+          "14",
+          "15",
+          "18",
+          "21R",
+          "25R",
+          "50",
+          "51",
+          "52",
+          "55",
+          "58",
+          "67",
+          "76",
+          "86",
+          "88",
+          "916",
+          "926",
+          "931",
+          "934",
+          "C9",
+          "C10",
+          "CITL",
+          "CO1",
+          "CO2",
+          "L1",
+          "L2",
+          "L5",
+          "L7",
+          "L90",
+          "L91",
+          "L91E",
+          "L92",
+          "N1",
+          "NVL",
+          "Z2"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Linselles",
+      "codeInsee": "59352",
+      "type": "Commune",
+      "population": 8371,
+      "populationHistory": {
+        "pop2006": 8197,
+        "pop2015": 8342,
+        "pop2020": 8211
+      },
+      "surfaceKm2": 11.72,
+      "densityPerKm2": 714.25,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "86",
+          "87",
+          "940",
+          "941",
+          "942",
+          "943",
+          "944",
+          "978"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Lompret",
+      "codeInsee": "59356",
+      "type": "Commune",
+      "population": 2299,
+      "populationHistory": {
+        "pop2006": 2362,
+        "pop2015": 2315,
+        "pop2020": 2195
+      },
+      "surfaceKm2": 3.11,
+      "densityPerKm2": 739.23,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "76",
+          "76R",
+          "81",
+          "924"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Loos",
+      "codeInsee": "59360",
+      "type": "Commune",
+      "population": 22233,
+      "populationHistory": {
+        "pop2006": 21410,
+        "pop2015": 21442,
+        "pop2020": 22896
+      },
+      "surfaceKm2": 6.91,
+      "densityPerKm2": 3217.51,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "55",
+          "58",
+          "914",
+          "916",
+          "931",
+          "934",
+          "CO2",
+          "L2",
+          "L5",
+          "L92"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Lys-lez-Lannoy",
+      "codeInsee": "59367",
+      "type": "Commune",
+      "population": 13422,
+      "populationHistory": {
+        "pop2006": 12632,
+        "pop2015": 13596,
+        "pop2020": 13797
+      },
+      "surfaceKm2": 3.27,
+      "densityPerKm2": 4104.59,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "33",
+          "60E",
+          "66",
+          "78",
+          "945",
+          "967",
+          "968",
+          "CIT5",
+          "L3",
+          "L4"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Marcq-en-Barœul",
+      "codeInsee": "59378",
+      "type": "Commune",
+      "population": 38617,
+      "populationHistory": {
+        "pop2006": 38939,
+        "pop2015": 39298,
+        "pop2020": 38604
+      },
+      "surfaceKm2": 13.99,
+      "densityPerKm2": 2760.33,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [
+          "TRAM"
+        ],
+        "bus": [
+          "50",
+          "77R",
+          "86",
+          "88",
+          "903",
+          "904",
+          "905",
+          "906",
+          "978",
+          "C10",
+          "CO3",
+          "L5",
+          "L91"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Marquette-lez-Lille",
+      "codeInsee": "59386",
+      "type": "Commune",
+      "population": 10376,
+      "populationHistory": {
+        "pop2006": 9933,
+        "pop2015": 10420,
+        "pop2020": 11105
+      },
+      "surfaceKm2": 4.85,
+      "densityPerKm2": 2139.38,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "14",
+          "50",
+          "77R",
+          "86",
+          "88",
+          "907",
+          "908",
+          "909",
+          "923",
+          "924",
+          "CO3",
+          "L1",
+          "L90",
+          "L91"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Marquillies",
+      "codeInsee": "59388",
+      "type": "Commune",
+      "population": 1997,
+      "populationHistory": {
+        "pop2006": 1752,
+        "pop2015": 1987,
+        "pop2020": 1987
+      },
+      "surfaceKm2": 6.82,
+      "densityPerKm2": 292.82,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "61",
+          "61R",
+          "917",
+          "928",
+          "929",
+          "930",
+          "932"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Mons-en-Barœul",
+      "codeInsee": "59410",
+      "type": "Commune",
+      "population": 20782,
+      "populationHistory": {
+        "pop2006": 22360,
+        "pop2015": 20993,
+        "pop2020": 21564
+      },
+      "surfaceKm2": 2.89,
+      "densityPerKm2": 7191,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [
+          "M2"
+        ],
+        "tramway": [],
+        "bus": [
+          "13",
+          "C9",
+          "CO3",
+          "L6"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Mouvaux",
+      "codeInsee": "59421",
+      "type": "Commune",
+      "population": 13151,
+      "populationHistory": {
+        "pop2006": 13096,
+        "pop2015": 13128,
+        "pop2020": 13020
+      },
+      "surfaceKm2": 4.16,
+      "densityPerKm2": 3161.3,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "33",
+          "89",
+          "902",
+          "904",
+          "905",
+          "906",
+          "978",
+          "Z4"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Neuville-en-Ferrain",
+      "codeInsee": "59426",
+      "type": "Commune",
+      "population": 10284,
+      "populationHistory": {
+        "pop2006": 9286,
+        "pop2015": 10434,
+        "pop2020": 10126
+      },
+      "surfaceKm2": 6.19,
+      "densityPerKm2": 1661.39,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "24R",
+          "82",
+          "82R",
+          "CITT",
+          "Z1"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Noyelles-lès-Seclin",
+      "codeInsee": "59437",
+      "type": "Commune",
+      "population": 873,
+      "populationHistory": {
+        "pop2006": 893,
+        "pop2015": 872,
+        "pop2020": 852
+      },
+      "surfaceKm2": 2.38,
+      "densityPerKm2": 366.81,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "927"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Pérenchies",
+      "codeInsee": "59457",
+      "type": "Commune",
+      "population": 8424,
+      "populationHistory": {
+        "pop2006": 7782,
+        "pop2015": 8307,
+        "pop2020": 8584
+      },
+      "surfaceKm2": 3.04,
+      "densityPerKm2": 2771.05,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "75",
+          "75R",
+          "76",
+          "76R",
+          "80",
+          "81",
+          "924",
+          "CO2"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Péronne-en-Mélantois",
+      "codeInsee": "59458",
+      "type": "Commune",
+      "population": 908,
+      "populationHistory": {
+        "pop2006": 867,
+        "pop2015": 903,
+        "pop2020": 972
+      },
+      "surfaceKm2": 1.15,
+      "densityPerKm2": 789.57,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "69R"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Prémesques",
+      "codeInsee": "59470",
+      "type": "Commune",
+      "population": 2130,
+      "populationHistory": {
+        "pop2006": 2135,
+        "pop2015": 2165,
+        "pop2020": 2092
+      },
+      "surfaceKm2": 5.06,
+      "densityPerKm2": 420.95,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "80",
+          "924",
+          "L99"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Provin",
+      "codeInsee": "59477",
+      "type": "Commune",
+      "population": 4234,
+      "populationHistory": {
+        "pop2006": 3873,
+        "pop2015": 4194,
+        "pop2020": 4488
+      },
+      "surfaceKm2": 3.39,
+      "densityPerKm2": 1248.97,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": []
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Quesnoy-sur-Deûle",
+      "codeInsee": "59482",
+      "type": "Commune",
+      "population": 6758,
+      "populationHistory": {
+        "pop2006": 6893,
+        "pop2015": 6802,
+        "pop2020": 6985
+      },
+      "surfaceKm2": 14.43,
+      "densityPerKm2": 468.33,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "27R",
+          "76R",
+          "81",
+          "975",
+          "978",
+          "L90"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Radinghem-en-Weppes",
+      "codeInsee": "59487",
+      "type": "Commune",
+      "population": 1406,
+      "populationHistory": {
+        "pop2006": 1203,
+        "pop2015": 1368,
+        "pop2020": 1398
+      },
+      "surfaceKm2": 6.84,
+      "densityPerKm2": 205.56,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "29R",
+          "62",
+          "62R",
+          "74R",
+          "236"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Ronchin",
+      "codeInsee": "59507",
+      "type": "Commune",
+      "population": 19220,
+      "populationHistory": {
+        "pop2006": 18761,
+        "pop2015": 18939,
+        "pop2020": 18933
+      },
+      "surfaceKm2": 5.44,
+      "densityPerKm2": 3533.09,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "15",
+          "67",
+          "919",
+          "CO1",
+          "L1",
+          "Z2"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Roncq",
+      "codeInsee": "59508",
+      "type": "Commune",
+      "population": 13388,
+      "populationHistory": {
+        "pop2006": 12892,
+        "pop2015": 13657,
+        "pop2020": 13560
+      },
+      "surfaceKm2": 10.57,
+      "densityPerKm2": 1266.6,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "84",
+          "87",
+          "904",
+          "L4",
+          "L91",
+          "L91E"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Roubaix",
+      "codeInsee": "59512",
+      "type": "Commune",
+      "population": 96990,
+      "populationHistory": {
+        "pop2006": 97952,
+        "pop2015": 96077,
+        "pop2020": 98066
+      },
+      "surfaceKm2": 13.14,
+      "densityPerKm2": 7381.28,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [
+          "M2"
+        ],
+        "tramway": [
+          "TRAM"
+        ],
+        "bus": [
+          "23R",
+          "30",
+          "33",
+          "34",
+          "35",
+          "36",
+          "66",
+          "78",
+          "945",
+          "C12",
+          "CIT5",
+          "L3",
+          "L4",
+          "L8",
+          "MWR",
+          "Z6"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Sailly-lez-Lannoy",
+      "codeInsee": "59522",
+      "type": "Commune",
+      "population": 1849,
+      "populationHistory": {
+        "pop2006": 1776,
+        "pop2015": 1696,
+        "pop2020": 1943
+      },
+      "surfaceKm2": 4.44,
+      "densityPerKm2": 416.44,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "66",
+          "78",
+          "910"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Sainghin-en-Mélantois",
+      "codeInsee": "59523",
+      "type": "Commune",
+      "population": 2760,
+      "populationHistory": {
+        "pop2006": 2334,
+        "pop2015": 2615,
+        "pop2020": 2840
+      },
+      "surfaceKm2": 10.54,
+      "densityPerKm2": 261.86,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "69R",
+          "Z8"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Sainghin-en-Weppes",
+      "codeInsee": "59524",
+      "type": "Commune",
+      "population": 5586,
+      "populationHistory": {
+        "pop2006": 5548,
+        "pop2015": 5641,
+        "pop2020": 5597
+      },
+      "surfaceKm2": 7.81,
+      "densityPerKm2": 715.24,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "28R",
+          "61",
+          "61R",
+          "917",
+          "929"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Saint-André-lez-Lille",
+      "codeInsee": "59527",
+      "type": "Commune",
+      "population": 12608,
+      "populationHistory": {
+        "pop2006": 10792,
+        "pop2015": 12336,
+        "pop2020": 13004
+      },
+      "surfaceKm2": 3.16,
+      "densityPerKm2": 3989.87,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": []
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Salomé",
+      "codeInsee": "59550",
+      "type": "Commune",
+      "population": 2969,
+      "populationHistory": {
+        "pop2006": 2993,
+        "pop2015": 2970,
+        "pop2020": 2985
+      },
+      "surfaceKm2": 5.31,
+      "densityPerKm2": 559.13,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "61",
+          "61R",
+          "928",
+          "930"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Santes",
+      "codeInsee": "59553",
+      "type": "Commune",
+      "population": 5724,
+      "populationHistory": {
+        "pop2006": 5029,
+        "pop2015": 5811,
+        "pop2020": 5663
+      },
+      "surfaceKm2": 7.55,
+      "densityPerKm2": 758.15,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "58",
+          "61",
+          "61R",
+          "901"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Seclin",
+      "codeInsee": "59560",
+      "type": "Commune",
+      "population": 12414,
+      "populationHistory": {
+        "pop2006": 12276,
+        "pop2015": 12645,
+        "pop2020": 12505
+      },
+      "surfaceKm2": 17.44,
+      "densityPerKm2": 711.81,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "55",
+          "912",
+          "L92"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Sequedin",
+      "codeInsee": "59566",
+      "type": "Commune",
+      "population": 4712,
+      "populationHistory": {
+        "pop2006": 4346,
+        "pop2015": 4692,
+        "pop2020": 4812
+      },
+      "surfaceKm2": 3.97,
+      "densityPerKm2": 1186.9,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "914",
+          "915",
+          "CO2",
+          "CO3"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Templemars",
+      "codeInsee": "59585",
+      "type": "Commune",
+      "population": 3344,
+      "populationHistory": {
+        "pop2006": 3342,
+        "pop2015": 3318,
+        "pop2020": 3528
+      },
+      "surfaceKm2": 4.6,
+      "densityPerKm2": 726.96,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "55",
+          "70R",
+          "921",
+          "955"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Toufflers",
+      "codeInsee": "59598",
+      "type": "Commune",
+      "population": 3905,
+      "populationHistory": {
+        "pop2006": 3696,
+        "pop2015": 3902,
+        "pop2020": 3914
+      },
+      "surfaceKm2": 2.38,
+      "densityPerKm2": 1640.76,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "60E",
+          "66",
+          "78",
+          "910",
+          "967",
+          "968",
+          "L3"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Tourcoing",
+      "codeInsee": "59599",
+      "type": "Commune",
+      "population": 97368,
+      "populationHistory": {
+        "pop2006": 92357,
+        "pop2015": 96809,
+        "pop2020": 99165
+      },
+      "surfaceKm2": 15.15,
+      "densityPerKm2": 6426.93,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [
+          "M2"
+        ],
+        "tramway": [],
+        "bus": [
+          "17",
+          "24R",
+          "30",
+          "33",
+          "35",
+          "82",
+          "82R",
+          "84",
+          "87",
+          "89",
+          "905",
+          "C8",
+          "CITT",
+          "L4",
+          "L8",
+          "Z1",
+          "Z4"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Tressin",
+      "codeInsee": "59602",
+      "type": "Commune",
+      "population": 1408,
+      "populationHistory": {
+        "pop2006": 1195,
+        "pop2015": 1415,
+        "pop2020": 1401
+      },
+      "surfaceKm2": 1.9,
+      "densityPerKm2": 741.05,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "66",
+          "72",
+          "73"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Vendeville",
+      "codeInsee": "59609",
+      "type": "Commune",
+      "population": 1606,
+      "populationHistory": {
+        "pop2006": 1595,
+        "pop2015": 1649,
+        "pop2020": 1548
+      },
+      "surfaceKm2": 2.57,
+      "densityPerKm2": 624.9,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "67",
+          "70R",
+          "921"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Verlinghem",
+      "codeInsee": "59611",
+      "type": "Commune",
+      "population": 2460,
+      "populationHistory": {
+        "pop2006": 2312,
+        "pop2015": 2430,
+        "pop2020": 2607
+      },
+      "surfaceKm2": 10.09,
+      "densityPerKm2": 243.81,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "76",
+          "76R",
+          "81",
+          "924",
+          "L90"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Villeneuve-d'Ascq",
+      "codeInsee": "59009",
+      "type": "Commune",
+      "population": 63408,
+      "populationHistory": {
+        "pop2006": 61151,
+        "pop2015": 61920,
+        "pop2020": 61258
+      },
+      "surfaceKm2": 27.48,
+      "densityPerKm2": 2307.42,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [
+          "M1",
+          "M2"
+        ],
+        "tramway": [
+          "TRAM"
+        ],
+        "bus": [
+          "13",
+          "18",
+          "20R",
+          "32",
+          "34",
+          "60E",
+          "66",
+          "68",
+          "69R",
+          "72",
+          "73",
+          "906",
+          "910",
+          "911",
+          "920",
+          "921",
+          "922",
+          "968",
+          "969",
+          "CO1",
+          "CO3",
+          "L6",
+          "N1",
+          "STAD",
+          "Z3",
+          "Z8"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Wambrechies",
+      "codeInsee": "59636",
+      "type": "Commune",
+      "population": 10948,
+      "populationHistory": {
+        "pop2006": 9841,
+        "pop2015": 10162,
+        "pop2020": 10716
+      },
+      "surfaceKm2": 15.48,
+      "densityPerKm2": 707.24,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire de la couronne Nord",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "88",
+          "907",
+          "908",
+          "909",
+          "923",
+          "L1",
+          "L90"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Warneton",
+      "codeInsee": "59643",
+      "type": "Commune",
+      "population": 239,
+      "populationHistory": {
+        "pop2006": 189,
+        "pop2015": 234,
+        "pop2020": 235
+      },
+      "surfaceKm2": 4.19,
+      "densityPerKm2": 57.04,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "75",
+          "75R",
+          "82",
+          "82R",
+          "975"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Wasquehal",
+      "codeInsee": "59646",
+      "type": "Commune",
+      "population": 20479,
+      "populationHistory": {
+        "pop2006": 18936,
+        "pop2015": 20963,
+        "pop2020": 20980
+      },
+      "surfaceKm2": 6.88,
+      "densityPerKm2": 2976.6,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [
+          "M2"
+        ],
+        "tramway": [
+          "TRAM"
+        ],
+        "bus": [
+          "30",
+          "32",
+          "904",
+          "905",
+          "906",
+          "969",
+          "978",
+          "C11"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Wattignies",
+      "codeInsee": "59648",
+      "type": "Commune",
+      "population": 14549,
+      "populationHistory": {
+        "pop2006": 13692,
+        "pop2015": 14295,
+        "pop2020": 15372
+      },
+      "surfaceKm2": 6.31,
+      "densityPerKm2": 2305.71,
+      "territorialUnit": "UT Lille / Seclin",
+      "governanceTerritory": "Territoire de la couronne Sud",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "14",
+          "55",
+          "70R",
+          "912",
+          "920",
+          "921",
+          "927",
+          "955",
+          "CO1",
+          "L2",
+          "L92"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Wattrelos",
+      "codeInsee": "59650",
+      "type": "Commune",
+      "population": 40958,
+      "populationHistory": {
+        "pop2006": 42852,
+        "pop2015": 41264,
+        "pop2020": 41015
+      },
+      "surfaceKm2": 13.68,
+      "densityPerKm2": 2994.01,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Roubaisien",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "17",
+          "35",
+          "945",
+          "CIT5",
+          "L3",
+          "L8",
+          "MWR",
+          "Z6"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Wavrin",
+      "codeInsee": "59653",
+      "type": "Commune",
+      "population": 7676,
+      "populationHistory": {
+        "pop2006": 7720,
+        "pop2015": 7656,
+        "pop2020": 7736
+      },
+      "surfaceKm2": 13.6,
+      "densityPerKm2": 564.41,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "29R",
+          "61",
+          "61R",
+          "917"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Wervicq-Sud",
+      "codeInsee": "59656",
+      "type": "Commune",
+      "population": 5413,
+      "populationHistory": {
+        "pop2006": 4688,
+        "pop2015": 5414,
+        "pop2020": 5322
+      },
+      "surfaceKm2": 5.09,
+      "densityPerKm2": 1063.46,
+      "territorialUnit": "UT Tourcoing / Armentières",
+      "governanceTerritory": "Territoire du Tourquennois - Vallée de la Lys",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "82",
+          "82R",
+          "84",
+          "86",
+          "940",
+          "942",
+          "943",
+          "944"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Wicres",
+      "codeInsee": "59658",
+      "type": "Commune",
+      "population": 498,
+      "populationHistory": {
+        "pop2006": 312,
+        "pop2015": 451,
+        "pop2020": 533
+      },
+      "surfaceKm2": 2.81,
+      "densityPerKm2": 177.22,
+      "territorialUnit": "UT Marcq-en-Baroeul / La Bassée",
+      "governanceTerritory": "Territoire des Weppes",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "25R",
+          "61",
+          "61R",
+          "928",
+          "930",
+          "932"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    },
+    {
+      "name": "Willems",
+      "codeInsee": "59660",
+      "type": "Commune",
+      "population": 3021,
+      "populationHistory": {
+        "pop2006": 2968,
+        "pop2015": 3025,
+        "pop2020": 3023
+      },
+      "surfaceKm2": 5.82,
+      "densityPerKm2": 519.07,
+      "territorialUnit": "UT Roubaix / Villeneuve d'Ascq",
+      "governanceTerritory": "Territoire Est",
+      "servedBy": {
+        "metro": [],
+        "tramway": [],
+        "bus": [
+          "26R",
+          "66",
+          "78",
+          "910"
+        ]
+      },
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-06-01",
+  "policy": "Ces pages sont publiques mais sans licence ouverte explicite pour recopier le texte dans le depot. Elles sont indexees pour verification, puis les contenus de jeu doivent etre reformules originalement.",
+  "sources": [
+    {
+      "id": "datamel-accueil",
+      "url": "https://data.lillemetropole.fr/accueil/",
+      "publisher": "Métropole Européenne de Lille",
+      "themes": ["open-data", "metropole", "catalogue"],
+      "usage": "Portail de recherche des jeux de donnees MEL, utilise pour reperer les sources ouvertes telechargeables."
+    },
+    {
+      "id": "datamel-ville-lille-catalogue",
+      "url": "https://data.lillemetropole.fr/catalogue/search?producerOrg=Ville%20de%20Lille",
+      "publisher": "Métropole Européenne de Lille / Ville de Lille",
+      "themes": ["open-data", "ville-de-lille", "catalogue"],
+      "usage": "Piste de recherche pour les donnees ouvertes de la Ville de Lille."
+    },
+    {
+      "id": "ilevia-site",
+      "url": "https://www.ilevia.fr/",
+      "publisher": "Ilévia",
+      "themes": ["transport", "metro", "tramway", "bus"],
+      "usage": "Verification institutionnelle des lignes, plans, terminus et informations publiques."
+    },
+    {
+      "id": "ville-lille-site",
+      "url": "https://www.lille.fr/",
+      "publisher": "Ville de Lille",
+      "themes": ["quartiers", "patrimoine", "evenements"],
+      "usage": "Verification ponctuelle des lieux, quartiers, evenements et pages officielles."
+    },
+    {
+      "id": "mel-site",
+      "url": "https://www.lillemetropole.fr/",
+      "publisher": "Métropole Européenne de Lille",
+      "themes": ["metropole", "communes", "patrimoine", "urbanisme"],
+      "usage": "Verification ponctuelle du territoire, des communes et documents institutionnels."
+    },
+    {
+      "id": "mel-ipap-pdf",
+      "url": "https://www.lillemetropole.fr/sites/plu/files/2018-10/IPAP.pdf",
+      "publisher": "Métropole Européenne de Lille",
+      "themes": ["patrimoine", "architecture", "urbanisme"],
+      "usage": "Document PDF telecharge localement dans raw/pdf pour verification patrimoniale manuelle."
+    },
+    {
+      "id": "archives-nord",
+      "url": "https://archivesdepartementales.lenord.fr/",
+      "publisher": "Archives departementales du Nord",
+      "themes": ["archives", "histoire", "patrimoine"],
+      "usage": "Piste de verification historique manuelle, sans extraction automatique."
+    },
+    {
+      "id": "comptoir-flandres-dictionnaire",
+      "url": "https://www.comptoirdesflandres.com/expressions-chti-decouvrez-notre-dictionnaire-complet/",
+      "publisher": "Comptoir des Flandres",
+      "themes": ["vocabulaire", "chti", "expressions"],
+      "usage": "Verification de mots regionaux, definitions a reformuler."
+    },
+    {
+      "id": "nord-escapade-dictionnaire",
+      "url": "https://nord-escapade.com/le-dictionnaire-du-chti/",
+      "publisher": "Nord Escapade",
+      "themes": ["vocabulaire", "chti", "expressions"],
+      "usage": "Verification de mots regionaux, definitions a reformuler."
+    },
+    {
+      "id": "banque-chtimi-gastronomie-jeux",
+      "url": "https://banquechtimi.blog4ever.com/articles/gastronomie-et-jeux",
+      "publisher": "Banque Chtimi",
+      "themes": ["gastronomie", "jeux", "culture-populaire"],
+      "usage": "Piste de verification pour traditions, gastronomie et vocabulaire."
+    },
+    {
+      "id": "france3-110-mots-nord",
+      "url": "https://france3-regions.franceinfo.fr/hauts-de-france/water-foufelle-petit-pain-laisse-porte-contre-110-mots-expressions-qu-on-n-entend-que-nord-1642366.html",
+      "publisher": "France 3 Hauts-de-France",
+      "themes": ["vocabulaire", "expressions", "nord"],
+      "usage": "Piste journalistique pour mots regionaux, a recouper avant usage."
+    },
+    {
+      "id": "nord-depliant-tourisme",
+      "url": "https://lenord.fr/upload/lenorddocuments/De%CC%81pliant%20Tourisme.pdf",
+      "publisher": "Departement du Nord",
+      "themes": ["tourisme", "culture", "patrimoine"],
+      "usage": "Document PDF telecharge localement dans raw/pdf pour reperage touristique et culturel."
+    },
+    {
+      "id": "comptoir-flandres-bieres",
+      "url": "https://www.comptoirdesflandres.com/categorie-produit/bieres-du-nord/",
+      "publisher": "Comptoir des Flandres",
+      "themes": ["gastronomie", "biere", "produits-regionaux"],
+      "usage": "Piste de vocabulaire brassicole non marque, sans reprendre les fiches produits."
+    }
+  ]
+}

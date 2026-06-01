@@ -1,0 +1,1176 @@
+{
+  "generatedAt": "2026-06-01",
+  "sourceIds": [
+    "gtfs-ilevia-data-gouv",
+    "ilevia-arret-point-datamel"
+  ],
+  "lines": [
+    {
+      "id": "ME1",
+      "shortName": "M1",
+      "longName": "METRO LIGNE 1",
+      "description": "CHU EURASANTÉ <> 4 CANTONS STADE P MAUROY",
+      "routeType": 1,
+      "mode": "metro",
+      "color": "FDC41F",
+      "textColor": "000000",
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "communes": [
+        "Hellemmes-Lille",
+        "Lezennes",
+        "Lille",
+        "Villeneuve-d'Ascq"
+      ],
+      "uniqueStopNames": [
+        "4 Cantons Stade P. Mauroy",
+        "Chu Eurasanté",
+        "Chu-Centre O. Lambret",
+        "Cité Scientifique",
+        "Fives",
+        "Gambetta",
+        "Gare Lille Flandres",
+        "Hotel De Ville",
+        "Madeleine Caulier",
+        "Mairie D'Hellemmes",
+        "Marbrerie",
+        "Pont De Bois",
+        "Porte Des Postes",
+        "République Beaux-Arts",
+        "Rihour",
+        "Square Flandres",
+        "Triolo",
+        "Wazemmes"
+      ],
+      "directions": [
+        {
+          "directionId": "0",
+          "representativeTripCount": 1393,
+          "terminalFrom": "4 Cantons Stade P. Mauroy",
+          "terminalTo": "Chu Eurasanté",
+          "headsigns": [
+            {
+              "label": "Lille Chu Eurasanté",
+              "count": 1393
+            }
+          ],
+          "stopCount": 18,
+          "stops": [
+            {
+              "sequence": 1,
+              "stopId": "4CA099",
+              "name": "4 Cantons Stade P. Mauroy",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.605423,
+              "longitude": 3.13866
+            },
+            {
+              "sequence": 2,
+              "stopId": "CSC099",
+              "name": "Cité Scientifique",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.611731,
+              "longitude": 3.142497
+            },
+            {
+              "sequence": 3,
+              "stopId": "TIO099",
+              "name": "Triolo",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.616294,
+              "longitude": 3.14164
+            },
+            {
+              "sequence": 4,
+              "stopId": "HDV099",
+              "name": "Hotel De Ville",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.618385,
+              "longitude": 3.131846
+            },
+            {
+              "sequence": 5,
+              "stopId": "PDB099",
+              "name": "Pont De Bois",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.624355,
+              "longitude": 3.128232
+            },
+            {
+              "sequence": 6,
+              "stopId": "LZN099",
+              "name": "Square Flandres",
+              "commune": "Hellemmes-Lille",
+              "latitude": 50.625231,
+              "longitude": 3.116118
+            },
+            {
+              "sequence": 7,
+              "stopId": "MHE099",
+              "name": "Mairie D'Hellemmes",
+              "commune": "Hellemmes-Lille",
+              "latitude": 50.627187,
+              "longitude": 3.108787
+            },
+            {
+              "sequence": 8,
+              "stopId": "MRB099",
+              "name": "Marbrerie",
+              "commune": "Lille",
+              "latitude": 50.630395,
+              "longitude": 3.097836
+            },
+            {
+              "sequence": 9,
+              "stopId": "DFI099",
+              "name": "Fives",
+              "commune": "Lille",
+              "latitude": 50.633023,
+              "longitude": 3.090556
+            },
+            {
+              "sequence": 10,
+              "stopId": "CIE099",
+              "name": "Madeleine Caulier",
+              "commune": "Lille",
+              "latitude": 50.636504,
+              "longitude": 3.087519
+            },
+            {
+              "sequence": 11,
+              "stopId": "LIG099",
+              "name": "Gare Lille Flandres",
+              "commune": "Lille",
+              "latitude": 50.637096,
+              "longitude": 3.071067
+            },
+            {
+              "sequence": 12,
+              "stopId": "RIH099",
+              "name": "Rihour",
+              "commune": "Lille",
+              "latitude": 50.6357,
+              "longitude": 3.062908
+            },
+            {
+              "sequence": 13,
+              "stopId": "REP099",
+              "name": "République Beaux-Arts",
+              "commune": "Lille",
+              "latitude": 50.631776,
+              "longitude": 3.060608
+            },
+            {
+              "sequence": 14,
+              "stopId": "CGA099",
+              "name": "Gambetta",
+              "commune": "Lille",
+              "latitude": 50.626389,
+              "longitude": 3.052125
+            },
+            {
+              "sequence": 15,
+              "stopId": "WAZ099",
+              "name": "Wazemmes",
+              "commune": "Lille",
+              "latitude": 50.623272,
+              "longitude": 3.051348
+            },
+            {
+              "sequence": 16,
+              "stopId": "PDP099",
+              "name": "Porte Des Postes",
+              "commune": "Lille",
+              "latitude": 50.617947,
+              "longitude": 3.050665
+            },
+            {
+              "sequence": 17,
+              "stopId": "CHR099",
+              "name": "Chu-Centre O. Lambret",
+              "commune": "Lille",
+              "latitude": 50.613222,
+              "longitude": 3.036062
+            },
+            {
+              "sequence": 18,
+              "stopId": "CAL099",
+              "name": "Chu Eurasanté",
+              "commune": "Lille",
+              "latitude": 50.607932,
+              "longitude": 3.03892
+            }
+          ]
+        },
+        {
+          "directionId": "1",
+          "representativeTripCount": 1395,
+          "terminalFrom": "Chu Eurasanté",
+          "terminalTo": "4 Cantons Stade P. Mauroy",
+          "headsigns": [
+            {
+              "label": "Villeneuve D Ascq 4 Cantons Stade P. Mauroy",
+              "count": 1395
+            }
+          ],
+          "stopCount": 18,
+          "stops": [
+            {
+              "sequence": 1,
+              "stopId": "CAL098",
+              "name": "Chu Eurasanté",
+              "commune": "Lille",
+              "latitude": 50.607932,
+              "longitude": 3.03892
+            },
+            {
+              "sequence": 2,
+              "stopId": "CHR098",
+              "name": "Chu-Centre O. Lambret",
+              "commune": "Lille",
+              "latitude": 50.613222,
+              "longitude": 3.036062
+            },
+            {
+              "sequence": 3,
+              "stopId": "PDP098",
+              "name": "Porte Des Postes",
+              "commune": "Lille",
+              "latitude": 50.618722,
+              "longitude": 3.050014
+            },
+            {
+              "sequence": 4,
+              "stopId": "WAZ098",
+              "name": "Wazemmes",
+              "commune": "Lille",
+              "latitude": 50.623272,
+              "longitude": 3.051348
+            },
+            {
+              "sequence": 5,
+              "stopId": "CGA098",
+              "name": "Gambetta",
+              "commune": "Lille",
+              "latitude": 50.626343,
+              "longitude": 3.052322
+            },
+            {
+              "sequence": 6,
+              "stopId": "REP098",
+              "name": "République Beaux-Arts",
+              "commune": "Lille",
+              "latitude": 50.631776,
+              "longitude": 3.060608
+            },
+            {
+              "sequence": 7,
+              "stopId": "RIH098",
+              "name": "Rihour",
+              "commune": "Lille",
+              "latitude": 50.6357,
+              "longitude": 3.062908
+            },
+            {
+              "sequence": 8,
+              "stopId": "LIG098",
+              "name": "Gare Lille Flandres",
+              "commune": "Lille",
+              "latitude": 50.637096,
+              "longitude": 3.071067
+            },
+            {
+              "sequence": 9,
+              "stopId": "CIE098",
+              "name": "Madeleine Caulier",
+              "commune": "Lille",
+              "latitude": 50.636514,
+              "longitude": 3.087406
+            },
+            {
+              "sequence": 10,
+              "stopId": "DFI098",
+              "name": "Fives",
+              "commune": "Lille",
+              "latitude": 50.633103,
+              "longitude": 3.090754
+            },
+            {
+              "sequence": 11,
+              "stopId": "MRB098",
+              "name": "Marbrerie",
+              "commune": "Hellemmes-Lille",
+              "latitude": 50.630395,
+              "longitude": 3.097836
+            },
+            {
+              "sequence": 12,
+              "stopId": "MHE098",
+              "name": "Mairie D'Hellemmes",
+              "commune": "Hellemmes-Lille",
+              "latitude": 50.627384,
+              "longitude": 3.108889
+            },
+            {
+              "sequence": 13,
+              "stopId": "LZN098",
+              "name": "Square Flandres",
+              "commune": "Lezennes",
+              "latitude": 50.625258,
+              "longitude": 3.115992
+            },
+            {
+              "sequence": 14,
+              "stopId": "PDB098",
+              "name": "Pont De Bois",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.624355,
+              "longitude": 3.128232
+            },
+            {
+              "sequence": 15,
+              "stopId": "HDV098",
+              "name": "Hotel De Ville",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.618344,
+              "longitude": 3.13255
+            },
+            {
+              "sequence": 16,
+              "stopId": "TIO098",
+              "name": "Triolo",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.616294,
+              "longitude": 3.14164
+            },
+            {
+              "sequence": 17,
+              "stopId": "CSC098",
+              "name": "Cité Scientifique",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.61173,
+              "longitude": 3.142695
+            },
+            {
+              "sequence": 18,
+              "stopId": "4CA098",
+              "name": "4 Cantons Stade P. Mauroy",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.605423,
+              "longitude": 3.13866
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ME2",
+      "shortName": "M2",
+      "longName": "METRO LIGNE 2",
+      "description": "SAINT PHILIBERT <> C.H. DRON",
+      "routeType": 1,
+      "mode": "metro",
+      "color": "E30613",
+      "textColor": "FFFFFF",
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "communes": [
+        "Croix",
+        "Lambersart",
+        "Lille",
+        "Lomme",
+        "Mons-en-Barœul",
+        "Roubaix",
+        "Tourcoing",
+        "Villeneuve-d'Ascq",
+        "Wasquehal"
+      ],
+      "uniqueStopNames": [
+        "Alsace",
+        "Bois Blancs",
+        "Bourg",
+        "Bourgogne",
+        "C.H. Dron",
+        "Canteleu",
+        "Carliers",
+        "Colbert",
+        "Cormontaigne",
+        "Croix Centre",
+        "Ep. Montesquieu",
+        "Euroteleport",
+        "Fort De Mons",
+        "Gare De Tourcoing",
+        "Gare Jean Lebas",
+        "Gare Lille Flandres",
+        "Grand Palais",
+        "Hotel De Ville",
+        "Jean Jaures",
+        "Les Pres-E. Pisani",
+        "Lille Europe",
+        "Lomme-Lambersart",
+        "Mairie De Croix",
+        "Mairie De Lille",
+        "Mairie De Mons",
+        "Maison Des Enfants",
+        "Mercure",
+        "Mitterie",
+        "Mons Sarts",
+        "Montebello",
+        "Phalempins",
+        "Pont De Neuville",
+        "Pont Superieur",
+        "Port De Lille",
+        "Porte D'Arras",
+        "Porte De Douai",
+        "Porte De Valenciennes",
+        "Porte Des Postes",
+        "Roubaix Charles De Gaulle",
+        "Roubaix Place",
+        "St Maurice Pellevoisin",
+        "St. Philibert",
+        "Tourcoing Centre",
+        "Wasquehal Pavé De Lille"
+      ],
+      "directions": [
+        {
+          "directionId": "0",
+          "representativeTripCount": 1713,
+          "terminalFrom": "C.H. Dron",
+          "terminalTo": "St. Philibert",
+          "headsigns": [
+            {
+              "label": "Lomme St. Philibert",
+              "count": 1728
+            }
+          ],
+          "stopCount": 44,
+          "stops": [
+            {
+              "sequence": 1,
+              "stopId": "DRO099",
+              "name": "C.H. Dron",
+              "commune": "Tourcoing",
+              "latitude": 50.743874,
+              "longitude": 3.180479
+            },
+            {
+              "sequence": 2,
+              "stopId": "TBO099",
+              "name": "Bourgogne",
+              "commune": "Tourcoing",
+              "latitude": 50.739646,
+              "longitude": 3.179715
+            },
+            {
+              "sequence": 3,
+              "stopId": "PTN099",
+              "name": "Pont De Neuville",
+              "commune": "Tourcoing",
+              "latitude": 50.736809,
+              "longitude": 3.170734
+            },
+            {
+              "sequence": 4,
+              "stopId": "TPH099",
+              "name": "Phalempins",
+              "commune": "Tourcoing",
+              "latitude": 50.73242,
+              "longitude": 3.157744
+            },
+            {
+              "sequence": 5,
+              "stopId": "COB099",
+              "name": "Colbert",
+              "commune": "Tourcoing",
+              "latitude": 50.725349,
+              "longitude": 3.156935
+            },
+            {
+              "sequence": 6,
+              "stopId": "TOU099",
+              "name": "Tourcoing Centre",
+              "commune": "Tourcoing",
+              "latitude": 50.720554,
+              "longitude": 3.160445
+            },
+            {
+              "sequence": 7,
+              "stopId": "SEB099",
+              "name": "Gare De Tourcoing",
+              "commune": "Tourcoing",
+              "latitude": 50.71662,
+              "longitude": 3.162584
+            },
+            {
+              "sequence": 8,
+              "stopId": "CTL099",
+              "name": "Carliers",
+              "commune": "Tourcoing",
+              "latitude": 50.710252,
+              "longitude": 3.159908
+            },
+            {
+              "sequence": 9,
+              "stopId": "MER099",
+              "name": "Mercure",
+              "commune": "Tourcoing",
+              "latitude": 50.705153,
+              "longitude": 3.160544
+            },
+            {
+              "sequence": 10,
+              "stopId": "ALS099",
+              "name": "Alsace",
+              "commune": "Roubaix",
+              "latitude": 50.700591,
+              "longitude": 3.161274
+            },
+            {
+              "sequence": 11,
+              "stopId": "MGR099",
+              "name": "Gare Jean Lebas",
+              "commune": "Roubaix",
+              "latitude": 50.695865,
+              "longitude": 3.163823
+            },
+            {
+              "sequence": 12,
+              "stopId": "RXP099",
+              "name": "Roubaix Place",
+              "commune": "Roubaix",
+              "latitude": 50.691663,
+              "longitude": 3.17385
+            },
+            {
+              "sequence": 13,
+              "stopId": "ROU097",
+              "name": "Euroteleport",
+              "commune": "Roubaix",
+              "latitude": 50.691344,
+              "longitude": 3.179832
+            },
+            {
+              "sequence": 14,
+              "stopId": "CDG099",
+              "name": "Roubaix Charles De Gaulle",
+              "commune": "Roubaix",
+              "latitude": 50.686477,
+              "longitude": 3.170049
+            },
+            {
+              "sequence": 15,
+              "stopId": "EPL099",
+              "name": "Ep. Montesquieu",
+              "commune": "Roubaix",
+              "latitude": 50.683869,
+              "longitude": 3.163116
+            },
+            {
+              "sequence": 16,
+              "stopId": "CXM099",
+              "name": "Mairie De Croix",
+              "commune": "Croix",
+              "latitude": 50.679064,
+              "longitude": 3.155921
+            },
+            {
+              "sequence": 17,
+              "stopId": "CPL099",
+              "name": "Croix Centre",
+              "commune": "Croix",
+              "latitude": 50.674237,
+              "longitude": 3.146469
+            },
+            {
+              "sequence": 18,
+              "stopId": "WMI099",
+              "name": "Hotel De Ville",
+              "commune": "Wasquehal",
+              "latitude": 50.669637,
+              "longitude": 3.130982
+            },
+            {
+              "sequence": 19,
+              "stopId": "PVL097",
+              "name": "Wasquehal Pavé De Lille",
+              "commune": "Wasquehal",
+              "latitude": 50.664234,
+              "longitude": 3.130091
+            },
+            {
+              "sequence": 20,
+              "stopId": "JRS099",
+              "name": "Jean Jaures",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.658507,
+              "longitude": 3.134911
+            },
+            {
+              "sequence": 21,
+              "stopId": "PRS099",
+              "name": "Les Pres-E. Pisani",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.650345,
+              "longitude": 3.126386
+            },
+            {
+              "sequence": 22,
+              "stopId": "FOR099",
+              "name": "Fort De Mons",
+              "commune": "Mons-en-Barœul",
+              "latitude": 50.642182,
+              "longitude": 3.119443
+            },
+            {
+              "sequence": 23,
+              "stopId": "MDM099",
+              "name": "Mairie De Mons",
+              "commune": "Mons-en-Barœul",
+              "latitude": 50.642387,
+              "longitude": 3.109543
+            },
+            {
+              "sequence": 24,
+              "stopId": "MSA099",
+              "name": "Mons Sarts",
+              "commune": "Mons-en-Barœul",
+              "latitude": 50.642272,
+              "longitude": 3.099201
+            },
+            {
+              "sequence": 25,
+              "stopId": "SMP099",
+              "name": "St Maurice Pellevoisin",
+              "commune": "Lille",
+              "latitude": 50.64251,
+              "longitude": 3.088244
+            },
+            {
+              "sequence": 26,
+              "stopId": "EUR099",
+              "name": "Lille Europe",
+              "commune": "Lille",
+              "latitude": 50.639583,
+              "longitude": 3.076774
+            },
+            {
+              "sequence": 27,
+              "stopId": "LIG399",
+              "name": "Gare Lille Flandres",
+              "commune": "Lille",
+              "latitude": 50.637096,
+              "longitude": 3.071067
+            },
+            {
+              "sequence": 28,
+              "stopId": "MDL099",
+              "name": "Mairie De Lille",
+              "commune": "Lille",
+              "latitude": 50.632422,
+              "longitude": 3.071125
+            },
+            {
+              "sequence": 29,
+              "stopId": "LGP099",
+              "name": "Grand Palais",
+              "commune": "Lille",
+              "latitude": 50.629215,
+              "longitude": 3.074886
+            },
+            {
+              "sequence": 30,
+              "stopId": "PDV099",
+              "name": "Porte De Valenciennes",
+              "commune": "Lille",
+              "latitude": 50.621036,
+              "longitude": 3.079066
+            },
+            {
+              "sequence": 31,
+              "stopId": "PDO099",
+              "name": "Porte De Douai",
+              "commune": "Lille",
+              "latitude": 50.618035,
+              "longitude": 3.072479
+            },
+            {
+              "sequence": 32,
+              "stopId": "PRR099",
+              "name": "Porte D'Arras",
+              "commune": "Lille",
+              "latitude": 50.617583,
+              "longitude": 3.062349
+            },
+            {
+              "sequence": 33,
+              "stopId": "PDP399",
+              "name": "Porte Des Postes",
+              "commune": "Lille",
+              "latitude": 50.617947,
+              "longitude": 3.050665
+            },
+            {
+              "sequence": 34,
+              "stopId": "MNT099",
+              "name": "Montebello",
+              "commune": "Lille",
+              "latitude": 50.622084,
+              "longitude": 3.045775
+            },
+            {
+              "sequence": 35,
+              "stopId": "COR099",
+              "name": "Cormontaigne",
+              "commune": "Lille",
+              "latitude": 50.626095,
+              "longitude": 3.040825
+            },
+            {
+              "sequence": 36,
+              "stopId": "PTL099",
+              "name": "Port De Lille",
+              "commune": "Lille",
+              "latitude": 50.630034,
+              "longitude": 3.035916
+            },
+            {
+              "sequence": 37,
+              "stopId": "LPC099",
+              "name": "Bois Blancs",
+              "commune": "Lille",
+              "latitude": 50.634125,
+              "longitude": 3.030981
+            },
+            {
+              "sequence": 38,
+              "stopId": "CAN099",
+              "name": "Canteleu",
+              "commune": "Lille",
+              "latitude": 50.63715,
+              "longitude": 3.024167
+            },
+            {
+              "sequence": 39,
+              "stopId": "LLO099",
+              "name": "Lomme-Lambersart",
+              "commune": "Lomme",
+              "latitude": 50.640822,
+              "longitude": 3.018871
+            },
+            {
+              "sequence": 40,
+              "stopId": "PSU099",
+              "name": "Pont Superieur",
+              "commune": "Lomme",
+              "latitude": 50.644607,
+              "longitude": 3.014056
+            },
+            {
+              "sequence": 41,
+              "stopId": "MIT299",
+              "name": "Mitterie",
+              "commune": "Lomme",
+              "latitude": 50.646938,
+              "longitude": 3.007556
+            },
+            {
+              "sequence": 42,
+              "stopId": "MDE099",
+              "name": "Maison Des Enfants",
+              "commune": "Lomme",
+              "latitude": 50.646502,
+              "longitude": 2.99536
+            },
+            {
+              "sequence": 43,
+              "stopId": "BRG299",
+              "name": "Bourg",
+              "commune": "Lomme",
+              "latitude": 50.645721,
+              "longitude": 2.985164
+            },
+            {
+              "sequence": 44,
+              "stopId": "HSP099",
+              "name": "St. Philibert",
+              "commune": "Lomme",
+              "latitude": 50.651697,
+              "longitude": 2.97442
+            }
+          ]
+        },
+        {
+          "directionId": "1",
+          "representativeTripCount": 1725,
+          "terminalFrom": "St. Philibert",
+          "terminalTo": "C.H. Dron",
+          "headsigns": [
+            {
+              "label": "Tourcoing C.H. Dron",
+              "count": 1743
+            }
+          ],
+          "stopCount": 44,
+          "stops": [
+            {
+              "sequence": 1,
+              "stopId": "HSP098",
+              "name": "St. Philibert",
+              "commune": "Lomme",
+              "latitude": 50.651697,
+              "longitude": 2.97442
+            },
+            {
+              "sequence": 2,
+              "stopId": "BRG298",
+              "name": "Bourg",
+              "commune": "Lomme",
+              "latitude": 50.645721,
+              "longitude": 2.985164
+            },
+            {
+              "sequence": 3,
+              "stopId": "MDE098",
+              "name": "Maison Des Enfants",
+              "commune": "Lomme",
+              "latitude": 50.646502,
+              "longitude": 2.99536
+            },
+            {
+              "sequence": 4,
+              "stopId": "MIT298",
+              "name": "Mitterie",
+              "commune": "Lomme",
+              "latitude": 50.646938,
+              "longitude": 3.007556
+            },
+            {
+              "sequence": 5,
+              "stopId": "PSU098",
+              "name": "Pont Superieur",
+              "commune": "Lomme",
+              "latitude": 50.644607,
+              "longitude": 3.014056
+            },
+            {
+              "sequence": 6,
+              "stopId": "LLO098",
+              "name": "Lomme-Lambersart",
+              "commune": "Lomme",
+              "latitude": 50.640822,
+              "longitude": 3.018871
+            },
+            {
+              "sequence": 7,
+              "stopId": "CAN098",
+              "name": "Canteleu",
+              "commune": "Lambersart",
+              "latitude": 50.63715,
+              "longitude": 3.024167
+            },
+            {
+              "sequence": 8,
+              "stopId": "LPC098",
+              "name": "Bois Blancs",
+              "commune": "Lambersart",
+              "latitude": 50.634125,
+              "longitude": 3.030981
+            },
+            {
+              "sequence": 9,
+              "stopId": "PTL098",
+              "name": "Port De Lille",
+              "commune": "Lille",
+              "latitude": 50.630034,
+              "longitude": 3.035916
+            },
+            {
+              "sequence": 10,
+              "stopId": "COR098",
+              "name": "Cormontaigne",
+              "commune": "Lille",
+              "latitude": 50.626095,
+              "longitude": 3.040825
+            },
+            {
+              "sequence": 11,
+              "stopId": "MNT098",
+              "name": "Montebello",
+              "commune": "Lille",
+              "latitude": 50.622084,
+              "longitude": 3.045775
+            },
+            {
+              "sequence": 12,
+              "stopId": "PDP398",
+              "name": "Porte Des Postes",
+              "commune": "Lille",
+              "latitude": 50.617947,
+              "longitude": 3.050665
+            },
+            {
+              "sequence": 13,
+              "stopId": "PRR098",
+              "name": "Porte D'Arras",
+              "commune": "Lille",
+              "latitude": 50.617583,
+              "longitude": 3.062349
+            },
+            {
+              "sequence": 14,
+              "stopId": "PDO098",
+              "name": "Porte De Douai",
+              "commune": "Lille",
+              "latitude": 50.618035,
+              "longitude": 3.072479
+            },
+            {
+              "sequence": 15,
+              "stopId": "PDV098",
+              "name": "Porte De Valenciennes",
+              "commune": "Lille",
+              "latitude": 50.621036,
+              "longitude": 3.079066
+            },
+            {
+              "sequence": 16,
+              "stopId": "LGP098",
+              "name": "Grand Palais",
+              "commune": "Lille",
+              "latitude": 50.629215,
+              "longitude": 3.074886
+            },
+            {
+              "sequence": 17,
+              "stopId": "MDL098",
+              "name": "Mairie De Lille",
+              "commune": "Lille",
+              "latitude": 50.632422,
+              "longitude": 3.071125
+            },
+            {
+              "sequence": 18,
+              "stopId": "LIG398",
+              "name": "Gare Lille Flandres",
+              "commune": "Lille",
+              "latitude": 50.637096,
+              "longitude": 3.071067
+            },
+            {
+              "sequence": 19,
+              "stopId": "EUR098",
+              "name": "Lille Europe",
+              "commune": "Lille",
+              "latitude": 50.639583,
+              "longitude": 3.076774
+            },
+            {
+              "sequence": 20,
+              "stopId": "SMP098",
+              "name": "St Maurice Pellevoisin",
+              "commune": "Lille",
+              "latitude": 50.64251,
+              "longitude": 3.088244
+            },
+            {
+              "sequence": 21,
+              "stopId": "MSA098",
+              "name": "Mons Sarts",
+              "commune": "Mons-en-Barœul",
+              "latitude": 50.642272,
+              "longitude": 3.099201
+            },
+            {
+              "sequence": 22,
+              "stopId": "MDM098",
+              "name": "Mairie De Mons",
+              "commune": "Mons-en-Barœul",
+              "latitude": 50.642387,
+              "longitude": 3.109543
+            },
+            {
+              "sequence": 23,
+              "stopId": "FOR298",
+              "name": "Fort De Mons",
+              "commune": "Mons-en-Barœul",
+              "latitude": 50.642182,
+              "longitude": 3.119443
+            },
+            {
+              "sequence": 24,
+              "stopId": "PRS098",
+              "name": "Les Pres-E. Pisani",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.650345,
+              "longitude": 3.126386
+            },
+            {
+              "sequence": 25,
+              "stopId": "JRS098",
+              "name": "Jean Jaures",
+              "commune": "Villeneuve-d'Ascq",
+              "latitude": 50.658507,
+              "longitude": 3.134911
+            },
+            {
+              "sequence": 26,
+              "stopId": "PVL096",
+              "name": "Wasquehal Pavé De Lille",
+              "commune": "Wasquehal",
+              "latitude": 50.663604,
+              "longitude": 3.130533
+            },
+            {
+              "sequence": 27,
+              "stopId": "WMI098",
+              "name": "Hotel De Ville",
+              "commune": "Wasquehal",
+              "latitude": 50.669709,
+              "longitude": 3.130983
+            },
+            {
+              "sequence": 28,
+              "stopId": "CPL098",
+              "name": "Croix Centre",
+              "commune": "Croix",
+              "latitude": 50.674309,
+              "longitude": 3.14647
+            },
+            {
+              "sequence": 29,
+              "stopId": "CXM098",
+              "name": "Mairie De Croix",
+              "commune": "Croix",
+              "latitude": 50.67949,
+              "longitude": 3.156578
+            },
+            {
+              "sequence": 30,
+              "stopId": "EPL098",
+              "name": "Ep. Montesquieu",
+              "commune": "Roubaix",
+              "latitude": 50.684021,
+              "longitude": 3.163133
+            },
+            {
+              "sequence": 31,
+              "stopId": "CDG098",
+              "name": "Roubaix Charles De Gaulle",
+              "commune": "Roubaix",
+              "latitude": 50.686621,
+              "longitude": 3.169981
+            },
+            {
+              "sequence": 32,
+              "stopId": "ROU096",
+              "name": "Euroteleport",
+              "commune": "Roubaix",
+              "latitude": 50.691344,
+              "longitude": 3.179832
+            },
+            {
+              "sequence": 33,
+              "stopId": "RXP098",
+              "name": "Roubaix Place",
+              "commune": "Roubaix",
+              "latitude": 50.691598,
+              "longitude": 3.174202
+            },
+            {
+              "sequence": 34,
+              "stopId": "MGR098",
+              "name": "Gare Jean Lebas",
+              "commune": "Roubaix",
+              "latitude": 50.695865,
+              "longitude": 3.163823
+            },
+            {
+              "sequence": 35,
+              "stopId": "ALS098",
+              "name": "Alsace",
+              "commune": "Roubaix",
+              "latitude": 50.700591,
+              "longitude": 3.161274
+            },
+            {
+              "sequence": 36,
+              "stopId": "MER098",
+              "name": "Mercure",
+              "commune": "Tourcoing",
+              "latitude": 50.705153,
+              "longitude": 3.160544
+            },
+            {
+              "sequence": 37,
+              "stopId": "CTL098",
+              "name": "Carliers",
+              "commune": "Tourcoing",
+              "latitude": 50.710252,
+              "longitude": 3.159908
+            },
+            {
+              "sequence": 38,
+              "stopId": "SEB098",
+              "name": "Gare De Tourcoing",
+              "commune": "Tourcoing",
+              "latitude": 50.71662,
+              "longitude": 3.162584
+            },
+            {
+              "sequence": 39,
+              "stopId": "TOU098",
+              "name": "Tourcoing Centre",
+              "commune": "Tourcoing",
+              "latitude": 50.720554,
+              "longitude": 3.160445
+            },
+            {
+              "sequence": 40,
+              "stopId": "COB098",
+              "name": "Colbert",
+              "commune": "Tourcoing",
+              "latitude": 50.725349,
+              "longitude": 3.156935
+            },
+            {
+              "sequence": 41,
+              "stopId": "TPH098",
+              "name": "Phalempins",
+              "commune": "Tourcoing",
+              "latitude": 50.73242,
+              "longitude": 3.157744
+            },
+            {
+              "sequence": 42,
+              "stopId": "PTN098",
+              "name": "Pont De Neuville",
+              "commune": "Tourcoing",
+              "latitude": 50.736791,
+              "longitude": 3.170762
+            },
+            {
+              "sequence": 43,
+              "stopId": "TBO098",
+              "name": "Bourgogne",
+              "commune": "Tourcoing",
+              "latitude": 50.739496,
+              "longitude": 3.179274
+            },
+            {
+              "sequence": 44,
+              "stopId": "DRO098",
+              "name": "C.H. Dron",
+              "commune": "Tourcoing",
+              "latitude": 50.743874,
+              "longitude": 3.180479
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

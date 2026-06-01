@@ -1,0 +1,6190 @@
+{
+  "generatedAt": "2026-06-01",
+  "description": "Items ecartes des corpus jouables automatiques parce qu'ils portent un risque religieux, sensible ou ambigu. Les sources brutes restent conservees.",
+  "items": [
+    {
+      "id": "bus-stop-calvaire",
+      "label": "Calvaire",
+      "type": "bus-stop",
+      "zone": "Fromelles",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-236"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Calvaire est desservi par LIGNE 236.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-chapelle",
+      "label": "Chapelle",
+      "type": "bus-stop",
+      "zone": "Bondues",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-902"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Chapelle est desservi par LIGNE SCOLAIRE 902.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-chapelle-d-elocques",
+      "label": "Chapelle D'Elocques",
+      "type": "bus-stop",
+      "zone": "Hellemmes-Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-13"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Chapelle D'Elocques est desservi par LIGNE 13.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-chapelle-st-roch",
+      "label": "Chapelle St Roch",
+      "type": "bus-stop",
+      "zone": "Marquette-lez-Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-88"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Chapelle St Roch est desservi par LIGNE 88.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-cite-saint-leger",
+      "label": "Cite Saint Leger",
+      "type": "bus-stop",
+      "zone": "Pérenchies",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-75"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Cite Saint Leger est desservi par LIGNE 75.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-clinique-st-roch",
+      "label": "Clinique St Roch",
+      "type": "bus-stop",
+      "zone": "Roncq",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-l91"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Clinique St Roch est desservi par LIANE 91.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-college-saint-exupery",
+      "label": "College Saint Exupery",
+      "type": "bus-stop",
+      "zone": "Hellemmes-Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-926"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "College Saint Exupery est desservi par LIGNE SCOLAIRE 926.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-college-saint-joseph",
+      "label": "College Saint Joseph",
+      "type": "bus-stop",
+      "zone": "Wattrelos",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-945"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "College Saint Joseph est desservi par LIGNE SCOLAIRE 945.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-croix-du-temple",
+      "label": "Croix Du Temple",
+      "type": "bus-stop",
+      "zone": "Lomme",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-10"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Croix Du Temple est desservi par LIGNE 10.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-croix-saint-pierre",
+      "label": "Croix Saint Pierre",
+      "type": "bus-stop",
+      "zone": "Croix",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-36"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Croix Saint Pierre est desservi par LIGNE 36.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-eglise",
+      "label": "Eglise",
+      "type": "bus-stop",
+      "zone": "Aubers",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-236"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Eglise est desservi par LIGNE 236.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-eglise-du-colbras",
+      "label": "Eglise Du Colbras",
+      "type": "bus-stop",
+      "zone": "Halluin",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-82"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Eglise Du Colbras est desservi par LIGNE 82.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-eglise-du-marais",
+      "label": "Eglise Du Marais",
+      "type": "bus-stop",
+      "zone": "Lomme",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-10"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Eglise Du Marais est desservi par LIGNE 10.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-eglise-saint-louis",
+      "label": "Eglise Saint Louis",
+      "type": "bus-stop",
+      "zone": "Marcq-en-Barœul",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-c10"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Eglise Saint Louis est desservi par CITADINE DE MARCQ.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-eglise-saint-paul",
+      "label": "Eglise Saint Paul",
+      "type": "bus-stop",
+      "zone": "Hem",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-911"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Eglise Saint Paul est desservi par LIGNE SCOLAIRE 911.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-eglise-st-amand",
+      "label": "Eglise St Amand",
+      "type": "bus-stop",
+      "zone": "Mouscron Belgique",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-mwr"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Eglise St Amand est desservi par LIGNE MWR.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-eglise-st-joseph",
+      "label": "Eglise St Joseph",
+      "type": "bus-stop",
+      "zone": "Hem",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-36"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Eglise St Joseph est desservi par LIGNE 36.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-grand-st-andre",
+      "label": "Grand St Andre",
+      "type": "bus-stop",
+      "zone": "Saint Andre",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-50"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Grand St Andre est desservi par LIGNE 50.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-gruson-calvaire",
+      "label": "Gruson Calvaire",
+      "type": "bus-stop",
+      "zone": "Gruson",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-69r"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Gruson Calvaire est desservi par LIGNE 69R.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-hantay-eglise",
+      "label": "Hantay Eglise",
+      "type": "bus-stop",
+      "zone": "Hantay",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-61"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Hantay Eglise est desservi par LIGNE 61.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-hem-eglise",
+      "label": "Hem Eglise",
+      "type": "bus-stop",
+      "zone": "Hem",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-36"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Hem Eglise est desservi par LIGNE 36.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-institut-st-henri-b",
+      "label": "Institut St Henri ( B )",
+      "type": "bus-stop",
+      "zone": "Comines Belgique",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-944"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Institut St Henri ( B ) est desservi par LIGNE SCOLAIRE 944.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-la-chapelle-parc",
+      "label": "La Chapelle Parc",
+      "type": "bus-stop",
+      "zone": "La Chapelle-d'Armentières",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-938"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "La Chapelle Parc est desservi par LIGNE SCOLAIRE 938.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-le-temple",
+      "label": "Le Temple",
+      "type": "bus-stop",
+      "zone": "Verlinghem",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-76"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Le Temple est desservi par LIGNE 76.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-mont-saint-bernard",
+      "label": "Mont Saint Bernard",
+      "type": "bus-stop",
+      "zone": "Toufflers",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-967"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Mont Saint Bernard est desservi par LIGNE SCOLAIRE 967.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-petite-chapelle",
+      "label": "Petite Chapelle",
+      "type": "bus-stop",
+      "zone": "Lesquin",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-15"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Petite Chapelle est desservi par LIGNE 15.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-place-sainte-anne",
+      "label": "Place Sainte Anne",
+      "type": "bus-stop",
+      "zone": "Comines Belgique",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-944"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Place Sainte Anne est desservi par LIGNE SCOLAIRE 944.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-pont-de-l-abbaye",
+      "label": "Pont De L'Abbaye",
+      "type": "bus-stop",
+      "zone": "Marquette-lez-Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-14"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Pont De L'Abbaye est desservi par LIGNE 14.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-rue-de-l-eglise",
+      "label": "Rue De L'Eglise",
+      "type": "bus-stop",
+      "zone": "Marcq-en-Barœul",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-86"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Rue De L'Eglise est desservi par LIGNE 86.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-charles",
+      "label": "Saint Charles",
+      "type": "bus-stop",
+      "zone": "Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-18"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Charles est desservi par LIGNE 18.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-clement",
+      "label": "Saint Clement",
+      "type": "bus-stop",
+      "zone": "Wasquehal",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-30"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Clement est desservi par LIGNE 30.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-exupery",
+      "label": "Saint Exupery",
+      "type": "bus-stop",
+      "zone": "Houplines",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-80"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Exupery est desservi par LIGNE 80.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-francois",
+      "label": "Saint Francois",
+      "type": "bus-stop",
+      "zone": "Mouvaux",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-33"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Francois est desservi par LIGNE 33.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-georges",
+      "label": "Saint Georges",
+      "type": "bus-stop",
+      "zone": "Bondues",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-903"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Georges est desservi par LIGNE SCOLAIRE 903.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-gerard",
+      "label": "Saint Gerard",
+      "type": "bus-stop",
+      "zone": "Wattrelos",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-35"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Gerard est desservi par LIGNE 35.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-jacques",
+      "label": "Saint Jacques",
+      "type": "bus-stop",
+      "zone": "La Chapelle-d'Armentières",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-l99"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Jacques est desservi par LIANE 99.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-jean-de-dieu",
+      "label": "Saint Jean De Dieu",
+      "type": "bus-stop",
+      "zone": "Marquette-lez-Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-50"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Jean De Dieu est desservi par LIGNE 50.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-joseph",
+      "label": "Saint Joseph",
+      "type": "bus-stop",
+      "zone": "Tourcoing",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-l8"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Joseph est desservi par LIANE 8.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-lievin",
+      "label": "Saint Lievin",
+      "type": "bus-stop",
+      "zone": "Wattrelos",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-35"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Lievin est desservi par LIGNE 35.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-luc",
+      "label": "Saint Luc",
+      "type": "bus-stop",
+      "zone": "Lys-lez-Lannoy",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-33"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Luc est desservi par LIGNE 33.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-michel-sur-loire",
+      "label": "Saint Michel Sur Loire",
+      "type": "bus-stop",
+      "zone": "Salomé",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-61"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Michel Sur Loire est desservi par LIGNE 61.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-remi",
+      "label": "Saint Remi",
+      "type": "bus-stop",
+      "zone": "Roubaix",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-33"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Remi est desservi par LIGNE 33.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-roch",
+      "label": "Saint Roch",
+      "type": "bus-stop",
+      "zone": "La Bassée",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-236"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Roch est desservi par LIGNE 236.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-venant",
+      "label": "Saint Venant",
+      "type": "bus-stop",
+      "zone": "Ronchin",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-15"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Venant est desservi par LIGNE 15.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-saint-vincent-de-paul",
+      "label": "Saint Vincent De Paul",
+      "type": "bus-stop",
+      "zone": "Wattrelos",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-17"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Vincent De Paul est desservi par LIGNE 17.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-sainte-barbe",
+      "label": "Sainte Barbe",
+      "type": "bus-stop",
+      "zone": "Warneton",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-75"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Sainte Barbe est desservi par LIGNE 75.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-sainte-cecile",
+      "label": "Sainte Cecile",
+      "type": "bus-stop",
+      "zone": "Lambersart",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-76"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Sainte Cecile est desservi par LIGNE 76.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-sainte-elisabeth",
+      "label": "Sainte Elisabeth",
+      "type": "bus-stop",
+      "zone": "Roubaix",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-l3"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Sainte Elisabeth est desservi par LIANE 3.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-sainte-helene",
+      "label": "Sainte Helene",
+      "type": "bus-stop",
+      "zone": "St Andre Lez Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-l90"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Sainte Helene est desservi par LIANE 90.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-santes-eglise",
+      "label": "Santes Eglise",
+      "type": "bus-stop",
+      "zone": "Santes",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-58"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Santes Eglise est desservi par LIGNE 58.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-sequedin-eglise",
+      "label": "Sequedin Eglise",
+      "type": "bus-stop",
+      "zone": "Sequedin",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-914"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Sequedin Eglise est desservi par LIGNE SCOLAIRE 914.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-st-clement",
+      "label": "St Clement",
+      "type": "bus-stop",
+      "zone": "Lambersart",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-51"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "St Clement est desservi par LIGNE 51.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-st-jean-baptiste",
+      "label": "St Jean Baptiste",
+      "type": "bus-stop",
+      "zone": "Roubaix",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-c12"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "St Jean Baptiste est desservi par CITADINE DE MOULIN POTENNERIE.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-st-maurice",
+      "label": "St Maurice",
+      "type": "bus-stop",
+      "zone": "Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-50"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "St Maurice est desservi par LIGNE 50.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-st-maurice-pellevoisin",
+      "label": "St Maurice Pellevoisin",
+      "type": "bus-stop",
+      "zone": "Lille",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-l91e"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "St Maurice Pellevoisin est desservi par LIANE 91 EXPRESS.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-st-vaast",
+      "label": "St Vaast",
+      "type": "bus-stop",
+      "zone": "Hallennes-lez-Haubourdin",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-915"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "St Vaast est desservi par LIGNE SCOLAIRE 915.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-st-philibert",
+      "label": "St. Philibert",
+      "type": "bus-stop",
+      "zone": "Lomme",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-22r"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "St. Philibert est desservi par LIGNE 22R.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-villa-saint-eloi",
+      "label": "Villa Saint Eloi",
+      "type": "bus-stop",
+      "zone": "Templemars",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-55"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Villa Saint Eloi est desservi par LIGNE 55.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "bus-stop-zi-la-chapelle",
+      "label": "Zi La Chapelle",
+      "type": "bus-stop",
+      "zone": "La Chapelle-d'Armentières",
+      "themes": [
+        "transport",
+        "bus",
+        "ligne-65"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Zi La Chapelle est desservi par LIGNE 65.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "commune-la-chapelle-d-armentieres",
+      "label": "La Chapelle-d'Armentières",
+      "type": "commune",
+      "zone": "MEL",
+      "themes": [
+        "commune",
+        "mel",
+        "bus"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ],
+      "verifiedFact": "La Chapelle-d'Armentières est une commune de la MEL.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "commune-saint-andre-lez-lille",
+      "label": "Saint-André-lez-Lille",
+      "type": "commune",
+      "zone": "MEL",
+      "themes": [
+        "commune",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel",
+        "mel-populations-datamel",
+        "gtfs-ilevia-data-gouv"
+      ],
+      "verifiedFact": "Saint-André-lez-Lille est une commune de la MEL.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-archives-departementales-du-nord",
+      "label": "Archives Départementales du Nord",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-culturel",
+        "equipements-de-collection-non-empruntable"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Archives Départementales du Nord est reference a l'adresse 22 Rue Saint Bernard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-armee-du-salut-poste-de-la-congregation",
+      "label": "Armée du Salut - Poste de la Congrégation",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Armée du Salut - Poste de la Congrégation est reference a l'adresse 7 Rue des Débris Saint Etienne.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-association-al-houda",
+      "label": "Association Al Houda",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Association Al Houda est reference a l'adresse 386 Rue de l'Arbrisseau.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-association-culturelle-des-travailleurs-turcs",
+      "label": "Association Culturelle des Travailleurs Turcs",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Association Culturelle des Travailleurs Turcs est reference a l'adresse 34 Rue Coustou.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-association-fidelite",
+      "label": "Association Fidélité",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Association Fidélité est reference a l'adresse 8 Rue Jean du Solier.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-association-inter-ages",
+      "label": "Association Inter-Ages",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-personnes-agees"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Association Inter-Ages est reference a l'adresse 97 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-association-islah",
+      "label": "Association Islah",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Association Islah est reference a l'adresse 250 Rue du Faubourg de Roubaix.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-association-islamique-d-entraide-et-de-fraternite-aief",
+      "label": "Association Islamique d'Entraide et de Fraternité (AIEF)",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Association Islamique d'Entraide et de Fraternité (AIEF) est reference a l'adresse 231 Rue de la Mitterie.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-association-maghrebine-de-belfort",
+      "label": "Association Maghrébine de Belfort",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Association Maghrébine de Belfort est reference a l'adresse 94 Rue Jean Jaurès.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-association-religieuse-marocaine",
+      "label": "Association Religieuse Marocaine",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Association Religieuse Marocaine est reference a l'adresse 20 Rue du Docteur Yersin.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-aumonerie-de-l-enseignement-public-aep",
+      "label": "Aumônerie de l'Enseignement Public (AEP)",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "services-religieux"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Aumônerie de l'Enseignement Public (AEP) est reference a l'adresse 39 Rue de la Monnaie.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-caarud-point-de-repere",
+      "label": "CAARUD Point de Repère",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "CAARUD Point de Repère est reference a l'adresse 9 Place Saint-Hubert.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-caisses-d-allocations-familiales-caf-antenne-du-faubourg-de-bethune",
+      "label": "Caisses d'Allocations Familiales (CAF) - Antenne du Faubourg de Béthune",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "services-emploi-et-solidarite"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Caisses d'Allocations Familiales (CAF) - Antenne du Faubourg de Béthune est reference a l'adresse 65 Rue Saint-Bernard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cathedrale-notre-dame-de-la-treille",
+      "label": "Cathédrale Notre-Dame de la Treille",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cathédrale Notre-Dame de la Treille est reference a l'adresse Place Gilleson.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-centre-bouddhiste-yeshe",
+      "label": "Centre Bouddhiste Yéshé",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Centre Bouddhiste Yéshé est reference a l'adresse 80 Rue Mirabeau.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-centre-d-animation-petite-enfance-cape-wicar",
+      "label": "Centre d'Animation Petite Enfance (CAPE) Wicar",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Centre d'Animation Petite Enfance (CAPE) Wicar est reference a l'adresse 15 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-centre-d-information-et-d-orientation-cio-lille",
+      "label": "Centre d'Information et d'Orientation (CIO) Lille",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "services-emploi-et-solidarite"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Centre d'Information et d'Orientation (CIO) Lille est reference a l'adresse 19 Rue Saint-Jacques.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-centre-de-soins-infirmiers-saint-gabriel",
+      "label": "Centre de Soins Infirmiers Saint-Gabriel",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-sanitaire",
+        "equipements-medicaux"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Centre de Soins Infirmiers Saint-Gabriel est reference a l'adresse 87 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-centre-medico-psychologique-cmp-epsm",
+      "label": "Centre Medico-Psychologique (CMP) EPSM",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-sanitaire",
+        "equipements-hospitaliers"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Centre Medico-Psychologique (CMP) EPSM est reference a l'adresse 2 Rue Saint-Bernard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-centre-social-albert-jacquard",
+      "label": "Centre Social Albert Jacquard",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-d-aide-aux-familles"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Centre Social Albert Jacquard est reference a l'adresse 113 Rue Saint-Gabriel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-centre-social-de-faubourg-de-bethune",
+      "label": "Centre Social de Faubourg de Béthune",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-d-aide-aux-familles"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Centre Social de Faubourg de Béthune est reference a l'adresse 65 Rue Saint Bernard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-chapelle-d-elocques",
+      "label": "Chapelle d'Elocques",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Chapelle d'Elocques est reference a l'adresse 2 bis Rue Jacquard.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-chapelle-des-franciscaines",
+      "label": "Chapelle des Franciscaines",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Chapelle des Franciscaines est reference a l'adresse 26 Rue d'Angleterre.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-chapelle-du-calvaire-du-dieu-de-marcq",
+      "label": "Chapelle du Calvaire du Dieu-de-Marcq",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Chapelle du Calvaire du Dieu-de-Marcq est reference a l'adresse Rue de la Louvière.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-chapelle-notre-dame-de-la-reconciliation",
+      "label": "Chapelle Notre-Dame de la Réconciliation",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Chapelle Notre-Dame de la Réconciliation est reference a l'adresse Rue de Canteleu.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-chapelle-notre-dame-du-rosaire",
+      "label": "Chapelle Notre-Dame du Rosaire",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Chapelle Notre-Dame du Rosaire est reference a l'adresse 56 Avenue Emile Zola.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-chapelle-polonaise",
+      "label": "Chapelle Polonaise",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Chapelle Polonaise est reference a l'adresse 47 Rue de l'Hôpital Militaire.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cimetiere-d-hellemmes",
+      "label": "Cimetière d'Hellemmes",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "equipements-funeraires"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cimetière d'Hellemmes est reference a l'adresse Rue Roger Salengro.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cimetiere-de-l-est",
+      "label": "Cimetière de l'Est",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "equipements-funeraires"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cimetière de l'Est est reference a l'adresse Rue du Ballon.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cimetiere-de-mont-a-camp",
+      "label": "Cimetière de Mont-à-Camp",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "equipements-funeraires"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cimetière de Mont-à-Camp est reference a l'adresse Avenue du Mont-à-camp.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cimetiere-du-bourg",
+      "label": "Cimetière du Bourg",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "equipements-funeraires"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cimetière du Bourg est reference a l'adresse 950 Avenue de Dunkerque.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cimetiere-du-marais",
+      "label": "Cimetière du Marais",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "equipements-funeraires"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cimetière du Marais est reference a l'adresse Rue de l'Egalité.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cimetiere-du-sud",
+      "label": "Cimetière du Sud",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "equipements-funeraires"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cimetière du Sud est reference a l'adresse 91 Rue du Faubourg des Postes.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-circonscription-militaire-de-defense-cmd-caserne-saint-ruth",
+      "label": "Circonscription Militaire de Défense (CMD) - Caserne Saint-Ruth",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "prevention-et-surete"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Circonscription Militaire de Défense (CMD) - Caserne Saint-Ruth est reference a l'adresse Rue de la Caserne Saint-Ruth.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-college-saint-exupery",
+      "label": "Collège Saint-Exupéry",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Collège Saint-Exupéry est reference a l'adresse 23 Rue du Progrès.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-college-saint-jean-baptiste-de-la-salle",
+      "label": "Collège Saint-Jean-Baptiste de La Salle",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Collège Saint-Jean-Baptiste de La Salle est reference a l'adresse 18 Rue Saint Jean-Baptiste de la Salle.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-college-saint-joseph",
+      "label": "Collège Saint-Joseph",
+      "type": "equipement-public",
+      "zone": "Faubourg de Béthune",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Collège Saint-Joseph est reference a l'adresse 6/8 Rue Joris Karl Huysmans.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-college-saint-paul",
+      "label": "Collège Saint-Paul",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Collège Saint-Paul est reference a l'adresse 92 Rue Solférino.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-college-sainte-claire",
+      "label": "Collège Sainte-Claire",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Collège Sainte-Claire est reference a l'adresse 8 Rue des Augustins.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-college-sainte-therese-d-avila",
+      "label": "Collège Sainte-Thérèse d'Avila",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Collège Sainte-Thérèse d'Avila est reference a l'adresse 13 Rue des Frères Vaillant.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-couvent-des-dominicains",
+      "label": "Couvent des Dominicains",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Couvent des Dominicains est reference a l'adresse 7 Avenue Salomon.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-creche-associative-l-ilot-tendresse",
+      "label": "Crèche Associative L'Ilôt Tendresse",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Crèche Associative L'Ilôt Tendresse est reference a l'adresse 165 bis Rue du Bastion Saint-André.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-creche-associative-le-club-des-mamans-de-st-maur",
+      "label": "Crèche Associative Le Club des Mamans de St-Maur",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Crèche Associative Le Club des Mamans de St-Maur est reference a l'adresse 4 Résidence Dampierre.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-creche-collective-saint-sauveur",
+      "label": "Crèche Collective Saint-Sauveur",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Crèche Collective Saint-Sauveur est reference a l'adresse 63 Rue Charles Debierre.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-creche-les-malicieux-de-faidherbe",
+      "label": "Crèche Les Malicieux de Faidherbe",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Crèche Les Malicieux de Faidherbe est reference a l'adresse 5 Rue Sainte-Anne.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-creche-people-baby-paillettes",
+      "label": "Crèche People & Baby - Paillettes",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Crèche People & Baby - Paillettes est reference a l'adresse 87 Rue Saint-André.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-creche-pour-tous-le-tipi-des-toupeti",
+      "label": "Crèche pour tous - Le Tipi des Toupeti",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Crèche pour tous - Le Tipi des Toupeti est reference a l'adresse 3 Rue du Chemin Saint-Martin.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-creche-pour-tous-mini-lions",
+      "label": "Crèche pour tous - Mini-Lions",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Crèche pour tous - Mini-Lions est reference a l'adresse 53 Rue Saint-Sébastien.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cyber-espace-de-saint-maurice-pellevoisin",
+      "label": "Cyber-Espace de Saint-Maurice Pellevoisin",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "tic"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cyber-Espace de Saint-Maurice Pellevoisin est reference a l'adresse 113/115 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-cyber-espace-du-faubourg-de-bethune",
+      "label": "Cyber-Espace du Faubourg de Béthune",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "tic"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Cyber-Espace du Faubourg de Béthune est reference a l'adresse 65 Rue Saint-Bernard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-direccte",
+      "label": "DIRECCTE",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "institutions"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "DIRECCTE est reference a l'adresse 70 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-de-communication-visuelle-ecv",
+      "label": "Ecole de Communication Visuelle (ECV)",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-superieur"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole de Communication Visuelle (ECV) est reference a l'adresse 4 Parvis Saint-Maurice.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-boufflers-monge",
+      "label": "Ecole Elémentaire Boufflers - Monge",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Boufflers - Monge est reference a l'adresse 11 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-madame-roland",
+      "label": "Ecole Elémentaire Madame Roland",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Madame Roland est reference a l'adresse 95 Rue Saint-Gabriel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-saint-vincent-de-paul",
+      "label": "Ecole Elémentaire Saint Vincent de Paul",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Saint Vincent de Paul est reference a l'adresse 28 Rue de Fontenoy.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-saint-denis",
+      "label": "Ecole Elémentaire Saint-Denis",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Saint-Denis est reference a l'adresse 11 Rue Parrayon.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-saint-jean",
+      "label": "Ecole Elémentaire Saint-Jean",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Saint-Jean est reference a l'adresse 24 Rue des Ecoles.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-saint-joseph",
+      "label": "Ecole Elémentaire Saint-Joseph",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Saint-Joseph est reference a l'adresse 8 Sentier du Curé.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-saint-louis",
+      "label": "Ecole Elémentaire Saint-Louis",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Saint-Louis est reference a l'adresse 10 Rue Broca.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-saint-paul",
+      "label": "Ecole Elémentaire Saint-Paul",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Saint-Paul est reference a l'adresse 306 Rue Léon Gambetta.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-saint-pierre",
+      "label": "Ecole Elémentaire Saint-Pierre",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Saint-Pierre est reference a l'adresse 195 Rue des Stations.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-saint-sauveur",
+      "label": "Ecole Elémentaire Saint-Sauveur",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Saint-Sauveur est reference a l'adresse 1 Rue Charles Debierre.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-sainte-anne-sacre-coeur",
+      "label": "Ecole Elémentaire Sainte-Anne - Sacré Coeur",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Sainte-Anne - Sacré Coeur est reference a l'adresse 32 Rue Pierre Curie.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-sainte-anne-saint-joachim",
+      "label": "Ecole Elémentaire Sainte-Anne - Saint-Joachim",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Sainte-Anne - Saint-Joachim est reference a l'adresse 198 Rue du Bois.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-sainte-elisabeth",
+      "label": "Ecole Elémentaire Sainte-Elisabeth",
+      "type": "equipement-public",
+      "zone": "Faubourg de Béthune",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Sainte-Elisabeth est reference a l'adresse 102 Rue du Faubourg de Béthune.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-sainte-therese",
+      "label": "Ecole Elémentaire Sainte-Thérèse",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Sainte-Thérèse est reference a l'adresse 268 Rue Léon Gambetta.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-elementaire-sainte-therese-d-avila",
+      "label": "Ecole Elémentaire Sainte-Thérèse d'Avila",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Elémentaire Sainte-Thérèse d'Avila est reference a l'adresse 124 Boulevard Vauban.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-mozart",
+      "label": "Ecole Maternelle Mozart",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Mozart est reference a l'adresse 1 Parvis Saint-Michel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-saint-denis",
+      "label": "Ecole Maternelle Saint-Denis",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Saint-Denis est reference a l'adresse 11 Rue Parrayon.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-saint-eubert",
+      "label": "Ecole Maternelle Saint-Eubert",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Saint-Eubert est reference a l'adresse 1 Rue Charles Debierre.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-saint-jean",
+      "label": "Ecole Maternelle Saint-Jean",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Saint-Jean est reference a l'adresse 24 Rue des Ecoles.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-saint-joseph",
+      "label": "Ecole Maternelle Saint-Joseph",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Saint-Joseph est reference a l'adresse 58 Rue Faidherbe.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-saint-louis",
+      "label": "Ecole Maternelle Saint-Louis",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Saint-Louis est reference a l'adresse 10 Rue Broca.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-saint-paul",
+      "label": "Ecole Maternelle Saint-Paul",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Saint-Paul est reference a l'adresse 62 Rue Royale.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-saint-pierre",
+      "label": "Ecole Maternelle Saint-Pierre",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Saint-Pierre est reference a l'adresse 195 Rue des Stations.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-saint-vincent-de-paul",
+      "label": "Ecole Maternelle Saint-Vincent de Paul",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Saint-Vincent de Paul est reference a l'adresse 28 Rue de Fontenoy.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-sainte-anne-sacre-coeur",
+      "label": "Ecole Maternelle Sainte-Anne - Sacré Coeur",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Sainte-Anne - Sacré Coeur est reference a l'adresse 32 Rue Pierre Curie.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-sainte-anne-saint-joachim",
+      "label": "Ecole Maternelle Sainte-Anne - Saint-Joachim",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Sainte-Anne - Saint-Joachim est reference a l'adresse 2 bis Parvis Notre-Dame de Pellevoisin.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-sainte-elisabeth",
+      "label": "Ecole Maternelle Sainte-Elisabeth",
+      "type": "equipement-public",
+      "zone": "Faubourg de Béthune",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Sainte-Elisabeth est reference a l'adresse 102 Rue du Faubourg de Béthune.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-sainte-therese",
+      "label": "Ecole Maternelle Sainte-Thérèse",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Sainte-Thérèse est reference a l'adresse 268 Rue Léon Gambetta.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-sainte-therese-d-avila",
+      "label": "Ecole Maternelle Sainte-Thérèse d'Avila",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Sainte-Thérèse d'Avila est reference a l'adresse 124 Boulevard Vauban.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-maternelle-wicar",
+      "label": "Ecole Maternelle Wicar",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Maternelle Wicar est reference a l'adresse 15 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-municipale-de-musique-de-saint-maurice",
+      "label": "Ecole Municipale de Musique de Saint-Maurice",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-culturel",
+        "equipements-de-formation-artistique"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Municipale de Musique de Saint-Maurice est reference a l'adresse 113 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ecole-schanfelaer-normand",
+      "label": "Ecole Schanfelaer-Normand",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Ecole Schanfelaer-Normand est reference a l'adresse 20 Avenue Charles Saint-Venant.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-adventiste",
+      "label": "Eglise Adventiste",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Adventiste est reference a l'adresse 11 Rue des Débris Saint Etienne.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-anglicane",
+      "label": "Eglise Anglicane",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Anglicane est reference a l'adresse Rue Lydéric.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-baptiste",
+      "label": "Eglise Baptiste",
+      "type": "equipement-public",
+      "zone": "Faubourg de Béthune",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Baptiste est reference a l'adresse 44 Rue du Faubourg de Béthune.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-baptiste-de-la-reconciliation",
+      "label": "Eglise Baptiste de la Réconciliation",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Baptiste de la Réconciliation est reference a l'adresse 111 Rue des Stations.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-du-christ",
+      "label": "Eglise du Christ",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise du Christ est reference a l'adresse 89 Rue de Bapaume.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-du-coeur-immacule-de-marie",
+      "label": "Eglise du Coeur Immaculé de Marie",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise du Coeur Immaculé de Marie est reference a l'adresse 27 Rue des Glycines.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-du-sacre-coeur",
+      "label": "Eglise du Sacré-Coeur",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise du Sacré-Coeur est reference a l'adresse 57 Rue de Solférino.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-evangeline-tzigane",
+      "label": "Eglise Evangéline Tzigane",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Evangéline Tzigane est reference a l'adresse Rue Kuhlmann.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-evangelique-baptiste-toutes-les-nations",
+      "label": "Eglise Évangélique Baptiste Toutes les Nations",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Évangélique Baptiste Toutes les Nations est reference a l'adresse 11 Rue Nicolas Leblanc.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-evangelique-la-trompette",
+      "label": "Eglise Evangélique la Trompette",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Evangélique la Trompette est reference a l'adresse 281 Rue du Faubourg des Postes.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-evangelique-missionnaire",
+      "label": "Eglise Évangélique Missionnaire",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Évangélique Missionnaire est reference a l'adresse 43 Rue Roger Salengro.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-evangelique-protestante-le-phare",
+      "label": "Eglise Evangélique Protestante le Phare",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Evangélique Protestante le Phare est reference a l'adresse 188 bis Rue du Faubourg de Douai.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-notre-dame-de-consolation",
+      "label": "Eglise Notre-Dame de Consolation",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Notre-Dame de Consolation est reference a l'adresse 12 Rue Sabot.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-notre-dame-de-fives",
+      "label": "Eglise Notre-Dame de Fives",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Notre-Dame de Fives est reference a l'adresse 6 Place du Prieuré.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-notre-dame-de-la-visitation",
+      "label": "Eglise Notre-Dame de la Visitation",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Notre-Dame de la Visitation est reference a l'adresse 4 Rue de la Drève.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-notre-dame-de-lourdes",
+      "label": "Eglise Notre-Dame de Lourdes",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-culturel",
+        "equipements-de-spectacle"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Notre-Dame de Lourdes est reference a l'adresse 78 Rue des Ecoles.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-notre-dame-de-pellevoisin",
+      "label": "Eglise Notre-Dame de Pellevoisin",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Notre-Dame de Pellevoisin est reference a l'adresse 2 Parvis Notre-Dame de Pellevoisin.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-notre-dame-des-victoires",
+      "label": "Eglise Notre-Dame des Victoires",
+      "type": "equipement-public",
+      "zone": "Faubourg de Béthune",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Notre-Dame des Victoires est reference a l'adresse 46 Rue du Faubourg de Béthune.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-orthodoxe-grecque",
+      "label": "Eglise Orthodoxe Grecque",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Orthodoxe Grecque est reference a l'adresse 108 Rue Princesse.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-orthodoxe-saint-nicolas",
+      "label": "Eglise Orthodoxe Saint-Nicolas",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Orthodoxe Saint-Nicolas est reference a l'adresse 3 bis Rue Necker.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-protestante-evangelique-de-l-eau-vive",
+      "label": "Eglise Protestante Evangélique de l’Eau Vive",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Protestante Evangélique de l’Eau Vive est reference a l'adresse 20 Rue Véronèse.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-reformee-de-fives",
+      "label": "Eglise Réformée de Fives",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Réformée de Fives est reference a l'adresse 331 Rue Pierre Legrand.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-reformee-de-lille",
+      "label": "Eglise Réformée de Lille",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Réformée de Lille est reference a l'adresse 10 Rue des Pyramides.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-denis",
+      "label": "Eglise Saint Denis",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint Denis est reference a l'adresse Rue Faidherbe.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-andre",
+      "label": "Eglise Saint-André",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-André est reference a l'adresse 123 Rue Royale.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-benoit-joseph-labre",
+      "label": "Eglise Saint-Benoit Joseph Labre",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Benoit Joseph Labre est reference a l'adresse 1 Rue de Colmar.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-charles",
+      "label": "Eglise Saint-Charles",
+      "type": "equipement-public",
+      "zone": "Bois-Blancs",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Charles est reference a l'adresse 208 Rue des Bois-Blancs.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-christophe",
+      "label": "Eglise Saint-Christophe",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Christophe est reference a l'adresse 2 bis Rue Elie Petitprez.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-etienne",
+      "label": "Eglise Saint-Etienne",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Etienne est reference a l'adresse 47 Rue de l'Hôpital Militaire.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-louis",
+      "label": "Eglise Saint-Louis",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Louis est reference a l'adresse Rue de l'Ecole Saint-Louis.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-martin-d-esquermes",
+      "label": "Eglise Saint-Martin d'Esquermes",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Martin d'Esquermes est reference a l'adresse 10 Place de l'Arbonnoise.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-maurice",
+      "label": "Eglise Saint-Maurice",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Maurice est reference a l'adresse 19 bis Parvis Saint Maurice.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-maurice-des-champs",
+      "label": "Eglise Saint-Maurice des Champs",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Maurice des Champs est reference a l'adresse 119 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-michel",
+      "label": "Eglise Saint-Michel",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Michel est reference a l'adresse Parvis Saint-Michel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-philibert",
+      "label": "Eglise Saint-Philibert",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Philibert est reference a l'adresse Rue Berthelot.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-pierre-saint-paul",
+      "label": "Eglise Saint-Pierre Saint-Paul",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Pierre Saint-Paul est reference a l'adresse Place du Parvis de Croix.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-sacrement",
+      "label": "Eglise Saint-Sacrement",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Sacrement est reference a l'adresse Rue Decarnin.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-sauveur",
+      "label": "Eglise Saint-Sauveur",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Sauveur est reference a l'adresse 127 Rue Charles Debierre.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-saint-vincent-de-paul",
+      "label": "Eglise Saint-Vincent de Paul",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Vincent de Paul est reference a l'adresse 5 Rue de Mulhose.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-sainte-catherine",
+      "label": "Eglise Sainte-Catherine",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Sainte-Catherine est reference a l'adresse 14 Terrasse Sainte-Catherine.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-sainte-germaine",
+      "label": "Eglise Sainte-Germaine",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Sainte-Germaine est reference a l'adresse 464 Rue du Faubourg d'Arras.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-sainte-marie-madeleine",
+      "label": "Eglise Sainte-Marie-Madeleine",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-culturel",
+        "equipements-de-spectacle"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Sainte-Marie-Madeleine est reference a l'adresse Rue du Pont Neuf.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eglise-vie-nouvelle",
+      "label": "Eglise Vie Nouvelle",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Eglise Vie Nouvelle est reference a l'adresse 2 Rue Salembier.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ehpa-residence-sainte-claire",
+      "label": "EHPA Résidence Sainte Claire",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-personnes-agees"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "EHPA Résidence Sainte Claire est reference a l'adresse 9 Impasse Saint-Joseph.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ehpad-saint-antoine-de-padoue",
+      "label": "EHPAD Saint-Antoine de Padoue",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-personnes-agees"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "EHPAD Saint-Antoine de Padoue est reference a l'adresse 329 Boulevard Victor Hugo.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-ehpad-saint-jean",
+      "label": "EHPAD Saint-Jean",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-personnes-agees"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "EHPAD Saint-Jean est reference a l'adresse 73 Rue des Stations.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-epdsae-pole-petite-enfance-de-la-metropole",
+      "label": "EPDSAE - Pôle Petite Enfance de la Métropole",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-d-aide-aux-familles"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "EPDSAE - Pôle Petite Enfance de la Métropole est reference a l'adresse 30 Rue Saint-Bernard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-erpd-ernest-couteaux",
+      "label": "ERPD Ernest Couteaux",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "ERPD Ernest Couteaux est reference a l'adresse 6 Rue Saint Bernard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-espace-educatif-ee-boufflers",
+      "label": "Espace Educatif (EE) Boufflers",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Espace Educatif (EE) Boufflers est reference a l'adresse 11 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-espace-seniors-lille-centre",
+      "label": "Espace Séniors - Lille-Centre",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-personnes-agees"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Espace Séniors - Lille-Centre est reference a l'adresse 97 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-espace-seniors-saint-maurice",
+      "label": "Espace Séniors - Saint-Maurice",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-personnes-agees"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Espace Séniors - Saint-Maurice est reference a l'adresse 74 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-etablissement-francais-du-sang-maison-du-don",
+      "label": "Etablissement Français du Sang - Maison du Don",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-sanitaire",
+        "equipements-medicaux"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Etablissement Français du Sang - Maison du Don est reference a l'adresse 42 Avenue Charles Saint-Venant.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-etablissement-regional-d-enseignement-adapte-erea-nelson-mandela",
+      "label": "Etablissement Régional d’Enseignement Adapté (EREA) Nelson Mandela",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Etablissement Régional d’Enseignement Adapté (EREA) Nelson Mandela est reference a l'adresse 5 Chemin Saint-Martin.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-eveche-de-lille",
+      "label": "Evêché de Lille",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "services-religieux"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Evêché de Lille est reference a l'adresse 68 Rue Royale.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-fondation-de-lille",
+      "label": "Fondation de Lille",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-culturel",
+        "centres-culturels"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Fondation de Lille est reference a l'adresse 7 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-foyer-de-jeunes-travailleurs-residence-bethanie",
+      "label": "Foyer de Jeunes Travailleurs - Résidence Béthanie",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Foyer de Jeunes Travailleurs - Résidence Béthanie est reference a l'adresse 15 Rue Saint-Gênois.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-foyer-de-vie-de-l-association-interval",
+      "label": "Foyer de Vie de l'Association Interval",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-handicapes"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Foyer de Vie de l'Association Interval est reference a l'adresse 93 Rue Sainte-Cathérine.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-gare-saint-sauveur",
+      "label": "Gare Saint-Sauveur",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-culturel",
+        "equipements-de-spectacle"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Gare Saint-Sauveur est reference a l'adresse 25 Boulevard Jean-Baptiste Lebas.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-grande-mosquee-al-imaan-de-lille",
+      "label": "Grande Mosquée Al Imaan de Lille",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Grande Mosquée Al Imaan de Lille est reference a l'adresse 59 Rue de Marquillies.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-halte-de-nuit",
+      "label": "Halte de Nuit",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Halte de Nuit est reference a l'adresse 22 Parvis Saint-Michel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-hopital-saint-philibert",
+      "label": "Hôpital Saint-Philibert",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-sanitaire",
+        "equipements-hospitaliers"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Hôpital Saint-Philibert est reference a l'adresse Rue du Grand But.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-hopital-saint-vincent-de-paul",
+      "label": "Hôpital Saint-Vincent de Paul",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-sanitaire",
+        "equipements-hospitaliers"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Hôpital Saint-Vincent de Paul est reference a l'adresse Boulevard de Belfort.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-institut-superieur-d-optique-iso",
+      "label": "Institut Supérieur d'Optique (ISO)",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-superieur"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Institut Supérieur d'Optique (ISO) est reference a l'adresse 64 Rue Saint-Etienne.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-la-poste-saint-martin",
+      "label": "La Poste Saint Martin",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "tic"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "La Poste Saint Martin est reference a l'adresse 33 Avenue du Peuple Belge.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-la-poste-saint-maurice",
+      "label": "La Poste Saint Maurice",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "tic"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "La Poste Saint Maurice est reference a l'adresse 195 Rue du Faubourg de Roubaix.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-la-poste-saint-sauveur",
+      "label": "La Poste Saint-Sauveur",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "tic"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "La Poste Saint-Sauveur est reference a l'adresse 36 Rue Paul Duez.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-lycee-alfred-mairesse",
+      "label": "Lycée Alfred Mairesse",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Lycée Alfred Mairesse est reference a l'adresse 68 Rue Saint-Etienne.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-lycee-frederic-ozanam",
+      "label": "Lycée Frédéric Ozanam",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Lycée Frédéric Ozanam est reference a l'adresse 50 Rue Saint-Gabriel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-lycee-saint-jean-baptiste-de-la-salle",
+      "label": "Lycée Saint-Jean-Baptiste de La Salle",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Lycée Saint-Jean-Baptiste de La Salle est reference a l'adresse 2 Rue Levasseur.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-lycee-saint-paul",
+      "label": "Lycée Saint-Paul",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Lycée Saint-Paul est reference a l'adresse 25 bis Rue Colbert.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-lycee-saint-paul-annexe",
+      "label": "Lycée Saint-Paul - Annexe",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Lycée Saint-Paul - Annexe est reference a l'adresse 62 Rue Royale.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-lycee-sainte-claire",
+      "label": "Lycée Sainte-Claire",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Lycée Sainte-Claire est reference a l'adresse 131 Rue de Paris.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-lycee-sainte-therese-d-avila",
+      "label": "Lycée Sainte-Thérèse d'Avila",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-secondaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Lycée Sainte-Thérèse d'Avila est reference a l'adresse 254 Rue Nationale.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-mairie-de-quartier-de-saint-maurice-pellevoisin",
+      "label": "Mairie de Quartier de Saint-Maurice Pellevoisin",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "collectivites-territoriales"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Mairie de Quartier de Saint-Maurice Pellevoisin est reference a l'adresse 74 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-maison-d-assistante-maternelle-les-petites-pousses",
+      "label": "Maison d'Assistante Maternelle Les Petites Pousses",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Maison d'Assistante Maternelle Les Petites Pousses est reference a l'adresse 10 Place Saint-André.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-maison-d-eglise",
+      "label": "Maison d'Eglise",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "services-religieux"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Maison d'Eglise est reference a l'adresse 1 Place Érasme de Rotterdam.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-maison-departementale-des-adolescents",
+      "label": "Maison Départementale des Adolescents",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-la-jeunesse-et-la-petite-enfance"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Maison Départementale des Adolescents est reference a l'adresse 1 Rue Saint Gênois.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-marche-saint-maurice-pellevoisin",
+      "label": "Marché Saint Maurice-Pellevoisin",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-sportif-et-de-loisirs",
+        "equipements-de-loisirs"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Marché Saint Maurice-Pellevoisin est reference a l'adresse Parvis Notre-Dame de Pellevoisin.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-marche-saint-sauveur",
+      "label": "Marché Saint-Sauveur",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-sportif-et-de-loisirs",
+        "equipements-de-loisirs"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Marché Saint-Sauveur est reference a l'adresse Rue Saint-Sauveur.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-mediatheque-saint-maurice-pellevoisin",
+      "label": "Médiathèque Saint Maurice-Pellevoisin",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-culturel",
+        "equipements-de-collection-empruntable"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Médiathèque Saint Maurice-Pellevoisin est reference a l'adresse Rue du Faubourg de Roubaix.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-mission-locale-antenne-de-saint-maurice-pellevoisin",
+      "label": "Mission Locale - Antenne de Saint-Maurice Pellevoisin",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "services-emploi-et-solidarite"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Mission Locale - Antenne de Saint-Maurice Pellevoisin est reference a l'adresse 74 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-mosquee-badr",
+      "label": "Mosquée Badr",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Mosquée Badr est reference a l'adresse 202 Rue d'Arras.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-palais-des-sports-saint-sauveur",
+      "label": "Palais des Sports Saint-Sauveur",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-sportif-et-de-loisirs",
+        "equipements-de-sport"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Palais des Sports Saint-Sauveur est reference a l'adresse 78 Avenue du Président Kennedy.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-pole-emploi-lomme",
+      "label": "Pôle Emploi Lomme",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-administratif",
+        "services-emploi-et-solidarite"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Pôle Emploi Lomme est reference a l'adresse 17 Rue du Chemin Saint-Martin.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-foyer-international-sainte-camille",
+      "label": "Résidence Foyer International Sainte Camille",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Foyer International Sainte Camille est reference a l'adresse 10 Rue de la Bassée.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-locative-les-dintellieres",
+      "label": "Résidence Locative Les Dintellières",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-personnes-agees"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Locative Les Dintellières est reference a l'adresse 97 Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-louis",
+      "label": "Résidence Saint Louis",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint Louis est reference a l'adresse 61 Rue Princesse.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-michel",
+      "label": "Résidence Saint Michel",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint Michel est reference a l'adresse 86 Boulevard Vauban.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-augustin",
+      "label": "Résidence Saint-Augustin",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint-Augustin est reference a l'adresse 49 Boulevard Vauban.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-benoit",
+      "label": "Résidence Saint-Benoit",
+      "type": "equipement-public",
+      "zone": "Lille-Moulins",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint-Benoit est reference a l'adresse 7 bis Avenue Denis Coordonnier.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-claude",
+      "label": "Résidence Saint-Claude",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint-Claude est reference a l'adresse 10 bis Rue Saint Jean-Baptiste de la Salle.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-dominique",
+      "label": "Résidence Saint-Dominique",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint-Dominique est reference a l'adresse 7 Avenue Salomon.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-joseph",
+      "label": "Résidence Saint-Joseph",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint-Joseph est reference a l'adresse 23 Rue Colson.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-luc",
+      "label": "Résidence Saint-Luc",
+      "type": "equipement-public",
+      "zone": "Lomme",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint-Luc est reference a l'adresse Avenue Nelson Mandela.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-nicolas",
+      "label": "Résidence Saint-Nicolas",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint-Nicolas est reference a l'adresse 12/14 Rue du Sabot.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-saint-omer",
+      "label": "Résidence Saint-Omer",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Saint-Omer est reference a l'adresse 13 Rue de Saint-Omer.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-residence-suitetudes-sainte-famille",
+      "label": "Résidence Suitétudes Sainte-Famille",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-accueil-social"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Résidence Suitétudes Sainte-Famille est reference a l'adresse 26 Rue des Postes.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-restaurant-scolaire-delory",
+      "label": "Restaurant Scolaire Delory",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Restaurant Scolaire Delory est reference a l'adresse Rue Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-restaurant-scolaire-la-fontaine",
+      "label": "Restaurant Scolaire La Fontaine",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Restaurant Scolaire La Fontaine est reference a l'adresse 95 Rue Saint-Gabriel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-restaurant-scolaire-mozart",
+      "label": "Restaurant Scolaire Mozart",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-primaire"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Restaurant Scolaire Mozart est reference a l'adresse 1 Parvis Saint-Michel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-restos-du-coeur-faubourg-de-bethune",
+      "label": "Restos du Coeur - Faubourg de Béthune",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-animation"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Restos du Coeur - Faubourg de Béthune est reference a l'adresse 65 Rue Saint-Bernard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-restos-du-coeur-saint-maurice-pellevoisin",
+      "label": "Restos du Coeur - Saint-Maurice Pellevoisin",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "autres-etablissements-d-animation"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Restos du Coeur - Saint-Maurice Pellevoisin est reference a l'adresse 74 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-salle-d-armes-crypte-saint-pierre-saint-paul",
+      "label": "Salle d'Armes - Crypte Saint Pierre - Saint-Paul",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-sportif-et-de-loisirs",
+        "equipements-de-sport"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Salle d'Armes - Crypte Saint Pierre - Saint-Paul est reference a l'adresse Place de la Nouvelle Aventure.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-salle-de-priere-d-iena",
+      "label": "Salle de Prière d'Iéna",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Salle de Prière d'Iéna est reference a l'adresse 40 Rue d'Iéna.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-salle-de-priere-de-fives",
+      "label": "Salle de Prière de Fives",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Salle de Prière de Fives est reference a l'adresse 67 bis Rue Malsence.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-salle-de-priere-des-bois-blancs",
+      "label": "Salle de Prière des Bois-Blancs",
+      "type": "equipement-public",
+      "zone": "Bois-Blancs",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Salle de Prière des Bois-Blancs est reference a l'adresse 59 Rue Mermoz.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-salle-de-sports-raymond-herbaux",
+      "label": "Salle de Sports Raymond Herbaux",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-sportif-et-de-loisirs",
+        "equipements-de-sport"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Salle de Sports Raymond Herbaux est reference a l'adresse 49 Rue Saint-Gabriel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-salle-polyvalente-bocquet",
+      "label": "Salle Polyvalente Bocquet",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-culturel",
+        "equipements-de-spectacle"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Salle Polyvalente Bocquet est reference a l'adresse Ruelle Saint-Sauveur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-sauvegarde-du-nord-dispositif-areas",
+      "label": "Sauvegarde du Nord - Dispositif AREAS",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-d-aide-aux-familles"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Sauvegarde du Nord - Dispositif AREAS est reference a l'adresse 66 Rue Saint-Gabriel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-seminaire-interdiocesain",
+      "label": "Séminaire Interdiocésain",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "services-religieux"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Séminaire Interdiocésain est reference a l'adresse 74 Rue Hippolyte Lefebvre.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-soeurs-salesiennes-de-don-bosco",
+      "label": "Soeurs Salésiennes de Don Bosco",
+      "type": "equipement-public",
+      "zone": "Lille-Sud",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Soeurs Salésiennes de Don Bosco est reference a l'adresse 22 Rue des Pensées.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-stade-sainte-helene",
+      "label": "Stade Sainte Hélène",
+      "type": "equipement-public",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "equipement-public",
+        "equipement-sportif-et-de-loisirs",
+        "equipements-de-sport"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Stade Sainte Hélène est reference a l'adresse 1 Rue de Constantine.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-synagogue",
+      "label": "Synagogue",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Synagogue est reference a l'adresse 5 Rue Auguste Angellier.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-temple-antoiniste",
+      "label": "Temple Antoiniste",
+      "type": "equipement-public",
+      "zone": "Wazemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-cultuel",
+        "lieux-de-culte"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Temple Antoiniste est reference a l'adresse 23 Boulevard Montebello.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-temps-de-vie-residence-saint-gabriel",
+      "label": "Temps de Vie - Résidence Saint-Gabriel",
+      "type": "equipement-public",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "equipement-public",
+        "equipement-social-et-d-animation",
+        "equipements-pour-personnes-agees"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Temps de Vie - Résidence Saint-Gabriel est reference a l'adresse 28 Rue Saint-Gabriel.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-terrain-de-proximite-groupe-convention",
+      "label": "Terrain de Proximité Groupe Convention",
+      "type": "equipement-public",
+      "zone": "Fives",
+      "themes": [
+        "equipement-public",
+        "equipement-sportif-et-de-loisirs",
+        "equipements-de-sport"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Terrain de Proximité Groupe Convention est reference a l'adresse Rue Saint Just.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-terrain-de-proximite-saint-eloi",
+      "label": "Terrain de Proximité Saint-Eloi",
+      "type": "equipement-public",
+      "zone": "Hellemmes",
+      "themes": [
+        "equipement-public",
+        "equipement-sportif-et-de-loisirs",
+        "equipements-de-sport"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Terrain de Proximité Saint-Eloi est reference a l'adresse Rue Saint-Eloi.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-tribunal-administratif",
+      "label": "Tribunal Administratif",
+      "type": "equipement-public",
+      "zone": "Lille-Centre",
+      "themes": [
+        "equipement-public",
+        "equipement-judiciaire",
+        "juridictions-administratives"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Tribunal Administratif est reference a l'adresse 5 Rue Geoffroy Saint-Hilaire.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-universite-catholique-de-lille-ucl-institut-de-formation-en-masso-khinesietherapie-ifmk",
+      "label": "Université Catholique de Lille (UCL) - Institut de Formation en Masso-Khinésiethérapie (IFMK)",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-superieur"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Université Catholique de Lille (UCL) - Institut de Formation en Masso-Khinésiethérapie (IFMK) est reference a l'adresse 10 Rue Saint Jean-Baptiste de la Salle.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-universite-catholique-de-lille-ucl-institut-de-formation-en-pedicurie-podologie-ifpp",
+      "label": "Université Catholique de Lille (UCL) - Institut de Formation en Pédicurie-Podologie (IFPP)",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-superieur"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Université Catholique de Lille (UCL) - Institut de Formation en Pédicurie-Podologie (IFPP) est reference a l'adresse 10 Rue Saint Jean-Baptiste de la Salle.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "equipement-public-universite-catholique-de-lille-ucl-institut-de-kinesitherapie-podologie-orthopedie-ikpo",
+      "label": "Université Catholique de Lille (UCL) - Institut de Kinésithérapie Podologie Orthopédie (IKPO)",
+      "type": "equipement-public",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "equipement-public",
+        "equipement-enseignement-et-recherche",
+        "enseignement-superieur"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "verifiedFact": "Université Catholique de Lille (UCL) - Institut de Kinésithérapie Podologie Orthopédie (IKPO) est reference a l'adresse 10 Rue Saint Jean-Baptiste de la Salle.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "metro-stop-st-maurice-pellevoisin",
+      "label": "St Maurice Pellevoisin",
+      "type": "metro-stop",
+      "zone": "Lille",
+      "themes": [
+        "transport",
+        "metro",
+        "ligne-m2"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "St Maurice Pellevoisin est desservi par METRO LIGNE 2.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "metro-stop-st-philibert",
+      "label": "St. Philibert",
+      "type": "metro-stop",
+      "zone": "Lomme",
+      "themes": [
+        "transport",
+        "metro",
+        "ligne-m2"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "St. Philibert est desservi par METRO LIGNE 2.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-47-rue-de-l-hopital-militaire",
+      "label": "47 rue de l'Hôpital-Militaire",
+      "type": "monument-historique",
+      "zone": "Lille-Centre",
+      "themes": [
+        "monument-historique",
+        "classe-mh",
+        "eglise-paroissiale"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "47 rue de l'Hôpital-Militaire est reference a l'adresse 47 Rue de l'Hôpital Militaire.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-abbaye-de-loos",
+      "label": "Abbaye de Loos",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "abbaye"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Abbaye de Loos est reference a l'adresse 38 Rue Jean-Jacques Rousseau.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-ancien-couvent-des-madelonnettes",
+      "label": "Ancien couvent des Madelonnettes",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "couvent"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Ancien couvent des Madelonnettes est reference a l'adresse 39 Rue de la Barre.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-ancien-couvent-des-minimes",
+      "label": "Ancien couvent des Minimes",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "couvent"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Ancien couvent des Minimes est reference a l'adresse 17 Quai du Wault.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-ancien-fort-saint-sauveur",
+      "label": "Ancien fort Saint-Sauveur",
+      "type": "monument-historique",
+      "zone": "Lille-Centre",
+      "themes": [
+        "monument-historique",
+        "classe-mh-partiellement-inscrit-mh",
+        "fort"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Ancien fort Saint-Sauveur est reference a l'adresse 20 Rue du Réduit.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-ancienne-chapelle-des-carmes-dechaussees",
+      "label": "Ancienne Chapelle des Carmes Déchaussées",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "chapelle"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Ancienne Chapelle des Carmes Déchaussées est reference a l'adresse Rue de Thionville.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-cathedrale-notre-dame-de-la-treille",
+      "label": "Cathédrale Notre-Dame de la Treille",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "cathedrale"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Cathédrale Notre-Dame de la Treille est reference a l'adresse Parvis de la Treille.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-chapelle-de-la-famille-gonnet-situee-au-cimetiere-de-l-est",
+      "label": "Chapelle de la famille Gonnet, située au cimetière de l'Est",
+      "type": "monument-historique",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "chapelle-funeraire"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Chapelle de la famille Gonnet, située au cimetière de l'Est est reference a l'adresse Cimetière de l'Est.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-chapelle-notre-dame-de-la-reconciliation",
+      "label": "Chapelle Notre-Dame-de-la-Réconciliation",
+      "type": "monument-historique",
+      "zone": "Vauban-Esquermes",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "chapelle"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Chapelle Notre-Dame-de-la-Réconciliation est reference a l'adresse 28 Rue de Canteleu.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-couvent-des-dominicains",
+      "label": "Couvent des Dominicains",
+      "type": "monument-historique",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "couvent"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Couvent des Dominicains est reference a l'adresse 7 Avenue Salomon.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-eglise-notre-dame-de-fives",
+      "label": "Eglise Notre-Dame de Fives",
+      "type": "monument-historique",
+      "zone": "Fives",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "eglise-paroissiale"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Eglise Notre-Dame de Fives est reference a l'adresse Place du Prieuré.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-eglise-paroissiale-saint-andre",
+      "label": "Eglise paroissiale Saint-André",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "classe-mh",
+        "eglise-paroissiale"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Eglise paroissiale Saint-André est reference a l'adresse Rue Royale.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-eglise-paroissiale-sainte-catherine",
+      "label": "Eglise paroissiale Sainte-Catherine",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "classe-mh",
+        "eglise-paroissiale"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Eglise paroissiale Sainte-Catherine est reference a l'adresse 4 Rue Sainte-Catherine.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-eglise-saint-denis-d-hellemmes",
+      "label": "Eglise Saint-Denis d'Hellemmes",
+      "type": "monument-historique",
+      "zone": "Hellemmes",
+      "themes": [
+        "monument-historique",
+        "classe-mh",
+        "eglise"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Denis d'Hellemmes est reference a l'adresse Rue Faidherbe.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-eglise-saint-maurice",
+      "label": "Eglise Saint-Maurice",
+      "type": "monument-historique",
+      "zone": "Lille-Centre",
+      "themes": [
+        "monument-historique",
+        "classe-mh",
+        "eglise"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Eglise Saint-Maurice est reference a l'adresse Parvis Saint-Maurice.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-eglise-sainte-marie-madeleine",
+      "label": "Eglise Sainte-Marie-Madeleine",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "classe-mh",
+        "eglise"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Eglise Sainte-Marie-Madeleine est reference a l'adresse Eglise Sainte-Marie-Madeleine.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-hopital-saint-sauveur",
+      "label": "Hôpital Saint-Sauveur",
+      "type": "monument-historique",
+      "zone": "Lille-Centre",
+      "themes": [
+        "monument-historique",
+        "classe-mh-partiellement-inscrit-mh",
+        "hopital"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Hôpital Saint-Sauveur est reference a l'adresse 102 Rue Saint-Sauveur.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-hotel-d-avelin-hotel-du-rectorat",
+      "label": "Hôtel d'Avelin (Hôtel du Rectorat)",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "hotel"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Hôtel d'Avelin (Hôtel du Rectorat) est reference a l'adresse 22 Rue Saint-Jacques.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-porte-de-roubaix",
+      "label": "Porte de Roubaix",
+      "type": "monument-historique",
+      "zone": "Lille-Centre",
+      "themes": [
+        "monument-historique",
+        "classe-mh",
+        "porte"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Porte de Roubaix est reference a l'adresse Place Saint-Hubert.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-synagogue",
+      "label": "Synagogue",
+      "type": "monument-historique",
+      "zone": "Lille-Centre",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "synagogue"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Synagogue est reference a l'adresse 5 Rue Auguste Angellier.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-temple-protestant",
+      "label": "Temple protestant",
+      "type": "monument-historique",
+      "zone": "Lille-Centre",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "temple"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Temple protestant est reference a l'adresse 15 Rue Jeanne d'Arc.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-usine-elevatoire-de-saint-andre",
+      "label": "Usine élévatoire de Saint-André",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "inscrit-mh",
+        "etablissement-elevateur-des-eaux"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Usine élévatoire de Saint-André est reference a l'adresse 2 Rue Ampère.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "monument-historique-vestiges-de-l-ancienne-collegiale-saint-pierre",
+      "label": "Vestiges de l'ancienne collégiale Saint-Pierre",
+      "type": "monument-historique",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "monument-historique",
+        "classe-mh",
+        "collegiale"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "verifiedFact": "Vestiges de l'ancienne collégiale Saint-Pierre est reference a l'adresse Rue Alphonse Colas.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-allee-des-tilleuls",
+      "label": "Allée des Tilleuls",
+      "type": "parc-jardin",
+      "zone": "Hellemmes",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "mail"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Allée des Tilleuls est reference a l'adresse Rue Saint-Eloi.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-allee-saint-charles",
+      "label": "Allée Saint-Charles",
+      "type": "parc-jardin",
+      "zone": "Bois-Blancs",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "mail"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Allée Saint-Charles est reference a l'adresse Allée Coignet.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-ferme-urbaine-saint-sauveur",
+      "label": "Ferme urbaine Saint-Sauveur",
+      "type": "parc-jardin",
+      "zone": "Lille-Centre",
+      "themes": [
+        "parc-jardin",
+        "jardin-d-habitants",
+        "jardin-partage"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Ferme urbaine Saint-Sauveur est reference a l'adresse 17 Boulevard Jean-Baptiste Lebas.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-jardin-de-l-abbaye-de-loos",
+      "label": "Jardin de l'Abbaye de Loos",
+      "type": "parc-jardin",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "parc-jardin-et-square"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Jardin de l'Abbaye de Loos est reference a l'adresse Rue des Trois Molettes.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-jardin-de-poche-chapelle-d-elocques",
+      "label": "Jardin de poche Chapelle d'Elocques",
+      "type": "parc-jardin",
+      "zone": "Fives",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "jardin-de-poche"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Jardin de poche Chapelle d'Elocques est reference a l'adresse 186 Rue de Lannoy.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-jardin-de-poche-saint-maurice",
+      "label": "Jardin de poche Saint-Maurice",
+      "type": "parc-jardin",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "jardin-de-poche"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Jardin de poche Saint-Maurice est reference a l'adresse 160 bis Rue du Faubourg de Roubaix.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-jardin-des-droles-d-waz-eaux",
+      "label": "Jardin des Drôles d'Waz'eaux",
+      "type": "parc-jardin",
+      "zone": "Wazemmes",
+      "themes": [
+        "parc-jardin",
+        "jardin-d-habitants",
+        "jardin-communautaire"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Jardin des Drôles d'Waz'eaux est reference a l'adresse Rue de l'Hopital Saint-Roch.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-jardin-des-waz-ifs",
+      "label": "Jardin des Waz'ifs",
+      "type": "parc-jardin",
+      "zone": "Wazemmes",
+      "themes": [
+        "parc-jardin",
+        "jardin-d-habitants",
+        "jardins-familiaux"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Jardin des Waz'ifs est reference a l'adresse Rue de l'Hopital Saint-Roch.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-jardin-du-pre-muche",
+      "label": "Jardin du Pré-Muché",
+      "type": "parc-jardin",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "parc-jardin",
+        "jardin-d-habitants",
+        "jardin-communautaire"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Jardin du Pré-Muché est reference a l'adresse 117 Rue Saint-Gabriel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-jardin-du-presbytere",
+      "label": "Jardin du Presbytère",
+      "type": "parc-jardin",
+      "zone": "Lomme",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "parc-jardin-et-square"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Jardin du Presbytère est reference a l'adresse 24 Rue de l'Eglise.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-parc-barberousse",
+      "label": "Parc Barberousse",
+      "type": "parc-jardin",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "parc-jardin-et-square"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Parc Barberousse est reference a l'adresse 74 Rue Saint-Gabriel.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-parc-monceau-couvent-des-dominicains",
+      "label": "Parc Monceau (Couvent des Dominicains)",
+      "type": "parc-jardin",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "parc-jardin-et-square"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Parc Monceau (Couvent des Dominicains) est reference a l'adresse 3 bis Avenue Salomon.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-parvis-saint-maurice",
+      "label": "Parvis Saint-Maurice",
+      "type": "parc-jardin",
+      "zone": "Lille-Centre",
+      "themes": [
+        "parc-jardin",
+        "espace-public-vegetalise",
+        "parvis"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Parvis Saint-Maurice est reference a l'adresse Parvis Saint-Maurice.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-pelouse-des-enfants-du-paradis",
+      "label": "Pelouse des Enfants du Paradis",
+      "type": "parc-jardin",
+      "zone": "Wazemmes",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "pelouse"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Pelouse des Enfants du Paradis est reference a l'adresse Rue de l'Hôpital Saint-Roch.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-square-de-l-eglise-saing-sauveur",
+      "label": "Square de l'Eglise Saing-Sauveur",
+      "type": "parc-jardin",
+      "zone": "Lille-Centre",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "pelouse"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Square de l'Eglise Saing-Sauveur est reference a l'adresse Rue Saint-Sauveur.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-square-saint-denis",
+      "label": "Square Saint-Denis",
+      "type": "parc-jardin",
+      "zone": "Hellemmes",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "parc-jardin-et-square"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Square Saint-Denis est reference a l'adresse Rue du Théâtre de Verdure.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-square-saint-joseph",
+      "label": "Square Saint-Joseph",
+      "type": "parc-jardin",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "parc-jardin-et-square"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Square Saint-Joseph est reference a l'adresse Place Saint-Joseph.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-square-saint-maurice",
+      "label": "Square Saint-Maurice",
+      "type": "parc-jardin",
+      "zone": "Saint-Maurice Pellevoisin",
+      "themes": [
+        "parc-jardin",
+        "espace-vert-public",
+        "parc-jardin-et-square"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Square Saint-Maurice est reference a l'adresse Rue du Faubourg de Roubaix.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "parc-jardin-terrasse-sainte-catherine",
+      "label": "Terrasse Sainte-Catherine",
+      "type": "parc-jardin",
+      "zone": "Vieux-Lille",
+      "themes": [
+        "parc-jardin",
+        "espace-public-vegetalise",
+        "parvis"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "verifiedFact": "Terrasse Sainte-Catherine est reference a l'adresse Terrasse Sainte-Catherine.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "quartier-saint-maurice-pellevoisin",
+      "label": "Saint-Maurice Pellevoisin",
+      "type": "quartier",
+      "zone": "Lille",
+      "themes": [
+        "quartier",
+        "lille"
+      ],
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ],
+      "verifiedFact": "Saint-Maurice Pellevoisin est reference dans le jeu de donnees des quartiers de Lille, Lomme et Hellemmes.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    },
+    {
+      "id": "tramway-stop-saint-maur",
+      "label": "Saint Maur",
+      "type": "tramway-stop",
+      "zone": "La Madeleine",
+      "themes": [
+        "transport",
+        "tramway",
+        "ligne-tram"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "verifiedFact": "Saint Maur est desservi par TRAMWAY.",
+      "ambiguityRisk": "high",
+      "riskFlags": [
+        "religious-reference"
+      ],
+      "editorialStatus": "avoid"
+    }
+  ]
+}

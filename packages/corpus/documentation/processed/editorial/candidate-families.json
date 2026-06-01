@@ -1,0 +1,1480 @@
+{
+  "generatedAt": "2026-06-01",
+  "description": "Familles candidates pour Lille-Mele. Elles restent a relire editorialement, mais leurs associations sont derivees de donnees structurees.",
+  "families": [
+    {
+      "id": "metro-ligne-1-sequence-1-4-cantons-stade-p-mauroy-cite-scientifique-triolo-hotel-de-ville",
+      "title": "METRO LIGNE 1 - sequence 1",
+      "items": [
+        "4 Cantons Stade P. Mauroy",
+        "Cité Scientifique",
+        "Triolo",
+        "Hotel De Ville"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 1.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-1-sequence-2-pont-de-bois-square-flandres-mairie-d-hellemmes-marbrerie",
+      "title": "METRO LIGNE 1 - sequence 2",
+      "items": [
+        "Pont De Bois",
+        "Square Flandres",
+        "Mairie D'Hellemmes",
+        "Marbrerie"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 1.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-1-sequence-3-fives-madeleine-caulier-gare-lille-flandres-rihour",
+      "title": "METRO LIGNE 1 - sequence 3",
+      "items": [
+        "Fives",
+        "Madeleine Caulier",
+        "Gare Lille Flandres",
+        "Rihour"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 1.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-1-sequence-4-republique-beaux-arts-gambetta-wazemmes-porte-des-postes",
+      "title": "METRO LIGNE 1 - sequence 4",
+      "items": [
+        "République Beaux-Arts",
+        "Gambetta",
+        "Wazemmes",
+        "Porte Des Postes"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 1.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-1-c-h-dron-bourgogne-pont-de-neuville-phalempins",
+      "title": "METRO LIGNE 2 - sequence 1",
+      "items": [
+        "C.H. Dron",
+        "Bourgogne",
+        "Pont De Neuville",
+        "Phalempins"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-2-colbert-tourcoing-centre-gare-de-tourcoing-carliers",
+      "title": "METRO LIGNE 2 - sequence 2",
+      "items": [
+        "Colbert",
+        "Tourcoing Centre",
+        "Gare De Tourcoing",
+        "Carliers"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-3-mercure-alsace-gare-jean-lebas-roubaix-place",
+      "title": "METRO LIGNE 2 - sequence 3",
+      "items": [
+        "Mercure",
+        "Alsace",
+        "Gare Jean Lebas",
+        "Roubaix Place"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-4-euroteleport-roubaix-charles-de-gaulle-ep-montesquieu-mairie-de-croix",
+      "title": "METRO LIGNE 2 - sequence 4",
+      "items": [
+        "Euroteleport",
+        "Roubaix Charles De Gaulle",
+        "Ep. Montesquieu",
+        "Mairie De Croix"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-5-croix-centre-hotel-de-ville-wasquehal-pave-de-lille-jean-jaures",
+      "title": "METRO LIGNE 2 - sequence 5",
+      "items": [
+        "Croix Centre",
+        "Hotel De Ville",
+        "Wasquehal Pavé De Lille",
+        "Jean Jaures"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-6-les-pres-e-pisani-fort-de-mons-mairie-de-mons-mons-sarts",
+      "title": "METRO LIGNE 2 - sequence 6",
+      "items": [
+        "Les Pres-E. Pisani",
+        "Fort De Mons",
+        "Mairie De Mons",
+        "Mons Sarts"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-8-grand-palais-porte-de-valenciennes-porte-de-douai-porte-d-arras",
+      "title": "METRO LIGNE 2 - sequence 8",
+      "items": [
+        "Grand Palais",
+        "Porte De Valenciennes",
+        "Porte De Douai",
+        "Porte D'Arras"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-9-porte-des-postes-montebello-cormontaigne-port-de-lille",
+      "title": "METRO LIGNE 2 - sequence 9",
+      "items": [
+        "Porte Des Postes",
+        "Montebello",
+        "Cormontaigne",
+        "Port De Lille"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "metro-ligne-2-sequence-10-bois-blancs-canteleu-lomme-lambersart-pont-superieur",
+      "title": "METRO LIGNE 2 - sequence 10",
+      "items": [
+        "Bois Blancs",
+        "Canteleu",
+        "Lomme-Lambersart",
+        "Pont Superieur"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre arrets consecutifs ou proches dans METRO LIGNE 2.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "metro"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "tramway-sequence-1-gare-lille-flandres-gare-lille-flandres-lille-europe-romarin",
+      "title": "TRAMWAY - sequence 1",
+      "items": [
+        "Gare Lille Flandres",
+        "Gare Lille Flandres",
+        "Lille Europe",
+        "Romarin"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre arrets consecutifs ou proches dans TRAMWAY.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "tramway"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "tramway-sequence-3-clemenceau-hippodrome-croise-laroche-acacias-pont-de-wasquehal",
+      "title": "TRAMWAY - sequence 3",
+      "items": [
+        "Clemenceau Hippodrome",
+        "Croisé Laroche",
+        "Acacias",
+        "Pont De Wasquehal"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre arrets consecutifs ou proches dans TRAMWAY.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "tramway"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "tramway-sequence-4-la-terrasse-wasquehal-pave-de-lille-le-sart-planche-epinoy",
+      "title": "TRAMWAY - sequence 4",
+      "items": [
+        "La Terrasse",
+        "Wasquehal Pavé De Lille",
+        "Le Sart",
+        "Planche Epinoy"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre arrets consecutifs ou proches dans TRAMWAY.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "tramway"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "tramway-sequence-5-la-marque-villa-cavrois-bol-d-air-parc-barbieux",
+      "title": "TRAMWAY - sequence 5",
+      "items": [
+        "La Marque",
+        "Villa Cavrois",
+        "Bol D'Air",
+        "Parc Barbieux"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre arrets consecutifs ou proches dans TRAMWAY.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "tramway"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "tramway-sequence-6-hopital-victor-provo-jean-moulin-alfred-mongy-euroteleport",
+      "title": "TRAMWAY - sequence 6",
+      "items": [
+        "Hopital Victor Provo",
+        "Jean Moulin",
+        "Alfred Mongy",
+        "Euroteleport"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre arrets consecutifs ou proches dans TRAMWAY.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "tramway"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-1-premiers-arrets-agrippin-ghesquiere-pare-leclerc",
+      "title": "LIANE 1 - premiers arrets",
+      "items": [
+        "Agrippin",
+        "Ghesquiere",
+        "Pare",
+        "Leclerc"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-2-premiers-arrets-les-oliveaux-college-descartes-la-paix-chatelet",
+      "title": "LIANE 2 - premiers arrets",
+      "items": [
+        "Les Oliveaux",
+        "College Descartes",
+        "La Paix",
+        "Chatelet"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-3-premiers-arrets-quart-beaulieu-herriot-foch-vallon",
+      "title": "LIANE 3 - premiers arrets",
+      "items": [
+        "Quart. Beaulieu",
+        "Herriot",
+        "Foch",
+        "Vallon"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-4-premiers-arrets-gounod-lp-colbras-semard-hotel-de-ville",
+      "title": "LIANE 4 - premiers arrets",
+      "items": [
+        "Gounod",
+        "Lp Colbras",
+        "Semard",
+        "Hotel De Ville"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-5-premiers-arrets-ferme-aux-oies-bailly-place-quesne-mairie",
+      "title": "LIANE 5 - premiers arrets",
+      "items": [
+        "Ferme Aux Oies",
+        "Bailly",
+        "Place",
+        "Quesne Mairie"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-6-premiers-arrets-fort-de-mons-vda-c-cial-residence-univer-pont-de-bois",
+      "title": "LIANE 6 - premiers arrets",
+      "items": [
+        "Fort De Mons",
+        "Vda C. Cial",
+        "Residence Univer",
+        "Pont De Bois"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-7-premiers-arrets-porte-des-postes-simons-prevoyance-place-garonne",
+      "title": "LIANE 7 - premiers arrets",
+      "items": [
+        "Porte Des Postes",
+        "Simons",
+        "Prevoyance",
+        "Place Garonne"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-8-premiers-arrets-blanchisserie-laennec-dunant-coty",
+      "title": "LIANE 8 - premiers arrets",
+      "items": [
+        "Blanchisserie",
+        "Laennec",
+        "Dunant",
+        "Coty"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-90-premiers-arrets-comines-mairie-place-de-gaulle-vieil-dieu-charles-legrand",
+      "title": "LIANE 90 - premiers arrets",
+      "items": [
+        "Comines Mairie",
+        "Place De Gaulle",
+        "Vieil Dieu",
+        "Charles Legrand"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-92-premiers-arrets-porte-des-postes-simons-cimetiere-du-sud-cavell",
+      "title": "LIANE 92 - premiers arrets",
+      "items": [
+        "Porte Des Postes",
+        "Simons",
+        "Cimetiere Du Sud",
+        "Cavell"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "liane-99-premiers-arrets-le-bizet-louis-bleriot-herons-jacques-cartier",
+      "title": "LIANE 99 - premiers arrets",
+      "items": [
+        "Le Bizet",
+        "Louis Bleriot",
+        "Herons",
+        "Jacques Cartier"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre arrets de la meme liane Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "transport",
+        "bus",
+        "liane"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-de-la-couronne-sud-allennes-les-marais-annoeullin-bauvin-carnin",
+      "title": "Territoire de la couronne Sud",
+      "items": [
+        "Allennes-les-Marais",
+        "Annœullin",
+        "Bauvin",
+        "Carnin"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-de-la-couronne-sud-emmerin-faches-thumesnil-fretin-houplin-ancoisne",
+      "title": "Territoire de la couronne Sud",
+      "items": [
+        "Emmerin",
+        "Faches-Thumesnil",
+        "Fretin",
+        "Houplin-Ancoisne"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-est-anstaing-baisieux-bouvines-chereng",
+      "title": "Territoire Est",
+      "items": [
+        "Anstaing",
+        "Baisieux",
+        "Bouvines",
+        "Chéreng"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-est-forest-sur-marque-gruson-mons-en-baroeul-peronne-en-melantois",
+      "title": "Territoire Est",
+      "items": [
+        "Forest-sur-Marque",
+        "Gruson",
+        "Mons-en-Barœul",
+        "Péronne-en-Mélantois"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-de-l-armentierois-vallee-de-la-lys-armentieres-deulemont-erquinghem-lys-frelinghien",
+      "title": "Territoire de l'Armentiérois - Vallée de la Lys",
+      "items": [
+        "Armentières",
+        "Deûlémont",
+        "Erquinghem-Lys",
+        "Frelinghien"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-des-weppes-aubers-beaucamps-ligny-bois-grenier-don",
+      "title": "Territoire des Weppes",
+      "items": [
+        "Aubers",
+        "Beaucamps-Ligny",
+        "Bois-Grenier",
+        "Don"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-des-weppes-englos-ennetieres-en-weppes-erquinghem-le-sec-escobecques",
+      "title": "Territoire des Weppes",
+      "items": [
+        "Englos",
+        "Ennetières-en-Weppes",
+        "Erquinghem-le-Sec",
+        "Escobecques"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-du-tourquennois-vallee-de-la-lys-bondues-bousbecque-comines-halluin",
+      "title": "Territoire du Tourquennois - Vallée de la Lys",
+      "items": [
+        "Bondues",
+        "Bousbecque",
+        "Comines",
+        "Halluin"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-du-tourquennois-vallee-de-la-lys-linselles-mouvaux-neuville-en-ferrain-roncq",
+      "title": "Territoire du Tourquennois - Vallée de la Lys",
+      "items": [
+        "Linselles",
+        "Mouvaux",
+        "Neuville-en-Ferrain",
+        "Roncq"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-de-la-couronne-nord-capinghem-la-madeleine-lambersart-lompret",
+      "title": "Territoire de la couronne Nord",
+      "items": [
+        "Capinghem",
+        "La Madeleine",
+        "Lambersart",
+        "Lompret"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-de-la-couronne-nord-marcq-en-baroeul-marquette-lez-lille-perenchies-premesques",
+      "title": "Territoire de la couronne Nord",
+      "items": [
+        "Marcq-en-Barœul",
+        "Marquette-lez-Lille",
+        "Pérenchies",
+        "Prémesques"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-roubaisien-croix-hem-lannoy-leers",
+      "title": "Territoire Roubaisien",
+      "items": [
+        "Croix",
+        "Hem",
+        "Lannoy",
+        "Leers"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "territoire-roubaisien-lys-lez-lannoy-roubaix-toufflers-wasquehal",
+      "title": "Territoire Roubaisien",
+      "items": [
+        "Lys-lez-Lannoy",
+        "Roubaix",
+        "Toufflers",
+        "Wasquehal"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes rattachees au meme territoire de gouvernance MEL.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "mel"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "communes-desservies-par-le-metro-croix-lambersart-lezennes-lille",
+      "title": "Communes desservies par le metro",
+      "items": [
+        "Croix",
+        "Lambersart",
+        "Lezennes",
+        "Lille"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes avec au moins un arret de metro dans le GTFS Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "metro"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel",
+        "gtfs-ilevia-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "communes-desservies-par-le-metro-mons-en-baroeul-roubaix-tourcoing-villeneuve-d-ascq",
+      "title": "Communes desservies par le metro",
+      "items": [
+        "Mons-en-Barœul",
+        "Roubaix",
+        "Tourcoing",
+        "Villeneuve-d'Ascq"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre communes avec au moins un arret de metro dans le GTFS Ilévia.",
+      "falseFriend": null,
+      "themes": [
+        "communes",
+        "metro"
+      ],
+      "sourceIds": [
+        "mel-communes-datamel",
+        "gtfs-ilevia-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "quartiers-de-lille-lomme-ou-hellemmes-bois-blancs-faubourg-de-bethune-fives-hellemmes",
+      "title": "Quartiers de Lille, Lomme ou Hellemmes",
+      "items": [
+        "Bois-Blancs",
+        "Faubourg de Béthune",
+        "Fives",
+        "Hellemmes"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre quartiers issus du jeu de donnees officiel des limites de quartiers.",
+      "falseFriend": null,
+      "themes": [
+        "quartiers",
+        "lille"
+      ],
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "quartiers-de-lille-lomme-ou-hellemmes-lille-centre-lille-moulins-lille-sud-lomme",
+      "title": "Quartiers de Lille, Lomme ou Hellemmes",
+      "items": [
+        "Lille-Centre",
+        "Lille-Moulins",
+        "Lille-Sud",
+        "Lomme"
+      ],
+      "difficulty": "easy",
+      "logic": "Quatre quartiers issus du jeu de donnees officiel des limites de quartiers.",
+      "falseFriend": null,
+      "themes": [
+        "quartiers",
+        "lille"
+      ],
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "equipement-public-abej-accueil-solferino-abej-solidarite-abelia-formation-accueil-frederic-ozana",
+      "title": "Equipement Public",
+      "items": [
+        "ABEJ Accueil Solférino",
+        "ABEJ Solidarité",
+        "Abelia Formation",
+        "Accueil Frédéric Ozanam"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type equipement-public, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "equipement-public"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "equipement-public-adonis-agence-regionale-de-sante-ars-aire-d-accueil-des-gens-du-voyage-aire-d-",
+      "title": "Equipement Public",
+      "items": [
+        "ADONIS",
+        "Agence Régionale de Santé (ARS)",
+        "Aire d'accueil des Gens du Voyage",
+        "Aire d'accueil des Gens du Voyage"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type equipement-public, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "equipement-public"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "equipement-public-aire-d-accueil-des-gens-du-voyage-aire-d-accueil-des-gens-du-voyage-alefpa-sie",
+      "title": "Equipement Public",
+      "items": [
+        "Aire d'accueil des Gens du Voyage",
+        "Aire d'accueil des Gens du Voyage",
+        "ALEFPA - Siège",
+        "Animation et Vie Associative"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type equipement-public, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "equipement-public"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "equipement-public-antenne-de-consultation-epsm-appart-city-campus-lille-grand-palais-appartement",
+      "title": "Equipement Public",
+      "items": [
+        "Antenne de Consultation EPSM",
+        "Appart'City Campus Lille Grand-Palais",
+        "Appartement Thérapeutique",
+        "Appartement Thérapeutique Le Cèdre Bleu"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type equipement-public, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "equipement-public"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "equipement-public-archives-d-hellemmes-archives-municipales-armee-du-salut-art-connexion",
+      "title": "Equipement Public",
+      "items": [
+        "Archives d'Hellemmes",
+        "Archives Municipales",
+        "Armée du Salut",
+        "Art Connexion"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type equipement-public, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "equipement-public"
+      ],
+      "sourceIds": [
+        "ville-lille-equipements-publics-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "aire-jeux-aire-jeux-1-aire-jeux-10-aire-jeux-100-aire-jeux-101",
+      "title": "Aire Jeux",
+      "items": [
+        "aire-jeux-1",
+        "aire-jeux-10",
+        "aire-jeux-100",
+        "aire-jeux-101"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type aire-jeux, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "aire-jeux"
+      ],
+      "sourceIds": [
+        "ville-lille-aires-jeux-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "aire-jeux-aire-jeux-102-aire-jeux-103-aire-jeux-104-aire-jeux-105",
+      "title": "Aire Jeux",
+      "items": [
+        "aire-jeux-102",
+        "aire-jeux-103",
+        "aire-jeux-104",
+        "aire-jeux-105"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type aire-jeux, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "aire-jeux"
+      ],
+      "sourceIds": [
+        "ville-lille-aires-jeux-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "aire-jeux-aire-jeux-106-aire-jeux-107-aire-jeux-108-aire-jeux-109",
+      "title": "Aire Jeux",
+      "items": [
+        "aire-jeux-106",
+        "aire-jeux-107",
+        "aire-jeux-108",
+        "aire-jeux-109"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type aire-jeux, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "aire-jeux"
+      ],
+      "sourceIds": [
+        "ville-lille-aires-jeux-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "aire-jeux-aire-jeux-11-aire-jeux-110-aire-jeux-111-aire-jeux-112",
+      "title": "Aire Jeux",
+      "items": [
+        "aire-jeux-11",
+        "aire-jeux-110",
+        "aire-jeux-111",
+        "aire-jeux-112"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type aire-jeux, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "aire-jeux"
+      ],
+      "sourceIds": [
+        "ville-lille-aires-jeux-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "aire-jeux-aire-jeux-113-aire-jeux-114-aire-jeux-115-aire-jeux-116",
+      "title": "Aire Jeux",
+      "items": [
+        "aire-jeux-113",
+        "aire-jeux-114",
+        "aire-jeux-115",
+        "aire-jeux-116"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type aire-jeux, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "aire-jeux"
+      ],
+      "sourceIds": [
+        "ville-lille-aires-jeux-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "monument-historique-ancien-canal-de-la-baignerie-ancien-hotel-ancien-hotel-ancien-hotel-de-l-int",
+      "title": "Monument Historique",
+      "items": [
+        "Ancien canal de la Baignerie",
+        "Ancien Hôtel",
+        "Ancien Hôtel",
+        "Ancien Hôtel de l'Intendance"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre items du type monument-historique, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "monument-historique"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "monument-historique-ancien-hotel-du-juge-garde-des-monnaies-ancien-hotel-du-juge-garde-des-monna",
+      "title": "Monument Historique",
+      "items": [
+        "Ancien Hôtel du Juge Garde des Monnaies",
+        "Ancien Hôtel du Juge Garde des Monnaies",
+        "Ancien Hôtel militaire des Bleuets",
+        "Ancien Hôtel particulier"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre items du type monument-historique, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "monument-historique"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "monument-historique-ancienne-maladrerie-batiment-dit-la-grande-garde-caserne-souham-chambre-de-c",
+      "title": "Monument Historique",
+      "items": [
+        "Ancienne Maladrerie",
+        "Bâtiment dit la Grande Garde",
+        "Caserne Souham",
+        "Chambre de Commerce et d'Industrie"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre items du type monument-historique, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "monument-historique"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "monument-historique-citadelle-hospice-comtesse-hospice-comtesse-hospice-comtesse",
+      "title": "Monument Historique",
+      "items": [
+        "Citadelle",
+        "Hospice Comtesse",
+        "Hospice Comtesse",
+        "Hospice Comtesse"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre items du type monument-historique, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "monument-historique"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "monument-historique-hospice-comtesse-hospice-comtesse-hospice-comtesse-hospice-comtesse",
+      "title": "Monument Historique",
+      "items": [
+        "Hospice Comtesse",
+        "Hospice Comtesse",
+        "Hospice Comtesse",
+        "Hospice Comtesse"
+      ],
+      "difficulty": "hard",
+      "logic": "Quatre items du type monument-historique, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "monument-historique"
+      ],
+      "sourceIds": [
+        "ville-lille-monuments-historiques-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "parc-jardin-cimetiere-d-hellemmes-cimetiere-de-l-est-cimetiere-de-mont-a-camp-cimetiere-du-bourg",
+      "title": "Parc Jardin",
+      "items": [
+        "Cimetière d'Hellemmes",
+        "Cimetière de l'Est",
+        "Cimetière de Mont-à-Camp",
+        "Cimetière du Bourg"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type parc-jardin, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "parc-jardin"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "parc-jardin-cimetiere-du-marais-cimetiere-du-sud-colline-concorde-espace-residentiel-babeuf",
+      "title": "Parc Jardin",
+      "items": [
+        "Cimetière du Marais",
+        "Cimetière du Sud",
+        "Colline Concorde",
+        "Espace résidentiel Babeuf"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type parc-jardin, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "parc-jardin"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "parc-jardin-espace-residentiel-concorde-espace-residentiel-petit-maroc-esplanade-de-la-gare-d-ea",
+      "title": "Parc Jardin",
+      "items": [
+        "Espace résidentiel Concorde",
+        "Espace résidentiel Petit Maroc",
+        "Esplanade de la Gare d'Eau",
+        "Esplanade Joseph Wresinski"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type parc-jardin, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "parc-jardin"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "parc-jardin-esplanade-leon-jouhaux-facade-de-l-esplanade-ferme-educative-de-lomme-ferme-pedagogi",
+      "title": "Parc Jardin",
+      "items": [
+        "Esplanade Léon Jouhaux",
+        "Façade de l'Esplanade",
+        "Ferme éducative de Lomme",
+        "Ferme pédagogique Marcel Dhénin"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type parc-jardin, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "parc-jardin"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    },
+    {
+      "id": "parc-jardin-ilot-comtesse-jardin-andre-ballet-jardin-au-fil-du-temps-du-moulin-d-or-jardin-botan",
+      "title": "Parc Jardin",
+      "items": [
+        "Îlot Comtesse",
+        "Jardin André Ballet",
+        "Jardin Au fil du temps…du Moulin d'Or",
+        "Jardin botanique Nicolas Boulay"
+      ],
+      "difficulty": "medium",
+      "logic": "Quatre items du type parc-jardin, issus des donnees publiques locales.",
+      "falseFriend": null,
+      "themes": [
+        "parc-jardin"
+      ],
+      "sourceIds": [
+        "ville-lille-parcs-jardins-data-gouv"
+      ],
+      "riskFlags": [],
+      "validation": "to-review"
+    }
+  ]
+}

@@ -5,3 +5,8 @@ playwright-report/
 # macOS Finder metadata
 .DS_Store
 **/.DS_Store
+
+# Downloaded documentary corpus sources.
+# These files are kept locally to regenerate processed corpus exports, but the
+# games only need the lighter processed data.
+packages/corpus/documentation/raw/

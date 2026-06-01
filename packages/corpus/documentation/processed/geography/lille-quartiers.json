@@ -1,0 +1,164 @@
+{
+  "generatedAt": "2026-06-01",
+  "sourceIds": [
+    "ville-lille-quartiers-data-gouv"
+  ],
+  "quartiers": [
+    {
+      "name": "Bois-Blancs",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 1,
+      "centroid": {
+        "latitude": 50.6311164029,
+        "longitude": 3.02795202499
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Faubourg de Béthune",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 3,
+      "centroid": {
+        "latitude": 50.6181640494,
+        "longitude": 3.03328805626
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Fives",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 4,
+      "centroid": {
+        "latitude": 50.6292399442,
+        "longitude": 3.08998528829
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Hellemmes",
+      "commune": "Hellemmes",
+      "postalCode": "59260",
+      "quartierCode": 100,
+      "centroid": {
+        "latitude": 50.6257272929,
+        "longitude": 3.10971025689
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Lille-Centre",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 2,
+      "centroid": {
+        "latitude": 50.6318733004,
+        "longitude": 3.06781800326
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Lille-Moulins",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 6,
+      "centroid": {
+        "latitude": 50.6190974622,
+        "longitude": 3.07017646955
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Lille-Sud",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 5,
+      "centroid": {
+        "latitude": 50.610330381,
+        "longitude": 3.04911552292
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Lomme",
+      "commune": "Lomme",
+      "postalCode": "59160",
+      "quartierCode": 200,
+      "centroid": {
+        "latitude": 50.6424218359,
+        "longitude": 2.99423836969
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Saint-Maurice Pellevoisin",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 7,
+      "centroid": {
+        "latitude": 50.6457508941,
+        "longitude": 3.08700640999
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Vauban-Esquermes",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 8,
+      "centroid": {
+        "latitude": 50.6346218151,
+        "longitude": 3.04211927364
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Vieux-Lille",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 9,
+      "centroid": {
+        "latitude": 50.6442055392,
+        "longitude": 3.06025578033
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    },
+    {
+      "name": "Wazemmes",
+      "commune": "Lille",
+      "postalCode": "59000",
+      "quartierCode": 10,
+      "centroid": {
+        "latitude": 50.6246331774,
+        "longitude": 3.04985246879
+      },
+      "sourceIds": [
+        "ville-lille-quartiers-data-gouv"
+      ]
+    }
+  ]
+}

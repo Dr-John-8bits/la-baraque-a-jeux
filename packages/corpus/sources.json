@@ -79,5 +79,113 @@
     "license": "Consultation publique",
     "consultedAt": "2026-06-01",
     "notes": "Source complémentaire pour les lieux touristiques et culturels de la métropole."
+  },
+  {
+    "id": "ilevia-arret-point-datamel",
+    "label": "dataMEL — arrêts Ilévia",
+    "url": "https://data.lillemetropole.fr/geoserver/ogc/features/v1/collections/dsp_ilevia:arret_point/items",
+    "publisher": "Métropole Européenne de Lille",
+    "license": "Licence Ouverte 2.0",
+    "consultedAt": "2026-06-01",
+    "notes": "GeoJSON des arrêts Ilévia avec communes, utile pour rattacher les stations et arrêts aux territoires."
+  },
+  {
+    "id": "mel-communes-datamel",
+    "label": "dataMEL — communes de la MEL",
+    "url": "https://www.data.gouv.fr/datasets/communes-de-la-metropole-europeenne-de-lille",
+    "publisher": "Métropole Européenne de Lille",
+    "license": "Licence Ouverte 2.0",
+    "consultedAt": "2026-06-01",
+    "notes": "Limites et attributs des 95 communes de la Métropole Européenne de Lille."
+  },
+  {
+    "id": "mel-communes-associees-datamel",
+    "label": "dataMEL — communes et communes associées de la MEL",
+    "url": "https://www.data.gouv.fr/datasets/communes-et-communes-associees-de-la-metropole-europeenne-de-lille",
+    "publisher": "Métropole Européenne de Lille",
+    "license": "Licence Ouverte 2.0",
+    "consultedAt": "2026-06-01",
+    "notes": "Liste incluant Lomme et Hellemmes-Lille comme communes associées."
+  },
+  {
+    "id": "mel-populations-datamel",
+    "label": "dataMEL — populations des communes et de la MEL",
+    "url": "https://www.data.gouv.fr/datasets/populations-des-communes-et-de-la-mel",
+    "publisher": "Métropole Européenne de Lille",
+    "license": "Licence Ouverte 2.0",
+    "consultedAt": "2026-06-01",
+    "notes": "Historique de population par commune, utile pour les familles et anecdotes métropolitaines."
+  },
+  {
+    "id": "ville-lille-quartiers-data-gouv",
+    "label": "data.gouv.fr — limites des quartiers de Lille, Lomme et Hellemmes",
+    "url": "https://www.data.gouv.fr/datasets/limite-des-quartiers-de-lille-et-de-ses-communes-associees-de-lomme-et-hellemmes",
+    "publisher": "Mairie de Lille",
+    "license": "Licence Ouverte",
+    "consultedAt": "2026-06-01",
+    "notes": "Jeu de données de référence pour les 12 quartiers officiels."
+  },
+  {
+    "id": "ville-lille-equipements-publics-data-gouv",
+    "label": "data.gouv.fr — équipements publics Lille-Hellemmes-Lomme",
+    "url": "https://www.data.gouv.fr/datasets/equipements-publics-sur-le-territoire-de-lille-hellemmes-lomme",
+    "publisher": "Mairie de Lille",
+    "license": "Licence Ouverte",
+    "consultedAt": "2026-06-01",
+    "notes": "Répertoire des équipements publics avec typologie, quartier, commune et coordonnées."
+  },
+  {
+    "id": "ville-lille-monuments-historiques-data-gouv",
+    "label": "data.gouv.fr — monuments historiques structurés Lille-Hellemmes-Lomme",
+    "url": "https://www.data.gouv.fr/datasets/monuments-historiques-de-lille-hellemmes-lomme",
+    "publisher": "Mairie de Lille",
+    "license": "Licence Ouverte",
+    "consultedAt": "2026-06-01",
+    "notes": "Corpus patrimonial structuré, filtré ensuite pour éviter les références religieuses dans les jeux."
+  },
+  {
+    "id": "ville-lille-parcs-jardins-data-gouv",
+    "label": "data.gouv.fr — parcs et jardins Lille-Hellemmes-Lomme",
+    "url": "https://www.data.gouv.fr/datasets/parcs-et-jardins-sur-le-territoire-de-lille-hellemmes-lomme",
+    "publisher": "Mairie de Lille",
+    "license": "Licence Ouverte",
+    "consultedAt": "2026-06-01",
+    "notes": "Emprises des parcs, jardins et squares pour les repères de quartier."
+  },
+  {
+    "id": "ville-lille-troncons-rue-data-gouv",
+    "label": "data.gouv.fr — tronçons de rue à Lille, Lomme et Hellemmes",
+    "url": "https://www.data.gouv.fr/datasets/troncons-de-rue-a-lille-lomme-hellemmes",
+    "publisher": "Mairie de Lille",
+    "license": "Licence Ouverte",
+    "consultedAt": "2026-06-01",
+    "notes": "Noms de rues et tronçons, utiles comme réserve de mots et repères urbains."
+  },
+  {
+    "id": "ville-lille-aires-jeux-data-gouv",
+    "label": "data.gouv.fr — aires de jeux à Lille",
+    "url": "https://www.data.gouv.fr/datasets/aires-de-jeux-a-lille",
+    "publisher": "Mairie de Lille",
+    "license": "Licence Ouverte",
+    "consultedAt": "2026-06-01",
+    "notes": "Localisation des aires de jeux, utile pour enrichir les repères de quartier non sensibles."
+  },
+  {
+    "id": "ville-lille-stations-reparation-velo-data-gouv",
+    "label": "data.gouv.fr — stations de réparation de vélo à Lille",
+    "url": "https://www.data.gouv.fr/datasets/stations-de-reparations-de-velo-a-lille",
+    "publisher": "Mairie de Lille",
+    "license": "Licence Ouverte",
+    "consultedAt": "2026-06-01",
+    "notes": "Petit jeu de données mobilité douce, utile comme repère local complémentaire."
+  },
+  {
+    "id": "regional-words-source-index",
+    "label": "Index de sources web — vocabulaire, gastronomie et expressions du Nord",
+    "url": "https://nord-escapade.com/le-dictionnaire-du-chti/",
+    "publisher": "Sources web publiques diverses",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Index de sources non ouvertes à utiliser pour vérification et reformulation originale uniquement."
   }
 ]

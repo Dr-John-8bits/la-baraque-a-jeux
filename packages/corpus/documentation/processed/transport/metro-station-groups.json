@@ -1,0 +1,182 @@
+{
+  "generatedAt": "2026-06-01",
+  "description": "Associations de stations par ligne et par direction, derivees du GTFS Ilévia.",
+  "sourceIds": [
+    "gtfs-ilevia-data-gouv",
+    "ilevia-arret-point-datamel"
+  ],
+  "groups": [
+    {
+      "line": "M1",
+      "label": "METRO LIGNE 1",
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "stationsByDirection": [
+        {
+          "directionId": "0",
+          "terminalFrom": "4 Cantons Stade P. Mauroy",
+          "terminalTo": "Chu Eurasanté",
+          "stations": [
+            "4 Cantons Stade P. Mauroy",
+            "Cité Scientifique",
+            "Triolo",
+            "Hotel De Ville",
+            "Pont De Bois",
+            "Square Flandres",
+            "Mairie D'Hellemmes",
+            "Marbrerie",
+            "Fives",
+            "Madeleine Caulier",
+            "Gare Lille Flandres",
+            "Rihour",
+            "République Beaux-Arts",
+            "Gambetta",
+            "Wazemmes",
+            "Porte Des Postes",
+            "Chu-Centre O. Lambret",
+            "Chu Eurasanté"
+          ]
+        },
+        {
+          "directionId": "1",
+          "terminalFrom": "Chu Eurasanté",
+          "terminalTo": "4 Cantons Stade P. Mauroy",
+          "stations": [
+            "Chu Eurasanté",
+            "Chu-Centre O. Lambret",
+            "Porte Des Postes",
+            "Wazemmes",
+            "Gambetta",
+            "République Beaux-Arts",
+            "Rihour",
+            "Gare Lille Flandres",
+            "Madeleine Caulier",
+            "Fives",
+            "Marbrerie",
+            "Mairie D'Hellemmes",
+            "Square Flandres",
+            "Pont De Bois",
+            "Hotel De Ville",
+            "Triolo",
+            "Cité Scientifique",
+            "4 Cantons Stade P. Mauroy"
+          ]
+        }
+      ]
+    },
+    {
+      "line": "M2",
+      "label": "METRO LIGNE 2",
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "stationsByDirection": [
+        {
+          "directionId": "0",
+          "terminalFrom": "C.H. Dron",
+          "terminalTo": "St. Philibert",
+          "stations": [
+            "C.H. Dron",
+            "Bourgogne",
+            "Pont De Neuville",
+            "Phalempins",
+            "Colbert",
+            "Tourcoing Centre",
+            "Gare De Tourcoing",
+            "Carliers",
+            "Mercure",
+            "Alsace",
+            "Gare Jean Lebas",
+            "Roubaix Place",
+            "Euroteleport",
+            "Roubaix Charles De Gaulle",
+            "Ep. Montesquieu",
+            "Mairie De Croix",
+            "Croix Centre",
+            "Hotel De Ville",
+            "Wasquehal Pavé De Lille",
+            "Jean Jaures",
+            "Les Pres-E. Pisani",
+            "Fort De Mons",
+            "Mairie De Mons",
+            "Mons Sarts",
+            "St Maurice Pellevoisin",
+            "Lille Europe",
+            "Gare Lille Flandres",
+            "Mairie De Lille",
+            "Grand Palais",
+            "Porte De Valenciennes",
+            "Porte De Douai",
+            "Porte D'Arras",
+            "Porte Des Postes",
+            "Montebello",
+            "Cormontaigne",
+            "Port De Lille",
+            "Bois Blancs",
+            "Canteleu",
+            "Lomme-Lambersart",
+            "Pont Superieur",
+            "Mitterie",
+            "Maison Des Enfants",
+            "Bourg",
+            "St. Philibert"
+          ]
+        },
+        {
+          "directionId": "1",
+          "terminalFrom": "St. Philibert",
+          "terminalTo": "C.H. Dron",
+          "stations": [
+            "St. Philibert",
+            "Bourg",
+            "Maison Des Enfants",
+            "Mitterie",
+            "Pont Superieur",
+            "Lomme-Lambersart",
+            "Canteleu",
+            "Bois Blancs",
+            "Port De Lille",
+            "Cormontaigne",
+            "Montebello",
+            "Porte Des Postes",
+            "Porte D'Arras",
+            "Porte De Douai",
+            "Porte De Valenciennes",
+            "Grand Palais",
+            "Mairie De Lille",
+            "Gare Lille Flandres",
+            "Lille Europe",
+            "St Maurice Pellevoisin",
+            "Mons Sarts",
+            "Mairie De Mons",
+            "Fort De Mons",
+            "Les Pres-E. Pisani",
+            "Jean Jaures",
+            "Wasquehal Pavé De Lille",
+            "Hotel De Ville",
+            "Croix Centre",
+            "Mairie De Croix",
+            "Ep. Montesquieu",
+            "Roubaix Charles De Gaulle",
+            "Euroteleport",
+            "Roubaix Place",
+            "Gare Jean Lebas",
+            "Alsace",
+            "Mercure",
+            "Carliers",
+            "Gare De Tourcoing",
+            "Tourcoing Centre",
+            "Colbert",
+            "Phalempins",
+            "Pont De Neuville",
+            "Bourgogne",
+            "C.H. Dron"
+          ]
+        }
+      ]
+    }
+  ]
+}
