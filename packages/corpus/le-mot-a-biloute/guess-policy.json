@@ -1,0 +1,15 @@
+{
+  "mode": "guided-permissive",
+  "label": "Mode découverte",
+  "description": "Le corpus public n'est pas encore assez large pour imposer un dictionnaire strict. Le jeu accepte donc les propositions plausibles de bonne longueur et bloque seulement les suites manifestement non jouables.",
+  "rules": {
+    "rejectSingleRepeatedLetter": true,
+    "requireVowelLikeLetter": true
+  },
+  "messages": {
+    "repeated": "Ça ressemble à une touche coincée.",
+    "vowel": "Il faut au moins une voyelle ou un Y.",
+    "unknown": "Ce mot n'est pas dans le calepin."
+  },
+  "words": []
+}

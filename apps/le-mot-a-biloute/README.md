@@ -17,9 +17,10 @@ Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu co
 - score basé sur les essais et les coups d'pouce, y compris dans le Rab de Biloute ;
 - clavier virtuel AZERTY ;
 - saisie au clavier physique ;
+- validation de proposition en mode découverte ;
 - retour correcte / présente / absente ;
 - bonus final ;
-- sauvegarde et statistiques dans `localStorage` ;
+- sauvegarde, statistiques et historique local dans `localStorage` ;
 - partage texte avec score et lien public.
 
 ## Structure
@@ -45,6 +46,8 @@ Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu co
 │   └── TESTING.md
 └── LICENSE*.md
 ```
+
+Le corpus et la politique de validation vivent dans `../../packages/corpus/le-mot-a-biloute/`.
 
 ## Documentation
 

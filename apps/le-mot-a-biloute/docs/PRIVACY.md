@@ -12,6 +12,7 @@ Le jeu utilise `localStorage` pour conserver :
 - les essais ;
 - les indices utilisés ;
 - les statistiques locales ;
+- l'historique local des dernières parties ;
 - la série quotidienne.
 
 Ces données restent dans le navigateur du joueur.

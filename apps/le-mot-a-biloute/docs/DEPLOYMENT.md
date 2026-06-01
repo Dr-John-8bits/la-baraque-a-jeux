@@ -20,12 +20,15 @@ Fichiers requis côté jeu :
 - `app.js`
 - `styles.css`
 - `manifest.webmanifest`
+- métadonnées sociales et icônes référencées depuis `assets/brand/`
 
 Fichiers requis côté monorepo :
 
 - `packages/ui/`
 - `packages/game-utils/`
 - `packages/corpus/le-mot-a-biloute/words.json`
+- `packages/corpus/le-mot-a-biloute/guess-policy.json`
+- `404.html` à la racine pour GitHub Pages
 
 ## Avant publication
 
@@ -36,6 +39,8 @@ Vérifier :
 - le mot du jour ;
 - le score ;
 - le rendu mobile ;
+- les métadonnées Open Graph ;
+- l'icône PWA ;
 - l'absence d'erreur console.
 
 ## GitHub Pages

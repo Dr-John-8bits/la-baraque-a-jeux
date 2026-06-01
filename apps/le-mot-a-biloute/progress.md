@@ -33,3 +33,9 @@ Original prompt: Aligne les documents, et fais une première version du jeu.
 - Itération wording : remplacement du vocabulaire visible `rattrapage` par `Rab de Biloute`, avec la modale `T'as perdu, Biloute !`. Les identifiants techniques restent `recovery/recovered`.
 - Itération couleur locale : `Aide` devient `Hein ?`, `Carnet` devient `Calepin`, `Indice` devient `Ch’ti coup d'pouce`, et le message de victoire devient `Bien joué biloute !`.
 - Vérification couleur locale : `npm run check` OK. Test Playwright ciblé OK sur les libellés `Hein ?`, `Calepin`, `Ch’ti coup d'pouce gratuit`, la victoire `Bien joué biloute !` sans majuscule forcée, et le Rab de Biloute. Captures desktop/mobile inspectées, le bouton long reste lisible.
+- Itération roadmap 26.06.01.2 : ajout d'une politique `guess-policy.json` en mode découverte pour cadrer les propositions sans imposer un dictionnaire incomplet ; les suites à lettre unique et sans voyelle/Y sont refusées.
+- Accessibilité : les cases validées exposent maintenant des labels détaillés et des marqueurs visuels en plus des couleurs.
+- Fin de partie/calepin : ajout du détail du score, de l'état officiel, de la série, du meilleur score, du taux de réussite et d'un historique local simple.
+- PWA/partage : ajout d'icônes PWA basées sur l'asset de marque, métadonnées Open Graph/Twitter et `404.html` GitHub Pages.
+- Nettoyage docs : roadmap, audit, specs, architecture, confidentialité, déploiement, tests, README et changelog alignés sur l'état réel.
+- Vérification 26.06.01.2 : `npm run check` OK, `npm run test:browser` OK. Test Playwright ciblé OK : proposition invalide bloquée sans essai consommé, Rab de Biloute toujours fonctionnel, détail de score/calepin/historique présents, labels de cases enrichis, aucune erreur console. Captures inspectées pour l'écran initial, l'état Rab et la modale de victoire enrichie.

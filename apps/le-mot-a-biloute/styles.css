@@ -163,6 +163,7 @@ h3 {
 }
 
 .tile {
+  position: relative;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
@@ -203,6 +204,24 @@ h3 {
 
 .tile.absent {
   background: var(--absent);
+}
+
+.tile.correct::after,
+.tile.present::after,
+.tile.absent::after {
+  content: attr(data-mark);
+  position: absolute;
+  right: 3px;
+  bottom: 2px;
+  width: 1.1em;
+  height: 1.1em;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(7, 27, 49, 0.76);
+  color: white;
+  font-size: 0.48em;
+  line-height: 1;
 }
 
 .tile.shake {
@@ -339,6 +358,36 @@ h3 {
   font-weight: 750;
 }
 
+.result-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.result-details div,
+.history-block {
+  padding: 10px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: #f7f1e3;
+}
+
+.result-details dt,
+.history-block h3 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.result-details dd {
+  margin: 4px 0 0;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
 #resultKicker {
   text-transform: none;
 }
@@ -462,6 +511,20 @@ h3 {
   font-weight: 950;
 }
 
+.history-block {
+  margin: 0 0 16px;
+}
+
+.history-block ol {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 760;
+}
+
 @media (min-width: 680px) {
   .app-shell {
     padding-top: 16px;
@@ -532,5 +595,9 @@ h3 {
 
   .actions button {
     font-size: 0.8rem;
+  }
+
+  .result-details {
+    grid-template-columns: 1fr;
   }
 }

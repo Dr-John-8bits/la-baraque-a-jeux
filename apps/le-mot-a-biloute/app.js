@@ -3,7 +3,7 @@ import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
-const APP_VERSION = "26.06.01.1";
+const APP_VERSION = "26.06.01.2";
 const GAME_URL = new URL(".", window.location.href).href;
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
@@ -14,6 +14,7 @@ const HINT_LABEL = "Ch’ti coup d'pouce";
 const FREE_HINT_LABEL = `${HINT_LABEL} gratuit`;
 
 const WORDS = await fetchJson("../../packages/corpus/le-mot-a-biloute/words.json");
+const GUESS_POLICY = await fetchJson("../../packages/corpus/le-mot-a-biloute/guess-policy.json");
 
 const MAX_GUESSES = 6;
 const STORAGE_PREFIX = "mot-a-biloute";
@@ -44,6 +45,7 @@ const els = {
   resultKicker: document.getElementById("resultKicker"),
   resultTitle: document.getElementById("resultTitle"),
   resultSummary: document.getElementById("resultSummary"),
+  resultDetails: document.getElementById("resultDetails"),
   bonusTitle: document.getElementById("bonusTitle"),
   bonusText: document.getElementById("bonusText"),
   dialogShareButton: document.getElementById("dialogShareButton"),
@@ -55,11 +57,14 @@ const els = {
   statWon: document.getElementById("statWon"),
   statStreak: document.getElementById("statStreak"),
   statBestScore: document.getElementById("statBestScore"),
+  statWinRate: document.getElementById("statWinRate"),
+  statHistory: document.getElementById("statHistory"),
 };
 
 const todayId = getBilouteDateId();
 const word = selectDailyItem(WORDS, todayId, { epochId: "2026-01-01" });
 const wordLength = word.answer.length;
+const acceptedAnswers = word.acceptedAnswers.map(normalize);
 const gameKey = `${STORAGE_PREFIX}:game:${todayId}:${word.id}`;
 const statsKey = `${STORAGE_PREFIX}:stats`;
 let primaryActionMode = null;
@@ -188,14 +193,20 @@ function submitGuess() {
     return;
   }
 
+  const validation = validateGuess(guess);
+  if (!validation.valid) {
+    shakeCurrentRow();
+    announce(validation.message);
+    return;
+  }
+
   const statuses = scoreGuess(guess, word.answer);
   state.guesses.push(guess);
   state.statuses.push(statuses);
   updateKeyStatuses(guess, statuses);
   state.current = "";
 
-  const accepted = word.acceptedAnswers.map(normalize);
-  if (accepted.includes(guess)) {
+  if (acceptedAnswers.includes(guess)) {
     finishGame(state.result === "recovery" ? "recovered" : "won");
   } else if (state.result === "playing" && state.guesses.length >= MAX_GUESSES) {
     enterRecoveryMode();
@@ -203,6 +214,40 @@ function submitGuess() {
     saveGame();
     render();
   }
+}
+
+function validateGuess(guess) {
+  if (!/^[A-Z]+$/.test(guess)) {
+    return { valid: false, message: "Lettres uniquement, biloute." };
+  }
+  if (acceptedAnswers.includes(guess)) {
+    return { valid: true };
+  }
+
+  const rules = GUESS_POLICY.rules || {};
+  if (GUESS_POLICY.mode === "strict") {
+    const validGuesses = new Set((GUESS_POLICY.words || []).map(normalize));
+    if (!validGuesses.has(guess)) {
+      return {
+        valid: false,
+        message: GUESS_POLICY.messages?.unknown || "Ce mot n'est pas dans le calepin.",
+      };
+    }
+  }
+  if (rules.rejectSingleRepeatedLetter && new Set(guess).size === 1) {
+    return {
+      valid: false,
+      message: GUESS_POLICY.messages?.repeated || "Ça ressemble à une touche coincée.",
+    };
+  }
+  if (rules.requireVowelLikeLetter && !/[AEIOUY]/.test(guess)) {
+    return {
+      valid: false,
+      message: GUESS_POLICY.messages?.vowel || "Il faut au moins une voyelle ou un Y.",
+    };
+  }
+
+  return { valid: true };
 }
 
 function scoreGuess(guess, answer) {
@@ -251,6 +296,7 @@ function finishGame(result) {
   } else if (result === "lost" || result === "recovered") {
     recordOfficialResult("lost");
   }
+  recordHistory(result);
   saveGame();
   render();
   showResultDialog();
@@ -367,6 +413,7 @@ function renderBoard() {
   for (let row = 0; row < rowCount; row += 1) {
     const rowEl = document.createElement("div");
     rowEl.className = "guess-row";
+    rowEl.setAttribute("role", "row");
     rowEl.style.gridTemplateColumns = `repeat(${wordLength}, 1fr)`;
 
     const committed = state.guesses[row] || "";
@@ -374,17 +421,42 @@ function renderBoard() {
     const statuses = state.statuses[row] || [];
 
     for (let col = 0; col < wordLength; col += 1) {
+      const letter = letters[col] || "";
+      const status = statuses[col] || "";
       const tile = document.createElement("div");
       tile.className = "tile";
-      tile.textContent = letters[col] || "";
-      tile.setAttribute("aria-label", `Ligne ${row + 1}, lettre ${col + 1}`);
-      if (letters[col]) tile.classList.add("filled");
-      if (statuses[col]) tile.classList.add(statuses[col]);
+      tile.setAttribute("role", "gridcell");
+      tile.textContent = letter;
+      tile.setAttribute("aria-label", getTileLabel(row, col, letter, status));
+      if (letter) tile.classList.add("filled");
+      if (status) {
+        tile.classList.add(status);
+        tile.dataset.mark = getStatusMark(status);
+      }
       rowEl.append(tile);
     }
 
     els.board.append(rowEl);
   }
+}
+
+function getTileLabel(row, col, letter, status) {
+  const position = `Ligne ${row + 1}, case ${col + 1}`;
+  if (!letter) return `${position}, vide`;
+  if (!status) return `${position}, ${letter} saisi`;
+  return `${position}, ${letter}, ${getStatusText(status)}`;
+}
+
+function getStatusText(status) {
+  if (status === "correct") return "bonne lettre, bonne place";
+  if (status === "present") return "bonne lettre, autre place";
+  return "lettre absente";
+}
+
+function getStatusMark(status) {
+  if (status === "correct") return "✓";
+  if (status === "present") return "~";
+  return "×";
 }
 
 function getBoardRowCount() {
@@ -454,10 +526,38 @@ function showResultDialog() {
   els.resultSummary.textContent = recovered
     ? `${score} points · trouvé au Rab de Biloute · ${formatPaidHintCount()}`
     : `${score} points · ${formatPaidHintCount()}`;
+  renderResultDetails(state.result);
   els.bonusTitle.textContent = word.bonus.title;
   els.bonusText.textContent = word.bonus.text;
   if (!els.resultDialog.open) els.resultDialog.showModal();
   highlightShareButton(els.dialogShareButton);
+}
+
+function renderResultDetails(result) {
+  els.resultDetails.innerHTML = "";
+  const stats = getStats();
+  const tries = state.guesses.length;
+  const guessPenalty = Math.max(0, tries - 1) * POINTS_PER_EXTRA_GUESS;
+  const hintPenalty = state.extraHintsUsed * POINTS_PER_EXTRA_HINT;
+  const rawScore = BASE_SCORE - guessPenalty - hintPenalty;
+  const score = state.score ?? calculateScore(result);
+  const scoreFormula = result === "won" && score !== rawScore
+    ? `${BASE_SCORE} - ${guessPenalty} - ${hintPenalty}, minimum ${score}`
+    : `${BASE_SCORE} - ${guessPenalty} - ${hintPenalty} = ${score}`;
+  const officialLabel = result === "won"
+    ? "Victoire officielle"
+    : result === "recovered"
+      ? "Rab, série perdue"
+      : "Série perdue";
+
+  appendDefinitionItems(els.resultDetails, [
+    ["Essais", result === "recovered" ? `${tries} dont ${tries - MAX_GUESSES} au rab` : `${tries}/${MAX_GUESSES}`],
+    ["Coups d'pouce", formatPaidHintCount()],
+    ["Calcul", scoreFormula],
+    ["Officiel", officialLabel],
+    ["Série", String(stats.streak || 0)],
+    ["Meilleur", stats.bestScore ? String(stats.bestScore) : "-"],
+  ]);
 }
 
 function buildShareText() {
@@ -509,6 +609,30 @@ function formatPaidHintCount() {
   return `${state.extraHintsUsed} coup${plural} d'pouce payant${plural}`;
 }
 
+function recordHistory(result) {
+  const stats = {
+    played: 0,
+    won: 0,
+    streak: 0,
+    bestScore: null,
+    history: [],
+    ...getStats(),
+  };
+  const history = Array.isArray(stats.history) ? stats.history : [];
+  stats.history = [
+    {
+      date: todayId,
+      answer: word.answer,
+      result,
+      score: state.score ?? calculateScore(result),
+      tries: state.guesses.length,
+      extraHintsUsed: state.extraHintsUsed,
+    },
+    ...history.filter((entry) => entry?.date !== todayId),
+  ].slice(0, 7);
+  writeJson(statsKey, stats);
+}
+
 function recordOfficialResult(result) {
   if (state.officialResultRecorded) return;
 
@@ -544,10 +668,47 @@ function recordOfficialResult(result) {
 
 function renderStats() {
   const stats = getStats();
-  els.statPlayed.textContent = String(stats.played || 0);
-  els.statWon.textContent = String(stats.won || 0);
+  const played = stats.played || 0;
+  const won = stats.won || 0;
+  els.statPlayed.textContent = String(played);
+  els.statWon.textContent = String(won);
   els.statStreak.textContent = String(stats.streak || 0);
   els.statBestScore.textContent = stats.bestScore ? String(stats.bestScore) : "-";
+  els.statWinRate.textContent = played ? `${Math.round((won / played) * 100)}%` : "-";
+  renderHistory(stats.history);
+}
+
+function renderHistory(history = []) {
+  els.statHistory.innerHTML = "";
+  if (!Array.isArray(history) || history.length === 0) {
+    const item = document.createElement("li");
+    item.textContent = "Rien à noter pour l'instant.";
+    els.statHistory.append(item);
+    return;
+  }
+
+  history.slice(0, 5).forEach((entry) => {
+    const item = document.createElement("li");
+    const resultLabel = entry.result === "won"
+      ? "gagné"
+      : entry.result === "recovered"
+        ? "rab"
+        : "perdu";
+    item.textContent = `${entry.date} · ${entry.answer} · ${entry.score} pts · ${resultLabel}`;
+    els.statHistory.append(item);
+  });
+}
+
+function appendDefinitionItems(list, items) {
+  items.forEach(([term, description]) => {
+    const wrapper = document.createElement("div");
+    const dt = document.createElement("dt");
+    const dd = document.createElement("dd");
+    dt.textContent = term;
+    dd.textContent = description;
+    wrapper.append(dt, dd);
+    list.append(wrapper);
+  });
 }
 
 function saveGame() {
@@ -605,6 +766,10 @@ function renderGameToText() {
     result: state.result,
     recoveryMode: state.result === "recovery",
     officialResultRecorded: state.officialResultRecorded,
+    validation: {
+      mode: GUESS_POLICY.mode,
+      label: GUESS_POLICY.label,
+    },
     score: state.score ?? calculateScore(state.result),
     triesUsed: state.guesses.length,
     triesMax: MAX_GUESSES,

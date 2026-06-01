@@ -4,6 +4,15 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## 26.06.01.2
+
+- Ajout d'une politique de validation des propositions en mode découverte.
+- Amélioration de l'accessibilité des cases validées avec labels détaillés et marqueurs non colorés.
+- Enrichissement de l'écran de fin avec détail du score, état officiel, série et meilleur score.
+- Ajout d'un historique local simple dans le calepin.
+- Ajout de métadonnées de partage, icônes PWA et page `404.html` pour GitHub Pages.
+- Mise à jour de la roadmap, de l'audit et des documents techniques.
+
 ## 26.06.01.1
 
 - Ajout du mode Rab de Biloute après 6 essais officiels échoués.

@@ -8,8 +8,18 @@
       content="Le mot à Biloute : devinez chaque jour un mot lié à Lille, au Nord ou au parler ch'ti."
     />
     <meta name="theme-color" content="#071b31" />
+    <meta property="og:title" content="Le mot à Biloute" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Devine chaque jour un mot lié à Lille, au Nord ou au parler ch'ti."
+    />
+    <meta property="og:image" content="../../assets/brand/la-baraque-a-jeux-lille.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>Le mot à Biloute</title>
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="../../assets/brand/la-baraque-a-jeux-lille-logo.png" />
+    <link rel="apple-touch-icon" href="../../assets/brand/la-baraque-a-jeux-lille-logo.png" />
     <link rel="stylesheet" href="../../packages/ui/tokens.css" />
     <link rel="stylesheet" href="../../packages/ui/base.css" />
     <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
@@ -95,7 +105,12 @@
       <p class="visually-hidden" id="statusAnnouncer" role="status" aria-live="polite"></p>
 
       <section class="board-wrap" aria-label="Grille de jeu">
-        <div class="board" id="board"></div>
+        <div
+          class="board"
+          id="board"
+          role="grid"
+          aria-label="Propositions et indices de position des lettres"
+        ></div>
       </section>
 
       <section class="actions">
@@ -105,11 +120,12 @@
 
       <section class="keyboard" id="keyboard" aria-label="Clavier virtuel"></section>
 
-      <dialog class="result-dialog" id="resultDialog">
+      <dialog class="result-dialog" id="resultDialog" aria-labelledby="resultTitle">
         <form method="dialog">
           <p class="eyebrow" id="resultKicker">Partie terminée</p>
           <h2 id="resultTitle">Réponse</h2>
           <p class="result-summary" id="resultSummary"></p>
+          <dl class="result-details" id="resultDetails" aria-label="Détails du résultat"></dl>
           <div class="bonus">
             <p class="label">Bonus local</p>
             <h3 id="bonusTitle"></h3>
@@ -122,10 +138,10 @@
         </form>
       </dialog>
 
-      <dialog class="result-dialog recovery-dialog" id="recoveryDialog">
+      <dialog class="result-dialog recovery-dialog" id="recoveryDialog" aria-labelledby="recoveryTitle">
         <form method="dialog">
           <p class="eyebrow">Rab de Biloute</p>
-          <h2>T'as perdu, Biloute !</h2>
+          <h2 id="recoveryTitle">T'as perdu, Biloute !</h2>
           <p class="result-summary">Mais t'as droit à du rab : continue à chercher le mot. Les essais suivants retirent encore des points, et le score peut passer sous zéro.</p>
           <div class="dialog-actions dialog-actions--single">
             <button value="close">Continuer</button>
@@ -133,7 +149,7 @@
         </form>
       </dialog>
 
-      <dialog class="result-dialog hint-dialog" id="hintDialog">
+      <dialog class="result-dialog hint-dialog" id="hintDialog" aria-labelledby="hintTitle">
         <form method="dialog">
           <p class="eyebrow">Ch’ti coup d'pouce</p>
           <h2 id="hintTitle">Ch’ti coup d'pouce gratuit</h2>
@@ -146,10 +162,10 @@
         </form>
       </dialog>
 
-      <dialog class="result-dialog help-dialog" id="helpDialog">
+      <dialog class="result-dialog help-dialog" id="helpDialog" aria-labelledby="helpTitle">
         <form method="dialog">
           <p class="eyebrow">Règles</p>
-          <h2>Comment jouer</h2>
+          <h2 id="helpTitle">Comment jouer</h2>
           <div class="help-content">
             <section>
               <h3>But du jeu</h3>
@@ -171,6 +187,10 @@
               <h3>Coups d'pouce et série</h3>
               <p>Clique sur Ch’ti coup d'pouce pour afficher le premier coup d'pouce, gratuit. Les suivants coûtent des points. La série ne progresse que si tu trouves dans les 6 essais officiels.</p>
             </section>
+            <section>
+              <h3>Propositions</h3>
+              <p>Pour l'instant, le jeu est en mode découverte : il accepte les propositions plausibles de bonne longueur et bloque surtout les suites de lettres manifestement non jouables.</p>
+            </section>
           </div>
           <div class="dialog-actions dialog-actions--single">
             <button value="close">Fermer</button>
@@ -178,10 +198,10 @@
         </form>
       </dialog>
 
-      <dialog class="result-dialog" id="statsDialog">
+      <dialog class="result-dialog" id="statsDialog" aria-labelledby="statsTitle">
         <form method="dialog">
           <p class="eyebrow">Stats locales</p>
-          <h2>Ton calepin</h2>
+          <h2 id="statsTitle">Ton calepin</h2>
           <dl class="stats-list">
             <div>
               <dt>Parties</dt>
@@ -199,7 +219,15 @@
               <dt>Meilleur score</dt>
               <dd id="statBestScore">-</dd>
             </div>
+            <div>
+              <dt>Réussite</dt>
+              <dd id="statWinRate">-</dd>
+            </div>
           </dl>
+          <section class="history-block" aria-labelledby="historyTitle">
+            <h3 id="historyTitle">Dernières parties</h3>
+            <ol id="statHistory"></ol>
+          </section>
           <div class="dialog-actions dialog-actions--single">
             <button value="close">Fermer</button>
           </div>

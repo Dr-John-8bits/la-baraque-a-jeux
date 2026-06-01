@@ -5,6 +5,7 @@ const root = process.cwd();
 const errors = [];
 const pages = [
   "index.html",
+  "404.html",
   "blog.html",
   "apps/le-mot-a-biloute/index.html",
   "apps/lille-mele/index.html",
@@ -72,4 +73,3 @@ async function assertExists(file, label) {
     errors.push(`${label} est introuvable.`);
   }
 }
-

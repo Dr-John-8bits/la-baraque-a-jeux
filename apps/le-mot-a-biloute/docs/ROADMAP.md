@@ -27,16 +27,23 @@
 
 - Intégrer le visuel fourni.
 - Stabiliser les couleurs.
-- Ajouter une icône PWA.
-- Ajouter une image sociale.
+- Ajouter une icône PWA dédiée au jeu.
+- Ajouter une image sociale dédiée au jeu.
+
+État : partiel. Les métadonnées Open Graph, les liens d'icônes et le manifeste PWA utilisent les assets de marque mutualisés. Il reste à produire des assets dédiés au jeu.
 
 ## 0.4 — Qualité de jeu
 
-- Ajouter une validation de dictionnaire.
-- Améliorer l'accessibilité.
+- Validation des propositions en mode découverte.
+- Labels accessibles enrichis sur les cases.
+- Marqueurs visuels complémentaires aux couleurs.
+- Écran de fin avec détail du score.
+- Calepin enrichi avec taux de réussite et historique local.
 - Renforcer l'aide intégrée au fil des mécaniques.
 - Tester sur plusieurs tailles mobiles.
 - Étendre les tests navigateur automatisés depuis la racine du monorepo.
+
+État : en cours. Le mode découverte évite les suites de lettres les plus absurdes sans imposer un dictionnaire incomplet. Le passage à une validation stricte dépendra du corpus éditorial et d'une liste de propositions acceptées.
 
 ## 1.0 — Lancement public
 

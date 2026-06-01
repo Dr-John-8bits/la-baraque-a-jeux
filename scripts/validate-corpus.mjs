@@ -4,10 +4,12 @@ const errors = [];
 
 const sources = await readJson("packages/corpus/sources.json");
 const words = await readJson("packages/corpus/le-mot-a-biloute/words.json");
+const guessPolicy = await readJson("packages/corpus/le-mot-a-biloute/guess-policy.json");
 const puzzles = await readJson("packages/corpus/lille-mele/puzzles.json");
 
 const sourceIds = validateSources(sources);
 validateWords(words, sourceIds);
+validateGuessPolicy(guessPolicy);
 validatePuzzles(puzzles, sourceIds);
 
 if (errors.length > 0) {
@@ -96,6 +98,31 @@ function validateWords(value, sourceIds) {
   });
 }
 
+function validateGuessPolicy(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push("packages/corpus/le-mot-a-biloute/guess-policy.json doit etre un objet.");
+    return;
+  }
+
+  requireEnum(value.mode, "guessPolicy.mode", ["guided-permissive", "strict"]);
+  requireString(value.label, "guessPolicy.label", { max: 60 });
+  requireString(value.description, "guessPolicy.description", { max: 320 });
+  if (!value.rules || typeof value.rules !== "object" || Array.isArray(value.rules)) {
+    errors.push("guessPolicy.rules doit etre un objet.");
+  } else {
+    requireBoolean(value.rules.rejectSingleRepeatedLetter, "guessPolicy.rules.rejectSingleRepeatedLetter");
+    requireBoolean(value.rules.requireVowelLikeLetter, "guessPolicy.rules.requireVowelLikeLetter");
+  }
+  if (!value.messages || typeof value.messages !== "object" || Array.isArray(value.messages)) {
+    errors.push("guessPolicy.messages doit etre un objet.");
+  } else {
+    requireString(value.messages.repeated, "guessPolicy.messages.repeated", { max: 100 });
+    requireString(value.messages.vowel, "guessPolicy.messages.vowel", { max: 100 });
+    requireString(value.messages.unknown, "guessPolicy.messages.unknown", { max: 100 });
+  }
+  requireAnswerArray(value.words, "guessPolicy.words", { min: 0 });
+}
+
 function validatePuzzles(value, sourceIds) {
   if (!Array.isArray(value)) {
     errors.push("packages/corpus/lille-mele/puzzles.json doit etre un tableau.");
@@ -175,6 +202,12 @@ function requireInteger(value, label, options = {}) {
   }
   if (options.min !== undefined && value < options.min) {
     errors.push(`${label} doit etre superieur ou egal a ${options.min}.`);
+  }
+}
+
+function requireBoolean(value, label) {
+  if (typeof value !== "boolean") {
+    errors.push(`${label} doit etre un booleen.`);
   }
 }
 

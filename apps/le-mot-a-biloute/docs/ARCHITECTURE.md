@@ -18,6 +18,7 @@ Il n'y a actuellement :
 - `app.js` : moteur de jeu, score, stockage local et partage.
 - `manifest.webmanifest` : manifeste PWA minimal.
 - `../../packages/corpus/le-mot-a-biloute/words.json` : corpus des mots.
+- `../../packages/corpus/le-mot-a-biloute/guess-policy.json` : politique de validation des propositions.
 - `../../packages/game-utils/` : helpers partagés avec les autres jeux.
 - `../../packages/ui/` : tokens, base visuelle et menu commun.
 
@@ -32,6 +33,7 @@ Contenus stockés :
 - indices utilisés ;
 - statut victoire/défaite ;
 - statistiques locales.
+- historique local simple des dernières parties.
 
 ## Moteur de jeu
 
@@ -39,6 +41,7 @@ Le moteur :
 
 - sélectionne un mot quotidien déterministe ;
 - normalise les entrées ;
+- valide les propositions selon la politique active ;
 - compare les lettres avec gestion des doublons ;
 - calcule le score ;
 - construit le texte de partage ;
