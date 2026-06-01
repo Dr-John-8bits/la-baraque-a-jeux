@@ -53,7 +53,6 @@ const DEFAULT_STATS = {
 const els = {
   playerScore: document.querySelector("#playerScore"),
   computerScore: document.querySelector("#computerScore"),
-  roundCount: document.querySelector("#roundCount"),
   playerScorePill: document.querySelector("#playerScore")?.closest(".score-pill"),
   computerScorePill: document.querySelector("#computerScore")?.closest(".score-pill"),
   duelPanel: document.querySelector(".duel-panel"),
@@ -76,9 +75,6 @@ const els = {
   resultPanel: document.querySelector("#resultPanel"),
   resultTitle: document.querySelector("#resultTitle"),
   resultText: document.querySelector("#resultText"),
-  rulesButton: document.querySelector("#rulesButton"),
-  rulesPanel: document.querySelector("#rulesPanel"),
-  resetButton: document.querySelector("#resetButton"),
   playAgainButton: document.querySelector("#playAgainButton"),
   shareButton: document.querySelector("#shareButton"),
   historyList: document.querySelector("#historyList"),
@@ -103,7 +99,7 @@ function createInitialState() {
     phase: "ready",
     remainingMs: ROUND_DURATION_MS,
     revealRemainingMs: 0,
-    message: "Lance CH'TI FOU MI, puis choisis avant la fin de MI.",
+    message: "Objectif : premier à 5 points. Lance CH'TI FOU MI, puis choisis avant la fin de MI.",
     tone: "",
     lastRound: null,
     pendingRound: null,
@@ -117,11 +113,7 @@ function bindEvents() {
     button.addEventListener("click", () => playRound(button.dataset.choice));
   });
   els.roundButton.addEventListener("click", startRound);
-  els.resetButton.addEventListener("click", resetGame);
   els.playAgainButton.addEventListener("click", resetGame);
-  els.rulesButton.addEventListener("click", () => {
-    els.rulesPanel.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
   els.shareButton.addEventListener("click", shareResult);
 
   document.addEventListener("keydown", (event) => {
@@ -340,7 +332,6 @@ function getStats() {
 function render() {
   els.playerScore.textContent = String(state.playerScore);
   els.computerScore.textContent = String(state.computerScore);
-  els.roundCount.textContent = String(state.round);
   els.message.textContent = state.message;
   els.message.className = ["message", state.tone].filter(Boolean).join(" ");
 

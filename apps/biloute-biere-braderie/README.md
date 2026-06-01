@@ -18,8 +18,13 @@ Le joueur affronte l'ordinateur. Le premier à 5 manches gagnées remporte la pa
 ├── app.js
 ├── styles.css
 ├── manifest.webmanifest
+├── ROADMAP.md
 ├── README.md
 └── progress.md
 ```
 
 Le jeu expose `window.render_game_to_text()` pour les tests et `window.advanceTime(ms)` pour la boucle de vérification Playwright.
+
+## Documentation
+
+- [Roadmap](ROADMAP.md)

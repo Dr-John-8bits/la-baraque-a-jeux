@@ -42,7 +42,10 @@ Le principe on joue tout seul et on joue contre l'ordinateur. Inspire toi du dos
 - 2026-06-01 : ajout d'une micro-phase de révélation après le choix : l'ordi reste caché environ 1,1 s, le score ne bouge qu'après la révélation.
 - 2026-06-01 : validations OK après suspense : capture mobile pendant révélation et après résolution, client `develop-web-game`, `npm run check`, `npm run test:browser`.
 - 2026-06-01 : ajustement du suspense de révélation à 1,5 s et mise à jour du smoke test associé.
+- 2026-06-01 : suppression des boutons hauts `?` et réinitialisation, remplacement du compteur de manche central par l'objectif `Premier à 5`, et ajout d'un bandeau objectif compact.
+- 2026-06-01 : création de `ROADMAP.md` pour consigner l'état réel du mini-jeu, les décisions UX actées et les pistes de reprise inspirées du Mot à Biloute.
 
 ## TODO
 
-- Prévoir un test dédié de fin de partie si le jeu grandit au-delà du prototype statique.
+- Priorité de reprise : calepin minimal avec tournées gagnées/perdues, série actuelle et partage enrichi.
+- Prévoir des tests dédiés de fin de tournée gagnée, fin de tournée perdue, phase de révélation et timeout.

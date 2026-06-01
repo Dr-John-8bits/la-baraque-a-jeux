@@ -77,13 +77,6 @@ h1 {
   line-height: 1.4;
 }
 
-.head-actions {
-  display: flex;
-  justify-content: end;
-  gap: 8px;
-}
-
-.icon-button,
 .action-button {
   border: 2px solid var(--bbb-ink);
   border-radius: var(--labaj-radius);
@@ -94,16 +87,6 @@ h1 {
   box-shadow: 4px 4px 0 var(--bbb-ink);
 }
 
-.icon-button {
-  width: var(--labaj-tap);
-  height: var(--labaj-tap);
-  display: inline-grid;
-  place-items: center;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-
-.icon-button:hover,
 .action-button:hover,
 .choice-button:hover {
   transform: translateY(-1px);
@@ -130,8 +113,9 @@ h1 {
   border-color: color-mix(in srgb, var(--bbb-teal), black 25%);
 }
 
-.score-pill--round {
+.score-pill--target {
   border-color: color-mix(in srgb, var(--bbb-gold), black 26%);
+  background: color-mix(in srgb, var(--bbb-gold), white 76%);
 }
 
 .score-pill--computer {
@@ -168,6 +152,38 @@ h1 {
   margin-top: 2px;
   font-size: clamp(1.8rem, 7vw, 2.65rem);
   line-height: 1;
+}
+
+.score-note {
+  display: block;
+  margin-top: 2px;
+  color: var(--bbb-ink);
+  font-size: clamp(0.68rem, 2.7vw, 0.78rem);
+  font-weight: 950;
+  line-height: 1.05;
+}
+
+.goal-panel {
+  display: grid;
+  gap: 2px;
+  border: 2px solid color-mix(in srgb, var(--bbb-gold), black 26%);
+  border-radius: var(--labaj-radius);
+  padding: 8px 10px;
+  background: color-mix(in srgb, var(--bbb-gold), white 64%);
+  color: var(--bbb-ink);
+  box-shadow: 4px 4px 0 var(--bbb-ink);
+}
+
+.goal-panel strong {
+  font-size: clamp(1rem, 4vw, 1.18rem);
+  line-height: 1.05;
+}
+
+.goal-panel span {
+  color: var(--labaj-muted);
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.15;
 }
 
 .stage {

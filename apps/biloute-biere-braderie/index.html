@@ -64,20 +64,6 @@
             mauvaise foi.
           </p>
         </div>
-        <div class="head-actions" aria-label="Actions rapides">
-          <button class="icon-button" type="button" id="rulesButton" title="Règles" aria-label="Règles">
-            ?
-          </button>
-          <button
-            class="icon-button"
-            type="button"
-            id="resetButton"
-            title="Nouvelle partie"
-            aria-label="Nouvelle partie"
-          >
-            ↺
-          </button>
-        </div>
       </header>
 
       <section class="score-row" aria-label="Score de la partie">
@@ -85,14 +71,20 @@
           <span class="score-label">Toi</span>
           <strong id="playerScore">0</strong>
         </div>
-        <div class="score-pill score-pill--round">
-          <span class="score-label">Manche</span>
-          <strong id="roundCount">1</strong>
+        <div class="score-pill score-pill--target">
+          <span class="score-label">Objectif</span>
+          <strong id="targetScore">5</strong>
+          <span class="score-note">Premier à 5</span>
         </div>
         <div class="score-pill score-pill--computer">
           <span class="score-label">Ordi</span>
           <strong id="computerScore">0</strong>
         </div>
+      </section>
+
+      <section class="goal-panel" aria-label="Objectif de la tournée">
+        <strong>Objectif : premier à 5 points.</strong>
+        <span>Gagne la tournée avant l'ordi.</span>
       </section>
 
       <section class="stage" aria-label="État de la manche">

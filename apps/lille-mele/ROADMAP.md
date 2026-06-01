@@ -9,6 +9,14 @@ Le brief est deja precis sur la mecanique. Le point critique du projet sera plut
 - une logique de jeu simple, testee et durable ;
 - une base de contenus sourcee, avec une trace claire des donnees utilisees.
 
+## Etat au 1er juin 2026
+
+Le socle technique n'est plus le principal risque. Le jeu est jouable, le validateur bloque deja les erreurs structurantes, et le corpus final contient 14 grilles dans `../../packages/corpus/lille-mele/puzzles.json`.
+
+Le point bloquant est editorial : seules 10 grilles sont marquees `reviewed`, soit 160 emplacements de cartes et 157 libelles uniques relus. La cible V1 reste 30 a 45 grilles pretes, donc il manque environ 20 a 35 grilles relues avant un lancement confortable.
+
+Le dossier `../../packages/corpus/documentation/processed/` reste utile comme base de verification, de tri et d'inspiration. Il ne doit plus etre considere comme un reservoir suffisant de contenu jouable direct : les familles encore exploitables sans doublon ont ete largement consommees. La prochaine priorite est donc de recevoir de nouveaux lots editoriaux, puis de les transformer en familles relues, sourcees et compatibles avec le validateur.
+
 ## Roadmap recommandee
 
 ### Phase 0 - Cadrage et socle legal
@@ -60,7 +68,8 @@ Livrables :
 - schemas JSON de reference pour `Puzzle` et `PuzzleGroup` ;
 - script de validation des grilles depuis la racine ;
 - registre des sources editorial mutualise dans `../../packages/corpus/sources.json` ;
-- 15 a 30 grilles initiales ;
+- 10 grilles relues integrees au 1er juin 2026 ;
+- objectif court terme : produire au moins 20 grilles relues supplementaires ;
 - conventions de ton et de difficulte.
 
 Definition of done :
@@ -68,7 +77,37 @@ Definition of done :
 - chaque grille contient 4 groupes de 4 items uniques ;
 - chaque categorie est justifiee par une source ou une verification editoriale ;
 - chaque puzzle a une anecdote courte et une difficulte equilibree ;
-- les erreurs de structure sont bloquees automatiquement.
+- les erreurs de structure sont bloquees automatiquement ;
+- les doublons, familles incompletes, sources invalides, items `avoid` et references religieuses sont bloques automatiquement.
+
+### Phase 2 bis - Relance editoriale par nouveaux lots
+
+Objectif : transformer les contenus fournis par le proprietaire du projet en grilles jouables sans perdre la tracabilite.
+
+Priorite immediate :
+
+- recevoir des lots de contenus locaux inedits ou relus : lieux, expressions, gastronomie, habitudes, histoire locale, commerces ou categories de vie quotidienne ;
+- identifier dans chaque lot les familles de 4 cartes reellement jouables ;
+- reformuler les indices et anecdotes sans copier les textes sources ;
+- rattacher chaque famille a des `sourceIds` existants ou creer les entrees source manquantes dans `../../packages/corpus/sources.json` ;
+- integrer uniquement les familles relues dans `../../packages/corpus/lille-mele/puzzles.json` avec `status: "reviewed"` ;
+- lancer `npm run check:corpus`, puis idealement `npm run check`, apres chaque integration.
+
+Format editorial souhaite pour les prochains lots :
+
+- theme ou intention de famille ;
+- 4 a 8 cartes candidates par famille, pour garder une marge de selection ;
+- source, URL, note personnelle ou preuve de verification pour chaque famille ;
+- variantes orthographiques ou risques de confusion connus ;
+- niveau pressenti : facile, moyen ou difficile ;
+- signalement explicite des elements a eviter.
+
+Contraintes non negociables :
+
+- aucune reference religieuse dans les grilles, mots, indices, anecdotes, reponses ou microcopies ;
+- aucun item marque `avoid` ou present dans `../../packages/corpus/documentation/processed/editorial/excluded-sensitive-items.json` ;
+- pas de copie de texte web non ouvert ou non reformule ;
+- pas de grille publiee sans sourceIds valides.
 
 ### Phase 3 - MVP public
 
@@ -363,7 +402,9 @@ Ces liens ne constituent pas encore un registre de sources complet, mais une pre
 2. Isoler progressivement les fonctions de resolution quand le gameplay grossit.
 3. Enrichir `../../packages/corpus/lille-mele/puzzles.json`.
 4. Maintenir le validateur de grilles et le registre de sources commun.
-5. Creer 15 a 30 grilles initiales sourcees.
-6. Ajouter localStorage, streak, partage et pages legales manquantes.
-7. Tester sur mobile, corriger l'accessibilite et deployer une beta.
-8. Enrichir ensuite avec archives, bonus et modes thematiques.
+5. Recevoir de nouveaux lots editoriaux du proprietaire du projet.
+6. Transformer ces lots en familles de 4 cartes, relues, sourcees et sans doublon.
+7. Produire au moins 20 grilles relues supplementaires avant la beta.
+8. Ajouter localStorage, streak, partage et pages legales manquantes.
+9. Tester sur mobile, corriger l'accessibilite et deployer une beta.
+10. Enrichir ensuite avec archives, bonus et modes thematiques.
