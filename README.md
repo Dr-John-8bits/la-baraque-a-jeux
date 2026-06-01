@@ -35,14 +35,15 @@ Le projet reste volontairement leger : applications statiques, pas de backend ob
 - `packages/corpus/` contient les donnees partagees, schemas et notes de validation.
 - `packages/ui/` contient les styles, tokens et composants communs.
 - `packages/game-utils/` contient les helpers communs : date du jour, partage, stockage local, rendu Markdown et chargement JSON.
-- `docs/blog/NEWS.md` alimente la page publique `blog.html`.
-- `scripts/` contiendra les validateurs et outils de generation.
+- `docs/blog/NEWS.md` alimente la page publique `blog.html` et se genere depuis `docs/blog/entries/`.
+- `scripts/` contient les validateurs et outils de generation.
 
 Chaque jeu garde son moteur propre, mais s'appuie sur les briques communes pour les fondations.
 
 ## Verification
 
 ```bash
+npm run build:blog
 npm run check
 ```
 

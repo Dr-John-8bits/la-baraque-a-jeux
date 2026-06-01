@@ -8,7 +8,7 @@ Version auditee : `26.05.31.5`
 
 Le prochain cap consiste à sortir du prototype éditorial court pour devenir un vrai jeu quotidien durable. Cela demande deux chantiers menés en parallèle :
 
-- **Technique** : fiabiliser le moteur, extraire les données, améliorer l'accessibilité, préparer GitHub Pages et les tests.
+- **Technique** : fiabiliser le moteur, enrichir les données extraites dans le corpus commun, améliorer l'accessibilité, préparer GitHub Pages et les tests.
 - **Éditorial** : construire un corpus vérifié, local, riche, équilibré et exploitable par le moteur.
 
 ## État actuel
@@ -24,7 +24,8 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 - Bonus final.
 - Statistiques locales.
 - Partage avec score et URL publique.
-- Footer et versionning.
+- Navigation globale commune.
+- Versioning public centralisé dans le blog mutualisé.
 
 ### Documentation
 
@@ -45,7 +46,7 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 - Application statique.
 - Pas de build.
 - Pas de framework.
-- Données intégrées dans `app.js`.
+- Données chargées depuis `../../packages/corpus/le-mot-a-biloute/words.json`.
 - Stockage dans `localStorage`.
 - Tests manuels et Playwright possibles via `window.render_game_to_text()`.
 
@@ -80,9 +81,9 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 ### Contenu
 
 - Corpus actuel trop court : 10 mots.
-- Pas encore de séparation entre données éditoriales et moteur.
-- Pas encore de validation automatique des mots.
-- Pas de sources documentaires associées aux mots.
+- Séparation moteur/corpus réalisée, mais le corpus reste à enrichir.
+- Validation automatique des mots en place dans le monorepo.
+- Sources documentaires partiellement associées aux mots.
 - Pas de gestion riche des variantes orthographiques.
 
 ### Gameplay
@@ -102,10 +103,10 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 
 ### Technique
 
-- `app.js` mélange données, moteur et rendu.
-- Le versionning est répété dans plusieurs fichiers.
-- Pas de tests automatisés stockés dans le repo.
-- Pas de validation de schéma pour les mots.
+- `app.js` mélange encore moteur et rendu.
+- Le versioning public est centralisé dans le blog, mais certaines constantes applicatives restent locales.
+- Les tests automatisés de smoke test sont stockés dans le repo.
+- Validation de schéma et de contenu en place pour les mots.
 - Pas de service worker/offline cache.
 
 ### Déploiement
@@ -121,12 +122,12 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 
 Objectif : pouvoir enrichir le jeu sans casser le prototype.
 
-- Extraire les mots vers `data/words.json`.
-- Ajouter un validateur de données.
-- Ajouter un petit script de test de corpus.
+- Maintenir les mots dans `../../packages/corpus/le-mot-a-biloute/words.json`.
+- Garder le validateur de données commun.
+- Garder le script de test de corpus commun.
 - Ajouter un mode de sélection de mot par date robuste.
-- Ajouter des tests Playwright versionnés dans le repo.
-- Centraliser la version dans un seul fichier ou une constante partagée.
+- Étendre les tests Playwright versionnés dans le repo.
+- Réduire progressivement les constantes de version locales quand elles deviennent redondantes.
 
 ## P1 — Rendre le jeu éditorialement durable
 
@@ -198,9 +199,9 @@ Le timer peut devenir un mode séparé plus tard, par exemple **Entre deux stati
 
 Responsable : Codex.
 
-- Séparer moteur et données.
-- Créer la structure `data/`.
-- Ajouter validation de corpus.
+- Maintenir la séparation moteur et corpus commun.
+- Enrichir `../../packages/corpus/le-mot-a-biloute/words.json`.
+- Étendre la validation de corpus.
 - Ajouter tests automatisés.
 - Améliorer accessibilité.
 - Préparer PWA/GitHub Pages.
@@ -230,9 +231,8 @@ Le fichier de référence pour ce chantier est [EDITORIAL_CORPUS_REQUEST.md](EDI
 
 ## Prochaine séquence recommandée
 
-1. Créer `data/words.json`.
-2. Écrire un validateur de corpus.
-3. Importer les 10 mots actuels dans ce format.
-4. Ajouter 20 mots fournis par le corpus éditorial.
-5. Tester longueurs, variantes et indices.
-6. Préparer une version `0.2` avec 30 mots propres.
+1. Ajouter 20 mots fournis par le corpus éditorial dans `../../packages/corpus/le-mot-a-biloute/words.json`.
+2. Associer les mots à des sources communes quand c'est possible.
+3. Tester longueurs, variantes et indices.
+4. Étendre les tests navigateur sur une partie complète.
+5. Préparer une version `0.2` avec 30 mots propres.

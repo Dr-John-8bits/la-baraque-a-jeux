@@ -25,15 +25,19 @@ Lire :
 
 ## Modifier le jeu
 
-Pour le prototype actuel, les changements applicatifs se font dans :
+Pour le prototype actuel, les changements applicatifs se font principalement dans :
 
 ```text
 index.html
+styles.css
+app.js
+../../packages/corpus/lille-mele/puzzles.json
+../../packages/corpus/sources.json
 ```
 
 Après modification :
 
-1. ouvrir le jeu localement ;
+1. lancer `npm run check` depuis la racine ;
 2. tester une sélection correcte ;
 3. tester une sélection incorrecte ;
 4. tester le cas "trois sur quatre" ;
@@ -49,7 +53,7 @@ Avant d'ajouter ou modifier une grille :
 - vérifier les 4 groupes ;
 - vérifier les ambiguïtés ;
 - vérifier l'absence de référence religieuse ;
-- ajouter les sources dans `SOURCES.md` ;
+- ajouter les sources dans `../../packages/corpus/sources.json` ;
 - rédiger des notes originales ;
 - faire relire la grille.
 

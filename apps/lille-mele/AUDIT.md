@@ -12,10 +12,11 @@ Le prochain vrai palier n'est pas seulement graphique. Il faut separer propremen
 
 ## Etat actuel
 
-- Application autonome dans `index.html`.
+- Application statique decoupee dans `index.html`, `styles.css` et `app.js`.
 - Pas de build, pas de dependance et pas de backend.
-- Version visible dans le footer.
-- Donnees prototype embarquees dans le JavaScript.
+- Navigation globale commune avec entree Blog.
+- Donnees prototype chargees depuis `../../packages/corpus/lille-mele/puzzles.json`.
+- Sources communes chargees depuis `../../packages/corpus/sources.json`.
 - Sauvegarde dans `localStorage`.
 - Documentation projet deja structuree avec README, FAQ, sources, roadmap, licences, confidentialite et guides internes.
 - Regle editoriale stricte : aucune reference religieuse dans le jeu.
@@ -100,9 +101,9 @@ La voix est deja dans la bonne zone : locale, complice, un peu joueuse. Il faudr
 
 - Le streak actuel ne verifie pas encore la consecutivite reelle des jours. Il doit stocker une cle de date ou un index de grille, puis incrementer uniquement si la grille precedente a ete jouee.
 - Le choix de grille repose sur `dayIndex % puzzles.length`, pratique pour le prototype, mais insuffisant pour un calendrier editorial public.
-- Les donnees sont dans `index.html`, ce qui va devenir difficile a maintenir des que le corpus grossira.
-- Il n'existe pas encore de validateur automatique pour detecter doublons, categories incompletes, items ambigus ou contenus interdits.
-- Les sources sont listees globalement, mais pas encore reliees a chaque item, groupe ou anecdote.
+- Les donnees sont separees du HTML, mais le corpus doit encore grossir et etre relu.
+- Un validateur automatique existe pour detecter doublons, categories incompletes et references de sources invalides.
+- Les sources sont structurees globalement et commencent a etre reliees aux puzzles ; le lien item par item reste a enrichir.
 
 ## Audit editorial
 
@@ -141,35 +142,34 @@ Construire un corpus brut beaucoup plus large que les grilles finales. Pour 30 g
 
 ### Court terme
 
-Le fichier unique est acceptable pour iterer vite. Il deviendra vite limite pour :
+Le decoupage statique actuel est adapte au monorepo et a GitHub Pages. Les prochaines limites a surveiller sont :
 
-- tester la logique de jeu ;
-- valider les grilles ;
-- maintenir le calendrier ;
-- relire le corpus ;
-- isoler le contenu proprietaire du code MIT.
+- isoler davantage la logique de jeu dans `app.js` ;
+- maintenir le calendrier editorial ;
+- relire le corpus a grande echelle ;
+- relier les contenus a des sources plus fines ;
+- isoler clairement le contenu proprietaire du code MIT.
 
 ### Architecture cible recommandee
 
-- `src/lib/gameLogic.ts` : validation des selections, erreurs, victoire, defaite.
-- `src/lib/datePuzzle.ts` : resolution de la grille du jour.
-- `src/lib/storage.ts` : sauvegarde, streak, migration.
-- `src/data/puzzles.json` : grilles publiees ou candidates.
-- `src/data/sources.json` : sources structurees.
-- `src/data/corpus.json` : banque d'items editoriaux.
-- `scripts/validate-puzzles.ts` : validation automatique du corpus.
-- `scripts/audit-content.ts` : detection de doublons, mots interdits et categories fragiles.
+- `apps/lille-mele/app.js` : logique, stockage, partage et rendu du jeu.
+- `apps/lille-mele/styles.css` : styles propres au gameplay.
+- `packages/corpus/lille-mele/puzzles.json` : grilles publiees ou candidates.
+- `packages/corpus/sources.json` : sources structurees communes.
+- `packages/corpus/schema/lille-mele-puzzles.schema.json` : contrat de donnees.
+- `packages/game-utils/` : helpers communs.
+- `scripts/validate-corpus.mjs` : validation automatique du corpus.
 
 ## Plan de travail parallele
 
 ### Piste technique Codex
 
-1. Stabiliser le MVP actuel dans `index.html`.
+1. Stabiliser le MVP actuel dans l'architecture statique decoupee.
 2. Corriger les points d'accessibilite simples.
 3. Ajouter une vraie cle de date pour les stats et streaks.
-4. Creer un validateur de grilles.
-5. Extraire les donnees prototype dans un fichier dedie.
-6. Convertir ensuite vers Vite + TypeScript quand le modele de donnees est stable.
+4. Enrichir le validateur de grilles commun.
+5. Enrichir les donnees prototype dans `../../packages/corpus/lille-mele/puzzles.json`.
+6. Envisager TypeScript seulement si le modele de donnees devient difficile a maintenir.
 7. Ajouter des tests unitaires sur la logique et des tests Playwright mobile.
 
 ### Piste editoriale Jean
@@ -186,20 +186,20 @@ Le fichier unique est acceptable pour iterer vite. Il deviendra vite limite pour
 ### Priorite 1
 
 - Creer le corpus documentaire structure.
-- Ajouter un validateur de grilles.
+- Maintenir le validateur de grilles.
 - Corriger le calcul du streak.
 - Renforcer accessibilite des boutons et safe area mobile.
 
 ### Priorite 2
 
-- Separarer donnees et logique.
+- Isoler davantage donnees et logique.
 - Ajouter un calendrier editorial.
 - Creer une page sources plus riche.
 - Formaliser le schema `Puzzle`.
 
 ### Priorite 3
 
-- Migrer vers Vite + TypeScript.
+- Envisager Vite/TypeScript seulement si le besoin devient concret.
 - Ajouter archives, PWA et statistiques locales enrichies.
 - Ajouter un outil interne de creation et verification de grilles.
 
@@ -217,4 +217,3 @@ Pour considerer Lille-Mêle complet en V1, il faut :
 - une protection juridique claire ;
 - aucune reference religieuse dans l'experience ;
 - une strategie de contenu pour produire les grilles suivantes.
-

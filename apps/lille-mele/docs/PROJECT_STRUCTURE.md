@@ -42,7 +42,7 @@
 - `EDITORIAL_CORPUS_REQUEST.md` : liste des contenus demandés pour construire le corpus.
 - `FAQ.md` : règles du jeu et réponses aux questions fréquentes.
 - `PRIVACY.md` : politique de confidentialité du MVP.
-- `SOURCES.md` : registre des sources publiques et éditoriales.
+- `SOURCES.md` : ancienne liste de travail des sources du jeu.
 - `ROADMAP.md` : vision produit, ressources nécessaires et trajectoire.
 - `LICENSE.md` : vue d'ensemble de la licence double.
 - `LICENSE-CODE.md` : licence MIT du code technique.

@@ -5,6 +5,14 @@
     "title": "Première rame",
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "La ligne 1 lilloise a été inaugurée en 1983 avec la technologie VAL. Pas mal pour une ville qui fait souvent semblant de ne pas se vanter.",
+    "status": "prototype",
+    "tags": ["transport", "quartiers", "gastronomie"],
+    "sourceIds": [
+      "ilevia-metro-ligne-1",
+      "ilevia-metro-ligne-2",
+      "ville-lille",
+      "hello-lille"
+    ],
     "bonus": {
       "question": "Le métro de Lille a été le premier métro automatique urbain au monde.",
       "answer": true,
@@ -67,6 +75,13 @@
     "title": "MEL mais pas seulement",
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "La MEL rassemble 95 communes. Lille-Mêle va donc avoir de quoi faire avant de tourner en rond.",
+    "status": "prototype",
+    "tags": ["metropole", "culture", "braderie"],
+    "sourceIds": [
+      "mel-territoire",
+      "ville-lille-braderie",
+      "hello-lille"
+    ],
     "bonus": {
       "question": "La Métropole Européenne de Lille compte 95 communes.",
       "answer": true,
@@ -129,6 +144,13 @@
     "title": "Grand'Place, grandes manœuvres",
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "La Grand'Place est devenue piétonne en 2026. Les pavés respirent, les mollets aussi.",
+    "status": "prototype",
+    "tags": ["patrimoine", "transport", "musees"],
+    "sourceIds": [
+      "ville-lille-grand-place",
+      "ilevia-metro-ligne-1",
+      "hello-lille"
+    ],
     "bonus": {
       "question": "La Vieille Bourse est composée de 24 maisons autour d'une cour.",
       "answer": true,
@@ -191,6 +213,14 @@
     "title": "Portes, quais et marchés",
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "Les noms de stations racontent souvent des portes, des hôpitaux, des quartiers et de vieux chemins. La carte parle, mais assez vite.",
+    "status": "prototype",
+    "tags": ["transport", "marches", "campus"],
+    "sourceIds": [
+      "ilevia-metro-ligne-2",
+      "gtfs-ilevia-data-gouv",
+      "ville-lille",
+      "hello-lille"
+    ],
     "bonus": {
       "question": "La ligne 2 relie Lomme à Tourcoing en moins d'une heure.",
       "answer": true,

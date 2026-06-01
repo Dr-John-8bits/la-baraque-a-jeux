@@ -4,6 +4,9 @@
     "answer": "DRACHE",
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ça peut ruiner une belle sortie sans demander la permission.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["vocabulaire", "meteo"],
     "hints": [
       "Météo bien du Nord, version généreuse.",
       "Grosse pluie en parler régional."
@@ -21,6 +24,9 @@
     "answer": "CHICON",
     "category": "Cuisine du Nord",
     "starterHint": "Il divise la table, surtout quand il assume son amertume.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["gastronomie", "vocabulaire"],
     "hints": [
       "On l'appelle plus souvent endive ailleurs.",
       "Légume du Nord, souvent servi au gratin."
@@ -38,6 +44,10 @@
     "answer": "FIVES",
     "category": "Quartier lillois",
     "starterHint": "Un nom court, mais pas une petite histoire.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["quartier", "lille"],
+    "sourceIds": ["ville-lille"],
     "hints": [
       "Quartier à l'est de Lille.",
       "Quartier lillois marqué par son histoire industrielle."
@@ -55,6 +65,10 @@
     "answer": "BEFFROI",
     "category": "Patrimoine",
     "starterHint": "Il donne envie de lever la tête.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["patrimoine", "architecture"],
+    "sourceIds": ["ville-lille"],
     "hints": [
       "Grande tour emblématique du Nord.",
       "Tour lilloise utile pour se sentir minuscule."
@@ -72,6 +86,9 @@
     "answer": "DUCASSE",
     "category": "Tradition populaire",
     "starterHint": "On y va rarement pour le silence.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["tradition", "fete"],
     "hints": [
       "Tradition populaire locale.",
       "Fête foraine du Nord, souvent bruyante et sucrée."
@@ -89,6 +106,10 @@
     "answer": "WAZEMMES",
     "category": "Quartier lillois",
     "starterHint": "Un matin calme peut vite y changer d'avis.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["quartier", "marche"],
+    "sourceIds": ["ville-lille"],
     "hints": [
       "Quartier lillois connu pour son marché.",
       "Quartier populaire au sud-ouest du centre de Lille."
@@ -106,6 +127,9 @@
     "answer": "QUINQUIN",
     "category": "Parler régional",
     "starterHint": "Un mot tendre qui a presque une mélodie.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "parler-regional"],
     "hints": [
       "Mot régional lié à l'enfance.",
       "Petit enfant dans le parler du Nord."
@@ -123,6 +147,10 @@
     "answer": "FRITES",
     "category": "Cuisine du Nord",
     "starterHint": "Elles peuvent voler la vedette au plat principal.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["gastronomie", "braderie"],
+    "sourceIds": ["ville-lille-braderie"],
     "hints": [
       "Elles accompagnent beaucoup de débats très sérieux.",
       "Pommes de terre dorées, reines de la baraque."
@@ -140,6 +168,10 @@
     "answer": "BRADERIE",
     "category": "Événement lillois",
     "starterHint": "Quand Lille devient un immense terrain de fouille.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["evenement", "lille"],
+    "sourceIds": ["ville-lille-braderie"],
     "hints": [
       "Grand événement populaire lillois.",
       "Les rues disparaissent sous les moules, les frites et les bonnes affaires."
@@ -157,6 +189,9 @@
     "answer": "BILOUTE",
     "category": "Parler régional",
     "starterHint": "Le jeu te tutoie presque avec ce mot.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["vocabulaire", "parler-regional"],
     "hints": [
       "Mot affectueux du Nord.",
       "Il est dans le titre du jeu."

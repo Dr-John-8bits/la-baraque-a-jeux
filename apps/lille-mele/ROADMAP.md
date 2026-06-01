@@ -19,7 +19,7 @@ Livrables :
 
 - régime de licence double ajouté au dépôt : code MIT, contenus et identité tous droits réservés ;
 - mention "application non officielle" prevue pour la page A propos ;
-- choix de stack confirme : Vite, React, TypeScript, CSS moderne ;
+- choix de stack confirme : webapp statique HTML, CSS et JavaScript, sans build obligatoire ;
 - modele de donnees des grilles valide ;
 - registre des sources cree avant la production massive de contenu.
 
@@ -35,7 +35,7 @@ Objectif : valider la sensation du jeu en conditions mobile.
 
 Livrables :
 
-- app Vite + React + TypeScript ;
+- webapp statique dans `apps/lille-mele/` ;
 - grille codee en dur ;
 - selection et deselection de 4 cartes ;
 - validation d'un groupe ;
@@ -47,8 +47,8 @@ Livrables :
 Definition of done :
 
 - une partie complete peut etre jouee dans le navigateur ;
-- la logique de jeu est separee de l'interface ;
-- les fonctions critiques sont testables sans React.
+- la logique critique reste identifiable et testable ;
+- les fonctions de rendu de test sont exposees pour Playwright.
 
 ### Phase 2 - Donnees et pipeline editorial
 
@@ -56,10 +56,10 @@ Objectif : passer d'une grille demo a un contenu quotidien maintenable.
 
 Livrables :
 
-- fichier `puzzles.json` ;
-- types TypeScript `Puzzle`, `PuzzleGroup`, `GameState`, `Attempt` ;
-- script de validation des grilles ;
-- registre des sources editorial ;
+- fichier `../../packages/corpus/lille-mele/puzzles.json` ;
+- schemas JSON de reference pour `Puzzle` et `PuzzleGroup` ;
+- script de validation des grilles depuis la racine ;
+- registre des sources editorial mutualise dans `../../packages/corpus/sources.json` ;
 - 15 a 30 grilles initiales ;
 - conventions de ton et de difficulte.
 
@@ -359,11 +359,11 @@ Ces liens ne constituent pas encore un registre de sources complet, mais une pre
 
 ## Ordre de construction conseille
 
-1. Initialiser le depot et le socle Vite/React/TypeScript.
-2. Coder la logique pure du jeu et ses tests.
-3. Construire une interface mobile-first avec une grille demo.
-4. Ajouter le chargement JSON et le validateur de grilles.
-5. Creer le registre des sources et 15 a 30 grilles initiales.
-6. Ajouter localStorage, streak, partage et pages legales.
+1. Stabiliser le socle statique deja publie dans le monorepo.
+2. Isoler progressivement les fonctions de resolution quand le gameplay grossit.
+3. Enrichir `../../packages/corpus/lille-mele/puzzles.json`.
+4. Maintenir le validateur de grilles et le registre de sources commun.
+5. Creer 15 a 30 grilles initiales sourcees.
+6. Ajouter localStorage, streak, partage et pages legales manquantes.
 7. Tester sur mobile, corriger l'accessibilite et deployer une beta.
 8. Enrichir ensuite avec archives, bonus et modes thematiques.

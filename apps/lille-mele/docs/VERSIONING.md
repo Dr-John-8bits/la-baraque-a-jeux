@@ -32,11 +32,12 @@ Incrémenter `i` à chaque série de modifications prête à être versionnée :
 
 ## Où mettre à jour la version ?
 
-Pour le prototype actuel :
+Pour le prototype actuel, la reference publique des nouveautes est mutualisee :
 
 - `app.js` : constante `APP_VERSION` ;
-- `docs/blog/NEWS.md` : entree publique des nouveautes ;
-- `CHANGELOG.md` : nouvelle entrée ;
+- `../../docs/blog/entries/` : entree publique source ;
+- `../../docs/blog/NEWS.md` : fichier genere par `npm run build:blog` ;
+- `CHANGELOG.md` : nouvelle entrée seulement si un detail propre au jeu doit rester dans l'historique local ;
 - `README.md` : version courante si nécessaire ;
 - `progress.md` : note d'itération.
 

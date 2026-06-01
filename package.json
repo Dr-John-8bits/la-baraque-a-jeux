@@ -8,7 +8,9 @@
     "packages/*"
   ],
   "scripts": {
-    "check": "npm run check:js && npm run check:corpus && npm run check:static",
+    "build:blog": "node scripts/build-news.mjs",
+    "check": "npm run check:js && npm run check:corpus && npm run check:blog && npm run check:static",
+    "check:blog": "node scripts/build-news.mjs --check",
     "check:corpus": "node scripts/validate-corpus.mjs",
     "check:js": "node scripts/check-js.mjs",
     "check:static": "node scripts/check-static-pages.mjs",

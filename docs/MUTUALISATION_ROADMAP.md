@@ -19,7 +19,10 @@ La mutualisation doit servir trois besoins :
 - Corpus des deux jeux extrait dans `packages/corpus`.
 - Helpers communs initialises dans `packages/game-utils`.
 - Lille-Mele decoupe en HTML, CSS, JavaScript et donnees.
-- Scripts de verification ajoutes pour JavaScript, corpus et pages statiques.
+- Blog genere depuis des entrees Markdown atomiques dans `docs/blog/entries`.
+- Schemas et validateur de corpus renforces avec identifiants stables, sources, tags, statuts et controles de doublons.
+- Scripts de verification ajoutes pour JavaScript, corpus, blog et pages statiques.
+- Documentation principale alignee sur l'architecture monorepo statique.
 
 ## Principes directeurs
 
@@ -70,13 +73,16 @@ La mutualisation doit servir trois besoins :
 │       └── components.css
 ├── docs/
 │   ├── blog/
+│   │   ├── entries/
+│   │   ├── README.md
 │   │   └── NEWS.md
 │   ├── editorial/
 │   └── MUTUALISATION_ROADMAP.md
 └── scripts/
+    ├── build-news.mjs
     ├── validate-corpus.mjs
-    ├── check-static-pages.mjs
-    └── build-news.mjs
+    ├── check-js.mjs
+    └── check-static-pages.mjs
 ```
 
 ## Phase 0 - Stabiliser l'existant
@@ -265,9 +271,12 @@ Objectif : reduire la duplication technique sans melanger les gameplays.
 
 Objectif : faire du blog public la vitrine des nouveautes, sans multiplier les changelogs contradictoires.
 
+Statut : socle realise. Les entrees sources vivent dans `docs/blog/entries/`, puis `scripts/build-news.mjs` genere `docs/blog/NEWS.md`.
+
 ### Actions
 
-- Decider si `docs/blog/NEWS.md` devient la source principale des nouveautes.
+- Faire de `docs/blog/NEWS.md` la sortie Markdown publique des nouveautes.
+- Garder `docs/blog/entries/` comme source editoriale versionnee.
 - Garder les changelogs de jeux seulement s'ils apportent un niveau de detail utile.
 - Ajouter une convention d'entree :
   - date ;
@@ -276,7 +285,7 @@ Objectif : faire du blog public la vitrine des nouveautes, sans multiplier les c
   - changements joueur ;
   - changements techniques ;
   - fichiers principaux.
-- Optionnel : creer `scripts/build-news.mjs` pour agreger plusieurs fichiers Markdown.
+- Creer `scripts/build-news.mjs` pour agreger plusieurs fichiers Markdown.
 
 ### Livrables
 
@@ -291,6 +300,8 @@ Objectif : faire du blog public la vitrine des nouveautes, sans multiplier les c
 ## Phase 8 - Nettoyer la documentation
 
 Objectif : distinguer la documentation commune de la documentation specifique aux jeux.
+
+Statut : nettoyage de maturite engage. Les docs principales de monorepo, corpus, scripts et blog refletent l'architecture actuelle ; les journaux historiques restent conserves comme archives de travail.
 
 ### Actions
 

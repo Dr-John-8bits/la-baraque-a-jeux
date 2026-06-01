@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Corpus Le mot a Biloute",
   "type": "array",
+  "minItems": 1,
   "items": {
     "type": "object",
     "required": [
@@ -13,31 +14,66 @@
       "acceptedAnswers",
       "bonus"
     ],
-    "additionalProperties": true,
+    "additionalProperties": false,
     "properties": {
-      "id": { "type": "string", "minLength": 1 },
-      "answer": { "type": "string", "minLength": 4, "maxLength": 12 },
-      "category": { "type": "string", "minLength": 1 },
-      "starterHint": { "type": "string", "minLength": 1 },
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "answer": {
+        "type": "string",
+        "pattern": "^[A-ZÀ-Ÿ-]{4,12}$"
+      },
+      "category": { "type": "string", "minLength": 1, "maxLength": 40 },
+      "starterHint": { "type": "string", "minLength": 1, "maxLength": 140 },
+      "difficulty": {
+        "type": "string",
+        "enum": ["easy", "medium", "hard"]
+      },
+      "status": {
+        "type": "string",
+        "enum": ["prototype", "reviewed", "published"]
+      },
+      "tags": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        }
+      },
+      "sourceIds": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        }
+      },
       "hints": {
         "type": "array",
         "minItems": 1,
-        "items": { "type": "string", "minLength": 1 }
+        "uniqueItems": true,
+        "items": { "type": "string", "minLength": 1, "maxLength": 140 }
       },
       "acceptedAnswers": {
         "type": "array",
         "minItems": 1,
-        "items": { "type": "string", "minLength": 1 }
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "pattern": "^[A-ZÀ-Ÿ-]{4,12}$"
+        }
       },
       "bonus": {
         "type": "object",
         "required": ["title", "text"],
+        "additionalProperties": false,
         "properties": {
-          "title": { "type": "string", "minLength": 1 },
-          "text": { "type": "string", "minLength": 1 }
+          "title": { "type": "string", "minLength": 1, "maxLength": 60 },
+          "text": { "type": "string", "minLength": 1, "maxLength": 280 }
         }
       }
     }
   }
 }
-

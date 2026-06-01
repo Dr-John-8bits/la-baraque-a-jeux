@@ -44,13 +44,13 @@ Avant chaque livraison ou commit important, vérifier :
 - `localStorage` reste compatible ou migre proprement.
 - `npm run check` passe depuis la racine.
 - La version est incrémentée.
-- Le changelog est mis à jour.
+- Le blog mutualisé est mis à jour via `docs/blog/entries/`.
 
 ## Documentation
 
 - `README.md` reste exact.
-- `CHANGELOG.md` contient l'entrée de version.
-- `SOURCES.md` contient les nouvelles sources.
+- `CHANGELOG.md` contient l'entrée de version si un historique local détaillé est utile.
+- `../../packages/corpus/sources.json` contient les nouvelles sources.
 - `FAQ.md` reflète les règles actuelles.
 - Les licences restent cohérentes.
 

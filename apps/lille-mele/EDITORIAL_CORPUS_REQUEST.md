@@ -325,5 +325,4 @@ corpus/
 └── rejetes.md
 ```
 
-Je pourrai ensuite transformer ce corpus en `puzzles.json`, ajouter un validateur et integrer les grilles dans l'application.
-
+Je pourrai ensuite transformer ce corpus en `../../packages/corpus/lille-mele/puzzles.json`, puis le faire passer dans le validateur commun avant integration dans l'application.

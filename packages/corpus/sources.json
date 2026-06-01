@@ -1,38 +1,83 @@
 [
   {
+    "id": "ilevia-metro-ligne-1",
     "label": "Ilévia — métro ligne 1",
-    "url": "https://www.ilevia.fr/cms/institutionnel/metro-ligne-1"
+    "url": "https://www.ilevia.fr/cms/institutionnel/metro-ligne-1",
+    "publisher": "Ilévia",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source de référence pour les informations publiques de la ligne 1."
   },
   {
+    "id": "ilevia-metro-ligne-2",
     "label": "Ilévia — métro ligne 2",
-    "url": "https://www.ilevia.fr/cms/institutionnel/metro-ligne-2"
+    "url": "https://www.ilevia.fr/cms/institutionnel/metro-ligne-2",
+    "publisher": "Ilévia",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source de référence pour les informations publiques de la ligne 2."
   },
   {
+    "id": "gtfs-ilevia-data-gouv",
     "label": "GTFS Ilévia — data.gouv.fr",
-    "url": "https://www.data.gouv.fr/datasets/ilevia-localisation-des-arrets-bus-metro-et-tram-gtfs"
+    "url": "https://www.data.gouv.fr/datasets/ilevia-localisation-des-arrets-bus-metro-et-tram-gtfs",
+    "publisher": "data.gouv.fr",
+    "license": "Licence Ouverte 2.0",
+    "consultedAt": "2026-06-01",
+    "notes": "Jeu de données utile pour vérifier les arrêts, lignes et libellés de transport."
   },
   {
+    "id": "ville-lille",
     "label": "Ville de Lille — quartiers et patrimoine",
-    "url": "https://www.lille.fr/"
+    "url": "https://www.lille.fr/",
+    "publisher": "Ville de Lille",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source générale pour les repères institutionnels et patrimoniaux lillois."
   },
   {
+    "id": "ville-lille-grand-place",
     "label": "Ville de Lille — Grand'Place",
-    "url": "https://www.lille.fr/Lille-Centre/Decouvrir-le-quartier/Culture-loisirs-et-patrimoine/La-Grand-Place"
+    "url": "https://www.lille.fr/Lille-Centre/Decouvrir-le-quartier/Culture-loisirs-et-patrimoine/La-Grand-Place",
+    "publisher": "Ville de Lille",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source ciblée pour la Grand'Place, la Vieille Bourse et les lieux proches."
   },
   {
+    "id": "ville-lille-braderie",
     "label": "Ville de Lille — Braderie",
-    "url": "https://www.lille.fr/Braderie-de-Lille/Histoire-de-la-Braderie2/La-Braderie-en-chiffres"
+    "url": "https://www.lille.fr/Braderie-de-Lille/Histoire-de-la-Braderie2/La-Braderie-en-chiffres",
+    "publisher": "Ville de Lille",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source ciblée pour les éléments liés à la Braderie de Lille."
   },
   {
+    "id": "mel-territoire",
     "label": "MEL — territoire métropolitain",
-    "url": "https://www.lillemetropole.fr/territoire-de-la-mel"
+    "url": "https://www.lillemetropole.fr/territoire-de-la-mel",
+    "publisher": "Métropole Européenne de Lille",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source de cadrage sur le territoire métropolitain et ses communes."
   },
   {
+    "id": "data-gouv-monuments-lille-hellemmes-lomme",
     "label": "data.gouv.fr — monuments historiques Lille-Hellemmes-Lomme",
-    "url": "https://www.data.gouv.fr/datasets/665fe7466b10a87cf49fc8fc/"
+    "url": "https://www.data.gouv.fr/datasets/665fe7466b10a87cf49fc8fc/",
+    "publisher": "data.gouv.fr",
+    "license": "Licence Ouverte 2.0",
+    "consultedAt": "2026-06-01",
+    "notes": "Jeu de données utile pour enrichir les futures questions patrimoniales."
   },
   {
+    "id": "hello-lille",
     "label": "Hello Lille — lieux culturels et tourisme",
-    "url": "https://hellolille.eu"
+    "url": "https://hellolille.eu",
+    "publisher": "Hello Lille",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source complémentaire pour les lieux touristiques et culturels de la métropole."
   }
 ]

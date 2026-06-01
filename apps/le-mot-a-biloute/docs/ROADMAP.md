@@ -15,8 +15,8 @@
 ## 0.2 — Contenu initial
 
 - Porter la liste à 30 mots.
-- Extraire les mots dans `data/words.json`.
-- Ajouter un validateur de corpus.
+- Enrichir `../../packages/corpus/le-mot-a-biloute/words.json`.
+- Maintenir le validateur de corpus commun.
 - Harmoniser les catégories.
 - Ajouter des variantes acceptées.
 - Relire les indices.
@@ -35,7 +35,7 @@
 - Améliorer l'accessibilité.
 - Ajouter une page d'aide intégrée.
 - Tester sur plusieurs tailles mobiles.
-- Ajouter tests automatisés versionnés dans le dépôt.
+- Étendre les tests navigateur automatisés depuis la racine du monorepo.
 
 ## 1.0 — Lancement public
 

@@ -34,7 +34,8 @@ Les dossiers de `packages/` contiennent les briques partagees consommees par les
 
 | Fichier | Role |
 | --- | --- |
-| `docs/blog/NEWS.md` | Source Markdown du blog public. |
+| `docs/blog/entries/` | Entrees sources du blog public, triees par nom de fichier. |
+| `docs/blog/NEWS.md` | Markdown genere et charge par `blog.html`. |
 
 ## Strategie technique
 
@@ -45,14 +46,14 @@ Phase actuelle :
 - charger les donnees depuis `packages/corpus` ;
 - partager les helpers via `packages/game-utils` ;
 - partager la charte via `packages/ui` ;
-- verifier le corpus, les pages statiques et le JavaScript avant publication.
+- verifier le corpus, le blog, les pages statiques et le JavaScript avant publication.
 
 Phase suivante :
 
-- enrichir le corpus avec des sources mieux structurees ;
-- affiner les validateurs ;
-- nettoyer les documentations historiques restantes ;
-- envisager ensuite Vite/TypeScript seulement si les schemas deviennent trop lourds a maintenir en JavaScript statique.
+- enrichir les jeux eux-memes en gardant le socle statique ;
+- produire davantage de contenu source ;
+- isoler progressivement la logique propre de chaque jeu si le gameplay grossit ;
+- envisager Vite/TypeScript seulement si les schemas deviennent trop lourds a maintenir en JavaScript statique.
 
 ## Deploiement
 
