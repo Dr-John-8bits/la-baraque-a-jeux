@@ -3,7 +3,7 @@ import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
-const APP_VERSION = "26.06.01.2";
+const APP_VERSION = "26.06.01.3";
 const GAME_URL = new URL(".", window.location.href).href;
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
@@ -12,6 +12,7 @@ const POINTS_PER_EXTRA_GUESS = 120;
 const POINTS_PER_EXTRA_HINT = 180;
 const HINT_LABEL = "Ch’ti coup d'pouce";
 const FREE_HINT_LABEL = `${HINT_LABEL} gratuit`;
+const RECOVERY_RESUME_LABEL = "Prendre du rab";
 
 const WORDS = await fetchJson("../../packages/corpus/le-mot-a-biloute/words.json");
 const GUESS_POLICY = await fetchJson("../../packages/corpus/le-mot-a-biloute/guess-policy.json");
@@ -67,9 +68,11 @@ const wordLength = word.answer.length;
 const acceptedAnswers = word.acceptedAnswers.map(normalize);
 const gameKey = `${STORAGE_PREFIX}:game:${todayId}:${word.id}`;
 const statsKey = `${STORAGE_PREFIX}:stats`;
+const loadedGame = loadGame();
+let showRecoveryResumeAction = loadedGame?.result === "recovery";
 let primaryActionMode = null;
 
-const state = loadGame() || {
+const state = loadedGame || {
   guesses: [],
   current: "",
   statuses: [],
@@ -308,12 +311,24 @@ function render() {
   els.tryCount.textContent = formatTryCount();
   els.scoreCount.textContent = String(calculateScore(state.result));
   els.streakCount.textContent = String(getStats().streak || 0);
-  els.hintButton.textContent = state.starterHintSeen ? HINT_LABEL : FREE_HINT_LABEL;
-  els.hintButton.disabled = !active;
+  if (shouldShowRecoveryResumeAction()) {
+    els.hintButton.textContent = RECOVERY_RESUME_LABEL;
+    els.hintButton.disabled = false;
+    els.hintButton.setAttribute("aria-label", RECOVERY_RESUME_LABEL);
+  } else {
+    const hintButtonLabel = state.starterHintSeen ? HINT_LABEL : FREE_HINT_LABEL;
+    els.hintButton.textContent = hintButtonLabel;
+    els.hintButton.disabled = !active;
+    els.hintButton.setAttribute("aria-label", hintButtonLabel);
+  }
   renderPrimaryAction();
   renderBoard();
   renderKeyboard();
   renderHintDialog();
+}
+
+function shouldShowRecoveryResumeAction() {
+  return showRecoveryResumeAction && state.result === "recovery";
 }
 
 function formatTryCount() {
@@ -382,6 +397,12 @@ function createHintCard(title, text) {
 }
 
 function openHintDialog() {
+  if (shouldShowRecoveryResumeAction()) {
+    showRecoveryResumeAction = false;
+    render();
+    showRecoveryDialog();
+    return;
+  }
   if (!isGameActive()) return;
   if (!state.starterHintSeen) {
     state.starterHintSeen = true;
@@ -503,6 +524,7 @@ function enterRecoveryMode() {
   state.shareText = "";
   state.recoveryStartedAt = state.recoveryStartedAt || Date.now();
   state.recoveryPromptSeen = true;
+  showRecoveryResumeAction = false;
   recordOfficialResult("lost");
   saveGame();
   render();
@@ -765,6 +787,7 @@ function renderGameToText() {
     current: state.current,
     result: state.result,
     recoveryMode: state.result === "recovery",
+    recoveryResumeAction: shouldShowRecoveryResumeAction(),
     officialResultRecorded: state.officialResultRecorded,
     validation: {
       mode: GUESS_POLICY.mode,

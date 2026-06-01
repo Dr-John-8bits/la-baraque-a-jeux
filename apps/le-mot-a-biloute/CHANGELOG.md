@@ -4,6 +4,11 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## 26.06.01.3
+
+- Ajout d'une action `Prendre du rab` quand une partie en Rab de Biloute est reprise après rechargement.
+- La modale de Rab utilise désormais le même libellé pour lancer la suite.
+
 ## 26.06.01.2
 
 - Ajout d'une politique de validation des propositions en mode découverte.

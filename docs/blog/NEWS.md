@@ -10,8 +10,8 @@ Cette première version met en ligne une base volontairement légère : des jeux
 
 Les deux premiers jeux disponibles sont :
 
-- **Le mot à Biloute**
-- **Lille-Mêle**
+- Le mot à Biloute
+- Lille-Mêle
 
 L'objectif est de proposer progressivement de nouvelles expériences courtes, accessibles sur mobile, autour de Lille, de sa métropole, de son patrimoine et de ses particularités locales.
 
