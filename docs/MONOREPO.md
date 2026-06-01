@@ -14,7 +14,8 @@ Regrouper le portail et les jeux dans un seul depot afin de mutualiser :
 
 | Dossier | Role |
 | --- | --- |
-| `apps/portail` | Point d'entree public de La baraque a jeux. |
+| `index.html` | Point d'entree public servi par GitHub Pages. |
+| `apps/portail` | Version applicative/source du portail. |
 | `apps/le-mot-a-biloute` | Jeu quotidien de mot local. |
 | `apps/lille-mele` | Jeu quotidien de familles et connexions locales. |
 
@@ -46,11 +47,10 @@ Phase suivante :
 
 ## Deploiement
 
-Le deploiement cible pourra copier :
+Le deploiement GitHub Pages peut servir directement la racine du depot :
 
-- `apps/portail` a la racine publique ;
-- `apps/le-mot-a-biloute` vers `/le-mot-a-biloute/` ;
-- `apps/lille-mele` vers `/lille-mele/`.
+- `index.html` affiche le portail ;
+- `apps/le-mot-a-biloute/` contient Le mot a Biloute ;
+- `apps/lille-mele/` contient Lille-Mele.
 
-Tant que ce pipeline n'est pas en place, les apps restent consultables directement dans leur dossier source.
-
+Un pipeline de deploiement plus propre pourra ensuite copier les jeux vers des URLs plus courtes, mais ce n'est pas necessaire pour publier la premiere version.

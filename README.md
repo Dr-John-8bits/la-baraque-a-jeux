@@ -36,7 +36,7 @@ npm run serve
 Puis ouvrir :
 
 ```text
-http://127.0.0.1:48391/apps/portail/
+http://127.0.0.1:48391/
 http://127.0.0.1:48391/apps/le-mot-a-biloute/
 http://127.0.0.1:48391/apps/lille-mele/
 ```
