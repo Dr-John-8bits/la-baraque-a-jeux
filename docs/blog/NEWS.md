@@ -21,6 +21,12 @@ Les nouveautés de La baraque à jeux, du portail et des jeux.
 - Création des dossiers `apps/`, `packages/`, `docs/` et `scripts/`.
 - Préparation des espaces partagés pour la charte graphique, le corpus et les outils.
 
+## 31 mai 2026 - Naissance de La Baraque à Jeux de Lille
+
+- Lancement du projet La Baraque à Jeux de Lille.
+- Création de l'idée fondatrice : un portail public pour rassembler des petits jeux mobiles, locaux et faciles à lancer.
+- Première direction posée autour de Lille, de la métropole, du patrimoine quotidien et du jeu rapide dans les transports.
+
 ## Le mot à Biloute - 26.05.31.5
 
 - Audit complet du jeu.
@@ -33,4 +39,3 @@ Les nouveautés de La baraque à jeux, du portail et des jeux.
 - Demande de corpus éditorial.
 - Documentation d'entrée mise à jour.
 - Licence et formulation de projet clarifiées.
-
