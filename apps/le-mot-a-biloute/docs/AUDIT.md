@@ -1,6 +1,6 @@
 # Audit complet du jeu
 
-Version auditée : `26.06.01.3`
+Version auditée : `26.06.01.4`
 
 ## Résumé
 

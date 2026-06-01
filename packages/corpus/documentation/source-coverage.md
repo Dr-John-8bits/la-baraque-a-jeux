@@ -18,3 +18,5 @@ Ce fichier clarifie ce qui a ete exploite pour le corpus documentaire au 2026-06
 | Depliant tourisme du Nord | PDF telecharge localement | Verification manuelle de reperes touristiques et culturels. |
 
 Les sources marquees "indexe seulement" ne sont pas copiees dans le depot, car leur licence ne permet pas de traiter leur contenu comme une base ouverte. Elles servent a verifier puis a reformuler.
+
+Au 2026-06-01, les sources web regionales ci-dessus alimentent une reserve de 103 graines reformulees dans `processed/editorial/regional-word-seeds.json`. Seuls 40 mots relus sont integres dans `packages/corpus/le-mot-a-biloute/words.json`.

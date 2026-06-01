@@ -75,6 +75,6 @@ https://exemple.fr/le-mot-a-biloute/
 
 ## Version
 
-Version courante : `26.06.01.3`.
+Version courante : `26.06.01.4`.
 
 Le format est `AA.MM.JJ.i`.

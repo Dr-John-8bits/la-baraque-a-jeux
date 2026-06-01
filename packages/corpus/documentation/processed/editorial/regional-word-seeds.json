@@ -2,7 +2,11 @@
   "generatedAt": "2026-06-01",
   "description": "Graines de vocabulaire regional et gastronomique. Elles indexent les sources web fournies sans recopier leurs textes.",
   "sourceIds": [
-    "regional-words-source-index"
+    "nord-escapade-dictionnaire-chti",
+    "comptoir-flandres-dictionnaire-chti",
+    "regional-words-source-index",
+    "banque-chtimi-gastronomie-jeux",
+    "comptoir-flandres-bieres-nord"
   ],
   "items": [
     {
@@ -16,6 +20,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -31,6 +37,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -46,6 +54,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -61,6 +71,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -76,6 +88,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -91,6 +105,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -106,6 +122,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -121,6 +139,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -136,6 +156,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -151,6 +173,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -166,6 +190,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -181,6 +207,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -196,6 +224,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -211,6 +241,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -226,6 +258,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -241,6 +275,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -256,6 +292,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -271,6 +309,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -286,6 +326,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -301,6 +343,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -316,6 +360,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -331,6 +377,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -346,6 +394,8 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
@@ -361,6 +411,1351 @@
       ],
       "validation": "needs-review",
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "acater",
+      "label": "Acater",
+      "answer": "ACATER",
+      "definition": "Acheter, dans une forme regionale courte et directe.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "ade",
+      "label": "Adé",
+      "answer": "ADE",
+      "definition": "Formule de depart ou d'au revoir.",
+      "themes": [
+        "vocabulaire",
+        "salutation"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "aheure",
+      "label": "Aheuré",
+      "answer": "AHEURE",
+      "definition": "Se dit de quelqu'un qui arrive a l'heure.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "amiteux",
+      "label": "Amiteux",
+      "answer": "AMITEUX",
+      "definition": "Qualifie une attitude amicale ou adoucie.",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "arluquer",
+      "label": "Arluquer",
+      "answer": "ARLUQUER",
+      "definition": "Regarder avec insistance ou curiosite.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "arniquer",
+      "label": "Arniquer",
+      "answer": "ARNIQUER",
+      "definition": "S'habiller ou se mettre en tenue.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "arprindre",
+      "label": "Arprindre",
+      "answer": "ARPRINDRE",
+      "definition": "Reprendre quelque chose, souvent dans une tournure familiere.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "arvoyure",
+      "label": "Arvoyure",
+      "answer": "ARVOYURE",
+      "definition": "Idée de revoir quelqu'un plus tard.",
+      "themes": [
+        "vocabulaire",
+        "salutation"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "badoule",
+      "label": "Badoule",
+      "answer": "BADOULE",
+      "definition": "Personne un peu extravagante ou qui part dans tous les sens.",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "bidoule",
+      "label": "Bidoule",
+      "answer": "BIDOULE",
+      "definition": "Boue ou salissure qui colle aux chaussures.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "bistoule",
+      "label": "Bistoule",
+      "answer": "BISTOULE",
+      "definition": "Cafe allonge d'un trait d'alcool fort.",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "bouque",
+      "label": "Bouque",
+      "answer": "BOUQUE",
+      "definition": "Bouche dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "braire",
+      "label": "Braire",
+      "answer": "BRAIRE",
+      "definition": "Pleurer dans le vocabulaire populaire regional.",
+      "themes": [
+        "vocabulaire",
+        "emotion"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "branque",
+      "label": "Branque",
+      "answer": "BRANQUE",
+      "definition": "Branche dans une forme regionale.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "buquer",
+      "label": "Buquer",
+      "answer": "BUQUER",
+      "definition": "Frapper ou toquer a une porte.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "cafouiller",
+      "label": "Cafouiller",
+      "answer": "CAFOUILLER",
+      "definition": "Se melanger ou fouiller sans ordre.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "camuche",
+      "label": "Camuche",
+      "answer": "CAMUCHE",
+      "definition": "Cachette ou endroit ou l'on dissimule quelque chose.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "canchon",
+      "label": "Canchon",
+      "answer": "CANCHON",
+      "definition": "Chanson dans une prononciation regionale.",
+      "themes": [
+        "vocabulaire",
+        "musique"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "carette",
+      "label": "Carette",
+      "answer": "CARETTE",
+      "definition": "Voiture dans le parler populaire.",
+      "themes": [
+        "vocabulaire",
+        "mobilite"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "catouilles",
+      "label": "Catouilles",
+      "answer": "CATOUILLES",
+      "definition": "Chatouilles dans une forme regionale.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "caudron",
+      "label": "Caudron",
+      "answer": "CAUDRON",
+      "definition": "Chaudron, souvent associe a la cuisine familiale.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "caveux",
+      "label": "Caveux",
+      "answer": "CAVEUX",
+      "definition": "Cheveux dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "cayelle",
+      "label": "Cayelle",
+      "answer": "CAYELLE",
+      "definition": "Chaise dans le vocabulaire regional.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "chuc",
+      "label": "Chuc",
+      "answer": "CHUC",
+      "definition": "Sucre dans le parler regional.",
+      "themes": [
+        "gastronomie",
+        "sucre"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "clinche",
+      "label": "Clinche",
+      "answer": "CLINCHE",
+      "definition": "Poignee de porte dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "couque",
+      "label": "Couque",
+      "answer": "COUQUE",
+      "definition": "Gateau ou brioche selon les usages locaux.",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "cumulet",
+      "label": "Cumulet",
+      "answer": "CUMULET",
+      "definition": "Pirouette ou roulade.",
+      "themes": [
+        "vocabulaire",
+        "jeu"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "dache",
+      "label": "Dache",
+      "answer": "DACHE",
+      "definition": "Petit clou de chaussure dans le vocabulaire regional.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "demucher",
+      "label": "Démucher",
+      "answer": "DEMUCHER",
+      "definition": "Faire sortir de la cachette ou retrouver ce qui etait cache.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "detouiller",
+      "label": "Détouiller",
+      "answer": "DETOUILLER",
+      "definition": "Denouer ou defaire ce qui est emmêle.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "esquinter",
+      "label": "Esquinter",
+      "answer": "ESQUINTER",
+      "definition": "Abimer ou fatiguer fortement.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "faime",
+      "label": "Faime",
+      "answer": "FAIME",
+      "definition": "Femme dans une forme regionale.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "ferale",
+      "label": "Férale",
+      "answer": "FERALE",
+      "definition": "Ferraille dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "fouffe",
+      "label": "Fouffe",
+      "answer": "FOUFFE",
+      "definition": "Vieux vetement, chiffon ou objet sans grande valeur.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "fraique",
+      "label": "Fraique",
+      "answer": "FRAIQUE",
+      "definition": "Mouille ou humide.",
+      "themes": [
+        "meteo",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "galafe",
+      "label": "Galafe",
+      "answer": "GALAFE",
+      "definition": "Personne qui mange beaucoup.",
+      "themes": [
+        "gastronomie",
+        "caractere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "gambe",
+      "label": "Gambe",
+      "answer": "GAMBE",
+      "definition": "Jambe dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "gambon",
+      "label": "Gambon",
+      "answer": "GAMBON",
+      "definition": "Jambon dans le vocabulaire regional.",
+      "themes": [
+        "gastronomie",
+        "aliment"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "gardin",
+      "label": "Gardin",
+      "answer": "GARDIN",
+      "definition": "Jardin dans une forme regionale.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "gatiau",
+      "label": "Gatiau",
+      "answer": "GATIAU",
+      "definition": "Gateau dans le parler regional.",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "gins",
+      "label": "Gins",
+      "answer": "GINS",
+      "definition": "Gens dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "gobe",
+      "label": "Gobe",
+      "answer": "GOBE",
+      "definition": "Tasse ou bol pour boire.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "gramint",
+      "label": "Gramint",
+      "answer": "GRAMINT",
+      "definition": "Beaucoup, en parler regional.",
+      "themes": [
+        "vocabulaire",
+        "quantite"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "greine",
+      "label": "Greine",
+      "answer": "GREINE",
+      "definition": "Grimace ou mine boudeuse.",
+      "themes": [
+        "vocabulaire",
+        "expression"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "guiffe",
+      "label": "Guiffe",
+      "answer": "GUIFFE",
+      "definition": "Bouche dans un registre familier.",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "jatte",
+      "label": "Jatte",
+      "answer": "JATTE",
+      "definition": "Verre, bol ou tasse selon l'usage.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "liquette",
+      "label": "Liquette",
+      "answer": "LIQUETTE",
+      "definition": "Petit morceau, souvent pour parler d'une portion.",
+      "themes": [
+        "gastronomie",
+        "quantite"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "longin",
+      "label": "Longin",
+      "answer": "LONGIN",
+      "definition": "Personne lente ou peu pressee.",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "mafler",
+      "label": "Mafler",
+      "answer": "MAFLER",
+      "definition": "Fatiguer ou user quelqu'un.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "malaju",
+      "label": "Malaju",
+      "answer": "MALAJU",
+      "definition": "De mauvais poil ou mal dispose.",
+      "themes": [
+        "vocabulaire",
+        "humeur"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "maronne",
+      "label": "Maronne",
+      "answer": "MARONNE",
+      "definition": "Pantalon ou culotte dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "vetement"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "martiau",
+      "label": "Martiau",
+      "answer": "MARTIAU",
+      "definition": "Marteau dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "mason",
+      "label": "Mason",
+      "answer": "MASON",
+      "definition": "Maison dans une forme regionale.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "mecant",
+      "label": "Mécant",
+      "answer": "MECANT",
+      "definition": "Mechant dans une prononciation regionale.",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "minger",
+      "label": "Minger",
+      "answer": "MINGER",
+      "definition": "Manger dans le parler regional.",
+      "themes": [
+        "gastronomie",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "mitan",
+      "label": "Mitan",
+      "answer": "MITAN",
+      "definition": "Milieu ou centre.",
+      "themes": [
+        "vocabulaire",
+        "position"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "mouque",
+      "label": "Mouque",
+      "answer": "MOUQUE",
+      "definition": "Mouche dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "muche",
+      "label": "Muche",
+      "answer": "MUCHE",
+      "definition": "Cachette ou chose cachee.",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "nactieux",
+      "label": "Nactieux",
+      "answer": "NACTIEUX",
+      "definition": "Meticuleux au point de devenir maniaque.",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "ortiaux",
+      "label": "Ortiaux",
+      "answer": "ORTIAUX",
+      "definition": "Orteils dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "panche",
+      "label": "Panche",
+      "answer": "PANCHE",
+      "definition": "Ventre dans le parler regional.",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "hochepot",
+      "label": "Hochepot",
+      "answer": "HOCHEPOT",
+      "definition": "Pot-au-feu regional servi dans le Nord.",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "rata",
+      "label": "Rata",
+      "answer": "RATA",
+      "definition": "Ragout ou plat simple du quotidien.",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "fricot",
+      "label": "Fricot",
+      "answer": "FRICOT",
+      "definition": "Plat cuisine simplement, souvent dans l'esprit du repas de tous les jours.",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "frichti",
+      "label": "Frichti",
+      "answer": "FRICHTI",
+      "definition": "Repas vite prepare ou petit plat sans ceremonie.",
+      "themes": [
+        "gastronomie",
+        "quotidien"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "raton",
+      "label": "Raton",
+      "answer": "RATON",
+      "definition": "Crepe a la levure dans la tradition culinaire regionale.",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "libouli",
+      "label": "Libouli",
+      "answer": "LIBOULI",
+      "definition": "Creme patissiere dans le vocabulaire culinaire regional.",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "crama",
+      "label": "Crama",
+      "answer": "CRAMA",
+      "definition": "Creme brulee dans le vocabulaire culinaire regional.",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "touquette",
+      "label": "Touquette",
+      "answer": "TOUQUETTE",
+      "definition": "Morceau de pain trempe dans la soupe ou mouillette.",
+      "themes": [
+        "gastronomie",
+        "pain"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "chicoree",
+      "label": "Chicorée",
+      "answer": "CHICOREE",
+      "definition": "Plante torrefiee et boisson tres associee aux habitudes du Nord.",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "cafiot",
+      "label": "Cafiot",
+      "answer": "CAFIOT",
+      "definition": "Cafe leger dans le vocabulaire regional.",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "marabou",
+      "label": "Marabou",
+      "answer": "MARABOU",
+      "definition": "Cafetiere dans le vocabulaire regional.",
+      "themes": [
+        "gastronomie",
+        "objet"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "chirloute",
+      "label": "Chirloute",
+      "answer": "CHIRLOUTE",
+      "definition": "Chicoree dans le parler regional.",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "galopin",
+      "label": "Galopin",
+      "answer": "GALOPIN",
+      "definition": "Petit verre de biere.",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "triboulette",
+      "label": "Triboulette",
+      "answer": "TRIBOULETTE",
+      "definition": "Grande bouteille ou contenant lie a la biere.",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "godale",
+      "label": "Godale",
+      "answer": "GODALE",
+      "definition": "Biere dans le vocabulaire regional.",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "broquin",
+      "label": "Broquin",
+      "answer": "BROQUIN",
+      "definition": "Ancien terme lie a un impot sur la biere.",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "betises",
+      "label": "Bêtises",
+      "answer": "BETISES",
+      "definition": "Confiseries associees a Cambrai et au Nord.",
+      "themes": [
+        "gastronomie",
+        "confiserie"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."
+    },
+    {
+      "id": "chuques",
+      "label": "Chuques",
+      "answer": "CHUQUES",
+      "definition": "Bonbons du Nord dans le vocabulaire regional.",
+      "themes": [
+        "gastronomie",
+        "confiserie"
+      ],
+      "validation": "needs-review",
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "notes": "Definition reformulee. Verifier l'orthographe et l'usage avant integration dans words.json."

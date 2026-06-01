@@ -203,5 +203,575 @@
       "title": "Biloute",
       "text": "Biloute est un mot populaire du Nord, souvent employé avec affection. Ici, il signe surtout l'esprit complice du jeu."
     }
+  },
+  {
+    "id": "estaminet",
+    "answer": "ESTAMINET",
+    "category": "Tradition du Nord",
+    "starterHint": "On y entre rarement pour compter les calories.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "tradition"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+    "hints": [
+      "Lieu convivial associé aux tables flamandes.",
+      "Café-restaurant traditionnel du Nord."
+    ],
+    "acceptedAnswers": ["ESTAMINET"],
+    "bonus": {
+      "title": "Estaminet",
+      "text": "L'estaminet garde l'idée d'une table simple, bavarde et généreuse, avec une couleur flamande très présente dans le Nord."
+    }
+  },
+  {
+    "id": "welsh",
+    "answer": "WELSH",
+    "category": "Cuisine du Nord",
+    "starterHint": "Il ne fait pas semblant avec le fromage.",
+    "difficulty": "easy",
+    "status": "reviewed",
+    "tags": ["gastronomie", "plat"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Plat de brasserie très présent dans les estaminets.",
+      "Fromage fondu, pain et bière : le trio annonce la couleur."
+    ],
+    "acceptedAnswers": ["WELSH"],
+    "bonus": {
+      "title": "Welsh",
+      "text": "Le welsh est devenu un marqueur gourmand des cartes du Nord, souvent servi très chaud et très généreux."
+    }
+  },
+  {
+    "id": "carbonnade",
+    "answer": "CARBONNADE",
+    "category": "Cuisine du Nord",
+    "starterHint": "Elle aime prendre son temps dans la marmite.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "plat"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Plat mijoté des Flandres.",
+      "Boeuf, sauce brune et patience : la table commence à sentir bon."
+    ],
+    "acceptedAnswers": ["CARBONNADE"],
+    "bonus": {
+      "title": "Carbonnade",
+      "text": "La carbonnade flamande fait partie des grands plats mijotés du Nord, avec une sauce sombre et une vraie patience de cuisine."
+    }
+  },
+  {
+    "id": "potjevleesch",
+    "answer": "POTJEVLEESCH",
+    "category": "Cuisine flamande",
+    "starterHint": "Son nom impressionne avant même l'assiette.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["gastronomie", "plat"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Spécialité froide d'origine flamande.",
+      "Viandes prises en gelée, souvent servies avec des frites."
+    ],
+    "acceptedAnswers": ["POTJEVLEESCH", "POTJEVLESCH"],
+    "bonus": {
+      "title": "Potjevleesch",
+      "text": "Potjevleesch signifie littéralement un petit pot de viandes. Le mot est presque un défi avant de devenir une spécialité."
+    }
+  },
+  {
+    "id": "merveilleux",
+    "answer": "MERVEILLEUX",
+    "category": "Douceur du Nord",
+    "starterHint": "Il porte un nom qui ne doute pas de lui.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "dessert"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Dessert très associé aux vitrines gourmandes du Nord.",
+      "Meringue, crème et copeaux : il joue la légèreté en costume chic."
+    ],
+    "acceptedAnswers": ["MERVEILLEUX"],
+    "bonus": {
+      "title": "Merveilleux",
+      "text": "Le merveilleux associe meringue et crème dans un dessert aérien, devenu une douceur très repérable dans la région."
+    }
+  },
+  {
+    "id": "maroilles",
+    "answer": "MAROILLES",
+    "category": "Fromage du Nord",
+    "starterHint": "Il annonce parfois son arrivée avant d'être servi.",
+    "difficulty": "easy",
+    "status": "reviewed",
+    "tags": ["gastronomie", "fromage"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Fromage au caractère très net.",
+      "Il peut finir en tarte et ne passe pas inaperçu."
+    ],
+    "acceptedAnswers": ["MAROILLES"],
+    "bonus": {
+      "title": "Maroilles",
+      "text": "Le maroilles est l'un des fromages les plus identifiables du Nord : du caractère, du parfum, et pas beaucoup de discrétion."
+    }
+  },
+  {
+    "id": "cassonade",
+    "answer": "CASSONADE",
+    "category": "Douceur du Nord",
+    "starterHint": "Elle colore les desserts sans faire de bruit.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "sucre"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Sucre brun très présent dans les recettes régionales.",
+      "On la croise volontiers avec les tartes, les crêpes ou le pain perdu."
+    ],
+    "acceptedAnswers": ["CASSONADE"],
+    "bonus": {
+      "title": "Cassonade",
+      "text": "La cassonade apporte ce goût brun et chaleureux qui colle bien aux desserts du Nord et aux souvenirs de goûter."
+    }
+  },
+  {
+    "id": "speculoos",
+    "answer": "SPECULOOS",
+    "category": "Biscuit du Nord",
+    "starterHint": "Il sent l'épice et le café pas loin.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "dessert"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Biscuit épicé très présent dans le Nord et la Belgique voisine.",
+      "Petit rectangle brun qu'on trempe volontiers dans une tasse."
+    ],
+    "acceptedAnswers": ["SPECULOOS", "SPECULOS"],
+    "bonus": {
+      "title": "Speculoos",
+      "text": "Le speculoos fait partie de ces biscuits qui installent tout de suite une ambiance de café, d'épices et de table du Nord."
+    }
+  },
+  {
+    "id": "babelutte",
+    "answer": "BABELUTTE",
+    "category": "Confiserie du Nord",
+    "starterHint": "Elle promet plus de mâche que de conversation.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["gastronomie", "confiserie"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+    "hints": [
+      "Confiserie dure au caramel.",
+      "Bonbon du Nord qu'il vaut mieux ne pas croquer trop vite."
+    ],
+    "acceptedAnswers": ["BABELUTTE"],
+    "bonus": {
+      "title": "Babelutte",
+      "text": "La babelutte est une confiserie au caramel qui prend son temps. C'est presque une leçon de patience sucrée."
+    }
+  },
+  {
+    "id": "flamiche",
+    "answer": "FLAMICHE",
+    "category": "Cuisine du Nord",
+    "starterHint": "Elle arrive en part, mais pense comme un plat.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "plat"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Tarte salée régionale.",
+      "Elle peut prendre le poireau ou le fromage comme terrain de jeu."
+    ],
+    "acceptedAnswers": ["FLAMICHE"],
+    "bonus": {
+      "title": "Flamiche",
+      "text": "La flamiche est une tarte salée régionale, simple en apparence, mais capable de tenir sérieusement à table."
+    }
+  },
+  {
+    "id": "waterzoi",
+    "answer": "WATERZOI",
+    "category": "Cuisine flamande",
+    "starterHint": "Son nom garde les pieds dans les Flandres.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["gastronomie", "plat"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Plat mijoté d'inspiration flamande.",
+      "On le prépare autour d'une sauce douce, avec poisson ou volaille selon les versions."
+    ],
+    "acceptedAnswers": ["WATERZOI", "WATERZOOI"],
+    "bonus": {
+      "title": "Waterzoï",
+      "text": "Le waterzoï rappelle les liens culinaires entre le Nord et les Flandres, avec un plat mijoté plus doux que son nom ne le laisse croire."
+    }
+  },
+  {
+    "id": "genievre",
+    "answer": "GENIEVRE",
+    "category": "Boisson du Nord",
+    "starterHint": "Il n'a pas besoin d'un grand verre pour se faire remarquer.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "boisson"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord"],
+    "hints": [
+      "Eau-de-vie traditionnelle du Nord.",
+      "Son nom évoque aussi une baie aromatique."
+    ],
+    "acceptedAnswers": ["GENIEVRE"],
+    "bonus": {
+      "title": "Genièvre",
+      "text": "Le genièvre fait partie des alcools traditionnels associés au Nord, avec une présence plus historique que tapageuse."
+    }
+  },
+  {
+    "id": "houblon",
+    "answer": "HOUBLON",
+    "category": "Tradition brassicole",
+    "starterHint": "Il pousse discrètement derrière beaucoup de mousses.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "biere"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord"],
+    "hints": [
+      "Plante associée à la fabrication de la bière.",
+      "Elle apporte amertume et parfum aux brassins."
+    ],
+    "acceptedAnswers": ["HOUBLON"],
+    "bonus": {
+      "title": "Houblon",
+      "text": "Le houblon donne du relief à la bière. Dans le Nord, il colle naturellement au paysage brassicole."
+    }
+  },
+  {
+    "id": "hochepot",
+    "answer": "HOCHEPOT",
+    "category": "Cuisine du Nord",
+    "starterHint": "Il préfère les grandes tablées aux petites assiettes.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["gastronomie", "plat"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Plat populaire proche du pot-au-feu.",
+      "Viandes et légumes y mijotent dans une version bien régionale."
+    ],
+    "acceptedAnswers": ["HOCHEPOT"],
+    "bonus": {
+      "title": "Hochepot",
+      "text": "Le hochepot est un plat de mijotage et de générosité, de ceux qui occupent la table plus qu'ils ne décorent l'assiette."
+    }
+  },
+  {
+    "id": "libouli",
+    "answer": "LIBOULI",
+    "category": "Douceur du Nord",
+    "starterHint": "Elle aime se cacher dans les tartes.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["gastronomie", "dessert"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Mot régional lié à une crème de pâtisserie.",
+      "On pense notamment à la tarte au libouli."
+    ],
+    "acceptedAnswers": ["LIBOULI"],
+    "bonus": {
+      "title": "Libouli",
+      "text": "Le libouli renvoie à une crème pâtissière régionale, souvent associée à une tarte simple et très réconfortante."
+    }
+  },
+  {
+    "id": "chicoree",
+    "answer": "CHICOREE",
+    "category": "Habitude du Nord",
+    "starterHint": "Elle colore la tasse avant même le premier sourire.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "boisson"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+    "hints": [
+      "Boisson torréfiée très associée au Nord.",
+      "On peut la mélanger au café ou la boire seule."
+    ],
+    "acceptedAnswers": ["CHICOREE"],
+    "bonus": {
+      "title": "Chicorée",
+      "text": "La chicorée fait partie des goûts familiers du Nord : une amertume douce, une couleur de café, et beaucoup de souvenirs de cuisine."
+    }
+  },
+  {
+    "id": "cayelle",
+    "answer": "CAYELLE",
+    "category": "Parler régional",
+    "starterHint": "Elle n'est pas là pour courir.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "objet"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti"],
+    "hints": [
+      "Mot ch'ti pour un objet de la maison.",
+      "On s'assoit dessus."
+    ],
+    "acceptedAnswers": ["CAYELLE"],
+    "bonus": {
+      "title": "Cayelle",
+      "text": "La cayelle, c'est la chaise. Un mot court, pratique, et parfait pour une pause bien méritée."
+    }
+  },
+  {
+    "id": "clinche",
+    "answer": "CLINCHE",
+    "category": "Parler régional",
+    "starterHint": "Elle a souvent la main sur la sortie.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "objet"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti"],
+    "hints": [
+      "Objet très banal, mais avec un joli nom régional.",
+      "Poignée de porte en parler du Nord."
+    ],
+    "acceptedAnswers": ["CLINCHE"],
+    "bonus": {
+      "title": "Clinche",
+      "text": "La clinche désigne la poignée de porte. C'est le genre de mot qui rend même une entrée de cuisine plus locale."
+    }
+  },
+  {
+    "id": "arluquer",
+    "answer": "ARLUQUER",
+    "category": "Parler régional",
+    "starterHint": "Ça commence par les yeux, pas par les mains.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "quotidien"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti"],
+    "hints": [
+      "Verbe régional lié au regard.",
+      "Regarder avec curiosité, parfois un peu trop longtemps."
+    ],
+    "acceptedAnswers": ["ARLUQUER"],
+    "bonus": {
+      "title": "Arluquer",
+      "text": "Arluquer, c'est regarder. Le mot a ce petit air de coin de table où l'on observe sans trop avoir l'air d'y toucher."
+    }
+  },
+  {
+    "id": "acater",
+    "answer": "ACATER",
+    "category": "Parler régional",
+    "starterHint": "Il peut finir avec un panier plein.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "quotidien"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti"],
+    "hints": [
+      "Verbe régional du quotidien.",
+      "Il signifie acheter."
+    ],
+    "acceptedAnswers": ["ACATER"],
+    "bonus": {
+      "title": "Acater",
+      "text": "Acater, c'est acheter. Un mot parfait pour les marchés, les braderies et les petites courses du coin."
+    }
+  },
+  {
+    "id": "arvoyure",
+    "answer": "ARVOYURE",
+    "category": "Parler régional",
+    "starterHint": "Il arrive au moment où l'on se quitte.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "salutation"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti"],
+    "hints": [
+      "Mot régional lié au fait de se revoir.",
+      "On le lance comme une promesse de retour."
+    ],
+    "acceptedAnswers": ["ARVOYURE"],
+    "bonus": {
+      "title": "Arvoyure",
+      "text": "L'arvoyure garde l'idée du revoir. Ce n'est pas vraiment un adieu, plutôt un clin d'oeil pour plus tard."
+    }
+  },
+  {
+    "id": "bistoule",
+    "answer": "BISTOULE",
+    "category": "Habitude du Nord",
+    "starterHint": "Le café y perd un peu son innocence.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["gastronomie", "boisson"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Boisson chaude avec un supplément de caractère.",
+      "Café dans lequel on ajoute un trait d'alcool."
+    ],
+    "acceptedAnswers": ["BISTOULE"],
+    "bonus": {
+      "title": "Bistoule",
+      "text": "La bistoule, c'est le café qui a invité un alcool fort. À manier comme une anecdote, pas comme une recommandation."
+    }
+  },
+  {
+    "id": "bouque",
+    "answer": "BOUQUE",
+    "category": "Parler régional",
+    "starterHint": "Elle parle parfois avant de réfléchir.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "corps"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti"],
+    "hints": [
+      "Mot régional pour une partie du visage.",
+      "C'est la bouche."
+    ],
+    "acceptedAnswers": ["BOUQUE"],
+    "bonus": {
+      "title": "Bouque",
+      "text": "La bouque, c'est la bouche. Court, sonore, et très pratique pour parler de ce qui parle."
+    }
+  },
+  {
+    "id": "braire",
+    "answer": "BRAIRE",
+    "category": "Parler régional",
+    "starterHint": "Il sort quand l'émotion déborde.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "emotion"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti"],
+    "hints": [
+      "Verbe régional souvent lié aux larmes.",
+      "Dans le Nord, on l'utilise pour pleurer."
+    ],
+    "acceptedAnswers": ["BRAIRE"],
+    "bonus": {
+      "title": "Braire",
+      "text": "Braire, c'est pleurer. Le mot a gardé une puissance populaire qui colle bien aux grandes émotions."
+    }
+  },
+  {
+    "id": "gobe",
+    "answer": "GOBE",
+    "category": "Parler régional",
+    "starterHint": "Il peut tenir entre deux mains le matin.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "objet"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Petit objet de table ou de cuisine.",
+      "Tasse ou bol dans le vocabulaire régional."
+    ],
+    "acceptedAnswers": ["GOBE"],
+    "bonus": {
+      "title": "Gobe",
+      "text": "Un gobe peut désigner une tasse ou un bol. C'est un mot de cuisine simple, celui des petits déjeuners et des cafés."
+    }
+  },
+  {
+    "id": "gramint",
+    "answer": "GRAMINT",
+    "category": "Parler régional",
+    "starterHint": "Il en met une bonne quantité.",
+    "difficulty": "hard",
+    "status": "reviewed",
+    "tags": ["vocabulaire", "quantite"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti"],
+    "hints": [
+      "Adverbe régional de quantité.",
+      "Il veut dire beaucoup."
+    ],
+    "acceptedAnswers": ["GRAMINT"],
+    "bonus": {
+      "title": "Gramint",
+      "text": "Gramint veut dire beaucoup. Et dans un jeu de mots, beaucoup de caractère, ça ne se refuse pas."
+    }
+  },
+  {
+    "id": "chuc",
+    "answer": "CHUC",
+    "category": "Parler gourmand",
+    "starterHint": "Il sait rendre les tartes plus dangereuses.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "sucre"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Mot régional très court pour une douceur de base.",
+      "C'est le sucre."
+    ],
+    "acceptedAnswers": ["CHUC"],
+    "bonus": {
+      "title": "Chuc",
+      "text": "Chuc, c'est le sucre. Le mot est petit, mais il peut faire de gros dégâts dans une tarte."
+    }
+  },
+  {
+    "id": "couque",
+    "answer": "COUQUE",
+    "category": "Parler gourmand",
+    "starterHint": "Elle ne promet pas forcément de laisser des miettes.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "dessert"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "banque-chtimi-gastronomie-jeux"],
+    "hints": [
+      "Mot régional autour du sucré.",
+      "Il peut désigner un gâteau ou une brioche."
+    ],
+    "acceptedAnswers": ["COUQUE"],
+    "bonus": {
+      "title": "Couque",
+      "text": "La couque navigue entre gâteau et brioche selon les usages. Une affaire sérieuse pour les pauses sucrées."
+    }
+  },
+  {
+    "id": "chuques",
+    "answer": "CHUQUES",
+    "category": "Confiserie du Nord",
+    "starterHint": "Elles se gardent facilement dans une poche.",
+    "difficulty": "medium",
+    "status": "reviewed",
+    "tags": ["gastronomie", "confiserie"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+    "hints": [
+      "Mot régional pour des bonbons.",
+      "Petites douceurs du Nord à laisser fondre."
+    ],
+    "acceptedAnswers": ["CHUQUES"],
+    "bonus": {
+      "title": "Chuques",
+      "text": "Les chuques, ce sont les bonbons. Un mot qui sonne déjà comme une poignée de sucre au fond d'un sachet."
+    }
+  },
+  {
+    "id": "betises",
+    "answer": "BETISES",
+    "category": "Confiserie du Nord",
+    "starterHint": "Celles-ci se mangent au lieu de se faire gronder.",
+    "difficulty": "easy",
+    "status": "reviewed",
+    "tags": ["gastronomie", "confiserie"],
+    "sourceIds": ["comptoir-flandres-dictionnaire-chti"],
+    "hints": [
+      "Confiserie associée à Cambrai.",
+      "Bonbon du Nord au nom faussement coupable."
+    ],
+    "acceptedAnswers": ["BETISES"],
+    "bonus": {
+      "title": "Bêtises",
+      "text": "Les bêtises de Cambrai prouvent qu'une erreur peut parfois finir en bonbon. Voilà une morale plutôt arrangeante."
+    }
   }
 ]

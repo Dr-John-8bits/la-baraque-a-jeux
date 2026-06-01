@@ -4,6 +4,12 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## 26.06.01.4
+
+- Ajout de sources web explicites pour vocabulaire ch'ti, gastronomie et bières du Nord.
+- Extension de la réserve documentaire régionale à 103 graines reformulées.
+- Intégration d'un premier lot relu de 40 mots jouables pour Le mot à Biloute.
+
 ## 26.06.01.3
 
 - Ajout d'une action `Prendre du rab` quand une partie en Rab de Biloute est reprise après rechargement.

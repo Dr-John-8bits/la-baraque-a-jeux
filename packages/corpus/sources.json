@@ -180,9 +180,45 @@
     "notes": "Petit jeu de données mobilité douce, utile comme repère local complémentaire."
   },
   {
+    "id": "nord-escapade-dictionnaire-chti",
+    "label": "Nord Escapade — dictionnaire du ch'ti",
+    "url": "https://nord-escapade.com/le-dictionnaire-du-chti/",
+    "publisher": "Nord Escapade",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source de vérification pour vocabulaire ch'ti et parler régional, à reformuler avant usage."
+  },
+  {
+    "id": "banque-chtimi-gastronomie-jeux",
+    "label": "Banque Chtimi — gastronomie et jeux",
+    "url": "https://banquechtimi.blog4ever.com/articles/gastronomie-et-jeux",
+    "publisher": "Banque Chtimi",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source de vérification pour gastronomie, objets du quotidien et vocabulaire régional, à reformuler avant usage."
+  },
+  {
+    "id": "comptoir-flandres-dictionnaire-chti",
+    "label": "Comptoir des Flandres — expressions ch'ti",
+    "url": "https://www.comptoirdesflandres.com/expressions-chti-decouvrez-notre-dictionnaire-complet/",
+    "publisher": "Comptoir des Flandres",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source de vérification pour expressions et prononciation ch'ti, sans reprise textuelle."
+  },
+  {
+    "id": "comptoir-flandres-bieres-nord",
+    "label": "Comptoir des Flandres — bières du Nord",
+    "url": "https://www.comptoirdesflandres.com/categorie-produit/bieres-du-nord/",
+    "publisher": "Comptoir des Flandres",
+    "license": "Consultation publique",
+    "consultedAt": "2026-06-01",
+    "notes": "Source de vérification pour vocabulaire brassicole et produits régionaux, sans reprendre les fiches produits."
+  },
+  {
     "id": "regional-words-source-index",
     "label": "Index de sources web — vocabulaire, gastronomie et expressions du Nord",
-    "url": "https://nord-escapade.com/le-dictionnaire-du-chti/",
+    "url": "https://france3-regions.franceinfo.fr/hauts-de-france/water-foufelle-petit-pain-laisse-porte-contre-110-mots-expressions-qu-on-n-entend-que-nord-1642366.html",
     "publisher": "Sources web publiques diverses",
     "license": "Consultation publique",
     "consultedAt": "2026-06-01",

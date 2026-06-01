@@ -70641,6 +70641,158 @@
       "editorialStatus": "candidate"
     },
     {
+      "id": "regional-word-acater",
+      "label": "Acater",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Acheter, dans une forme regionale courte et directe.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-ade",
+      "label": "Adé",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "salutation"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Formule de depart ou d'au revoir.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-aheure",
+      "label": "Aheuré",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Se dit de quelqu'un qui arrive a l'heure.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-amiteux",
+      "label": "Amiteux",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Qualifie une attitude amicale ou adoucie.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-arluquer",
+      "label": "Arluquer",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Regarder avec insistance ou curiosite.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-arniquer",
+      "label": "Arniquer",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "S'habiller ou se mettre en tenue.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-arprindre",
+      "label": "Arprindre",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Reprendre quelque chose, souvent dans une tournure familiere.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-arvoyure",
+      "label": "Arvoyure",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "salutation"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Idée de revoir quelqu'un plus tard.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
       "id": "regional-word-babelutte",
       "label": "Babelutte",
       "type": "regional-word",
@@ -70650,9 +70802,30 @@
         "confiserie"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Confiserie dure au caramel connue dans le Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-badoule",
+      "label": "Badoule",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Personne un peu extravagante ou qui part dans tous les sens.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70667,6 +70840,8 @@
         "marche"
       ],
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Stand ou petite installation de vente, frequent dans le vocabulaire de fete ou de marche.",
@@ -70684,9 +70859,49 @@
         "architecture"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Tour civile emblematique de nombreuses villes du Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-betises",
+      "label": "Bêtises",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "confiserie"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Confiseries associees a Cambrai et au Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-bidoule",
+      "label": "Bidoule",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Boue ou salissure qui colle aux chaussures.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70701,9 +70916,49 @@
         "parler-regional"
       ],
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Mot affectueux du parler populaire du Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-bistoule",
+      "label": "Bistoule",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Cafe allonge d'un trait d'alcool fort.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-bouque",
+      "label": "Bouque",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Bouche dans le parler regional.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70718,9 +70973,49 @@
         "evenement"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Grande vente populaire, particulierement associee a Lille.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-braire",
+      "label": "Braire",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "emotion"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Pleurer dans le vocabulaire populaire regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-branque",
+      "label": "Branque",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Branche dans une forme regionale.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70735,9 +71030,125 @@
         "biere"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
         "regional-words-source-index"
       ],
       "verifiedFact": "Cuvee ou production de biere, utile pour un angle brassicole non marque.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-broquin",
+      "label": "Broquin",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Ancien terme lie a un impot sur la biere.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-buquer",
+      "label": "Buquer",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Frapper ou toquer a une porte.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-cafiot",
+      "label": "Cafiot",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Cafe leger dans le vocabulaire regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-cafouiller",
+      "label": "Cafouiller",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Se melanger ou fouiller sans ordre.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-camuche",
+      "label": "Camuche",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Cachette ou endroit ou l'on dissimule quelque chose.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-canchon",
+      "label": "Canchon",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "musique"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Chanson dans une prononciation regionale.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70752,9 +71163,30 @@
         "plat"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Plat mijote au boeuf, souvent associe aux tables du Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-carette",
+      "label": "Carette",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "mobilite"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Voiture dans le parler populaire.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70769,6 +71201,8 @@
         "fete"
       ],
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Fete populaire majeure dans plusieurs villes du Nord.",
@@ -70786,9 +71220,87 @@
         "sucre"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Sucre roux utilise dans plusieurs douceurs regionales.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-catouilles",
+      "label": "Catouilles",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Chatouilles dans une forme regionale.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-caudron",
+      "label": "Caudron",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Chaudron, souvent associe a la cuisine familiale.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-caveux",
+      "label": "Caveux",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Cheveux dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-cayelle",
+      "label": "Cayelle",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Chaise dans le vocabulaire regional.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70803,9 +71315,220 @@
         "legume"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Nom regional courant de l'endive.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-chicoree",
+      "label": "Chicorée",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Plante torrefiee et boisson tres associee aux habitudes du Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-chirloute",
+      "label": "Chirloute",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "boisson"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Chicoree dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-chuc",
+      "label": "Chuc",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "sucre"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Sucre dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-chuques",
+      "label": "Chuques",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "confiserie"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Bonbons du Nord dans le vocabulaire regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-clinche",
+      "label": "Clinche",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Poignee de porte dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-couque",
+      "label": "Couque",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Gateau ou brioche selon les usages locaux.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-crama",
+      "label": "Crama",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Creme brulee dans le vocabulaire culinaire regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-cumulet",
+      "label": "Cumulet",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "jeu"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Pirouette ou roulade.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-dache",
+      "label": "Dache",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Petit clou de chaussure dans le vocabulaire regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-demucher",
+      "label": "Démucher",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Faire sortir de la cachette ou retrouver ce qui etait cache.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-detouiller",
+      "label": "Détouiller",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Denouer ou defaire ce qui est emmêle.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70820,6 +71543,8 @@
         "parler-regional"
       ],
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Grosse pluie, souvent employee pour une averse bien marquee.",
@@ -70837,9 +71562,30 @@
         "fete"
       ],
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Fete populaire locale, souvent associee aux maneges.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-esquinter",
+      "label": "Esquinter",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Abimer ou fatiguer fortement.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70854,9 +71600,49 @@
         "tradition"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Cafe ou lieu convivial traditionnel du Nord et de Flandre.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-faime",
+      "label": "Faime",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Femme dans une forme regionale.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-ferale",
+      "label": "Férale",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Ferraille dans le parler regional.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70871,9 +71657,87 @@
         "plat"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Tarte salee regionale, souvent associee au poireau ou au fromage.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-fouffe",
+      "label": "Fouffe",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Vieux vetement, chiffon ou objet sans grande valeur.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-fraique",
+      "label": "Fraique",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "meteo",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Mouille ou humide.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-frichti",
+      "label": "Frichti",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Repas vite prepare ou petit plat sans ceremonie.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-fricot",
+      "label": "Fricot",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Plat cuisine simplement, souvent dans l'esprit du repas de tous les jours.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70888,9 +71752,125 @@
         "quotidien"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Lieu de restauration populaire autour des frites.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-galafe",
+      "label": "Galafe",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "caractere"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Personne qui mange beaucoup.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-galopin",
+      "label": "Galopin",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Petit verre de biere.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-gambe",
+      "label": "Gambe",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Jambe dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-gambon",
+      "label": "Gambon",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "aliment"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Jambon dans le vocabulaire regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-gardin",
+      "label": "Gardin",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Jardin dans une forme regionale.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-gatiau",
+      "label": "Gatiau",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Gateau dans le parler regional.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70905,9 +71885,144 @@
         "boisson"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Eau-de-vie traditionnelle du Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-gins",
+      "label": "Gins",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Gens dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-gobe",
+      "label": "Gobe",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Tasse ou bol pour boire.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-godale",
+      "label": "Godale",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Biere dans le vocabulaire regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-gramint",
+      "label": "Gramint",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quantite"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Beaucoup, en parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-greine",
+      "label": "Greine",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "expression"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Grimace ou mine boudeuse.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-guiffe",
+      "label": "Guiffe",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Bouche dans un registre familier.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-hochepot",
+      "label": "Hochepot",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Pot-au-feu regional servi dans le Nord.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70922,9 +72037,144 @@
         "biere"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
         "regional-words-source-index"
       ],
       "verifiedFact": "Plante associee aux traditions brassicoles du Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-jatte",
+      "label": "Jatte",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Verre, bol ou tasse selon l'usage.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-libouli",
+      "label": "Libouli",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Creme patissiere dans le vocabulaire culinaire regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-liquette",
+      "label": "Liquette",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "quantite"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Petit morceau, souvent pour parler d'une portion.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-longin",
+      "label": "Longin",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Personne lente ou peu pressee.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-mafler",
+      "label": "Mafler",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Fatiguer ou user quelqu'un.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-malaju",
+      "label": "Malaju",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "humeur"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "De mauvais poil ou mal dispose.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-marabou",
+      "label": "Marabou",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "objet"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Cafetiere dans le vocabulaire regional.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70939,9 +72189,87 @@
         "fromage"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Fromage du Nord au caractere bien identifiable.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-maronne",
+      "label": "Maronne",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "vetement"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Pantalon ou culotte dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-martiau",
+      "label": "Martiau",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "objet"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Marteau dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-mason",
+      "label": "Mason",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Maison dans une forme regionale.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-mecant",
+      "label": "Mécant",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Mechant dans une prononciation regionale.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70956,9 +72284,144 @@
         "dessert"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Dessert a base de meringue et de creme, tres associe au Nord.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-minger",
+      "label": "Minger",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Manger dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-mitan",
+      "label": "Mitan",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "position"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Milieu ou centre.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-mouque",
+      "label": "Mouque",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Mouche dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-muche",
+      "label": "Muche",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "quotidien"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Cachette ou chose cachee.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-nactieux",
+      "label": "Nactieux",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "caractere"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Meticuleux au point de devenir maniaque.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-ortiaux",
+      "label": "Ortiaux",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Orteils dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-panche",
+      "label": "Panche",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "vocabulaire",
+        "corps"
+      ],
+      "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Ventre dans le parler regional.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -70973,6 +72436,8 @@
         "plat"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Specialite froide en gelee, typique de la tradition flamande regionale.",
@@ -70990,9 +72455,49 @@
         "parler-regional"
       ],
       "sourceIds": [
+        "nord-escapade-dictionnaire-chti",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Petit enfant dans le parler regional.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-rata",
+      "label": "Rata",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "plat"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Ragout ou plat simple du quotidien.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-raton",
+      "label": "Raton",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "dessert"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Crepe a la levure dans la tradition culinaire regionale.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -71007,9 +72512,49 @@
         "dessert"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Biscuit epice tres present dans le Nord et la Belgique voisine.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-touquette",
+      "label": "Touquette",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "pain"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Morceau de pain trempe dans la soupe ou mouillette.",
+      "ambiguityRisk": "low",
+      "riskFlags": [],
+      "editorialStatus": "needs-review"
+    },
+    {
+      "id": "regional-word-triboulette",
+      "label": "Triboulette",
+      "type": "regional-word",
+      "zone": "Nord",
+      "themes": [
+        "gastronomie",
+        "biere"
+      ],
+      "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-bieres-nord",
+        "regional-words-source-index"
+      ],
+      "verifiedFact": "Grande bouteille ou contenant lie a la biere.",
       "ambiguityRisk": "low",
       "riskFlags": [],
       "editorialStatus": "needs-review"
@@ -71024,6 +72569,8 @@
         "plat"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Plat flamand mijote, souvent au poisson ou a la volaille.",
@@ -71041,6 +72588,8 @@
         "plat"
       ],
       "sourceIds": [
+        "banque-chtimi-gastronomie-jeux",
+        "comptoir-flandres-dictionnaire-chti",
         "regional-words-source-index"
       ],
       "verifiedFact": "Plat de brasserie tres present dans le Nord, a base de fromage fondu.",

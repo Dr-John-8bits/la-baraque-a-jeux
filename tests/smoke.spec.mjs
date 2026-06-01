@@ -33,7 +33,8 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await page.reload();
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
   await page.getByRole("button", { name: "Sources" }).click();
-  await expect(page.locator("#sourceList a")).toHaveCount(9);
+  const sources = JSON.parse(await readFile("packages/corpus/sources.json", "utf8"));
+  await expect(page.locator("#sourceList a")).toHaveCount(sources.length);
 
   const lilleState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   const puzzles = JSON.parse(await readFile("packages/corpus/lille-mele/puzzles.json", "utf8"));

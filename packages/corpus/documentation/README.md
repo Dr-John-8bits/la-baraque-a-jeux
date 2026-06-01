@@ -23,7 +23,7 @@ Ce dossier rassemble les sources brutes et les exports derives qui servent a con
 - `processed/editorial/candidate-items.json` : reserve d'items bruts sourcables.
 - `processed/editorial/candidate-families.json` : 66 familles candidates deja filtrees contre les references religieuses detectables.
 - `processed/editorial/excluded-sensitive-items.json` : items a eviter automatiquement, notamment cultuel/religieux ou noms a risque.
-- `processed/editorial/regional-word-seeds.json` : graines de mots regionaux reformulees, a relire avant integration dans le jeu.
+- `processed/editorial/regional-word-seeds.json` : 103 graines de mots regionaux, gastronomiques et brassicoles reformulees, a relire avant integration dans le jeu.
 
 ## Sources et droits
 
