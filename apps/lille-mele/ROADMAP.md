@@ -15,7 +15,35 @@ Le socle technique n'est plus le principal risque. Le jeu est jouable, le valida
 
 Le point bloquant est editorial : seules 10 grilles sont marquees `reviewed`, soit 160 emplacements de cartes et 157 libelles uniques relus. La cible V1 reste 30 a 45 grilles pretes, donc il manque environ 20 a 35 grilles relues avant un lancement confortable.
 
-Le dossier `../../packages/corpus/documentation/processed/` reste utile comme base de verification, de tri et d'inspiration. Il ne doit plus etre considere comme un reservoir suffisant de contenu jouable direct : les familles encore exploitables sans doublon ont ete largement consommees. La prochaine priorite est donc de recevoir de nouveaux lots editoriaux, puis de les transformer en familles relues, sourcees et compatibles avec le validateur.
+Le dossier `../../packages/corpus/documentation/processed/` reste utile comme base de verification, de tri et d'inspiration. Il ne doit plus etre considere comme un reservoir suffisant de contenu jouable direct : les familles encore exploitables sans doublon ont ete largement consommees.
+
+La prochaine priorite produit est de verrouiller le rituel quotidien officiel avant de continuer a consommer le corpus : une grille commune par jour, renouvellee a midi heure de Paris, avec resultat officiel fige. La politique de replay apres resultat reste a arbitrer. Ce cadre protege le vivier de cartes, rend le partage comparable et cree une habitude de retour sans donner une impression punitive.
+
+## Priorite du 2 juin 2026 - Rituel quotidien officiel
+
+Objectif : transformer Lille-Mêle en vrai jeu quotidien avant d'ajouter de nouvelles couches de retention.
+
+Decisions produit :
+
+- une seule grille officielle par jour, commune a tous les joueurs ;
+- bascule quotidienne a 12 h, heure de Paris, en utilisant la logique mutualisee deja disponible dans `../../packages/game-utils/daily.js` ;
+- melange des cartes illimite pendant la partie, car c'est un outil de resolution et non une triche ;
+- resultat officiel fige quand la grille est gagnee ou perdue ;
+- option A a arbitrer : bouton "Rejouer" conserve en entrainement, sans statistique, streak ni nouveau partage officiel ;
+- option B a arbitrer : pas de replay immediat, ou replay reporte aux archives, pour renforcer le rituel quotidien ;
+- sauvegarde locale par date officielle et puzzle, pas seulement par `puzzle.id` ;
+- message de fin plus ritualise : invitation a revenir demain a midi ;
+- archives a garder pour plus tard ou pour un mode discret tant que le corpus relu reste court.
+
+Definition of done :
+
+- avant midi, le joueur voit encore la grille officielle de la veille ;
+- a partir de midi, le joueur voit la nouvelle grille officielle ;
+- la page se rafraichit ou propose de rafraichir si la bascule arrive pendant une session ouverte ;
+- si le replay est retenu, rejouer une grille terminee ne modifie pas les statistiques officielles ;
+- le streak verifie la consecutivite des dates officielles ;
+- le partage represente uniquement le resultat officiel du jour ;
+- le comportement reste testable via Playwright et `window.render_game_to_text`.
 
 ## Roadmap recommandee
 
@@ -116,8 +144,10 @@ Objectif : livrer l'experience quotidienne complete.
 Livrables :
 
 - chargement de la grille du jour ;
+- journee officielle calee a midi heure de Paris ;
 - sauvegarde locale de la partie ;
 - streak et statistiques locales simples ;
+- politique de replay apres resultat officiel a arbitrer ;
 - partage sans spoiler ;
 - pages "Comment jouer ?" et "A propos" ;
 - page de sources / credits ;
@@ -129,6 +159,7 @@ Definition of done :
 
 - l'utilisateur peut ouvrir, jouer, terminer et partager une grille sans compte ;
 - l'etat du jour survit a une fermeture d'onglet ;
+- un resultat officiel termine reste fige, avec ou sans replay disponible ;
 - le partage ne revele pas les reponses ;
 - les sources et licences de donnees sont visibles.
 
@@ -398,13 +429,15 @@ Ces liens ne constituent pas encore un registre de sources complet, mais une pre
 
 ## Ordre de construction conseille
 
-1. Stabiliser le socle statique deja publie dans le monorepo.
-2. Isoler progressivement les fonctions de resolution quand le gameplay grossit.
-3. Enrichir `../../packages/corpus/lille-mele/puzzles.json`.
-4. Maintenir le validateur de grilles et le registre de sources commun.
-5. Recevoir de nouveaux lots editoriaux du proprietaire du projet.
-6. Transformer ces lots en familles de 4 cartes, relues, sourcees et sans doublon.
-7. Produire au moins 20 grilles relues supplementaires avant la beta.
-8. Ajouter localStorage, streak, partage et pages legales manquantes.
-9. Tester sur mobile, corriger l'accessibilite et deployer une beta.
-10. Enrichir ensuite avec archives, bonus et modes thematiques.
+1. Verrouiller le rituel quotidien officiel : bascule a midi, resultat fige, politique de replay a arbitrer.
+2. Reprendre la logique mutualisee de date quotidienne deja utilisee par `Le mot a Biloute`.
+3. Corriger les stats et streaks pour qu'ils reposent sur les dates officielles consecutives.
+4. Stabiliser le socle statique deja publie dans le monorepo.
+5. Isoler progressivement les fonctions de resolution quand le gameplay grossit.
+6. Maintenir le validateur de grilles et le registre de sources commun.
+7. Recevoir de nouveaux lots editoriaux du proprietaire du projet.
+8. Transformer ces lots en familles de 4 cartes, relues, sourcees et sans doublon.
+9. Produire au moins 20 grilles relues supplementaires avant la beta.
+10. Ajouter partage final, pages legales manquantes et invitation a revenir demain.
+11. Tester sur mobile, corriger l'accessibilite et deployer une beta.
+12. Enrichir ensuite avec archives, bonus et modes thematiques.
