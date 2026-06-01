@@ -7,103 +7,98 @@
       name="description"
       content="La baraque à jeux rassemble des mini-jeux web pour découvrir Lille en jouant."
     />
-    <meta name="theme-color" content="#c8372b" />
+    <meta name="theme-color" content="#071b31" />
     <meta property="og:title" content="La baraque à jeux" />
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
-      content="Deux mini-jeux lillois à lancer en un clic : Le mot à Biloute et Lille-Mêle."
+      content="Deux mini-jeux lillois à lancer en un geste : Le mot à Biloute et Lille-Mêle."
     />
-    <meta
-      property="og:image"
-      content="https://upload.wikimedia.org/wikipedia/commons/2/2b/Grand_place%2C_Lille.jpg"
-    />
+    <meta property="og:image" content="la-baraque-a-jeux-lille.webp" />
     <title>La baraque à jeux</title>
-    <link rel="preconnect" href="https://upload.wikimedia.org" />
+    <link rel="icon" type="image/png" href="la-baraque-a-jeux-lille-logo.png" />
+    <link rel="apple-touch-icon" href="la-baraque-a-jeux-lille-logo.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <section class="hero" aria-labelledby="site-title">
-        <div class="hero__overlay"></div>
-        <div class="hero__content">
-          <p class="eyebrow">Mini-jeux web pour découvrir Lille</p>
-          <h1 id="site-title">La baraque à jeux</h1>
-          <p class="hero__intro">
-            Lance une partie, pioche un mot, démêle les connexions et traverse
-            Lille côté jeu.
-          </p>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Menu principal">
+        <a class="brand" href="#top" aria-label="La baraque à jeux, accueil">
+          <picture class="brand__logo">
+            <source srcset="la-baraque-a-jeux-lille.webp" type="image/webp" />
+            <img
+              src="la-baraque-a-jeux-lille-logo.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+          </picture>
+          <span class="brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Lille</span>
+          </span>
+        </a>
+
+        <div class="site-nav__links">
+          <a href="#jeux">Jeux</a>
+          <a href="#a-propos">À propos</a>
         </div>
+      </nav>
+    </header>
+
+    <main class="page-shell" id="top">
+      <section class="intro" aria-labelledby="site-title">
+        <p class="eyebrow">Mini-jeux lillois</p>
+        <h1 id="site-title">La baraque à jeux</h1>
+        <p>
+          Deux petits jeux web pour découvrir Lille, ses mots, ses lieux et ses
+          détours.
+        </p>
       </section>
 
       <section class="games-section" id="jeux" aria-labelledby="games-title">
         <div class="section-heading">
-          <p class="eyebrow">Deux escales</p>
-          <h2 id="games-title">Choisis ton jeu</h2>
+          <p class="eyebrow">Choisis ton jeu</p>
+          <h2 id="games-title">À quoi on joue ?</h2>
         </div>
 
         <div class="games-grid">
-          <article class="game-card game-card--word">
-            <div class="game-card__visual" aria-hidden="true">
-              <span>B</span>
-              <span>I</span>
-              <span>L</span>
-              <span>O</span>
-              <span>U</span>
-              <span>T</span>
-              <span>E</span>
-            </div>
-            <div class="game-card__body">
-              <p class="game-card__kicker">Mot du jour</p>
-              <h3>Le mot à Biloute</h3>
-              <p>
-                Devine chaque jour un mot lié à Lille, au Nord ou au parler
-                ch'ti.
-              </p>
-              <a
-                class="card-link"
-                href="https://dr-john-8bits.github.io/le-mot-a-biloute/"
-                rel="noopener noreferrer"
-                aria-label="Ouvrir Le mot à Biloute"
-              >
-                Ouvrir le jeu
-              </a>
-            </div>
-          </article>
+          <a
+            class="game-card game-card--word"
+            href="https://dr-john-8bits.github.io/le-mot-a-biloute/"
+            rel="noopener noreferrer"
+            aria-label="Ouvrir Le mot à Biloute"
+          >
+            <span class="game-card__top">
+              <span class="game-card__tag">Mot du jour</span>
+              <span class="game-card__action" aria-hidden="true">Jouer</span>
+            </span>
+            <strong>Le mot à Biloute</strong>
+            <span>Devine un mot lié à Lille, au Nord ou au parler ch'ti.</span>
+          </a>
 
-          <article class="game-card game-card--links">
-            <div class="game-card__visual" aria-hidden="true">
-              <span>Rihour</span>
-              <span>Gaufre</span>
-              <span>Flandre</span>
-              <span>Beffroi</span>
-              <span>Braderie</span>
-              <span>Wazemmes</span>
-            </div>
-            <div class="game-card__body">
-              <p class="game-card__kicker">Connexions lilloises</p>
-              <h3>Lille-Mêle</h3>
-              <p>
-                Regroupe les indices et retrouve les familles cachées dans une
-                grille inspirée de Lille.
-              </p>
-              <a
-                class="card-link"
-                href="https://dr-john-8bits.github.io/Lille-Mele/"
-                rel="noopener noreferrer"
-                aria-label="Ouvrir Lille-Mêle"
-              >
-                Ouvrir le jeu
-              </a>
-            </div>
-          </article>
+          <a
+            class="game-card game-card--links"
+            href="https://dr-john-8bits.github.io/Lille-Mele/"
+            rel="noopener noreferrer"
+            aria-label="Ouvrir Lille-Mêle"
+          >
+            <span class="game-card__top">
+              <span class="game-card__tag">Connexions</span>
+              <span class="game-card__action" aria-hidden="true">Jouer</span>
+            </span>
+            <strong>Lille-Mêle</strong>
+            <span>Regroupe les indices et retrouve les familles lilloises.</span>
+          </a>
         </div>
       </section>
 
-      <section class="about-section" aria-labelledby="about-title">
-        <div class="about-section__inner">
-          <p class="eyebrow">À propos</p>
-          <h2 id="about-title">Une petite baraque lilloise</h2>
+      <section class="about-section" id="a-propos">
+        <details>
+          <summary>
+            <span>À propos</span>
+            <span aria-hidden="true">+</span>
+          </summary>
           <div class="about-section__text">
             <p>
               Ce portail et les jeux qu'il rassemble sont imaginés, adaptés et
@@ -122,28 +117,13 @@
               à jeux.
             </p>
           </div>
-        </div>
+        </details>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>
-        La baraque à jeux par
-        <a href="https://github.com/Dr-John-8bits" rel="noopener noreferrer"
-          >Dr. John</a
-        >
-        &amp; Lady Em
-      </p>
-      <p>Version 26.05.31.3</p>
-      <p>
-        Photo :
-        <a
-          href="https://commons.wikimedia.org/wiki/File:Grand_place,_Lille.jpg"
-          rel="noopener noreferrer"
-          >Grand place, Lille</a
-        >
-        par Strukova1409, CC BY-SA 4.0.
-      </p>
+      <p>La baraque à jeux par Dr. John &amp; Lady Em</p>
+      <p>Version 26.06.01.1</p>
     </footer>
   </body>
 </html>
