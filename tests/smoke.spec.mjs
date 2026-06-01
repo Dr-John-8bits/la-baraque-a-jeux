@@ -56,6 +56,11 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
   await page.getByRole("button", { name: "Lancer" }).click();
   await page.getByRole("button", { name: /Biloute bat Bière/ }).click();
+  const bbbRevealState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  if (bbbRevealState.phase === "revealing") {
+    expect(bbbRevealState.reveal.pending.playerChoice).toBe("biloute");
+    await page.evaluate(() => window.advanceTime(1200));
+  }
   const bbbState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(bbbState.lastRound.playerChoice).toBe("biloute");
   expect(bbbState.score.player + bbbState.score.computer).toBeLessThanOrEqual(1);

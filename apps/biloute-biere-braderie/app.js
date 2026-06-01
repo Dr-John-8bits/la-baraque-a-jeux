@@ -3,6 +3,7 @@ import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 
 const TARGET_SCORE = 5;
 const ROUND_DURATION_MS = 3000;
+const REVEAL_DURATION_MS = 1100;
 const STORAGE_PREFIX = "biloute-biere-braderie.v1";
 const APP_VERSION = "26.06.01.1";
 const COUNTDOWN_BEATS = ["CH'TI", "FOU", "MI"];
@@ -53,11 +54,19 @@ const els = {
   playerScore: document.querySelector("#playerScore"),
   computerScore: document.querySelector("#computerScore"),
   roundCount: document.querySelector("#roundCount"),
+  playerScorePill: document.querySelector("#playerScore")?.closest(".score-pill"),
+  computerScorePill: document.querySelector("#computerScore")?.closest(".score-pill"),
+  duelPanel: document.querySelector(".duel-panel"),
   playerPickSymbol: document.querySelector("#playerPickSymbol"),
   playerPickName: document.querySelector("#playerPickName"),
   computerPickSymbol: document.querySelector("#computerPickSymbol"),
   computerPickName: document.querySelector("#computerPickName"),
   duelStatus: document.querySelector("#duelStatus"),
+  outcomeBanner: document.querySelector("#outcomeBanner"),
+  outcomeIcon: document.querySelector("#outcomeIcon"),
+  outcomeTitle: document.querySelector("#outcomeTitle"),
+  outcomeDetail: document.querySelector("#outcomeDetail"),
+  timerPanel: document.querySelector(".timer-panel"),
   countdownWord: document.querySelector("#countdownWord"),
   countdownTime: document.querySelector("#countdownTime"),
   timerFill: document.querySelector("#timerFill"),
@@ -93,9 +102,11 @@ function createInitialState() {
     status: "playing",
     phase: "ready",
     remainingMs: ROUND_DURATION_MS,
+    revealRemainingMs: 0,
     message: "Lance CH'TI FOU MI, puis choisis avant la fin de MI.",
     tone: "",
     lastRound: null,
+    pendingRound: null,
     history: [],
     completedRecorded: false,
   };
@@ -136,27 +147,31 @@ function bindEvents() {
   });
 
   window.advanceTime = (ms = 1000 / 60) => {
-    updateCountdown(ms);
+    updateRoundClock(ms);
     render();
   };
   window.render_game_to_text = renderGameToText;
 }
 
 function startRound() {
-  if (state.status !== "playing" || state.phase === "countdown") return;
+  if (state.status !== "playing" || state.phase === "countdown" || state.phase === "revealing") {
+    return;
+  }
   state.phase = "countdown";
   state.remainingMs = ROUND_DURATION_MS;
+  state.revealRemainingMs = 0;
+  state.pendingRound = null;
   state.message = "CH'TI... FOU... MI... choisis vite.";
   state.tone = "";
   render();
-  startCountdownLoop();
+  startFrameLoop();
 }
 
 function playRound(playerChoiceId) {
   if (state.status !== "playing" || state.phase !== "countdown" || !CHOICES[playerChoiceId]) {
     return;
   }
-  stopCountdownLoop();
+  stopFrameLoop();
 
   const computerChoiceId = getComputerChoice();
   const result = getRoundResult(playerChoiceId, computerChoiceId);
@@ -166,30 +181,37 @@ function playRound(playerChoiceId) {
   let tone = "";
 
   if (result === "tie") {
-    message = `Égalité : ${playerChoice.label} contre ${computerChoice.label}. Mauvaise foi autorisée, point refusé.`;
+    message = `ÉGALITÉ. ${playerChoice.label} contre ${computerChoice.label}. Mauvaise foi autorisée, point refusé.`;
     tone = "tie";
   } else if (result === "win") {
-    state.playerScore += 1;
-    message = `${playerChoice.label} bat ${computerChoice.label}. ${playerChoice.reason}`;
+    message = `GAGNÉ. ${playerChoice.label} bat ${computerChoice.label}. ${playerChoice.reason}`;
     tone = "win";
   } else {
-    state.computerScore += 1;
-    message = `${computerChoice.label} bat ${playerChoice.label}. ${computerChoice.reason}`;
+    message = `PERDU. ${computerChoice.label} bat ${playerChoice.label}. ${computerChoice.reason}`;
     tone = "loss";
   }
 
-  finishRound({
+  state.pendingRound = {
     round: state.round,
     playerChoice: playerChoiceId,
     computerChoice: computerChoiceId,
     result,
     message,
     tone,
-  });
+  };
+  state.phase = "revealing";
+  state.revealRemainingMs = REVEAL_DURATION_MS;
+  state.message = "Choix verrouillé. L'ordi révèle son coup...";
+  state.tone = "reveal";
+  render();
+  startFrameLoop();
 }
 
 function finishRound(roundResult) {
+  applyRoundScore(roundResult);
   state.lastRound = roundResult;
+  state.pendingRound = null;
+  state.revealRemainingMs = 0;
   state.history.unshift(state.lastRound);
   state.history = state.history.slice(0, 6);
   state.message = roundResult.message;
@@ -200,8 +222,8 @@ function finishRound(roundResult) {
     state.phase = "finished";
     state.message =
       state.status === "player_won"
-        ? "Victoire. Tu peux lever la pinte imaginaire."
-        : "Défaite. L'ordi a trop bien chiné cette fois.";
+        ? "TOURNÉE GAGNÉE. Premier à 5 atteint."
+        : "TOURNÉE PERDUE. L'ordi atteint 5 avant toi.";
     recordCompletion();
   } else {
     state.round += 1;
@@ -214,27 +236,33 @@ function finishRound(roundResult) {
 
 function handleTimeout() {
   if (state.status !== "playing" || state.phase !== "countdown") return;
-  stopCountdownLoop();
+  stopFrameLoop();
   const computerChoiceId = getComputerChoice();
   const computerChoice = CHOICES[computerChoiceId];
-  state.computerScore += 1;
   finishRound({
     round: state.round,
     playerChoice: null,
     computerChoice: computerChoiceId,
     result: "timeout",
-    message: `Trop tard. L'ordi joue ${computerChoice.label} et prend le point.`,
+    message: `TROP TARD. L'ordi joue ${computerChoice.label} et prend le point.`,
     tone: "loss",
   });
 }
 
-function startCountdownLoop() {
-  stopCountdownLoop();
+function applyRoundScore(roundResult) {
+  if (roundResult.result === "win") state.playerScore += 1;
+  if (roundResult.result === "loss" || roundResult.result === "timeout") {
+    state.computerScore += 1;
+  }
+}
+
+function startFrameLoop() {
+  stopFrameLoop();
   lastCountdownTick = performance.now();
   countdownFrame = window.requestAnimationFrame(tickCountdown);
 }
 
-function stopCountdownLoop() {
+function stopFrameLoop() {
   if (!countdownFrame) return;
   window.cancelAnimationFrame(countdownFrame);
   countdownFrame = 0;
@@ -243,19 +271,35 @@ function stopCountdownLoop() {
 function tickCountdown(now) {
   const elapsed = Math.max(0, now - lastCountdownTick);
   lastCountdownTick = now;
-  updateCountdown(elapsed);
+  updateRoundClock(elapsed);
   render();
-  if (state.phase === "countdown") {
+  if (state.phase === "countdown" || state.phase === "revealing") {
     countdownFrame = window.requestAnimationFrame(tickCountdown);
   }
 }
 
-function updateCountdown(elapsedMs) {
-  if (state.status !== "playing" || state.phase !== "countdown") return;
-  state.remainingMs = Math.max(0, state.remainingMs - elapsedMs);
-  if (state.remainingMs <= 0) {
-    handleTimeout();
+function updateRoundClock(elapsedMs) {
+  if (state.status !== "playing") return;
+
+  if (state.phase === "countdown") {
+    state.remainingMs = Math.max(0, state.remainingMs - elapsedMs);
+    if (state.remainingMs <= 0) {
+      handleTimeout();
+    }
   }
+
+  if (state.phase === "revealing") {
+    state.revealRemainingMs = Math.max(0, state.revealRemainingMs - elapsedMs);
+    if (state.revealRemainingMs <= 0) {
+      finishPendingRound();
+    }
+  }
+}
+
+function finishPendingRound() {
+  if (state.phase !== "revealing" || !state.pendingRound) return;
+  stopFrameLoop();
+  finishRound(state.pendingRound);
 }
 
 function getComputerChoice() {
@@ -268,7 +312,7 @@ function getRoundResult(playerChoiceId, computerChoiceId) {
 }
 
 function resetGame() {
-  stopCountdownLoop();
+  stopFrameLoop();
   state = createInitialState();
   render();
 }
@@ -305,10 +349,12 @@ function render() {
   els.choices.forEach((button) => {
     button.disabled = !canChoose;
   });
-  els.roundButton.disabled = finished || state.phase === "countdown";
+  els.roundButton.disabled = finished || state.phase === "countdown" || state.phase === "revealing";
   els.roundButton.textContent =
     state.phase === "countdown"
       ? "À toi"
+      : state.phase === "revealing"
+        ? "Révélation"
       : state.phase === "finished"
         ? "Terminé"
         : state.lastRound
@@ -318,41 +364,130 @@ function render() {
   renderResultPanel();
   renderHistory();
   renderDuelPanel();
+  renderOutcomeBanner();
   renderTimer();
+  renderScoreFeedback();
+  renderChoiceFeedback();
 }
 
 function renderDuelPanel() {
   const waiting = state.phase === "countdown";
-  const playerChoice = !waiting && state.lastRound?.playerChoice
-    ? CHOICES[state.lastRound.playerChoice]
+  const revealing = state.phase === "revealing";
+  const visibleRound = revealing ? state.pendingRound : state.lastRound;
+  const playerChoice = !waiting && visibleRound?.playerChoice
+    ? CHOICES[visibleRound.playerChoice]
     : null;
-  const computerChoice = !waiting && state.lastRound?.computerChoice
-    ? CHOICES[state.lastRound.computerChoice]
+  const computerChoice = !waiting && !revealing && visibleRound?.computerChoice
+    ? CHOICES[visibleRound.computerChoice]
     : null;
   els.playerPickSymbol.textContent = waiting ? "!" : playerChoice?.symbol || "?";
   els.playerPickName.textContent = waiting
     ? "Choisis"
-    : playerChoice?.label || (state.lastRound?.result === "timeout" ? "Trop tard" : "Choisis");
-  els.computerPickSymbol.textContent = waiting ? "?" : computerChoice?.symbol || "?";
-  els.computerPickName.textContent = waiting ? "Cache" : computerChoice?.label || "Attend";
+    : playerChoice?.label || (visibleRound?.result === "timeout" ? "Trop tard" : "Choisis");
+  els.computerPickSymbol.textContent = waiting || revealing ? "?" : computerChoice?.symbol || "?";
+  els.computerPickName.textContent = waiting || revealing ? "Cache" : computerChoice?.label || "Attend";
+  const outcome = getVisibleOutcome();
+  els.duelPanel.className = [
+    "duel-panel",
+    revealing ? "duel-panel--revealing" : "",
+    outcome ? `duel-panel--${outcome.tone}` : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
   els.duelStatus.textContent = waiting
     ? getCountdownBeat()
-    : state.lastRound
-    ? state.lastRound.result === "tie"
-      ? "="
-      : state.lastRound.result === "win"
-        ? "+1 toi"
-        : "+1 ordi"
-    : "VS";
+    : revealing
+      ? "SUSPENSE"
+      : visibleRound
+        ? getRoundOutcomeView(visibleRound).duelLabel
+      : "VS";
+  els.duelStatus.className = [
+    "duel-versus",
+    waiting ? "duel-versus--countdown" : "",
+    revealing ? "duel-versus--revealing" : "",
+    outcome ? `duel-versus--${outcome.tone}` : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
+function renderOutcomeBanner() {
+  const outcome = getVisibleOutcome();
+  els.outcomeBanner.hidden = !outcome;
+  if (!outcome) return;
+
+  els.outcomeIcon.textContent = outcome.icon;
+  els.outcomeTitle.textContent = outcome.title;
+  els.outcomeDetail.textContent = outcome.detail;
+  els.outcomeBanner.className = ["outcome-banner", `outcome-banner--${outcome.tone}`].join(" ");
+}
+
+function renderScoreFeedback() {
+  [els.playerScorePill, els.computerScorePill].forEach((pill) => {
+    pill.classList.remove("is-leading", "is-last-point", "is-final-winner", "is-final-loser");
+  });
+
+  els.playerScorePill.classList.toggle("is-leading", state.playerScore > state.computerScore);
+  els.computerScorePill.classList.toggle("is-leading", state.computerScore > state.playerScore);
+
+  const result = state.phase === "ready" || state.phase === "finished" ? state.lastRound?.result : null;
+  els.playerScorePill.classList.toggle("is-last-point", result === "win");
+  els.computerScorePill.classList.toggle("is-last-point", result === "loss" || result === "timeout");
+
+  els.playerScorePill.classList.toggle("is-final-winner", state.status === "player_won");
+  els.computerScorePill.classList.toggle("is-final-winner", state.status === "computer_won");
+  els.playerScorePill.classList.toggle("is-final-loser", state.status === "computer_won");
+  els.computerScorePill.classList.toggle("is-final-loser", state.status === "player_won");
+}
+
+function renderChoiceFeedback() {
+  const revealing = state.phase === "revealing";
+  const round = state.phase === "countdown" ? null : revealing ? state.pendingRound : state.lastRound;
+  const winnerChoice =
+    !revealing && round?.result === "win"
+      ? round.playerChoice
+      : !revealing && (round?.result === "loss" || round?.result === "timeout")
+        ? round.computerChoice
+        : null;
+
+  els.choices.forEach((button) => {
+    const choice = button.dataset.choice;
+    button.classList.toggle("is-player-pick", Boolean(round?.playerChoice) && choice === round.playerChoice);
+    button.classList.toggle(
+      "is-computer-pick",
+      !revealing && Boolean(round?.computerChoice) && choice === round.computerChoice
+    );
+    button.classList.toggle("is-winning-pick", Boolean(winnerChoice) && choice === winnerChoice);
+    button.classList.toggle("is-tie-pick", !revealing && round?.result === "tie" && choice === round.playerChoice);
+    button.classList.toggle(
+      "is-revealing-pick",
+      revealing && Boolean(round?.playerChoice) && choice === round.playerChoice
+    );
+  });
 }
 
 function renderTimer() {
-  const remaining = state.phase === "countdown" ? state.remainingMs : ROUND_DURATION_MS;
-  const ratio = Math.max(0, Math.min(1, remaining / ROUND_DURATION_MS));
+  const revealing = state.phase === "revealing";
+  const remaining = state.phase === "countdown"
+    ? state.remainingMs
+    : revealing
+      ? state.revealRemainingMs
+      : ROUND_DURATION_MS;
+  const duration = revealing ? REVEAL_DURATION_MS : ROUND_DURATION_MS;
+  const ratio = Math.max(0, Math.min(1, remaining / duration));
+  els.timerPanel.className = ["timer-panel", revealing ? "timer-panel--revealing" : ""]
+    .filter(Boolean)
+    .join(" ");
   els.countdownWord.textContent =
-    state.phase === "countdown" ? getCountdownBeat() : state.lastRound ? "Encore ?" : "Prêt ?";
+    state.phase === "countdown"
+      ? getCountdownBeat()
+      : revealing
+        ? "Suspense"
+        : state.lastRound
+          ? "Encore ?"
+          : "Prêt ?";
   els.countdownTime.textContent =
-    state.phase === "countdown" ? `${(remaining / 1000).toFixed(1)} s` : "3.0 s";
+    state.phase === "countdown" || revealing ? `${(remaining / 1000).toFixed(1)} s` : "3.0 s";
   els.timerFill.style.transform = `scaleX(${ratio})`;
 }
 
@@ -369,10 +504,70 @@ function renderResultPanel() {
 
   const won = state.status === "player_won";
   const stats = getStats();
+  els.resultPanel.className = ["result-panel", won ? "result-panel--win" : "result-panel--loss"].join(" ");
   els.resultTitle.textContent = won ? "Tournée gagnée." : "La braderie t'a retourné.";
   els.resultText.textContent = won
     ? `Score final ${state.playerScore}-${state.computerScore}. Série en cours : ${stats.currentStreak}.`
     : `Score final ${state.playerScore}-${state.computerScore}. Meilleure série : ${stats.bestStreak}.`;
+}
+
+function getVisibleOutcome() {
+  if (state.phase === "countdown" || state.phase === "revealing") return null;
+  if (state.status === "player_won") {
+    return {
+      tone: "win",
+      icon: "✓",
+      title: "Tournée gagnée",
+      detail: `Score final ${state.playerScore}-${state.computerScore}`,
+    };
+  }
+  if (state.status === "computer_won") {
+    return {
+      tone: "loss",
+      icon: "!",
+      title: "Tournée perdue",
+      detail: `Score final ${state.playerScore}-${state.computerScore}`,
+    };
+  }
+  if (!state.lastRound || state.phase === "countdown") return null;
+  return getRoundOutcomeView(state.lastRound);
+}
+
+function getRoundOutcomeView(round) {
+  if (round.result === "win") {
+    return {
+      tone: "win",
+      icon: "+1",
+      title: "Manche gagnée",
+      detail: "Le point est pour toi",
+      duelLabel: "GAGNÉ",
+    };
+  }
+  if (round.result === "loss") {
+    return {
+      tone: "loss",
+      icon: "+1",
+      title: "Manche perdue",
+      detail: "Le point est pour l'ordi",
+      duelLabel: "PERDU",
+    };
+  }
+  if (round.result === "timeout") {
+    return {
+      tone: "loss",
+      icon: "!",
+      title: "Trop tard",
+      detail: "Le point est pour l'ordi",
+      duelLabel: "TROP TARD",
+    };
+  }
+  return {
+    tone: "tie",
+    icon: "=",
+    title: "Égalité",
+    detail: "Aucun point marqué",
+    duelLabel: "ÉGALITÉ",
+  };
 }
 
 function renderHistory() {
@@ -450,13 +645,25 @@ function escapeHtml(value) {
 
 function renderGameToText() {
   return JSON.stringify({
-    coordinateSystem: "no canvas; DOM buttons ordered top to bottom",
+    coordinateSystem: "no canvas; DOM choice buttons ordered left to right",
     status: state.status,
     phase: state.phase,
     countdown: {
       durationMs: ROUND_DURATION_MS,
       remainingMs: Math.round(state.remainingMs),
       beat: state.phase === "countdown" ? getCountdownBeat() : null,
+    },
+    reveal: {
+      durationMs: REVEAL_DURATION_MS,
+      remainingMs: Math.round(state.revealRemainingMs),
+      pending:
+        state.phase === "revealing"
+          ? {
+              round: state.pendingRound?.round,
+              playerChoice: state.pendingRound?.playerChoice,
+              computerChoice: "hidden",
+            }
+          : null,
     },
     targetScore: TARGET_SCORE,
     score: {
@@ -472,6 +679,7 @@ function renderGameToText() {
       beats: CHOICES[id].beats,
     })),
     lastRound: state.lastRound,
+    visibleOutcome: getVisibleOutcome(),
     message: state.message,
   });
 }

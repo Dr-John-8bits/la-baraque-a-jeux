@@ -109,6 +109,11 @@
             <span class="duel-name" id="computerPickName">Attend</span>
           </div>
         </div>
+        <div class="outcome-banner" id="outcomeBanner" aria-live="polite" hidden>
+          <span class="outcome-icon" id="outcomeIcon" aria-hidden="true">?</span>
+          <strong id="outcomeTitle">Résultat</strong>
+          <span id="outcomeDetail"></span>
+        </div>
         <div class="timer-panel" aria-label="Compte à rebours de manche">
           <div class="timer-copy">
             <strong id="countdownWord">Prêt ?</strong>
@@ -126,21 +131,21 @@
 
       <section class="choices" aria-label="Choix de manche">
         <button class="choice-button choice-button--biloute" type="button" data-choice="biloute">
-          <span class="choice-mark" aria-hidden="true">BL</span>
+          <span class="choice-mark" aria-hidden="true">🧢</span>
           <span>
             <strong>Biloute</strong>
             <small>bat Bière</small>
           </span>
         </button>
         <button class="choice-button choice-button--biere" type="button" data-choice="biere">
-          <span class="choice-mark" aria-hidden="true">BI</span>
+          <span class="choice-mark" aria-hidden="true">🍺</span>
           <span>
             <strong>Bière</strong>
             <small>bat Braderie</small>
           </span>
         </button>
         <button class="choice-button choice-button--braderie" type="button" data-choice="braderie">
-          <span class="choice-mark" aria-hidden="true">BR</span>
+          <span class="choice-mark" aria-hidden="true">🛍️</span>
           <span>
             <strong>Braderie</strong>
             <small>bat Biloute</small>
@@ -166,15 +171,27 @@
         </div>
         <div class="rule-list">
           <article class="rule-item">
-            <strong>Biloute bat Bière</strong>
+            <strong class="rule-matchup">
+              <span class="rule-token"><span class="rule-emoji" aria-hidden="true">🧢</span> Biloute</span>
+              <span class="rule-beat">bat</span>
+              <span class="rule-token"><span class="rule-emoji" aria-hidden="true">🍺</span> Bière</span>
+            </strong>
             <p>Parce que biloute tient mieux la pinte que toi.</p>
           </article>
           <article class="rule-item">
-            <strong>Bière bat Braderie</strong>
+            <strong class="rule-matchup">
+              <span class="rule-token"><span class="rule-emoji" aria-hidden="true">🍺</span> Bière</span>
+              <span class="rule-beat">bat</span>
+              <span class="rule-token"><span class="rule-emoji" aria-hidden="true">🛍️</span> Braderie</span>
+            </strong>
             <p>Parce qu'après trois pintes, tu oublies ce que tu voulais chiner.</p>
           </article>
           <article class="rule-item">
-            <strong>Braderie bat Biloute</strong>
+            <strong class="rule-matchup">
+              <span class="rule-token"><span class="rule-emoji" aria-hidden="true">🛍️</span> Braderie</span>
+              <span class="rule-beat">bat</span>
+              <span class="rule-token"><span class="rule-emoji" aria-hidden="true">🧢</span> Biloute</span>
+            </strong>
             <p>
               Parce que même le plus malin des biloutes finit perdu entre deux
               tas de vaisselle.

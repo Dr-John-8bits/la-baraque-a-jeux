@@ -138,6 +138,23 @@ h1 {
   border-color: color-mix(in srgb, var(--bbb-red), black 18%);
 }
 
+.score-pill.is-leading {
+  background: color-mix(in srgb, var(--bbb-gold), white 72%);
+}
+
+.score-pill.is-last-point {
+  border-width: 3px;
+  box-shadow: 5px 5px 0 var(--bbb-ink);
+}
+
+.score-pill.is-final-winner {
+  background: color-mix(in srgb, var(--bbb-green), white 68%);
+}
+
+.score-pill.is-final-loser {
+  opacity: 0.68;
+}
+
 .score-label {
   color: var(--labaj-muted);
   font-size: 0.66rem;
@@ -168,6 +185,30 @@ h1 {
   border-radius: var(--labaj-radius);
   padding: 8px;
   background: rgba(255, 255, 255, 0.86);
+}
+
+.duel-panel--win {
+  border-color: color-mix(in srgb, var(--bbb-green), black 20%);
+  background: color-mix(in srgb, var(--bbb-green), white 80%);
+}
+
+.duel-panel--loss {
+  border-color: color-mix(in srgb, var(--bbb-red), black 12%);
+  background: color-mix(in srgb, var(--bbb-red), white 82%);
+}
+
+.duel-panel--tie {
+  border-color: color-mix(in srgb, var(--bbb-gold), black 24%);
+  background: color-mix(in srgb, var(--bbb-gold), white 74%);
+}
+
+.duel-panel--revealing {
+  border-color: color-mix(in srgb, var(--bbb-gold), black 28%);
+  background: color-mix(in srgb, var(--bbb-gold), white 78%);
+}
+
+.duel-panel--revealing .duel-pick--computer .duel-symbol {
+  animation: bbb-suspense-pulse 360ms ease-in-out infinite alternate;
 }
 
 .duel-pick {
@@ -229,6 +270,111 @@ h1 {
   font-weight: 950;
 }
 
+.duel-versus--win,
+.duel-versus--loss,
+.duel-versus--tie {
+  min-width: 78px;
+  padding: 0 9px;
+  color: #ffffff;
+}
+
+.duel-versus--win {
+  background: color-mix(in srgb, var(--bbb-green), black 12%);
+}
+
+.duel-versus--loss {
+  background: var(--bbb-red);
+}
+
+.duel-versus--tie {
+  background: color-mix(in srgb, var(--bbb-gold), black 20%);
+  color: var(--bbb-ink);
+}
+
+.duel-versus--revealing {
+  min-width: 92px;
+  padding: 0 9px;
+  background: var(--bbb-ink);
+  color: #ffffff;
+  animation: bbb-suspense-pop 420ms ease-in-out infinite alternate;
+}
+
+.outcome-banner {
+  min-height: 54px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "icon title"
+    "icon detail";
+  align-items: center;
+  column-gap: 10px;
+  border: 3px solid var(--bbb-ink);
+  border-radius: var(--labaj-radius);
+  padding: 9px 10px;
+  background: var(--bbb-surface);
+  color: var(--bbb-ink);
+  box-shadow: 4px 4px 0 var(--bbb-ink);
+}
+
+.outcome-icon {
+  grid-area: icon;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--bbb-ink);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.outcome-banner strong {
+  grid-area: title;
+  min-width: 0;
+  font-size: clamp(1.18rem, 5vw, 1.55rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.outcome-banner > span:last-child {
+  grid-area: detail;
+  min-width: 0;
+  color: var(--labaj-muted);
+  font-size: 0.88rem;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.outcome-banner--win {
+  border-color: color-mix(in srgb, var(--bbb-green), black 24%);
+  background: color-mix(in srgb, var(--bbb-green), white 70%);
+}
+
+.outcome-banner--win .outcome-icon {
+  background: color-mix(in srgb, var(--bbb-green), black 14%);
+}
+
+.outcome-banner--loss {
+  border-color: color-mix(in srgb, var(--bbb-red), black 12%);
+  background: color-mix(in srgb, var(--bbb-red), white 76%);
+}
+
+.outcome-banner--loss .outcome-icon {
+  background: var(--bbb-red);
+}
+
+.outcome-banner--tie {
+  border-color: color-mix(in srgb, var(--bbb-gold), black 26%);
+  background: color-mix(in srgb, var(--bbb-gold), white 66%);
+}
+
+.outcome-banner--tie .outcome-icon {
+  background: var(--bbb-gold);
+  color: var(--bbb-ink);
+}
+
 .timer-panel {
   min-height: 50px;
   display: grid;
@@ -239,6 +385,18 @@ h1 {
   border-radius: var(--labaj-radius);
   padding: 7px 8px;
   background: var(--bbb-surface);
+}
+
+.timer-panel--revealing {
+  border-color: color-mix(in srgb, var(--bbb-gold), black 25%);
+}
+
+.timer-panel--revealing .timer-copy strong {
+  color: var(--bbb-ink);
+}
+
+.timer-panel--revealing .timer-track span {
+  background: var(--bbb-ink);
 }
 
 .timer-copy {
@@ -310,38 +468,44 @@ h1 {
 
 .message.win {
   border-color: var(--bbb-green);
-  background: color-mix(in srgb, var(--bbb-green), white 86%);
+  background: color-mix(in srgb, var(--bbb-green), white 78%);
 }
 
 .message.loss {
   border-color: var(--bbb-red);
-  background: color-mix(in srgb, var(--bbb-red), white 86%);
+  background: color-mix(in srgb, var(--bbb-red), white 78%);
 }
 
 .message.tie {
   border-color: var(--bbb-gold);
-  background: color-mix(in srgb, var(--bbb-gold), white 76%);
+  background: color-mix(in srgb, var(--bbb-gold), white 70%);
+}
+
+.message.reveal {
+  border-color: color-mix(in srgb, var(--bbb-gold), black 24%);
+  background: color-mix(in srgb, var(--bbb-gold), white 78%);
 }
 
 .choices {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 7px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
 }
 
 .choice-button {
   min-width: 0;
-  min-height: 60px;
+  min-height: 82px;
   display: grid;
-  grid-template-columns: 38px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  gap: 9px;
+  justify-items: center;
+  gap: 4px;
   border: 2px solid var(--bbb-ink);
   border-radius: var(--labaj-radius);
-  padding: 8px;
+  padding: 7px 4px;
   background: var(--bbb-surface);
   color: var(--bbb-ink);
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   box-shadow: none;
 }
@@ -350,6 +514,39 @@ h1 {
   cursor: not-allowed;
   opacity: 0.48;
   transform: none;
+}
+
+.choice-button.is-player-pick,
+.choice-button.is-computer-pick,
+.choice-button.is-winning-pick,
+.choice-button.is-tie-pick,
+.choice-button.is-revealing-pick {
+  opacity: 1;
+}
+
+.choice-button.is-player-pick {
+  outline: 3px solid color-mix(in srgb, var(--bbb-teal), black 18%);
+  outline-offset: -5px;
+}
+
+.choice-button.is-computer-pick {
+  box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--bbb-red), black 10%);
+}
+
+.choice-button.is-winning-pick {
+  border-width: 3px;
+  box-shadow: 4px 4px 0 var(--bbb-ink);
+}
+
+.choice-button.is-tie-pick {
+  outline: 3px solid color-mix(in srgb, var(--bbb-gold), black 22%);
+  outline-offset: -5px;
+}
+
+.choice-button.is-revealing-pick {
+  border-width: 3px;
+  box-shadow: 3px 3px 0 var(--bbb-ink);
+  animation: bbb-choice-ready 420ms ease-in-out infinite alternate;
 }
 
 .choice-button--biloute {
@@ -365,15 +562,15 @@ h1 {
 }
 
 .choice-mark {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border: 2px solid var(--bbb-ink);
   border-radius: 999px;
   background: var(--bbb-ink);
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1.38rem;
   font-weight: 950;
   line-height: 1;
 }
@@ -385,15 +582,17 @@ h1 {
 }
 
 .choice-button strong {
-  font-size: clamp(1.02rem, 3.2vw, 1.25rem);
+  font-size: clamp(0.88rem, 3.3vw, 1rem);
   line-height: 1.05;
 }
 
 .choice-button small {
-  margin-top: 3px;
+  margin-top: 2px;
   color: var(--labaj-muted);
-  font-size: 0.84rem;
+  font-size: clamp(0.65rem, 2.55vw, 0.74rem);
   font-weight: 800;
+  line-height: 1.05;
+  white-space: nowrap;
 }
 
 .result-panel,
@@ -411,6 +610,16 @@ h1 {
   gap: 10px;
   border-width: 2px;
   border-color: var(--bbb-ink);
+}
+
+.result-panel--win {
+  border-color: color-mix(in srgb, var(--bbb-green), black 20%);
+  background: color-mix(in srgb, var(--bbb-green), white 74%);
+}
+
+.result-panel--loss {
+  border-color: color-mix(in srgb, var(--bbb-red), black 12%);
+  background: color-mix(in srgb, var(--bbb-red), white 78%);
 }
 
 .result-panel h2,
@@ -466,10 +675,36 @@ h1 {
   border-left-color: var(--bbb-gold);
 }
 
-.rule-item strong {
-  display: block;
+.rule-matchup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 7px;
+  align-items: center;
   font-size: 0.98rem;
   line-height: 1.15;
+}
+
+.rule-token {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.rule-emoji {
+  width: 1.35em;
+  height: 1.35em;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.rule-beat {
+  color: var(--labaj-muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
 }
 
 .rule-item p {
@@ -531,6 +766,44 @@ h1 {
   transform: translateX(-50%) translateY(0);
 }
 
+@keyframes bbb-suspense-pulse {
+  from {
+    transform: scale(0.94);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes bbb-suspense-pop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes bbb-choice-ready {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .duel-panel--revealing .duel-pick--computer .duel-symbol,
+  .duel-versus--revealing,
+  .choice-button.is-revealing-pick {
+    animation: none;
+  }
+}
+
 @media (min-width: 820px) {
   .app-shell {
     width: min(1060px, calc(100% - 24px));
@@ -558,7 +831,6 @@ h1 {
     font-size: 0.74rem;
   }
 
-  .choices,
   .rule-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -568,8 +840,6 @@ h1 {
   }
 
   .choice-button {
-    grid-template-columns: 48px minmax(0, 1fr);
-    gap: 10px;
     min-height: 86px;
     padding: 10px;
     box-shadow: 4px 4px 0 var(--bbb-ink);
@@ -578,5 +848,6 @@ h1 {
   .choice-mark {
     width: 48px;
     height: 48px;
+    font-size: 1.55rem;
   }
 }
