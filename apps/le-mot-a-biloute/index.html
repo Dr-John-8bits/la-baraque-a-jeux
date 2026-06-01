@@ -7,12 +7,44 @@
       name="description"
       content="Le mot à Biloute : devinez chaque jour un mot lié à Lille, au Nord ou au parler ch'ti."
     />
-    <meta name="theme-color" content="#f4d35e" />
+    <meta name="theme-color" content="#071b31" />
     <title>Le mot à Biloute</title>
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
+          <picture class="labaj-brand__logo">
+            <source
+              srcset="../portail/la-baraque-a-jeux-lille.webp"
+              type="image/webp"
+            />
+            <img
+              src="../portail/la-baraque-a-jeux-lille-logo.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+          </picture>
+          <span class="labaj-brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Accueil</span>
+          </span>
+        </a>
+
+        <div class="labaj-links">
+          <a class="labaj-link labaj-link--home" href="../../">Accueil</a>
+          <a class="labaj-link" href="../le-mot-a-biloute/" aria-current="page">
+            Le mot à Biloute
+          </a>
+          <a class="labaj-link" href="../lille-mele/">Lille-Mêle</a>
+        </div>
+      </nav>
+    </header>
+
     <main class="app-shell" aria-live="polite">
       <header class="topbar">
         <div>

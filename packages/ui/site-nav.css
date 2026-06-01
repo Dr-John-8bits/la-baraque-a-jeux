@@ -1,0 +1,141 @@
+:root {
+  --labaj-ink: #071b31;
+  --labaj-muted: #59636e;
+  --labaj-paper: #fbf7ef;
+  --labaj-surface: #ffffff;
+  --labaj-line: #e3d9ca;
+  --labaj-red: #d21920;
+  --labaj-gold: #f3c642;
+  --labaj-radius: 8px;
+}
+
+.labaj-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(7, 27, 49, 0.1);
+  background: rgba(251, 247, 239, 0.94);
+  backdrop-filter: blur(14px);
+}
+
+.labaj-nav {
+  width: min(920px, calc(100% - 24px));
+  min-height: 62px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.labaj-brand {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--labaj-ink);
+  text-decoration: none;
+}
+
+.labaj-brand__logo {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(7, 27, 49, 0.1);
+  border-radius: 50%;
+  background: var(--labaj-surface);
+}
+
+.labaj-brand__logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.labaj-brand__text {
+  min-width: 0;
+  display: grid;
+  gap: 1px;
+  line-height: 1;
+}
+
+.labaj-brand__text strong {
+  font-size: 0.96rem;
+}
+
+.labaj-brand__text span {
+  color: var(--labaj-red);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.labaj-links {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.labaj-links::-webkit-scrollbar {
+  display: none;
+}
+
+.labaj-link {
+  min-height: 36px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  border-radius: var(--labaj-radius);
+  padding: 0 10px;
+  color: var(--labaj-muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.labaj-link:hover,
+.labaj-link[aria-current="page"] {
+  color: var(--labaj-ink);
+  background: rgba(7, 27, 49, 0.06);
+}
+
+.labaj-link--home {
+  color: var(--labaj-ink);
+  background: color-mix(in srgb, var(--labaj-gold), white 28%);
+}
+
+@media (max-width: 560px) {
+  .labaj-nav {
+    width: min(100% - 16px, 920px);
+    min-height: 58px;
+    gap: 8px;
+  }
+
+  .labaj-brand__logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .labaj-brand__text {
+    display: none;
+  }
+
+  .labaj-links {
+    justify-content: flex-start;
+  }
+
+  .labaj-link {
+    min-height: 34px;
+    padding: 0 7px;
+    font-size: 0.78rem;
+  }
+}

@@ -18,13 +18,14 @@
     <title>La baraque à jeux</title>
     <link rel="icon" type="image/png" href="la-baraque-a-jeux-lille-logo.png" />
     <link rel="apple-touch-icon" href="la-baraque-a-jeux-lille-logo.png" />
+    <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <nav class="site-nav" aria-label="Menu principal">
-        <a class="brand" href="#top" aria-label="La baraque à jeux, accueil">
-          <picture class="brand__logo">
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="../../" aria-label="La baraque à jeux, accueil">
+          <picture class="labaj-brand__logo">
             <source srcset="la-baraque-a-jeux-lille.webp" type="image/webp" />
             <img
               src="la-baraque-a-jeux-lille-logo.png"
@@ -33,15 +34,16 @@
               height="48"
             />
           </picture>
-          <span class="brand__text">
+          <span class="labaj-brand__text">
             <strong>La baraque à jeux</strong>
             <span>Lille</span>
           </span>
         </a>
 
-        <div class="site-nav__links">
-          <a href="#jeux">Jeux</a>
-          <a href="#a-propos">À propos</a>
+        <div class="labaj-links">
+          <a class="labaj-link" href="../le-mot-a-biloute/">Le mot à Biloute</a>
+          <a class="labaj-link" href="../lille-mele/">Lille-Mêle</a>
+          <a class="labaj-link" href="#a-propos">À propos</a>
         </div>
       </nav>
     </header>
@@ -114,6 +116,14 @@
               Merci de jouer, d'explorer, et de faire vivre cette petite baraque
               à jeux.
             </p>
+            <a
+              class="support-button"
+              href="https://ko-fi.com/C7V120JWOV"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Soutenez la baraque à jeux
+            </a>
           </div>
         </details>
       </section>

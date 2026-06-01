@@ -8,44 +8,26 @@
       content="Lille-Mêle, un puzzle quotidien de connexions lilloises."
     />
     <title>Lille-Mêle</title>
+    <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
     <style>
       :root {
-        color-scheme: light dark;
-        --bg: #f6f0e7;
-        --surface: #fffaf1;
+        color-scheme: light;
+        --bg: #fbf7ef;
+        --surface: #ffffff;
         --surface-strong: #ffffff;
-        --ink: #202226;
-        --muted: #686f76;
-        --line: #d9cfc2;
-        --primary: #b53730;
+        --ink: #071b31;
+        --muted: #59636e;
+        --line: #e3d9ca;
+        --primary: #d21920;
         --primary-ink: #ffffff;
         --green: #477a55;
-        --yellow: #d9b44a;
+        --yellow: #f3c642;
         --blue: #477eb3;
         --red: #b45644;
-        --teal: #26766f;
-        --shadow: 0 18px 55px rgba(47, 40, 31, 0.14);
+        --teal: #0b736f;
+        --shadow: 0 18px 55px rgba(7, 27, 49, 0.13);
         --radius: 8px;
         --tap: 46px;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #17191c;
-          --surface: #222528;
-          --surface-strong: #292d31;
-          --ink: #f2eee6;
-          --muted: #aeb4ba;
-          --line: #3c4248;
-          --primary: #d35b4f;
-          --primary-ink: #1f1110;
-          --green: #71a67e;
-          --yellow: #e4c867;
-          --blue: #76a5d8;
-          --red: #d47b66;
-          --teal: #63aba3;
-          --shadow: 0 18px 60px rgba(0, 0, 0, 0.3);
-        }
       }
 
       * {
@@ -60,8 +42,8 @@
         margin: 0;
         min-height: 100vh;
         background:
-          linear-gradient(90deg, rgba(181, 55, 48, 0.08) 1px, transparent 1px),
-          linear-gradient(rgba(38, 118, 111, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(210, 25, 32, 0.08) 1px, transparent 1px),
+          linear-gradient(rgba(11, 115, 111, 0.08) 1px, transparent 1px),
           var(--bg);
         background-size: 44px 44px;
         color: var(--ink);
@@ -76,7 +58,7 @@
 
       .app {
         width: min(1040px, 100%);
-        min-height: 100vh;
+        min-height: calc(100vh - 62px);
         margin: 0 auto;
         padding: 14px;
         display: grid;
@@ -494,7 +476,7 @@
         }
       }
 
-      @media (max-width: 380px) {
+      @media (max-width: 420px) {
         .app {
           padding: 10px;
         }
@@ -504,7 +486,8 @@
         }
 
         .tile {
-          min-height: 54px;
+          min-height: 44px;
+          padding: 5px;
         }
 
         .status-row,
@@ -548,6 +531,37 @@
     </style>
   </head>
   <body>
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
+          <picture class="labaj-brand__logo">
+            <source
+              srcset="../portail/la-baraque-a-jeux-lille.webp"
+              type="image/webp"
+            />
+            <img
+              src="../portail/la-baraque-a-jeux-lille-logo.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+          </picture>
+          <span class="labaj-brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Accueil</span>
+          </span>
+        </a>
+
+        <div class="labaj-links">
+          <a class="labaj-link labaj-link--home" href="../../">Accueil</a>
+          <a class="labaj-link" href="../le-mot-a-biloute/">Le mot à Biloute</a>
+          <a class="labaj-link" href="../lille-mele/" aria-current="page">
+            Lille-Mêle
+          </a>
+        </div>
+      </nav>
+    </header>
+
     <main class="app" id="app">
       <header class="topbar">
         <div class="brand">

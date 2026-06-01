@@ -287,6 +287,27 @@ h2 {
   line-height: 1.55;
 }
 
+.support-button {
+  width: fit-content;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 0 14px;
+  background: var(--red);
+  box-shadow: 3px 3px 0 var(--ink);
+  color: #fff;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.support-button:hover {
+  background: var(--ink);
+}
+
 .site-footer {
   width: min(920px, calc(100% - 24px));
   margin: 0 auto;
