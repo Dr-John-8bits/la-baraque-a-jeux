@@ -21,6 +21,7 @@ Le projet reste volontairement leger : applications statiques, pas de backend ob
 │   ├── game-utils/
 │   └── ui/
 ├── docs/
+│   ├── blog/
 │   └── editorial/
 └── scripts/
 ```
@@ -31,6 +32,7 @@ Le projet reste volontairement leger : applications statiques, pas de backend ob
 - `packages/corpus/` contiendra les donnees partagees, schemas et notes de validation.
 - `packages/ui/` contiendra les styles et composants communs quand les apps seront factorisees.
 - `packages/game-utils/` contiendra les helpers communs : date du jour, partage, stockage local, validation.
+- `docs/blog/NEWS.md` alimente la page publique `blog.html`.
 - `scripts/` contiendra les validateurs et outils de generation.
 
 Chaque jeu peut encore fonctionner de facon autonome pendant la phase de migration. La mutualisation se fera par petites etapes pour garder le prototype jouable.

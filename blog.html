@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Nouveautés, versions et notes de développement de La baraque à jeux."
+    />
+    <meta name="theme-color" content="#071b31" />
+    <meta property="og:title" content="Blog - La baraque à jeux" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Les nouveautés du portail et des mini-jeux lillois."
+    />
+    <meta property="og:image" content="apps/portail/la-baraque-a-jeux-lille.webp" />
+    <title>Blog - La baraque à jeux</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="apps/portail/la-baraque-a-jeux-lille-logo.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="apps/portail/la-baraque-a-jeux-lille-logo.png"
+    />
+    <link rel="stylesheet" href="packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="apps/portail/styles.css" />
+  </head>
+  <body>
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="./" aria-label="La baraque à jeux, accueil">
+          <picture class="labaj-brand__logo">
+            <source
+              srcset="apps/portail/la-baraque-a-jeux-lille.webp"
+              type="image/webp"
+            />
+            <img
+              src="apps/portail/la-baraque-a-jeux-lille-logo.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+          </picture>
+          <span class="labaj-brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Lille</span>
+          </span>
+        </a>
+
+        <div class="labaj-links">
+          <a class="labaj-link labaj-link--home" href="./">Accueil</a>
+          <a class="labaj-link" href="apps/le-mot-a-biloute/">Le mot à Biloute</a>
+          <a class="labaj-link" href="apps/lille-mele/">Lille-Mêle</a>
+          <a class="labaj-link" href="blog.html" aria-current="page">Blog</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell blog-shell">
+      <article class="blog-content" id="blogContent" aria-live="polite">
+        <p>Chargement des nouveautés...</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>La baraque à jeux par Dr. John &amp; Lady Em</p>
+    </footer>
+
+    <script>
+      const blogContent = document.getElementById("blogContent");
+
+      fetch("docs/blog/NEWS.md")
+        .then((response) => {
+          if (!response.ok) throw new Error("Fichier introuvable");
+          return response.text();
+        })
+        .then((markdown) => {
+          blogContent.innerHTML = renderMarkdown(markdown);
+        })
+        .catch(() => {
+          blogContent.innerHTML =
+            "<h1>Blog</h1><p>Les nouveautés sont momentanément indisponibles.</p>";
+        });
+
+      function renderMarkdown(markdown) {
+        const lines = markdown.split(/\r?\n/);
+        let html = "";
+        let listOpen = false;
+
+        for (const rawLine of lines) {
+          const line = rawLine.trim();
+
+          if (!line) {
+            if (listOpen) {
+              html += "</ul>";
+              listOpen = false;
+            }
+            continue;
+          }
+
+          const heading = line.match(/^(#{1,3})\s+(.+)$/);
+          if (heading) {
+            if (listOpen) {
+              html += "</ul>";
+              listOpen = false;
+            }
+            const level = heading[1].length;
+            html += `<h${level}>${renderInline(heading[2])}</h${level}>`;
+            continue;
+          }
+
+          if (line.startsWith("- ")) {
+            if (!listOpen) {
+              html += "<ul>";
+              listOpen = true;
+            }
+            html += `<li>${renderInline(line.slice(2))}</li>`;
+            continue;
+          }
+
+          if (listOpen) {
+            html += "</ul>";
+            listOpen = false;
+          }
+          html += `<p>${renderInline(line)}</p>`;
+        }
+
+        if (listOpen) html += "</ul>";
+        return html;
+      }
+
+      function renderInline(text) {
+        return escapeHtml(text)
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+          .replace(/`([^`]+)`/g, "<code>$1</code>");
+      }
+
+      function escapeHtml(text) {
+        return text
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+    </script>
+  </body>
+</html>
+

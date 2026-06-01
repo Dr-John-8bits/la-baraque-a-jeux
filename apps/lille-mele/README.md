@@ -2,33 +2,9 @@
 
 Lille-Mêle est un micro-jeu quotidien mobile-first : 16 cartes, 4 familles cachées, une grille lilloise à démêler avant la prochaine station.
 
-Version courante : `26.05.31.5`
+## Accès public
 
-## Jouer en local
-
-Le prototype actuel est autonome et ne nécessite aucune dépendance. Dans le monorepo, servir la racine puis ouvrir :
-
-```text
-http://127.0.0.1:48391/apps/lille-mele/
-```
-
-Depuis ce dossier, il peut aussi être ouvert directement :
-
-```text
-index.html
-```
-
-Ou lancer un petit serveur local :
-
-```bash
-python3 -m http.server 48391
-```
-
-Puis ouvrir :
-
-```text
-http://127.0.0.1:48391/index.html
-```
+Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu comme une webapp statique jouable directement dans un navigateur mobile.
 
 ## État du projet
 

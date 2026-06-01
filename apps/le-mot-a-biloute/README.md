@@ -4,23 +4,9 @@
 
 Le projet est volontairement simple à déployer : une webapp statique, sans compte, sans backend, maintenant intégrée au monorepo **La baraque à jeux Lille**.
 
-## Jouer
+## Accès public
 
-Dans le monorepo, servir la racine puis ouvrir :
-
-```text
-http://127.0.0.1:48391/apps/le-mot-a-biloute/
-```
-
-## Lancer localement
-
-Depuis ce dossier, le jeu peut aussi être ouvert directement dans le navigateur ou servi avec :
-
-```bash
-python3 -m http.server 48321
-```
-
-Puis ouvrir `http://127.0.0.1:48321/`.
+Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu comme une webapp statique jouable directement dans un navigateur mobile.
 
 ## Fonctionnalités
 
@@ -83,7 +69,3 @@ Le projet utilise une double licence :
 - les contenus, mots du jour, indices, textes, identité et assets originaux sont protégés tous droits réservés.
 
 Voir [LICENSE.md](LICENSE.md).
-
-## Version
-
-Version courante : `26.05.31.5`.

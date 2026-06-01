@@ -164,7 +164,6 @@ const els = {
   statWon: document.getElementById("statWon"),
   statStreak: document.getElementById("statStreak"),
   statBestScore: document.getElementById("statBestScore"),
-  versionLabel: document.getElementById("versionLabel"),
 };
 
 const todayId = getTodayId();
@@ -380,7 +379,6 @@ function render() {
   els.hintButton.textContent = `Indice -${POINTS_PER_EXTRA_HINT}`;
   els.hintButton.disabled = state.extraHintsUsed >= word.hints.length || state.result !== "playing";
   els.shareButton.disabled = state.result === "playing";
-  els.versionLabel.textContent = `v${APP_VERSION}`;
   renderBoard();
   renderKeyboard();
   if (state.result !== "playing") {

@@ -15,6 +15,7 @@ Regrouper le portail et les jeux dans un seul depot afin de mutualiser :
 | Dossier | Role |
 | --- | --- |
 | `index.html` | Point d'entree public servi par GitHub Pages. |
+| `blog.html` | Page publique des nouveautes et versions. |
 | `apps/portail` | Version applicative/source du portail. |
 | `apps/le-mot-a-biloute` | Jeu quotidien de mot local. |
 | `apps/lille-mele` | Jeu quotidien de familles et connexions locales. |
@@ -28,6 +29,12 @@ Les dossiers de `packages/` sont volontairement initialises comme espaces de tra
 | `packages/corpus` | Donnees sources, schemas, conventions editoriales et validations. |
 | `packages/ui` | Design tokens, styles communs, composants UI. |
 | `packages/game-utils` | Fonctions communes : dates, stockage local, partage, scoring generique. |
+
+## Contenus mutualises
+
+| Fichier | Role |
+| --- | --- |
+| `docs/blog/NEWS.md` | Source Markdown du blog public. |
 
 ## Strategie technique
 
@@ -50,6 +57,7 @@ Phase suivante :
 Le deploiement GitHub Pages peut servir directement la racine du depot :
 
 - `index.html` affiche le portail ;
+- `blog.html` affiche les nouveautes depuis `docs/blog/NEWS.md` ;
 - `apps/le-mot-a-biloute/` contient Le mot a Biloute ;
 - `apps/lille-mele/` contient Lille-Mele.
 
