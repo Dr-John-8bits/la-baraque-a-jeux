@@ -1,0 +1,1417 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Lille-Mêle, un puzzle quotidien de connexions lilloises."
+    />
+    <title>Lille-Mêle</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f0e7;
+        --surface: #fffaf1;
+        --surface-strong: #ffffff;
+        --ink: #202226;
+        --muted: #686f76;
+        --line: #d9cfc2;
+        --primary: #b53730;
+        --primary-ink: #ffffff;
+        --green: #477a55;
+        --yellow: #d9b44a;
+        --blue: #477eb3;
+        --red: #b45644;
+        --teal: #26766f;
+        --shadow: 0 18px 55px rgba(47, 40, 31, 0.14);
+        --radius: 8px;
+        --tap: 46px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #17191c;
+          --surface: #222528;
+          --surface-strong: #292d31;
+          --ink: #f2eee6;
+          --muted: #aeb4ba;
+          --line: #3c4248;
+          --primary: #d35b4f;
+          --primary-ink: #1f1110;
+          --green: #71a67e;
+          --yellow: #e4c867;
+          --blue: #76a5d8;
+          --red: #d47b66;
+          --teal: #63aba3;
+          --shadow: 0 18px 60px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(90deg, rgba(181, 55, 48, 0.08) 1px, transparent 1px),
+          linear-gradient(rgba(38, 118, 111, 0.08) 1px, transparent 1px),
+          var(--bg);
+        background-size: 44px 44px;
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      .app {
+        width: min(1040px, 100%);
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 14px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 12px;
+        padding: 10px 0 0;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.65rem, 7vw, 3.15rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 7px 0 0;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .top-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .icon-button,
+      .action-button,
+      .tile {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        color: var(--ink);
+      }
+
+      .icon-button {
+        width: var(--tap);
+        height: var(--tap);
+        display: inline-grid;
+        place-items: center;
+        cursor: pointer;
+      }
+
+      .icon-button:focus-visible,
+      .action-button:focus-visible,
+      .tile:focus-visible,
+      .result button:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--primary), white 35%);
+        outline-offset: 2px;
+      }
+
+      .status-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .status-pill {
+        min-height: 50px;
+        padding: 8px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+
+      .status-label {
+        display: block;
+        color: var(--muted);
+        font-size: 0.74rem;
+        text-transform: uppercase;
+      }
+
+      .status-value {
+        display: block;
+        margin-top: 3px;
+        font-size: clamp(0.96rem, 3.6vw, 1.05rem);
+        font-weight: 800;
+      }
+
+      .game-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .found-groups {
+        display: grid;
+        gap: 8px;
+      }
+
+      .found-group {
+        padding: 12px;
+        border-radius: var(--radius);
+        color: #fff;
+      }
+
+      .found-group.easy {
+        background: var(--green);
+      }
+
+      .found-group.medium {
+        background: #a47a16;
+      }
+
+      .found-group.hard {
+        background: var(--blue);
+      }
+
+      .found-group.tricky {
+        background: var(--red);
+      }
+
+      .found-title {
+        display: block;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+
+      .found-items {
+        display: block;
+        margin-top: 5px;
+        font-weight: 650;
+      }
+
+      .board {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .tile {
+        min-width: 0;
+        aspect-ratio: 1.82 / 1;
+        min-height: 56px;
+        padding: 6px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        font-weight: 820;
+        line-height: 1.04;
+        cursor: pointer;
+        user-select: none;
+        transition:
+          transform 120ms ease,
+          border-color 120ms ease,
+          background 120ms ease;
+        overflow: hidden;
+      }
+
+      .tile-label {
+        display: block;
+        max-width: 100%;
+        line-height: 1.05;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+      }
+
+      .tile-label.break-anywhere {
+        overflow-wrap: anywhere;
+      }
+
+      .tile:hover {
+        transform: translateY(-1px);
+      }
+
+      .tile.selected {
+        border-color: var(--ink);
+        background: color-mix(in srgb, var(--teal), var(--surface) 70%);
+      }
+
+      .tile.feedback-wrong {
+        border-color: var(--primary);
+        background: color-mix(in srgb, var(--primary), var(--surface) 72%);
+        animation: wrong-bump 360ms ease-in-out 2;
+      }
+
+      .tile.feedback-one-away {
+        border-color: var(--yellow);
+        background: color-mix(in srgb, var(--yellow), var(--surface) 58%);
+        animation: near-pulse 520ms ease-in-out 1;
+      }
+
+      .tile:disabled {
+        cursor: not-allowed;
+        opacity: 0.45;
+        transform: none;
+      }
+
+      .tile.feedback-wrong:disabled,
+      .tile.feedback-one-away:disabled {
+        opacity: 1;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.2fr;
+        gap: 8px;
+        position: sticky;
+        bottom: 10px;
+        z-index: 3;
+      }
+
+      .action-button {
+        min-height: 44px;
+        padding: 0 10px;
+        font-weight: 850;
+        cursor: pointer;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      .action-button.primary {
+        border-color: color-mix(in srgb, var(--primary), black 18%);
+        background: var(--primary);
+        color: var(--primary-ink);
+      }
+
+      .action-button:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+
+      .message {
+        min-height: 44px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        color: var(--ink);
+        font-weight: 720;
+      }
+
+      .message.good {
+        border-color: var(--green);
+        background: color-mix(in srgb, var(--green), var(--surface) 84%);
+      }
+
+      .message.near {
+        border-color: var(--yellow);
+        background: color-mix(in srgb, var(--yellow), var(--surface) 78%);
+      }
+
+      .message.wrong {
+        border-color: var(--primary);
+        background: color-mix(in srgb, var(--primary), var(--surface) 82%);
+      }
+
+      .result {
+        display: none;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface-strong);
+        box-shadow: var(--shadow);
+      }
+
+      .result.visible {
+        display: block;
+      }
+
+      .result h2,
+      .panel h2 {
+        margin: 0 0 8px;
+        font-size: 1.35rem;
+      }
+
+      .result p,
+      .panel p {
+        margin: 7px 0;
+        color: var(--muted);
+      }
+
+      .result-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .result-actions button,
+      .panel button {
+        min-height: var(--tap);
+        padding: 0 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        color: var(--ink);
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .bonus {
+        margin-top: 12px;
+        padding: 12px;
+        border-left: 5px solid var(--teal);
+        background: color-mix(in srgb, var(--surface), var(--teal) 10%);
+        border-radius: var(--radius);
+      }
+
+      .bonus-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .panel {
+        display: none;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+
+      .panel.visible {
+        display: block;
+      }
+
+      .help-list {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+
+      .help-list li {
+        margin: 7px 0;
+      }
+
+      .source-list {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+
+      .source-list li {
+        margin: 7px 0;
+      }
+
+      .source-list a {
+        color: var(--primary);
+        font-weight: 760;
+      }
+
+      .fineprint {
+        padding: 8px 0 18px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .toast {
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        z-index: 10;
+        display: none;
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 12px;
+        border-radius: var(--radius);
+        background: var(--ink);
+        color: var(--bg);
+        text-align: center;
+        font-weight: 800;
+      }
+
+      .toast.visible {
+        display: block;
+      }
+
+      @media (min-width: 780px) {
+        .app {
+          padding: 22px;
+          grid-template-columns: 0.82fr 1.18fr;
+          align-content: start;
+          gap: 10px;
+        }
+
+        .topbar,
+        .status-row,
+        .result,
+        .panel,
+        .fineprint {
+          grid-column: 1 / -1;
+        }
+
+        .game-layout {
+          grid-column: 2;
+        }
+
+        .found-groups {
+          grid-column: 1;
+          align-content: start;
+        }
+
+        .tile {
+          aspect-ratio: 2.18 / 1;
+          min-height: 56px;
+          padding: 8px;
+        }
+
+        .actions {
+          position: static;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .app {
+          padding: 10px;
+        }
+
+        .board {
+          gap: 6px;
+        }
+
+        .tile {
+          min-height: 54px;
+        }
+
+        .status-row,
+        .actions {
+          gap: 6px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+          animation: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      @keyframes wrong-bump {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-5px);
+        }
+        75% {
+          transform: translateX(5px);
+        }
+      }
+
+      @keyframes near-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        45% {
+          transform: scale(1.035);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app" id="app">
+      <header class="topbar">
+        <div class="brand">
+          <h1>Lille-Mêle</h1>
+          <p class="subtitle" id="intro">La grille lilloise du jour.</p>
+        </div>
+        <div class="top-actions" aria-label="Navigation">
+          <button class="icon-button" type="button" id="rulesButton" title="Règles">
+            ?
+          </button>
+          <button class="icon-button" type="button" id="sourcesButton" title="Sources">
+            i
+          </button>
+        </div>
+      </header>
+
+      <section class="status-row" aria-label="État de la partie">
+        <div class="status-pill">
+          <span class="status-label">Aujourd'hui</span>
+          <span class="status-value" id="puzzleDate">31 mai</span>
+        </div>
+        <div class="status-pill">
+          <span class="status-label">Erreurs</span>
+          <span class="status-value" id="mistakes">0 / 4</span>
+        </div>
+        <div class="status-pill">
+          <span class="status-label">Série</span>
+          <span class="status-value" id="streak">0</span>
+        </div>
+      </section>
+
+      <section class="found-groups" id="foundGroups" aria-label="Groupes trouvés"></section>
+
+      <section class="game-layout" aria-label="Jeu">
+        <div class="board" id="board" aria-label="Cartes à regrouper"></div>
+        <div class="message" id="message" aria-live="polite">Sélectionne 4 cartes.</div>
+        <div class="actions">
+          <button class="action-button" type="button" id="clearButton">Effacer</button>
+          <button class="action-button" type="button" id="shuffleButton">Mélanger</button>
+          <button class="action-button primary" type="button" id="submitButton" disabled>
+            Valider
+          </button>
+        </div>
+      </section>
+
+      <section class="result" id="result" aria-live="polite"></section>
+
+      <section class="panel" id="rulesPanel">
+        <h2>Aide</h2>
+        <p>Le but : retrouver 4 familles de 4 cartes avant d'avoir fait 4 erreurs.</p>
+        <ul class="help-list">
+          <li>Sélectionne 4 cartes, puis valide.</li>
+          <li>Une bonne famille disparaît de la grille et révèle son titre.</li>
+          <li>Une mauvaise tentative ajoute une erreur.</li>
+          <li>Si 3 cartes sont bonnes dans ta sélection, le jeu te signale que tu es tout près.</li>
+        </ul>
+        <p>Les associations peuvent porter sur des stations de métro, communes, quartiers, lieux culturels, monuments, spécialités locales, mots régionaux, événements, noms en commun ou détails historiques.</p>
+        <p>Un bon groupe doit avoir une logique précise : même ligne, même ville, même thème, même type de lieu, même famille de mots ou même clin d'œil local.</p>
+      </section>
+
+      <section class="panel" id="sourcesPanel">
+        <h2>Sources</h2>
+        <p>Première base de contenus sourcée, à consolider avant lancement public.</p>
+        <ul class="source-list" id="sourceList"></ul>
+      </section>
+
+      <p class="fineprint" id="credits">Lille-Mêle par Dr. John et Lady Em · v26.05.31.5</p>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+      const MAX_MISTAKES = 4;
+      const STORAGE_PREFIX = "lillemele.v1.";
+      const APP_VERSION = "26.05.31.5";
+
+      const sources = [
+        {
+          label: "Ilévia — métro ligne 1",
+          url: "https://www.ilevia.fr/cms/institutionnel/metro-ligne-1",
+        },
+        {
+          label: "Ilévia — métro ligne 2",
+          url: "https://www.ilevia.fr/cms/institutionnel/metro-ligne-2",
+        },
+        {
+          label: "GTFS Ilévia — data.gouv.fr",
+          url: "https://www.data.gouv.fr/datasets/ilevia-localisation-des-arrets-bus-metro-et-tram-gtfs",
+        },
+        {
+          label: "Ville de Lille — quartiers et patrimoine",
+          url: "https://www.lille.fr/",
+        },
+        {
+          label: "Ville de Lille — Grand'Place",
+          url: "https://www.lille.fr/Lille-Centre/Decouvrir-le-quartier/Culture-loisirs-et-patrimoine/La-Grand-Place",
+        },
+        {
+          label: "Ville de Lille — Braderie",
+          url: "https://www.lille.fr/Braderie-de-Lille/Histoire-de-la-Braderie2/La-Braderie-en-chiffres",
+        },
+        {
+          label: "MEL — territoire métropolitain",
+          url: "https://www.lillemetropole.fr/territoire-de-la-mel",
+        },
+        {
+          label: "data.gouv.fr — monuments historiques Lille-Hellemmes-Lomme",
+          url: "https://www.data.gouv.fr/datasets/665fe7466b10a87cf49fc8fc/",
+        },
+        {
+          label: "Hello Lille — lieux culturels et tourisme",
+          url: "https://hellolille.eu",
+        },
+      ];
+
+      const puzzles = [
+        {
+          id: "prototype-001",
+          number: 1,
+          title: "Première rame",
+          intro: "Connecte les mots avant la prochaine station.",
+          finalNote:
+            "La ligne 1 lilloise a été inaugurée en 1983 avec la technologie VAL. Pas mal pour une ville qui fait souvent semblant de ne pas se vanter.",
+          bonus: {
+            question:
+              "Le métro de Lille a été le premier métro automatique urbain au monde.",
+            answer: true,
+            explanation:
+              "Vrai. La ligne 1 utilise la technologie VAL, inaugurée à Lille en 1983.",
+          },
+          groups: [
+            {
+              id: "ligne-1-lille",
+              title: "Stations de la ligne 1",
+              difficulty: "easy",
+              items: ["Rihour", "Caulier", "Fives", "Marbrerie"],
+              note: "Quatre arrêts de la ligne 1 du métro lillois.",
+            },
+            {
+              id: "ligne-2-ouest",
+              title: "Stations de la ligne 2",
+              difficulty: "medium",
+              items: ["Montebello", "Cormontaigne", "Canteleu", "Mitterie"],
+              note: "Ligne 2, ambiance ouest lillois et correspondances du quotidien.",
+            },
+            {
+              id: "quartiers-lille",
+              title: "Quartiers lillois",
+              difficulty: "easy",
+              items: ["Vieux-Lille", "Lille-Sud", "Vauban-Esquermes", "Faubourg de Béthune"],
+              note: "Lille ne tient pas dans une seule carte postale.",
+            },
+            {
+              id: "specialites-nord",
+              title: "Spécialités du Nord",
+              difficulty: "medium",
+              items: ["Welsh", "Carbonnade", "Potjevleesch", "Merveilleux"],
+              note: "Une catégorie qui peut donner faim ou lancer un débat.",
+            },
+          ],
+        },
+        {
+          id: "prototype-002",
+          number: 2,
+          title: "MEL mais pas seulement",
+          intro: "Connecte les mots avant la prochaine station.",
+          finalNote:
+            "La MEL rassemble 95 communes. Lille-Mêle va donc avoir de quoi faire avant de tourner en rond.",
+          bonus: {
+            question: "La Métropole Européenne de Lille compte 95 communes.",
+            answer: true,
+            explanation:
+              "Vrai. La MEL indique 95 communes sur son territoire.",
+          },
+          groups: [
+            {
+              id: "communes-mel",
+              title: "Communes de la MEL",
+              difficulty: "easy",
+              items: ["Roubaix", "Tourcoing", "Croix", "Wasquehal"],
+              note: "La métropole ne s'arrête pas au périphérique mental de Lille.",
+            },
+            {
+              id: "lieux-culturels-mel",
+              title: "Lieux culturels métropolitains",
+              difficulty: "medium",
+              items: ["La Piscine", "La Condition Publique", "Le Fresnoy", "LaM"],
+              note: "La culture locale circule très bien hors de l'hypercentre.",
+            },
+            {
+              id: "braderie",
+              title: "Braderie de Lille",
+              difficulty: "medium",
+              items: ["Moules", "Frites", "Brocante", "Bradeux"],
+              note: "Lille sait transformer un trottoir en épopée.",
+            },
+            {
+              id: "eau-fortifs",
+              title: "Eau et fortifications",
+              difficulty: "tricky",
+              items: ["Deûle", "Citadelle", "Vauban", "Esplanade"],
+              note: "La ville s'est aussi construite avec de l'eau, des murs et beaucoup de plans.",
+            },
+          ],
+        },
+        {
+          id: "prototype-003",
+          number: 3,
+          title: "Grand'Place, grandes manœuvres",
+          intro: "Connecte les mots avant la prochaine station.",
+          finalNote:
+            "La Grand'Place est devenue piétonne en 2026. Les pavés respirent, les mollets aussi.",
+          bonus: {
+            question: "La Vieille Bourse est composée de 24 maisons autour d'une cour.",
+            answer: true,
+            explanation:
+              "Vrai. La Ville de Lille décrit ce programme architectural autour d'une cour intérieure publique.",
+          },
+          groups: [
+            {
+              id: "grand-place",
+              title: "Autour de la Grand'Place",
+              difficulty: "medium",
+              items: ["Furet du Nord", "Vieille Bourse", "Grand'Garde", "Théâtre du Nord"],
+              note: "Quatre repères du cœur patrimonial lillois.",
+            },
+            {
+              id: "ligne-1-va",
+              title: "Stations ligne 1 à Villeneuve-d'Ascq",
+              difficulty: "hard",
+              items: ["4 Cantons", "Cité Scientifique", "Triolo", "Pont de Bois"],
+              note: "La ligne 1 file jusqu'au campus et au stade.",
+            },
+            {
+              id: "noms-composes",
+              title: "Communes aux noms en plusieurs morceaux",
+              difficulty: "medium",
+              items: ["Marcq-en-Barœul", "Mons-en-Barœul", "Villeneuve-d'Ascq", "Quesnoy-sur-Deûle"],
+              note: "Le trait d'union, ce sport métropolitain.",
+            },
+            {
+              id: "musees-lieux",
+              title: "Musées ou lieux de visite",
+              difficulty: "easy",
+              items: ["Palais des Beaux-Arts", "Villa Cavrois", "La Piscine", "Musée d'Histoire Naturelle"],
+              note: "De quoi sortir sans appeler ça une sortie scolaire.",
+            },
+          ],
+        },
+        {
+          id: "prototype-004",
+          number: 4,
+          title: "Portes, quais et marchés",
+          intro: "Connecte les mots avant la prochaine station.",
+          finalNote:
+            "Les noms de stations racontent souvent des portes, des hôpitaux, des quartiers et de vieux chemins. La carte parle, mais assez vite.",
+          bonus: {
+            question: "La ligne 2 relie Lomme à Tourcoing en moins d'une heure.",
+            answer: true,
+            explanation:
+              "Vrai. Ilévia présente la ligne 2 comme une liaison entre Lomme et Tourcoing en moins d'une heure.",
+          },
+          groups: [
+            {
+              id: "stations-porte",
+              title: "Stations contenant Porte",
+              difficulty: "easy",
+              items: ["Porte d'Arras", "Porte de Douai", "Porte des Postes", "Porte de Valenciennes"],
+              note: "Lille a gardé de quoi faire entrer les pièges.",
+            },
+            {
+              id: "marches-places",
+              title: "Marchés et places",
+              difficulty: "medium",
+              items: ["Wazemmes", "Place du Concert", "Sébastopol", "Grand'Place"],
+              note: "Ça discute, ça circule, ça chine ou ça attend quelqu'un.",
+            },
+            {
+              id: "campus-savoirs",
+              title: "Campus et pôles d'innovation",
+              difficulty: "hard",
+              items: ["Cité Scientifique", "Pont de Bois", "Euratechnologies", "EuraSanté"],
+              note: "Des lieux où l'on révise, code, débat ou fait semblant.",
+            },
+            {
+              id: "mots-nord",
+              title: "Mots et saveurs du Nord",
+              difficulty: "tricky",
+              items: ["Chicon", "Drache", "Wassingue", "Maroilles"],
+              note: "À manier avec parcimonie, mais pas à bannir.",
+            },
+          ],
+        },
+      ];
+
+      const els = {
+        intro: document.querySelector("#intro"),
+        puzzleDate: document.querySelector("#puzzleDate"),
+        mistakes: document.querySelector("#mistakes"),
+        streak: document.querySelector("#streak"),
+        foundGroups: document.querySelector("#foundGroups"),
+        board: document.querySelector("#board"),
+        message: document.querySelector("#message"),
+        actions: document.querySelector(".actions"),
+        clearButton: document.querySelector("#clearButton"),
+        shuffleButton: document.querySelector("#shuffleButton"),
+        submitButton: document.querySelector("#submitButton"),
+        result: document.querySelector("#result"),
+        credits: document.querySelector("#credits"),
+        rulesButton: document.querySelector("#rulesButton"),
+        sourcesButton: document.querySelector("#sourcesButton"),
+        rulesPanel: document.querySelector("#rulesPanel"),
+        sourcesPanel: document.querySelector("#sourcesPanel"),
+        sourceList: document.querySelector("#sourceList"),
+        toast: document.querySelector("#toast"),
+      };
+
+      const today = new Date();
+      const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const dayIndex = Math.floor(startOfToday.getTime() / 86400000);
+      const puzzle = puzzles[dayIndex % puzzles.length];
+      const groupByItem = new Map();
+      puzzle.groups.forEach((group) => {
+        group.items.forEach((item) => groupByItem.set(item, group));
+      });
+
+      let state = loadState();
+      let visualFeedback = { items: [], type: "" };
+      let visualFeedbackTimer = 0;
+      let messageTone = "";
+      let toastTimer = 0;
+
+      function makeInitialState() {
+        return {
+          puzzleId: puzzle.id,
+          selectedItems: [],
+          foundGroupIds: [],
+          mistakes: 0,
+          status: "in_progress",
+          attempts: [],
+          itemOrder: seededShuffle(
+            puzzle.groups.flatMap((group) => group.items),
+            hashString(puzzle.id)
+          ),
+          completedRecorded: false,
+          bonusAnswered: null,
+        };
+      }
+
+      function loadState() {
+        const key = getStateKey();
+        try {
+          const saved = JSON.parse(localStorage.getItem(key) || "null");
+          if (saved && saved.puzzleId === puzzle.id && isStateCompatible(saved)) return saved;
+        } catch (error) {
+          console.warn("State parse failed", error);
+        }
+        return makeInitialState();
+      }
+
+      function isStateCompatible(saved) {
+        const expectedItems = new Set(puzzle.groups.flatMap((group) => group.items));
+        const savedItems = new Set(saved.itemOrder || []);
+        if (expectedItems.size !== savedItems.size) return false;
+        for (const item of expectedItems) {
+          if (!savedItems.has(item)) return false;
+        }
+        return true;
+      }
+
+      function saveState() {
+        localStorage.setItem(getStateKey(), JSON.stringify(state));
+      }
+
+      function getStateKey() {
+        return `${STORAGE_PREFIX}state.${puzzle.id}`;
+      }
+
+      function getStats() {
+        try {
+          return JSON.parse(localStorage.getItem(`${STORAGE_PREFIX}stats`) || "null") || {
+            played: 0,
+            won: 0,
+            currentStreak: 0,
+            bestStreak: 0,
+            lastCompletedPuzzleId: "",
+          };
+        } catch {
+          return {
+            played: 0,
+            won: 0,
+            currentStreak: 0,
+            bestStreak: 0,
+            lastCompletedPuzzleId: "",
+          };
+        }
+      }
+
+      function setStats(stats) {
+        localStorage.setItem(`${STORAGE_PREFIX}stats`, JSON.stringify(stats));
+      }
+
+      function updateStatsIfNeeded() {
+        if (state.completedRecorded || !["won", "lost"].includes(state.status)) return;
+        const stats = getStats();
+        stats.played += 1;
+        if (state.status === "won") {
+          stats.won += 1;
+          stats.currentStreak =
+            stats.lastCompletedPuzzleId && stats.lastCompletedPuzzleId !== puzzle.id
+              ? stats.currentStreak + 1
+              : Math.max(1, stats.currentStreak);
+          stats.bestStreak = Math.max(stats.bestStreak, stats.currentStreak);
+        } else {
+          stats.currentStreak = 0;
+        }
+        stats.lastCompletedPuzzleId = puzzle.id;
+        state.completedRecorded = true;
+        setStats(stats);
+        saveState();
+      }
+
+      function render() {
+        if (state.status === "won" || state.status === "lost") {
+          updateStatsIfNeeded();
+        }
+        const stats = getStats();
+        els.intro.textContent = puzzle.intro;
+        els.puzzleDate.textContent = formatPuzzleDate(today);
+        els.mistakes.textContent = `${state.mistakes} / ${MAX_MISTAKES}`;
+        els.streak.textContent = String(stats.currentStreak || 0);
+        els.credits.textContent = `Lille-Mêle par Dr. John et Lady Em · v${APP_VERSION}`;
+        els.message.className = `message ${messageTone}`.trim();
+        const feedbackActive = visualFeedback.items.length > 0;
+        els.actions.hidden = state.status !== "in_progress";
+        els.submitButton.disabled =
+          state.selectedItems.length !== 4 || state.status !== "in_progress" || feedbackActive;
+        els.clearButton.disabled =
+          state.selectedItems.length === 0 || state.status !== "in_progress" || feedbackActive;
+        els.shuffleButton.disabled = state.status !== "in_progress" || feedbackActive;
+        renderFoundGroups();
+        renderBoard();
+        renderResult();
+        saveState();
+      }
+
+      function renderFoundGroups() {
+        els.foundGroups.innerHTML = "";
+        state.foundGroupIds.forEach((groupId) => {
+          const group = puzzle.groups.find((candidate) => candidate.id === groupId);
+          if (!group) return;
+          els.foundGroups.appendChild(createGroupNode(group));
+        });
+        if (state.foundGroupIds.length === 0) {
+          const empty = document.createElement("div");
+          empty.className = "message";
+          empty.textContent = "Aucun groupe trouvé pour l'instant.";
+          els.foundGroups.appendChild(empty);
+        }
+      }
+
+      function createGroupNode(group) {
+        const node = document.createElement("article");
+        node.className = `found-group ${group.difficulty}`;
+        node.innerHTML = `
+          <span class="found-title">${escapeHtml(group.title)}</span>
+          <span class="found-items">${group.items.map(escapeHtml).join(" · ")}</span>
+        `;
+        return node;
+      }
+
+      function renderBoard() {
+        els.board.innerHTML = "";
+        const foundItems = new Set(
+          puzzle.groups
+            .filter((group) => state.foundGroupIds.includes(group.id))
+            .flatMap((group) => group.items)
+        );
+        const activeItems = state.itemOrder.filter((item) => !foundItems.has(item));
+
+        activeItems.forEach((item) => {
+          const tile = document.createElement("button");
+          const isSelected = state.selectedItems.includes(item);
+          const feedbackType = visualFeedback.items.includes(item) ? visualFeedback.type : "";
+          const label = document.createElement("span");
+          tile.type = "button";
+          tile.className = ["tile", isSelected ? "selected" : "", feedbackType ? `feedback-${feedbackType}` : ""]
+            .filter(Boolean)
+            .join(" ");
+          label.className = "tile-label";
+          label.textContent = item;
+          tile.appendChild(label);
+          tile.setAttribute("aria-pressed", String(isSelected));
+          tile.disabled =
+            state.status !== "in_progress" ||
+            visualFeedback.items.length > 0 ||
+            (!isSelected && state.selectedItems.length >= 4);
+          tile.addEventListener("click", () => toggleItem(item));
+          els.board.appendChild(tile);
+          fitTileLabel(tile, label);
+        });
+      }
+
+      function renderResult() {
+        const finished = state.status === "won" || state.status === "lost";
+        els.result.classList.toggle("visible", finished);
+        if (!finished) {
+          els.result.innerHTML = "";
+          return;
+        }
+
+        const won = state.status === "won";
+        const allGroups = puzzle.groups
+          .map((group) => createGroupSummary(group, !state.foundGroupIds.includes(group.id)))
+          .join("");
+        const bonusHtml = won ? createBonusHtml() : "";
+        els.result.innerHTML = `
+          <h2>${won ? "Grille démêlée." : "Perdu à Porte des Postes."}</h2>
+          <p>${won ? puzzle.finalNote : "La grille t'a eu. Elle avait pourtant l'air sympa."}</p>
+          <p><strong>Erreurs :</strong> ${state.mistakes} / ${MAX_MISTAKES}</p>
+          <div class="found-groups">${allGroups}</div>
+          ${bonusHtml}
+          <div class="result-actions">
+            <button type="button" id="shareButton">Partager</button>
+            <button type="button" id="resetButton">Rejouer la grille</button>
+          </div>
+        `;
+        document.querySelector("#shareButton")?.addEventListener("click", shareResult);
+        document.querySelector("#resetButton")?.addEventListener("click", resetPuzzle);
+        document.querySelectorAll("[data-bonus-answer]").forEach((button) => {
+          button.addEventListener("click", () => answerBonus(button.dataset.bonusAnswer === "true"));
+        });
+      }
+
+      function createGroupSummary(group, revealed) {
+        const nodeClass = `found-group ${group.difficulty}`;
+        const prefix = revealed ? "Révélé : " : "";
+        return `
+          <article class="${nodeClass}">
+            <span class="found-title">${prefix}${escapeHtml(group.title)}</span>
+            <span class="found-items">${group.items.map(escapeHtml).join(" · ")}</span>
+          </article>
+        `;
+      }
+
+      function createBonusHtml() {
+        const bonus = puzzle.bonus;
+        if (!bonus) return "";
+        const answered = state.bonusAnswered !== null;
+        const correct = state.bonusAnswered === bonus.answer;
+        return `
+          <div class="bonus">
+            <strong>P'tit Vrai ou Bidon ?</strong>
+            <p>${escapeHtml(bonus.question)}</p>
+            ${
+              answered
+                ? `<p><strong>${correct ? "Vrai bon." : "Raté."}</strong> ${escapeHtml(bonus.explanation)}</p>`
+                : `<div class="bonus-options">
+                    <button type="button" data-bonus-answer="true">Vrai</button>
+                    <button type="button" data-bonus-answer="false">Bidon</button>
+                  </div>`
+            }
+          </div>
+        `;
+      }
+
+      function toggleItem(item) {
+        if (state.status !== "in_progress") return;
+        if (state.selectedItems.includes(item)) {
+          state.selectedItems = state.selectedItems.filter((selected) => selected !== item);
+        } else if (state.selectedItems.length < 4) {
+          state.selectedItems.push(item);
+        }
+        render();
+      }
+
+      function submitSelection() {
+        if (state.selectedItems.length !== 4 || state.status !== "in_progress") return;
+        const selected = [...state.selectedItems];
+        const foundGroup = puzzle.groups.find((group) => {
+          if (state.foundGroupIds.includes(group.id)) return false;
+          return group.items.every((item) => selected.includes(item));
+        });
+
+        if (foundGroup) {
+          state.foundGroupIds.push(foundGroup.id);
+          state.attempts.push({
+            items: selected,
+            result: "correct",
+            groupId: foundGroup.id,
+            createdAt: new Date().toISOString(),
+          });
+          state.selectedItems = [];
+          messageTone = "good";
+          els.message.textContent = foundGroup.note || "Bonne correspondance.";
+          if (state.foundGroupIds.length === puzzle.groups.length) {
+            state.status = "won";
+            els.message.textContent = "Grille démêlée. Tu peux descendre à la prochaine.";
+          }
+          render();
+          return;
+        }
+
+        const overlap = getMaxOverlap(selected);
+        state.mistakes += 1;
+        state.attempts.push({
+          items: selected,
+          result: overlap === 3 ? "one_away" : "incorrect",
+          createdAt: new Date().toISOString(),
+        });
+        state.selectedItems = [];
+
+        if (state.mistakes >= MAX_MISTAKES) {
+          state.status = "lost";
+          messageTone = "wrong";
+          showSelectionFeedback(selected, "wrong");
+          els.message.textContent = "Trop d'erreurs. La rame est repartie.";
+        } else if (overlap === 3) {
+          messageTone = "near";
+          showSelectionFeedback(selected, "one-away");
+          els.message.textContent = "Trois sur quatre. Une carte fraude dans la rame.";
+        } else {
+          messageTone = "wrong";
+          showSelectionFeedback(selected, "wrong");
+          els.message.textContent = "Mauvaise correspondance.";
+        }
+        render();
+      }
+
+      function showSelectionFeedback(items, type) {
+        clearTimeout(visualFeedbackTimer);
+        visualFeedback = { items, type };
+        visualFeedbackTimer = setTimeout(() => {
+          visualFeedback = { items: [], type: "" };
+          render();
+        }, 760);
+      }
+
+      function getMaxOverlap(selected) {
+        return Math.max(
+          ...puzzle.groups
+            .filter((group) => !state.foundGroupIds.includes(group.id))
+            .map((group) => group.items.filter((item) => selected.includes(item)).length)
+        );
+      }
+
+      function clearSelection() {
+        state.selectedItems = [];
+        messageTone = "";
+        els.message.textContent = "Sélection effacée.";
+        render();
+      }
+
+      function shuffleActiveItems() {
+        const foundItems = new Set(
+          puzzle.groups
+            .filter((group) => state.foundGroupIds.includes(group.id))
+            .flatMap((group) => group.items)
+        );
+        const fixed = state.itemOrder.filter((item) => foundItems.has(item));
+        const active = state.itemOrder.filter((item) => !foundItems.has(item));
+        state.itemOrder = [...fixed, ...seededShuffle(active, Date.now() % 2147483647)];
+        messageTone = "";
+        els.message.textContent = "Cartes mélangées.";
+        render();
+      }
+
+      function resetPuzzle() {
+        state = makeInitialState();
+        visualFeedback = { items: [], type: "" };
+        messageTone = "";
+        els.message.textContent = "Grille réinitialisée.";
+        render();
+      }
+
+      function answerBonus(value) {
+        state.bonusAnswered = value;
+        saveState();
+        render();
+      }
+
+      async function shareResult() {
+        const text = buildShareText();
+        try {
+          if (navigator.share) {
+            await navigator.share({ text });
+          } else {
+            await navigator.clipboard.writeText(text);
+            showToast("Résultat copié.");
+          }
+        } catch (error) {
+          console.warn("Share failed", error);
+        }
+      }
+
+      function buildShareText() {
+        const lines = [`Lille-Mêle #${puzzle.number}`];
+        const colorByGroup = new Map([
+          ["easy", "🟩"],
+          ["medium", "🟨"],
+          ["hard", "🟦"],
+          ["tricky", "🟥"],
+        ]);
+        state.foundGroupIds.forEach((groupId) => {
+          const group = puzzle.groups.find((candidate) => candidate.id === groupId);
+          lines.push((colorByGroup.get(group?.difficulty) || "⬜").repeat(4));
+        });
+        while (lines.length < 5) lines.push("⬛⬛⬛⬛");
+        lines.push(`Erreurs : ${state.mistakes}/${MAX_MISTAKES}`);
+        lines.push(window.location.href.split("#")[0]);
+        return lines.join("\n");
+      }
+
+      function renderSources() {
+        els.sourceList.innerHTML = "";
+        sources.forEach((source) => {
+          const item = document.createElement("li");
+          const link = document.createElement("a");
+          link.href = source.url;
+          link.target = "_blank";
+          link.rel = "noreferrer";
+          link.textContent = source.label;
+          item.appendChild(link);
+          els.sourceList.appendChild(item);
+        });
+      }
+
+      function showToast(text) {
+        clearTimeout(toastTimer);
+        els.toast.textContent = text;
+        els.toast.classList.add("visible");
+        toastTimer = setTimeout(() => els.toast.classList.remove("visible"), 1800);
+      }
+
+      function togglePanel(panel) {
+        const isVisible = panel.classList.contains("visible");
+        els.rulesPanel.classList.remove("visible");
+        els.sourcesPanel.classList.remove("visible");
+        panel.classList.toggle("visible", !isVisible);
+      }
+
+      function seededShuffle(items, seed) {
+        const copy = [...items];
+        let value = seed || 1;
+        for (let index = copy.length - 1; index > 0; index -= 1) {
+          value = (value * 16807) % 2147483647;
+          const swapIndex = value % (index + 1);
+          [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
+        }
+        return copy;
+      }
+
+      function hashString(text) {
+        let hash = 2166136261;
+        for (let index = 0; index < text.length; index += 1) {
+          hash ^= text.charCodeAt(index);
+          hash = Math.imul(hash, 16777619);
+        }
+        return Math.abs(hash) || 1;
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function renderGameToText() {
+        const foundItems = new Set(
+          puzzle.groups
+            .filter((group) => state.foundGroupIds.includes(group.id))
+            .flatMap((group) => group.items)
+        );
+        const payload = {
+          note: "DOM puzzle. Origin is the top-left viewport; visible tiles are listed in reading order.",
+          puzzle: { id: puzzle.id, number: puzzle.number, title: puzzle.title },
+          status: state.status,
+          mistakes: state.mistakes,
+          selectedItems: state.selectedItems,
+          foundGroups: state.foundGroupIds,
+          activeItems: state.itemOrder.filter((item) => !foundItems.has(item)),
+          message: els.message.textContent,
+          canSubmit: !els.submitButton.disabled,
+          resultVisible: els.result.classList.contains("visible"),
+        };
+        return JSON.stringify(payload);
+      }
+
+      window.render_game_to_text = renderGameToText;
+      window.advanceTime = () => {
+        render();
+      };
+
+      function formatPuzzleDate(date) {
+        return new Intl.DateTimeFormat("fr-FR", {
+          day: "numeric",
+          month: "short",
+        })
+          .format(date)
+          .replace(".", "");
+      }
+
+      function fitTileLabel(tile, label) {
+        label.classList.remove("break-anywhere");
+        label.style.fontSize = "";
+
+        const width = tile.clientWidth || 80;
+        const height = tile.clientHeight || 54;
+        const compact = width < 90;
+        let size = compact ? 15 : 16;
+        const minSize = 9;
+        const paddingBuffer = compact ? 10 : 14;
+
+        label.style.fontSize = `${size}px`;
+        while (!labelFits(tile, label, paddingBuffer) && size > minSize) {
+          size -= 0.5;
+          label.style.fontSize = `${size}px`;
+        }
+
+        const longestSegment = Math.max(
+          ...label.textContent.split(/\s+/).map((segment) => segment.length)
+        );
+        if ((size <= 11 && longestSegment > 12) || (!labelFits(tile, label, paddingBuffer) && longestSegment > 12)) {
+          label.classList.add("break-anywhere");
+          size = compact ? 12 : 13;
+          label.style.fontSize = `${size}px`;
+          while (!labelFits(tile, label, paddingBuffer) && size > 8) {
+            size -= 0.5;
+            label.style.fontSize = `${size}px`;
+          }
+        }
+
+        if (label.scrollHeight > height - 6) {
+          label.style.fontSize = `${Math.max(8, size - 1)}px`;
+        }
+      }
+
+      function labelFits(tile, label, paddingBuffer) {
+        return (
+          label.scrollWidth <= tile.clientWidth - paddingBuffer &&
+          label.scrollHeight <= tile.clientHeight - 6
+        );
+      }
+
+      function refitTileLabels() {
+        document.querySelectorAll(".tile").forEach((tile) => {
+          const label = tile.querySelector(".tile-label");
+          if (label) fitTileLabel(tile, label);
+        });
+      }
+
+      els.submitButton.addEventListener("click", submitSelection);
+      els.clearButton.addEventListener("click", clearSelection);
+      els.shuffleButton.addEventListener("click", shuffleActiveItems);
+      els.rulesButton.addEventListener("click", () => togglePanel(els.rulesPanel));
+      els.sourcesButton.addEventListener("click", () => togglePanel(els.sourcesPanel));
+      window.addEventListener("resize", refitTileLabels);
+      document.fonts?.ready?.then(refitTileLabels);
+
+      renderSources();
+      render();
+    </script>
+  </body>
+</html>

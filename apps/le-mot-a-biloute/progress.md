@@ -1,0 +1,18 @@
+Original prompt: Aligne les documents, et fais une première version du jeu.
+
+## 2026-05-31
+
+- Décision produit : le jeu s'appelle **Le mot à Biloute** et devient un jeu quotidien de mot à deviner, inspiré des jeux à essais, plutôt qu'un mini mots-croisés.
+- À faire : aligner les licences et la proposition existante, créer une première version webapp statique mobile-first, vérifier le gameplay au clavier et à la souris/tactile.
+- Documents alignés : proposition, licences et README utilisent désormais **Le mot à Biloute**.
+- Prototype ajouté : `index.html`, `styles.css`, `app.js`, `manifest.webmanifest`.
+- Corrections après contrôle : ancienne marque supprimée, formulations de licence ajustées, liste de mots limitée à 5-8 lettres.
+- Test Playwright : mot du jour `DRACHE` validé en 1 essai, dialogue final ouvert, aucune erreur console. Capture mobile initiale trop haute, compactage CSS appliqué.
+- Vérification finale : `node --check app.js`, client web-game avec indice, test mobile 390x844 avec victoire, screenshots inspectés. Aucun fichier d'erreur Playwright généré.
+- Suggestion suivante : enrichir la liste à 30 mots et ajouter une validation de dictionnaire ou un mode "prototype libre" clairement assumé.
+- Itération 26.05.31.2 : premier indice affiché gratuitement, indices supplémentaires pénalisants, score calculé sur essais + indices, partage enrichi avec points et URL publique, footer crédit/version.
+- Vérification 26.05.31.2 : Playwright confirme 1000 points au départ, 820 après un indice payant, partage avec `https://dr-john-8bits.github.io/le-mot-a-biloute/`, screenshots viewport mobile inspectés.
+- Itération 26.05.31.3 : visuel supérieur façon ligne de métro supprimé en attente d'un futur visuel fourni.
+- Itération 26.05.31.4 : structure documentaire complète ajoutée, specs déplacées dans `docs/SPECIFICATIONS.md`, changelog/FAQ/règles/architecture/guide éditorial/déploiement/confidentialité/roadmap créés.
+- Complément 26.05.31.4 : ajout de `CONTRIBUTING.md` et `docs/TESTING.md`, README enrichi avec la nouvelle arborescence.
+- Itération 26.05.31.5 : audit complet ajouté dans `docs/AUDIT.md`, demande de corpus éditorial ajoutée dans `docs/EDITORIAL_CORPUS_REQUEST.md`, version incrémentée.

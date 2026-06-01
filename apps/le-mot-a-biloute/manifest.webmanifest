@@ -1,0 +1,11 @@
+{
+  "name": "Le mot à Biloute",
+  "short_name": "Biloute",
+  "description": "Un mot du Nord à deviner chaque jour.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fbfaf4",
+  "theme_color": "#f4d35e",
+  "lang": "fr",
+  "icons": []
+}

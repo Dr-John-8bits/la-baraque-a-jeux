@@ -1,0 +1,15 @@
+{
+  "name": "la-baraque-a-jeux-lille",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "serve": "python3 -m http.server 48391",
+    "check:js": "node --check apps/le-mot-a-biloute/app.js"
+  }
+}
+

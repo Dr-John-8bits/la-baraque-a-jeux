@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Le mot à Biloute : devinez chaque jour un mot lié à Lille, au Nord ou au parler ch'ti."
+    />
+    <meta name="theme-color" content="#f4d35e" />
+    <title>Le mot à Biloute</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Mot du jour</p>
+          <h1>Le mot à Biloute</h1>
+        </div>
+        <button class="icon-button" id="statsButton" type="button" aria-label="Voir les statistiques" title="Statistiques">
+          <span aria-hidden="true">#</span>
+        </button>
+      </header>
+
+      <section class="status-panel" id="statusPanel">
+        <div>
+          <p class="label">Catégorie</p>
+          <p class="category" id="categoryLabel">Chargement</p>
+        </div>
+        <div class="meta-grid">
+          <div>
+            <p class="label">Essais</p>
+            <p id="tryCount">0/6</p>
+          </div>
+          <div>
+            <p class="label">Points</p>
+            <p id="scoreCount">1000</p>
+          </div>
+          <div>
+            <p class="label">Série</p>
+            <p id="streakCount">0</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="message-row" id="messageRow" role="status">À toi de jouer.</section>
+
+      <section class="board-wrap" aria-label="Grille de jeu">
+        <div class="board" id="board"></div>
+      </section>
+
+      <section class="actions">
+        <button id="hintButton" type="button">Indice -180</button>
+        <button id="shareButton" type="button" disabled>Partager</button>
+      </section>
+
+      <section class="hint-panel" id="hintPanel">
+        <p class="label">Indice de départ</p>
+        <p id="starterHintText"></p>
+        <div id="extraHints"></div>
+      </section>
+
+      <section class="keyboard" id="keyboard" aria-label="Clavier virtuel"></section>
+
+      <footer class="app-footer">
+        <p>Le mot à Biloute par Dr. John &amp; Lady Em</p>
+        <p id="versionLabel">v26.05.31.5</p>
+      </footer>
+
+      <dialog class="result-dialog" id="resultDialog">
+        <form method="dialog">
+          <p class="eyebrow" id="resultKicker">Partie terminée</p>
+          <h2 id="resultTitle">Réponse</h2>
+          <p class="result-summary" id="resultSummary"></p>
+          <div class="bonus">
+            <p class="label">Bonus local</p>
+            <h3 id="bonusTitle"></h3>
+            <p id="bonusText"></p>
+          </div>
+          <div class="dialog-actions">
+            <button id="dialogShareButton" value="share" type="button">Partager</button>
+            <button value="close">Fermer</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog class="result-dialog" id="statsDialog">
+        <form method="dialog">
+          <p class="eyebrow">Stats locales</p>
+          <h2>Ton carnet</h2>
+          <dl class="stats-list">
+            <div>
+              <dt>Parties</dt>
+              <dd id="statPlayed">0</dd>
+            </div>
+            <div>
+              <dt>Réussites</dt>
+              <dd id="statWon">0</dd>
+            </div>
+            <div>
+              <dt>Série</dt>
+              <dd id="statStreak">0</dd>
+            </div>
+            <div>
+              <dt>Meilleur score</dt>
+              <dd id="statBestScore">-</dd>
+            </div>
+          </dl>
+          <div class="dialog-actions">
+            <button value="close">Fermer</button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
