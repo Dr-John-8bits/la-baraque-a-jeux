@@ -3,7 +3,7 @@ import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
-const APP_VERSION = "26.05.31.5";
+const APP_VERSION = "26.06.01.1";
 const GAME_URL = new URL(".", window.location.href).href;
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
@@ -38,6 +38,7 @@ const els = {
   hintCostText: document.getElementById("hintCostText"),
   nextHintButton: document.getElementById("nextHintButton"),
   resultDialog: document.getElementById("resultDialog"),
+  recoveryDialog: document.getElementById("recoveryDialog"),
   resultKicker: document.getElementById("resultKicker"),
   resultTitle: document.getElementById("resultTitle"),
   resultSummary: document.getElementById("resultSummary"),
@@ -73,6 +74,9 @@ const state = loadGame() || {
   result: "playing",
   score: null,
   shareText: "",
+  officialResultRecorded: false,
+  recoveryPromptSeen: false,
+  recoveryStartedAt: null,
 };
 
 state.extraHintsUsed = Number.isInteger(state.extraHintsUsed)
@@ -81,7 +85,12 @@ state.extraHintsUsed = Number.isInteger(state.extraHintsUsed)
     ? 1
     : 0;
 state.starterHintSeen = Boolean(state.starterHintSeen || state.extraHintsUsed > 0);
-if (state.result !== "playing") {
+state.officialResultRecorded = Boolean(
+  state.officialResultRecorded || ["won", "lost", "recovered"].includes(state.result)
+);
+state.recoveryPromptSeen = Boolean(state.recoveryPromptSeen);
+state.recoveryStartedAt = state.recoveryStartedAt || null;
+if (!isGameActive()) {
   state.score = state.score ?? calculateScore(state.result);
   state.shareText = buildShareText();
 }
@@ -143,8 +152,16 @@ function normalize(value) {
     .toUpperCase();
 }
 
+function isGameActive(result = state.result) {
+  return result === "playing" || result === "recovery";
+}
+
+function isRecoveryState(result = state.result) {
+  return result === "recovery" || result === "recovered";
+}
+
 function addLetter(letter) {
-  if (state.result !== "playing") return;
+  if (!isGameActive()) return;
   const normalized = normalize(letter);
   if (!normalized || state.current.length >= wordLength) return;
   state.current += normalized[0];
@@ -153,14 +170,14 @@ function addLetter(letter) {
 }
 
 function removeLetter() {
-  if (state.result !== "playing") return;
+  if (!isGameActive()) return;
   state.current = state.current.slice(0, -1);
   saveGame();
   render();
 }
 
 function submitGuess() {
-  if (state.result !== "playing") return;
+  if (!isGameActive()) return;
   const guess = normalize(state.current);
 
   if (guess.length !== wordLength) {
@@ -177,9 +194,9 @@ function submitGuess() {
 
   const accepted = word.acceptedAnswers.map(normalize);
   if (accepted.includes(guess)) {
-    finishGame("won");
-  } else if (state.guesses.length >= MAX_GUESSES) {
-    finishGame("lost");
+    finishGame(state.result === "recovery" ? "recovered" : "won");
+  } else if (state.result === "playing" && state.guesses.length >= MAX_GUESSES) {
+    enterRecoveryMode();
   } else {
     saveGame();
     render();
@@ -227,35 +244,46 @@ function finishGame(result) {
   state.endedAt = Date.now();
   state.score = calculateScore(result);
   state.shareText = buildShareText();
+  if (result === "won") {
+    recordOfficialResult("won");
+  } else if (result === "lost" || result === "recovered") {
+    recordOfficialResult("lost");
+  }
   saveGame();
-  updateStats(result);
   render();
   showResultDialog();
 }
 
 function render() {
+  const active = isGameActive();
   els.categoryLabel.textContent = word.category;
-  els.tryCount.textContent = `${state.guesses.length}/${MAX_GUESSES}`;
+  els.tryCount.textContent = formatTryCount();
   els.scoreCount.textContent = String(calculateScore(state.result));
   els.streakCount.textContent = String(getStats().streak || 0);
   els.hintButton.textContent = state.starterHintSeen ? "Indice" : "Indice gratuit";
-  els.hintButton.disabled = state.result !== "playing";
+  els.hintButton.disabled = !active;
   renderPrimaryAction();
   renderBoard();
   renderKeyboard();
   renderHintDialog();
 }
 
+function formatTryCount() {
+  if (!isRecoveryState()) return `${state.guesses.length}/${MAX_GUESSES}`;
+  const extraTries = Math.max(0, state.guesses.length - MAX_GUESSES);
+  return extraTries > 0 ? `${MAX_GUESSES}/${MAX_GUESSES} +${extraTries}` : `${MAX_GUESSES}/${MAX_GUESSES}+`;
+}
+
 function renderPrimaryAction() {
-  const playing = state.result === "playing";
-  const nextMode = playing ? "validate" : "share";
-  els.primaryActionButton.textContent = playing ? "Valider" : "Partager";
-  els.primaryActionButton.disabled = playing && state.current.length !== wordLength;
+  const active = isGameActive();
+  const nextMode = active ? "validate" : "share";
+  els.primaryActionButton.textContent = active ? "Valider" : "Partager";
+  els.primaryActionButton.disabled = active && state.current.length !== wordLength;
   els.primaryActionButton.setAttribute(
     "aria-label",
-    playing ? "Valider la proposition" : "Partager le résultat"
+    active ? "Valider la proposition" : "Partager le résultat"
   );
-  els.primaryActionButton.classList.toggle("share-ready", !playing);
+  els.primaryActionButton.classList.toggle("share-ready", !active);
 
   if (primaryActionMode === "validate" && nextMode === "share") {
     highlightShareButton(els.primaryActionButton);
@@ -281,7 +309,7 @@ function renderHintDialog() {
     els.hintList.append(createHintCard(`Indice ${index + 2}`, word.hints[index]));
   }
 
-  const canRevealPaid = state.result === "playing" && state.extraHintsUsed < word.hints.length;
+  const canRevealPaid = isGameActive() && state.extraHintsUsed < word.hints.length;
   els.nextHintButton.disabled = !canRevealPaid;
   els.nextHintButton.textContent = canRevealPaid ? `Indice suivant -${POINTS_PER_EXTRA_HINT}` : "Plus d'indice";
   els.hintCostText.textContent = canRevealPaid
@@ -304,7 +332,7 @@ function createHintCard(title, text) {
 }
 
 function openHintDialog() {
-  if (state.result !== "playing") return;
+  if (!isGameActive()) return;
   if (!state.starterHintSeen) {
     state.starterHintSeen = true;
     saveGame();
@@ -316,7 +344,7 @@ function openHintDialog() {
 }
 
 function revealPaidHint() {
-  if (state.result !== "playing") return;
+  if (!isGameActive()) return;
   if (state.extraHintsUsed >= word.hints.length) return;
   state.starterHintSeen = true;
   state.extraHintsUsed += 1;
@@ -328,15 +356,17 @@ function revealPaidHint() {
 
 function renderBoard() {
   els.board.innerHTML = "";
-  els.board.style.gridTemplateRows = `repeat(${MAX_GUESSES}, 1fr)`;
+  const rowCount = getBoardRowCount();
+  els.board.style.gridTemplateRows = `repeat(${rowCount}, 1fr)`;
+  els.board.classList.toggle("is-recovery", isRecoveryState());
 
-  for (let row = 0; row < MAX_GUESSES; row += 1) {
+  for (let row = 0; row < rowCount; row += 1) {
     const rowEl = document.createElement("div");
     rowEl.className = "guess-row";
     rowEl.style.gridTemplateColumns = `repeat(${wordLength}, 1fr)`;
 
     const committed = state.guesses[row] || "";
-    const letters = committed || (row === state.guesses.length ? state.current : "");
+    const letters = committed || (isGameActive() && row === state.guesses.length ? state.current : "");
     const statuses = state.statuses[row] || [];
 
     for (let col = 0; col < wordLength; col += 1) {
@@ -351,6 +381,11 @@ function renderBoard() {
 
     els.board.append(rowEl);
   }
+}
+
+function getBoardRowCount() {
+  const activeRows = isGameActive() ? state.guesses.length + 1 : state.guesses.length;
+  return Math.max(MAX_GUESSES, activeRows);
 }
 
 function renderKeyboard() {
@@ -386,13 +421,35 @@ function announce(message) {
   els.statusAnnouncer.textContent = message;
 }
 
+function enterRecoveryMode() {
+  state.result = "recovery";
+  state.score = null;
+  state.shareText = "";
+  state.recoveryStartedAt = state.recoveryStartedAt || Date.now();
+  state.recoveryPromptSeen = true;
+  recordOfficialResult("lost");
+  saveGame();
+  render();
+  announce("T'as perdu, Biloute ! Rab de Biloute lancé.");
+  showRecoveryDialog();
+}
+
+function showRecoveryDialog() {
+  if (!els.recoveryDialog.open) els.recoveryDialog.showModal();
+}
+
 function showResultDialog() {
   const won = state.result === "won";
+  const recovered = state.result === "recovered";
   const tries = state.guesses.length;
   const score = state.score ?? calculateScore(state.result);
-  els.resultKicker.textContent = won ? "Trouvé" : "Terminus";
-  els.resultTitle.textContent = won ? `${word.answer} en ${tries} essai${tries > 1 ? "s" : ""}` : `C'était ${word.answer}`;
-  els.resultSummary.textContent = `${score} points · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`;
+  els.resultKicker.textContent = recovered ? "Rab de Biloute" : won ? "Trouvé" : "Terminus";
+  els.resultTitle.textContent = won || recovered
+    ? `${word.answer} en ${tries} essai${tries > 1 ? "s" : ""}`
+    : `C'était ${word.answer}`;
+  els.resultSummary.textContent = recovered
+    ? `${score} points · trouvé au Rab de Biloute · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`
+    : `${score} points · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`;
   els.bonusTitle.textContent = word.bonus.title;
   els.bonusText.textContent = word.bonus.text;
   if (!els.resultDialog.open) els.resultDialog.showModal();
@@ -410,10 +467,12 @@ function buildShareText() {
       })
       .join("")
   );
-  const tries = state.result === "won" ? state.guesses.length : "X";
+  const summary = state.result === "recovered"
+    ? `${score} points · Rab de Biloute · ${state.guesses.length} essais · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`
+    : `${score} points · ${state.result === "won" ? state.guesses.length : "X"}/${MAX_GUESSES} · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`;
   return [
     `Le mot à Biloute ${todayId}`,
-    `${score} points · ${tries}/${MAX_GUESSES} · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`,
+    summary,
     ...rows,
     GAME_URL,
   ].join("\n");
@@ -430,7 +489,7 @@ async function shareResult() {
 }
 
 function handlePrimaryAction() {
-  if (state.result === "playing") {
+  if (isGameActive()) {
     submitGuess();
   } else {
     shareResult();
@@ -441,7 +500,9 @@ function getStats() {
   return readJson(statsKey, {});
 }
 
-function updateStats(result) {
+function recordOfficialResult(result) {
+  if (state.officialResultRecorded) return;
+
   const stats = {
     played: 0,
     won: 0,
@@ -450,7 +511,10 @@ function updateStats(result) {
     lastPlayed: null,
     ...getStats(),
   };
-  if (stats.lastPlayed === todayId) return;
+  if (stats.lastPlayed === todayId) {
+    state.officialResultRecorded = true;
+    return;
+  }
 
   stats.played += 1;
   stats.lastPlayed = todayId;
@@ -466,6 +530,7 @@ function updateStats(result) {
   }
 
   writeJson(statsKey, stats);
+  state.officialResultRecorded = true;
 }
 
 function renderStats() {
@@ -488,11 +553,13 @@ function loadGame() {
 
 function calculateScore(result = state.result) {
   if (result === "lost") return 0;
-  const effectiveGuessCount = result === "playing" ? state.guesses.length + 1 : state.guesses.length;
+  const effectiveGuessCount = isGameActive(result) ? state.guesses.length + 1 : state.guesses.length;
   const guessPenalty = Math.max(0, effectiveGuessCount - 1) * POINTS_PER_EXTRA_GUESS;
   const hintPenalty = state.extraHintsUsed * POINTS_PER_EXTRA_HINT;
   const score = BASE_SCORE - guessPenalty - hintPenalty;
-  return Math.max(result === "playing" ? 0 : 50, score);
+  if (result === "won") return Math.max(50, score);
+  if (isRecoveryState(result)) return score;
+  return Math.max(0, score);
 }
 
 function getBilouteDateId(date = new Date()) {
@@ -527,6 +594,8 @@ function renderGameToText() {
     guesses: state.guesses,
     current: state.current,
     result: state.result,
+    recoveryMode: state.result === "recovery",
+    officialResultRecorded: state.officialResultRecorded,
     score: state.score ?? calculateScore(state.result),
     triesUsed: state.guesses.length,
     triesMax: MAX_GUESSES,

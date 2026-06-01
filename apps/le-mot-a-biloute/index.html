@@ -122,6 +122,17 @@
         </form>
       </dialog>
 
+      <dialog class="result-dialog recovery-dialog" id="recoveryDialog">
+        <form method="dialog">
+          <p class="eyebrow">Rab de Biloute</p>
+          <h2>T'as perdu, Biloute !</h2>
+          <p class="result-summary">Mais t'as droit à du rab : continue à chercher le mot. Les essais suivants retirent encore des points, et le score peut passer sous zéro.</p>
+          <div class="dialog-actions dialog-actions--single">
+            <button value="close">Continuer</button>
+          </div>
+        </form>
+      </dialog>
+
       <dialog class="result-dialog hint-dialog" id="hintDialog">
         <form method="dialog">
           <p class="eyebrow">Indice</p>
@@ -142,7 +153,7 @@
           <div class="help-content">
             <section>
               <h3>But du jeu</h3>
-              <p>Devine le mot du jour en 6 essais maximum. Un nouveau mot arrive chaque jour à 12 h, heure de Paris, et reste jouable jusqu'au lendemain à midi.</p>
+              <p>Devine le mot du jour en 6 essais officiels. Si tu échoues, tu passes au Rab de Biloute et tu peux continuer jusqu'à trouver. Un nouveau mot arrive chaque jour à 12 h, heure de Paris.</p>
             </section>
             <section>
               <h3>Couleurs</h3>
@@ -154,11 +165,11 @@
             </section>
             <section>
               <h3>Points</h3>
-              <p>Tu démarres à 1000 points. Chaque essai après le premier retire 120 points. Chaque indice payant retire 180 points. Une partie perdue vaut 0 point.</p>
+              <p>Tu démarres à 1000 points. Chaque essai après le premier retire 120 points. Chaque indice payant retire 180 points. Dans le Rab de Biloute, le score continue de descendre et peut devenir négatif.</p>
             </section>
             <section>
               <h3>Indices et série</h3>
-              <p>Clique sur Indice pour afficher l'indice de départ, gratuit. Les indices suivants coûtent des points. La série compte les jours gagnés d'affilée ; elle retombe à 0 après une partie perdue.</p>
+              <p>Clique sur Indice pour afficher l'indice de départ, gratuit. Les indices suivants coûtent des points. La série ne progresse que si tu trouves dans les 6 essais officiels.</p>
             </section>
           </div>
           <div class="dialog-actions dialog-actions--single">

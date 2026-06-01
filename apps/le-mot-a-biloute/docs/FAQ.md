@@ -6,7 +6,7 @@ Deviner le mot du jour lié à Lille, au Nord ou au parler ch'ti.
 
 ## Combien y a-t-il d'essais ?
 
-Le joueur dispose de 6 essais.
+Le joueur dispose de 6 essais officiels. S'il ne trouve pas le mot dans ces 6 essais, sa série est perdue, mais il passe au **Rab de Biloute** et peut continuer jusqu'à trouver.
 
 ## Que signifient les couleurs ?
 
@@ -16,7 +16,7 @@ Le joueur dispose de 6 essais.
 
 ## Le premier indice est-il gratuit ?
 
-Oui. Le premier indice est affiché dès le départ. Il est volontairement difficile, pour donner une ambiance sans révéler trop vite la réponse.
+Oui. Le premier indice est gratuit et s'affiche quand le joueur clique sur `Indice gratuit`. Il est volontairement difficile, pour donner une ambiance sans révéler trop vite la réponse.
 
 ## Les autres indices coûtent-ils des points ?
 
@@ -28,8 +28,9 @@ Le score de base est de 1000 points.
 
 - Chaque essai supplémentaire après le premier fait perdre 120 points.
 - Chaque indice supplémentaire fait perdre 180 points.
-- Une partie perdue vaut 0 point.
 - Une victoire garde un score minimal de 50 points.
+- Dans le Rab de Biloute, les pénalités continuent après le 6e essai et le score peut devenir négatif.
+- La série est perdue dès que le Rab de Biloute commence.
 
 Exemple : trouver le mot au 3e essai avec 1 indice payant donne `1000 - 2 x 120 - 180 = 580 points`.
 

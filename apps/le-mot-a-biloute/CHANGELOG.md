@@ -4,6 +4,13 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## 26.06.01.1
+
+- Ajout du mode Rab de Biloute après 6 essais officiels échoués.
+- La série est désormais perdue dès l'entrée dans le Rab de Biloute, mais le joueur peut continuer à chercher.
+- Le score continue de descendre dans le Rab de Biloute et peut devenir négatif.
+- Mise à jour des règles, du partage et de la documentation produit.
+
 ## 26.05.31.5
 
 - Ajout d'un audit complet du jeu.

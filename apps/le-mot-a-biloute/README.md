@@ -11,10 +11,10 @@ Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu co
 ## Fonctionnalités
 
 - mot quotidien déterministe ;
-- 6 essais ;
-- premier indice gratuit et volontairement vague ;
+- 6 essais officiels, puis Rab de Biloute possible sans série ;
+- premier indice gratuit à la demande et volontairement vague ;
 - indices supplémentaires avec pénalité de points ;
-- score basé sur les essais et les indices ;
+- score basé sur les essais et les indices, y compris dans le Rab de Biloute ;
 - clavier virtuel AZERTY ;
 - saisie au clavier physique ;
 - retour correcte / présente / absente ;

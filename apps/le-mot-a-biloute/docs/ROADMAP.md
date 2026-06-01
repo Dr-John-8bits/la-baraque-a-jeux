@@ -3,7 +3,8 @@
 ## 0.1 — Prototype jouable
 
 - Mot du jour.
-- 6 essais.
+- 6 essais officiels.
+- Rab de Biloute après échec officiel.
 - Clavier virtuel.
 - Score.
 - Indices progressifs.
@@ -33,7 +34,7 @@
 
 - Ajouter une validation de dictionnaire.
 - Améliorer l'accessibilité.
-- Ajouter une page d'aide intégrée.
+- Renforcer l'aide intégrée au fil des mécaniques.
 - Tester sur plusieurs tailles mobiles.
 - Étendre les tests navigateur automatisés depuis la racine du monorepo.
 
