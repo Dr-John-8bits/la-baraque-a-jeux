@@ -1,0 +1,11 @@
+{
+  "name": "Biloute · Bière · Braderie",
+  "short_name": "BBB",
+  "description": "Le ch’tifoumi lillois où tout finit dans la foule, la mousse ou la mauvaise foi.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fbf7ef",
+  "theme_color": "#071b31",
+  "lang": "fr",
+  "icons": []
+}

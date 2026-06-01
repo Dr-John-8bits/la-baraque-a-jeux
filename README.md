@@ -5,6 +5,7 @@ Monorepo des mini-jeux lillois :
 - le portail **La baraque a jeux** ;
 - **Le mot a Biloute** ;
 - **Lille-Mele**.
+- **Biloute · Bière · Braderie**.
 
 Le projet reste volontairement leger : applications statiques, pas de backend obligatoire, et une base commune pour le style, le corpus editorial et les scripts de validation.
 
@@ -16,6 +17,7 @@ Le projet reste volontairement leger : applications statiques, pas de backend ob
 │   └── brand/
 ├── apps/
 │   ├── le-mot-a-biloute/
+│   ├── biloute-biere-braderie/
 │   └── lille-mele/
 ├── packages/
 │   ├── corpus/

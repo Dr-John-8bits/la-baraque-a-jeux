@@ -103,7 +103,7 @@ Le prochain cap consiste à sortir du prototype éditorial court pour devenir un
 
 ### Accessibilité
 
-- Les cases validées ont maintenant des labels plus riches et des marqueurs visuels, à tester avec lecteur d'écran réel.
+- Les cases validées ont maintenant des labels plus riches, à tester avec lecteur d'écran réel.
 - Les dialogues méritent un test clavier complet.
 - Aucun réglage de réduction de contraste/animations dans l'interface.
 

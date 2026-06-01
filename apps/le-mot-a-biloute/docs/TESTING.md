@@ -43,7 +43,7 @@ apps/le-mot-a-biloute/
 - Le clavier doit être utilisable au doigt.
 - Les textes ne doivent pas sortir de leurs conteneurs.
 - Les couleurs correcte / présente / absente doivent être distinguables.
-- Les marqueurs de cases et les labels accessibles doivent compléter les couleurs.
+- Les labels accessibles des cases doivent décrire le retour correcte / présente / absente.
 - Le jeu doit rester confortable sur un écran mobile vertical.
 
 ## État textuel de test

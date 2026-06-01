@@ -9,6 +9,7 @@ const pages = [
   "blog.html",
   "apps/le-mot-a-biloute/index.html",
   "apps/lille-mele/index.html",
+  "apps/biloute-biere-braderie/index.html",
 ];
 
 for (const page of pages) {

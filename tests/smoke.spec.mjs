@@ -14,6 +14,9 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await expect(page).toHaveTitle("La baraque à jeux");
   await expect(page.getByRole("link", { name: "Le mot à Biloute", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Lille-Mêle", exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Biloute · Bière · Braderie", exact: true })
+  ).toBeVisible();
 
   await page.goto(`${base}blog.html`);
   await expect(page.getByRole("heading", { name: "Blog", exact: true })).toBeVisible();
@@ -48,5 +51,13 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await page.getByRole("button", { name: "Valider" }).click();
   const afterGroup = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(afterGroup.foundGroups).toContain(group.id);
+
+  await page.goto(`${base}apps/biloute-biere-braderie/`);
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await page.getByRole("button", { name: "Lancer" }).click();
+  await page.getByRole("button", { name: /Biloute bat Bière/ }).click();
+  const bbbState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(bbbState.lastRound.playerChoice).toBe("biloute");
+  expect(bbbState.score.player + bbbState.score.computer).toBeLessThanOrEqual(1);
   expect(errors).toEqual([]);
 });

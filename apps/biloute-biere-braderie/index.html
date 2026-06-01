@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Biloute · Bière · Braderie, le ch’tifoumi lillois où tout finit dans la foule, la mousse ou la mauvaise foi."
+    />
+    <meta name="theme-color" content="#071b31" />
+    <title>Biloute · Bière · Braderie</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="../../packages/ui/tokens.css" />
+    <link rel="stylesheet" href="../../packages/ui/base.css" />
+    <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
+          <picture class="labaj-brand__logo">
+            <source
+              srcset="../../assets/brand/la-baraque-a-jeux-lille.webp"
+              type="image/webp"
+            />
+            <img
+              src="../../assets/brand/la-baraque-a-jeux-lille-logo.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+          </picture>
+          <span class="labaj-brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Accueil</span>
+          </span>
+        </a>
+
+        <div class="labaj-links">
+          <a class="labaj-link labaj-link--home" href="../../">Accueil</a>
+          <a class="labaj-link" href="../le-mot-a-biloute/">Le mot à Biloute</a>
+          <a class="labaj-link" href="../lille-mele/">Lille-Mêle</a>
+          <a
+            class="labaj-link"
+            href="../biloute-biere-braderie/"
+            aria-current="page"
+            aria-label="Biloute Bière Braderie"
+          >
+            B·B·B
+          </a>
+          <a class="labaj-link" href="../../blog.html">Blog</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="app-shell" id="app">
+      <header class="game-head">
+        <div class="game-title">
+          <p class="eyebrow">Ch’tifoumi lillois</p>
+          <h1>Biloute · Bière · Braderie</h1>
+          <p class="subtitle">
+            Le ch’tifoumi lillois où tout finit dans la foule, la mousse ou la
+            mauvaise foi.
+          </p>
+        </div>
+        <div class="head-actions" aria-label="Actions rapides">
+          <button class="icon-button" type="button" id="rulesButton" title="Règles" aria-label="Règles">
+            ?
+          </button>
+          <button
+            class="icon-button"
+            type="button"
+            id="resetButton"
+            title="Nouvelle partie"
+            aria-label="Nouvelle partie"
+          >
+            ↺
+          </button>
+        </div>
+      </header>
+
+      <section class="score-row" aria-label="Score de la partie">
+        <div class="score-pill score-pill--player">
+          <span class="score-label">Toi</span>
+          <strong id="playerScore">0</strong>
+        </div>
+        <div class="score-pill score-pill--round">
+          <span class="score-label">Manche</span>
+          <strong id="roundCount">1</strong>
+        </div>
+        <div class="score-pill score-pill--computer">
+          <span class="score-label">Ordi</span>
+          <strong id="computerScore">0</strong>
+        </div>
+      </section>
+
+      <section class="stage" aria-label="État de la manche">
+        <div class="duel-panel" aria-label="Dernier duel">
+          <div class="duel-pick duel-pick--player">
+            <span class="duel-label">Toi</span>
+            <strong class="duel-symbol" id="playerPickSymbol">?</strong>
+            <span class="duel-name" id="playerPickName">Choisis</span>
+          </div>
+          <div class="duel-versus" id="duelStatus" aria-live="polite">VS</div>
+          <div class="duel-pick duel-pick--computer">
+            <span class="duel-label">Ordi</span>
+            <strong class="duel-symbol" id="computerPickSymbol">?</strong>
+            <span class="duel-name" id="computerPickName">Attend</span>
+          </div>
+        </div>
+        <div class="timer-panel" aria-label="Compte à rebours de manche">
+          <div class="timer-copy">
+            <strong id="countdownWord">Prêt ?</strong>
+            <span id="countdownTime">3.0 s</span>
+          </div>
+          <div class="timer-track" aria-hidden="true">
+            <span id="timerFill"></span>
+          </div>
+          <button class="round-button" type="button" id="roundButton">Lancer</button>
+        </div>
+        <p class="message" id="message" aria-live="polite">
+          Lance CH'TI FOU MI, puis choisis avant la fin de MI.
+        </p>
+      </section>
+
+      <section class="choices" aria-label="Choix de manche">
+        <button class="choice-button choice-button--biloute" type="button" data-choice="biloute">
+          <span class="choice-mark" aria-hidden="true">BL</span>
+          <span>
+            <strong>Biloute</strong>
+            <small>bat Bière</small>
+          </span>
+        </button>
+        <button class="choice-button choice-button--biere" type="button" data-choice="biere">
+          <span class="choice-mark" aria-hidden="true">BI</span>
+          <span>
+            <strong>Bière</strong>
+            <small>bat Braderie</small>
+          </span>
+        </button>
+        <button class="choice-button choice-button--braderie" type="button" data-choice="braderie">
+          <span class="choice-mark" aria-hidden="true">BR</span>
+          <span>
+            <strong>Braderie</strong>
+            <small>bat Biloute</small>
+          </span>
+        </button>
+      </section>
+
+      <section class="result-panel" id="resultPanel" aria-live="polite" hidden>
+        <h2 id="resultTitle">Partie terminée</h2>
+        <p id="resultText"></p>
+        <div class="result-actions">
+          <button class="action-button action-button--primary" type="button" id="playAgainButton">
+            Rejouer
+          </button>
+          <button class="action-button" type="button" id="shareButton">Partager</button>
+        </div>
+      </section>
+
+      <section class="rules-panel" id="rulesPanel" aria-labelledby="rulesTitle">
+        <div class="section-title">
+          <p class="eyebrow">Règle du triangle</p>
+          <h2 id="rulesTitle">Biloute Bière Braderie</h2>
+        </div>
+        <div class="rule-list">
+          <article class="rule-item">
+            <strong>Biloute bat Bière</strong>
+            <p>Parce que biloute tient mieux la pinte que toi.</p>
+          </article>
+          <article class="rule-item">
+            <strong>Bière bat Braderie</strong>
+            <p>Parce qu'après trois pintes, tu oublies ce que tu voulais chiner.</p>
+          </article>
+          <article class="rule-item">
+            <strong>Braderie bat Biloute</strong>
+            <p>
+              Parce que même le plus malin des biloutes finit perdu entre deux
+              tas de vaisselle.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="history-panel" aria-labelledby="historyTitle">
+        <h2 id="historyTitle">Dernières manches</h2>
+        <ol class="history-list" id="historyList"></ol>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

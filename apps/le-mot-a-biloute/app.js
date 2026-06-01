@@ -523,7 +523,6 @@ function renderBoard() {
       if (letter) tile.classList.add("filled");
       if (status) {
         tile.classList.add(status);
-        tile.dataset.mark = getStatusMark(status);
         if (row === revealRowIndex) {
           tile.classList.add("flip");
           tile.style.setProperty("--flip-delay", `${col * 82}ms`);
@@ -547,12 +546,6 @@ function getStatusText(status) {
   if (status === "correct") return "bonne lettre, bonne place";
   if (status === "present") return "bonne lettre, autre place";
   return "lettre absente";
-}
-
-function getStatusMark(status) {
-  if (status === "correct") return "✓";
-  if (status === "present") return "~";
-  return "×";
 }
 
 function getBoardRowCount() {

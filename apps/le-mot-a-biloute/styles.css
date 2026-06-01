@@ -210,24 +210,6 @@ h3 {
   background: var(--absent);
 }
 
-.tile.correct::after,
-.tile.present::after,
-.tile.absent::after {
-  content: attr(data-mark);
-  position: absolute;
-  right: 3px;
-  bottom: 2px;
-  width: 1.1em;
-  height: 1.1em;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  background: rgba(7, 27, 49, 0.76);
-  color: white;
-  font-size: 0.48em;
-  line-height: 1;
-}
-
 .tile.shake {
   animation: shake 210ms ease;
 }

@@ -87,6 +87,10 @@ body.labaj-site {
   border-left-color: var(--labaj-teal);
 }
 
+.game-card--triangle {
+  border-left-color: var(--labaj-gold);
+}
+
 .game-card__top {
   min-width: 0;
   display: flex;
@@ -251,6 +255,12 @@ body.labaj-site {
 
   .games-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 980px) {
+  .games-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
