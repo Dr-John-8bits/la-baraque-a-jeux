@@ -510,5 +510,373 @@
         "note": "Quatre communes du territoire Tourquennois - Vallée de la Lys."
       }
     ]
+  },
+  {
+    "id": "tourcoing-weppes-001",
+    "number": 8,
+    "title": "Tourcoing et Weppes",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Cette grille transforme quatre familles candidates en contenu jouable : deux lignes à suivre, deux territoires à reconnaître.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "tramway", "communes"],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "Le tramway dessert des arrêts à Wasquehal.",
+      "answer": true,
+      "explanation": "Vrai. Les exports métro-tram listent notamment Pont de Wasquehal et Wasquehal Pavé de Lille."
+    },
+    "groups": [
+      {
+        "id": "m2-tourcoing-centre",
+        "title": "Stations de la ligne 2",
+        "difficulty": "easy",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Colbert",
+          "Tourcoing Centre",
+          "Gare de Tourcoing",
+          "Carliers"
+        ],
+        "note": "Quatre stations de la ligne 2 dans le secteur tourquennois."
+      },
+      {
+        "id": "tram-wasquehal-sart",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "La Terrasse",
+          "Wasquehal Pavé de Lille",
+          "Le Sart",
+          "Planche Epinoy"
+        ],
+        "note": "Une série d'arrêts du tramway côté Wasquehal et environs."
+      },
+      {
+        "id": "communes-armentierois-lys",
+        "title": "Armentiérois - Vallée de la Lys",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Armentières",
+          "Deûlémont",
+          "Erquinghem-Lys",
+          "Frelinghien"
+        ],
+        "note": "Quatre communes du territoire Armentiérois - Vallée de la Lys."
+      },
+      {
+        "id": "communes-weppes-ouest",
+        "title": "Territoire des Weppes",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Aubers",
+          "Beaucamps-Ligny",
+          "Bois-Grenier",
+          "Don"
+        ],
+        "note": "Quatre communes des Weppes, loin des automatismes du centre."
+      }
+    ]
+  },
+  {
+    "id": "roubaix-mons-weppes-001",
+    "number": 9,
+    "title": "Roubaix, Mons et Weppes",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Le corpus gagne ici des cartes hors Lille intra-muros, avec des stations de métro et des communes de territoires distincts.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "communes", "metropole"],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 passe par Roubaix et Mons-en-Barœul.",
+      "answer": true,
+      "explanation": "Vrai. Les stations de la ligne 2 sont rattachées à plusieurs communes, dont Roubaix et Mons-en-Barœul."
+    },
+    "groups": [
+      {
+        "id": "m2-roubaix-centre",
+        "title": "Stations de la ligne 2",
+        "difficulty": "easy",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Mercure",
+          "Alsace",
+          "Gare Jean Lebas",
+          "Roubaix Place"
+        ],
+        "note": "Quatre stations de la ligne 2 côté Roubaix."
+      },
+      {
+        "id": "m2-mons-baroeul",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Les Prés-E. Pisani",
+          "Fort de Mons",
+          "Mairie de Mons",
+          "Mons Sarts"
+        ],
+        "note": "Une série de stations autour de Mons-en-Barœul."
+      },
+      {
+        "id": "communes-weppes-est",
+        "title": "Territoire des Weppes",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Englos",
+          "Ennetières-en-Weppes",
+          "Erquinghem-le-Sec",
+          "Escobecques"
+        ],
+        "note": "Encore des Weppes, mais avec d'autres communes à démêler."
+      },
+      {
+        "id": "communes-couronne-nord-ouest",
+        "title": "Territoire de la couronne Nord",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Capinghem",
+          "La Madeleine",
+          "Lambersart",
+          "Lompret"
+        ],
+        "note": "Quatre communes du territoire de la couronne Nord."
+      }
+    ]
+  },
+  {
+    "id": "croix-bus-patrimoine-001",
+    "number": 10,
+    "title": "Croix, bus et patrimoine",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Cette grille introduit des bus et du patrimoine civil, deux familles moins présentes dans les premières grilles.",
+    "status": "reviewed",
+    "tags": ["transport", "bus", "patrimoine", "communes"],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel",
+      "ville-lille-monuments-historiques-data-gouv"
+    ],
+    "bonus": {
+      "question": "Le corpus peut mélanger transports, communes et patrimoine dans une même grille.",
+      "answer": true,
+      "explanation": "Vrai. Chaque famille garde sa logique propre, même quand les thèmes de la grille se croisent."
+    },
+    "groups": [
+      {
+        "id": "m2-roubaix-croix",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Euroteleport",
+          "Roubaix Charles de Gaulle",
+          "Ep. Montesquieu",
+          "Mairie de Croix"
+        ],
+        "note": "Quatre stations de la ligne 2 entre Roubaix et Croix."
+      },
+      {
+        "id": "liane-2-premiers-arrets",
+        "title": "Arrêts de la Liane 2",
+        "difficulty": "hard",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Les Oliveaux",
+          "Collège Descartes",
+          "La Paix",
+          "Châtelet"
+        ],
+        "note": "Une famille de bus, à réserver aux joueurs qui regardent les arrêts."
+      },
+      {
+        "id": "communes-roubaisien",
+        "title": "Territoire Roubaisien",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Croix",
+          "Hem",
+          "Lannoy",
+          "Leers"
+        ],
+        "note": "Quatre communes du territoire Roubaisien."
+      },
+      {
+        "id": "patrimoine-civil-lille",
+        "title": "Patrimoine civil lillois",
+        "difficulty": "tricky",
+        "sourceIds": ["ville-lille-monuments-historiques-data-gouv"],
+        "items": [
+          "Ancienne Maladrerie",
+          "Bâtiment dit la Grande Garde",
+          "Caserne Souham",
+          "Chambre de Commerce et d'Industrie"
+        ],
+        "note": "Quatre entrées patrimoniales issues du jeu de données des monuments historiques."
+      }
+    ]
+  },
+  {
+    "id": "lianes-couronnes-jardins-001",
+    "number": 11,
+    "title": "Lianes, couronnes et jardins",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Les familles de bus et d'espaces verts élargissent le jeu au-delà des stations de métro les plus connues.",
+    "status": "reviewed",
+    "tags": ["transport", "bus", "communes", "espaces-verts"],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel",
+      "ville-lille-parcs-jardins-data-gouv"
+    ],
+    "bonus": {
+      "question": "Les parcs et jardins du corpus viennent d'un jeu de données ouvert de la Ville de Lille.",
+      "answer": true,
+      "explanation": "Vrai. Les familles d'espaces verts utilisent le jeu de données des parcs et jardins Lille-Hellemmes-Lomme."
+    },
+    "groups": [
+      {
+        "id": "liane-8-premiers-arrets",
+        "title": "Arrêts de la Liane 8",
+        "difficulty": "hard",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Blanchisserie",
+          "Laennec",
+          "Dunant",
+          "Coty"
+        ],
+        "note": "Quatre arrêts de bus, pour varier le rail automatique."
+      },
+      {
+        "id": "liane-99-premiers-arrets",
+        "title": "Arrêts de la Liane 99",
+        "difficulty": "hard",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Le Bizet",
+          "Louis Bleriot",
+          "Herons",
+          "Jacques Cartier"
+        ],
+        "note": "Une autre famille de bus, plus périphérique dans l'imaginaire lillois."
+      },
+      {
+        "id": "communes-couronne-nord-est",
+        "title": "Territoire de la couronne Nord",
+        "difficulty": "medium",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Marcq-en-Barœul",
+          "Marquette-lez-Lille",
+          "Pérenchies",
+          "Prémesques"
+        ],
+        "note": "Quatre communes de la couronne Nord."
+      },
+      {
+        "id": "espaces-verts-lomme-esplanade",
+        "title": "Parcs et jardins",
+        "difficulty": "tricky",
+        "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
+        "items": [
+          "Esplanade Léon Jouhaux",
+          "Façade de l'Esplanade",
+          "Ferme éducative de Lomme",
+          "Ferme pédagogique Marcel Dhénin"
+        ],
+        "note": "Quatre entrées du corpus parcs et jardins, à manier en grille corsée."
+      }
+    ]
+  },
+  {
+    "id": "hellemmes-bois-blancs-001",
+    "number": 12,
+    "title": "Hellemmes et Bois-Blancs",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Cette passe ajoute des cartes issues des familles candidates, en gardant les sources et les exclusions comme garde-fous.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "communes", "espaces-verts"],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel",
+      "ville-lille-parcs-jardins-data-gouv"
+    ],
+    "bonus": {
+      "question": "Bois Blancs et Canteleu apparaissent dans les données de la ligne 2.",
+      "answer": true,
+      "explanation": "Vrai. Ces libellés figurent parmi les stations de la ligne 2 dans les exports transport."
+    },
+    "groups": [
+      {
+        "id": "m1-hellemmes-marbrerie",
+        "title": "Stations de la ligne 1",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Pont de Bois",
+          "Square Flandres",
+          "Mairie d'Hellemmes",
+          "Marbrerie"
+        ],
+        "note": "Quatre stations de la ligne 1 autour d'Hellemmes et Fives."
+      },
+      {
+        "id": "m2-bois-blancs-canteleu",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Bois Blancs",
+          "Canteleu",
+          "Lomme-Lambersart",
+          "Pont Supérieur"
+        ],
+        "note": "La ligne 2 côté Bois-Blancs, Canteleu et Lomme."
+      },
+      {
+        "id": "communes-est-marque-melantois",
+        "title": "Territoire Est",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Forest-sur-Marque",
+          "Gruson",
+          "Mons-en-Barœul",
+          "Péronne-en-Mélantois"
+        ],
+        "note": "Quatre communes du territoire Est."
+      },
+      {
+        "id": "espaces-verts-concorde-gare-eau",
+        "title": "Parcs et jardins",
+        "difficulty": "tricky",
+        "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
+        "items": [
+          "Espace résidentiel Concorde",
+          "Espace résidentiel Petit Maroc",
+          "Esplanade de la Gare d'Eau",
+          "Esplanade Joseph Wresinski"
+        ],
+        "note": "Des espaces et repères verts sortis du corpus parcs et jardins."
+      }
+    ]
   }
 ]

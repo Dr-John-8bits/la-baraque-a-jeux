@@ -1,6 +1,26 @@
 import { readFile } from "node:fs/promises";
 
 const errors = [];
+const FORBIDDEN_LABEL_PATTERNS = [
+  /\bsaint\b/,
+  /\bsainte\b/,
+  /\bst\b/,
+  /\bste\b/,
+  /\beglise\b/,
+  /\bchapelle\b/,
+  /\bcalvaire\b/,
+  /\babbaye\b/,
+  /\btemple\b/,
+  /\bdieu\b/,
+  /\bcathedrale\b/,
+  /\bcatholique\b/,
+  /\bmosquee\b/,
+  /\bislam/,
+  /\bbouddh/,
+  /\brelig/,
+  /\baumonerie\b/,
+  /\barmee du salut\b/,
+];
 
 const sources = await readJson("packages/corpus/sources.json");
 const words = await readJson("packages/corpus/le-mot-a-biloute/words.json");
@@ -204,6 +224,10 @@ function validatePuzzles(value, sourceIds, forbiddenLabels) {
         addUnique(normalizedItemIds, normalized, itemLabel);
         if (forbiddenLabels.has(normalized)) {
           errors.push(`${itemLabel} utilise un item exclu ou sensible : ${forbiddenLabels.get(normalized)}.`);
+        }
+        const forbiddenPattern = FORBIDDEN_LABEL_PATTERNS.find((pattern) => pattern.test(normalized));
+        if (forbiddenPattern) {
+          errors.push(`${itemLabel} contient une reference religieuse interdite : ${item}.`);
         }
       });
     });

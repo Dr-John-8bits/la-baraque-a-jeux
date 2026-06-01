@@ -52,3 +52,9 @@ Original prompt: Commence à développer le jeu index.hmtl, on verra pour le con
   - flash jaune des cartes prolongé et rendu plus visible ;
   - aide et microcopy éditoriale alignées ;
   - smoke test enrichi avec un scénario "3 sur 4".
+- Itération 26.06.01.3 :
+  - passe éditoriale sur les familles `to-review` : 5 nouvelles grilles `reviewed` ajoutées ;
+  - corpus Lille-Mêle à 12 grilles, dont 8 `reviewed` ;
+  - cartes `reviewed` : 128 emplacements, 124 cartes uniques ;
+  - nouvelles familles jouables : ligne 2, tramway, Lianes, territoires MEL, patrimoine civil, parcs et jardins ;
+  - validateur renforcé avec un filtre textuel contre les références religieuses évidentes non listées dans les exclusions.

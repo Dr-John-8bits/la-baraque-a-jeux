@@ -7,7 +7,7 @@ import { escapeHtml } from "../../packages/game-utils/text-render.js";
 
 const MAX_MISTAKES = 4;
 const STORAGE_PREFIX = "lillemele.v1.";
-const APP_VERSION = "26.06.01.2";
+const APP_VERSION = "26.06.01.3";
 const DEFAULT_STATS = {
   played: 0,
   won: 0,

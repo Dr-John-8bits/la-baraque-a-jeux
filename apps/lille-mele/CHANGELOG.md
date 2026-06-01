@@ -4,6 +4,22 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## [26.06.01.3] - 2026-06-01
+
+### Ajouté
+
+- Cinq nouvelles grilles `reviewed` issues d'une passe éditoriale sur les familles `to-review`.
+- Nouvelles familles jouables autour de la ligne 2, du tramway, des Lianes, des territoires MEL, du patrimoine civil et des espaces verts.
+
+### Modifié
+
+- Version courante passée à `26.06.01.3`.
+- Validateur enrichi avec un filtre textuel contre les références religieuses évidentes non listées explicitement dans les exclusions.
+
+### Vérifié
+
+- Le corpus contient désormais 8 grilles `reviewed`, soit 128 emplacements et 124 cartes uniques relues.
+
 ## [26.06.01.2] - 2026-06-01
 
 ### Modifié
