@@ -25,22 +25,6 @@ Le projet reste volontairement leger : applications statiques, pas de backend ob
 └── scripts/
 ```
 
-## Lancer localement
-
-Depuis la racine :
-
-```bash
-npm run serve
-```
-
-Puis ouvrir :
-
-```text
-http://127.0.0.1:48391/
-http://127.0.0.1:48391/apps/le-mot-a-biloute/
-http://127.0.0.1:48391/apps/lille-mele/
-```
-
 ## Principes
 
 - `apps/` contient les experiences publiques.

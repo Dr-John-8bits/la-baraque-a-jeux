@@ -8,8 +8,6 @@
     "packages/*"
   ],
   "scripts": {
-    "serve": "python3 -m http.server 48391",
     "check:js": "node --check apps/le-mot-a-biloute/app.js"
   }
 }
-

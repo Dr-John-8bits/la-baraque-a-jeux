@@ -8,9 +8,8 @@ Ce dossier contiendra les scripts de validation et de generation :
 - verification des puzzles ;
 - preparation d'un dossier de deploiement.
 
-Les scripts npm racine actuels sont volontairement minimaux :
+Le script npm racine actuel est volontairement minimal :
 
 ```bash
-npm run serve
 npm run check:js
 ```
