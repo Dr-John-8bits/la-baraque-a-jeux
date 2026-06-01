@@ -12,9 +12,9 @@ Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu co
 
 - mot quotidien déterministe ;
 - 6 essais officiels, puis Rab de Biloute possible sans série ;
-- premier indice gratuit à la demande et volontairement vague ;
-- indices supplémentaires avec pénalité de points ;
-- score basé sur les essais et les indices, y compris dans le Rab de Biloute ;
+- premier Ch’ti coup d'pouce gratuit à la demande et volontairement vague ;
+- coups d'pouce supplémentaires avec pénalité de points ;
+- score basé sur les essais et les coups d'pouce, y compris dans le Rab de Biloute ;
 - clavier virtuel AZERTY ;
 - saisie au clavier physique ;
 - retour correcte / présente / absente ;

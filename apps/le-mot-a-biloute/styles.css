@@ -228,6 +228,12 @@ h3 {
   gap: 9px;
 }
 
+.actions button {
+  padding: 0 8px;
+  font-size: 0.92rem;
+  line-height: 1.12;
+}
+
 .actions button:first-child {
   background: var(--blue);
 }
@@ -331,6 +337,10 @@ h3 {
 .result-summary {
   color: var(--muted);
   font-weight: 750;
+}
+
+#resultKicker {
+  text-transform: none;
 }
 
 .bonus {
@@ -518,5 +528,9 @@ h3 {
   .utility-button {
     padding: 0 8px;
     font-size: 0.78rem;
+  }
+
+  .actions button {
+    font-size: 0.8rem;
   }
 }

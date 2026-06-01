@@ -72,7 +72,7 @@
         </div>
       </section>
 
-      <section class="utility-actions" aria-label="Aide et statistiques">
+      <section class="utility-actions" aria-label="Règles et statistiques">
         <button
           class="utility-button utility-button--help"
           id="helpButton"
@@ -80,16 +80,16 @@
           aria-label="Ouvrir les règles du jeu"
           title="Règles du jeu"
         >
-          Aide
+          Hein ?
         </button>
         <button
           class="utility-button utility-button--stats"
           id="statsButton"
           type="button"
-          aria-label="Ouvrir le carnet de statistiques"
-          title="Carnet de statistiques"
+          aria-label="Ouvrir le calepin de statistiques"
+          title="Calepin de statistiques"
         >
-          Carnet
+          Calepin
         </button>
       </section>
       <p class="visually-hidden" id="statusAnnouncer" role="status" aria-live="polite"></p>
@@ -99,7 +99,7 @@
       </section>
 
       <section class="actions">
-        <button id="hintButton" type="button">Indice gratuit</button>
+        <button id="hintButton" type="button">Ch’ti coup d'pouce gratuit</button>
         <button id="primaryActionButton" type="button" disabled>Valider</button>
       </section>
 
@@ -135,12 +135,12 @@
 
       <dialog class="result-dialog hint-dialog" id="hintDialog">
         <form method="dialog">
-          <p class="eyebrow">Indice</p>
-          <h2 id="hintTitle">Indice gratuit</h2>
+          <p class="eyebrow">Ch’ti coup d'pouce</p>
+          <h2 id="hintTitle">Ch’ti coup d'pouce gratuit</h2>
           <div class="hint-list" id="hintList"></div>
           <p class="hint-cost" id="hintCostText"></p>
           <div class="dialog-actions">
-            <button id="nextHintButton" type="button">Indice suivant -180</button>
+            <button id="nextHintButton" type="button">Ch’ti coup d'pouce suivant -180</button>
             <button value="close">Fermer</button>
           </div>
         </form>
@@ -165,11 +165,11 @@
             </section>
             <section>
               <h3>Points</h3>
-              <p>Tu démarres à 1000 points. Chaque essai après le premier retire 120 points. Chaque indice payant retire 180 points. Dans le Rab de Biloute, le score continue de descendre et peut devenir négatif.</p>
+              <p>Tu démarres à 1000 points. Chaque essai après le premier retire 120 points. Chaque coup d'pouce payant retire 180 points. Dans le Rab de Biloute, le score continue de descendre et peut devenir négatif.</p>
             </section>
             <section>
-              <h3>Indices et série</h3>
-              <p>Clique sur Indice pour afficher l'indice de départ, gratuit. Les indices suivants coûtent des points. La série ne progresse que si tu trouves dans les 6 essais officiels.</p>
+              <h3>Coups d'pouce et série</h3>
+              <p>Clique sur Ch’ti coup d'pouce pour afficher le premier coup d'pouce, gratuit. Les suivants coûtent des points. La série ne progresse que si tu trouves dans les 6 essais officiels.</p>
             </section>
           </div>
           <div class="dialog-actions dialog-actions--single">
@@ -181,7 +181,7 @@
       <dialog class="result-dialog" id="statsDialog">
         <form method="dialog">
           <p class="eyebrow">Stats locales</p>
-          <h2>Ton carnet</h2>
+          <h2>Ton calepin</h2>
           <dl class="stats-list">
             <div>
               <dt>Parties</dt>

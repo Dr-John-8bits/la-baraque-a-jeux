@@ -21,8 +21,8 @@ apps/le-mot-a-biloute/
 
 - Charger la page.
 - Vérifier le mot du jour et la catégorie.
-- Vérifier que le premier indice est accessible gratuitement depuis le bouton `Indice`.
-- Cliquer sur un indice payant et vérifier la perte de points.
+- Vérifier que le premier coup d'pouce est accessible gratuitement depuis le bouton `Ch’ti coup d'pouce`.
+- Cliquer sur un coup d'pouce payant et vérifier la perte de points.
 - Taper une réponse trop courte.
 - Taper une mauvaise réponse.
 - Vérifier qu'au 6e échec la modale `Rab de Biloute` apparaît, que la série passe à 0 et que le jeu reste jouable.

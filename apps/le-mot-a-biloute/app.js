@@ -10,6 +10,8 @@ const DAILY_ROLLOVER_HOUR = 12;
 const BASE_SCORE = 1000;
 const POINTS_PER_EXTRA_GUESS = 120;
 const POINTS_PER_EXTRA_HINT = 180;
+const HINT_LABEL = "Ch’ti coup d'pouce";
+const FREE_HINT_LABEL = `${HINT_LABEL} gratuit`;
 
 const WORDS = await fetchJson("../../packages/corpus/le-mot-a-biloute/words.json");
 
@@ -260,7 +262,7 @@ function render() {
   els.tryCount.textContent = formatTryCount();
   els.scoreCount.textContent = String(calculateScore(state.result));
   els.streakCount.textContent = String(getStats().streak || 0);
-  els.hintButton.textContent = state.starterHintSeen ? "Indice" : "Indice gratuit";
+  els.hintButton.textContent = state.starterHintSeen ? HINT_LABEL : FREE_HINT_LABEL;
   els.hintButton.disabled = !active;
   renderPrimaryAction();
   renderBoard();
@@ -298,23 +300,25 @@ function highlightShareButton(button) {
 }
 
 function renderHintDialog() {
-  els.hintTitle.textContent = state.starterHintSeen ? "Tes indices" : "Indice gratuit";
+  els.hintTitle.textContent = state.starterHintSeen ? "Tes coups d'pouce" : FREE_HINT_LABEL;
   els.hintList.innerHTML = "";
 
   if (state.starterHintSeen) {
-    els.hintList.append(createHintCard("Indice gratuit", word.starterHint));
+    els.hintList.append(createHintCard(FREE_HINT_LABEL, word.starterHint));
   }
 
   for (let index = 0; index < state.extraHintsUsed; index += 1) {
-    els.hintList.append(createHintCard(`Indice ${index + 2}`, word.hints[index]));
+    els.hintList.append(createHintCard(`${HINT_LABEL} ${index + 2}`, word.hints[index]));
   }
 
   const canRevealPaid = isGameActive() && state.extraHintsUsed < word.hints.length;
   els.nextHintButton.disabled = !canRevealPaid;
-  els.nextHintButton.textContent = canRevealPaid ? `Indice suivant -${POINTS_PER_EXTRA_HINT}` : "Plus d'indice";
+  els.nextHintButton.textContent = canRevealPaid
+    ? `${HINT_LABEL} suivant -${POINTS_PER_EXTRA_HINT}`
+    : "Plus de coup d'pouce";
   els.hintCostText.textContent = canRevealPaid
-    ? `L'indice de départ est gratuit. Le suivant retire ${POINTS_PER_EXTRA_HINT} points.`
-    : "Tous les indices disponibles sont affichés.";
+    ? `Le premier coup d'pouce est gratuit. Le suivant retire ${POINTS_PER_EXTRA_HINT} points.`
+    : "Tous les coups d'pouce disponibles sont affichés.";
 }
 
 function createHintCard(title, text) {
@@ -351,7 +355,7 @@ function revealPaidHint() {
   saveGame();
   render();
   renderHintDialog();
-  announce(`Indice ${state.extraHintsUsed + 1} révélé. ${POINTS_PER_EXTRA_HINT} points en moins.`);
+  announce(`Coup d'pouce ${state.extraHintsUsed + 1} révélé. ${POINTS_PER_EXTRA_HINT} points en moins.`);
 }
 
 function renderBoard() {
@@ -443,13 +447,13 @@ function showResultDialog() {
   const recovered = state.result === "recovered";
   const tries = state.guesses.length;
   const score = state.score ?? calculateScore(state.result);
-  els.resultKicker.textContent = recovered ? "Rab de Biloute" : won ? "Trouvé" : "Terminus";
+  els.resultKicker.textContent = recovered ? "Rab de Biloute" : won ? "Bien joué biloute !" : "Terminus";
   els.resultTitle.textContent = won || recovered
     ? `${word.answer} en ${tries} essai${tries > 1 ? "s" : ""}`
     : `C'était ${word.answer}`;
   els.resultSummary.textContent = recovered
-    ? `${score} points · trouvé au Rab de Biloute · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`
-    : `${score} points · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`;
+    ? `${score} points · trouvé au Rab de Biloute · ${formatPaidHintCount()}`
+    : `${score} points · ${formatPaidHintCount()}`;
   els.bonusTitle.textContent = word.bonus.title;
   els.bonusText.textContent = word.bonus.text;
   if (!els.resultDialog.open) els.resultDialog.showModal();
@@ -468,8 +472,8 @@ function buildShareText() {
       .join("")
   );
   const summary = state.result === "recovered"
-    ? `${score} points · Rab de Biloute · ${state.guesses.length} essais · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`
-    : `${score} points · ${state.result === "won" ? state.guesses.length : "X"}/${MAX_GUESSES} · ${state.extraHintsUsed} indice${state.extraHintsUsed > 1 ? "s" : ""} payant${state.extraHintsUsed > 1 ? "s" : ""}`;
+    ? `${score} points · Rab de Biloute · ${state.guesses.length} essais · ${formatPaidHintCount()}`
+    : `${score} points · ${state.result === "won" ? state.guesses.length : "X"}/${MAX_GUESSES} · ${formatPaidHintCount()}`;
   return [
     `Le mot à Biloute ${todayId}`,
     summary,
@@ -498,6 +502,11 @@ function handlePrimaryAction() {
 
 function getStats() {
   return readJson(statsKey, {});
+}
+
+function formatPaidHintCount() {
+  const plural = state.extraHintsUsed === 1 ? "" : "s";
+  return `${state.extraHintsUsed} coup${plural} d'pouce payant${plural}`;
 }
 
 function recordOfficialResult(result) {

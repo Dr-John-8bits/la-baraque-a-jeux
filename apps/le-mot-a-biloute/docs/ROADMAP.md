@@ -7,7 +7,7 @@
 - Rab de Biloute après échec officiel.
 - Clavier virtuel.
 - Score.
-- Indices progressifs.
+- Ch’tis coups d'pouce progressifs.
 - Bonus final.
 - Partage texte.
 
@@ -20,7 +20,7 @@
 - Maintenir le validateur de corpus commun.
 - Harmoniser les catégories.
 - Ajouter des variantes acceptées.
-- Relire les indices.
+- Relire les coups d'pouce.
 - Vérifier les bonus.
 
 ## 0.3 — Identité visuelle

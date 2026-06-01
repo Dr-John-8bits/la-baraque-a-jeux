@@ -9,6 +9,7 @@ Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 - Ajout du mode Rab de Biloute après 6 essais officiels échoués.
 - La série est désormais perdue dès l'entrée dans le Rab de Biloute, mais le joueur peut continuer à chercher.
 - Le score continue de descendre dans le Rab de Biloute et peut devenir négatif.
+- Renforcement de la couleur locale : `Hein ?`, `Calepin`, `Ch’ti coup d'pouce` et message de victoire `Bien joué biloute !`.
 - Mise à jour des règles, du partage et de la documentation produit.
 
 ## 26.05.31.5
