@@ -12,8 +12,9 @@ Le projet reste volontairement leger : applications statiques, pas de backend ob
 
 ```text
 .
+├── assets/
+│   └── brand/
 ├── apps/
-│   ├── portail/
 │   ├── le-mot-a-biloute/
 │   └── lille-mele/
 ├── packages/
@@ -28,17 +29,27 @@ Le projet reste volontairement leger : applications statiques, pas de backend ob
 
 ## Principes
 
+- `index.html` est le portail public servi par GitHub Pages.
+- `assets/brand/` contient les assets de marque communs.
 - `apps/` contient les experiences publiques.
-- `packages/corpus/` contiendra les donnees partagees, schemas et notes de validation.
-- `packages/ui/` contiendra les styles et composants communs quand les apps seront factorisees.
-- `packages/game-utils/` contiendra les helpers communs : date du jour, partage, stockage local, validation.
+- `packages/corpus/` contient les donnees partagees, schemas et notes de validation.
+- `packages/ui/` contient les styles, tokens et composants communs.
+- `packages/game-utils/` contient les helpers communs : date du jour, partage, stockage local, rendu Markdown et chargement JSON.
 - `docs/blog/NEWS.md` alimente la page publique `blog.html`.
 - `scripts/` contiendra les validateurs et outils de generation.
 
-Chaque jeu peut encore fonctionner de facon autonome pendant la phase de migration. La mutualisation se fera par petites etapes pour garder le prototype jouable.
+Chaque jeu garde son moteur propre, mais s'appuie sur les briques communes pour les fondations.
 
 ## Verification
 
 ```bash
-npm run check:js
+npm run check
 ```
+
+Smoke test navigateur optionnel :
+
+```bash
+npm run test:browser
+```
+
+Cette commande sert uniquement a la verification : elle demarre un serveur statique de test si aucun serveur local n'est deja disponible.

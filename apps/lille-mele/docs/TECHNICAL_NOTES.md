@@ -2,24 +2,28 @@
 
 ## Prototype actuel
 
-Le prototype est un fichier HTML autonome :
+Le prototype est une webapp statique decoupee :
 
 ```text
 index.html
+styles.css
+app.js
+../../packages/corpus/lille-mele/puzzles.json
+../../packages/corpus/sources.json
 ```
 
-Il contient :
+Elle separe :
 
-- le HTML ;
-- les styles CSS ;
-- les données prototype ;
+- la structure HTML ;
+- les styles CSS propres au jeu ;
+- les données de corpus ;
 - la logique de jeu JavaScript ;
 - la sauvegarde locale ;
 - le partage ;
 - l'aide ;
 - les sources.
 
-Ce choix permet d'itérer vite avant de passer à une vraie architecture applicative.
+Ce choix garde le jeu jouable sur GitHub Pages sans build ni backend.
 
 ## Stockage local
 
@@ -82,10 +86,10 @@ Tests réalisés via Playwright :
 
 ## Prochaine étape technique
 
-Quand le prototype se stabilise :
+Les prochaines étapes techniques :
 
-1. extraire les données dans `data/puzzles.json` ;
-2. extraire la logique de jeu dans des fonctions testables ;
-3. ajouter un validateur de grilles ;
-4. convertir en Vite + TypeScript ;
-5. ajouter des tests unitaires.
+1. enrichir le validateur de grilles ;
+2. relier chaque item a une source structuree ;
+3. isoler davantage les fonctions de resolution ;
+4. ajouter des tests navigateur automatises ;
+5. envisager TypeScript seulement si le corpus devient difficile a maintenir en JavaScript statique.

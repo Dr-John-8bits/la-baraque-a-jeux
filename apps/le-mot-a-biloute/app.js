@@ -1,4 +1,7 @@
-"use strict";
+import { getDateId, getRelativeDateId, selectDailyItem } from "../../packages/game-utils/daily.js";
+import { fetchJson } from "../../packages/game-utils/fetch-json.js";
+import { readJson, writeJson } from "../../packages/game-utils/storage.js";
+import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
 const APP_VERSION = "26.05.31.5";
 const GAME_URL = new URL(".", window.location.href).href;
@@ -6,128 +9,7 @@ const BASE_SCORE = 1000;
 const POINTS_PER_EXTRA_GUESS = 120;
 const POINTS_PER_EXTRA_HINT = 180;
 
-const WORDS = [
-  {
-    id: "drache",
-    answer: "DRACHE",
-    category: "Vocabulaire ch'ti",
-    starterHint: "Ça peut ruiner une belle sortie sans demander la permission.",
-    hints: ["Météo bien du Nord, version généreuse.", "Grosse pluie en parler régional."],
-    acceptedAnswers: ["DRACHE"],
-    bonus: {
-      title: "Drache",
-      text: "Dans le Nord, une drache désigne une grosse pluie. Pas une bruine polie : une vraie démonstration météo.",
-    },
-  },
-  {
-    id: "chicon",
-    answer: "CHICON",
-    category: "Cuisine du Nord",
-    starterHint: "Il divise la table, surtout quand il assume son amertume.",
-    hints: ["On l'appelle plus souvent endive ailleurs.", "Légume du Nord, souvent servi au gratin."],
-    acceptedAnswers: ["CHICON"],
-    bonus: {
-      title: "Chicon",
-      text: "Le chicon, c'est l'endive. En salade ou au gratin, il garde une petite amertume très assumée.",
-    },
-  },
-  {
-    id: "fives",
-    answer: "FIVES",
-    category: "Quartier lillois",
-    starterHint: "Un nom court, mais pas une petite histoire.",
-    hints: ["Quartier à l'est de Lille.", "Quartier lillois marqué par son histoire industrielle."],
-    acceptedAnswers: ["FIVES"],
-    bonus: {
-      title: "Fives",
-      text: "Fives est un quartier lillois à l'est de la ville, longtemps associé aux ateliers, aux rails et à une forte mémoire ouvrière.",
-    },
-  },
-  {
-    id: "beffroi",
-    answer: "BEFFROI",
-    category: "Patrimoine",
-    starterHint: "Il donne envie de lever la tête.",
-    hints: ["Grande tour emblématique du Nord.", "Tour lilloise utile pour se sentir minuscule."],
-    acceptedAnswers: ["BEFFROI"],
-    bonus: {
-      title: "Beffroi",
-      text: "Les beffrois font partie du paysage du Nord. Celui de Lille donne une belle occasion de se sentir minuscule.",
-    },
-  },
-  {
-    id: "ducasse",
-    answer: "DUCASSE",
-    category: "Tradition populaire",
-    starterHint: "On y va rarement pour le silence.",
-    hints: ["Tradition populaire locale.", "Fête foraine du Nord, souvent bruyante et sucrée."],
-    acceptedAnswers: ["DUCASSE"],
-    bonus: {
-      title: "Ducasse",
-      text: "Une ducasse est une fête populaire locale. On y croise facilement des manèges, du sucre et des souvenirs collants.",
-    },
-  },
-  {
-    id: "wazemmes",
-    answer: "WAZEMMES",
-    category: "Quartier lillois",
-    starterHint: "Un matin calme peut vite y changer d'avis.",
-    hints: ["Quartier lillois connu pour son marché.", "Quartier populaire au sud-ouest du centre de Lille."],
-    acceptedAnswers: ["WAZEMMES"],
-    bonus: {
-      title: "Wazemmes",
-      text: "Wazemmes est un quartier populaire et vivant de Lille, notamment connu pour son marché et son ambiance bien remplie.",
-    },
-  },
-  {
-    id: "quinquin",
-    answer: "QUINQUIN",
-    category: "Parler régional",
-    starterHint: "Un mot tendre qui a presque une mélodie.",
-    hints: ["Mot régional lié à l'enfance.", "Petit enfant dans le parler du Nord."],
-    acceptedAnswers: ["QUINQUIN"],
-    bonus: {
-      title: "Quinquin",
-      text: "Le mot quinquin évoque l'enfant dans le parler du Nord. Difficile de le lire sans entendre une berceuse quelque part.",
-    },
-  },
-  {
-    id: "frites",
-    answer: "FRITES",
-    category: "Cuisine du Nord",
-    starterHint: "Elles peuvent voler la vedette au plat principal.",
-    hints: ["Elles accompagnent beaucoup de débats très sérieux.", "Pommes de terre dorées, reines de la baraque."],
-    acceptedAnswers: ["FRITES"],
-    bonus: {
-      title: "Frites",
-      text: "Dans le Nord, les frites ne sont pas seulement un accompagnement. Elles peuvent très vite devenir le sujet principal.",
-    },
-  },
-  {
-    id: "braderie",
-    answer: "BRADERIE",
-    category: "Événement lillois",
-    starterHint: "Quand Lille devient un immense terrain de fouille.",
-    hints: ["Grand événement populaire lillois.", "Les rues disparaissent sous les moules, les frites et les bonnes affaires."],
-    acceptedAnswers: ["BRADERIE"],
-    bonus: {
-      title: "Braderie",
-      text: "La braderie transforme Lille en terrain de fouille géant, entre stands, discussions et piles de moules-frites.",
-    },
-  },
-  {
-    id: "biloute",
-    answer: "BILOUTE",
-    category: "Parler régional",
-    starterHint: "Le jeu te tutoie presque avec ce mot.",
-    hints: ["Mot affectueux du Nord.", "Il est dans le titre du jeu."],
-    acceptedAnswers: ["BILOUTE"],
-    bonus: {
-      title: "Biloute",
-      text: "Biloute est un mot populaire du Nord, souvent employé avec affection. Ici, il signe surtout l'esprit complice du jeu.",
-    },
-  },
-];
+const WORDS = await fetchJson("../../packages/corpus/le-mot-a-biloute/words.json");
 
 const MAX_GUESSES = 6;
 const STORAGE_PREFIX = "mot-a-biloute";
@@ -166,8 +48,8 @@ const els = {
   statBestScore: document.getElementById("statBestScore"),
 };
 
-const todayId = getTodayId();
-const word = getDailyWord(todayId);
+const todayId = getDateId();
+const word = selectDailyItem(WORDS, todayId, { epochId: "2026-01-01" });
 const wordLength = word.answer.length;
 const gameKey = `${STORAGE_PREFIX}:game:${todayId}:${word.id}`;
 const statsKey = `${STORAGE_PREFIX}:stats`;
@@ -245,22 +127,6 @@ function bindEvents() {
 
   window.advanceTime = () => render();
   window.render_game_to_text = renderGameToText;
-}
-
-function getTodayId() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const day = String(now.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-}
-
-function getDailyWord(dayId) {
-  const epoch = Date.UTC(2026, 0, 1);
-  const [year, month, day] = dayId.split("-").map(Number);
-  const current = Date.UTC(year, month - 1, day);
-  const offset = Math.floor((current - epoch) / 86400000);
-  return WORDS[((offset % WORDS.length) + WORDS.length) % WORDS.length];
 }
 
 function normalize(value) {
@@ -490,29 +356,16 @@ function buildShareText() {
 
 async function shareResult() {
   const text = state.shareText || buildShareText();
-  if (navigator.share) {
-    try {
-      await navigator.share({ text });
-      return;
-    } catch (error) {
-      if (error && error.name === "AbortError") return;
-    }
-  }
-
-  try {
-    await navigator.clipboard.writeText(text);
+  const status = await shareTextWithFallback(text);
+  if (status === "copied") {
     announce("Résultat copié.");
-  } catch {
+  } else if (status === "failed") {
     announce(text);
   }
 }
 
 function getStats() {
-  try {
-    return JSON.parse(localStorage.getItem(statsKey)) || {};
-  } catch {
-    return {};
-  }
+  return readJson(statsKey, {});
 }
 
 function updateStats(result) {
@@ -530,7 +383,7 @@ function updateStats(result) {
   stats.lastPlayed = todayId;
 
   if (result === "won") {
-    const yesterday = getRelativeDay(-1);
+    const yesterday = getRelativeDateId(-1);
     stats.won += 1;
     stats.streak = stats.lastWin === yesterday ? (stats.streak || 0) + 1 : 1;
     stats.lastWin = todayId;
@@ -539,16 +392,7 @@ function updateStats(result) {
     stats.streak = 0;
   }
 
-  localStorage.setItem(statsKey, JSON.stringify(stats));
-}
-
-function getRelativeDay(offset) {
-  const date = new Date();
-  date.setDate(date.getDate() + offset);
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+  writeJson(statsKey, stats);
 }
 
 function renderStats() {
@@ -560,19 +404,13 @@ function renderStats() {
 }
 
 function saveGame() {
-  localStorage.setItem(gameKey, JSON.stringify(state));
+  writeJson(gameKey, state);
 }
 
 function loadGame() {
-  try {
-    const raw = localStorage.getItem(gameKey);
-    if (!raw) return null;
-    const loaded = JSON.parse(raw);
-    if (!loaded || !Array.isArray(loaded.guesses)) return null;
-    return loaded;
-  } catch {
-    return null;
-  }
+  const loaded = readJson(gameKey, null);
+  if (!loaded || !Array.isArray(loaded.guesses)) return null;
+  return loaded;
 }
 
 function calculateScore(result = state.result) {

@@ -16,13 +16,13 @@ Regrouper le portail et les jeux dans un seul depot afin de mutualiser :
 | --- | --- |
 | `index.html` | Point d'entree public servi par GitHub Pages. |
 | `blog.html` | Page publique des nouveautes et versions. |
-| `apps/portail` | Version applicative/source du portail. |
 | `apps/le-mot-a-biloute` | Jeu quotidien de mot local. |
 | `apps/lille-mele` | Jeu quotidien de familles et connexions locales. |
+| `assets/brand` | Identite visuelle commune du portail et des jeux. |
 
 ## Paquets partages
 
-Les dossiers de `packages/` sont volontairement initialises comme espaces de travail, meme si les apps n'importent pas encore de code commun.
+Les dossiers de `packages/` contiennent les briques partagees consommees par les apps.
 
 | Dossier | Role cible |
 | --- | --- |
@@ -41,16 +41,18 @@ Les dossiers de `packages/` sont volontairement initialises comme espaces de tra
 Phase actuelle :
 
 - conserver les jeux statiques et jouables ;
-- deplacer le code dans `apps/` ;
-- documenter les zones communes ;
-- nettoyer les artefacts generes.
+- garder `index.html` comme seul portail public ;
+- charger les donnees depuis `packages/corpus` ;
+- partager les helpers via `packages/game-utils` ;
+- partager la charte via `packages/ui` ;
+- verifier le corpus, les pages statiques et le JavaScript avant publication.
 
 Phase suivante :
 
-- extraire les donnees dans `packages/corpus` ;
-- ajouter des scripts de validation ;
-- factoriser les styles les plus stables ;
-- envisager ensuite Vite/TypeScript seulement quand les schemas seront stabilises.
+- enrichir le corpus avec des sources mieux structurees ;
+- affiner les validateurs ;
+- nettoyer les documentations historiques restantes ;
+- envisager ensuite Vite/TypeScript seulement si les schemas deviennent trop lourds a maintenir en JavaScript statique.
 
 ## Deploiement
 

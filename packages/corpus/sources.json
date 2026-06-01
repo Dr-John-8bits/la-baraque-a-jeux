@@ -1,0 +1,38 @@
+[
+  {
+    "label": "Ilévia — métro ligne 1",
+    "url": "https://www.ilevia.fr/cms/institutionnel/metro-ligne-1"
+  },
+  {
+    "label": "Ilévia — métro ligne 2",
+    "url": "https://www.ilevia.fr/cms/institutionnel/metro-ligne-2"
+  },
+  {
+    "label": "GTFS Ilévia — data.gouv.fr",
+    "url": "https://www.data.gouv.fr/datasets/ilevia-localisation-des-arrets-bus-metro-et-tram-gtfs"
+  },
+  {
+    "label": "Ville de Lille — quartiers et patrimoine",
+    "url": "https://www.lille.fr/"
+  },
+  {
+    "label": "Ville de Lille — Grand'Place",
+    "url": "https://www.lille.fr/Lille-Centre/Decouvrir-le-quartier/Culture-loisirs-et-patrimoine/La-Grand-Place"
+  },
+  {
+    "label": "Ville de Lille — Braderie",
+    "url": "https://www.lille.fr/Braderie-de-Lille/Histoire-de-la-Braderie2/La-Braderie-en-chiffres"
+  },
+  {
+    "label": "MEL — territoire métropolitain",
+    "url": "https://www.lillemetropole.fr/territoire-de-la-mel"
+  },
+  {
+    "label": "data.gouv.fr — monuments historiques Lille-Hellemmes-Lomme",
+    "url": "https://www.data.gouv.fr/datasets/665fe7466b10a87cf49fc8fc/"
+  },
+  {
+    "label": "Hello Lille — lieux culturels et tourisme",
+    "url": "https://hellolille.eu"
+  }
+]

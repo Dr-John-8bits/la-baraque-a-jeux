@@ -1,0 +1,44 @@
+:root {
+  color-scheme: light;
+
+  --labaj-ink: #071b31;
+  --labaj-muted: #59636e;
+  --labaj-paper: #fbf7ef;
+  --labaj-surface: #ffffff;
+  --labaj-surface-soft: rgba(255, 255, 255, 0.78);
+  --labaj-line: #e3d9ca;
+  --labaj-red: #d21920;
+  --labaj-gold: #f3c642;
+  --labaj-teal: #0b736f;
+  --labaj-green: #2f7d58;
+  --labaj-blue: #477eb3;
+  --labaj-brick: #b45644;
+  --labaj-shadow: 0 14px 32px rgba(7, 27, 49, 0.09);
+  --labaj-shadow-strong: 0 18px 55px rgba(7, 27, 49, 0.13);
+  --labaj-radius: 8px;
+  --labaj-tap: 46px;
+  --labaj-font:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  --ink: var(--labaj-ink);
+  --muted: var(--labaj-muted);
+  --paper: var(--labaj-paper);
+  --bg: var(--labaj-paper);
+  --surface: var(--labaj-surface);
+  --surface-strong: var(--labaj-surface);
+  --line: var(--labaj-line);
+  --red: var(--labaj-red);
+  --primary: var(--labaj-red);
+  --primary-ink: #ffffff;
+  --gold: var(--labaj-gold);
+  --yellow: var(--labaj-gold);
+  --teal: var(--labaj-teal);
+  --blue: var(--labaj-blue);
+  --green: var(--labaj-green);
+  --brick: var(--labaj-red);
+  --shadow: var(--labaj-shadow);
+  --radius: var(--labaj-radius);
+  --tap: var(--labaj-tap);
+}
+

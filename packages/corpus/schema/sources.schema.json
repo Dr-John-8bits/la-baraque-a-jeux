@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sources communes",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["label", "url"],
+    "additionalProperties": true,
+    "properties": {
+      "label": { "type": "string", "minLength": 1 },
+      "url": { "type": "string", "format": "uri" },
+      "publisher": { "type": "string" },
+      "license": { "type": "string" },
+      "consultedAt": { "type": "string" },
+      "notes": { "type": "string" }
+    }
+  }
+}
+

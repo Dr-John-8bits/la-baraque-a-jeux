@@ -15,8 +15,11 @@ Il n'y a actuellement :
 
 - `index.html` : structure HTML de l'application.
 - `styles.css` : interface mobile-first.
-- `app.js` : données des mots, moteur de jeu, score, stockage local et partage.
+- `app.js` : moteur de jeu, score, stockage local et partage.
 - `manifest.webmanifest` : manifeste PWA minimal.
+- `../../packages/corpus/le-mot-a-biloute/words.json` : corpus des mots.
+- `../../packages/game-utils/` : helpers partagés avec les autres jeux.
+- `../../packages/ui/` : tokens, base visuelle et menu commun.
 
 ## Stockage local
 
@@ -41,24 +44,16 @@ Le moteur :
 - construit le texte de partage ;
 - expose `window.render_game_to_text()` pour les tests Playwright.
 
-## Évolution possible
+## Corpus
 
-Quand la liste de mots grandira, il sera préférable de sortir les données de `app.js` vers :
+Les mots ne sont plus intégrés dans `app.js`. Le jeu charge le corpus JSON depuis le paquet commun `packages/corpus`.
 
-```text
-data/words.json
-data/archive.json
+Cette séparation permet d'ajouter ou de relire les mots sans modifier le moteur du jeu.
+
+## Vérifications
+
+Les contrôles communs sont lancés depuis la racine du monorepo :
+
+```bash
+npm run check
 ```
-
-Pour le moment, garder les mots dans `app.js` simplifie le prototype.
-
-## Prochaine refonte technique
-
-La prochaine étape recommandée est de séparer :
-
-- `src/game` ou `lib/game` pour le moteur ;
-- `data/words.json` pour le corpus ;
-- `scripts/validate-content.mjs` pour contrôler les données ;
-- `tests/` pour les scénarios Playwright.
-
-Cette séparation permettra d'intégrer le corpus éditorial sans modifier le moteur à chaque nouveau mot.

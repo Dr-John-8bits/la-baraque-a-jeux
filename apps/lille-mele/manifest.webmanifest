@@ -1,7 +1,7 @@
 {
-  "name": "Le mot à Biloute",
-  "short_name": "Biloute",
-  "description": "Un mot du Nord à deviner chaque jour.",
+  "name": "Lille-Mêle",
+  "short_name": "Lille-Mêle",
+  "description": "Un puzzle quotidien de connexions lilloises.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fbf7ef",
@@ -9,3 +9,4 @@
   "lang": "fr",
   "icons": []
 }
+

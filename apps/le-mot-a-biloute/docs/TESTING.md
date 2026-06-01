@@ -7,14 +7,14 @@ Le jeu doit rester jouable, lisible et sans erreur sur mobile.
 ## Vérifications rapides
 
 ```bash
-node --check app.js
-python3 -m http.server 48321
+npm run check
 ```
 
-Puis ouvrir :
+Puis vérifier dans le navigateur :
 
 ```text
-http://127.0.0.1:48321/
+index.html
+apps/le-mot-a-biloute/
 ```
 
 ## Parcours à tester
@@ -33,7 +33,6 @@ http://127.0.0.1:48321/
 ## Points de contrôle visuel
 
 - Le clavier doit être utilisable au doigt.
-- Le footer doit rester lisible.
 - Les textes ne doivent pas sortir de leurs conteneurs.
 - Les couleurs correcte / présente / absente doivent être distinguables.
 - Le jeu doit rester confortable sur un écran mobile vertical.

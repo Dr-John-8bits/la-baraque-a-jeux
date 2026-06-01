@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Corpus Le mot a Biloute",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "answer",
+      "category",
+      "starterHint",
+      "hints",
+      "acceptedAnswers",
+      "bonus"
+    ],
+    "additionalProperties": true,
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "answer": { "type": "string", "minLength": 4, "maxLength": 12 },
+      "category": { "type": "string", "minLength": 1 },
+      "starterHint": { "type": "string", "minLength": 1 },
+      "hints": {
+        "type": "array",
+        "minItems": 1,
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "acceptedAnswers": {
+        "type": "array",
+        "minItems": 1,
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "bonus": {
+        "type": "object",
+        "required": ["title", "text"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "text": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}
+

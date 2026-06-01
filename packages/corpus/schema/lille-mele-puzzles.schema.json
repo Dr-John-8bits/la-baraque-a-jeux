@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Corpus Lille-Mele",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "number", "title", "intro", "finalNote", "bonus", "groups"],
+    "additionalProperties": true,
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "number": { "type": "number" },
+      "title": { "type": "string", "minLength": 1 },
+      "intro": { "type": "string", "minLength": 1 },
+      "finalNote": { "type": "string", "minLength": 1 },
+      "bonus": {
+        "type": "object",
+        "required": ["question", "answer", "explanation"],
+        "properties": {
+          "question": { "type": "string", "minLength": 1 },
+          "answer": { "type": "boolean" },
+          "explanation": { "type": "string", "minLength": 1 }
+        }
+      },
+      "groups": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "required": ["id", "title", "difficulty", "items", "note"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "title": { "type": "string", "minLength": 1 },
+            "difficulty": {
+              "type": "string",
+              "enum": ["easy", "medium", "hard", "tricky"]
+            },
+            "items": {
+              "type": "array",
+              "minItems": 4,
+              "maxItems": 4,
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "note": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    }
+  }
+}
+

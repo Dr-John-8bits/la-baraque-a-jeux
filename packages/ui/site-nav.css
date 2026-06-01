@@ -1,14 +1,3 @@
-:root {
-  --labaj-ink: #071b31;
-  --labaj-muted: #59636e;
-  --labaj-paper: #fbf7ef;
-  --labaj-surface: #ffffff;
-  --labaj-line: #e3d9ca;
-  --labaj-red: #d21920;
-  --labaj-gold: #f3c642;
-  --labaj-radius: 8px;
-}
-
 .labaj-header {
   position: sticky;
   top: 0;
@@ -126,12 +115,13 @@
 
   .labaj-links {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 4px;
   }
 
   .labaj-link {
     min-height: 34px;
-    padding: 0 7px;
-    font-size: 0.78rem;
+    padding: 0 5px;
+    font-size: 0.72rem;
   }
 }

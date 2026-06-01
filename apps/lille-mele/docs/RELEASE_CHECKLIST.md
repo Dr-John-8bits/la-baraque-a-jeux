@@ -27,7 +27,7 @@ Avant chaque livraison ou commit important, vérifier :
 - Aucun texte ne déborde.
 - Les boutons restent accessibles au pouce.
 - Les tuiles restent lisibles.
-- Le footer ne masque pas le jeu.
+- Le menu sticky ne masque pas le jeu.
 
 ## Accessibilité
 
@@ -42,6 +42,7 @@ Avant chaque livraison ou commit important, vérifier :
 - Pas d'erreur console.
 - Pas d'artefact de test versionné.
 - `localStorage` reste compatible ou migre proprement.
+- `npm run check` passe depuis la racine.
 - La version est incrémentée.
 - Le changelog est mis à jour.
 

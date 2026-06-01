@@ -34,3 +34,10 @@ Original prompt: Commence à développer le jeu index.hmtl, on verra pour le con
   - demande de corpus éditorial ajoutée dans `EDITORIAL_CORPUS_REQUEST.md` ;
   - version applicative alignée sur `26.05.31.5` ;
   - formulation de licence nettoyée pour retirer les mentions explicites d'affiliation tierce.
+
+## 2026-06-01
+
+- Mutualisation monorepo : `index.html` a été découpé en `index.html`, `styles.css` et `app.js`.
+- Les puzzles sont extraits dans `packages/corpus/lille-mele/puzzles.json`, les sources communes dans `packages/corpus/sources.json`.
+- Le jeu utilise désormais les helpers communs pour la sélection quotidienne, le stockage local, le partage, le mélange déterministe et l'échappement HTML.
+- Bug latent corrigé : la référence JavaScript à l'ancien footer `#credits` a été retirée.

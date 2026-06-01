@@ -7,37 +7,31 @@ Le jeu est maintenant intégré au monorepo **La baraque à jeux Lille**.
 Déploiement cible recommandé :
 
 ```text
-/le-mot-a-biloute/
+/apps/le-mot-a-biloute/
 ```
 
 ## Déploiement statique
 
 Aucun build n'est nécessaire.
 
-Fichiers requis à la racine :
+Fichiers requis côté jeu :
 
 - `index.html`
 - `app.js`
 - `styles.css`
 - `manifest.webmanifest`
 
-## Test local
+Fichiers requis côté monorepo :
 
-```bash
-python3 -m http.server 48321
-```
-
-Puis ouvrir :
-
-```text
-http://127.0.0.1:48321/
-```
+- `packages/ui/`
+- `packages/game-utils/`
+- `packages/corpus/le-mot-a-biloute/words.json`
 
 ## Avant publication
 
 Vérifier :
 
-- la version affichée dans le footer ;
+- `npm run check` depuis la racine ;
 - le lien de partage ;
 - le mot du jour ;
 - le score ;
@@ -49,5 +43,5 @@ Vérifier :
 Paramétrage recommandé :
 
 - source : branche principale ;
-- dossier généré par le pipeline de déploiement du monorepo ;
+- racine du dépôt ;
 - HTTPS activé.

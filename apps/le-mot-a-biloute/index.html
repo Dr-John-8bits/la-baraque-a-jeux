@@ -10,6 +10,8 @@
     <meta name="theme-color" content="#071b31" />
     <title>Le mot à Biloute</title>
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="../../packages/ui/tokens.css" />
+    <link rel="stylesheet" href="../../packages/ui/base.css" />
     <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -19,11 +21,11 @@
         <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
           <picture class="labaj-brand__logo">
             <source
-              srcset="../portail/la-baraque-a-jeux-lille.webp"
+              srcset="../../assets/brand/la-baraque-a-jeux-lille.webp"
               type="image/webp"
             />
             <img
-              src="../portail/la-baraque-a-jeux-lille-logo.png"
+              src="../../assets/brand/la-baraque-a-jeux-lille-logo.png"
               alt=""
               width="48"
               height="48"
@@ -143,6 +145,6 @@
       </dialog>
     </main>
 
-    <script src="app.js" defer></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

@@ -10,6 +10,17 @@ La mutualisation doit servir trois besoins :
 - partager la charte graphique, le corpus documentaire et les conventions ;
 - laisser chaque jeu libre dans son gameplay, son rythme et son ergonomie.
 
+## Statut au 1er juin 2026
+
+- Portail public unique conserve a la racine avec `index.html`.
+- Dossier `apps/portail` retire.
+- Assets de marque deplaces dans `assets/brand`.
+- UI commune initialisee dans `packages/ui`.
+- Corpus des deux jeux extrait dans `packages/corpus`.
+- Helpers communs initialises dans `packages/game-utils`.
+- Lille-Mele decoupe en HTML, CSS, JavaScript et donnees.
+- Scripts de verification ajoutes pour JavaScript, corpus et pages statiques.
+
 ## Principes directeurs
 
 - Le site reste statique et jouable directement dans un navigateur.
@@ -154,9 +165,9 @@ Objectif : sortir Lille-Mele de son fichier HTML monolithique.
 
 - Extraire le CSS inline vers `apps/lille-mele/styles.css`.
 - Extraire le JavaScript inline vers `apps/lille-mele/app.js`.
-- Extraire les puzzles vers `apps/lille-mele/data/puzzles.json`.
-- Extraire les sources vers `apps/lille-mele/data/sources.json`.
-- Preparer ensuite le deplacement des donnees vers `packages/corpus/lille-mele/`.
+- Extraire les puzzles vers `packages/corpus/lille-mele/puzzles.json`.
+- Extraire les sources vers `packages/corpus/sources.json`.
+- Garder `apps/lille-mele/` concentre sur l'interface et la logique du jeu.
 
 ### Livrables
 
@@ -361,4 +372,3 @@ La base sera consideree propre quand :
 - les nouveautes publiques sont centralisees ;
 - les docs ne se contredisent plus ;
 - une verification simple permet de controler le site avant publication.
-

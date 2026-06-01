@@ -5,6 +5,9 @@
 ```text
 .
 ├── index.html
+├── app.js
+├── styles.css
+├── manifest.webmanifest
 ├── AUDIT.md
 ├── README.md
 ├── CHANGELOG.md
@@ -28,7 +31,10 @@
 
 ## Rôle des fichiers
 
-- `index.html` : prototype jouable autonome.
+- `index.html` : structure HTML de l'application.
+- `app.js` : logique de jeu, stockage, partage et rendu.
+- `styles.css` : styles propres a Lille-Mele.
+- `manifest.webmanifest` : manifeste PWA minimal.
 - `AUDIT.md` : audit produit, UX, technique, éditorial et juridique.
 - `README.md` : point d'entrée du projet.
 - `CHANGELOG.md` : historique des versions.
@@ -42,35 +48,24 @@
 - `LICENSE-CODE.md` : licence MIT du code technique.
 - `LICENSE-CONTENT.md` : protection des contenus et de l'identité.
 - `progress.md` : journal de travail interne pour reprise par Codex.
+- `../../packages/corpus/lille-mele/puzzles.json` : grilles du jeu.
+- `../../packages/corpus/sources.json` : registre commun des sources.
+- `../../packages/game-utils/` : helpers partages.
+- `../../packages/ui/` : charte graphique et menu communs.
 
-## Structure cible Vite / React
+## Structure cible actuelle
 
-Quand le prototype sera converti en app moderne :
+Le jeu reste volontairement statique et sans build :
 
 ```text
-src/
-  components/
-    GameBoard.tsx
-    Tile.tsx
-    FoundGroup.tsx
-    ResultScreen.tsx
-    Header.tsx
-  data/
-    puzzles.json
-  hooks/
-    useGameState.ts
-    useTodayPuzzle.ts
-  lib/
-    gameLogic.ts
-    storage.ts
-    share.ts
-    puzzleValidation.ts
-  pages/
-    Home.tsx
-    About.tsx
-    HowToPlay.tsx
-  styles/
-    global.css
+apps/lille-mele/
+  index.html
+  app.js
+  styles.css
+packages/corpus/lille-mele/
+  puzzles.json
+packages/game-utils/
+packages/ui/
 ```
 
 ## Artefacts générés

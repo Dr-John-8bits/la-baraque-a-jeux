@@ -1,0 +1,250 @@
+[
+  {
+    "id": "prototype-001",
+    "number": 1,
+    "title": "Première rame",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "La ligne 1 lilloise a été inaugurée en 1983 avec la technologie VAL. Pas mal pour une ville qui fait souvent semblant de ne pas se vanter.",
+    "bonus": {
+      "question": "Le métro de Lille a été le premier métro automatique urbain au monde.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 1 utilise la technologie VAL, inaugurée à Lille en 1983."
+    },
+    "groups": [
+      {
+        "id": "ligne-1-lille",
+        "title": "Stations de la ligne 1",
+        "difficulty": "easy",
+        "items": [
+          "Rihour",
+          "Caulier",
+          "Fives",
+          "Marbrerie"
+        ],
+        "note": "Quatre arrêts de la ligne 1 du métro lillois."
+      },
+      {
+        "id": "ligne-2-ouest",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "items": [
+          "Montebello",
+          "Cormontaigne",
+          "Canteleu",
+          "Mitterie"
+        ],
+        "note": "Ligne 2, ambiance ouest lillois et correspondances du quotidien."
+      },
+      {
+        "id": "quartiers-lille",
+        "title": "Quartiers lillois",
+        "difficulty": "easy",
+        "items": [
+          "Vieux-Lille",
+          "Lille-Sud",
+          "Vauban-Esquermes",
+          "Faubourg de Béthune"
+        ],
+        "note": "Lille ne tient pas dans une seule carte postale."
+      },
+      {
+        "id": "specialites-nord",
+        "title": "Spécialités du Nord",
+        "difficulty": "medium",
+        "items": [
+          "Welsh",
+          "Carbonnade",
+          "Potjevleesch",
+          "Merveilleux"
+        ],
+        "note": "Une catégorie qui peut donner faim ou lancer un débat."
+      }
+    ]
+  },
+  {
+    "id": "prototype-002",
+    "number": 2,
+    "title": "MEL mais pas seulement",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "La MEL rassemble 95 communes. Lille-Mêle va donc avoir de quoi faire avant de tourner en rond.",
+    "bonus": {
+      "question": "La Métropole Européenne de Lille compte 95 communes.",
+      "answer": true,
+      "explanation": "Vrai. La MEL indique 95 communes sur son territoire."
+    },
+    "groups": [
+      {
+        "id": "communes-mel",
+        "title": "Communes de la MEL",
+        "difficulty": "easy",
+        "items": [
+          "Roubaix",
+          "Tourcoing",
+          "Croix",
+          "Wasquehal"
+        ],
+        "note": "La métropole ne s'arrête pas au périphérique mental de Lille."
+      },
+      {
+        "id": "lieux-culturels-mel",
+        "title": "Lieux culturels métropolitains",
+        "difficulty": "medium",
+        "items": [
+          "La Piscine",
+          "La Condition Publique",
+          "Le Fresnoy",
+          "LaM"
+        ],
+        "note": "La culture locale circule très bien hors de l'hypercentre."
+      },
+      {
+        "id": "braderie",
+        "title": "Braderie de Lille",
+        "difficulty": "medium",
+        "items": [
+          "Moules",
+          "Frites",
+          "Brocante",
+          "Bradeux"
+        ],
+        "note": "Lille sait transformer un trottoir en épopée."
+      },
+      {
+        "id": "eau-fortifs",
+        "title": "Eau et fortifications",
+        "difficulty": "tricky",
+        "items": [
+          "Deûle",
+          "Citadelle",
+          "Vauban",
+          "Esplanade"
+        ],
+        "note": "La ville s'est aussi construite avec de l'eau, des murs et beaucoup de plans."
+      }
+    ]
+  },
+  {
+    "id": "prototype-003",
+    "number": 3,
+    "title": "Grand'Place, grandes manœuvres",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "La Grand'Place est devenue piétonne en 2026. Les pavés respirent, les mollets aussi.",
+    "bonus": {
+      "question": "La Vieille Bourse est composée de 24 maisons autour d'une cour.",
+      "answer": true,
+      "explanation": "Vrai. La Ville de Lille décrit ce programme architectural autour d'une cour intérieure publique."
+    },
+    "groups": [
+      {
+        "id": "grand-place",
+        "title": "Autour de la Grand'Place",
+        "difficulty": "medium",
+        "items": [
+          "Furet du Nord",
+          "Vieille Bourse",
+          "Grand'Garde",
+          "Théâtre du Nord"
+        ],
+        "note": "Quatre repères du cœur patrimonial lillois."
+      },
+      {
+        "id": "ligne-1-va",
+        "title": "Stations ligne 1 à Villeneuve-d'Ascq",
+        "difficulty": "hard",
+        "items": [
+          "4 Cantons",
+          "Cité Scientifique",
+          "Triolo",
+          "Pont de Bois"
+        ],
+        "note": "La ligne 1 file jusqu'au campus et au stade."
+      },
+      {
+        "id": "noms-composes",
+        "title": "Communes aux noms en plusieurs morceaux",
+        "difficulty": "medium",
+        "items": [
+          "Marcq-en-Barœul",
+          "Mons-en-Barœul",
+          "Villeneuve-d'Ascq",
+          "Quesnoy-sur-Deûle"
+        ],
+        "note": "Le trait d'union, ce sport métropolitain."
+      },
+      {
+        "id": "musees-lieux",
+        "title": "Musées ou lieux de visite",
+        "difficulty": "easy",
+        "items": [
+          "Palais des Beaux-Arts",
+          "Villa Cavrois",
+          "La Piscine",
+          "Musée d'Histoire Naturelle"
+        ],
+        "note": "De quoi sortir sans appeler ça une sortie scolaire."
+      }
+    ]
+  },
+  {
+    "id": "prototype-004",
+    "number": 4,
+    "title": "Portes, quais et marchés",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Les noms de stations racontent souvent des portes, des hôpitaux, des quartiers et de vieux chemins. La carte parle, mais assez vite.",
+    "bonus": {
+      "question": "La ligne 2 relie Lomme à Tourcoing en moins d'une heure.",
+      "answer": true,
+      "explanation": "Vrai. Ilévia présente la ligne 2 comme une liaison entre Lomme et Tourcoing en moins d'une heure."
+    },
+    "groups": [
+      {
+        "id": "stations-porte",
+        "title": "Stations contenant Porte",
+        "difficulty": "easy",
+        "items": [
+          "Porte d'Arras",
+          "Porte de Douai",
+          "Porte des Postes",
+          "Porte de Valenciennes"
+        ],
+        "note": "Lille a gardé de quoi faire entrer les pièges."
+      },
+      {
+        "id": "marches-places",
+        "title": "Marchés et places",
+        "difficulty": "medium",
+        "items": [
+          "Wazemmes",
+          "Place du Concert",
+          "Sébastopol",
+          "Grand'Place"
+        ],
+        "note": "Ça discute, ça circule, ça chine ou ça attend quelqu'un."
+      },
+      {
+        "id": "campus-savoirs",
+        "title": "Campus et pôles d'innovation",
+        "difficulty": "hard",
+        "items": [
+          "Cité Scientifique",
+          "Pont de Bois",
+          "Euratechnologies",
+          "EuraSanté"
+        ],
+        "note": "Des lieux où l'on révise, code, débat ou fait semblant."
+      },
+      {
+        "id": "mots-nord",
+        "title": "Mots et saveurs du Nord",
+        "difficulty": "tricky",
+        "items": [
+          "Chicon",
+          "Drache",
+          "Wassingue",
+          "Maroilles"
+        ],
+        "note": "À manier avec parcimonie, mais pas à bannir."
+      }
+    ]
+  }
+]

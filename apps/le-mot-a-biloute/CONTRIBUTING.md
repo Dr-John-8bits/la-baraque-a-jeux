@@ -48,6 +48,5 @@ Vérifier :
 ## Commandes utiles
 
 ```bash
-node --check app.js
-python3 -m http.server 48321
+npm run check
 ```

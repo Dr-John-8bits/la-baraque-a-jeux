@@ -16,3 +16,9 @@ Original prompt: Aligne les documents, et fais une première version du jeu.
 - Itération 26.05.31.4 : structure documentaire complète ajoutée, specs déplacées dans `docs/SPECIFICATIONS.md`, changelog/FAQ/règles/architecture/guide éditorial/déploiement/confidentialité/roadmap créés.
 - Complément 26.05.31.4 : ajout de `CONTRIBUTING.md` et `docs/TESTING.md`, README enrichi avec la nouvelle arborescence.
 - Itération 26.05.31.5 : audit complet ajouté dans `docs/AUDIT.md`, demande de corpus éditorial ajoutée dans `docs/EDITORIAL_CORPUS_REQUEST.md`, version incrémentée.
+
+## 2026-06-01
+
+- Mutualisation monorepo : les mots du jeu sont extraits dans `packages/corpus/le-mot-a-biloute/words.json`.
+- Le jeu charge désormais son corpus en statique et utilise les helpers communs pour la date quotidienne, le stockage local et le partage.
+- À surveiller : le jeu dépend maintenant d'un chargement HTTP statique du JSON, ce qui correspond à GitHub Pages.

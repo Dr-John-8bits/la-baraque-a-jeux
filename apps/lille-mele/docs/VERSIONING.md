@@ -34,8 +34,8 @@ Incrémenter `i` à chaque série de modifications prête à être versionnée :
 
 Pour le prototype actuel :
 
-- `index.html` : constante `APP_VERSION` ;
-- `index.html` : valeur initiale du footer ;
+- `app.js` : constante `APP_VERSION` ;
+- `docs/blog/NEWS.md` : entree publique des nouveautes ;
 - `CHANGELOG.md` : nouvelle entrée ;
 - `README.md` : version courante si nécessaire ;
 - `progress.md` : note d'itération.

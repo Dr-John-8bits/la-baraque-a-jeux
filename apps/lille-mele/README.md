@@ -8,7 +8,7 @@ Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu co
 
 ## État du projet
 
-Prototype jouable en fichier unique :
+Prototype jouable en webapp statique :
 
 - grille 4x4 ;
 - sélection de 4 cartes ;
@@ -20,7 +20,7 @@ Prototype jouable en fichier unique :
 - streak local ;
 - partage sans spoiler ;
 - aide intégrée ;
-- sources intégrées ;
+- sources affichées depuis le corpus commun ;
 - bonus "P'tit Vrai ou Bidon ?" ;
 - responsive mobile avec ajustement dynamique des libellés.
 
@@ -29,6 +29,9 @@ Prototype jouable en fichier unique :
 ```text
 .
 ├── index.html
+├── app.js
+├── styles.css
+├── manifest.webmanifest
 ├── AUDIT.md
 ├── README.md
 ├── CHANGELOG.md
@@ -49,6 +52,9 @@ Prototype jouable en fichier unique :
 │   └── VERSIONING.md
 └── progress.md
 ```
+
+Les grilles sont stockées dans `../../packages/corpus/lille-mele/puzzles.json`.
+Les sources communes sont stockées dans `../../packages/corpus/sources.json`.
 
 ## Documentation
 

@@ -1,0 +1,51 @@
+import { test, expect } from "@playwright/test";
+import { readFile } from "node:fs/promises";
+
+const base = process.env.LABAJ_BASE_URL || "http://127.0.0.1:48391/";
+
+test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
+  const errors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") errors.push(message.text());
+  });
+  page.on("pageerror", (error) => errors.push(error.message));
+
+  await page.goto(base);
+  await expect(page).toHaveTitle("La baraque à jeux");
+  await expect(page.getByRole("link", { name: "Le mot à Biloute", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Lille-Mêle", exact: true })).toBeVisible();
+
+  await page.goto(`${base}blog.html`);
+  await expect(page.getByRole("heading", { name: "Blog", exact: true })).toBeVisible();
+  await expect(page.getByText("Socle mutualisé")).toBeVisible();
+  await expect(page.getByText("Naissance de La Baraque à Jeux de Lille")).toBeVisible();
+
+  await page.goto(`${base}apps/le-mot-a-biloute/`);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await page.getByRole("button", { name: /Indice/ }).click();
+  const wordState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(wordState.visibleHints.length).toBeGreaterThanOrEqual(1);
+
+  await page.goto(`${base}apps/lille-mele/`);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await page.getByRole("button", { name: "Sources" }).click();
+  await expect(page.locator("#sourceList a")).toHaveCount(9);
+
+  const lilleState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  const puzzles = JSON.parse(await readFile("packages/corpus/lille-mele/puzzles.json", "utf8"));
+  const puzzle = puzzles.find((candidate) => candidate.id === lilleState.puzzle.id);
+  const group = puzzle.groups[0];
+
+  for (const item of group.items) {
+    await page.getByRole("button", { name: item }).click();
+  }
+
+  await page.getByRole("button", { name: "Valider" }).click();
+  const afterGroup = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(afterGroup.foundGroups).toContain(group.id);
+  expect(errors).toEqual([]);
+});

@@ -8,6 +8,13 @@
     "packages/*"
   ],
   "scripts": {
-    "check:js": "node --check apps/le-mot-a-biloute/app.js"
+    "check": "npm run check:js && npm run check:corpus && npm run check:static",
+    "check:corpus": "node scripts/validate-corpus.mjs",
+    "check:js": "node scripts/check-js.mjs",
+    "check:static": "node scripts/check-static-pages.mjs",
+    "test:browser": "npx playwright test tests/smoke.spec.mjs --browser=chromium --reporter=line"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
   }
 }
