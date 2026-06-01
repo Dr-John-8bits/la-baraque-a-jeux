@@ -3,7 +3,7 @@ import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 
 const TARGET_SCORE = 5;
 const ROUND_DURATION_MS = 3000;
-const REVEAL_DURATION_MS = 1100;
+const REVEAL_DURATION_MS = 1500;
 const STORAGE_PREFIX = "biloute-biere-braderie.v1";
 const APP_VERSION = "26.06.01.1";
 const COUNTDOWN_BEATS = ["CH'TI", "FOU", "MI"];

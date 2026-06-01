@@ -59,7 +59,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   const bbbRevealState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   if (bbbRevealState.phase === "revealing") {
     expect(bbbRevealState.reveal.pending.playerChoice).toBe("biloute");
-    await page.evaluate(() => window.advanceTime(1200));
+    await page.evaluate(() => window.advanceTime(1600));
   }
   const bbbState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(bbbState.lastRound.playerChoice).toBe("biloute");

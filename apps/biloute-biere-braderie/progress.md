@@ -41,6 +41,7 @@ Le principe on joue tout seul et on joue contre l'ordinateur. Inspire toi du dos
 - 2026-06-01 : validations OK après feedback de résultat : captures mobiles victoire, défaite, timeout, fin gagnée, fin perdue, client `develop-web-game`, `npm run check`, `npm run test:browser`.
 - 2026-06-01 : ajout d'une micro-phase de révélation après le choix : l'ordi reste caché environ 1,1 s, le score ne bouge qu'après la révélation.
 - 2026-06-01 : validations OK après suspense : capture mobile pendant révélation et après résolution, client `develop-web-game`, `npm run check`, `npm run test:browser`.
+- 2026-06-01 : ajustement du suspense de révélation à 1,5 s et mise à jour du smoke test associé.
 
 ## TODO
 
