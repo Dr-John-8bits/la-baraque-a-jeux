@@ -32,9 +32,11 @@ const els = {
   statusAnnouncer: document.getElementById("statusAnnouncer"),
   hintButton: document.getElementById("hintButton"),
   shareButton: document.getElementById("shareButton"),
-  hintPanel: document.getElementById("hintPanel"),
-  starterHintText: document.getElementById("starterHintText"),
-  extraHints: document.getElementById("extraHints"),
+  hintDialog: document.getElementById("hintDialog"),
+  hintTitle: document.getElementById("hintTitle"),
+  hintList: document.getElementById("hintList"),
+  hintCostText: document.getElementById("hintCostText"),
+  nextHintButton: document.getElementById("nextHintButton"),
   resultDialog: document.getElementById("resultDialog"),
   resultKicker: document.getElementById("resultKicker"),
   resultTitle: document.getElementById("resultTitle"),
@@ -63,6 +65,7 @@ const state = loadGame() || {
   current: "",
   statuses: [],
   keyStatuses: {},
+  starterHintSeen: false,
   extraHintsUsed: 0,
   startedAt: Date.now(),
   endedAt: null,
@@ -76,6 +79,7 @@ state.extraHintsUsed = Number.isInteger(state.extraHintsUsed)
   : state.hintUsed
     ? 1
     : 0;
+state.starterHintSeen = Boolean(state.starterHintSeen || state.extraHintsUsed > 0);
 if (state.result !== "playing") {
   state.score = state.score ?? calculateScore(state.result);
   state.shareText = buildShareText();
@@ -113,13 +117,8 @@ function bindEvents() {
     else addLetter(key);
   });
 
-  els.hintButton.addEventListener("click", () => {
-    if (state.result !== "playing") return;
-    if (state.extraHintsUsed >= word.hints.length) return;
-    state.extraHintsUsed += 1;
-    saveGame();
-    render();
-  });
+  els.hintButton.addEventListener("click", openHintDialog);
+  els.nextHintButton.addEventListener("click", revealPaidHint);
 
   els.shareButton.addEventListener("click", shareResult);
   els.dialogShareButton.addEventListener("click", shareResult);
@@ -238,23 +237,69 @@ function render() {
   els.tryCount.textContent = `${state.guesses.length}/${MAX_GUESSES}`;
   els.scoreCount.textContent = String(calculateScore(state.result));
   els.streakCount.textContent = String(getStats().streak || 0);
-  els.starterHintText.textContent = word.starterHint;
-  renderHints();
-  els.hintButton.textContent = `Indice -${POINTS_PER_EXTRA_HINT}`;
-  els.hintButton.disabled = state.extraHintsUsed >= word.hints.length || state.result !== "playing";
+  els.hintButton.textContent = state.starterHintSeen ? "Indice" : "Indice gratuit";
+  els.hintButton.disabled = state.result !== "playing";
   els.shareButton.disabled = state.result === "playing";
   renderBoard();
   renderKeyboard();
+  renderHintDialog();
 }
 
-function renderHints() {
-  els.extraHints.innerHTML = "";
-  for (let index = 0; index < state.extraHintsUsed; index += 1) {
-    const hint = document.createElement("p");
-    hint.className = "extra-hint";
-    hint.textContent = `Indice ${index + 2} : ${word.hints[index]}`;
-    els.extraHints.append(hint);
+function renderHintDialog() {
+  els.hintTitle.textContent = state.starterHintSeen ? "Tes indices" : "Indice gratuit";
+  els.hintList.innerHTML = "";
+
+  if (state.starterHintSeen) {
+    els.hintList.append(createHintCard("Indice gratuit", word.starterHint));
   }
+
+  for (let index = 0; index < state.extraHintsUsed; index += 1) {
+    els.hintList.append(createHintCard(`Indice ${index + 2}`, word.hints[index]));
+  }
+
+  const canRevealPaid = state.result === "playing" && state.extraHintsUsed < word.hints.length;
+  els.nextHintButton.disabled = !canRevealPaid;
+  els.nextHintButton.textContent = canRevealPaid ? `Indice suivant -${POINTS_PER_EXTRA_HINT}` : "Plus d'indice";
+  els.hintCostText.textContent = canRevealPaid
+    ? `L'indice de départ est gratuit. Le suivant retire ${POINTS_PER_EXTRA_HINT} points.`
+    : "Tous les indices disponibles sont affichés.";
+}
+
+function createHintCard(title, text) {
+  const card = document.createElement("article");
+  card.className = "hint-card";
+
+  const heading = document.createElement("strong");
+  heading.textContent = title;
+
+  const body = document.createElement("p");
+  body.textContent = text;
+
+  card.append(heading, body);
+  return card;
+}
+
+function openHintDialog() {
+  if (state.result !== "playing") return;
+  if (!state.starterHintSeen) {
+    state.starterHintSeen = true;
+    saveGame();
+    render();
+  } else {
+    renderHintDialog();
+  }
+  if (!els.hintDialog.open) els.hintDialog.showModal();
+}
+
+function revealPaidHint() {
+  if (state.result !== "playing") return;
+  if (state.extraHintsUsed >= word.hints.length) return;
+  state.starterHintSeen = true;
+  state.extraHintsUsed += 1;
+  saveGame();
+  render();
+  renderHintDialog();
+  announce(`Indice ${state.extraHintsUsed + 1} révélé. ${POINTS_PER_EXTRA_HINT} points en moins.`);
 }
 
 function renderBoard() {
@@ -453,8 +498,12 @@ function renderGameToText() {
     triesUsed: state.guesses.length,
     triesMax: MAX_GUESSES,
     starterHint: word.starterHint,
+    starterHintSeen: state.starterHintSeen,
     extraHintsUsed: state.extraHintsUsed,
-    visibleHints: word.hints.slice(0, state.extraHintsUsed),
+    visibleHints: [
+      ...(state.starterHintSeen ? [word.starterHint] : []),
+      ...word.hints.slice(0, state.extraHintsUsed),
+    ],
     message: els.statusAnnouncer.textContent,
     keyboard: state.keyStatuses,
     version: APP_VERSION,

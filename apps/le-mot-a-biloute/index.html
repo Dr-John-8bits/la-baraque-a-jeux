@@ -99,14 +99,8 @@
       </section>
 
       <section class="actions">
-        <button id="hintButton" type="button">Indice -180</button>
+        <button id="hintButton" type="button">Indice gratuit</button>
         <button id="shareButton" type="button" disabled>Partager</button>
-      </section>
-
-      <section class="hint-panel" id="hintPanel">
-        <p class="label">Indice de départ</p>
-        <p id="starterHintText"></p>
-        <div id="extraHints"></div>
       </section>
 
       <section class="keyboard" id="keyboard" aria-label="Clavier virtuel"></section>
@@ -123,6 +117,19 @@
           </div>
           <div class="dialog-actions">
             <button id="dialogShareButton" value="share" type="button">Partager</button>
+            <button value="close">Fermer</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog class="result-dialog hint-dialog" id="hintDialog">
+        <form method="dialog">
+          <p class="eyebrow">Indice</p>
+          <h2 id="hintTitle">Indice gratuit</h2>
+          <div class="hint-list" id="hintList"></div>
+          <p class="hint-cost" id="hintCostText"></p>
+          <div class="dialog-actions">
+            <button id="nextHintButton" type="button">Indice suivant -180</button>
             <button value="close">Fermer</button>
           </div>
         </form>
@@ -151,7 +158,7 @@
             </section>
             <section>
               <h3>Indices et série</h3>
-              <p>L'indice de départ est gratuit. Les indices suivants coûtent des points. La série compte les jours gagnés d'affilée ; elle retombe à 0 après une partie perdue.</p>
+              <p>Clique sur Indice pour afficher l'indice de départ, gratuit. Les indices suivants coûtent des points. La série compte les jours gagnés d'affilée ; elle retombe à 0 après une partie perdue.</p>
             </section>
           </div>
           <div class="dialog-actions dialog-actions--single">

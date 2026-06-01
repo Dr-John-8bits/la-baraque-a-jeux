@@ -93,8 +93,7 @@ h3 {
   align-items: stretch;
 }
 
-.status-panel > div,
-.hint-panel {
+.status-panel > div {
   border: 2px solid var(--ink);
   border-radius: 8px;
   background: var(--tile);
@@ -237,27 +236,9 @@ h3 {
   background: var(--green);
 }
 
-.hint-panel {
-  padding: 8px 10px;
-}
-
-.hint-panel p:last-child {
-  margin-bottom: 0;
-  font-weight: 800;
-  line-height: 1.1;
-}
-
-.extra-hint {
-  margin: 8px 0 0;
-  padding-top: 8px;
-  border-top: 1px solid var(--line);
-  font-weight: 850;
-}
-
 .keyboard {
   display: grid;
   gap: 5px;
-  margin-top: auto;
 }
 
 .key-row {
@@ -345,6 +326,47 @@ h3 {
 }
 
 .dialog-actions button:first-child {
+  background: var(--green);
+}
+
+.hint-list {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.hint-card {
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  padding: 10px;
+  background: #f7f1e3;
+}
+
+.hint-card p:last-child,
+.hint-cost {
+  margin-bottom: 0;
+}
+
+.hint-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.hint-card p,
+.hint-cost {
+  color: var(--muted);
+  font-weight: 750;
+  line-height: 1.42;
+}
+
+.hint-dialog .dialog-actions button:first-child {
+  background: var(--blue);
+}
+
+.hint-dialog .dialog-actions button:last-child {
   background: var(--green);
 }
 

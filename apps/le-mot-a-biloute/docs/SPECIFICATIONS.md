@@ -17,11 +17,11 @@ Le jeu se joue directement dans le navigateur, sur mobile en priorité, sans com
 ## Boucle de jeu
 
 1. Le joueur ouvre le jeu.
-2. Il lit le premier indice, gratuit mais difficile.
+2. Il peut ouvrir le premier indice, gratuit mais difficile.
 3. Il propose un mot de la bonne longueur.
 4. Les lettres sont évaluées.
 5. Il ajuste ses propositions.
-6. Il peut demander des indices supplémentaires, avec pénalité.
+6. Il peut demander des indices supplémentaires dans la modale d'indice, avec pénalité.
 7. Il gagne en trouvant le mot ou perd après 6 essais.
 8. Il découvre le bonus local.
 9. Il peut partager son résultat.
