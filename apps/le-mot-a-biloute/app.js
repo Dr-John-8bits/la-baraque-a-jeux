@@ -698,9 +698,11 @@ async function shareResult() {
   resetShareFeedback();
   const status = await shareTextWithFallback(text);
   if (status === "copied") {
+    showResultDialogForShareFeedback();
     showShareFeedback("Résultat copié.");
     announce("Résultat copié.");
   } else if (status === "failed") {
+    showResultDialogForShareFeedback();
     showManualShareFallback(text);
     announce("Copie manuelle disponible.");
   } else if (status === "shared") {
@@ -708,6 +710,10 @@ async function shareResult() {
   } else if (status === "aborted") {
     showShareFeedback("Partage annulé.");
   }
+}
+
+function showResultDialogForShareFeedback() {
+  if (!els.resultDialog.open) showResultDialog();
 }
 
 async function copyManualShareText() {
