@@ -170,36 +170,43 @@
         lundi: {
           morning: "🌅 C'est lundi matin... on commence doucement. À quoi on joue ?",
           noon: "☀️ Lundi midi à Lille. Une petite partie avant de repartir ?",
+          afternoon: "☀️ Lundi après-midi, on garde le rythme avec une petite partie ?",
           evening: "🌙 Lundi soir, la journée est finie. On joue avant de rentrer ?",
         },
         mardi: {
           morning: "🌅 Nous sommes mardi matin. Le café est servi, à quoi on joue ?",
           noon: "☀️ Mardi midi, entre deux réunions et un américain-frites... une partie ?",
+          afternoon: "☀️ Mardi après-midi, un petit jeu pour faire passer la journée ?",
           evening: "🌙 Mardi soir, le soleil se couche sur les Flandres. À quoi on joue ?",
         },
         mercredi: {
           morning: "🌅 C'est mercredi matin, le milieu de semaine est là. On s'amuse un peu ?",
           noon: "☀️ Mercredi midi, une pause de biloute n'a jamais fait de mal.",
+          afternoon: "☀️ Mercredi après-midi, on coupe la semaine en deux avec un jeu ?",
           evening: "🌙 Mercredi soir, Lille-Mêle ou Mot à Biloute ?",
         },
         jeudi: {
           morning: "🌅 Jeudi matin. Courage, le week-end approche. À quoi on joue ?",
           noon: "☀️ Jeudi midi, une petite partie avant de repartir ?",
+          afternoon: "☀️ Jeudi après-midi, encore un effort... ou une partie.",
           evening: "🌙 Jeudi soir, les estaminets se remplissent. Et toi, tu joues à quoi ?",
         },
         vendredi: {
           morning: "🌅 C'est vendredi matin, dernière ligne droite avant le week-end.",
           noon: "☀️ Vendredi midi a meilleur goût avec un jeu.",
+          afternoon: "☀️ Vendredi après-midi, le week-end approche. On lance une partie ?",
           evening: "🌙 Vendredi soir ! Le week-end commence ici. À quoi on joue ?",
         },
         samedi: {
           morning: "🌅 Samedi matin, pas de réveil, pas de stress. Juste des jeux.",
           noon: "☀️ Samedi midi, entre deux balades dans Lille, une partie ?",
+          afternoon: "☀️ Samedi après-midi, Lille t'attend... mais une partie d'abord ?",
           evening: "🌙 Samedi soir, la soirée commence ici. À quoi on joue ?",
         },
         dimanche: {
           morning: "🌅 Dimanche matin est fait pour prendre son temps.",
           noon: "☀️ Dimanche midi, un café, une gaufre, un petit jeu ?",
+          afternoon: "☀️ Dimanche après-midi, on traîne un peu avant la reprise ?",
           evening: "🌙 Dimanche soir... demain c'est lundi, profitons encore un peu.",
         },
       };
@@ -217,7 +224,8 @@
       const parisTime = Object.fromEntries(parisParts.map((part) => [part.type, part.value]));
       const parisWeekday = parisTime.weekday.toLowerCase();
       const parisHour = Number(parisTime.hour);
-      const dayMoment = parisHour < 12 ? "morning" : parisHour < 18 ? "noon" : "evening";
+      const dayMoment =
+        parisHour < 12 ? "morning" : parisHour < 14 ? "noon" : parisHour < 18 ? "afternoon" : "evening";
       const prompt = gamePrompts[parisWeekday]?.[dayMoment];
 
       if (prompt) {

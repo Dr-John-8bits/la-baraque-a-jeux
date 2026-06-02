@@ -1,9 +1,9 @@
 import { getDailyDateId, getRelativeDateId, selectDailyItem } from "../../packages/game-utils/daily.js";
 import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
-import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
+import { copyText, shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
-const APP_VERSION = "26.06.02.1";
+const APP_VERSION = "26.06.02.2";
 const GAME_URL = new URL(".", window.location.href).href;
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
@@ -59,6 +59,10 @@ const els = {
   bonusText: document.getElementById("bonusText"),
   nextWordCountdown: document.getElementById("nextWordCountdown"),
   dialogShareButton: document.getElementById("dialogShareButton"),
+  shareFeedback: document.getElementById("shareFeedback"),
+  shareFallback: document.getElementById("shareFallback"),
+  shareFallbackText: document.getElementById("shareFallbackText"),
+  copyFallbackButton: document.getElementById("copyFallbackButton"),
   helpButton: document.getElementById("helpButton"),
   helpDialog: document.getElementById("helpDialog"),
   archiveButton: document.getElementById("archiveButton"),
@@ -138,6 +142,7 @@ function bindEvents() {
 
   els.primaryActionButton.addEventListener("click", handlePrimaryAction);
   els.dialogShareButton.addEventListener("click", shareResult);
+  els.copyFallbackButton.addEventListener("click", copyManualShareText);
   els.helpButton.addEventListener("click", () => {
     els.helpDialog.showModal();
   });
@@ -632,6 +637,7 @@ function showResultDialog() {
   els.bonusTitle.textContent = word.bonus.title;
   els.bonusText.textContent = word.bonus.text;
   if (!els.resultDialog.open) els.resultDialog.showModal();
+  resetShareFeedback();
   highlightShareButton(els.dialogShareButton);
 }
 
@@ -689,12 +695,49 @@ function buildShareText(gameState = state) {
 
 async function shareResult() {
   const text = state.shareText || buildShareText();
+  resetShareFeedback();
   const status = await shareTextWithFallback(text);
   if (status === "copied") {
+    showShareFeedback("Résultat copié.");
     announce("Résultat copié.");
   } else if (status === "failed") {
-    announce(text);
+    showManualShareFallback(text);
+    announce("Copie manuelle disponible.");
+  } else if (status === "shared") {
+    showShareFeedback("Partage lancé.");
+  } else if (status === "aborted") {
+    showShareFeedback("Partage annulé.");
   }
+}
+
+async function copyManualShareText() {
+  const text = els.shareFallbackText.value || state.shareText || buildShareText();
+  if (await copyText(text)) {
+    showShareFeedback("Résultat copié.");
+    announce("Résultat copié.");
+    return;
+  }
+  els.shareFallbackText.focus();
+  els.shareFallbackText.select();
+  showShareFeedback("Texte sélectionné : utilise Ctrl+C.");
+}
+
+function resetShareFeedback() {
+  els.shareFeedback.textContent = "";
+  els.shareFallback.hidden = true;
+  els.shareFallbackText.value = "";
+}
+
+function showShareFeedback(message) {
+  els.shareFeedback.textContent = message;
+}
+
+function showManualShareFallback(text) {
+  els.shareFallback.hidden = false;
+  els.shareFallbackText.value = text;
+  els.shareFallbackText.focus();
+  els.shareFallbackText.select();
+  showShareFeedback("Copie ton résultat ci-dessous.");
 }
 
 function handlePrimaryAction() {

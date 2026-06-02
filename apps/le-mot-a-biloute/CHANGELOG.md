@@ -4,6 +4,11 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## 26.06.02.2
+
+- Renforcement du partage desktop : si le partage natif n'est pas disponible, le jeu copie le résultat avec un fallback compatible Firefox.
+- Ajout d'un message visible après copie et d'une zone de copie manuelle si le navigateur bloque toute copie automatique.
+
 ## 26.06.02.1
 
 - Ajout d'un dictionnaire français large `french-guesses.json` dérivé de `mots.txt` de LouanBen/wordle-fr.

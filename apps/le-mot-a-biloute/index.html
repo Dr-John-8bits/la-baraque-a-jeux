@@ -146,6 +146,12 @@
             <button id="dialogShareButton" value="share" type="button">Partager</button>
             <button value="close">Fermer</button>
           </div>
+          <p class="share-feedback" id="shareFeedback" role="status" aria-live="polite"></p>
+          <div class="share-fallback" id="shareFallback" hidden>
+            <label for="shareFallbackText">Copie ton résultat</label>
+            <textarea id="shareFallbackText" rows="6" readonly></textarea>
+            <button id="copyFallbackButton" type="button">Copier</button>
+          </div>
         </form>
       </dialog>
 

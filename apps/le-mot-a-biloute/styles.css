@@ -436,6 +436,49 @@ h3 {
   background: var(--green);
 }
 
+.share-feedback {
+  min-height: 1.2em;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
+.share-fallback {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.share-fallback[hidden] {
+  display: none;
+}
+
+.share-fallback label {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.share-fallback textarea {
+  width: 100%;
+  min-height: 118px;
+  resize: vertical;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  padding: 10px;
+  background: #fffdf8;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.share-fallback button {
+  background: var(--green);
+}
+
 .hint-list {
   display: grid;
   gap: 10px;

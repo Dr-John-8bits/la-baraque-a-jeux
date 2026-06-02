@@ -36,6 +36,7 @@ apps/le-mot-a-biloute/
 - Vérifier le compte à rebours du prochain mot.
 - Vérifier le détail du score dans la modale de fin.
 - Vérifier le partage.
+- Vérifier le fallback desktop du partage : copie automatique ou zone de copie manuelle si le navigateur bloque le presse-papiers.
 - Vérifier le mode archive.
 - Vérifier les statistiques, l'historique local, le graphique de performance et l'import/export du calepin.
 
