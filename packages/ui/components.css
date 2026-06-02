@@ -47,18 +47,19 @@ body.labaj-site {
 
 .games-section {
   display: grid;
-  gap: 10px;
+  gap: 16px;
 }
 
 .section-heading {
   display: grid;
-  gap: 2px;
 }
 
-.section-heading h2 {
+.game-prompt {
+  max-width: 760px;
   margin: 0;
-  font-size: 1.18rem;
-  line-height: 1.1;
+  color: var(--labaj-ink);
+  font-size: clamp(1.05rem, 4.6vw, 1.38rem);
+  line-height: 1.25;
   letter-spacing: 0;
 }
 
