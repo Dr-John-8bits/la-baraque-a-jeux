@@ -53,14 +53,9 @@
         </a>
 
         <div class="labaj-links">
-          <a class="labaj-link" href="apps/le-mot-a-biloute/">Le mot à Biloute</a>
-          <a class="labaj-link" href="apps/lille-mele/">Lille-Mêle</a>
-          <a class="labaj-link" href="apps/biloute-biere-braderie/">
-            Ch'tifoumi
-          </a>
-          <a class="labaj-link" href="apps/station-mystere/">Station Mystère</a>
+          <a class="labaj-link labaj-link--home" href="./" aria-current="page">Accueil</a>
           <a class="labaj-link" href="blog.html">Blog</a>
-          <button class="labaj-link" type="button" id="aboutButton">À propos</button>
+          <button class="labaj-link" type="button" data-about-trigger>À propos</button>
         </div>
       </nav>
     </header>
@@ -135,50 +130,11 @@
       </section>
 
     </main>
-
-    <dialog class="about-dialog" id="aboutDialog" aria-labelledby="about-title">
-      <article class="about-dialog__panel">
-        <div class="about-dialog__top">
-          <h2 id="about-title">À propos</h2>
-          <form method="dialog">
-            <button class="about-dialog__close" type="submit" aria-label="Fermer">
-              ×
-            </button>
-          </form>
-        </div>
-        <div class="about-dialog__text">
-          <p>
-            Ce portail et les jeux qu'il rassemble sont imaginés, adaptés et
-            assemblés par Dr. John et Lady Em, avec l'envie de proposer de
-            petits jeux web accessibles, amusants, et ancrés dans l'univers de
-            Lille.
-          </p>
-          <p>
-            On y reprend parfois des idées de jeux bien connues, qu'on détourne
-            à notre manière pour leur donner une couleur locale : des mots, des
-            lieux, des trajets, des ambiances, des bizarreries, et un peu de
-            bilouterie.
-          </p>
-          <p>
-            Merci de jouer, d'explorer, et de faire vivre cette petite baraque à
-            jeux.
-          </p>
-          <a
-            class="support-button"
-            href="https://ko-fi.com/C7V120JWOV"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Soutenez la baraque à jeux
-          </a>
-        </div>
-      </article>
-    </dialog>
-
     <footer class="site-footer">
       <p>La baraque à jeux par Dr. John &amp; Lady Em</p>
     </footer>
 
+    <script type="module" src="packages/ui/about-dialog.js"></script>
     <script>
       const gamePrompts = {
         lundi: {
@@ -226,8 +182,6 @@
       };
 
       const gamesTitle = document.getElementById("games-title");
-      const aboutButton = document.getElementById("aboutButton");
-      const aboutDialog = document.getElementById("aboutDialog");
 
       const parisParts = new Intl.DateTimeFormat("fr-FR", {
         timeZone: "Europe/Paris",
@@ -245,20 +199,6 @@
       if (prompt) {
         gamesTitle.textContent = prompt;
       }
-
-      aboutButton.addEventListener("click", () => {
-        if (typeof aboutDialog.showModal === "function") {
-          aboutDialog.showModal();
-        } else {
-          aboutDialog.setAttribute("open", "");
-        }
-      });
-
-      aboutDialog.addEventListener("click", (event) => {
-        if (event.target === aboutDialog) {
-          aboutDialog.close();
-        }
-      });
     </script>
   </body>
 </html>

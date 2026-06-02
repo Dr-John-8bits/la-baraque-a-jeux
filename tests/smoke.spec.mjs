@@ -27,12 +27,20 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
 
   await page.goto(base);
   await expect(page).toHaveTitle("La baraque à jeux");
-  await expect(page.getByRole("link", { name: "Le mot à Biloute", exact: true })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Lille-Mêle", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Accueil", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Blog", exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "À propos", exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Ouvrir Le mot à Biloute", exact: true })
+  ).toBeVisible();
+  await expect(page.getByRole("link", { name: "Ouvrir Lille-Mêle", exact: true })).toBeVisible();
   await expect(
     page.getByRole("link", { name: "Ouvrir Biloute Bière Braderie", exact: true })
   ).toBeVisible();
   await expect(page.getByRole("link", { name: "Ouvrir Station Mystère", exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "À propos", exact: true }).click();
+  await expect(page.getByRole("dialog", { name: "À propos", exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Fermer", exact: true }).click();
 
   await page.goto(`${base}blog.html`);
   await expect(page.getByRole("heading", { name: "Blog", exact: true })).toBeVisible();

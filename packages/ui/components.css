@@ -130,91 +130,6 @@ body.labaj-site {
   transform: translateY(-1px);
 }
 
-.support-button {
-  width: fit-content;
-  min-height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--labaj-ink);
-  border-radius: var(--labaj-radius);
-  padding: 0 14px;
-  background: var(--labaj-red);
-  box-shadow: 3px 3px 0 var(--labaj-ink);
-  color: #ffffff;
-  font-weight: 900;
-  line-height: 1;
-  text-decoration: none;
-}
-
-.support-button:hover {
-  background: var(--labaj-ink);
-}
-
-.about-dialog {
-  width: min(560px, calc(100% - 24px));
-  max-height: min(720px, calc(100% - 28px));
-  border: 0;
-  padding: 0;
-  background: transparent;
-  color: var(--labaj-ink);
-}
-
-.about-dialog::backdrop {
-  background: rgba(7, 27, 49, 0.42);
-  backdrop-filter: blur(8px);
-}
-
-.about-dialog__panel {
-  display: grid;
-  gap: 12px;
-  border: 1px solid var(--labaj-line);
-  border-radius: var(--labaj-radius);
-  padding: 16px;
-  background: var(--labaj-surface);
-  box-shadow: var(--labaj-shadow);
-}
-
-.about-dialog__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.about-dialog__top h2 {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.1;
-  letter-spacing: 0;
-}
-
-.about-dialog__top form {
-  margin: 0;
-}
-
-.about-dialog__close {
-  width: 36px;
-  height: 36px;
-  display: inline-grid;
-  place-items: center;
-  border: 2px solid var(--labaj-ink);
-  border-radius: var(--labaj-radius);
-  background: var(--labaj-gold);
-  color: var(--labaj-ink);
-  cursor: pointer;
-  font-size: 1.4rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.about-dialog__text {
-  display: grid;
-  gap: 10px;
-  color: var(--labaj-muted);
-  line-height: 1.55;
-}
-
 .blog-shell {
   gap: 18px;
 }
@@ -320,8 +235,7 @@ body.labaj-site {
   }
 
   .intro p:not(.eyebrow),
-  .game-card > span:last-child,
-  .about-dialog__text {
+  .game-card > span:last-child {
     font-size: 0.94rem;
   }
 

@@ -54,10 +54,8 @@
 
         <div class="labaj-links">
           <a class="labaj-link labaj-link--home" href="./">Accueil</a>
-          <a class="labaj-link" href="apps/le-mot-a-biloute/">Le mot à Biloute</a>
-          <a class="labaj-link" href="apps/lille-mele/">Lille-Mêle</a>
-          <a class="labaj-link" href="apps/biloute-biere-braderie/">Ch'tifoumi</a>
           <a class="labaj-link" href="blog.html" aria-current="page">Blog</a>
+          <button class="labaj-link" type="button" data-about-trigger>À propos</button>
         </div>
       </nav>
     </header>
@@ -72,6 +70,7 @@
       <p>La baraque à jeux par Dr. John &amp; Lady Em</p>
     </footer>
 
+    <script type="module" src="packages/ui/about-dialog.js"></script>
     <script type="module">
       import { renderMarkdown } from "./packages/game-utils/markdown.js";
 
