@@ -1,4 +1,4 @@
-import { getDateId, selectDailyItem } from "../../packages/game-utils/daily.js";
+import { getDailyDateId, getRelativeDateId, selectDailyItem } from "../../packages/game-utils/daily.js";
 import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { hashString, seededShuffle } from "../../packages/game-utils/random.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
@@ -7,13 +7,17 @@ import { escapeHtml } from "../../packages/game-utils/text-render.js";
 
 const MAX_MISTAKES = 4;
 const STORAGE_PREFIX = "lillemele.v1.";
-const APP_VERSION = "26.06.01.4";
+const APP_VERSION = "26.06.02.1";
+const DAILY_EPOCH_ID = "2026-01-01";
+const DAILY_TIME_ZONE = "Europe/Paris";
+const DAILY_ROLLOVER_HOUR = 12;
 const DEFAULT_STATS = {
   played: 0,
   won: 0,
   currentStreak: 0,
   bestStreak: 0,
-  lastCompletedPuzzleId: "",
+  lastPlayedDateId: "",
+  lastWinDateId: "",
 };
 
 const sources = await fetchJson("../../packages/corpus/sources.json");
@@ -41,9 +45,10 @@ const els = {
   toast: document.querySelector("#toast"),
 };
 
-const today = new Date();
-const todayId = getDateId(today);
-const puzzle = selectDailyItem(puzzles, todayId, { epochId: "2026-01-01" });
+const todayId = getLilleMeleDateId();
+const reviewedPuzzles = puzzles.filter((candidate) => candidate.status === "reviewed");
+const officialPuzzles = reviewedPuzzles.length ? reviewedPuzzles : puzzles;
+const puzzle = selectDailyItem(officialPuzzles, todayId, { epochId: DAILY_EPOCH_ID });
 const groupByItem = new Map();
 puzzle.groups.forEach((group) => {
   group.items.forEach((item) => groupByItem.set(item, group));
@@ -57,6 +62,7 @@ let toastTimer = 0;
 
 function makeInitialState() {
   return {
+    dailyDateId: todayId,
     puzzleId: puzzle.id,
     selectedItems: [],
     foundGroupIds: [],
@@ -65,9 +71,10 @@ function makeInitialState() {
     attempts: [],
     itemOrder: seededShuffle(
       puzzle.groups.flatMap((group) => group.items),
-      hashString(puzzle.id)
+      hashString(`${todayId}:${puzzle.id}`)
     ),
-    completedRecorded: false,
+    officialResultRecorded: false,
+    endedAt: null,
     bonusAnswered: null,
   };
 }
@@ -75,8 +82,31 @@ function makeInitialState() {
 function loadState() {
   const key = getStateKey();
   const saved = readJson(key, null);
-  if (saved && saved.puzzleId === puzzle.id && isStateCompatible(saved)) return saved;
+  if (
+    saved &&
+    saved.puzzleId === puzzle.id &&
+    saved.dailyDateId === todayId &&
+    isStateCompatible(saved)
+  ) {
+    return hydrateState(saved);
+  }
   return makeInitialState();
+}
+
+function hydrateState(saved) {
+  const initial = makeInitialState();
+  return {
+    ...initial,
+    ...saved,
+    dailyDateId: todayId,
+    puzzleId: puzzle.id,
+    selectedItems: Array.isArray(saved.selectedItems) ? saved.selectedItems : [],
+    foundGroupIds: Array.isArray(saved.foundGroupIds) ? saved.foundGroupIds : [],
+    attempts: Array.isArray(saved.attempts) ? saved.attempts : [],
+    itemOrder: Array.isArray(saved.itemOrder) ? saved.itemOrder : initial.itemOrder,
+    officialResultRecorded: Boolean(saved.officialResultRecorded || saved.completedRecorded),
+    endedAt: saved.endedAt || null,
+  };
 }
 
 function isStateCompatible(saved) {
@@ -94,7 +124,7 @@ function saveState() {
 }
 
 function getStateKey() {
-  return `${STORAGE_PREFIX}state.${puzzle.id}`;
+  return `${STORAGE_PREFIX}state.${todayId}.${puzzle.id}`;
 }
 
 function getStats() {
@@ -106,21 +136,29 @@ function setStats(stats) {
 }
 
 function updateStatsIfNeeded() {
-  if (state.completedRecorded || !["won", "lost"].includes(state.status)) return;
+  if (state.officialResultRecorded || !["won", "lost"].includes(state.status)) return;
   const stats = getStats();
+  if (stats.lastPlayedDateId === todayId) {
+    state.officialResultRecorded = true;
+    saveState();
+    return;
+  }
+
   stats.played += 1;
+  stats.lastPlayedDateId = todayId;
+
   if (state.status === "won") {
+    const previousDailyId = getPreviousDailyId(todayId);
     stats.won += 1;
-    stats.currentStreak =
-      stats.lastCompletedPuzzleId && stats.lastCompletedPuzzleId !== puzzle.id
-        ? stats.currentStreak + 1
-        : Math.max(1, stats.currentStreak);
+    stats.currentStreak = stats.lastWinDateId === previousDailyId ? stats.currentStreak + 1 : 1;
     stats.bestStreak = Math.max(stats.bestStreak, stats.currentStreak);
+    stats.lastWinDateId = todayId;
   } else {
     stats.currentStreak = 0;
   }
-  stats.lastCompletedPuzzleId = puzzle.id;
-  state.completedRecorded = true;
+
+  state.officialResultRecorded = true;
+  state.endedAt = state.endedAt || new Date().toISOString();
   setStats(stats);
   saveState();
 }
@@ -131,7 +169,7 @@ function render() {
   }
   const stats = getStats();
   els.intro.textContent = puzzle.intro;
-  els.puzzleDate.textContent = formatPuzzleDate(today);
+  els.puzzleDate.textContent = formatPuzzleDate(todayId);
   els.mistakes.textContent = `${state.mistakes} / ${MAX_MISTAKES}`;
   els.streak.textContent = String(stats.currentStreak || 0);
   els.message.className = `message ${messageTone}`.trim();
@@ -150,6 +188,7 @@ function render() {
 
 function renderFoundGroups() {
   els.foundGroups.innerHTML = "";
+  if (state.status === "lost") return;
   state.foundGroupIds.forEach((groupId) => {
     const group = puzzle.groups.find((candidate) => candidate.id === groupId);
     if (!group) return;
@@ -175,6 +214,14 @@ function createGroupNode(group) {
 
 function renderBoard() {
   els.board.innerHTML = "";
+  els.board.className = "board";
+  els.board.setAttribute("aria-label", "Cartes à regrouper");
+
+  if (state.status === "lost") {
+    renderLostReveal();
+    return;
+  }
+
   const foundItems = new Set(
     puzzle.groups
       .filter((group) => state.foundGroupIds.includes(group.id))
@@ -205,6 +252,34 @@ function renderBoard() {
   });
 }
 
+function renderLostReveal() {
+  els.board.className = "board reveal-board";
+  els.board.setAttribute("aria-label", "Réponses révélées");
+
+  puzzle.groups.forEach((group, index) => {
+    const node = document.createElement("article");
+    const title = document.createElement("span");
+    const items = document.createElement("div");
+
+    node.className = `found-group reveal-group ${group.difficulty}`;
+    node.style.setProperty("--reveal-index", String(index));
+
+    title.className = "reveal-title";
+    title.textContent = group.title;
+
+    items.className = "reveal-items";
+    group.items.forEach((item) => {
+      const card = document.createElement("span");
+      card.className = "reveal-card";
+      card.textContent = item;
+      items.appendChild(card);
+    });
+
+    node.append(title, items);
+    els.board.appendChild(node);
+  });
+}
+
 function renderResult() {
   const finished = state.status === "won" || state.status === "lost";
   els.result.classList.toggle("visible", finished);
@@ -217,20 +292,23 @@ function renderResult() {
   const allGroups = puzzle.groups
     .map((group) => createGroupSummary(group, !state.foundGroupIds.includes(group.id)))
     .join("");
+  const groupsHtml = won ? `<div class="found-groups">${allGroups}</div>` : "";
   const bonusHtml = won ? createBonusHtml() : "";
   els.result.innerHTML = `
     <h2>${won ? "Grille démêlée." : "Perdu à Porte des Postes."}</h2>
-    <p>${won ? puzzle.finalNote : "La grille t'a eu. Elle avait pourtant l'air sympa."}</p>
+    <p>${
+      won
+        ? `${escapeHtml(puzzle.finalNote)} Reviens demain à midi pour une nouvelle grille.`
+        : "Les familles sont révélées dans la grille. Reviens demain à midi pour retenter ta chance."
+    }</p>
     <p><strong>Erreurs :</strong> ${state.mistakes} / ${MAX_MISTAKES}</p>
-    <div class="found-groups">${allGroups}</div>
+    ${groupsHtml}
     ${bonusHtml}
     <div class="result-actions">
       <button type="button" id="shareButton">Partager</button>
-      <button type="button" id="resetButton">Rejouer la grille</button>
     </div>
   `;
   document.querySelector("#shareButton")?.addEventListener("click", shareResult);
-  document.querySelector("#resetButton")?.addEventListener("click", resetPuzzle);
   document.querySelectorAll("[data-bonus-answer]").forEach((button) => {
     button.addEventListener("click", () => answerBonus(button.dataset.bonusAnswer === "true"));
   });
@@ -299,7 +377,8 @@ function submitSelection() {
     els.message.textContent = foundGroup.note || "Bonne correspondance.";
     if (state.foundGroupIds.length === puzzle.groups.length) {
       state.status = "won";
-      els.message.textContent = "Grille démêlée. Tu peux descendre à la prochaine.";
+      state.endedAt = new Date().toISOString();
+      els.message.textContent = "Grille démêlée. Prochaine grille demain à midi.";
     }
     render();
     return;
@@ -316,9 +395,10 @@ function submitSelection() {
 
   if (state.mistakes >= MAX_MISTAKES) {
     state.status = "lost";
+    state.endedAt = new Date().toISOString();
     messageTone = "wrong";
-    showSelectionFeedback(selected, "wrong");
-    els.message.textContent = "Trop d'erreurs. La rame est repartie.";
+    clearSelectionFeedback();
+    els.message.textContent = "Trop d'erreurs. Les réponses se dévoilent.";
   } else if (overlap === 3) {
     messageTone = "near";
     showSelectionFeedback(selected, "one-away");
@@ -338,6 +418,11 @@ function showSelectionFeedback(items, type) {
     visualFeedback = { items: [], type: "" };
     render();
   }, type === "one-away" ? 1300 : 760);
+}
+
+function clearSelectionFeedback() {
+  clearTimeout(visualFeedbackTimer);
+  visualFeedback = { items: [], type: "" };
 }
 
 function getMaxOverlap(selected) {
@@ -369,14 +454,6 @@ function shuffleActiveItems() {
   render();
 }
 
-function resetPuzzle() {
-  state = makeInitialState();
-  visualFeedback = { items: [], type: "" };
-  messageTone = "";
-  els.message.textContent = "Grille réinitialisée.";
-  render();
-}
-
 function answerBonus(value) {
   state.bonusAnswered = value;
   saveState();
@@ -394,7 +471,7 @@ async function shareResult() {
 }
 
 function buildShareText() {
-  const lines = [`Lille-Mêle #${puzzle.number}`];
+  const lines = [`Lille-Mêle #${puzzle.number} · ${todayId}`];
   const colorByGroup = new Map([
     ["easy", "🟩"],
     ["medium", "🟨"],
@@ -445,14 +522,31 @@ function renderGameToText() {
       .filter((group) => state.foundGroupIds.includes(group.id))
       .flatMap((group) => group.items)
   );
+  const lost = state.status === "lost";
   const payload = {
     note: "DOM puzzle. Origin is the top-left viewport; visible tiles are listed in reading order.",
-    puzzle: { id: puzzle.id, number: puzzle.number, title: puzzle.title },
+    date: todayId,
+    dailyRollover: {
+      hour: DAILY_ROLLOVER_HOUR,
+      timeZone: DAILY_TIME_ZONE,
+      nextAt: getNextRolloverDate().toISOString(),
+    },
+    puzzle: { id: puzzle.id, number: puzzle.number, title: puzzle.title, status: puzzle.status },
     status: state.status,
     mistakes: state.mistakes,
+    mistakesMax: MAX_MISTAKES,
     selectedItems: state.selectedItems,
     foundGroups: state.foundGroupIds,
-    activeItems: state.itemOrder.filter((item) => !foundItems.has(item)),
+    activeItems: lost ? [] : state.itemOrder.filter((item) => !foundItems.has(item)),
+    revealedGroups: lost
+      ? puzzle.groups.map((group) => ({
+          id: group.id,
+          title: group.title,
+          items: group.items,
+          difficulty: group.difficulty,
+        }))
+      : [],
+    officialResultRecorded: state.officialResultRecorded,
     message: els.message.textContent,
     canSubmit: !els.submitButton.disabled,
     resultVisible: els.result.classList.contains("visible"),
@@ -466,12 +560,79 @@ window.advanceTime = () => {
   render();
 };
 
-function formatPuzzleDate(date) {
+function getLilleMeleDateId(date = new Date()) {
+  return getDailyDateId(date, {
+    rolloverHour: DAILY_ROLLOVER_HOUR,
+    timeZone: DAILY_TIME_ZONE,
+  });
+}
+
+function getPreviousDailyId(dateId) {
+  return getRelativeDateId(-1, new Date(`${dateId}T00:00:00Z`), { timeZone: "UTC" });
+}
+
+function scheduleDailyRefresh() {
+  window.setInterval(() => {
+    if (getLilleMeleDateId() !== todayId) {
+      window.location.reload();
+    }
+  }, 60 * 1000);
+}
+
+function getNextRolloverDate(now = new Date()) {
+  const parts = getZonedDateTimeParts(now, DAILY_TIME_ZONE);
+  const currentDateId = `${parts.year}-${parts.month}-${parts.day}`;
+  const targetDateId =
+    Number(parts.hour) < DAILY_ROLLOVER_HOUR
+      ? currentDateId
+      : getRelativeDateId(1, new Date(`${currentDateId}T00:00:00Z`), { timeZone: "UTC" });
+  const [year, month, day] = targetDateId.split("-").map(Number);
+  return zonedTimeToUtc(year, month, day, DAILY_ROLLOVER_HOUR, 0, DAILY_TIME_ZONE);
+}
+
+function zonedTimeToUtc(year, month, day, hour, minute, timeZone) {
+  const wallTime = Date.UTC(year, month - 1, day, hour, minute, 0);
+  let utcTime = wallTime;
+  for (let index = 0; index < 3; index += 1) {
+    utcTime = wallTime - getTimeZoneOffsetMs(new Date(utcTime), timeZone);
+  }
+  return new Date(utcTime);
+}
+
+function getTimeZoneOffsetMs(date, timeZone) {
+  const parts = getZonedDateTimeParts(date, timeZone);
+  const asUtc = Date.UTC(
+    Number(parts.year),
+    Number(parts.month) - 1,
+    Number(parts.day),
+    Number(parts.hour),
+    Number(parts.minute),
+    Number(parts.second)
+  );
+  return asUtc - date.getTime();
+}
+
+function getZonedDateTimeParts(date, timeZone) {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hourCycle: "h23",
+  });
+  return Object.fromEntries(formatter.formatToParts(date).map((part) => [part.type, part.value]));
+}
+
+function formatPuzzleDate(dateId) {
   return new Intl.DateTimeFormat("fr-FR", {
     day: "numeric",
     month: "short",
+    timeZone: "UTC",
   })
-    .format(date)
+    .format(new Date(`${dateId}T00:00:00Z`))
     .replace(".", "");
 }
 
@@ -533,4 +694,5 @@ window.addEventListener("resize", refitTileLabels);
 document.fonts?.ready?.then(refitTileLabels);
 
 renderSources();
+scheduleDailyRefresh();
 render();

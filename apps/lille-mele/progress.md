@@ -63,3 +63,19 @@ Original prompt: Commence à développer le jeu index.hmtl, on verra pour le con
   - ajout d'une famille régionale/gastronomique issue des graines relues et des sources web indexées ;
   - corpus Lille-Mêle à 14 grilles, dont 10 `reviewed` ;
   - cartes `reviewed` : 160 emplacements, 156 cartes uniques.
+
+## 2026-06-02
+
+- Itération 26.06.02.1 :
+  - bascule de Lille-Mêle sur une grille officielle quotidienne calée à 12 h, heure de Paris ;
+  - sélection quotidienne limitée aux puzzles `reviewed` quand ils existent ;
+  - sauvegarde locale par date officielle et puzzle, pour éviter qu'une ancienne partie contamine une nouvelle journée ;
+  - statistiques et série fondées sur les dates officielles consécutives ;
+  - perte après 4 erreurs avec révélation animée des familles à la place de la grille ;
+  - bouton de replay immédiat retiré de l'écran de résultat en attendant l'arbitrage produit ;
+  - smoke test enrichi avec le rollover quotidien et un scénario de défaite complète.
+- Vérifications 26.06.02.1 :
+  - `npm run check` OK ;
+  - `npm run test:browser` OK ;
+  - client web-game Playwright exécuté après copie temporaire dans `/private/tmp` pour résoudre l'import local de Playwright ;
+  - capture mobile de défaite inspectée : les 4 familles remplacent bien la grille, sans bouton de replay.

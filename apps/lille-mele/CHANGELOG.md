@@ -4,6 +4,23 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## [26.06.02.1] - 2026-06-02
+
+### Ajouté
+
+- Grille officielle quotidienne calée à 12 h, heure de Paris.
+- Rotation officielle limitée aux grilles `reviewed` quand le corpus en contient.
+- Révélation animée des familles à la place de la grille quand la partie est perdue.
+- Exposition du rollover quotidien dans `window.render_game_to_text` pour les tests.
+
+### Modifié
+
+- Version courante passée à `26.06.02.1`.
+- Sauvegarde locale attachée à la date officielle et au puzzle.
+- Statistiques et série recalculées sur les dates officielles consécutives.
+- Bouton de replay immédiat retiré de l'écran de résultat en attendant l'arbitrage produit.
+- Aide alignée sur la grille officielle quotidienne à midi.
+
 ## [26.06.01.4] - 2026-06-01
 
 ### Ajouté
