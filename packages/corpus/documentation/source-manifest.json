@@ -26,6 +26,21 @@
       "usage": "Rattachement des arrets et stations aux communes."
     },
     {
+      "id": "gbfs-vlille-ilevia",
+      "title": "GBFS V'Lille",
+      "publisher": "Ilévia",
+      "license": "Licence Ouverte 2.0",
+      "url": "https://media.ilevia.fr/opendata/gbfs.json",
+      "localPaths": [
+        "raw/transport/ilevia-gbfs/gbfs.json",
+        "raw/transport/ilevia-gbfs/station_information.json",
+        "raw/transport/ilevia-gbfs/station_status.json",
+        "raw/transport/ilevia-gbfs/system_information.json",
+        "raw/transport/ilevia-gbfs/vehicle_types.json"
+      ],
+      "usage": "Stations V'Lille, capacites, coordonnees, et photographie technique des statuts."
+    },
+    {
       "id": "mel-communes-datamel",
       "title": "Communes de la MEL",
       "publisher": "Métropole Européenne de Lille",

@@ -23,7 +23,7 @@
     "url": "https://www.data.gouv.fr/datasets/ilevia-localisation-des-arrets-bus-metro-et-tram-gtfs",
     "publisher": "data.gouv.fr",
     "license": "Licence Ouverte 2.0",
-    "consultedAt": "2026-06-01",
+    "consultedAt": "2026-06-02",
     "notes": "Jeu de données utile pour vérifier les arrêts, lignes et libellés de transport."
   },
   {
@@ -86,8 +86,17 @@
     "url": "https://data.lillemetropole.fr/geoserver/ogc/features/v1/collections/dsp_ilevia:arret_point/items",
     "publisher": "Métropole Européenne de Lille",
     "license": "Licence Ouverte 2.0",
-    "consultedAt": "2026-06-01",
+    "consultedAt": "2026-06-02",
     "notes": "GeoJSON des arrêts Ilévia avec communes, utile pour rattacher les stations et arrêts aux territoires."
+  },
+  {
+    "id": "gbfs-vlille-ilevia",
+    "label": "GBFS V'Lille — Ilévia",
+    "url": "https://media.ilevia.fr/opendata/gbfs.json",
+    "publisher": "Ilévia",
+    "license": "Licence Ouverte 2.0",
+    "consultedAt": "2026-06-02",
+    "notes": "Flux GBFS 2.3 du service V'Lille, utile pour les stations, capacités, coordonnées et statuts techniques."
   },
   {
     "id": "mel-communes-datamel",

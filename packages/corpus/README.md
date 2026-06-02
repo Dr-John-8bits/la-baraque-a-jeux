@@ -9,6 +9,9 @@ Source de verite editoriale commune au portail et aux jeux.
 - `le-mot-a-biloute/accepted-guesses.json` : propositions acceptees pour le Mot a Biloute, separees des reponses du jour.
 - `le-mot-a-biloute/french-guesses.json` : dictionnaire francais large pour accepter les propositions courantes, sans alimenter les reponses du jour.
 - `lille-mele/puzzles.json` : grilles, familles et bonus de Lille-Mele.
+- `station-mystere/metro-stations.json` : socle technique des stations du niveau Metro Mystere.
+- `station-mystere/vlille-stations.json` : socle technique des stations du niveau Velo Mystere.
+- `station-mystere/bus-network.json` : inventaire technique complet du niveau Bus Mystere.
 - `schema/` : schemas de reference pour cadrer les donnees.
 
 ## Conventions

@@ -1,0 +1,5547 @@
+{
+  "generatedAt": "2026-06-02",
+  "status": "technical-baseline",
+  "description": "Premier corpus technique pour le niveau 1 Metro Mystere. Les champs culturels sont a enrichir et sourcer avant publication jouable.",
+  "level": "metro",
+  "sourceIds": [
+    "gtfs-ilevia-data-gouv",
+    "ilevia-arret-point-datamel"
+  ],
+  "stats": {
+    "lineCount": 2,
+    "stationCount": 60,
+    "stationsByLine": {
+      "M1": 18,
+      "M2": 44
+    },
+    "transferStationCount": 2,
+    "ambiguousNameCount": 1,
+    "raw": {
+      "gtfsRoutes": 146,
+      "gtfsStops": 4856,
+      "gtfsTrips": 35560,
+      "arretPointFeatures": 5002
+    }
+  },
+  "notes": [
+    "Base derivee du GTFS Ilévia et du GeoJSON dataMEL des arrets.",
+    "Les libelles proviennent des donnees techniques et devront etre relus editorialement, notamment les accents et abreviations.",
+    "Les stations homonymes sont distinguees par commune dans leur identifiant stable."
+  ],
+  "lines": [
+    {
+      "id": "ME1",
+      "nomCourt": "M1",
+      "nom": "METRO LIGNE 1",
+      "description": "CHU EURASANTÉ <> 4 CANTONS STADE P MAUROY",
+      "couleur": "FDC41F",
+      "couleurTexte": "000000",
+      "directions": [
+        {
+          "directionId": "0",
+          "trajetRepresentatifCount": 1393,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "girouettes": [
+            {
+              "label": "Lille Chu Eurasanté",
+              "count": 1393
+            }
+          ],
+          "stations": [
+            {
+              "stopId": "4CA099",
+              "nom": "4 Cantons Stade P. Mauroy",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 1,
+              "coordonnees": {
+                "latitude": 50.605423,
+                "longitude": 3.13866
+              },
+              "id": "4-cantons-stade-p-mauroy"
+            },
+            {
+              "stopId": "CSC099",
+              "nom": "Cité Scientifique",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 2,
+              "coordonnees": {
+                "latitude": 50.611731,
+                "longitude": 3.142497
+              },
+              "id": "cite-scientifique"
+            },
+            {
+              "stopId": "TIO099",
+              "nom": "Triolo",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 3,
+              "coordonnees": {
+                "latitude": 50.616294,
+                "longitude": 3.14164
+              },
+              "id": "triolo"
+            },
+            {
+              "stopId": "HDV099",
+              "nom": "Hotel De Ville",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 4,
+              "coordonnees": {
+                "latitude": 50.618385,
+                "longitude": 3.131846
+              },
+              "id": "hotel-de-ville-villeneuve-d-ascq"
+            },
+            {
+              "stopId": "PDB099",
+              "nom": "Pont De Bois",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 5,
+              "coordonnees": {
+                "latitude": 50.624355,
+                "longitude": 3.128232
+              },
+              "id": "pont-de-bois"
+            },
+            {
+              "stopId": "LZN099",
+              "nom": "Square Flandres",
+              "commune": "Hellemmes-Lille",
+              "sequence": 6,
+              "coordonnees": {
+                "latitude": 50.625231,
+                "longitude": 3.116118
+              },
+              "id": "square-flandres"
+            },
+            {
+              "stopId": "MHE099",
+              "nom": "Mairie D'Hellemmes",
+              "commune": "Hellemmes-Lille",
+              "sequence": 7,
+              "coordonnees": {
+                "latitude": 50.627187,
+                "longitude": 3.108787
+              },
+              "id": "mairie-d-hellemmes"
+            },
+            {
+              "stopId": "MRB099",
+              "nom": "Marbrerie",
+              "commune": "Lille",
+              "sequence": 8,
+              "coordonnees": {
+                "latitude": 50.630395,
+                "longitude": 3.097836
+              },
+              "id": "marbrerie"
+            },
+            {
+              "stopId": "DFI099",
+              "nom": "Fives",
+              "commune": "Lille",
+              "sequence": 9,
+              "coordonnees": {
+                "latitude": 50.633023,
+                "longitude": 3.090556
+              },
+              "id": "fives"
+            },
+            {
+              "stopId": "CIE099",
+              "nom": "Madeleine Caulier",
+              "commune": "Lille",
+              "sequence": 10,
+              "coordonnees": {
+                "latitude": 50.636504,
+                "longitude": 3.087519
+              },
+              "id": "madeleine-caulier"
+            },
+            {
+              "stopId": "LIG099",
+              "nom": "Gare Lille Flandres",
+              "commune": "Lille",
+              "sequence": 11,
+              "coordonnees": {
+                "latitude": 50.637096,
+                "longitude": 3.071067
+              },
+              "id": "gare-lille-flandres"
+            },
+            {
+              "stopId": "RIH099",
+              "nom": "Rihour",
+              "commune": "Lille",
+              "sequence": 12,
+              "coordonnees": {
+                "latitude": 50.6357,
+                "longitude": 3.062908
+              },
+              "id": "rihour"
+            },
+            {
+              "stopId": "REP099",
+              "nom": "République Beaux-Arts",
+              "commune": "Lille",
+              "sequence": 13,
+              "coordonnees": {
+                "latitude": 50.631776,
+                "longitude": 3.060608
+              },
+              "id": "republique-beaux-arts"
+            },
+            {
+              "stopId": "CGA099",
+              "nom": "Gambetta",
+              "commune": "Lille",
+              "sequence": 14,
+              "coordonnees": {
+                "latitude": 50.626389,
+                "longitude": 3.052125
+              },
+              "id": "gambetta"
+            },
+            {
+              "stopId": "WAZ099",
+              "nom": "Wazemmes",
+              "commune": "Lille",
+              "sequence": 15,
+              "coordonnees": {
+                "latitude": 50.623272,
+                "longitude": 3.051348
+              },
+              "id": "wazemmes"
+            },
+            {
+              "stopId": "PDP099",
+              "nom": "Porte Des Postes",
+              "commune": "Lille",
+              "sequence": 16,
+              "coordonnees": {
+                "latitude": 50.617947,
+                "longitude": 3.050665
+              },
+              "id": "porte-des-postes"
+            },
+            {
+              "stopId": "CHR099",
+              "nom": "Chu-Centre O. Lambret",
+              "commune": "Lille",
+              "sequence": 17,
+              "coordonnees": {
+                "latitude": 50.613222,
+                "longitude": 3.036062
+              },
+              "id": "chu-centre-o-lambret"
+            },
+            {
+              "stopId": "CAL099",
+              "nom": "Chu Eurasanté",
+              "commune": "Lille",
+              "sequence": 18,
+              "coordonnees": {
+                "latitude": 50.607932,
+                "longitude": 3.03892
+              },
+              "id": "chu-eurasante"
+            }
+          ]
+        },
+        {
+          "directionId": "1",
+          "trajetRepresentatifCount": 1395,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "girouettes": [
+            {
+              "label": "Villeneuve D Ascq 4 Cantons Stade P. Mauroy",
+              "count": 1395
+            }
+          ],
+          "stations": [
+            {
+              "stopId": "CAL098",
+              "nom": "Chu Eurasanté",
+              "commune": "Lille",
+              "sequence": 1,
+              "coordonnees": {
+                "latitude": 50.607932,
+                "longitude": 3.03892
+              },
+              "id": "chu-eurasante"
+            },
+            {
+              "stopId": "CHR098",
+              "nom": "Chu-Centre O. Lambret",
+              "commune": "Lille",
+              "sequence": 2,
+              "coordonnees": {
+                "latitude": 50.613222,
+                "longitude": 3.036062
+              },
+              "id": "chu-centre-o-lambret"
+            },
+            {
+              "stopId": "PDP098",
+              "nom": "Porte Des Postes",
+              "commune": "Lille",
+              "sequence": 3,
+              "coordonnees": {
+                "latitude": 50.618722,
+                "longitude": 3.050014
+              },
+              "id": "porte-des-postes"
+            },
+            {
+              "stopId": "WAZ098",
+              "nom": "Wazemmes",
+              "commune": "Lille",
+              "sequence": 4,
+              "coordonnees": {
+                "latitude": 50.623272,
+                "longitude": 3.051348
+              },
+              "id": "wazemmes"
+            },
+            {
+              "stopId": "CGA098",
+              "nom": "Gambetta",
+              "commune": "Lille",
+              "sequence": 5,
+              "coordonnees": {
+                "latitude": 50.626343,
+                "longitude": 3.052322
+              },
+              "id": "gambetta"
+            },
+            {
+              "stopId": "REP098",
+              "nom": "République Beaux-Arts",
+              "commune": "Lille",
+              "sequence": 6,
+              "coordonnees": {
+                "latitude": 50.631776,
+                "longitude": 3.060608
+              },
+              "id": "republique-beaux-arts"
+            },
+            {
+              "stopId": "RIH098",
+              "nom": "Rihour",
+              "commune": "Lille",
+              "sequence": 7,
+              "coordonnees": {
+                "latitude": 50.6357,
+                "longitude": 3.062908
+              },
+              "id": "rihour"
+            },
+            {
+              "stopId": "LIG098",
+              "nom": "Gare Lille Flandres",
+              "commune": "Lille",
+              "sequence": 8,
+              "coordonnees": {
+                "latitude": 50.637096,
+                "longitude": 3.071067
+              },
+              "id": "gare-lille-flandres"
+            },
+            {
+              "stopId": "CIE098",
+              "nom": "Madeleine Caulier",
+              "commune": "Lille",
+              "sequence": 9,
+              "coordonnees": {
+                "latitude": 50.636514,
+                "longitude": 3.087406
+              },
+              "id": "madeleine-caulier"
+            },
+            {
+              "stopId": "DFI098",
+              "nom": "Fives",
+              "commune": "Lille",
+              "sequence": 10,
+              "coordonnees": {
+                "latitude": 50.633103,
+                "longitude": 3.090754
+              },
+              "id": "fives"
+            },
+            {
+              "stopId": "MRB098",
+              "nom": "Marbrerie",
+              "commune": "Hellemmes-Lille",
+              "sequence": 11,
+              "coordonnees": {
+                "latitude": 50.630395,
+                "longitude": 3.097836
+              },
+              "id": "marbrerie"
+            },
+            {
+              "stopId": "MHE098",
+              "nom": "Mairie D'Hellemmes",
+              "commune": "Hellemmes-Lille",
+              "sequence": 12,
+              "coordonnees": {
+                "latitude": 50.627384,
+                "longitude": 3.108889
+              },
+              "id": "mairie-d-hellemmes"
+            },
+            {
+              "stopId": "LZN098",
+              "nom": "Square Flandres",
+              "commune": "Lezennes",
+              "sequence": 13,
+              "coordonnees": {
+                "latitude": 50.625258,
+                "longitude": 3.115992
+              },
+              "id": "square-flandres"
+            },
+            {
+              "stopId": "PDB098",
+              "nom": "Pont De Bois",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 14,
+              "coordonnees": {
+                "latitude": 50.624355,
+                "longitude": 3.128232
+              },
+              "id": "pont-de-bois"
+            },
+            {
+              "stopId": "HDV098",
+              "nom": "Hotel De Ville",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 15,
+              "coordonnees": {
+                "latitude": 50.618344,
+                "longitude": 3.13255
+              },
+              "id": "hotel-de-ville-villeneuve-d-ascq"
+            },
+            {
+              "stopId": "TIO098",
+              "nom": "Triolo",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 16,
+              "coordonnees": {
+                "latitude": 50.616294,
+                "longitude": 3.14164
+              },
+              "id": "triolo"
+            },
+            {
+              "stopId": "CSC098",
+              "nom": "Cité Scientifique",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 17,
+              "coordonnees": {
+                "latitude": 50.61173,
+                "longitude": 3.142695
+              },
+              "id": "cite-scientifique"
+            },
+            {
+              "stopId": "4CA098",
+              "nom": "4 Cantons Stade P. Mauroy",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 18,
+              "coordonnees": {
+                "latitude": 50.605423,
+                "longitude": 3.13866
+              },
+              "id": "4-cantons-stade-p-mauroy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ME2",
+      "nomCourt": "M2",
+      "nom": "METRO LIGNE 2",
+      "description": "SAINT PHILIBERT <> C.H. DRON",
+      "couleur": "E30613",
+      "couleurTexte": "FFFFFF",
+      "directions": [
+        {
+          "directionId": "0",
+          "trajetRepresentatifCount": 1713,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "girouettes": [
+            {
+              "label": "Lomme St. Philibert",
+              "count": 1728
+            }
+          ],
+          "stations": [
+            {
+              "stopId": "DRO099",
+              "nom": "C.H. Dron",
+              "commune": "Tourcoing",
+              "sequence": 1,
+              "coordonnees": {
+                "latitude": 50.743874,
+                "longitude": 3.180479
+              },
+              "id": "c-h-dron"
+            },
+            {
+              "stopId": "TBO099",
+              "nom": "Bourgogne",
+              "commune": "Tourcoing",
+              "sequence": 2,
+              "coordonnees": {
+                "latitude": 50.739646,
+                "longitude": 3.179715
+              },
+              "id": "bourgogne"
+            },
+            {
+              "stopId": "PTN099",
+              "nom": "Pont De Neuville",
+              "commune": "Tourcoing",
+              "sequence": 3,
+              "coordonnees": {
+                "latitude": 50.736809,
+                "longitude": 3.170734
+              },
+              "id": "pont-de-neuville"
+            },
+            {
+              "stopId": "TPH099",
+              "nom": "Phalempins",
+              "commune": "Tourcoing",
+              "sequence": 4,
+              "coordonnees": {
+                "latitude": 50.73242,
+                "longitude": 3.157744
+              },
+              "id": "phalempins"
+            },
+            {
+              "stopId": "COB099",
+              "nom": "Colbert",
+              "commune": "Tourcoing",
+              "sequence": 5,
+              "coordonnees": {
+                "latitude": 50.725349,
+                "longitude": 3.156935
+              },
+              "id": "colbert"
+            },
+            {
+              "stopId": "TOU099",
+              "nom": "Tourcoing Centre",
+              "commune": "Tourcoing",
+              "sequence": 6,
+              "coordonnees": {
+                "latitude": 50.720554,
+                "longitude": 3.160445
+              },
+              "id": "tourcoing-centre"
+            },
+            {
+              "stopId": "SEB099",
+              "nom": "Gare De Tourcoing",
+              "commune": "Tourcoing",
+              "sequence": 7,
+              "coordonnees": {
+                "latitude": 50.71662,
+                "longitude": 3.162584
+              },
+              "id": "gare-de-tourcoing"
+            },
+            {
+              "stopId": "CTL099",
+              "nom": "Carliers",
+              "commune": "Tourcoing",
+              "sequence": 8,
+              "coordonnees": {
+                "latitude": 50.710252,
+                "longitude": 3.159908
+              },
+              "id": "carliers"
+            },
+            {
+              "stopId": "MER099",
+              "nom": "Mercure",
+              "commune": "Tourcoing",
+              "sequence": 9,
+              "coordonnees": {
+                "latitude": 50.705153,
+                "longitude": 3.160544
+              },
+              "id": "mercure"
+            },
+            {
+              "stopId": "ALS099",
+              "nom": "Alsace",
+              "commune": "Roubaix",
+              "sequence": 10,
+              "coordonnees": {
+                "latitude": 50.700591,
+                "longitude": 3.161274
+              },
+              "id": "alsace"
+            },
+            {
+              "stopId": "MGR099",
+              "nom": "Gare Jean Lebas",
+              "commune": "Roubaix",
+              "sequence": 11,
+              "coordonnees": {
+                "latitude": 50.695865,
+                "longitude": 3.163823
+              },
+              "id": "gare-jean-lebas"
+            },
+            {
+              "stopId": "RXP099",
+              "nom": "Roubaix Place",
+              "commune": "Roubaix",
+              "sequence": 12,
+              "coordonnees": {
+                "latitude": 50.691663,
+                "longitude": 3.17385
+              },
+              "id": "roubaix-place"
+            },
+            {
+              "stopId": "ROU097",
+              "nom": "Euroteleport",
+              "commune": "Roubaix",
+              "sequence": 13,
+              "coordonnees": {
+                "latitude": 50.691344,
+                "longitude": 3.179832
+              },
+              "id": "euroteleport"
+            },
+            {
+              "stopId": "CDG099",
+              "nom": "Roubaix Charles De Gaulle",
+              "commune": "Roubaix",
+              "sequence": 14,
+              "coordonnees": {
+                "latitude": 50.686477,
+                "longitude": 3.170049
+              },
+              "id": "roubaix-charles-de-gaulle"
+            },
+            {
+              "stopId": "EPL099",
+              "nom": "Ep. Montesquieu",
+              "commune": "Roubaix",
+              "sequence": 15,
+              "coordonnees": {
+                "latitude": 50.683869,
+                "longitude": 3.163116
+              },
+              "id": "ep-montesquieu"
+            },
+            {
+              "stopId": "CXM099",
+              "nom": "Mairie De Croix",
+              "commune": "Croix",
+              "sequence": 16,
+              "coordonnees": {
+                "latitude": 50.679064,
+                "longitude": 3.155921
+              },
+              "id": "mairie-de-croix"
+            },
+            {
+              "stopId": "CPL099",
+              "nom": "Croix Centre",
+              "commune": "Croix",
+              "sequence": 17,
+              "coordonnees": {
+                "latitude": 50.674237,
+                "longitude": 3.146469
+              },
+              "id": "croix-centre"
+            },
+            {
+              "stopId": "WMI099",
+              "nom": "Hotel De Ville",
+              "commune": "Wasquehal",
+              "sequence": 18,
+              "coordonnees": {
+                "latitude": 50.669637,
+                "longitude": 3.130982
+              },
+              "id": "hotel-de-ville-wasquehal"
+            },
+            {
+              "stopId": "PVL097",
+              "nom": "Wasquehal Pavé De Lille",
+              "commune": "Wasquehal",
+              "sequence": 19,
+              "coordonnees": {
+                "latitude": 50.664234,
+                "longitude": 3.130091
+              },
+              "id": "wasquehal-pave-de-lille"
+            },
+            {
+              "stopId": "JRS099",
+              "nom": "Jean Jaures",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 20,
+              "coordonnees": {
+                "latitude": 50.658507,
+                "longitude": 3.134911
+              },
+              "id": "jean-jaures"
+            },
+            {
+              "stopId": "PRS099",
+              "nom": "Les Pres-E. Pisani",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 21,
+              "coordonnees": {
+                "latitude": 50.650345,
+                "longitude": 3.126386
+              },
+              "id": "les-pres-e-pisani"
+            },
+            {
+              "stopId": "FOR099",
+              "nom": "Fort De Mons",
+              "commune": "Mons-en-Barœul",
+              "sequence": 22,
+              "coordonnees": {
+                "latitude": 50.642182,
+                "longitude": 3.119443
+              },
+              "id": "fort-de-mons"
+            },
+            {
+              "stopId": "MDM099",
+              "nom": "Mairie De Mons",
+              "commune": "Mons-en-Barœul",
+              "sequence": 23,
+              "coordonnees": {
+                "latitude": 50.642387,
+                "longitude": 3.109543
+              },
+              "id": "mairie-de-mons"
+            },
+            {
+              "stopId": "MSA099",
+              "nom": "Mons Sarts",
+              "commune": "Mons-en-Barœul",
+              "sequence": 24,
+              "coordonnees": {
+                "latitude": 50.642272,
+                "longitude": 3.099201
+              },
+              "id": "mons-sarts"
+            },
+            {
+              "stopId": "SMP099",
+              "nom": "St Maurice Pellevoisin",
+              "commune": "Lille",
+              "sequence": 25,
+              "coordonnees": {
+                "latitude": 50.64251,
+                "longitude": 3.088244
+              },
+              "id": "st-maurice-pellevoisin"
+            },
+            {
+              "stopId": "EUR099",
+              "nom": "Lille Europe",
+              "commune": "Lille",
+              "sequence": 26,
+              "coordonnees": {
+                "latitude": 50.639583,
+                "longitude": 3.076774
+              },
+              "id": "lille-europe"
+            },
+            {
+              "stopId": "LIG399",
+              "nom": "Gare Lille Flandres",
+              "commune": "Lille",
+              "sequence": 27,
+              "coordonnees": {
+                "latitude": 50.637096,
+                "longitude": 3.071067
+              },
+              "id": "gare-lille-flandres"
+            },
+            {
+              "stopId": "MDL099",
+              "nom": "Mairie De Lille",
+              "commune": "Lille",
+              "sequence": 28,
+              "coordonnees": {
+                "latitude": 50.632422,
+                "longitude": 3.071125
+              },
+              "id": "mairie-de-lille"
+            },
+            {
+              "stopId": "LGP099",
+              "nom": "Grand Palais",
+              "commune": "Lille",
+              "sequence": 29,
+              "coordonnees": {
+                "latitude": 50.629215,
+                "longitude": 3.074886
+              },
+              "id": "grand-palais"
+            },
+            {
+              "stopId": "PDV099",
+              "nom": "Porte De Valenciennes",
+              "commune": "Lille",
+              "sequence": 30,
+              "coordonnees": {
+                "latitude": 50.621036,
+                "longitude": 3.079066
+              },
+              "id": "porte-de-valenciennes"
+            },
+            {
+              "stopId": "PDO099",
+              "nom": "Porte De Douai",
+              "commune": "Lille",
+              "sequence": 31,
+              "coordonnees": {
+                "latitude": 50.618035,
+                "longitude": 3.072479
+              },
+              "id": "porte-de-douai"
+            },
+            {
+              "stopId": "PRR099",
+              "nom": "Porte D'Arras",
+              "commune": "Lille",
+              "sequence": 32,
+              "coordonnees": {
+                "latitude": 50.617583,
+                "longitude": 3.062349
+              },
+              "id": "porte-d-arras"
+            },
+            {
+              "stopId": "PDP399",
+              "nom": "Porte Des Postes",
+              "commune": "Lille",
+              "sequence": 33,
+              "coordonnees": {
+                "latitude": 50.617947,
+                "longitude": 3.050665
+              },
+              "id": "porte-des-postes"
+            },
+            {
+              "stopId": "MNT099",
+              "nom": "Montebello",
+              "commune": "Lille",
+              "sequence": 34,
+              "coordonnees": {
+                "latitude": 50.622084,
+                "longitude": 3.045775
+              },
+              "id": "montebello"
+            },
+            {
+              "stopId": "COR099",
+              "nom": "Cormontaigne",
+              "commune": "Lille",
+              "sequence": 35,
+              "coordonnees": {
+                "latitude": 50.626095,
+                "longitude": 3.040825
+              },
+              "id": "cormontaigne"
+            },
+            {
+              "stopId": "PTL099",
+              "nom": "Port De Lille",
+              "commune": "Lille",
+              "sequence": 36,
+              "coordonnees": {
+                "latitude": 50.630034,
+                "longitude": 3.035916
+              },
+              "id": "port-de-lille"
+            },
+            {
+              "stopId": "LPC099",
+              "nom": "Bois Blancs",
+              "commune": "Lille",
+              "sequence": 37,
+              "coordonnees": {
+                "latitude": 50.634125,
+                "longitude": 3.030981
+              },
+              "id": "bois-blancs"
+            },
+            {
+              "stopId": "CAN099",
+              "nom": "Canteleu",
+              "commune": "Lille",
+              "sequence": 38,
+              "coordonnees": {
+                "latitude": 50.63715,
+                "longitude": 3.024167
+              },
+              "id": "canteleu"
+            },
+            {
+              "stopId": "LLO099",
+              "nom": "Lomme-Lambersart",
+              "commune": "Lomme",
+              "sequence": 39,
+              "coordonnees": {
+                "latitude": 50.640822,
+                "longitude": 3.018871
+              },
+              "id": "lomme-lambersart"
+            },
+            {
+              "stopId": "PSU099",
+              "nom": "Pont Superieur",
+              "commune": "Lomme",
+              "sequence": 40,
+              "coordonnees": {
+                "latitude": 50.644607,
+                "longitude": 3.014056
+              },
+              "id": "pont-superieur"
+            },
+            {
+              "stopId": "MIT299",
+              "nom": "Mitterie",
+              "commune": "Lomme",
+              "sequence": 41,
+              "coordonnees": {
+                "latitude": 50.646938,
+                "longitude": 3.007556
+              },
+              "id": "mitterie"
+            },
+            {
+              "stopId": "MDE099",
+              "nom": "Maison Des Enfants",
+              "commune": "Lomme",
+              "sequence": 42,
+              "coordonnees": {
+                "latitude": 50.646502,
+                "longitude": 2.99536
+              },
+              "id": "maison-des-enfants"
+            },
+            {
+              "stopId": "BRG299",
+              "nom": "Bourg",
+              "commune": "Lomme",
+              "sequence": 43,
+              "coordonnees": {
+                "latitude": 50.645721,
+                "longitude": 2.985164
+              },
+              "id": "bourg"
+            },
+            {
+              "stopId": "HSP099",
+              "nom": "St. Philibert",
+              "commune": "Lomme",
+              "sequence": 44,
+              "coordonnees": {
+                "latitude": 50.651697,
+                "longitude": 2.97442
+              },
+              "id": "st-philibert"
+            }
+          ]
+        },
+        {
+          "directionId": "1",
+          "trajetRepresentatifCount": 1725,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "girouettes": [
+            {
+              "label": "Tourcoing C.H. Dron",
+              "count": 1743
+            }
+          ],
+          "stations": [
+            {
+              "stopId": "HSP098",
+              "nom": "St. Philibert",
+              "commune": "Lomme",
+              "sequence": 1,
+              "coordonnees": {
+                "latitude": 50.651697,
+                "longitude": 2.97442
+              },
+              "id": "st-philibert"
+            },
+            {
+              "stopId": "BRG298",
+              "nom": "Bourg",
+              "commune": "Lomme",
+              "sequence": 2,
+              "coordonnees": {
+                "latitude": 50.645721,
+                "longitude": 2.985164
+              },
+              "id": "bourg"
+            },
+            {
+              "stopId": "MDE098",
+              "nom": "Maison Des Enfants",
+              "commune": "Lomme",
+              "sequence": 3,
+              "coordonnees": {
+                "latitude": 50.646502,
+                "longitude": 2.99536
+              },
+              "id": "maison-des-enfants"
+            },
+            {
+              "stopId": "MIT298",
+              "nom": "Mitterie",
+              "commune": "Lomme",
+              "sequence": 4,
+              "coordonnees": {
+                "latitude": 50.646938,
+                "longitude": 3.007556
+              },
+              "id": "mitterie"
+            },
+            {
+              "stopId": "PSU098",
+              "nom": "Pont Superieur",
+              "commune": "Lomme",
+              "sequence": 5,
+              "coordonnees": {
+                "latitude": 50.644607,
+                "longitude": 3.014056
+              },
+              "id": "pont-superieur"
+            },
+            {
+              "stopId": "LLO098",
+              "nom": "Lomme-Lambersart",
+              "commune": "Lomme",
+              "sequence": 6,
+              "coordonnees": {
+                "latitude": 50.640822,
+                "longitude": 3.018871
+              },
+              "id": "lomme-lambersart"
+            },
+            {
+              "stopId": "CAN098",
+              "nom": "Canteleu",
+              "commune": "Lambersart",
+              "sequence": 7,
+              "coordonnees": {
+                "latitude": 50.63715,
+                "longitude": 3.024167
+              },
+              "id": "canteleu"
+            },
+            {
+              "stopId": "LPC098",
+              "nom": "Bois Blancs",
+              "commune": "Lambersart",
+              "sequence": 8,
+              "coordonnees": {
+                "latitude": 50.634125,
+                "longitude": 3.030981
+              },
+              "id": "bois-blancs"
+            },
+            {
+              "stopId": "PTL098",
+              "nom": "Port De Lille",
+              "commune": "Lille",
+              "sequence": 9,
+              "coordonnees": {
+                "latitude": 50.630034,
+                "longitude": 3.035916
+              },
+              "id": "port-de-lille"
+            },
+            {
+              "stopId": "COR098",
+              "nom": "Cormontaigne",
+              "commune": "Lille",
+              "sequence": 10,
+              "coordonnees": {
+                "latitude": 50.626095,
+                "longitude": 3.040825
+              },
+              "id": "cormontaigne"
+            },
+            {
+              "stopId": "MNT098",
+              "nom": "Montebello",
+              "commune": "Lille",
+              "sequence": 11,
+              "coordonnees": {
+                "latitude": 50.622084,
+                "longitude": 3.045775
+              },
+              "id": "montebello"
+            },
+            {
+              "stopId": "PDP398",
+              "nom": "Porte Des Postes",
+              "commune": "Lille",
+              "sequence": 12,
+              "coordonnees": {
+                "latitude": 50.617947,
+                "longitude": 3.050665
+              },
+              "id": "porte-des-postes"
+            },
+            {
+              "stopId": "PRR098",
+              "nom": "Porte D'Arras",
+              "commune": "Lille",
+              "sequence": 13,
+              "coordonnees": {
+                "latitude": 50.617583,
+                "longitude": 3.062349
+              },
+              "id": "porte-d-arras"
+            },
+            {
+              "stopId": "PDO098",
+              "nom": "Porte De Douai",
+              "commune": "Lille",
+              "sequence": 14,
+              "coordonnees": {
+                "latitude": 50.618035,
+                "longitude": 3.072479
+              },
+              "id": "porte-de-douai"
+            },
+            {
+              "stopId": "PDV098",
+              "nom": "Porte De Valenciennes",
+              "commune": "Lille",
+              "sequence": 15,
+              "coordonnees": {
+                "latitude": 50.621036,
+                "longitude": 3.079066
+              },
+              "id": "porte-de-valenciennes"
+            },
+            {
+              "stopId": "LGP098",
+              "nom": "Grand Palais",
+              "commune": "Lille",
+              "sequence": 16,
+              "coordonnees": {
+                "latitude": 50.629215,
+                "longitude": 3.074886
+              },
+              "id": "grand-palais"
+            },
+            {
+              "stopId": "MDL098",
+              "nom": "Mairie De Lille",
+              "commune": "Lille",
+              "sequence": 17,
+              "coordonnees": {
+                "latitude": 50.632422,
+                "longitude": 3.071125
+              },
+              "id": "mairie-de-lille"
+            },
+            {
+              "stopId": "LIG398",
+              "nom": "Gare Lille Flandres",
+              "commune": "Lille",
+              "sequence": 18,
+              "coordonnees": {
+                "latitude": 50.637096,
+                "longitude": 3.071067
+              },
+              "id": "gare-lille-flandres"
+            },
+            {
+              "stopId": "EUR098",
+              "nom": "Lille Europe",
+              "commune": "Lille",
+              "sequence": 19,
+              "coordonnees": {
+                "latitude": 50.639583,
+                "longitude": 3.076774
+              },
+              "id": "lille-europe"
+            },
+            {
+              "stopId": "SMP098",
+              "nom": "St Maurice Pellevoisin",
+              "commune": "Lille",
+              "sequence": 20,
+              "coordonnees": {
+                "latitude": 50.64251,
+                "longitude": 3.088244
+              },
+              "id": "st-maurice-pellevoisin"
+            },
+            {
+              "stopId": "MSA098",
+              "nom": "Mons Sarts",
+              "commune": "Mons-en-Barœul",
+              "sequence": 21,
+              "coordonnees": {
+                "latitude": 50.642272,
+                "longitude": 3.099201
+              },
+              "id": "mons-sarts"
+            },
+            {
+              "stopId": "MDM098",
+              "nom": "Mairie De Mons",
+              "commune": "Mons-en-Barœul",
+              "sequence": 22,
+              "coordonnees": {
+                "latitude": 50.642387,
+                "longitude": 3.109543
+              },
+              "id": "mairie-de-mons"
+            },
+            {
+              "stopId": "FOR298",
+              "nom": "Fort De Mons",
+              "commune": "Mons-en-Barœul",
+              "sequence": 23,
+              "coordonnees": {
+                "latitude": 50.642182,
+                "longitude": 3.119443
+              },
+              "id": "fort-de-mons"
+            },
+            {
+              "stopId": "PRS098",
+              "nom": "Les Pres-E. Pisani",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 24,
+              "coordonnees": {
+                "latitude": 50.650345,
+                "longitude": 3.126386
+              },
+              "id": "les-pres-e-pisani"
+            },
+            {
+              "stopId": "JRS098",
+              "nom": "Jean Jaures",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 25,
+              "coordonnees": {
+                "latitude": 50.658507,
+                "longitude": 3.134911
+              },
+              "id": "jean-jaures"
+            },
+            {
+              "stopId": "PVL096",
+              "nom": "Wasquehal Pavé De Lille",
+              "commune": "Wasquehal",
+              "sequence": 26,
+              "coordonnees": {
+                "latitude": 50.663604,
+                "longitude": 3.130533
+              },
+              "id": "wasquehal-pave-de-lille"
+            },
+            {
+              "stopId": "WMI098",
+              "nom": "Hotel De Ville",
+              "commune": "Wasquehal",
+              "sequence": 27,
+              "coordonnees": {
+                "latitude": 50.669709,
+                "longitude": 3.130983
+              },
+              "id": "hotel-de-ville-wasquehal"
+            },
+            {
+              "stopId": "CPL098",
+              "nom": "Croix Centre",
+              "commune": "Croix",
+              "sequence": 28,
+              "coordonnees": {
+                "latitude": 50.674309,
+                "longitude": 3.14647
+              },
+              "id": "croix-centre"
+            },
+            {
+              "stopId": "CXM098",
+              "nom": "Mairie De Croix",
+              "commune": "Croix",
+              "sequence": 29,
+              "coordonnees": {
+                "latitude": 50.67949,
+                "longitude": 3.156578
+              },
+              "id": "mairie-de-croix"
+            },
+            {
+              "stopId": "EPL098",
+              "nom": "Ep. Montesquieu",
+              "commune": "Roubaix",
+              "sequence": 30,
+              "coordonnees": {
+                "latitude": 50.684021,
+                "longitude": 3.163133
+              },
+              "id": "ep-montesquieu"
+            },
+            {
+              "stopId": "CDG098",
+              "nom": "Roubaix Charles De Gaulle",
+              "commune": "Roubaix",
+              "sequence": 31,
+              "coordonnees": {
+                "latitude": 50.686621,
+                "longitude": 3.169981
+              },
+              "id": "roubaix-charles-de-gaulle"
+            },
+            {
+              "stopId": "ROU096",
+              "nom": "Euroteleport",
+              "commune": "Roubaix",
+              "sequence": 32,
+              "coordonnees": {
+                "latitude": 50.691344,
+                "longitude": 3.179832
+              },
+              "id": "euroteleport"
+            },
+            {
+              "stopId": "RXP098",
+              "nom": "Roubaix Place",
+              "commune": "Roubaix",
+              "sequence": 33,
+              "coordonnees": {
+                "latitude": 50.691598,
+                "longitude": 3.174202
+              },
+              "id": "roubaix-place"
+            },
+            {
+              "stopId": "MGR098",
+              "nom": "Gare Jean Lebas",
+              "commune": "Roubaix",
+              "sequence": 34,
+              "coordonnees": {
+                "latitude": 50.695865,
+                "longitude": 3.163823
+              },
+              "id": "gare-jean-lebas"
+            },
+            {
+              "stopId": "ALS098",
+              "nom": "Alsace",
+              "commune": "Roubaix",
+              "sequence": 35,
+              "coordonnees": {
+                "latitude": 50.700591,
+                "longitude": 3.161274
+              },
+              "id": "alsace"
+            },
+            {
+              "stopId": "MER098",
+              "nom": "Mercure",
+              "commune": "Tourcoing",
+              "sequence": 36,
+              "coordonnees": {
+                "latitude": 50.705153,
+                "longitude": 3.160544
+              },
+              "id": "mercure"
+            },
+            {
+              "stopId": "CTL098",
+              "nom": "Carliers",
+              "commune": "Tourcoing",
+              "sequence": 37,
+              "coordonnees": {
+                "latitude": 50.710252,
+                "longitude": 3.159908
+              },
+              "id": "carliers"
+            },
+            {
+              "stopId": "SEB098",
+              "nom": "Gare De Tourcoing",
+              "commune": "Tourcoing",
+              "sequence": 38,
+              "coordonnees": {
+                "latitude": 50.71662,
+                "longitude": 3.162584
+              },
+              "id": "gare-de-tourcoing"
+            },
+            {
+              "stopId": "TOU098",
+              "nom": "Tourcoing Centre",
+              "commune": "Tourcoing",
+              "sequence": 39,
+              "coordonnees": {
+                "latitude": 50.720554,
+                "longitude": 3.160445
+              },
+              "id": "tourcoing-centre"
+            },
+            {
+              "stopId": "COB098",
+              "nom": "Colbert",
+              "commune": "Tourcoing",
+              "sequence": 40,
+              "coordonnees": {
+                "latitude": 50.725349,
+                "longitude": 3.156935
+              },
+              "id": "colbert"
+            },
+            {
+              "stopId": "TPH098",
+              "nom": "Phalempins",
+              "commune": "Tourcoing",
+              "sequence": 41,
+              "coordonnees": {
+                "latitude": 50.73242,
+                "longitude": 3.157744
+              },
+              "id": "phalempins"
+            },
+            {
+              "stopId": "PTN098",
+              "nom": "Pont De Neuville",
+              "commune": "Tourcoing",
+              "sequence": 42,
+              "coordonnees": {
+                "latitude": 50.736791,
+                "longitude": 3.170762
+              },
+              "id": "pont-de-neuville"
+            },
+            {
+              "stopId": "TBO098",
+              "nom": "Bourgogne",
+              "commune": "Tourcoing",
+              "sequence": 43,
+              "coordonnees": {
+                "latitude": 50.739496,
+                "longitude": 3.179274
+              },
+              "id": "bourgogne"
+            },
+            {
+              "stopId": "DRO098",
+              "nom": "C.H. Dron",
+              "commune": "Tourcoing",
+              "sequence": 44,
+              "coordonnees": {
+                "latitude": 50.743874,
+                "longitude": 3.180479
+              },
+              "id": "c-h-dron"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "4-cantons-stade-p-mauroy",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "4 Cantons Stade P. Mauroy",
+      "nomTechnique": "4 Cantons Stade P. Mauroy",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.605423,
+        "longitude": 3.13866
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "4CA098",
+          "4CA099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 1,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": true
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 18,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": true
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Villeneuve-d'Ascq.",
+        "Je suis un terminus sur au moins un trajet."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "cite-scientifique",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Cité Scientifique",
+      "nomTechnique": "Cité Scientifique",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.611731,
+        "longitude": 3.142596
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CSC098",
+          "CSC099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 2,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 17,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Villeneuve-d'Ascq."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "triolo",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Triolo",
+      "nomTechnique": "Triolo",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.616294,
+        "longitude": 3.14164
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "TIO098",
+          "TIO099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 3,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 16,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Villeneuve-d'Ascq."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "hotel-de-ville-villeneuve-d-ascq",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Hotel De Ville",
+      "nomTechnique": "Hotel De Ville",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.618364,
+        "longitude": 3.132198
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "HDV098",
+          "HDV099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 4,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 15,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Villeneuve-d'Ascq."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "pont-de-bois",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Pont De Bois",
+      "nomTechnique": "Pont De Bois",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.624355,
+        "longitude": 3.128232
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PDB098",
+          "PDB099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 5,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 14,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Villeneuve-d'Ascq."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "square-flandres",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Square Flandres",
+      "nomTechnique": "Square Flandres",
+      "commune": "Hellemmes-Lille / Lezennes",
+      "communes": [
+        "Hellemmes-Lille",
+        "Lezennes"
+      ],
+      "coordonnees": {
+        "latitude": 50.625245,
+        "longitude": 3.116055
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "LZN098",
+          "LZN099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 6,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 13,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Hellemmes-Lille / Lezennes."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "mairie-d-hellemmes",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Mairie D'Hellemmes",
+      "nomTechnique": "Mairie D'Hellemmes",
+      "commune": "Hellemmes-Lille",
+      "communes": [
+        "Hellemmes-Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.627285,
+        "longitude": 3.108838
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MHE098",
+          "MHE099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 7,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 12,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Hellemmes-Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "marbrerie",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Marbrerie",
+      "nomTechnique": "Marbrerie",
+      "commune": "Hellemmes-Lille / Lille",
+      "communes": [
+        "Hellemmes-Lille",
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.630395,
+        "longitude": 3.097836
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MRB098",
+          "MRB099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 8,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 11,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Hellemmes-Lille / Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "fives",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Fives",
+      "nomTechnique": "Fives",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.633063,
+        "longitude": 3.090655
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "DFI098",
+          "DFI099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 9,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 10,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "madeleine-caulier",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Madeleine Caulier",
+      "nomTechnique": "Madeleine Caulier",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.636509,
+        "longitude": 3.087462
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CIE098",
+          "CIE099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 10,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 9,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "gare-lille-flandres",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Gare Lille Flandres",
+      "nomTechnique": "Gare Lille Flandres",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.637096,
+        "longitude": 3.071067
+      },
+      "lignes": [
+        "M1",
+        "M2"
+      ],
+      "correspondancesMetro": [
+        "M1",
+        "M2"
+      ],
+      "identifiants": {
+        "gtfsStopIds": [
+          "LIG098",
+          "LIG099",
+          "LIG398",
+          "LIG399"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 11,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 8,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 27,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 18,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis une correspondance entre M1 et M2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "rihour",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Rihour",
+      "nomTechnique": "Rihour",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.6357,
+        "longitude": 3.062908
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "RIH098",
+          "RIH099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 12,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 7,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "republique-beaux-arts",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "République Beaux-Arts",
+      "nomTechnique": "République Beaux-Arts",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.631776,
+        "longitude": 3.060608
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "REP098",
+          "REP099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 13,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 6,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "gambetta",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Gambetta",
+      "nomTechnique": "Gambetta",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.626366,
+        "longitude": 3.052224
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CGA098",
+          "CGA099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 14,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 5,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "wazemmes",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Wazemmes",
+      "nomTechnique": "Wazemmes",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.623272,
+        "longitude": 3.051348
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "WAZ098",
+          "WAZ099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 15,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 4,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "porte-des-postes",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Porte Des Postes",
+      "nomTechnique": "Porte Des Postes",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.618141,
+        "longitude": 3.050502
+      },
+      "lignes": [
+        "M1",
+        "M2"
+      ],
+      "correspondancesMetro": [
+        "M1",
+        "M2"
+      ],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PDP098",
+          "PDP099",
+          "PDP398",
+          "PDP399"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 16,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 3,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 33,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 12,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis une correspondance entre M1 et M2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "chu-centre-o-lambret",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Chu-Centre O. Lambret",
+      "nomTechnique": "Chu-Centre O. Lambret",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.613222,
+        "longitude": 3.036062
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CHR098",
+          "CHR099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 17,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 2,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "chu-eurasante",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Chu Eurasanté",
+      "nomTechnique": "Chu Eurasanté",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.607932,
+        "longitude": 3.03892
+      },
+      "lignes": [
+        "M1"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CAL098",
+          "CAL099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M1",
+          "directionId": "0",
+          "sequence": 18,
+          "terminusDepart": "4 Cantons Stade P. Mauroy",
+          "terminusArrivee": "Chu Eurasanté",
+          "isTerminus": true
+        },
+        {
+          "ligne": "M1",
+          "directionId": "1",
+          "sequence": 1,
+          "terminusDepart": "Chu Eurasanté",
+          "terminusArrivee": "4 Cantons Stade P. Mauroy",
+          "isTerminus": true
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 1.",
+        "Je suis située à Lille.",
+        "Je suis un terminus sur au moins un trajet."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "c-h-dron",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "C.H. Dron",
+      "nomTechnique": "C.H. Dron",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.743874,
+        "longitude": 3.180479
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "DRO098",
+          "DRO099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 1,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": true
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 44,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": true
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing.",
+        "Je suis un terminus sur au moins un trajet."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "bourgogne",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Bourgogne",
+      "nomTechnique": "Bourgogne",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.739571,
+        "longitude": 3.179494
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "TBO098",
+          "TBO099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 2,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 43,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "pont-de-neuville",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Pont De Neuville",
+      "nomTechnique": "Pont De Neuville",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.7368,
+        "longitude": 3.170748
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PTN098",
+          "PTN099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 3,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 42,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "phalempins",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Phalempins",
+      "nomTechnique": "Phalempins",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.73242,
+        "longitude": 3.157744
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "TPH098",
+          "TPH099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 4,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 41,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "colbert",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Colbert",
+      "nomTechnique": "Colbert",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.725349,
+        "longitude": 3.156935
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "COB098",
+          "COB099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 5,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 40,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "tourcoing-centre",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Tourcoing Centre",
+      "nomTechnique": "Tourcoing Centre",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.720554,
+        "longitude": 3.160445
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "TOU098",
+          "TOU099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 6,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 39,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "gare-de-tourcoing",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Gare De Tourcoing",
+      "nomTechnique": "Gare De Tourcoing",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.71662,
+        "longitude": 3.162584
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "SEB098",
+          "SEB099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 7,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 38,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "carliers",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Carliers",
+      "nomTechnique": "Carliers",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.710252,
+        "longitude": 3.159908
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CTL098",
+          "CTL099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 8,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 37,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "mercure",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Mercure",
+      "nomTechnique": "Mercure",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.705153,
+        "longitude": 3.160544
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MER098",
+          "MER099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 9,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 36,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "alsace",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Alsace",
+      "nomTechnique": "Alsace",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.700591,
+        "longitude": 3.161274
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "ALS098",
+          "ALS099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 10,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 35,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "gare-jean-lebas",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Gare Jean Lebas",
+      "nomTechnique": "Gare Jean Lebas",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.695865,
+        "longitude": 3.163823
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MGR098",
+          "MGR099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 11,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 34,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "roubaix-place",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Roubaix Place",
+      "nomTechnique": "Roubaix Place",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.691631,
+        "longitude": 3.174026
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "RXP098",
+          "RXP099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 12,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 33,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "euroteleport",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Euroteleport",
+      "nomTechnique": "Euroteleport",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.691344,
+        "longitude": 3.179832
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "ROU096",
+          "ROU097"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 13,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 32,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "roubaix-charles-de-gaulle",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Roubaix Charles De Gaulle",
+      "nomTechnique": "Roubaix Charles De Gaulle",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.686549,
+        "longitude": 3.170015
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CDG098",
+          "CDG099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 14,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 31,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "ep-montesquieu",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Ep. Montesquieu",
+      "nomTechnique": "Ep. Montesquieu",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.683945,
+        "longitude": 3.163125
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "EPL098",
+          "EPL099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 15,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 30,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "mairie-de-croix",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Mairie De Croix",
+      "nomTechnique": "Mairie De Croix",
+      "commune": "Croix",
+      "communes": [
+        "Croix"
+      ],
+      "coordonnees": {
+        "latitude": 50.679277,
+        "longitude": 3.15625
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CXM098",
+          "CXM099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 16,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 29,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Croix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "croix-centre",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Croix Centre",
+      "nomTechnique": "Croix Centre",
+      "commune": "Croix",
+      "communes": [
+        "Croix"
+      ],
+      "coordonnees": {
+        "latitude": 50.674273,
+        "longitude": 3.14647
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CPL098",
+          "CPL099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 17,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 28,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Croix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "hotel-de-ville-wasquehal",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Hotel De Ville",
+      "nomTechnique": "Hotel De Ville",
+      "commune": "Wasquehal",
+      "communes": [
+        "Wasquehal"
+      ],
+      "coordonnees": {
+        "latitude": 50.669673,
+        "longitude": 3.130983
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "WMI098",
+          "WMI099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 18,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 27,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Wasquehal."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "wasquehal-pave-de-lille",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Wasquehal Pavé De Lille",
+      "nomTechnique": "Wasquehal Pavé De Lille",
+      "commune": "Wasquehal",
+      "communes": [
+        "Wasquehal"
+      ],
+      "coordonnees": {
+        "latitude": 50.663919,
+        "longitude": 3.130312
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PVL096",
+          "PVL097"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 19,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 26,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Wasquehal."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "jean-jaures",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Jean Jaures",
+      "nomTechnique": "Jean Jaures",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.658507,
+        "longitude": 3.134911
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "JRS098",
+          "JRS099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 20,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 25,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Villeneuve-d'Ascq."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "les-pres-e-pisani",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Les Pres-E. Pisani",
+      "nomTechnique": "Les Pres-E. Pisani",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.650345,
+        "longitude": 3.126386
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PRS098",
+          "PRS099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 21,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 24,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Villeneuve-d'Ascq."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "fort-de-mons",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Fort De Mons",
+      "nomTechnique": "Fort De Mons",
+      "commune": "Mons-en-Barœul",
+      "communes": [
+        "Mons-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.642182,
+        "longitude": 3.119443
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "FOR099",
+          "FOR298"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 22,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 23,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Mons-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "mairie-de-mons",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Mairie De Mons",
+      "nomTechnique": "Mairie De Mons",
+      "commune": "Mons-en-Barœul",
+      "communes": [
+        "Mons-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.642387,
+        "longitude": 3.109543
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MDM098",
+          "MDM099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 23,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 22,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Mons-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "mons-sarts",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Mons Sarts",
+      "nomTechnique": "Mons Sarts",
+      "commune": "Mons-en-Barœul",
+      "communes": [
+        "Mons-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.642272,
+        "longitude": 3.099201
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MSA098",
+          "MSA099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 24,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 21,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Mons-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "st-maurice-pellevoisin",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "St Maurice Pellevoisin",
+      "nomTechnique": "St Maurice Pellevoisin",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.64251,
+        "longitude": 3.088244
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "SMP098",
+          "SMP099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 25,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 20,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "lille-europe",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Lille Europe",
+      "nomTechnique": "Lille Europe",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.639583,
+        "longitude": 3.076774
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "EUR098",
+          "EUR099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 26,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 19,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "mairie-de-lille",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Mairie De Lille",
+      "nomTechnique": "Mairie De Lille",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.632422,
+        "longitude": 3.071125
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MDL098",
+          "MDL099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 28,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 17,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "grand-palais",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Grand Palais",
+      "nomTechnique": "Grand Palais",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.629215,
+        "longitude": 3.074886
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "LGP098",
+          "LGP099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 29,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 16,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "porte-de-valenciennes",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Porte De Valenciennes",
+      "nomTechnique": "Porte De Valenciennes",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.621036,
+        "longitude": 3.079066
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PDV098",
+          "PDV099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 30,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 15,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "porte-de-douai",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Porte De Douai",
+      "nomTechnique": "Porte De Douai",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.618035,
+        "longitude": 3.072479
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PDO098",
+          "PDO099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 31,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 14,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "porte-d-arras",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Porte D'Arras",
+      "nomTechnique": "Porte D'Arras",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.617583,
+        "longitude": 3.062349
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PRR098",
+          "PRR099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 32,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 13,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "montebello",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Montebello",
+      "nomTechnique": "Montebello",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.622084,
+        "longitude": 3.045775
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MNT098",
+          "MNT099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 34,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 11,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "cormontaigne",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Cormontaigne",
+      "nomTechnique": "Cormontaigne",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.626095,
+        "longitude": 3.040825
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "COR098",
+          "COR099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 35,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 10,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "port-de-lille",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Port De Lille",
+      "nomTechnique": "Port De Lille",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.630034,
+        "longitude": 3.035916
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PTL098",
+          "PTL099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 36,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 9,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "bois-blancs",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Bois Blancs",
+      "nomTechnique": "Bois Blancs",
+      "commune": "Lambersart / Lille",
+      "communes": [
+        "Lambersart",
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.634125,
+        "longitude": 3.030981
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "LPC098",
+          "LPC099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 37,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 8,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lambersart / Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "canteleu",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Canteleu",
+      "nomTechnique": "Canteleu",
+      "commune": "Lambersart / Lille",
+      "communes": [
+        "Lambersart",
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.63715,
+        "longitude": 3.024167
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "CAN098",
+          "CAN099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 38,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 7,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lambersart / Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "lomme-lambersart",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Lomme-Lambersart",
+      "nomTechnique": "Lomme-Lambersart",
+      "commune": "Lomme",
+      "communes": [
+        "Lomme"
+      ],
+      "coordonnees": {
+        "latitude": 50.640822,
+        "longitude": 3.018871
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "LLO098",
+          "LLO099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 39,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 6,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lomme."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "pont-superieur",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Pont Superieur",
+      "nomTechnique": "Pont Superieur",
+      "commune": "Lomme",
+      "communes": [
+        "Lomme"
+      ],
+      "coordonnees": {
+        "latitude": 50.644607,
+        "longitude": 3.014056
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "PSU098",
+          "PSU099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 40,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 5,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lomme."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "mitterie",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Mitterie",
+      "nomTechnique": "Mitterie",
+      "commune": "Lomme",
+      "communes": [
+        "Lomme"
+      ],
+      "coordonnees": {
+        "latitude": 50.646938,
+        "longitude": 3.007556
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MIT298",
+          "MIT299"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 41,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 4,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lomme."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "maison-des-enfants",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Maison Des Enfants",
+      "nomTechnique": "Maison Des Enfants",
+      "commune": "Lomme",
+      "communes": [
+        "Lomme"
+      ],
+      "coordonnees": {
+        "latitude": 50.646502,
+        "longitude": 2.99536
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "MDE098",
+          "MDE099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 42,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 3,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lomme."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "bourg",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "Bourg",
+      "nomTechnique": "Bourg",
+      "commune": "Lomme",
+      "communes": [
+        "Lomme"
+      ],
+      "coordonnees": {
+        "latitude": 50.645721,
+        "longitude": 2.985164
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "BRG298",
+          "BRG299"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 43,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": false
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 2,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lomme."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "st-philibert",
+      "type": "metro",
+      "niveau": "metro",
+      "nom": "St. Philibert",
+      "nomTechnique": "St. Philibert",
+      "commune": "Lomme",
+      "communes": [
+        "Lomme"
+      ],
+      "coordonnees": {
+        "latitude": 50.651697,
+        "longitude": 2.97442
+      },
+      "lignes": [
+        "M2"
+      ],
+      "correspondancesMetro": [],
+      "identifiants": {
+        "gtfsStopIds": [
+          "HSP098",
+          "HSP099"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "M2",
+          "directionId": "0",
+          "sequence": 44,
+          "terminusDepart": "C.H. Dron",
+          "terminusArrivee": "St. Philibert",
+          "isTerminus": true
+        },
+        {
+          "ligne": "M2",
+          "directionId": "1",
+          "sequence": 1,
+          "terminusDepart": "St. Philibert",
+          "terminusArrivee": "C.H. Dron",
+          "isTerminus": true
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du métro Ilévia.",
+        "Je suis desservie par la ligne 2.",
+        "Je suis située à Lomme.",
+        "Je suis un terminus sur au moins un trajet."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    }
+  ]
+}
