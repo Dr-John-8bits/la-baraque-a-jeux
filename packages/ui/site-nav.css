@@ -91,6 +91,13 @@
   white-space: nowrap;
 }
 
+button.labaj-link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
 .labaj-link:hover,
 .labaj-link[aria-current="page"] {
   color: var(--labaj-ink);
