@@ -1,0 +1,117 @@
+body {
+  min-height: 100svh;
+  background: var(--labaj-paper);
+}
+
+.station-shell {
+  width: min(920px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 18px 0 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.station-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.station-hero__copy,
+.construction-panel {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  border: 1px solid var(--labaj-line);
+  border-radius: var(--labaj-radius);
+  padding: 16px;
+  background: var(--labaj-surface);
+  box-shadow: var(--labaj-shadow);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--labaj-red);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 11vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 7vw, 2.35rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.subtitle,
+.construction-panel p:not(.eyebrow) {
+  max-width: 640px;
+  color: var(--labaj-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.route-board {
+  min-height: 230px;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  border: 2px solid var(--labaj-ink);
+  border-radius: var(--labaj-radius);
+  padding: 16px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 50%, transparent 50%) 0 0 /
+      12px 100%,
+    var(--labaj-ink);
+  box-shadow: var(--labaj-shadow-strong);
+  color: #ffffff;
+}
+
+.route-board span {
+  color: color-mix(in srgb, var(--labaj-gold), white 18%);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.route-board strong {
+  display: flex;
+  align-items: center;
+  border-radius: var(--labaj-radius);
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+.route-board strong::before {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--labaj-gold);
+  content: "";
+}
+
+@media (max-width: 720px) {
+  .station-hero {
+    grid-template-columns: 1fr;
+  }
+}

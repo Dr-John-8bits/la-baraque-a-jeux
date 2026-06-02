@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Station Mystère est un nouveau projet de jeu quotidien autour des stations, lignes et lieux de transport de la métropole lilloise."
+    />
+    <meta name="theme-color" content="#071b31" />
+    <title>Station Mystère</title>
+    <link rel="stylesheet" href="../../packages/ui/tokens.css" />
+    <link rel="stylesheet" href="../../packages/ui/base.css" />
+    <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
+          <picture class="labaj-brand__logo">
+            <source
+              srcset="../../assets/brand/la-baraque-a-jeux-lille.webp"
+              type="image/webp"
+            />
+            <img
+              src="../../assets/brand/la-baraque-a-jeux-lille-logo.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+          </picture>
+          <span class="labaj-brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Accueil</span>
+          </span>
+        </a>
+
+        <div class="labaj-links">
+          <a class="labaj-link labaj-link--home" href="../../">Accueil</a>
+          <a class="labaj-link" href="./" aria-current="page">Station Mystère</a>
+          <a class="labaj-link" href="../le-mot-a-biloute/">Le mot à Biloute</a>
+          <a class="labaj-link" href="../lille-mele/">Lille-Mêle</a>
+          <a class="labaj-link" href="../biloute-biere-braderie/">Ch'tifoumi</a>
+          <a class="labaj-link" href="../../blog.html">Blog</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="station-shell">
+      <section class="station-hero" aria-labelledby="station-title">
+        <div class="station-hero__copy">
+          <p class="eyebrow">Nouveau jeu en préparation</p>
+          <h1 id="station-title">Station Mystère</h1>
+          <p class="subtitle">
+            Un jeu quotidien d'indices pour retrouver des lieux liés aux transports
+            de la métropole lilloise.
+          </p>
+        </div>
+        <div class="route-board" aria-label="Progression prévue du jeu">
+          <span>Métro Mystère</span>
+          <strong>Métro</strong>
+          <strong>Vélo</strong>
+          <strong>Bus</strong>
+        </div>
+      </section>
+
+      <section class="construction-panel" aria-labelledby="construction-title">
+        <p class="eyebrow">Chantier documentaire</p>
+        <h2 id="construction-title">Un tout nouveau projet en cours de construction</h2>
+        <p>
+          Avant de coder le jeu, le corpus se construit : stations de métro,
+          stations V'Lille, pôles bus, indices, anecdotes et fiches découverte.
+        </p>
+        <p>
+          L'objectif sera de progresser de Métro Mystère à Vélo Mystère puis Bus
+          Mystère, en découvrant le territoire lillois à travers ses mobilités.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

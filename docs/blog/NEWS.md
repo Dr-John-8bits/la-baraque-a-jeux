@@ -2,13 +2,21 @@
 
 Les nouveautés de La baraque à jeux, du portail et des jeux.
 
+## 2 juin 2026 - Station Mystère entre en construction
+
+Une nouvelle tuile arrive dans La Baraque à Jeux : Station Mystère.
+
+Ce futur jeu quotidien proposera de retrouver des lieux liés aux transports de la métropole lilloise à partir d'indices progressifs : stations de métro, stations V'Lille, pôles bus, anecdotes locales et fiches découverte.
+
+Le projet est encore en construction. Pour l'instant, le chantier se concentre sur le corpus documentaire afin de préparer des énigmes fiables, sourcées et vraiment ancrées dans le territoire.
+
 ## 1er juin 2026 - Le mot à Biloute se muscle et un ch'tifoumi débarque
 
-Aujourd'hui, on a bien musclé **Le mot à Biloute**.
+Aujourd'hui, on a bien musclé Le mot à Biloute.
 
 Le jeu gagne un corpus enrichi, une validation plus stricte avec une liste séparée de propositions acceptées, un mode archive, un compte à rebours jusqu'au prochain mot à 12 h, une animation flip des lettres, un calepin amélioré avec import/export et graphique de performance, un meilleur écran de fin, un Rab de Biloute mieux géré, un vocabulaire plus local, une aide en modale, et une grille plus lisible grâce au retrait des petits pictos sur les lettres.
 
-On accueille aussi un nouveau mini-jeu dans La Baraque : **Biloute · Bière · Braderie**, le ch'tifoumi lillois où Biloute, Bière et Braderie se répondent dans un triangle de mauvaise foi assumée.
+On accueille aussi un nouveau mini-jeu dans La Baraque : Biloute · Bière · Braderie, le ch'tifoumi lillois où Biloute, Bière et Braderie se répondent dans un triangle de mauvaise foi assumée.
 
 ## 31 mai 2026 - Naissance de La Baraque à Jeux de Lille
 

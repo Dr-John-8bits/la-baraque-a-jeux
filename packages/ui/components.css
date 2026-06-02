@@ -92,6 +92,10 @@ body.labaj-site {
   border-left-color: var(--labaj-gold);
 }
 
+.game-card--station {
+  border-left-color: var(--labaj-blue);
+}
+
 .game-card__top {
   min-width: 0;
   display: flex;

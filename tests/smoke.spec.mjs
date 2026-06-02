@@ -32,9 +32,11 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await expect(
     page.getByRole("link", { name: "Ouvrir Biloute Bière Braderie", exact: true })
   ).toBeVisible();
+  await expect(page.getByRole("link", { name: "Ouvrir Station Mystère", exact: true })).toBeVisible();
 
   await page.goto(`${base}blog.html`);
   await expect(page.getByRole("heading", { name: "Blog", exact: true })).toBeVisible();
+  await expect(page.getByText("Station Mystère entre en construction")).toBeVisible();
   await expect(page.getByText("Naissance de La Baraque à Jeux de Lille")).toBeVisible();
   await expect(page.getByText("Ce premier lancement marque le début de l'aventure.")).toBeVisible();
 
@@ -126,5 +128,10 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   const bbbState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(bbbState.lastRound.playerChoice).toBe("biloute");
   expect(bbbState.score.player + bbbState.score.computer).toBeLessThanOrEqual(1);
+
+  await page.goto(`${base}apps/station-mystere/`);
+  await expect(page).toHaveTitle("Station Mystère");
+  await expect(page.getByRole("heading", { name: "Station Mystère", exact: true })).toBeVisible();
+  await expect(page.getByText("nouveau projet en cours de construction")).toBeVisible();
   expect(errors).toEqual([]);
 });
