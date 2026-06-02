@@ -48,15 +48,44 @@ Pour chaque épreuve :
 1. Le joueur découvre le titre de l'épreuve.
 2. Un premier indice est affiché.
 3. Le joueur peut proposer une réponse.
-4. S'il échoue, un nouvel indice est révélé.
-5. Le joueur continue jusqu'à trouver la bonne réponse ou épuiser tous les indices.
-6. Une fiche documentaire est affichée après la résolution.
+4. S'il échoue, une pénalité est appliquée.
+5. Le joueur peut demander un nouvel indice payant.
+6. Le joueur continue jusqu'à trouver la bonne réponse ou atteindre un score de 0.
+7. Une fiche documentaire est affichée après la résolution ou la défaite.
+
+---
+
+## Score et défaite
+
+Chaque niveau commence à 1000 points.
+
+Barème :
+
+- indice 1 : gratuit ;
+- indice 2 : -150 points ;
+- indice 3 : -200 points ;
+- indice 4 : -250 points ;
+- indice 5 : -300 points ;
+- mauvaise réponse : -100 points ;
+- score minimum : 0.
+
+La défaite survient dès que le score du niveau atteint 0.
+
+Une défaite arrête la progression quotidienne au niveau en cours.
+
+La bonne réponse est alors révélée immédiatement avec sa fiche documentaire.
 
 ---
 
 ## Système d'indices
 
 Les indices sont révélés un par un.
+
+Chaque énigme possède cinq indices maximum.
+
+Le premier indice est gratuit et affiché automatiquement.
+
+Les indices 2 à 5 sont payants.
 
 Types d'indices possibles :
 
@@ -86,6 +115,8 @@ L'ordre des indices doit aller du plus général au plus précis.
 Le joueur peut effectuer autant de propositions qu'il le souhaite.
 
 Les propositions sont vérifiées localement.
+
+Chaque mauvaise proposition retire 100 points.
 
 Une liste de suggestions est affichée lors de la saisie afin d'éviter les fautes d'orthographe.
 
@@ -122,6 +153,8 @@ Après chaque résolution, le jeu affiche :
 - une anecdote éventuelle.
 
 L'objectif est d'ajouter une dimension culturelle et patrimoniale au jeu.
+
+Après une défaite, la même fiche découverte est affichée avec la bonne réponse.
 
 ---
 

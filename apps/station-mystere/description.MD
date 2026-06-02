@@ -18,7 +18,7 @@ Une énigme quotidienne est proposée au joueur.
 
 Pour chaque énigme, plusieurs indices sont révélés progressivement.
 
-Le joueur doit retrouver la station ou la ligne recherchée avant d'épuiser les indices disponibles.
+Le joueur doit retrouver la station ou la ligne recherchée avant que son score tombe à 0.
 
 Les indices peuvent porter sur :
 
@@ -30,6 +30,8 @@ Les indices peuvent porter sur :
 - des particularités architecturales ;
 - des équipements remarquables ;
 - des anecdotes locales.
+
+En cas de défaite, la réponse est révélée immédiatement avec une fiche découverte afin de conserver la dimension documentaire du jeu.
 
 ## Les trois coupes
 

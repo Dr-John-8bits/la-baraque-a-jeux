@@ -58,23 +58,34 @@ Chaque niveau commence avec un score de 1000 points.
 
 Le premier indice est gratuit.
 
-Chaque indice supplémentaire fait perdre des points.
+Chaque indice supplémentaire fait perdre des points selon un barème fixe.
 
-Le détail exact du barème reste à définir, mais le principe est :
+Barème :
+
+- indice 1 : gratuit ;
+- indice 2 : -150 points ;
+- indice 3 : -200 points ;
+- indice 4 : -250 points ;
+- indice 5 : -300 points ;
+- mauvaise réponse : -100 points ;
+- score minimum : 0.
+
+Principe :
 
 - plus le joueur trouve tôt, plus le score est élevé ;
 - demander un indice supplémentaire réduit le score ;
+- faire une mauvaise réponse réduit le score ;
 - le score ne peut pas descendre sous 0.
 
 ---
 
 ## Indices
 
-Chaque énigme possède plusieurs indices ordonnés du plus général au plus précis.
+Chaque énigme possède cinq indices ordonnés du plus général au plus précis.
 
 Le premier indice est affiché automatiquement au début du niveau.
 
-Les indices suivants sont révélés à la demande du joueur ou après une mauvaise proposition, selon une règle à préciser.
+Les indices suivants sont révélés à la demande du joueur.
 
 Types d'indices possibles :
 
@@ -125,13 +136,9 @@ La validation se fait sur l'identifiant canonique de la réponse, pas uniquement
 
 Le joueur peut perdre un niveau.
 
-La condition précise de défaite reste à définir.
+La défaite survient dès que le score du niveau atteint 0.
 
-Pistes possibles :
-
-- score tombé à 0 ;
-- nombre maximum d'indices atteint ;
-- nombre maximum de mauvaises propositions atteint.
+Cette règle unifie les pénalités liées aux indices payants et aux mauvaises réponses.
 
 Si le joueur perd un niveau, la progression quotidienne s'arrête à ce niveau.
 
@@ -139,14 +146,11 @@ Si le joueur perd un niveau, la progression quotidienne s'arrête à ce niveau.
 
 ## Révélation de la bonne réponse
 
-Le comportement exact reste à trancher.
+La bonne réponse est affichée immédiatement après une défaite.
 
-Deux options sont envisagées :
+Le jeu affiche également la fiche découverte de la réponse perdue.
 
-1. afficher immédiatement la bonne réponse après une défaite ;
-2. ne révéler la réponse que le lendemain, après le renouvellement quotidien.
-
-Cette décision devra être prise plus tard, en fonction du ton souhaité pour le jeu.
+Ce choix évite la frustration et maintient l'ambition documentaire de Station Mystère : même en perdant, le joueur apprend quelque chose.
 
 ---
 
@@ -239,7 +243,8 @@ La partie quotidienne se termine lorsque :
 - les scores obtenus ;
 - les coupes ou médailles gagnées ;
 - une phrase de partage éventuelle ;
-- les fiches découvertes des réponses résolues.
+- les fiches découvertes des réponses résolues ;
+- la fiche découverte de la réponse perdue, si la partie s'est terminée par une défaite.
 
 ---
 
@@ -264,10 +269,6 @@ Données possibles :
 
 ## Points à trancher
 
-- Barème exact des indices payants.
-- Nombre maximal d'indices par niveau.
-- Nombre maximal de mauvaises propositions.
-- Révélation immédiate ou différée de la bonne réponse.
 - Niveau de tolérance sur les réponses saisies.
 - Formulation exacte du message de partage.
 - Seuil de filtrage des stations V'Lille candidates.
