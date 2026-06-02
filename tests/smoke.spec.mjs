@@ -50,9 +50,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await page.evaluate(() => localStorage.clear());
   await page.reload();
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
-  await page.getByRole("button", { name: "Sources" }).click();
-  const sources = JSON.parse(await readFile("packages/corpus/sources.json", "utf8"));
-  await expect(page.locator("#sourceList a")).toHaveCount(sources.length);
+  await expect(page.getByRole("button", { name: "Sources" })).toHaveCount(0);
 
   const lilleState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   const puzzles = JSON.parse(await readFile("packages/corpus/lille-mele/puzzles.json", "utf8"));
@@ -60,6 +58,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(lilleState.dailyRollover.hour).toBe(12);
   expect(lilleState.dailyRollover.timeZone).toBe("Europe/Paris");
   expect(lilleState.puzzle.status).toBe("reviewed");
+  await expect(page.locator("#nextPuzzleCountdown")).toContainText(/\d{2} h \d{2}/);
   const group = puzzle.groups[0];
   const nearMiss = [...group.items.slice(0, 3), puzzle.groups[1].items[0]];
 
@@ -69,6 +68,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await submitLilleMeleSelection(page, group.items);
   const afterGroup = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(afterGroup.foundGroups).toContain(group.id);
+  await expect(page.locator("#foundGroups .found-group")).toHaveClass(/solution-color-1/);
 
   for (const selection of buildWrongSelectionsAfterFirstGroup(puzzle)) {
     await submitLilleMeleSelection(page, selection);
@@ -77,6 +77,15 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await expect(page.locator("#message")).toContainText("Les réponses se dévoilent");
   await expect(page.locator("#foundGroups .found-group")).toHaveCount(0);
   await expect(page.locator("#board .reveal-group")).toHaveCount(4);
+  const revealColors = await page.locator("#board .reveal-group").evaluateAll((nodes) =>
+    nodes.map((node) => [...node.classList].find((className) => className.startsWith("solution-color-")))
+  );
+  expect(revealColors).toEqual([
+    "solution-color-1",
+    "solution-color-2",
+    "solution-color-3",
+    "solution-color-4",
+  ]);
   await expect(page.getByRole("button", { name: "Rejouer la grille" })).toHaveCount(0);
   const afterLoss = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(afterLoss.status).toBe("lost");

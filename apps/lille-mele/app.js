@@ -7,10 +7,17 @@ import { escapeHtml } from "../../packages/game-utils/text-render.js";
 
 const MAX_MISTAKES = 4;
 const STORAGE_PREFIX = "lillemele.v1.";
-const APP_VERSION = "26.06.02.1";
+const APP_VERSION = "26.06.02.3";
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
+const SOLUTION_COLOR_CLASSES = [
+  "solution-color-1",
+  "solution-color-2",
+  "solution-color-3",
+  "solution-color-4",
+];
+const SHARE_GLYPHS = ["🟩", "🟨", "🟦", "🟥"];
 const DEFAULT_STATS = {
   played: 0,
   won: 0,
@@ -20,13 +27,12 @@ const DEFAULT_STATS = {
   lastWinDateId: "",
 };
 
-const sources = await fetchJson("../../packages/corpus/sources.json");
-
 const puzzles = await fetchJson("../../packages/corpus/lille-mele/puzzles.json");
 
 const els = {
   intro: document.querySelector("#intro"),
   puzzleDate: document.querySelector("#puzzleDate"),
+  nextPuzzleCountdown: document.querySelector("#nextPuzzleCountdown"),
   mistakes: document.querySelector("#mistakes"),
   streak: document.querySelector("#streak"),
   foundGroups: document.querySelector("#foundGroups"),
@@ -38,10 +44,7 @@ const els = {
   submitButton: document.querySelector("#submitButton"),
   result: document.querySelector("#result"),
   rulesButton: document.querySelector("#rulesButton"),
-  sourcesButton: document.querySelector("#sourcesButton"),
   rulesPanel: document.querySelector("#rulesPanel"),
-  sourcesPanel: document.querySelector("#sourcesPanel"),
-  sourceList: document.querySelector("#sourceList"),
   toast: document.querySelector("#toast"),
 };
 
@@ -170,6 +173,7 @@ function render() {
   const stats = getStats();
   els.intro.textContent = puzzle.intro;
   els.puzzleDate.textContent = formatPuzzleDate(todayId);
+  renderCountdown();
   els.mistakes.textContent = `${state.mistakes} / ${MAX_MISTAKES}`;
   els.streak.textContent = String(stats.currentStreak || 0);
   els.message.className = `message ${messageTone}`.trim();
@@ -188,23 +192,20 @@ function render() {
 
 function renderFoundGroups() {
   els.foundGroups.innerHTML = "";
-  if (state.status === "lost") return;
+  const shouldHide = state.status === "lost" || state.foundGroupIds.length === 0;
+  els.foundGroups.hidden = shouldHide;
+  if (shouldHide) return;
+
   state.foundGroupIds.forEach((groupId) => {
     const group = puzzle.groups.find((candidate) => candidate.id === groupId);
     if (!group) return;
     els.foundGroups.appendChild(createGroupNode(group));
   });
-  if (state.foundGroupIds.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "message";
-    empty.textContent = "Aucun groupe trouvé pour l'instant.";
-    els.foundGroups.appendChild(empty);
-  }
 }
 
 function createGroupNode(group) {
   const node = document.createElement("article");
-  node.className = `found-group ${group.difficulty}`;
+  node.className = `found-group ${group.difficulty} ${getGroupColorClass(group)}`;
   node.innerHTML = `
     <span class="found-title">${escapeHtml(group.title)}</span>
     <span class="found-items">${group.items.map(escapeHtml).join(" · ")}</span>
@@ -261,7 +262,7 @@ function renderLostReveal() {
     const title = document.createElement("span");
     const items = document.createElement("div");
 
-    node.className = `found-group reveal-group ${group.difficulty}`;
+    node.className = `found-group reveal-group ${group.difficulty} ${getGroupColorClass(group)}`;
     node.style.setProperty("--reveal-index", String(index));
 
     title.className = "reveal-title";
@@ -315,7 +316,7 @@ function renderResult() {
 }
 
 function createGroupSummary(group, revealed) {
-  const nodeClass = `found-group ${group.difficulty}`;
+  const nodeClass = `found-group ${group.difficulty} ${getGroupColorClass(group)}`;
   const prefix = revealed ? "Révélé : " : "";
   return `
     <article class="${nodeClass}">
@@ -472,34 +473,13 @@ async function shareResult() {
 
 function buildShareText() {
   const lines = [`Lille-Mêle #${puzzle.number} · ${todayId}`];
-  const colorByGroup = new Map([
-    ["easy", "🟩"],
-    ["medium", "🟨"],
-    ["hard", "🟦"],
-    ["tricky", "🟥"],
-  ]);
   state.foundGroupIds.forEach((groupId) => {
-    const group = puzzle.groups.find((candidate) => candidate.id === groupId);
-    lines.push((colorByGroup.get(group?.difficulty) || "⬜").repeat(4));
+    lines.push((SHARE_GLYPHS[getGroupIndex(groupId)] || "⬜").repeat(4));
   });
   while (lines.length < 5) lines.push("⬛⬛⬛⬛");
   lines.push(`Erreurs : ${state.mistakes}/${MAX_MISTAKES}`);
   lines.push(window.location.href.split("#")[0]);
   return lines.join("\n");
-}
-
-function renderSources() {
-  els.sourceList.innerHTML = "";
-  sources.forEach((source) => {
-    const item = document.createElement("li");
-    const link = document.createElement("a");
-    link.href = source.url;
-    link.target = "_blank";
-    link.rel = "noreferrer";
-    link.textContent = source.label;
-    item.appendChild(link);
-    els.sourceList.appendChild(item);
-  });
 }
 
 function showToast(text) {
@@ -512,7 +492,6 @@ function showToast(text) {
 function togglePanel(panel) {
   const isVisible = panel.classList.contains("visible");
   els.rulesPanel.classList.remove("visible");
-  els.sourcesPanel.classList.remove("visible");
   panel.classList.toggle("visible", !isVisible);
 }
 
@@ -544,6 +523,7 @@ function renderGameToText() {
           title: group.title,
           items: group.items,
           difficulty: group.difficulty,
+          colorClass: getGroupColorClass(group),
         }))
       : [],
     officialResultRecorded: state.officialResultRecorded,
@@ -559,6 +539,16 @@ window.render_game_to_text = renderGameToText;
 window.advanceTime = () => {
   render();
 };
+
+function getGroupIndex(groupOrId) {
+  const groupId = typeof groupOrId === "string" ? groupOrId : groupOrId?.id;
+  const index = puzzle.groups.findIndex((group) => group.id === groupId);
+  return index >= 0 ? index : 0;
+}
+
+function getGroupColorClass(group) {
+  return SOLUTION_COLOR_CLASSES[getGroupIndex(group) % SOLUTION_COLOR_CLASSES.length];
+}
 
 function getLilleMeleDateId(date = new Date()) {
   return getDailyDateId(date, {
@@ -577,6 +567,17 @@ function scheduleDailyRefresh() {
       window.location.reload();
     }
   }, 60 * 1000);
+}
+
+function scheduleCountdownRefresh() {
+  window.setInterval(renderCountdown, 1000);
+}
+
+function renderCountdown() {
+  if (!els.nextPuzzleCountdown) return;
+  els.nextPuzzleCountdown.textContent = formatDuration(
+    getNextRolloverDate().getTime() - Date.now()
+  );
 }
 
 function getNextRolloverDate(now = new Date()) {
@@ -624,6 +625,13 @@ function getZonedDateTimeParts(date, timeZone) {
     hourCycle: "h23",
   });
   return Object.fromEntries(formatter.formatToParts(date).map((part) => [part.type, part.value]));
+}
+
+function formatDuration(ms) {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  return `${String(hours).padStart(2, "0")} h ${String(minutes).padStart(2, "0")}`;
 }
 
 function formatPuzzleDate(dateId) {
@@ -689,10 +697,9 @@ els.submitButton.addEventListener("click", submitSelection);
 els.clearButton.addEventListener("click", clearSelection);
 els.shuffleButton.addEventListener("click", shuffleActiveItems);
 els.rulesButton.addEventListener("click", () => togglePanel(els.rulesPanel));
-els.sourcesButton.addEventListener("click", () => togglePanel(els.sourcesPanel));
 window.addEventListener("resize", refitTileLabels);
 document.fonts?.ready?.then(refitTileLabels);
 
-renderSources();
 scheduleDailyRefresh();
+scheduleCountdownRefresh();
 render();

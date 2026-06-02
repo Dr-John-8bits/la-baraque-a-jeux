@@ -79,3 +79,24 @@ Original prompt: Commence à développer le jeu index.hmtl, on verra pour le con
   - `npm run test:browser` OK ;
   - client web-game Playwright exécuté après copie temporaire dans `/private/tmp` pour résoudre l'import local de Playwright ;
   - capture mobile de défaite inspectée : les 4 familles remplacent bien la grille, sans bouton de replay.
+- Itération 26.06.02.2 :
+  - couleurs de familles découplées de la difficulté éditoriale ;
+  - attribution visuelle fixe par rang de solution : vert, ocre, bleu, rouge ;
+  - partage aligné sur ces couleurs de rang ;
+  - bouton `i` Sources et panneau associé retirés de l'écran de jeu ;
+  - smoke test mis à jour pour vérifier l'absence du bouton Sources et les 4 couleurs distinctes en révélation.
+- Vérifications 26.06.02.2 :
+  - `npm run check` OK ;
+  - `npm run test:browser` OK ;
+  - capture mobile de défaite inspectée : les 4 familles ont bien 4 couleurs distinctes ;
+  - client web-game Playwright exécuté, capture initiale inspectée sans bouton `i`.
+- Itération 26.06.02.3 :
+  - ajout d'un compte à rebours visible vers la prochaine grille officielle à midi ;
+  - rangée d'état passée en 2x2 sur mobile et 4 colonnes sur écran plus large ;
+  - bloc vide "Aucun groupe trouvé" retiré pour gagner de la place avant la première famille ;
+  - smoke test enrichi pour vérifier le format du compte à rebours.
+- Vérifications 26.06.02.3 :
+  - `npm run check` OK ;
+  - `npm run test:browser` OK ;
+  - capture mobile inspectée : les compteurs restent compacts et la grille tient dans le premier écran ;
+  - client web-game Playwright exécuté, capture desktop inspectée avec le compte à rebours visible.

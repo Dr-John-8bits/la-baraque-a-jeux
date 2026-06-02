@@ -4,6 +4,29 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## [26.06.02.3] - 2026-06-02
+
+### Ajouté
+
+- Compte à rebours visible vers la prochaine grille quotidienne à midi.
+- Test navigateur du format de compte à rebours.
+
+### Modifié
+
+- Version courante passée à `26.06.02.3`.
+- Rangée d'état adaptée en 2x2 sur mobile et 4 colonnes sur écran plus large.
+- Bloc vide "Aucun groupe trouvé" retiré pour donner plus de place à la grille.
+
+## [26.06.02.2] - 2026-06-02
+
+### Modifié
+
+- Version courante passée à `26.06.02.2`.
+- Les couleurs de familles sont désormais attribuées par rang de solution, et non par difficulté éditoriale.
+- La révélation de défaite affiche systématiquement quatre couleurs distinctes.
+- Le partage utilise les mêmes couleurs de rang que l'interface.
+- Le bouton d'information `Sources` et le panneau associé sont retirés de l'écran de jeu.
+
 ## [26.06.02.1] - 2026-06-02
 
 ### Ajouté
