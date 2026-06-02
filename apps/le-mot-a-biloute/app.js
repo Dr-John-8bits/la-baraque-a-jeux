@@ -3,7 +3,7 @@ import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
-const APP_VERSION = "26.06.01.5";
+const APP_VERSION = "26.06.02.1";
 const GAME_URL = new URL(".", window.location.href).href;
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
@@ -19,6 +19,9 @@ const WORDS = await fetchJson("../../packages/corpus/le-mot-a-biloute/words.json
 const GUESS_POLICY = await fetchJson("../../packages/corpus/le-mot-a-biloute/guess-policy.json");
 const ACCEPTED_GUESSES = await fetchJson(
   "../../packages/corpus/le-mot-a-biloute/accepted-guesses.json"
+);
+const FRENCH_GUESSES = await fetchJson(
+  "../../packages/corpus/le-mot-a-biloute/french-guesses.json"
 );
 
 const MAX_GUESSES = 6;
@@ -213,6 +216,7 @@ function buildAcceptedGuessSet() {
   return new Set([
     ...acceptedAnswers,
     ...(ACCEPTED_GUESSES.words || []).map(normalize),
+    ...(FRENCH_GUESSES.words || []).map(normalize),
     ...(GUESS_POLICY.words || []).map(normalize),
   ]);
 }

@@ -1,7 +1,7 @@
 {
   "mode": "strict",
-  "label": "Corpus local",
-  "description": "Les réponses du jour restent dans words.json. Les propositions sont vérifiées dans accepted-guesses.json, une liste locale générée depuis le corpus documentaire traité et les variantes relues.",
+  "label": "Dictionnaire séparé",
+  "description": "Les réponses du jour restent dans words.json. Les propositions sont vérifiées dans accepted-guesses.json et french-guesses.json, deux listes séparées des réponses.",
   "rules": {
     "rejectSingleRepeatedLetter": true,
     "requireVowelLikeLetter": true

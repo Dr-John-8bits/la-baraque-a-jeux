@@ -223,5 +223,14 @@
     "license": "Consultation publique",
     "consultedAt": "2026-06-01",
     "notes": "Index de sources non ouvertes à utiliser pour vérification et reformulation originale uniquement."
+  },
+  {
+    "id": "wordle-fr-louanben-mots",
+    "label": "LouanBen/wordle-fr — mots.txt",
+    "url": "https://github.com/LouanBen/wordle-fr/blob/main/mots.txt",
+    "publisher": "Louan Bengmah",
+    "license": "GPL-3.0",
+    "consultedAt": "2026-06-02",
+    "notes": "Dictionnaire français utilisé uniquement pour accepter les propositions des joueurs, pas pour choisir les mots du jour."
   }
 ]

@@ -26,6 +26,7 @@ const sources = await readJson("packages/corpus/sources.json");
 const words = await readJson("packages/corpus/le-mot-a-biloute/words.json");
 const guessPolicy = await readJson("packages/corpus/le-mot-a-biloute/guess-policy.json");
 const acceptedGuesses = await readJson("packages/corpus/le-mot-a-biloute/accepted-guesses.json");
+const frenchGuesses = await readJson("packages/corpus/le-mot-a-biloute/french-guesses.json");
 const puzzles = await readJson("packages/corpus/lille-mele/puzzles.json");
 const excludedSensitiveItems = await readJson(
   "packages/corpus/documentation/processed/editorial/excluded-sensitive-items.json"
@@ -39,6 +40,7 @@ const forbiddenLabels = buildForbiddenLabels(excludedSensitiveItems, candidateIt
 validateWords(words, sourceIds);
 validateGuessPolicy(guessPolicy);
 validateAcceptedGuesses(acceptedGuesses, sourceIds);
+validateFrenchGuesses(frenchGuesses, sourceIds);
 validatePuzzles(puzzles, sourceIds, forbiddenLabels);
 
 if (errors.length > 0) {
@@ -162,6 +164,19 @@ function validateAcceptedGuesses(value, sourceIds) {
   requireString(value.description, "acceptedGuesses.description", { max: 320 });
   requireSourceRefs(value.sourceIds, "acceptedGuesses.sourceIds", sourceIds);
   requireAnswerArray(value.words, "acceptedGuesses.words", { min: 1 });
+}
+
+function validateFrenchGuesses(value, sourceIds) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push("packages/corpus/le-mot-a-biloute/french-guesses.json doit etre un objet.");
+    return;
+  }
+
+  requireDate(value.generatedAt, "frenchGuesses.generatedAt");
+  requireString(value.description, "frenchGuesses.description", { max: 320 });
+  requireSourceRefs(value.sourceIds, "frenchGuesses.sourceIds", sourceIds);
+  requireString(value.license, "frenchGuesses.license", { max: 80 });
+  requireAnswerArray(value.words, "frenchGuesses.words", { min: 1 });
 }
 
 function validatePuzzles(value, sourceIds, forbiddenLabels) {

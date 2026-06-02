@@ -29,6 +29,7 @@ Fichiers requis côté monorepo :
 - `packages/corpus/le-mot-a-biloute/words.json`
 - `packages/corpus/le-mot-a-biloute/guess-policy.json`
 - `packages/corpus/le-mot-a-biloute/accepted-guesses.json`
+- `packages/corpus/le-mot-a-biloute/french-guesses.json`
 - `404.html` à la racine pour GitHub Pages
 
 ## Avant publication

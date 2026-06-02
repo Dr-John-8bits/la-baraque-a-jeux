@@ -26,6 +26,7 @@ apps/le-mot-a-biloute/
 - Taper une réponse trop courte.
 - Taper une proposition manifestement invalide, par exemple une seule lettre répétée.
 - Taper une proposition absente de la liste acceptée et vérifier le message de refus.
+- Taper un mot français courant de la bonne longueur, par exemple `PATOIS` sur une grille de 6 lettres, et vérifier qu'il est accepté comme essai.
 - Taper une mauvaise réponse.
 - Vérifier l'animation de révélation lettre par lettre.
 - Vérifier qu'au 6e échec la modale `Rab de Biloute` apparaît, que la série passe à 0 et que le jeu reste jouable.

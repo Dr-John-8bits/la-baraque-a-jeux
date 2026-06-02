@@ -4,6 +4,14 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## 26.06.02.1
+
+- Ajout d'un dictionnaire français large `french-guesses.json` dérivé de `mots.txt` de LouanBen/wordle-fr.
+- Les propositions courantes comme `LANGUE`, `PATOIS` ou `BOUCHE` peuvent désormais être acceptées si elles ont la bonne longueur.
+- Les réponses du jour restent limitées aux mots relus de `words.json`.
+- Ajout du script `npm run build:biloute-french-guesses` et des contrôles de corpus associés.
+- Mise à jour des mentions de licence pour la ressource tierce GPL-3.0.
+
 ## 26.06.01.5
 
 - Ajout d'une liste séparée de propositions acceptées, générée depuis le corpus traité.

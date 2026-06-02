@@ -17,7 +17,7 @@ Le jeu est accessible depuis le portail **La baraque à jeux**. Il est conçu co
 - score basé sur les essais et les coups d'pouce, y compris dans le Rab de Biloute ;
 - clavier virtuel AZERTY ;
 - saisie au clavier physique ;
-- validation stricte des propositions avec une liste locale séparée des réponses ;
+- validation stricte des propositions avec une liste locale et un dictionnaire français large séparés des réponses ;
 - retour correcte / présente / absente ;
 - animation de révélation lettre par lettre ;
 - mode archive pour rejouer d'anciens mots ;
@@ -73,5 +73,6 @@ Le projet utilise une double licence :
 
 - le code technique est sous licence MIT ;
 - les contenus, mots du jour, indices, textes, identité et assets originaux sont protégés tous droits réservés.
+- le dictionnaire `french-guesses.json`, issu de LouanBen/wordle-fr `mots.txt`, reste soumis à la licence GPL-3.0 de sa source.
 
 Voir [LICENSE.md](LICENSE.md).

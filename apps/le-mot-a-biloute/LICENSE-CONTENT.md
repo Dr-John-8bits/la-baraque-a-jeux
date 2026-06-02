@@ -32,6 +32,8 @@ La consultation des fichiers du projet ne confère aucune licence d'utilisation,
 
 Les données publiques, bibliothèques, dépendances, contenus tiers et ressources externes éventuellement utilisés par le projet restent soumis à leurs licences et conditions respectives.
 
+Le fichier `packages/corpus/le-mot-a-biloute/french-guesses.json` est dérivé de `mots.txt` du projet tiers LouanBen/wordle-fr, déclaré dans `packages/corpus/sources.json`, et reste soumis à la licence GPL-3.0 de cette source. Il sert uniquement de dictionnaire de propositions acceptées.
+
 Cette licence ne revendique aucun droit sur les données publiques brutes. Elle couvre uniquement les créations originales du projet, ainsi que la sélection, l'organisation, l'adaptation, la rédaction, la présentation et l'enrichissement éditorial propres au projet Le mot à Biloute.
 
 Toute réutilisation de données publiques doit respecter leurs licences d'origine, notamment les obligations d'attribution, de mention de source et de date de mise à jour.

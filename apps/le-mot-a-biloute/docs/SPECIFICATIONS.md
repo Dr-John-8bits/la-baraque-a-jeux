@@ -33,10 +33,11 @@ Le jeu se joue directement dans le navigateur, sur mobile en priorité, sans com
 
 ## Validation des propositions
 
-La version actuelle utilise un **mode strict local** défini dans `packages/corpus/le-mot-a-biloute/guess-policy.json`.
+La version actuelle utilise un **mode strict avec dictionnaire séparé** défini dans `packages/corpus/le-mot-a-biloute/guess-policy.json`.
 
 - `words.json` contient uniquement les réponses du jour relues.
 - `accepted-guesses.json` contient les propositions acceptées, générées depuis les réponses relues et le corpus documentaire traité.
+- `french-guesses.json` contient un dictionnaire français large issu de `mots.txt` de LouanBen/wordle-fr, utilisé uniquement pour accepter les propositions des joueurs.
 - Les réponses acceptées du mot du jour restent toujours valides, même si elles ne figurent pas encore dans la liste générée.
 - Les suites manifestement non jouables restent bloquées par les règles de `guess-policy.json`.
 
@@ -83,6 +84,6 @@ https://exemple.fr/le-mot-a-biloute/
 
 ## Version
 
-Version courante : `26.06.01.5`.
+Version courante : `26.06.02.1`.
 
 Le format est `AA.MM.JJ.i`.

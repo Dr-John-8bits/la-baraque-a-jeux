@@ -20,7 +20,9 @@ Il n'y a actuellement :
 - `../../packages/corpus/le-mot-a-biloute/words.json` : corpus des mots.
 - `../../packages/corpus/le-mot-a-biloute/guess-policy.json` : politique de validation des propositions.
 - `../../packages/corpus/le-mot-a-biloute/accepted-guesses.json` : liste locale des propositions acceptées.
+- `../../packages/corpus/le-mot-a-biloute/french-guesses.json` : dictionnaire français large pour accepter les propositions courantes.
 - `../../packages/corpus/le-mot-a-biloute/tools/build-accepted-guesses.mjs` : génération de la liste de propositions depuis le corpus traité.
+- `../../packages/corpus/le-mot-a-biloute/tools/build-french-guesses-from-wordle-fr.mjs` : génération du dictionnaire français accepté depuis une copie locale temporaire de `mots.txt`.
 - `../../packages/game-utils/` : helpers partagés avec les autres jeux.
 - `../../packages/ui/` : tokens, base visuelle et menu commun.
 
@@ -52,7 +54,7 @@ Le moteur :
 
 ## Corpus
 
-Les mots ne sont plus intégrés dans `app.js`. Le jeu charge le corpus JSON depuis le paquet commun `packages/corpus`.
+Les mots ne sont plus intégrés dans `app.js`. Le jeu charge le corpus JSON depuis le paquet commun `packages/corpus`, avec une séparation entre réponses du jour et propositions simplement acceptées.
 
 Cette séparation permet d'ajouter ou de relire les mots sans modifier le moteur du jeu.
 

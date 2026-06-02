@@ -23,7 +23,7 @@
 - Relire les coups d'pouce.
 - Vérifier les bonus.
 
-État : fait pour le premier lot. Le jeu dispose de 40 mots relus et d'une liste séparée de propositions acceptées générée depuis le corpus traité.
+État : fait pour le premier lot. Le jeu dispose de 40 mots relus, d'une liste séparée de propositions locales générée depuis le corpus traité, et d'un dictionnaire français large pour accepter les essais courants.
 
 ## 0.3 — Identité visuelle
 
@@ -36,7 +36,7 @@
 
 ## 0.4 — Qualité de jeu
 
-- Validation stricte des propositions avec liste locale dédiée.
+- Validation stricte des propositions avec listes dédiées : corpus local et dictionnaire français large.
 - Labels accessibles enrichis sur les cases.
 - Marqueurs visuels complémentaires aux couleurs.
 - Écran de fin avec détail du score.
@@ -48,7 +48,7 @@
 - Tester sur plusieurs tailles mobiles.
 - Étendre les tests navigateur automatisés depuis la racine du monorepo.
 
-État : bien avancé. Il reste surtout à tester finement l'accessibilité clavier/lecteur d'écran et à élargir le corpus pour tenir une année complète.
+État : bien avancé. Il reste surtout à tester finement l'accessibilité clavier/lecteur d'écran et à élargir les réponses relues pour tenir une année complète.
 
 ## 1.0 — Lancement public
 

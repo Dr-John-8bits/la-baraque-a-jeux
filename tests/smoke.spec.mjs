@@ -38,17 +38,15 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await expect(page.getByText("Naissance de La Baraque à Jeux de Lille")).toBeVisible();
   await expect(page.getByText("Ce premier lancement marque le début de l'aventure.")).toBeVisible();
 
-  await page.goto(`${base}apps/le-mot-a-biloute/`);
   await page.evaluate(() => localStorage.clear());
-  await page.reload();
+  await page.goto(`${base}apps/le-mot-a-biloute/`);
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
   await page.getByRole("button", { name: /Ch’ti coup d'pouce/ }).click();
   const wordState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(wordState.visibleHints.length).toBeGreaterThanOrEqual(1);
 
-  await page.goto(`${base}apps/lille-mele/`);
   await page.evaluate(() => localStorage.clear());
-  await page.reload();
+  await page.goto(`${base}apps/lille-mele/`);
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
   await expect(page.getByRole("button", { name: "Sources" })).toHaveCount(0);
   await expect(page.locator("#firstHelp")).toBeVisible();
