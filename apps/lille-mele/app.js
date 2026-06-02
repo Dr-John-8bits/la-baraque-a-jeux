@@ -7,7 +7,8 @@ import { escapeHtml } from "../../packages/game-utils/text-render.js";
 
 const MAX_MISTAKES = 4;
 const STORAGE_PREFIX = "lillemele.v1.";
-const APP_VERSION = "26.06.02.3";
+const FIRST_HELP_KEY = `${STORAGE_PREFIX}firstHelpSeen`;
+const APP_VERSION = "26.06.02.4";
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
@@ -44,7 +45,8 @@ const els = {
   submitButton: document.querySelector("#submitButton"),
   result: document.querySelector("#result"),
   rulesButton: document.querySelector("#rulesButton"),
-  rulesPanel: document.querySelector("#rulesPanel"),
+  firstHelp: document.querySelector("#firstHelp"),
+  firstHelpStartButton: document.querySelector("#firstHelpStartButton"),
   toast: document.querySelector("#toast"),
 };
 
@@ -489,10 +491,29 @@ function showToast(text) {
   toastTimer = setTimeout(() => els.toast.classList.remove("visible"), 1800);
 }
 
-function togglePanel(panel) {
-  const isVisible = panel.classList.contains("visible");
-  els.rulesPanel.classList.remove("visible");
-  panel.classList.toggle("visible", !isVisible);
+function shouldShowFirstHelp() {
+  return readJson(FIRST_HELP_KEY, false) !== true;
+}
+
+function showFirstHelp() {
+  if (!els.firstHelp) return;
+  els.firstHelp.hidden = false;
+  document.body.classList.add("help-open");
+  window.requestAnimationFrame(() => els.firstHelpStartButton?.focus());
+}
+
+function hideFirstHelp({ returnFocus = false } = {}) {
+  if (!els.firstHelp) return;
+  writeJson(FIRST_HELP_KEY, true);
+  els.firstHelp.hidden = true;
+  document.body.classList.remove("help-open");
+  if (returnFocus) els.rulesButton?.focus();
+}
+
+function handleHelpKeydown(event) {
+  if (event.key === "Escape" && els.firstHelp && !els.firstHelp.hidden) {
+    hideFirstHelp({ returnFocus: true });
+  }
 }
 
 function renderGameToText() {
@@ -530,6 +551,7 @@ function renderGameToText() {
     message: els.message.textContent,
     canSubmit: !els.submitButton.disabled,
     resultVisible: els.result.classList.contains("visible"),
+    firstHelpVisible: Boolean(els.firstHelp && !els.firstHelp.hidden),
     version: APP_VERSION,
   };
   return JSON.stringify(payload);
@@ -696,10 +718,13 @@ function refitTileLabels() {
 els.submitButton.addEventListener("click", submitSelection);
 els.clearButton.addEventListener("click", clearSelection);
 els.shuffleButton.addEventListener("click", shuffleActiveItems);
-els.rulesButton.addEventListener("click", () => togglePanel(els.rulesPanel));
+els.rulesButton.addEventListener("click", showFirstHelp);
+els.firstHelpStartButton?.addEventListener("click", () => hideFirstHelp());
+window.addEventListener("keydown", handleHelpKeydown);
 window.addEventListener("resize", refitTileLabels);
 document.fonts?.ready?.then(refitTileLabels);
 
 scheduleDailyRefresh();
 scheduleCountdownRefresh();
 render();
+if (shouldShowFirstHelp()) showFirstHelp();

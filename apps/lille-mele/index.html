@@ -103,18 +103,32 @@
 
       <section class="result" id="result" aria-live="polite"></section>
 
-      <section class="panel" id="rulesPanel">
-        <h2>Aide</h2>
-        <p>Le but : retrouver 4 familles de 4 cartes avant d'avoir fait 4 erreurs. Une nouvelle grille officielle arrive chaque jour à 12 h, heure de Paris.</p>
-        <ul class="help-list">
-          <li>Sélectionne 4 cartes, puis valide.</li>
-          <li>Une bonne famille disparaît de la grille et révèle son titre.</li>
-          <li>Une mauvaise tentative ajoute une erreur.</li>
-          <li>Si 3 cartes sont bonnes dans ta sélection, le message affiche "Tout près" et les cartes choisies pulsent en jaune.</li>
-          <li>Quand la grille est perdue, les familles se révèlent à la place des cartes.</li>
-        </ul>
-        <p>Les associations peuvent porter sur des stations de métro, communes, quartiers, lieux culturels, monuments, spécialités locales, mots régionaux, événements, noms en commun ou détails historiques.</p>
-        <p>Un bon groupe doit avoir une logique précise : même ligne, même ville, même thème, même type de lieu, même famille de mots ou même clin d'œil local.</p>
+      <section
+        class="first-help"
+        id="firstHelp"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="firstHelpTitle"
+        hidden
+      >
+        <div class="first-help-card">
+          <p class="first-help-kicker">Grille quotidienne</p>
+          <h2 id="firstHelpTitle">Bienvenue dans Lille-Mêle</h2>
+          <p>Retrouve 4 familles de 4 cartes avant d'avoir fait 4 erreurs. Une nouvelle grille officielle arrive chaque jour à 12 h, heure de Paris.</p>
+          <ul class="help-list">
+            <li>Sélectionne 4 cartes, puis valide.</li>
+            <li>Une bonne famille disparaît de la grille et révèle son titre.</li>
+            <li>Une mauvaise tentative ajoute une erreur.</li>
+            <li>Si 3 cartes sont bonnes dans ta sélection, le message affiche "Tout près" et les cartes choisies pulsent en jaune.</li>
+            <li>Quand la grille est perdue, les familles se révèlent à la place des cartes.</li>
+          </ul>
+          <div class="first-help-actions">
+            <a class="text-link" href="a-propos.html">À propos, règles et sources</a>
+            <button class="action-button primary" type="button" id="firstHelpStartButton">
+              Jouer
+            </button>
+          </div>
+        </div>
       </section>
 
     </main>

@@ -21,9 +21,9 @@ async function submitLilleMeleSelection(page, items) {
 test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   const errors = [];
   page.on("console", (message) => {
-    if (message.type() === "error") errors.push(message.text());
+    if (message.type() === "error") errors.push(`${page.url()}: ${message.text()}`);
   });
-  page.on("pageerror", (error) => errors.push(error.message));
+  page.on("pageerror", (error) => errors.push(`${page.url()}: ${error.message}`));
 
   await page.goto(base);
   await expect(page).toHaveTitle("La baraque à jeux");
@@ -51,6 +51,11 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await page.reload();
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
   await expect(page.getByRole("button", { name: "Sources" })).toHaveCount(0);
+  await expect(page.locator("#firstHelp")).toBeVisible();
+  await expect(page.getByRole("link", { name: "À propos, règles et sources" })).toHaveAttribute(
+    "href",
+    "a-propos.html"
+  );
 
   const lilleState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   const puzzles = JSON.parse(await readFile("packages/corpus/lille-mele/puzzles.json", "utf8"));
@@ -58,6 +63,16 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(lilleState.dailyRollover.hour).toBe(12);
   expect(lilleState.dailyRollover.timeZone).toBe("Europe/Paris");
   expect(lilleState.puzzle.status).toBe("reviewed");
+  expect(lilleState.firstHelpVisible).toBe(true);
+  await page.getByRole("button", { name: "Jouer" }).click();
+  await expect(page.locator("#firstHelp")).toBeHidden();
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await expect(page.locator("#firstHelp")).toBeHidden();
+  await page.getByRole("button", { name: "Règles" }).click();
+  await expect(page.locator("#firstHelp")).toBeVisible();
+  await page.getByRole("button", { name: "Jouer" }).click();
+  await expect(page.locator("#firstHelp")).toBeHidden();
   await expect(page.locator("#nextPuzzleCountdown")).toContainText(/\d{2} h \d{2}/);
   const group = puzzle.groups[0];
   const nearMiss = [...group.items.slice(0, 3), puzzle.groups[1].items[0]];
@@ -92,6 +107,14 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(afterLoss.mistakes).toBe(afterLoss.mistakesMax);
   expect(afterLoss.revealedGroups).toHaveLength(4);
   expect(afterLoss.resultVisible).toBe(true);
+
+  await page.goto(`${base}apps/lille-mele/a-propos.html`);
+  await expect(page).toHaveTitle("À propos de Lille-Mêle");
+  await expect(page.getByRole("heading", { name: "À propos de Lille-Mêle" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Règles" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Sources" })).toBeVisible();
+  await page.waitForFunction(() => document.querySelectorAll("#sourceList .source-card").length > 0);
+  expect(await page.locator("#sourceList .source-card").count()).toBeGreaterThan(0);
 
   await page.goto(`${base}apps/biloute-biere-braderie/`);
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");

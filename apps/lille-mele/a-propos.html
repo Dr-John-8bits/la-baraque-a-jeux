@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Règles, contexte éditorial et sources de Lille-Mêle."
+    />
+    <meta name="theme-color" content="#071b31" />
+    <title>À propos de Lille-Mêle</title>
+    <link rel="stylesheet" href="../../packages/ui/tokens.css" />
+    <link rel="stylesheet" href="../../packages/ui/base.css" />
+    <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
+          <picture class="labaj-brand__logo">
+            <source
+              srcset="../../assets/brand/la-baraque-a-jeux-lille.webp"
+              type="image/webp"
+            />
+            <img
+              src="../../assets/brand/la-baraque-a-jeux-lille-logo.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+          </picture>
+          <span class="labaj-brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Accueil</span>
+          </span>
+        </a>
+
+        <div class="labaj-links">
+          <a class="labaj-link labaj-link--home" href="../../">Accueil</a>
+          <a class="labaj-link" href="../le-mot-a-biloute/">Le mot à Biloute</a>
+          <a class="labaj-link" href="../lille-mele/" aria-current="page">
+            Lille-Mêle
+          </a>
+          <a class="labaj-link" href="../biloute-biere-braderie/">Ch'tifoumi</a>
+          <a class="labaj-link" href="../../blog.html">Blog</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="about-page">
+      <header class="about-hero">
+        <a class="back-link" href="./">Retour au jeu</a>
+        <h1>À propos de Lille-Mêle</h1>
+        <p>Lille-Mêle est une grille quotidienne de connexions locales : transports, quartiers, communes, lieux, habitudes et mots du coin.</p>
+      </header>
+
+      <section class="about-section" aria-labelledby="rulesTitle">
+        <h2 id="rulesTitle">Règles</h2>
+        <ul class="about-list">
+          <li>La grille contient 16 cartes, réparties en 4 familles de 4 cartes.</li>
+          <li>Tu sélectionnes 4 cartes, puis tu valides.</li>
+          <li>Une famille correcte est retirée de la grille et son titre apparaît.</li>
+          <li>Une tentative incorrecte ajoute une erreur ; au bout de 4 erreurs, les réponses sont révélées.</li>
+          <li>Quand une sélection contient 3 cartes d'une même famille, le jeu signale que tu es tout près.</li>
+        </ul>
+      </section>
+
+      <section class="about-section" aria-labelledby="aboutTitle">
+        <h2 id="aboutTitle">À propos</h2>
+        <p>Chaque grille officielle est renouvelée à midi, heure de Paris. Le corpus jouable ne retient que des familles relues, sans item marqué à éviter et sans référence religieuse dans les cartes, indices, réponses ou microcopies.</p>
+        <p>Les sources servent à vérifier les faits et les libellés. Les textes du jeu sont rédigés et reformulés pour rester courts, jouables et originaux.</p>
+      </section>
+
+      <section class="about-section" aria-labelledby="sourcesTitle">
+        <div class="about-section-heading">
+          <h2 id="sourcesTitle">Sources</h2>
+          <p id="sourceCount">Chargement des sources...</p>
+        </div>
+        <ul class="source-list" id="sourceList"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="about.js"></script>
+  </body>
+</html>

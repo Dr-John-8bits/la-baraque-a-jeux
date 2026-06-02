@@ -4,6 +4,19 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## [26.06.02.4] - 2026-06-02
+
+### Ajouté
+
+- Page dédiée `À propos / règles / sources` hors de l'écran de jeu.
+- Écran de première aide affiché au premier lancement, puis mémorisé localement.
+- Chargement automatique des sources reliées aux grilles Lille-Mêle sur la page dédiée.
+
+### Modifié
+
+- Version courante passée à `26.06.02.4`.
+- Le bouton `?` ouvre l'aide de lancement au lieu d'afficher un panneau dans le flux de jeu.
+
 ## [26.06.02.3] - 2026-06-02
 
 ### Ajouté
