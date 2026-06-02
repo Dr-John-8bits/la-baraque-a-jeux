@@ -101,11 +101,14 @@ Original prompt: Commence à développer le jeu index.hmtl, on verra pour le con
   - capture mobile inspectée : les compteurs restent compacts et la grille tient dans le premier écran ;
   - client web-game Playwright exécuté, capture desktop inspectée avec le compte à rebours visible.
 - Itération 26.06.02.4 :
-  - ajout d'une page dédiée `À propos / règles / sources` hors de l'écran de jeu ;
-  - sources de la page dédiées chargées depuis le registre commun et filtrées sur les grilles Lille-Mêle ;
+  - ajout d'une page dédiée `À propos / règles` hors de l'écran de jeu ;
   - panneau d'aide intégré retiré du flux de jeu ;
   - aide de premier lancement ajoutée sous forme de dialogue, mémorisée en localStorage ;
   - bouton `?` raccordé au même dialogue pour pouvoir relire les règles.
+- Ajustement produit 26.06.02.4 :
+  - bloc sources retiré de la page dédiée ;
+  - module de chargement des sources supprimé ;
+  - lien de la modale renommé en `À propos et règles`.
 - Vérifications 26.06.02.4 :
   - `npm run check` OK ;
   - `npm run test:browser` OK ;

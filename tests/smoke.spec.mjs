@@ -60,7 +60,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
   await expect(page.getByRole("button", { name: "Sources" })).toHaveCount(0);
   await expect(page.locator("#firstHelp")).toBeVisible();
-  await expect(page.getByRole("link", { name: "À propos, règles et sources" })).toHaveAttribute(
+  await expect(page.getByRole("link", { name: "À propos et règles" })).toHaveAttribute(
     "href",
     "a-propos.html"
   );
@@ -120,9 +120,8 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await expect(page).toHaveTitle("À propos de Lille-Mêle");
   await expect(page.getByRole("heading", { name: "À propos de Lille-Mêle" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Règles" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Sources" })).toBeVisible();
-  await page.waitForFunction(() => document.querySelectorAll("#sourceList .source-card").length > 0);
-  expect(await page.locator("#sourceList .source-card").count()).toBeGreaterThan(0);
+  await expect(page.getByRole("heading", { name: "Sources" })).toHaveCount(0);
+  await expect(page.locator("#sourceList")).toHaveCount(0);
 
   await page.goto(`${base}apps/biloute-biere-braderie/`);
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
