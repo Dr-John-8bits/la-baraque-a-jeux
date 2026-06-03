@@ -61,14 +61,16 @@ Travaux :
 Priorité de travail :
 
 1. niveau 1 — métro ;
-2. niveau 2 — vélo ;
-3. niveau 3 — bus.
+2. niveau 2 — tramway ;
+3. niveau 3 — V'Lille ;
+4. niveau 4 — bus.
 
 Pour le niveau 1, le premier chantier consiste à requêter les données Ilévia afin de récupérer les stations de métro, leurs lignes, leurs identifiants et leurs informations de base.
 
 Livrable :
 
-- premiers fichiers de données brutes et nettoyées pour les niveaux Métro, Vélo et Bus ;
+- premiers fichiers de données brutes et nettoyées pour les niveaux Métro, Tramway, Vélo et Bus ;
+- socle technique Tramway Mystère extrait du GTFS Ilévia ;
 - inventaire technique complet du bus, à réduire ensuite en corpus de lignes jouables.
 
 ---
@@ -84,7 +86,7 @@ Travaux :
 - définir les types d'indices ;
 - définir le système de sélection quotidienne ;
 - définir les identifiants uniques ;
-- distinguer les données brutes issues des API des données éditoriales enrichies à la main.
+- distinguer les données brutes issues des API des données éditoriales enrichies à la main ;
 - gérer à la fois des réponses de type station et des réponses de type ligne.
 
 Livrable :
@@ -108,6 +110,16 @@ Travaux :
 - œuvres d'art ;
 - particularités architecturales.
 
+### Tramway
+
+- stations de la branche Roubaix ;
+- stations de la branche Tourcoing ;
+- stations du tronc commun ;
+- terminus ;
+- origine des noms ;
+- anecdotes ;
+- repères de quartier utiles aux indices.
+
 ### Vélo
 
 - stations V'Lille ;
@@ -127,7 +139,7 @@ Travaux :
 
 Livrable :
 
-- premier corpus éditorial exploitable pour les trois niveaux.
+- premier corpus éditorial exploitable pour les quatre niveaux.
 
 ---
 
@@ -157,7 +169,7 @@ Objectif : intégrer le moteur dans l'univers de La Baraque à Jeux.
 
 Travaux :
 
-- fil de progression Métro → Vélo → Bus ;
+- fil de progression Métro → Tramway → Vélo → Bus ;
 - animation du niveau actif ;
 - écran de victoire ;
 - écran de défaite ;

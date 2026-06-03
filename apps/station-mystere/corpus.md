@@ -48,6 +48,7 @@ Chaque fiche peut représenter une réponse jouable ou une entité documentaire 
 Exemples :
 
 - station de métro ;
+- station de tramway ;
 - station V'Lille ;
 - ligne de bus ;
 - arrêt de bus ;
@@ -153,6 +154,22 @@ Exemples :
 - Montebello ;
 - République Beaux-Arts ;
 - CHR B-Calmette.
+
+### Tramway
+
+Réponses destinées au niveau Tramway Mystère.
+
+La réponse attendue est une station du tramway Ilévia.
+
+Exemples :
+
+- Gare Lille Flandres ;
+- Croisé Laroche ;
+- Villa Cavrois ;
+- Tourcoing Centre ;
+- Eurotéléport.
+
+Les branches Roubaix et Tourcoing, les terminus et le tronc commun servent à construire les indices.
 
 ---
 
@@ -262,6 +279,16 @@ Objectif : rendre Métro Mystère entièrement jouable.
 
 ### Priorité 2
 
+Tramway lillois.
+
+Objectif : rendre Tramway Mystère entièrement jouable.
+
+Le corpus technique contient déjà les 36 stations du tramway et doit maintenant être enrichi éditorialement.
+
+---
+
+### Priorité 3
+
 Stations V'Lille candidates.
 
 Objectif : rendre Vélo Mystère jouable.
@@ -270,7 +297,7 @@ Les équipements cyclables restent utiles pour enrichir les indices, mais ne son
 
 ---
 
-### Priorité 3
+### Priorité 4
 
 Lignes bus jouables.
 
@@ -282,7 +309,7 @@ Les lignes scolaires, Résa et spéciales doivent rester documentées, mais pour
 
 ---
 
-### Priorité 4
+### Priorité 5
 
 Enrichissement culturel.
 

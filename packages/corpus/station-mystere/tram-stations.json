@@ -1,0 +1,4064 @@
+{
+  "generatedAt": "2026-06-03",
+  "status": "technical-baseline",
+  "description": "Premier corpus technique pour le niveau 2 Tramway Mystere. Les champs culturels sont a enrichir et sourcer avant publication jouable.",
+  "level": "tramway",
+  "sourceIds": [
+    "gtfs-ilevia-data-gouv",
+    "ilevia-arret-point-datamel"
+  ],
+  "stats": {
+    "lineCount": 1,
+    "branchCount": 2,
+    "stationCount": 36,
+    "stationsByBranch": {
+      "roubaix": 23,
+      "tourcoing": 22
+    },
+    "sharedStationCount": 9,
+    "terminalStationCount": 3,
+    "ambiguousNameCount": 0,
+    "representativePatternCount": 4,
+    "raw": {
+      "gtfsRoutes": 146,
+      "gtfsStops": 4856,
+      "gtfsTrips": 35560,
+      "tramTrips": 2552,
+      "tramPatterns": 26,
+      "arretPointFeatures": 5002
+    }
+  },
+  "notes": [
+    "Base derivee du GTFS Ilévia et du GeoJSON dataMEL des arrets.",
+    "Le tramway est expose comme une seule route GTFS, avec deux branches principales reconstruites par terminus.",
+    "Les doublons techniques de terminus, notamment Gare Lille Flandres, sont regroupes en une seule station jouable.",
+    "Les libelles proviennent des donnees techniques et devront etre relus editorialement, notamment les accents et abreviations."
+  ],
+  "line": {
+    "id": "71",
+    "nomCourt": "TRAM",
+    "nom": "TRAMWAY",
+    "description": "LILLE <> ROUBAIX / TOURCOING",
+    "couleur": "009FE3",
+    "couleurTexte": "FFFFFF"
+  },
+  "branches": [
+    {
+      "id": "roubaix",
+      "nom": "Branche Roubaix",
+      "terminusPublic": "Roubaix Eurotéléport",
+      "directions": [
+        {
+          "directionId": "vers-terminus",
+          "gtfsDirectionId": "0",
+          "trajetRepresentatifCount": 550,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "girouettes": [
+            {
+              "label": "Roubaix Euroteleport",
+              "count": 550
+            }
+          ],
+          "stations": [
+            {
+              "stopId": "LIG011",
+              "nom": "Gare Lille Flandres",
+              "commune": "Lille",
+              "sequence": 1,
+              "coordonnees": {
+                "latitude": 50.636405,
+                "longitude": 3.071141
+              },
+              "id": "gare-lille-flandres"
+            },
+            {
+              "stopId": "EUR021",
+              "nom": "Lille Europe",
+              "commune": "Lille",
+              "sequence": 2,
+              "coordonnees": {
+                "latitude": 50.63959,
+                "longitude": 3.074136
+              },
+              "id": "lille-europe"
+            },
+            {
+              "stopId": "ROM021",
+              "nom": "Romarin",
+              "commune": "La Madeleine",
+              "sequence": 3,
+              "coordonnees": {
+                "latitude": 50.645896,
+                "longitude": 3.075626
+              },
+              "id": "romarin"
+            },
+            {
+              "stopId": "BOT001",
+              "nom": "Botanique",
+              "commune": "La Madeleine",
+              "sequence": 4,
+              "coordonnees": {
+                "latitude": 50.649238,
+                "longitude": 3.079188
+              },
+              "id": "botanique"
+            },
+            {
+              "stopId": "SMA001",
+              "nom": "Saint Maur",
+              "commune": "La Madeleine",
+              "sequence": 5,
+              "coordonnees": {
+                "latitude": 50.651903,
+                "longitude": 3.082008
+              },
+              "id": "saint-maur"
+            },
+            {
+              "stopId": "MAB021",
+              "nom": "Buisson",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 6,
+              "coordonnees": {
+                "latitude": 50.65683,
+                "longitude": 3.089122
+              },
+              "id": "buisson"
+            },
+            {
+              "stopId": "OSS001",
+              "nom": "Brossolette",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 7,
+              "coordonnees": {
+                "latitude": 50.660546,
+                "longitude": 3.094527
+              },
+              "id": "brossolette"
+            },
+            {
+              "stopId": "MCL031",
+              "nom": "Clemenceau Hippodrome",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 8,
+              "coordonnees": {
+                "latitude": 50.661995,
+                "longitude": 3.096637
+              },
+              "id": "clemenceau-hippodrome"
+            },
+            {
+              "stopId": "CRL021",
+              "nom": "Croisé Laroche",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 9,
+              "coordonnees": {
+                "latitude": 50.664626,
+                "longitude": 3.102012
+              },
+              "id": "croise-laroche"
+            },
+            {
+              "stopId": "ACA001",
+              "nom": "Acacias",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 10,
+              "coordonnees": {
+                "latitude": 50.664806,
+                "longitude": 3.110695
+              },
+              "id": "acacias"
+            },
+            {
+              "stopId": "PDW001",
+              "nom": "Pont De Wasquehal",
+              "commune": "Wasquehal",
+              "sequence": 11,
+              "coordonnees": {
+                "latitude": 50.664362,
+                "longitude": 3.118464
+              },
+              "id": "pont-de-wasquehal"
+            },
+            {
+              "stopId": "LAT001",
+              "nom": "La Terrasse",
+              "commune": "Wasquehal",
+              "sequence": 12,
+              "coordonnees": {
+                "latitude": 50.663907,
+                "longitude": 3.126628
+              },
+              "id": "la-terrasse"
+            },
+            {
+              "stopId": "PVL021",
+              "nom": "Wasquehal Pavé De Lille",
+              "commune": "Wasquehal",
+              "sequence": 13,
+              "coordonnees": {
+                "latitude": 50.663674,
+                "longitude": 3.130732
+              },
+              "id": "wasquehal-pave-de-lille"
+            },
+            {
+              "stopId": "SNO031",
+              "nom": "Le Sart",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 14,
+              "coordonnees": {
+                "latitude": 50.663187,
+                "longitude": 3.139446
+              },
+              "id": "le-sart"
+            },
+            {
+              "stopId": "PLE001",
+              "nom": "Planche Epinoy",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 15,
+              "coordonnees": {
+                "latitude": 50.664497,
+                "longitude": 3.146269
+              },
+              "id": "planche-epinoy"
+            },
+            {
+              "stopId": "ARQ001",
+              "nom": "La Marque",
+              "commune": "Croix",
+              "sequence": 16,
+              "coordonnees": {
+                "latitude": 50.666537,
+                "longitude": 3.149845
+              },
+              "id": "la-marque"
+            },
+            {
+              "stopId": "CLD001",
+              "nom": "Villa Cavrois",
+              "commune": "Croix",
+              "sequence": 17,
+              "coordonnees": {
+                "latitude": 50.6691,
+                "longitude": 3.154361
+              },
+              "id": "villa-cavrois"
+            },
+            {
+              "stopId": "BOA001",
+              "nom": "Bol D'Air",
+              "commune": "Roubaix",
+              "sequence": 18,
+              "coordonnees": {
+                "latitude": 50.672147,
+                "longitude": 3.156076
+              },
+              "id": "bol-d-air"
+            },
+            {
+              "stopId": "PBA021",
+              "nom": "Parc Barbieux",
+              "commune": "Roubaix",
+              "sequence": 19,
+              "coordonnees": {
+                "latitude": 50.678062,
+                "longitude": 3.162244
+              },
+              "id": "parc-barbieux"
+            },
+            {
+              "stopId": "BDC001",
+              "nom": "Hopital Victor Provo",
+              "commune": "Roubaix",
+              "sequence": 20,
+              "coordonnees": {
+                "latitude": 50.680986,
+                "longitude": 3.167657
+              },
+              "id": "hopital-victor-provo"
+            },
+            {
+              "stopId": "QUI021",
+              "nom": "Jean Moulin",
+              "commune": "Roubaix",
+              "sequence": 21,
+              "coordonnees": {
+                "latitude": 50.685062,
+                "longitude": 3.17237
+              },
+              "id": "jean-moulin"
+            },
+            {
+              "stopId": "MAM021",
+              "nom": "Alfred Mongy",
+              "commune": "Roubaix",
+              "sequence": 22,
+              "coordonnees": {
+                "latitude": 50.68785,
+                "longitude": 3.175353
+              },
+              "id": "alfred-mongy"
+            },
+            {
+              "stopId": "ROU122",
+              "nom": "Euroteleport",
+              "commune": "Roubaix",
+              "sequence": 23,
+              "coordonnees": {
+                "latitude": 50.691036,
+                "longitude": 3.178993
+              },
+              "id": "euroteleport"
+            }
+          ]
+        },
+        {
+          "directionId": "vers-lille",
+          "gtfsDirectionId": "1",
+          "trajetRepresentatifCount": 308,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "girouettes": [
+            {
+              "label": "Lille Gare Lille Flandres",
+              "count": 308
+            }
+          ],
+          "stations": [
+            {
+              "stopId": "ROU122",
+              "nom": "Euroteleport",
+              "commune": "Roubaix",
+              "sequence": 1,
+              "coordonnees": {
+                "latitude": 50.691036,
+                "longitude": 3.178993
+              },
+              "id": "euroteleport"
+            },
+            {
+              "stopId": "MAM032",
+              "nom": "Alfred Mongy",
+              "commune": "Roubaix",
+              "sequence": 2,
+              "coordonnees": {
+                "latitude": 50.687425,
+                "longitude": 3.174485
+              },
+              "id": "alfred-mongy"
+            },
+            {
+              "stopId": "QUI032",
+              "nom": "Jean Moulin",
+              "commune": "Roubaix",
+              "sequence": 3,
+              "coordonnees": {
+                "latitude": 50.684876,
+                "longitude": 3.172042
+              },
+              "id": "jean-moulin"
+            },
+            {
+              "stopId": "BDC012",
+              "nom": "Hopital Victor Provo",
+              "commune": "Roubaix",
+              "sequence": 4,
+              "coordonnees": {
+                "latitude": 50.681049,
+                "longitude": 3.167559
+              },
+              "id": "hopital-victor-provo"
+            },
+            {
+              "stopId": "PBA032",
+              "nom": "Parc Barbieux",
+              "commune": "Roubaix",
+              "sequence": 5,
+              "coordonnees": {
+                "latitude": 50.677537,
+                "longitude": 3.161543
+              },
+              "id": "parc-barbieux"
+            },
+            {
+              "stopId": "BOA012",
+              "nom": "Bol D'Air",
+              "commune": "Roubaix",
+              "sequence": 6,
+              "coordonnees": {
+                "latitude": 50.672665,
+                "longitude": 3.156452
+              },
+              "id": "bol-d-air"
+            },
+            {
+              "stopId": "CLD012",
+              "nom": "Villa Cavrois",
+              "commune": "Croix",
+              "sequence": 7,
+              "coordonnees": {
+                "latitude": 50.668648,
+                "longitude": 3.153408
+              },
+              "id": "villa-cavrois"
+            },
+            {
+              "stopId": "ARQ012",
+              "nom": "La Marque",
+              "commune": "Croix",
+              "sequence": 8,
+              "coordonnees": {
+                "latitude": 50.666103,
+                "longitude": 3.148934
+              },
+              "id": "la-marque"
+            },
+            {
+              "stopId": "PLE012",
+              "nom": "Planche Epinoy",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 9,
+              "coordonnees": {
+                "latitude": 50.664126,
+                "longitude": 3.145445
+              },
+              "id": "planche-epinoy"
+            },
+            {
+              "stopId": "SNO042",
+              "nom": "Le Sart",
+              "commune": "Villeneuve-d'Ascq",
+              "sequence": 10,
+              "coordonnees": {
+                "latitude": 50.66331,
+                "longitude": 3.13846
+              },
+              "id": "le-sart"
+            },
+            {
+              "stopId": "PVL032",
+              "nom": "Wasquehal Pavé De Lille",
+              "commune": "Wasquehal",
+              "sequence": 11,
+              "coordonnees": {
+                "latitude": 50.663797,
+                "longitude": 3.129689
+              },
+              "id": "wasquehal-pave-de-lille"
+            },
+            {
+              "stopId": "LAT012",
+              "nom": "La Terrasse",
+              "commune": "Wasquehal",
+              "sequence": 12,
+              "coordonnees": {
+                "latitude": 50.66404,
+                "longitude": 3.125445
+              },
+              "id": "la-terrasse"
+            },
+            {
+              "stopId": "PDW012",
+              "nom": "Pont De Wasquehal",
+              "commune": "Wasquehal",
+              "sequence": 13,
+              "coordonnees": {
+                "latitude": 50.664565,
+                "longitude": 3.116082
+              },
+              "id": "pont-de-wasquehal"
+            },
+            {
+              "stopId": "ACA012",
+              "nom": "Acacias",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 14,
+              "coordonnees": {
+                "latitude": 50.66493,
+                "longitude": 3.10944
+              },
+              "id": "acacias"
+            },
+            {
+              "stopId": "CRL032",
+              "nom": "Croisé Laroche",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 15,
+              "coordonnees": {
+                "latitude": 50.664663,
+                "longitude": 3.10197
+              },
+              "id": "croise-laroche"
+            },
+            {
+              "stopId": "MCL032",
+              "nom": "Clemenceau Hippodrome",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 16,
+              "coordonnees": {
+                "latitude": 50.661952,
+                "longitude": 3.096411
+              },
+              "id": "clemenceau-hippodrome"
+            },
+            {
+              "stopId": "OSS012",
+              "nom": "Brossolette",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 17,
+              "coordonnees": {
+                "latitude": 50.66012,
+                "longitude": 3.093772
+              },
+              "id": "brossolette"
+            },
+            {
+              "stopId": "MAB032",
+              "nom": "Buisson",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 18,
+              "coordonnees": {
+                "latitude": 50.656333,
+                "longitude": 3.088254
+              },
+              "id": "buisson"
+            },
+            {
+              "stopId": "SMA012",
+              "nom": "Saint Maur",
+              "commune": "La Madeleine",
+              "sequence": 19,
+              "coordonnees": {
+                "latitude": 50.651699,
+                "longitude": 3.081736
+              },
+              "id": "saint-maur"
+            },
+            {
+              "stopId": "BOT012",
+              "nom": "Botanique",
+              "commune": "La Madeleine",
+              "sequence": 20,
+              "coordonnees": {
+                "latitude": 50.64882,
+                "longitude": 3.078576
+              },
+              "id": "botanique"
+            },
+            {
+              "stopId": "ROM032",
+              "nom": "Romarin",
+              "commune": "La Madeleine",
+              "sequence": 21,
+              "coordonnees": {
+                "latitude": 50.645424,
+                "longitude": 3.074984
+              },
+              "id": "romarin"
+            },
+            {
+              "stopId": "EUR032",
+              "nom": "Lille Europe",
+              "commune": "Lille",
+              "sequence": 22,
+              "coordonnees": {
+                "latitude": 50.63959,
+                "longitude": 3.074136
+              },
+              "id": "lille-europe"
+            },
+            {
+              "stopId": "LIG022",
+              "nom": "Gare Lille Flandres",
+              "commune": "Lille",
+              "sequence": 23,
+              "coordonnees": {
+                "latitude": 50.636405,
+                "longitude": 3.071141
+              },
+              "id": "gare-lille-flandres"
+            }
+          ]
+        }
+      ],
+      "stationCount": 23,
+      "stationIds": [
+        "gare-lille-flandres",
+        "lille-europe",
+        "romarin",
+        "botanique",
+        "saint-maur",
+        "buisson",
+        "brossolette",
+        "clemenceau-hippodrome",
+        "croise-laroche",
+        "acacias",
+        "pont-de-wasquehal",
+        "la-terrasse",
+        "wasquehal-pave-de-lille",
+        "le-sart",
+        "planche-epinoy",
+        "la-marque",
+        "villa-cavrois",
+        "bol-d-air",
+        "parc-barbieux",
+        "hopital-victor-provo",
+        "jean-moulin",
+        "alfred-mongy",
+        "euroteleport"
+      ]
+    },
+    {
+      "id": "tourcoing",
+      "nom": "Branche Tourcoing",
+      "terminusPublic": "Tourcoing Centre",
+      "directions": [
+        {
+          "directionId": "vers-terminus",
+          "gtfsDirectionId": "0",
+          "trajetRepresentatifCount": 546,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "girouettes": [
+            {
+              "label": "Tourcoing Tourcoing Centre",
+              "count": 546
+            }
+          ],
+          "stations": [
+            {
+              "stopId": "LIG111",
+              "nom": "Gare Lille Flandres",
+              "commune": "Lille",
+              "sequence": 1,
+              "coordonnees": {
+                "latitude": 50.636405,
+                "longitude": 3.071141
+              },
+              "id": "gare-lille-flandres"
+            },
+            {
+              "stopId": "EUR021",
+              "nom": "Lille Europe",
+              "commune": "Lille",
+              "sequence": 2,
+              "coordonnees": {
+                "latitude": 50.63959,
+                "longitude": 3.074136
+              },
+              "id": "lille-europe"
+            },
+            {
+              "stopId": "ROM021",
+              "nom": "Romarin",
+              "commune": "La Madeleine",
+              "sequence": 3,
+              "coordonnees": {
+                "latitude": 50.645896,
+                "longitude": 3.075626
+              },
+              "id": "romarin"
+            },
+            {
+              "stopId": "BOT001",
+              "nom": "Botanique",
+              "commune": "La Madeleine",
+              "sequence": 4,
+              "coordonnees": {
+                "latitude": 50.649238,
+                "longitude": 3.079188
+              },
+              "id": "botanique"
+            },
+            {
+              "stopId": "SMA001",
+              "nom": "Saint Maur",
+              "commune": "La Madeleine",
+              "sequence": 5,
+              "coordonnees": {
+                "latitude": 50.651903,
+                "longitude": 3.082008
+              },
+              "id": "saint-maur"
+            },
+            {
+              "stopId": "MAB021",
+              "nom": "Buisson",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 6,
+              "coordonnees": {
+                "latitude": 50.65683,
+                "longitude": 3.089122
+              },
+              "id": "buisson"
+            },
+            {
+              "stopId": "OSS001",
+              "nom": "Brossolette",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 7,
+              "coordonnees": {
+                "latitude": 50.660546,
+                "longitude": 3.094527
+              },
+              "id": "brossolette"
+            },
+            {
+              "stopId": "MCL031",
+              "nom": "Clemenceau Hippodrome",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 8,
+              "coordonnees": {
+                "latitude": 50.661995,
+                "longitude": 3.096637
+              },
+              "id": "clemenceau-hippodrome"
+            },
+            {
+              "stopId": "CRL021",
+              "nom": "Croisé Laroche",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 9,
+              "coordonnees": {
+                "latitude": 50.664626,
+                "longitude": 3.102012
+              },
+              "id": "croise-laroche"
+            },
+            {
+              "stopId": "OCH021",
+              "nom": "Foch",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 10,
+              "coordonnees": {
+                "latitude": 50.666687,
+                "longitude": 3.103794
+              },
+              "id": "foch"
+            },
+            {
+              "stopId": "LQS001",
+              "nom": "Le Quesne",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 11,
+              "coordonnees": {
+                "latitude": 50.673503,
+                "longitude": 3.107004
+              },
+              "id": "le-quesne"
+            },
+            {
+              "stopId": "CDA001",
+              "nom": "Cerisaie C. D'Affaires",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 12,
+              "coordonnees": {
+                "latitude": 50.677242,
+                "longitude": 3.111438
+              },
+              "id": "cerisaie-c-d-affaires"
+            },
+            {
+              "stopId": "CTR021",
+              "nom": "Chateau Rouge",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 13,
+              "coordonnees": {
+                "latitude": 50.679627,
+                "longitude": 3.114453
+              },
+              "id": "chateau-rouge"
+            },
+            {
+              "stopId": "TEL001",
+              "nom": "Cartelot",
+              "commune": "Wasquehal",
+              "sequence": 14,
+              "coordonnees": {
+                "latitude": 50.683569,
+                "longitude": 3.119527
+              },
+              "id": "cartelot"
+            },
+            {
+              "stopId": "GDC001",
+              "nom": "Grand Cottignies",
+              "commune": "Wasquehal",
+              "sequence": 15,
+              "coordonnees": {
+                "latitude": 50.687305,
+                "longitude": 3.124414
+              },
+              "id": "grand-cottignies"
+            },
+            {
+              "stopId": "TRI021",
+              "nom": "Triez",
+              "commune": "Mouvaux",
+              "sequence": 16,
+              "coordonnees": {
+                "latitude": 50.692767,
+                "longitude": 3.131547
+              },
+              "id": "triez"
+            },
+            {
+              "stopId": "3SU021",
+              "nom": "Trois Suisses",
+              "commune": "Mouvaux",
+              "sequence": 17,
+              "coordonnees": {
+                "latitude": 50.699293,
+                "longitude": 3.139065
+              },
+              "id": "trois-suisses"
+            },
+            {
+              "stopId": "DAI001",
+              "nom": "Faidherbe",
+              "commune": "Mouvaux",
+              "sequence": 18,
+              "coordonnees": {
+                "latitude": 50.703769,
+                "longitude": 3.143163
+              },
+              "id": "faidherbe"
+            },
+            {
+              "stopId": "CAM021",
+              "nom": "Ma Campagne",
+              "commune": "Tourcoing",
+              "sequence": 19,
+              "coordonnees": {
+                "latitude": 50.71,
+                "longitude": 3.153307
+              },
+              "id": "ma-campagne"
+            },
+            {
+              "stopId": "PHY001",
+              "nom": "Pont Hydraulique",
+              "commune": "Tourcoing",
+              "sequence": 20,
+              "coordonnees": {
+                "latitude": 50.712582,
+                "longitude": 3.156203
+              },
+              "id": "pont-hydraulique"
+            },
+            {
+              "stopId": "ICT021",
+              "nom": "Victoire",
+              "commune": "Tourcoing",
+              "sequence": 21,
+              "coordonnees": {
+                "latitude": 50.71776,
+                "longitude": 3.157093
+              },
+              "id": "victoire"
+            },
+            {
+              "stopId": "TOU202",
+              "nom": "Tourcoing Centre",
+              "commune": "Tourcoing",
+              "sequence": 22,
+              "coordonnees": {
+                "latitude": 50.72086,
+                "longitude": 3.15891
+              },
+              "id": "tourcoing-centre"
+            }
+          ]
+        },
+        {
+          "directionId": "vers-lille",
+          "gtfsDirectionId": "1",
+          "trajetRepresentatifCount": 297,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "girouettes": [
+            {
+              "label": "Lille Gare Lille Flandres",
+              "count": 297
+            }
+          ],
+          "stations": [
+            {
+              "stopId": "TOU202",
+              "nom": "Tourcoing Centre",
+              "commune": "Tourcoing",
+              "sequence": 1,
+              "coordonnees": {
+                "latitude": 50.72086,
+                "longitude": 3.15891
+              },
+              "id": "tourcoing-centre"
+            },
+            {
+              "stopId": "ICT032",
+              "nom": "Victoire",
+              "commune": "Tourcoing",
+              "sequence": 2,
+              "coordonnees": {
+                "latitude": 50.717779,
+                "longitude": 3.156966
+              },
+              "id": "victoire"
+            },
+            {
+              "stopId": "PHY012",
+              "nom": "Pont Hydraulique",
+              "commune": "Tourcoing",
+              "sequence": 3,
+              "coordonnees": {
+                "latitude": 50.712618,
+                "longitude": 3.156076
+              },
+              "id": "pont-hydraulique"
+            },
+            {
+              "stopId": "CAM032",
+              "nom": "Ma Campagne",
+              "commune": "Tourcoing",
+              "sequence": 4,
+              "coordonnees": {
+                "latitude": 50.709592,
+                "longitude": 3.152509
+              },
+              "id": "ma-campagne"
+            },
+            {
+              "stopId": "DAI012",
+              "nom": "Faidherbe",
+              "commune": "Mouvaux",
+              "sequence": 5,
+              "coordonnees": {
+                "latitude": 50.703371,
+                "longitude": 3.142323
+              },
+              "id": "faidherbe"
+            },
+            {
+              "stopId": "3SU032",
+              "nom": "Trois Suisses",
+              "commune": "Mouvaux",
+              "sequence": 6,
+              "coordonnees": {
+                "latitude": 50.69875,
+                "longitude": 3.138393
+              },
+              "id": "trois-suisses"
+            },
+            {
+              "stopId": "TRI032",
+              "nom": "Triez",
+              "commune": "Mouvaux",
+              "sequence": 7,
+              "coordonnees": {
+                "latitude": 50.692359,
+                "longitude": 3.130834
+              },
+              "id": "triez"
+            },
+            {
+              "stopId": "GDC012",
+              "nom": "Grand Cottignies",
+              "commune": "Wasquehal",
+              "sequence": 8,
+              "coordonnees": {
+                "latitude": 50.686817,
+                "longitude": 3.12363
+              },
+              "id": "grand-cottignies"
+            },
+            {
+              "stopId": "TEL012",
+              "nom": "Cartelot",
+              "commune": "Wasquehal",
+              "sequence": 9,
+              "coordonnees": {
+                "latitude": 50.683597,
+                "longitude": 3.119414
+              },
+              "id": "cartelot"
+            },
+            {
+              "stopId": "CTR032",
+              "nom": "Chateau Rouge",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 10,
+              "coordonnees": {
+                "latitude": 50.679673,
+                "longitude": 3.114369
+              },
+              "id": "chateau-rouge"
+            },
+            {
+              "stopId": "CDA012",
+              "nom": "Cerisaie C. D'Affaires",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 11,
+              "coordonnees": {
+                "latitude": 50.677288,
+                "longitude": 3.111368
+              },
+              "id": "cerisaie-c-d-affaires"
+            },
+            {
+              "stopId": "LQS012",
+              "nom": "Le Quesne",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 12,
+              "coordonnees": {
+                "latitude": 50.672906,
+                "longitude": 3.106345
+              },
+              "id": "le-quesne"
+            },
+            {
+              "stopId": "OCH032",
+              "nom": "Foch",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 13,
+              "coordonnees": {
+                "latitude": 50.665999,
+                "longitude": 3.103501
+              },
+              "id": "foch"
+            },
+            {
+              "stopId": "CRL032",
+              "nom": "Croisé Laroche",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 14,
+              "coordonnees": {
+                "latitude": 50.664663,
+                "longitude": 3.10197
+              },
+              "id": "croise-laroche"
+            },
+            {
+              "stopId": "MCL032",
+              "nom": "Clemenceau Hippodrome",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 15,
+              "coordonnees": {
+                "latitude": 50.661952,
+                "longitude": 3.096411
+              },
+              "id": "clemenceau-hippodrome"
+            },
+            {
+              "stopId": "OSS012",
+              "nom": "Brossolette",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 16,
+              "coordonnees": {
+                "latitude": 50.66012,
+                "longitude": 3.093772
+              },
+              "id": "brossolette"
+            },
+            {
+              "stopId": "MAB032",
+              "nom": "Buisson",
+              "commune": "Marcq-en-Barœul",
+              "sequence": 17,
+              "coordonnees": {
+                "latitude": 50.656333,
+                "longitude": 3.088254
+              },
+              "id": "buisson"
+            },
+            {
+              "stopId": "SMA012",
+              "nom": "Saint Maur",
+              "commune": "La Madeleine",
+              "sequence": 18,
+              "coordonnees": {
+                "latitude": 50.651699,
+                "longitude": 3.081736
+              },
+              "id": "saint-maur"
+            },
+            {
+              "stopId": "BOT012",
+              "nom": "Botanique",
+              "commune": "La Madeleine",
+              "sequence": 19,
+              "coordonnees": {
+                "latitude": 50.64882,
+                "longitude": 3.078576
+              },
+              "id": "botanique"
+            },
+            {
+              "stopId": "ROM032",
+              "nom": "Romarin",
+              "commune": "La Madeleine",
+              "sequence": 20,
+              "coordonnees": {
+                "latitude": 50.645424,
+                "longitude": 3.074984
+              },
+              "id": "romarin"
+            },
+            {
+              "stopId": "EUR032",
+              "nom": "Lille Europe",
+              "commune": "Lille",
+              "sequence": 21,
+              "coordonnees": {
+                "latitude": 50.63959,
+                "longitude": 3.074136
+              },
+              "id": "lille-europe"
+            },
+            {
+              "stopId": "LIG022",
+              "nom": "Gare Lille Flandres",
+              "commune": "Lille",
+              "sequence": 22,
+              "coordonnees": {
+                "latitude": 50.636405,
+                "longitude": 3.071141
+              },
+              "id": "gare-lille-flandres"
+            }
+          ]
+        }
+      ],
+      "stationCount": 22,
+      "stationIds": [
+        "gare-lille-flandres",
+        "lille-europe",
+        "romarin",
+        "botanique",
+        "saint-maur",
+        "buisson",
+        "brossolette",
+        "clemenceau-hippodrome",
+        "croise-laroche",
+        "foch",
+        "le-quesne",
+        "cerisaie-c-d-affaires",
+        "chateau-rouge",
+        "cartelot",
+        "grand-cottignies",
+        "triez",
+        "trois-suisses",
+        "faidherbe",
+        "ma-campagne",
+        "pont-hydraulique",
+        "victoire",
+        "tourcoing-centre"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "euroteleport",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Euroteleport",
+      "nomTechnique": "Euroteleport",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.691036,
+        "longitude": 3.178993
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "ROU122"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 1,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": true
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 23,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": true
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Roubaix.",
+        "Je suis un terminus du tramway."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "alfred-mongy",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Alfred Mongy",
+      "nomTechnique": "Alfred Mongy",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.687637,
+        "longitude": 3.174919
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "MAM021",
+          "MAM032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 2,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 22,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "jean-moulin",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Jean Moulin",
+      "nomTechnique": "Jean Moulin",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.684969,
+        "longitude": 3.172206
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "QUI021",
+          "QUI032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 3,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 21,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "hopital-victor-provo",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Hopital Victor Provo",
+      "nomTechnique": "Hopital Victor Provo",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.681017,
+        "longitude": 3.167608
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "BDC001",
+          "BDC012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 4,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 20,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "parc-barbieux",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Parc Barbieux",
+      "nomTechnique": "Parc Barbieux",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.677799,
+        "longitude": 3.161893
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "PBA021",
+          "PBA032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 5,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 19,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "bol-d-air",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Bol D'Air",
+      "nomTechnique": "Bol D'Air",
+      "commune": "Roubaix",
+      "communes": [
+        "Roubaix"
+      ],
+      "coordonnees": {
+        "latitude": 50.672406,
+        "longitude": 3.156264
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "BOA001",
+          "BOA012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 6,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 18,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Roubaix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "villa-cavrois",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Villa Cavrois",
+      "nomTechnique": "Villa Cavrois",
+      "commune": "Croix",
+      "communes": [
+        "Croix"
+      ],
+      "coordonnees": {
+        "latitude": 50.668874,
+        "longitude": 3.153885
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "CLD001",
+          "CLD012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 7,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 17,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Croix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "la-marque",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "La Marque",
+      "nomTechnique": "La Marque",
+      "commune": "Croix",
+      "communes": [
+        "Croix"
+      ],
+      "coordonnees": {
+        "latitude": 50.66632,
+        "longitude": 3.149389
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "ARQ001",
+          "ARQ012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 8,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 16,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Croix."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "planche-epinoy",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Planche Epinoy",
+      "nomTechnique": "Planche Epinoy",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.664311,
+        "longitude": 3.145857
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "PLE001",
+          "PLE012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 9,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 15,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Villeneuve-d'Ascq."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "le-sart",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Le Sart",
+      "nomTechnique": "Le Sart",
+      "commune": "Villeneuve-d'Ascq",
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "coordonnees": {
+        "latitude": 50.663249,
+        "longitude": 3.138953
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "SNO031",
+          "SNO042"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 10,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 14,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Villeneuve-d'Ascq."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "wasquehal-pave-de-lille",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Wasquehal Pavé De Lille",
+      "nomTechnique": "Wasquehal Pavé De Lille",
+      "commune": "Wasquehal",
+      "communes": [
+        "Wasquehal"
+      ],
+      "coordonnees": {
+        "latitude": 50.663736,
+        "longitude": 3.130211
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "PVL021",
+          "PVL032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 11,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 13,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Wasquehal."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "la-terrasse",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "La Terrasse",
+      "nomTechnique": "La Terrasse",
+      "commune": "Wasquehal",
+      "communes": [
+        "Wasquehal"
+      ],
+      "coordonnees": {
+        "latitude": 50.663973,
+        "longitude": 3.126037
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "LAT001",
+          "LAT012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 12,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 12,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Wasquehal."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "pont-de-wasquehal",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Pont De Wasquehal",
+      "nomTechnique": "Pont De Wasquehal",
+      "commune": "Wasquehal",
+      "communes": [
+        "Wasquehal"
+      ],
+      "coordonnees": {
+        "latitude": 50.664463,
+        "longitude": 3.117273
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "PDW001",
+          "PDW012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 13,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 11,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Wasquehal."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "acacias",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Acacias",
+      "nomTechnique": "Acacias",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.664868,
+        "longitude": 3.110068
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "ACA001",
+          "ACA012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 14,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 10,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche roubaix.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "croise-laroche",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Croisé Laroche",
+      "nomTechnique": "Croisé Laroche",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.664644,
+        "longitude": 3.101991
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "CRL021",
+          "CRL032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 15,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 9,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 14,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 9,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "clemenceau-hippodrome",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Clemenceau Hippodrome",
+      "nomTechnique": "Clemenceau Hippodrome",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.661974,
+        "longitude": 3.096524
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "MCL031",
+          "MCL032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 16,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 8,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 15,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 8,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "brossolette",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Brossolette",
+      "nomTechnique": "Brossolette",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.660333,
+        "longitude": 3.094149
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "OSS001",
+          "OSS012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 17,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 7,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 16,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 7,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "buisson",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Buisson",
+      "nomTechnique": "Buisson",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.656581,
+        "longitude": 3.088688
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "MAB021",
+          "MAB032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 18,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 6,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 17,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 6,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "saint-maur",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Saint Maur",
+      "nomTechnique": "Saint Maur",
+      "commune": "La Madeleine",
+      "communes": [
+        "La Madeleine"
+      ],
+      "coordonnees": {
+        "latitude": 50.651801,
+        "longitude": 3.081872
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "SMA001",
+          "SMA012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 19,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 5,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 18,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 5,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à La Madeleine."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "botanique",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Botanique",
+      "nomTechnique": "Botanique",
+      "commune": "La Madeleine",
+      "communes": [
+        "La Madeleine"
+      ],
+      "coordonnees": {
+        "latitude": 50.649029,
+        "longitude": 3.078882
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "BOT001",
+          "BOT012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 20,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 4,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 19,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 4,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à La Madeleine."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "romarin",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Romarin",
+      "nomTechnique": "Romarin",
+      "commune": "La Madeleine",
+      "communes": [
+        "La Madeleine"
+      ],
+      "coordonnees": {
+        "latitude": 50.64566,
+        "longitude": 3.075305
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "ROM021",
+          "ROM032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 21,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 3,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 20,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 3,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à La Madeleine."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "lille-europe",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Lille Europe",
+      "nomTechnique": "Lille Europe",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.63959,
+        "longitude": 3.074136
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "EUR021",
+          "EUR032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 22,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 2,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 21,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 2,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à Lille."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "gare-lille-flandres",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Gare Lille Flandres",
+      "nomTechnique": "Gare Lille Flandres",
+      "commune": "Lille",
+      "communes": [
+        "Lille"
+      ],
+      "coordonnees": {
+        "latitude": 50.636405,
+        "longitude": 3.071141
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "roubaix",
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Roubaix",
+        "Branche Tourcoing"
+      ],
+      "troncCommun": true,
+      "identifiants": {
+        "gtfsStopIds": [
+          "LIG011",
+          "LIG022",
+          "LIG111"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-lille",
+          "sequence": 23,
+          "terminusDepart": "Euroteleport",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": true
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "roubaix",
+          "branchName": "Branche Roubaix",
+          "directionId": "vers-terminus",
+          "sequence": 1,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Euroteleport",
+          "isTerminus": true
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 22,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": true
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 1,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": true
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur le tronc commun des deux branches du tramway.",
+        "Je suis située à Lille.",
+        "Je suis un terminus du tramway."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "tourcoing-centre",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Tourcoing Centre",
+      "nomTechnique": "Tourcoing Centre",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.72086,
+        "longitude": 3.15891
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "TOU202"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 1,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": true
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 22,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": true
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Tourcoing.",
+        "Je suis un terminus du tramway."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "victoire",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Victoire",
+      "nomTechnique": "Victoire",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.71777,
+        "longitude": 3.15703
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "ICT021",
+          "ICT032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 2,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 21,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "pont-hydraulique",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Pont Hydraulique",
+      "nomTechnique": "Pont Hydraulique",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.7126,
+        "longitude": 3.15614
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "PHY001",
+          "PHY012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 3,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 20,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "ma-campagne",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Ma Campagne",
+      "nomTechnique": "Ma Campagne",
+      "commune": "Tourcoing",
+      "communes": [
+        "Tourcoing"
+      ],
+      "coordonnees": {
+        "latitude": 50.709796,
+        "longitude": 3.152908
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "CAM021",
+          "CAM032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 4,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 19,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Tourcoing."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "faidherbe",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Faidherbe",
+      "nomTechnique": "Faidherbe",
+      "commune": "Mouvaux",
+      "communes": [
+        "Mouvaux"
+      ],
+      "coordonnees": {
+        "latitude": 50.70357,
+        "longitude": 3.142743
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "DAI001",
+          "DAI012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 5,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 18,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Mouvaux."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "trois-suisses",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Trois Suisses",
+      "nomTechnique": "Trois Suisses",
+      "commune": "Mouvaux",
+      "communes": [
+        "Mouvaux"
+      ],
+      "coordonnees": {
+        "latitude": 50.699022,
+        "longitude": 3.138729
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "3SU021",
+          "3SU032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 6,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 17,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Mouvaux."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "triez",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Triez",
+      "nomTechnique": "Triez",
+      "commune": "Mouvaux",
+      "communes": [
+        "Mouvaux"
+      ],
+      "coordonnees": {
+        "latitude": 50.692563,
+        "longitude": 3.13119
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "TRI021",
+          "TRI032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 7,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 16,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Mouvaux."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "grand-cottignies",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Grand Cottignies",
+      "nomTechnique": "Grand Cottignies",
+      "commune": "Wasquehal",
+      "communes": [
+        "Wasquehal"
+      ],
+      "coordonnees": {
+        "latitude": 50.687061,
+        "longitude": 3.124022
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "GDC001",
+          "GDC012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 8,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 15,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Wasquehal."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "cartelot",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Cartelot",
+      "nomTechnique": "Cartelot",
+      "commune": "Wasquehal",
+      "communes": [
+        "Wasquehal"
+      ],
+      "coordonnees": {
+        "latitude": 50.683583,
+        "longitude": 3.119471
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "TEL001",
+          "TEL012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 9,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 14,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Wasquehal."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "chateau-rouge",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Chateau Rouge",
+      "nomTechnique": "Chateau Rouge",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.67965,
+        "longitude": 3.114411
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "CTR021",
+          "CTR032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 10,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 13,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "cerisaie-c-d-affaires",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Cerisaie C. D'Affaires",
+      "nomTechnique": "Cerisaie C. D'Affaires",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.677265,
+        "longitude": 3.111403
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "CDA001",
+          "CDA012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 11,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 12,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "le-quesne",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Le Quesne",
+      "nomTechnique": "Le Quesne",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.673204,
+        "longitude": 3.106675
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "LQS001",
+          "LQS012"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 12,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 11,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "foch",
+      "type": "tramway",
+      "niveau": "tramway",
+      "nom": "Foch",
+      "nomTechnique": "Foch",
+      "commune": "Marcq-en-Barœul",
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "coordonnees": {
+        "latitude": 50.666343,
+        "longitude": 3.103648
+      },
+      "ligne": "TRAM",
+      "branches": [
+        "tourcoing"
+      ],
+      "brancheLibelles": [
+        "Branche Tourcoing"
+      ],
+      "troncCommun": false,
+      "identifiants": {
+        "gtfsStopIds": [
+          "OCH021",
+          "OCH032"
+        ]
+      },
+      "accessibilite": {
+        "wheelchairBoarding": 1
+      },
+      "positions": [
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-lille",
+          "sequence": 13,
+          "terminusDepart": "Tourcoing Centre",
+          "terminusArrivee": "Gare Lille Flandres",
+          "isTerminus": false
+        },
+        {
+          "ligne": "TRAM",
+          "branchId": "tourcoing",
+          "branchName": "Branche Tourcoing",
+          "directionId": "vers-terminus",
+          "sequence": 10,
+          "terminusDepart": "Gare Lille Flandres",
+          "terminusArrivee": "Tourcoing Centre",
+          "isTerminus": false
+        }
+      ],
+      "indicesTechniques": [
+        "Je suis une station du tramway Ilévia.",
+        "Je suis sur la branche tourcoing.",
+        "Je suis située à Marcq-en-Barœul."
+      ],
+      "ficheDecouverte": {
+        "statut": "a-enrichir",
+        "description": null,
+        "origineNom": null,
+        "personnaliteAssociee": null,
+        "histoire": null,
+        "oeuvreArt": null,
+        "architecture": null,
+        "anecdote": null,
+        "particularites": [],
+        "sourceIds": []
+      },
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    }
+  ]
+}

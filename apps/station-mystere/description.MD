@@ -33,9 +33,9 @@ Les indices peuvent porter sur :
 
 En cas de défaite, la réponse est révélée immédiatement avec une fiche découverte afin de conserver la dimension documentaire du jeu.
 
-## Les trois coupes
+## Les quatre paliers
 
-Le jeu est organisé en trois épreuves quotidiennes.
+Le jeu est organisé en quatre épreuves quotidiennes.
 
 ### 🥉 Coupe de Bronze — Métro Mystère
 
@@ -43,13 +43,19 @@ Le joueur doit retrouver une station du métro lillois.
 
 Le corpus est limité aux stations des lignes 1 et 2.
 
-### 🥈 Coupe d'Argent — Vélo Mystère
+### 🥈 Coupe d'Argent — Tramway Mystère
+
+Le joueur doit retrouver une station du tramway lillois.
+
+Le corpus couvre la ligne de tramway Ilévia et ses deux branches principales vers Roubaix et Tourcoing.
+
+### 🥇 Coupe d'Or — Vélo Mystère
 
 Le joueur doit retrouver une station V'Lille.
 
 Le corpus doit être filtré et relu afin de conserver des stations réellement identifiables par des indices.
 
-### 🥇 Coupe d'Or — Bus Mystère
+### 💎 Coupe de Platine — Bus Mystère
 
 Le joueur doit retrouver une ligne de bus du réseau Ilévia.
 
@@ -63,7 +69,8 @@ Le joueur peut remporter :
 
 - la Coupe de Bronze ;
 - la Coupe d'Argent ;
-- la Coupe d'Or.
+- la Coupe d'Or ;
+- la Coupe de Platine.
 
 Les résultats sont conservés localement dans le navigateur afin de suivre sa progression au fil du temps.
 

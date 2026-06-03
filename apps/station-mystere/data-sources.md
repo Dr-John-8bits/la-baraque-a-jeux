@@ -106,7 +106,54 @@ Limites identifiées :
 
 ---
 
-# Niveau 2 — Vélo Mystère
+# Niveau 2 — Tramway Mystère
+
+## Source principale
+
+GTFS Ilévia.
+
+Même source que pour le métro.
+
+## Objectif
+
+Construire une première base documentaire complète des stations du tramway lillois.
+
+La réponse attendue dans Tramway Mystère est une station de tramway.
+
+Le tramway Ilévia est exposé dans le GTFS comme une seule route `TRAM`, avec deux branches principales :
+
+- branche Roubaix, terminus Eurotéléport ;
+- branche Tourcoing, terminus Tourcoing Centre.
+
+## État d'avancement
+
+Socle technique généré le 3 juin 2026.
+
+Livrable créé :
+
+- `packages/corpus/station-mystere/tram-stations.json`
+
+Résultat :
+
+- 1 ligne tramway ;
+- 2 branches principales ;
+- 36 stations jouables ;
+- 23 stations sur la branche Roubaix ;
+- 22 stations sur la branche Tourcoing ;
+- 9 stations sur le tronc commun ;
+- 3 terminus identifiés : Gare Lille Flandres, Eurotéléport et Tourcoing Centre ;
+- 26 parcours GTFS distincts détectés, dont 4 parcours représentatifs retenus pour structurer les branches.
+
+Limites identifiées :
+
+- le GTFS contient des variantes de service et des terminus partiels, notamment Brossolette, Buisson, Croisé Laroche et Victoire ;
+- Gare Lille Flandres apparaît deux fois dans certains parcours GTFS et doit rester une seule station jouable ;
+- les libellés viennent du GTFS et doivent être relus pour les accents, la casse et les abréviations ;
+- les champs culturels, historiques et patrimoniaux restent à enrichir avec des sources éditoriales.
+
+---
+
+# Niveau 3 — Vélo Mystère
 
 ## Source principale
 
@@ -184,7 +231,7 @@ Limites identifiées :
 
 ---
 
-# Niveau 3 — Bus Mystère
+# Niveau 4 — Bus Mystère
 
 ## Source principale
 
@@ -271,7 +318,7 @@ Ces sources servent à enrichir les données techniques avec du contenu culturel
 
 # Types d'informations recherchées
 
-Pour chaque station ou lieu, rechercher lorsque c'est possible :
+Pour chaque station, ligne ou lieu, rechercher lorsque c'est possible :
 
 - origine du nom ;
 - personnalité associée ;
@@ -328,7 +375,17 @@ Générer le corpus technique Métro Mystère :
 npm run build:station-metro
 ```
 
-## Niveau 2 — Vélo Mystère
+## Niveau 2 — Tramway Mystère
+
+Le corpus tramway réutilise le GTFS Ilévia et le GeoJSON dataMEL déjà téléchargés pour le niveau Métro.
+
+Générer le corpus technique Tramway Mystère :
+
+```bash
+npm run build:station-tram
+```
+
+## Niveau 3 — Vélo Mystère
 
 Vérifier la disponibilité de l'index GBFS V'Lille :
 
@@ -372,7 +429,7 @@ Générer le corpus technique Vélo Mystère :
 npm run build:station-vlille
 ```
 
-## Niveau 3 — Bus Mystère
+## Niveau 4 — Bus Mystère
 
 Le corpus bus réutilise le GTFS Ilévia et le GeoJSON dataMEL déjà téléchargés pour le niveau Métro.
 
@@ -445,6 +502,34 @@ Décision :
 - marquer les stations douteuses avec `eligibiliteJeu.statut: "a-verifier"` ;
 - conserver les fiches découverte en statut `a-enrichir` jusqu'au travail éditorial.
 
+## 3 juin 2026 — Première base technique tramway
+
+Le tramway a été extrait depuis le GTFS Ilévia.
+
+Avant extraction, la disponibilité du GTFS a été revérifiée le 3 juin 2026.
+
+L'en-tête HTTP indiquait :
+
+- `Last-Modified: Tue, 02 Jun 2026 23:18:48 GMT`
+- `Content-Length: 7391679`
+
+Constats :
+
+- le GTFS expose le tramway comme une seule route de type tramway (`route_type=0`) ;
+- la route porte l'identifiant `71`, le nom court `TRAM` et la description `LILLE <> ROUBAIX / TOURCOING` ;
+- les deux branches principales doivent être reconstruites à partir des parcours et des terminus ;
+- les parcours représentatifs principaux sont Gare Lille Flandres → Eurotéléport et Gare Lille Flandres → Tourcoing Centre, avec leurs retours vers Gare Lille Flandres ;
+- le corpus technique contient 36 stations jouables ;
+- 9 stations appartiennent au tronc commun des deux branches ;
+- Gare Lille Flandres est présente comme doublon technique dans certains parcours, mais doit être regroupée en une seule réponse jouable.
+
+Décision :
+
+- versionner le corpus propre dans `packages/corpus/station-mystere/tram-stations.json` ;
+- représenter le tramway comme une ligne avec deux branches principales ;
+- utiliser les branches, terminus et stations du tronc commun comme indices techniques ;
+- laisser les fiches découverte en statut `a-enrichir` tant que les informations éditoriales ne sont pas sourcées.
+
 ## 2 juin 2026 — Première base technique bus
 
 Le réseau bus a été extrait depuis le GTFS Ilévia rafraîchi le 2 juin 2026.
@@ -452,7 +537,7 @@ Le réseau bus a été extrait depuis le GTFS Ilévia rafraîchi le 2 juin 2026.
 Constats :
 
 - le GTFS expose 143 lignes de type bus (`route_type=3`) ;
-- le réseau bus est nettement plus dense que les niveaux Métro et V'Lille ;
+- le réseau bus est nettement plus dense que les niveaux Métro, Tramway et V'Lille ;
 - les 143 lignes incluent les lignes régulières, lianes, corolles, citadines, Résa, scolaires, nuit et spéciales ;
 - 626 parcours distincts sont présents dans les horaires, certaines lignes ayant de nombreuses variantes ;
 - les arrêts techniques GTFS doivent être regroupés pour éviter de traiter séparément les quais, sens ou variantes très proches ;
@@ -469,5 +554,6 @@ Décision :
 Décision de gameplay :
 
 - le niveau 1 demande de deviner une station de métro ;
-- le niveau 2 demande de deviner une station V'Lille ;
-- le niveau 3 demande de deviner une ligne de bus.
+- le niveau 2 demande de deviner une station de tramway ;
+- le niveau 3 demande de deviner une station V'Lille ;
+- le niveau 4 demande de deviner une ligne de bus.

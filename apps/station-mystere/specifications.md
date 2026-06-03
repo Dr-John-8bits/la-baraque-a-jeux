@@ -6,13 +6,14 @@
 
 Le joueur doit identifier des stations ou lignes liées aux transports de la métropole lilloise à partir d'indices progressifs.
 
-Chaque jour, trois énigmes sont proposées.
+Chaque jour, quatre énigmes sont proposées.
 
 - 🥉 Métro Mystère
-- 🥈 Vélo Mystère
-- 🥇 Bus Mystère
+- 🥈 Tramway Mystère
+- 🥇 Vélo Mystère
+- 💎 Bus Mystère
 
-Les trois énigmes sont indépendantes mais partagent le même moteur de jeu.
+Les quatre énigmes sont indépendantes mais partagent le même moteur de jeu.
 
 ---
 
@@ -25,6 +26,12 @@ Le moteur doit gérer plusieurs types de réponses.
 - Type de réponse : station de métro.
 - Source technique : `packages/corpus/station-mystere/metro-stations.json`.
 - Périmètre initial : stations des lignes M1 et M2.
+
+### Tramway Mystère
+
+- Type de réponse : station de tramway.
+- Source technique : `packages/corpus/station-mystere/tram-stations.json`.
+- Périmètre initial : 36 stations de la ligne de tramway Ilévia, branches Roubaix et Tourcoing incluses.
 
 ### Vélo Mystère
 
@@ -131,11 +138,18 @@ Une liste de suggestions est affichée lors de la saisie afin d'éviter les faut
 🥈 Coupe d'Argent
 
 - Métro Mystère réussi.
-- Vélo Mystère réussi.
+- Tramway Mystère réussi.
 
 🥇 Coupe d'Or
 
 - Métro Mystère réussi.
+- Tramway Mystère réussi.
+- Vélo Mystère réussi.
+
+💎 Coupe de Platine
+
+- Métro Mystère réussi.
+- Tramway Mystère réussi.
 - Vélo Mystère réussi.
 - Bus Mystère réussi.
 

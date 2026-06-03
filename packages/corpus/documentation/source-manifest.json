@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-01",
-  "description": "Manifest des sources brutes telechargees pour le corpus documentaire des deux jeux.",
+  "generatedAt": "2026-06-03",
+  "description": "Manifest des sources brutes telechargees pour le corpus documentaire du portail.",
   "sources": [
     {
       "id": "gtfs-ilevia-data-gouv",
@@ -13,7 +13,7 @@
         "raw/transport/ilevia-gtfs.zip",
         "raw/transport/ilevia-gtfs/"
       ],
-      "usage": "Arrets ordonnes par ligne, terminus, correspondances potentielles et familles transport."
+      "usage": "Arrets ordonnes par ligne, stations metro et tramway, terminus, correspondances potentielles et familles transport."
     },
     {
       "id": "ilevia-arret-point-datamel",
@@ -23,7 +23,7 @@
       "url": "https://data.lillemetropole.fr/geoserver/ogc/features/v1/collections/dsp_ilevia:arret_point/items",
       "metadataPath": "raw/data-gouv/ilevia-gtfs.metadata.json",
       "localPaths": ["raw/transport/ilevia-arret-point.geojson"],
-      "usage": "Rattachement des arrets et stations aux communes."
+      "usage": "Rattachement des arrets et stations metro, tramway et bus aux communes."
     },
     {
       "id": "gbfs-vlille-ilevia",

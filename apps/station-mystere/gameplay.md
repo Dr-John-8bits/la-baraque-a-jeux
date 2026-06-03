@@ -4,15 +4,16 @@
 
 ## Principe général
 
-Station Mystère est un jeu quotidien en trois niveaux.
+Station Mystère est un jeu quotidien en quatre niveaux.
 
 Le joueur doit identifier successivement :
 
 1. une station de métro ;
-2. une station V'Lille ;
-3. une ligne de bus.
+2. une station de tramway ;
+3. une station V'Lille ;
+4. une ligne de bus.
 
-La progression est linéaire : le niveau 2 n'est accessible qu'après avoir réussi le niveau 1, et le niveau 3 n'est accessible qu'après avoir réussi le niveau 2.
+La progression est linéaire : chaque niveau n'est accessible qu'après avoir réussi le niveau précédent.
 
 ---
 
@@ -24,7 +25,15 @@ La réponse attendue est le nom canonique d'une station de métro.
 
 Le socle technique actuel contient les 60 stations des lignes M1 et M2, avec les correspondances et homonymies à traiter éditorialement.
 
-### Niveau 2 — Vélo Mystère
+### Niveau 2 — Tramway Mystère
+
+La réponse attendue est le nom canonique d'une station de tramway.
+
+Le socle technique actuel contient les 36 stations du tramway Ilévia, réparties entre la branche Roubaix, la branche Tourcoing et le tronc commun.
+
+Le tramway est plus difficile que le métro parce que les noms sont moins immédiatement connus, mais le corpus reste assez compact pour former un niveau intermédiaire.
+
+### Niveau 3 — Vélo Mystère
 
 La réponse attendue est le nom canonique d'une station V'Lille.
 
@@ -32,7 +41,7 @@ Le niveau doit s'appuyer sur les stations candidates du corpus V'Lille, après r
 
 Les équipements cyclables remarquables peuvent enrichir les indices ou les fiches découverte, mais ne sont pas des réponses du MVP.
 
-### Niveau 3 — Bus Mystère
+### Niveau 4 — Bus Mystère
 
 La réponse attendue est une ligne de bus, par exemple son code public ou son nom d'usage.
 
@@ -156,15 +165,17 @@ Ce choix évite la frustration et maintient l'ambition documentaire de Station M
 
 ## Progression visuelle
 
-En haut de l'écran, une progression visuelle indique les trois niveaux :
+En haut de l'écran, une progression visuelle indique les quatre niveaux :
 
 ```txt
-🚇 Métro  ───  🚲 Vélo  ───  🚌 Bus
+🚇 Métro  ───  🚊 Tram  ───  🚲 Vélo  ───  🚌 Bus
 ```
 
 Au chargement du jeu, seul le niveau Métro est actif.
 
-Quand le niveau Métro est réussi, le niveau Vélo devient accessible et une ligne de progression s'affiche entre les deux icônes.
+Quand le niveau Métro est réussi, le niveau Tramway devient accessible et une ligne de progression s'affiche entre les deux icônes.
+
+Quand le niveau Tramway est réussi, le niveau Vélo devient accessible.
 
 Quand le niveau Vélo est réussi, le niveau Bus devient accessible.
 
@@ -173,8 +184,9 @@ L'icône du niveau actif peut être animée afin de rendre la progression plus l
 Exemples :
 
 - le métro pulse au niveau 1 ;
-- le vélo s'anime au niveau 2 ;
-- le bus s'anime au niveau 3.
+- le tramway s'anime au niveau 2 ;
+- le vélo s'anime au niveau 3 ;
+- le bus s'anime au niveau 4.
 
 ---
 
@@ -209,8 +221,9 @@ Exemples :
 Le résultat quotidien dépend du niveau atteint.
 
 - Réussite du niveau Métro : récompense de bronze.
-- Réussite du niveau Vélo : récompense d'argent.
-- Réussite du niveau Bus : récompense d'or.
+- Réussite du niveau Tramway : récompense d'argent.
+- Réussite du niveau Vélo : récompense d'or.
+- Réussite du niveau Bus : récompense de platine.
 
 La qualité de la récompense dépend de la performance :
 
@@ -221,10 +234,11 @@ Exemple :
 
 ```txt
 🚇 Métro : coupe de bronze
-🚲 Vélo : médaille d'argent
+🚊 Tramway : coupe d'argent
+🚲 Vélo : médaille d'or
 🚌 Bus : échoué
 
-Résultat du jour : médaille d'argent
+Résultat du jour : médaille d'or
 ```
 
 ---
@@ -259,9 +273,11 @@ Données possibles :
 - nombre de coupes de bronze ;
 - nombre de coupes d'argent ;
 - nombre de coupes d'or ;
+- nombre de coupes de platine ;
 - nombre de médailles de bronze ;
 - nombre de médailles d'argent ;
 - nombre de médailles d'or ;
+- nombre de médailles de platine ;
 - série quotidienne en cours ;
 - meilleure série.
 

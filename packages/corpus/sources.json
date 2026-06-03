@@ -23,8 +23,8 @@
     "url": "https://www.data.gouv.fr/datasets/ilevia-localisation-des-arrets-bus-metro-et-tram-gtfs",
     "publisher": "data.gouv.fr",
     "license": "Licence Ouverte 2.0",
-    "consultedAt": "2026-06-02",
-    "notes": "Jeu de données utile pour vérifier les arrêts, lignes et libellés de transport."
+    "consultedAt": "2026-06-03",
+    "notes": "Jeu de données utile pour vérifier les arrêts, lignes et libellés bus, métro et tram."
   },
   {
     "id": "ville-lille",

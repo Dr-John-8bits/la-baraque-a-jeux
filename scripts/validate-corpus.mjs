@@ -29,6 +29,7 @@ const acceptedGuesses = await readJson("packages/corpus/le-mot-a-biloute/accepte
 const frenchGuesses = await readJson("packages/corpus/le-mot-a-biloute/french-guesses.json");
 const puzzles = await readJson("packages/corpus/lille-mele/puzzles.json");
 const stationMetroStations = await readJson("packages/corpus/station-mystere/metro-stations.json");
+const stationTramStations = await readJson("packages/corpus/station-mystere/tram-stations.json");
 const stationVlilleStations = await readJson("packages/corpus/station-mystere/vlille-stations.json");
 const stationBusNetwork = await readJson("packages/corpus/station-mystere/bus-network.json");
 const excludedSensitiveItems = await readJson(
@@ -46,6 +47,7 @@ validateAcceptedGuesses(acceptedGuesses, sourceIds);
 validateFrenchGuesses(frenchGuesses, sourceIds);
 validatePuzzles(puzzles, sourceIds, forbiddenLabels);
 validateStationMystereMetroStations(stationMetroStations, sourceIds);
+validateStationMystereTramStations(stationTramStations, sourceIds);
 validateStationMystereVlilleStations(stationVlilleStations, sourceIds);
 validateStationMystereBusNetwork(stationBusNetwork, sourceIds);
 
@@ -365,6 +367,136 @@ function validateStationMystereMetroStations(value, sourceIds) {
     }
     if (value.stats?.transferStationCount !== transferCount) {
       errors.push(`${scope}.stats.transferStationCount doit correspondre aux stations multi-lignes.`);
+    }
+  }
+}
+
+function validateStationMystereTramStations(value, sourceIds) {
+  const scope = "stationMystere.tramStations";
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push(`${scope} doit etre un objet.`);
+    return;
+  }
+
+  requireDate(value.generatedAt, `${scope}.generatedAt`);
+  requireEnum(value.status, `${scope}.status`, ["technical-baseline", "reviewed", "published"]);
+  requireString(value.description, `${scope}.description`, { max: 360 });
+  requireEnum(value.level, `${scope}.level`, ["tramway"]);
+  requireSourceRefs(value.sourceIds, `${scope}.sourceIds`, sourceIds, { min: 1 });
+
+  if (value.stats && typeof value.stats === "object" && !Array.isArray(value.stats)) {
+    requireInteger(value.stats.lineCount, `${scope}.stats.lineCount`, { min: 1 });
+    requireInteger(value.stats.branchCount, `${scope}.stats.branchCount`, { min: 1 });
+    requireInteger(value.stats.stationCount, `${scope}.stats.stationCount`, { min: 1 });
+    requireInteger(value.stats.sharedStationCount, `${scope}.stats.sharedStationCount`, { min: 0 });
+    requireInteger(value.stats.terminalStationCount, `${scope}.stats.terminalStationCount`, { min: 0 });
+    requireInteger(value.stats.ambiguousNameCount, `${scope}.stats.ambiguousNameCount`, { min: 0 });
+    requireInteger(value.stats.representativePatternCount, `${scope}.stats.representativePatternCount`, {
+      min: 1,
+    });
+  } else {
+    errors.push(`${scope}.stats est obligatoire.`);
+  }
+
+  requireString(value.line?.id, `${scope}.line.id`, { max: 20 });
+  requireString(value.line?.nomCourt, `${scope}.line.nomCourt`, { max: 12 });
+  requireString(value.line?.nom, `${scope}.line.nom`, { max: 80 });
+
+  if (requireArray(value.branches, `${scope}.branches`)) {
+    if (value.stats?.branchCount !== value.branches.length) {
+      errors.push(`${scope}.stats.branchCount doit correspondre au nombre de branches.`);
+    }
+    value.branches.forEach((branch, branchIndex) => {
+      const branchScope = `${scope}.branches[${branchIndex}]`;
+      requireKebabId(branch?.id, `${branchScope}.id`);
+      requireString(branch?.nom, `${branchScope}.nom`, { max: 80 });
+      requireString(branch?.terminusPublic, `${branchScope}.terminusPublic`, { max: 100 });
+      requireInteger(branch?.stationCount, `${branchScope}.stationCount`, { min: 1 });
+      requireKebabArray(branch?.stationIds, `${branchScope}.stationIds`, { min: 1, unique: true });
+      if (requireArray(branch?.directions, `${branchScope}.directions`)) {
+        branch.directions.forEach((direction, directionIndex) => {
+          const directionScope = `${branchScope}.directions[${directionIndex}]`;
+          requireString(direction?.directionId, `${directionScope}.directionId`, { max: 20 });
+          requireString(direction?.gtfsDirectionId, `${directionScope}.gtfsDirectionId`, { max: 8 });
+          requireInteger(direction?.trajetRepresentatifCount, `${directionScope}.trajetRepresentatifCount`, {
+            min: 1,
+          });
+          requireString(direction?.terminusDepart, `${directionScope}.terminusDepart`, { max: 100 });
+          requireString(direction?.terminusArrivee, `${directionScope}.terminusArrivee`, { max: 100 });
+          if (requireArray(direction?.stations, `${directionScope}.stations`)) {
+            direction.stations.forEach((station, stationIndex) => {
+              const stationScope = `${directionScope}.stations[${stationIndex}]`;
+              requireKebabId(station?.id, `${stationScope}.id`);
+              requireString(station?.stopId, `${stationScope}.stopId`, { max: 20 });
+              requireString(station?.nom, `${stationScope}.nom`, { max: 100 });
+              requireString(station?.commune, `${stationScope}.commune`, { max: 120 });
+              requireInteger(station?.sequence, `${stationScope}.sequence`, { min: 1 });
+              requireCoordinates(station?.coordonnees, `${stationScope}.coordonnees`);
+            });
+          }
+        });
+      }
+    });
+  }
+
+  if (requireArray(value.stations, `${scope}.stations`)) {
+    const ids = new Set();
+    let sharedStationCount = 0;
+    let terminalStationCount = 0;
+    value.stations.forEach((station, index) => {
+      const stationScope = `${scope}.stations[${index}]`;
+      requireKebabId(station?.id, `${stationScope}.id`);
+      addUnique(ids, station?.id, `${stationScope}.id`);
+      requireEnum(station?.type, `${stationScope}.type`, ["tramway"]);
+      requireEnum(station?.niveau, `${stationScope}.niveau`, ["tramway"]);
+      requireString(station?.nom, `${stationScope}.nom`, { max: 100 });
+      requireString(station?.nomTechnique, `${stationScope}.nomTechnique`, { max: 100 });
+      requireString(station?.commune, `${stationScope}.commune`, { max: 120 });
+      requireStringArray(station?.communes, `${stationScope}.communes`, {
+        min: 1,
+        maxItem: 80,
+        unique: true,
+      });
+      requireCoordinates(station?.coordonnees, `${stationScope}.coordonnees`);
+      requireString(station?.ligne, `${stationScope}.ligne`, { max: 12 });
+      requireKebabArray(station?.branches, `${stationScope}.branches`, { min: 1, unique: true });
+      requireStringArray(station?.brancheLibelles, `${stationScope}.brancheLibelles`, {
+        min: 1,
+        maxItem: 80,
+        unique: true,
+      });
+      requireBoolean(station?.troncCommun, `${stationScope}.troncCommun`);
+      if (station?.troncCommun) sharedStationCount += 1;
+      if (Array.isArray(station?.positions) && station.positions.some((position) => position?.isTerminus)) {
+        terminalStationCount += 1;
+      }
+      requireStringArray(station?.identifiants?.gtfsStopIds, `${stationScope}.identifiants.gtfsStopIds`, {
+        min: 1,
+        maxItem: 20,
+        unique: true,
+      });
+      requireArray(station?.positions, `${stationScope}.positions`);
+      requireStringArray(station?.indicesTechniques, `${stationScope}.indicesTechniques`, {
+        min: 1,
+        maxItem: 180,
+        unique: true,
+      });
+      requireSourceRefs(station?.sourceIds, `${stationScope}.sourceIds`, sourceIds, { min: 1 });
+      requireEnum(station?.ficheDecouverte?.statut, `${stationScope}.ficheDecouverte.statut`, [
+        "a-enrichir",
+        "reviewed",
+        "published",
+      ]);
+    });
+
+    if (value.stats?.stationCount !== value.stations.length) {
+      errors.push(`${scope}.stats.stationCount doit correspondre au nombre de stations.`);
+    }
+    if (value.stats?.sharedStationCount !== sharedStationCount) {
+      errors.push(`${scope}.stats.sharedStationCount doit correspondre aux stations du tronc commun.`);
+    }
+    if (value.stats?.terminalStationCount !== terminalStationCount) {
+      errors.push(`${scope}.stats.terminalStationCount doit correspondre aux terminus.`);
     }
   }
 }
