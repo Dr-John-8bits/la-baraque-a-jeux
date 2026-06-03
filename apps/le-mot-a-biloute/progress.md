@@ -49,3 +49,8 @@ Original prompt: Aligne les documents, et fais une première version du jeu.
 - Vérification 26.06.02.1 : `npm run build:biloute-french-guesses` OK avec 335037 propositions, `npm run check:corpus` OK, `npm run check` OK, `npm run test:browser` OK. Test Playwright ciblé OK : `PATOIS`, `LANGUE` et `BOUCHE` sont acceptés comme essais sur la grille de 6 lettres, sans erreur console. Le smoke test a été ajusté pour vider `localStorage` avant navigation et éviter d'interrompre le chargement du gros dictionnaire.
 - Itération partage 26.06.02.2 : le partage garde `navigator.share` en priorité pour mobile, puis copie le résultat via presse-papiers moderne ou fallback textarea compatible desktop Firefox. Si toute copie automatique échoue, la modale affiche une zone de copie manuelle avec le texte sélectionné.
 - Vérification 26.06.02.2 : tests Playwright ciblés OK sur victoire `BOUQUE`, absence de partage natif, presse-papiers moderne bloqué, puis copie legacy réussie. Cas extrême OK avec `document.execCommand` bloqué : panneau manuel visible, texte de partage présent, aucune erreur console.
+
+## 2026-06-03
+
+- Itération victoire 26.06.03.1 : après une bonne réponse, la modale de résultat attend la fin du flip lettre par lettre, laisse un court souffle, déclenche un rebond discret de la ligne gagnante, puis s'ouvre.
+- Vérification 26.06.03.1 : test Playwright ciblé OK sur victoire `BOUQUE` : pas de modale pendant le flip, ligne gagnante célébrée avant l'ouverture, modale visible ensuite, aucune erreur console.

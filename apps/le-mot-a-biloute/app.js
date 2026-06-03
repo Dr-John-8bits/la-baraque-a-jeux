@@ -3,7 +3,7 @@ import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { copyText, shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
-const APP_VERSION = "26.06.02.2";
+const APP_VERSION = "26.06.03.1";
 const GAME_URL = new URL(".", window.location.href).href;
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
@@ -14,6 +14,11 @@ const POINTS_PER_EXTRA_HINT = 180;
 const HINT_LABEL = "Ch’ti coup d'pouce";
 const FREE_HINT_LABEL = `${HINT_LABEL} gratuit`;
 const RECOVERY_RESUME_LABEL = "Prendre du rab";
+const REVEAL_STEP_MS = 82;
+const REVEAL_FLIP_MS = 560;
+const WIN_BOUNCE_DELAY_MS = 420;
+const WIN_BOUNCE_MS = 520;
+const WIN_DIALOG_PAUSE_MS = 220;
 
 const WORDS = await fetchJson("../../packages/corpus/le-mot-a-biloute/words.json");
 const GUESS_POLICY = await fetchJson("../../packages/corpus/le-mot-a-biloute/guess-policy.json");
@@ -99,7 +104,10 @@ let gameKey = "";
 let showRecoveryResumeAction = false;
 let primaryActionMode = null;
 let revealRowIndex = null;
+let celebrationRowIndex = null;
 let revealCleanupTimer = null;
+let celebrationTimer = null;
+let resultDialogTimer = null;
 let state = null;
 
 activateDate(todayId);
@@ -177,6 +185,11 @@ function activateDate(dateId, options = {}) {
   showRecoveryResumeAction = !archiveMode && loadedGame?.result === "recovery";
   primaryActionMode = null;
   revealRowIndex = null;
+  celebrationRowIndex = null;
+  window.clearTimeout(celebrationTimer);
+  window.clearTimeout(resultDialogTimer);
+  celebrationTimer = null;
+  resultDialogTimer = null;
 }
 
 function createInitialState() {
@@ -283,15 +296,16 @@ function submitGuess() {
   state.guesses.push(guess);
   state.statuses.push(statuses);
   revealRowIndex = state.guesses.length - 1;
-  scheduleRevealCleanup();
   updateKeyStatuses(guess, statuses);
   state.current = "";
 
   if (acceptedAnswers.includes(guess)) {
-    finishGame(state.result === "recovery" ? "recovered" : "won");
+    finishGame(state.result === "recovery" ? "recovered" : "won", { celebrate: true });
   } else if (state.result === "playing" && state.guesses.length >= MAX_GUESSES) {
+    scheduleRevealCleanup();
     enterRecoveryMode();
   } else {
+    scheduleRevealCleanup();
     saveGame();
     render();
   }
@@ -366,11 +380,13 @@ function updateKeyStatuses(guess, statuses) {
   });
 }
 
-function finishGame(result) {
+function finishGame(result, options = {}) {
   state.result = result;
   state.endedAt = Date.now();
   state.score = calculateScore(result);
   state.shareText = buildShareText();
+  const rowToCelebrate = options.celebrate ? revealRowIndex : null;
+  celebrationRowIndex = null;
   if (isOfficialDailyGame()) {
     if (result === "won") {
       recordOfficialResult("won");
@@ -381,7 +397,11 @@ function finishGame(result) {
   }
   saveGame();
   render();
-  showResultDialog();
+  if (options.celebrate) {
+    scheduleResultDialogAfterWin(rowToCelebrate);
+  } else {
+    showResultDialog();
+  }
 }
 
 function render() {
@@ -516,6 +536,9 @@ function renderBoard() {
     rowEl.className = "guess-row";
     rowEl.setAttribute("role", "row");
     rowEl.style.gridTemplateColumns = `repeat(${wordLength}, 1fr)`;
+    if (row === celebrationRowIndex) {
+      rowEl.classList.add("celebrate");
+    }
 
     const committed = state.guesses[row] || "";
     const letters = committed || (isGameActive() && row === state.guesses.length ? state.current : "");
@@ -534,7 +557,7 @@ function renderBoard() {
         tile.classList.add(status);
         if (row === revealRowIndex) {
           tile.classList.add("flip");
-          tile.style.setProperty("--flip-delay", `${col * 82}ms`);
+          tile.style.setProperty("--flip-delay", `${col * REVEAL_STEP_MS}ms`);
         }
       }
       rowEl.append(tile);
@@ -596,7 +619,29 @@ function scheduleRevealCleanup() {
   revealCleanupTimer = window.setTimeout(() => {
     revealRowIndex = null;
     renderBoard();
-  }, 980);
+  }, getRevealDuration() + 120);
+}
+
+function scheduleResultDialogAfterWin(rowToCelebrate) {
+  window.clearTimeout(celebrationTimer);
+  window.clearTimeout(resultDialogTimer);
+  celebrationTimer = window.setTimeout(() => {
+    celebrationTimer = null;
+    revealRowIndex = null;
+    celebrationRowIndex = rowToCelebrate;
+    renderBoard();
+  }, getRevealDuration() + WIN_BOUNCE_DELAY_MS);
+  resultDialogTimer = window.setTimeout(() => {
+    resultDialogTimer = null;
+    revealRowIndex = null;
+    celebrationRowIndex = null;
+    renderBoard();
+    showResultDialog();
+  }, getRevealDuration() + WIN_BOUNCE_DELAY_MS + WIN_BOUNCE_MS + WIN_DIALOG_PAUSE_MS);
+}
+
+function getRevealDuration() {
+  return REVEAL_FLIP_MS + Math.max(0, wordLength - 1) * REVEAL_STEP_MS;
 }
 
 function announce(message) {

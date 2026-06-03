@@ -4,6 +4,10 @@ Toutes les modifications notables du projet sont documentées ici.
 
 Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 
+## 26.06.03.1
+
+- Ajout d'une séquence de victoire avant la modale : révélation complète de la ligne, bref temps de respiration, rebond discret du mot, puis ouverture du résultat.
+
 ## 26.06.02.2
 
 - Renforcement du partage desktop : si le partage natif n'est pas disponible, le jeu copie le résultat avec un fallback compatible Firefox.
