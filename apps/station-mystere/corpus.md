@@ -56,6 +56,59 @@ Exemples :
 - équipement de mobilité ;
 - lieu remarquable lié aux transports.
 
+Les données techniques et les données éditoriales sont séparées.
+
+Les fichiers techniques comme `metro-stations.json`, `tram-stations.json`, `vlille-stations.json` et `bus-network.json` peuvent être régénérés depuis les sources brutes.
+
+Le fichier `editorial-entries.json` contient les fiches jouables : réponse canonique, réponses acceptées, cinq indices ordonnés, fiche découverte, tags et sources. Il référence les données techniques avec `technicalId`.
+
+---
+
+## Base mutualisable des notes transport
+
+Le fichier `packages/corpus/documentation/processed/transport/transport-places-notes.json` sert de réserve documentaire commune pour les stations, lignes, pôles et lieux liés aux transports.
+
+Il ne remplace pas `editorial-entries.json`.
+
+Son rôle est de recevoir les informations collectées station par station avant la rédaction finale des énigmes.
+
+Chaque entrée peut contenir :
+
+- des références vers les corpus techniques Station Mystère ;
+- des sources communes issues de `sources.json` ;
+- des sources externes locales, par exemple une page Wikipédia précise ;
+- des notes d'origine du nom ;
+- des notes historiques ;
+- des anecdotes ;
+- des repères de quartier ;
+- des atomes d'indices.
+
+Une même entrée peut alimenter plusieurs niveaux. Par exemple, Gare Lille Flandres est à la fois une station de métro et une station de tramway. Ses notes documentaires doivent donc être mutualisées au lieu d'être recopiées dans deux fiches.
+
+Le squelette actuel couvre :
+
+- 91 lieux mutualisés ;
+- 60 stations de métro ;
+- 36 stations de tramway ;
+- 5 stations communes au métro et au tramway.
+
+La commande de synchronisation est :
+
+```bash
+npm run sync:station-transport-notes
+```
+
+Elle ajoute les lieux manquants depuis les corpus techniques Métro et Tramway sans écraser les notes, anecdotes ou sources externes déjà ajoutées.
+
+Le flux recommandé est :
+
+1. Collecter ou rapatrier les informations brutes avec leurs sources.
+2. Les ranger dans `transport-places-notes.json`.
+3. Relire, sourcer et reformuler les notes.
+4. Transformer seulement les meilleurs éléments en indices et fiches découverte dans `editorial-entries.json`.
+
+Ce choix permet de construire une vraie base documentaire réutilisable par Station Mystère, mais aussi par de futurs jeux du portail.
+
 ---
 
 ## Sources prioritaires
@@ -83,11 +136,20 @@ Utilisables pour enrichir les fiches.
 
 Chaque information importante doit idéalement être traçable à une source.
 
+Les pages Wikipédia complètes disponibles sont conservées localement dans `packages/corpus/documentation/raw/wikipedia/station-mystere/`.
+
+Ce dossier est ignoré par Git. Il sert uniquement à l'analyse documentaire et à la reformulation. Les textes bruts ne doivent pas être publiés dans les fichiers jouables.
+
+État local actuel :
+
+- métro : 60 pages trouvées sur 60 stations ;
+- tramway : 5 pages trouvées sur 36 stations, uniquement pour des stations mixtes métro/tramway avec fiche dédiée.
+
 ---
 
 ## Structure minimale d'une fiche
 
-Chaque fiche doit contenir au minimum :
+Chaque fiche technique doit contenir au minimum :
 
 ```json
 {
@@ -98,6 +160,27 @@ Chaque fiche doit contenir au minimum :
   "description": "Station de la ligne 1 du métro de Lille.",
   "indices": [],
   "sources": []
+}
+```
+
+Chaque fiche éditoriale jouable doit contenir au minimum :
+
+```json
+{
+  "id": "metro-gare-lille-flandres",
+  "niveau": "metro",
+  "typeReponse": "station",
+  "technicalId": "gare-lille-flandres",
+  "reponse": "Gare Lille Flandres",
+  "reponsesAcceptees": ["Gare Lille Flandres", "Lille Flandres"],
+  "indices": [],
+  "ficheDecouverte": {
+    "titre": "Gare Lille Flandres",
+    "texte": "Courte fiche affichée après résolution.",
+    "faits": [],
+    "sourceIds": []
+  },
+  "sourceIds": []
 }
 ```
 
@@ -283,7 +366,7 @@ Tramway lillois.
 
 Objectif : rendre Tramway Mystère entièrement jouable.
 
-Le corpus technique contient déjà les 36 stations du tramway et doit maintenant être enrichi éditorialement.
+Le corpus technique contient déjà les 36 stations du tramway. Un premier lot de fiches éditoriales existe dans `editorial-entries.json` et doit maintenant être étendu.
 
 ---
 
@@ -314,6 +397,8 @@ Les lignes scolaires, Résa et spéciales doivent rester documentées, mais pour
 Enrichissement culturel.
 
 Objectif : améliorer la qualité des indices et des fiches découvertes.
+
+Les informations collectées doivent d'abord rejoindre `transport-places-notes.json`, puis être transformées en fiches jouables dans `editorial-entries.json` après relecture.
 
 ---
 

@@ -530,6 +530,138 @@ Décision :
 - utiliser les branches, terminus et stations du tronc commun comme indices techniques ;
 - laisser les fiches découverte en statut `a-enrichir` tant que les informations éditoriales ne sont pas sourcées.
 
+## 4 juin 2026 — Premier format éditorial jouable
+
+Le fichier `packages/corpus/station-mystere/editorial-entries.json` a été créé pour séparer le travail éditorial des corpus techniques générés.
+
+Constats :
+
+- les fichiers techniques doivent rester régénérables depuis les sources brutes ;
+- les fiches jouables doivent donc vivre dans un fichier éditorial stable ;
+- chaque fiche référence une réponse technique avec `technicalId` ;
+- chaque fiche contient exactement cinq indices ;
+- la fiche découverte reste sobre tant que les enrichissements patrimoniaux ne sont pas sourcés.
+
+Premier lot créé :
+
+- 5 fiches Métro Mystère ;
+- 5 fiches Tramway Mystère.
+
+Décision :
+
+- utiliser `editorial-entries.json` comme source jouable du futur moteur ;
+- valider les `technicalId` contre les corpus techniques ;
+- étendre progressivement ce fichier avant de coder le jeu.
+
+## 4 juin 2026 — Base documentaire transport mutualisable
+
+Le fichier `packages/corpus/documentation/processed/transport/transport-places-notes.json` a été créé pour recevoir les informations documentaires collectées station par station.
+
+Constats :
+
+- les pages externes comme Wikipédia peuvent contenir des anecdotes utiles, mais leur contenu ne doit pas être recopié tel quel dans les fiches jouables ;
+- certaines stations existent dans plusieurs niveaux, notamment Gare Lille Flandres qui concerne le métro et le tramway ;
+- les corpus techniques sont régénérables, alors que les notes sourcées et reformulées doivent rester stables ;
+- les fiches jouables doivent rester courtes, ce qui impose une réserve documentaire plus large en amont.
+
+Première base créée puis synchronisée :
+
+- 91 lieux mutualisés pour couvrir les stations Métro et Tramway ;
+- 60 stations de métro ;
+- 36 stations de tramway ;
+- 5 stations communes aux deux réseaux, fusionnées dans une seule entrée documentaire ;
+- champs prévus pour l'origine du nom, l'histoire, les anecdotes, les lieux proches et les atomes d'indices ;
+- références techniques vers les niveaux métro et tramway ;
+- emplacement pour les sources externes locales, par exemple une page Wikipédia précise ;
+- validation des IDs, sources, URLs externes et références techniques.
+
+Décision :
+
+- utiliser `transport-places-notes.json` comme sas documentaire entre les sources collectées et `editorial-entries.json` ;
+- mutualiser les lieux communs à plusieurs niveaux au lieu de dupliquer les notes ;
+- conserver dans `editorial-entries.json` uniquement les formulations prêtes à être affichées au joueur.
+
+Commande de synchronisation :
+
+```bash
+npm run sync:station-transport-notes
+```
+
+Cette commande est additive : elle complète le squelette depuis les corpus techniques, fusionne les IDs canoniques et conserve les notes éditoriales déjà saisies.
+
+## 4 juin 2026 — Récupération locale des pages Wikipédia métro
+
+Les pages Wikipédia des 60 stations de métro du corpus technique ont été récupérées via l'API MediaWiki de Wikipédia en français.
+
+Commande :
+
+```bash
+npm run fetch:wikipedia-metro
+```
+
+Livrable local non versionné :
+
+- `packages/corpus/documentation/raw/wikipedia/station-mystere/metro/`
+
+Résultat :
+
+- 60 pages trouvées sur 60 stations ;
+- 60 fichiers `.wiki` avec le wikitexte intégral ;
+- 60 fichiers `.html` avec le rendu HTML intégral fourni par l'API ;
+- 60 fichiers `.json` avec les métadonnées, la révision, les liens et les sections ;
+- 1 manifeste local `manifest.json` ;
+- environ 4,5 Mo de données locales.
+
+Décision :
+
+- conserver ces fichiers dans `raw/`, donc hors Git et hors GitHub ;
+- les utiliser comme matière documentaire pour l'analyse et la sélection d'informations ;
+- reformuler les contenus retenus avant de les intégrer dans `transport-places-notes.json` ou `editorial-entries.json`.
+
+## 4 juin 2026 — Récupération locale des pages Wikipédia tramway
+
+Les pages Wikipédia disponibles pour les 36 stations de tramway du corpus technique ont été recherchées via la même API MediaWiki.
+
+Commande :
+
+```bash
+npm run fetch:wikipedia-tram
+```
+
+Livrable local non versionné :
+
+- `packages/corpus/documentation/raw/wikipedia/station-mystere/tramway/`
+
+Résultat :
+
+- 5 pages trouvées sur 36 stations ;
+- 5 fichiers `.wiki` avec le wikitexte intégral ;
+- 5 fichiers `.html` avec le rendu HTML intégral fourni par l'API ;
+- 5 fichiers `.json` avec les métadonnées, la révision, les liens et les sections ;
+- 1 manifeste local `manifest.json` ;
+- 31 stations listées comme manquantes ou incertaines ;
+- environ 428 Ko de données locales.
+
+Pages récupérées :
+
+- Eurotéléport ;
+- Wasquehal - Pavé de Lille ;
+- Gare Lille-Europe ;
+- Gare Lille-Flandres ;
+- Tourcoing - Centre.
+
+Constat :
+
+- la majorité des stations de tramway ne semble pas disposer d'une page Wikipédia dédiée ;
+- les pages trouvées correspondent aux stations mixtes métro/tramway ;
+- les pages de lieux proches, communes ou monuments n'ont pas été associées automatiquement aux stations afin d'éviter les faux positifs.
+
+Décision :
+
+- conserver les pages trouvées dans `raw/`, donc hors Git et hors GitHub ;
+- garder les stations sans page dédiée dans le manifeste local ;
+- traiter plus tard les lieux proches, monuments et communes comme sources complémentaires séparées.
+
 ## 2 juin 2026 — Première base technique bus
 
 Le réseau bus a été extrait depuis le GTFS Ilévia rafraîchi le 2 juin 2026.

@@ -32,6 +32,10 @@ const stationMetroStations = await readJson("packages/corpus/station-mystere/met
 const stationTramStations = await readJson("packages/corpus/station-mystere/tram-stations.json");
 const stationVlilleStations = await readJson("packages/corpus/station-mystere/vlille-stations.json");
 const stationBusNetwork = await readJson("packages/corpus/station-mystere/bus-network.json");
+const stationEditorialEntries = await readJson("packages/corpus/station-mystere/editorial-entries.json");
+const transportPlacesNotes = await readJson(
+  "packages/corpus/documentation/processed/transport/transport-places-notes.json"
+);
 const excludedSensitiveItems = await readJson(
   "packages/corpus/documentation/processed/editorial/excluded-sensitive-items.json"
 );
@@ -50,6 +54,14 @@ validateStationMystereMetroStations(stationMetroStations, sourceIds);
 validateStationMystereTramStations(stationTramStations, sourceIds);
 validateStationMystereVlilleStations(stationVlilleStations, sourceIds);
 validateStationMystereBusNetwork(stationBusNetwork, sourceIds);
+const stationMystereTechnicalIds = {
+  metro: new Set(stationMetroStations?.stations?.map((station) => station.id) ?? []),
+  tramway: new Set(stationTramStations?.stations?.map((station) => station.id) ?? []),
+  velo: new Set(stationVlilleStations?.stations?.map((station) => station.id) ?? []),
+  bus: new Set(stationBusNetwork?.lines?.map((line) => line.id) ?? []),
+};
+validateStationMystereEditorialEntries(stationEditorialEntries, sourceIds, stationMystereTechnicalIds);
+validateTransportPlacesNotes(transportPlacesNotes, sourceIds, stationMystereTechnicalIds);
 
 if (errors.length > 0) {
   console.error("Corpus invalide :");
@@ -869,6 +881,253 @@ function validateStationMystereBusNetwork(value, sourceIds) {
       requireKebabArray(hub?.raisons, `${hubScope}.raisons`);
     });
   }
+}
+
+function validateStationMystereEditorialEntries(value, sourceIds, technicalIdsByLevel) {
+  const scope = "stationMystere.editorialEntries";
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push(`${scope} doit etre un objet.`);
+    return;
+  }
+
+  requireDate(value.generatedAt, `${scope}.generatedAt`);
+  requireEnum(value.status, `${scope}.status`, ["draft", "reviewed", "published"]);
+  requireString(value.description, `${scope}.description`, { max: 420 });
+  requireSourceRefs(value.sourceIds, `${scope}.sourceIds`, sourceIds, { min: 1 });
+  requireInteger(value.format?.indiceCount, `${scope}.format.indiceCount`, { min: 1 });
+  requireStringArray(value.format?.levels, `${scope}.format.levels`, { min: 1, maxItem: 20, unique: true });
+  value.format?.levels?.forEach((level, index) => {
+    requireEnum(level, `${scope}.format.levels[${index}]`, ["metro", "tramway", "velo", "bus"]);
+  });
+  requireStringArray(value.format?.answerTypes, `${scope}.format.answerTypes`, {
+    min: 1,
+    maxItem: 20,
+    unique: true,
+  });
+  value.format?.answerTypes?.forEach((type, index) => {
+    requireEnum(type, `${scope}.format.answerTypes[${index}]`, ["station", "line"]);
+  });
+
+  if (!requireArray(value.entries, `${scope}.entries`)) return;
+
+  const ids = new Set();
+  const scopedTechnicalIds = new Set();
+  value.entries.forEach((entry, index) => {
+    const entryScope = `${scope}.entries[${index}]`;
+    requireKebabId(entry?.id, `${entryScope}.id`);
+    addUnique(ids, entry?.id, `${entryScope}.id`);
+    requireEnum(entry?.niveau, `${entryScope}.niveau`, ["metro", "tramway", "velo", "bus"]);
+    requireEnum(entry?.typeReponse, `${entryScope}.typeReponse`, ["station", "line"]);
+    requireKebabId(entry?.technicalId, `${entryScope}.technicalId`);
+    if (typeof entry?.niveau === "string" && typeof entry?.technicalId === "string") {
+      const technicalKey = `${entry.niveau}:${entry.technicalId}`;
+      addUnique(scopedTechnicalIds, technicalKey, `${entryScope}.technicalId`);
+      if (!technicalIdsByLevel[entry.niveau]?.has(entry.technicalId)) {
+        errors.push(`${entryScope}.technicalId ne correspond a aucune reponse technique du niveau ${entry.niveau}.`);
+      }
+    }
+    requireString(entry?.reponse, `${entryScope}.reponse`, { max: 100 });
+    requireStringArray(entry?.reponsesAcceptees, `${entryScope}.reponsesAcceptees`, {
+      min: 1,
+      maxItem: 100,
+      unique: true,
+    });
+    if (
+      typeof entry?.reponse === "string" &&
+      Array.isArray(entry?.reponsesAcceptees) &&
+      !entry.reponsesAcceptees.includes(entry.reponse)
+    ) {
+      errors.push(`${entryScope}.reponsesAcceptees doit contenir la reponse principale.`);
+    }
+    requireEnum(entry?.difficulte, `${entryScope}.difficulte`, ["facile", "moyenne", "difficile", "expert"]);
+    requireEnum(entry?.statut, `${entryScope}.statut`, ["draft", "reviewed", "published"]);
+    validateStationMystereEditorialHints(entry?.indices, `${entryScope}.indices`, value.format?.indiceCount);
+    validateStationMystereDiscovery(entry?.ficheDecouverte, `${entryScope}.ficheDecouverte`, sourceIds);
+    requireKebabArray(entry?.tags, `${entryScope}.tags`, { min: 1 });
+    requireSourceRefs(entry?.sourceIds, `${entryScope}.sourceIds`, sourceIds, { min: 1 });
+  });
+}
+
+function validateStationMystereEditorialHints(value, scope, expectedCount) {
+  if (!requireArray(value, scope, expectedCount)) return;
+  const orders = new Set();
+  value.forEach((hint, index) => {
+    const hintScope = `${scope}[${index}]`;
+    requireInteger(hint?.ordre, `${hintScope}.ordre`, { min: 1 });
+    addUnique(orders, hint?.ordre, `${hintScope}.ordre`);
+    requireString(hint?.type, `${hintScope}.type`, { max: 40 });
+    requireString(hint?.texte, `${hintScope}.texte`, { max: 180 });
+  });
+  if (Number.isInteger(expectedCount)) {
+    for (let order = 1; order <= expectedCount; order += 1) {
+      if (!orders.has(order)) errors.push(`${scope} doit contenir un indice d'ordre ${order}.`);
+    }
+  }
+}
+
+function validateStationMystereDiscovery(value, scope, sourceIds) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push(`${scope} doit etre un objet.`);
+    return;
+  }
+  requireString(value.titre, `${scope}.titre`, { max: 100 });
+  requireString(value.texte, `${scope}.texte`, { max: 420 });
+  requireStringArray(value.faits, `${scope}.faits`, { min: 1, maxItem: 180, unique: true });
+  requireSourceRefs(value.sourceIds, `${scope}.sourceIds`, sourceIds, { min: 1 });
+}
+
+function validateTransportPlacesNotes(value, sourceIds, technicalIdsByLevel) {
+  const scope = "transportPlacesNotes";
+  const noteBuckets = ["nameOrigin", "history", "anecdotes", "nearbyLandmarks", "clueAtoms"];
+
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    errors.push(`${scope} doit etre un objet.`);
+    return;
+  }
+
+  requireDate(value.generatedAt, `${scope}.generatedAt`);
+  requireEnum(value.status, `${scope}.status`, ["draft", "reviewed", "published"]);
+  requireString(value.description, `${scope}.description`, { max: 420 });
+  requireSourceRefs(value.sourceIds, `${scope}.sourceIds`, sourceIds, { min: 1 });
+  requireStringArray(value.model?.noteBuckets, `${scope}.model.noteBuckets`, {
+    min: 1,
+    maxItem: 40,
+    unique: true,
+  });
+  value.model?.noteBuckets?.forEach((bucket, index) => {
+    requireEnum(bucket, `${scope}.model.noteBuckets[${index}]`, noteBuckets);
+  });
+  requireString(value.model?.externalSourcesPurpose, `${scope}.model.externalSourcesPurpose`, { max: 240 });
+
+  if (!requireArray(value.items, `${scope}.items`)) return;
+
+  const itemIds = new Set();
+  const scopedTechnicalRefs = new Set();
+  value.items.forEach((item, index) => {
+    const itemScope = `${scope}.items[${index}]`;
+    requireKebabId(item?.id, `${itemScope}.id`);
+    addUnique(itemIds, item?.id, `${itemScope}.id`);
+    requireString(item?.label, `${itemScope}.label`, { max: 120 });
+    requireStringArray(item?.types, `${itemScope}.types`, { min: 1, maxItem: 40, unique: true });
+    item?.types?.forEach((type, typeIndex) => {
+      requireEnum(type, `${itemScope}.types[${typeIndex}]`, [
+        "metro-station",
+        "tramway-station",
+        "vlille-station",
+        "bus-line",
+        "bus-stop",
+        "transport-hub",
+        "landmark",
+      ]);
+    });
+    requireStringArray(item?.communes, `${itemScope}.communes`, { min: 1, maxItem: 100, unique: true });
+    validateTransportPlaceTechnicalRefs(
+      item?.technicalRefs,
+      `${itemScope}.technicalRefs`,
+      technicalIdsByLevel,
+      scopedTechnicalRefs
+    );
+    requireSourceRefs(item?.sourceIds, `${itemScope}.sourceIds`, sourceIds, { min: 1 });
+
+    const externalSourceIds = validateTransportPlaceExternalSources(
+      item?.externalSources,
+      `${itemScope}.externalSources`
+    );
+    noteBuckets.forEach((bucket) => {
+      validateTransportPlaceNotesBucket(item?.[bucket], `${itemScope}.${bucket}`, {
+        sourceIds,
+        externalSourceIds,
+        textMax: bucket === "history" ? 520 : 320,
+        requireType: bucket === "clueAtoms",
+      });
+    });
+  });
+}
+
+function validateTransportPlaceTechnicalRefs(value, scope, technicalIdsByLevel, scopedTechnicalRefs) {
+  if (!requireArray(value, scope)) return;
+  if (value.length < 1) errors.push(`${scope} doit contenir au moins une reference technique.`);
+
+  const seen = new Set();
+  value.forEach((ref, index) => {
+    const refScope = `${scope}[${index}]`;
+    requireEnum(ref?.system, `${refScope}.system`, ["station-mystere"]);
+    requireEnum(ref?.level, `${refScope}.level`, ["metro", "tramway", "velo", "bus"]);
+    requireEnum(ref?.answerType, `${refScope}.answerType`, ["station", "line"]);
+    requireKebabId(ref?.technicalId, `${refScope}.technicalId`);
+
+    if (typeof ref?.level === "string" && typeof ref?.technicalId === "string") {
+      const key = `${ref.system}:${ref.level}:${ref.answerType}:${ref.technicalId}`;
+      addUnique(seen, key, refScope);
+      addUnique(scopedTechnicalRefs, key, `${refScope}.technicalId`);
+      if (!technicalIdsByLevel[ref.level]?.has(ref.technicalId)) {
+        errors.push(`${refScope}.technicalId ne correspond a aucune donnee technique du niveau ${ref.level}.`);
+      }
+    }
+    if (ref?.level === "bus" && ref?.answerType !== "line") {
+      errors.push(`${refScope}.answerType doit etre line pour le niveau bus.`);
+    }
+    if (ref?.level !== "bus" && ref?.answerType !== "station") {
+      errors.push(`${refScope}.answerType doit etre station pour les niveaux metro, tramway et velo.`);
+    }
+  });
+}
+
+function validateTransportPlaceExternalSources(value, scope) {
+  const ids = new Set();
+  if (!requireArray(value, scope)) return ids;
+
+  value.forEach((source, index) => {
+    const sourceScope = `${scope}[${index}]`;
+    requireKebabId(source?.id, `${sourceScope}.id`);
+    addUnique(ids, source?.id, `${sourceScope}.id`);
+    requireString(source?.title, `${sourceScope}.title`, { max: 160 });
+    requireUrl(source?.url, `${sourceScope}.url`);
+    requireString(source?.publisher, `${sourceScope}.publisher`, { max: 80 });
+    requireString(source?.license, `${sourceScope}.license`, { max: 80, optional: true });
+    requireDate(source?.consultedAt, `${sourceScope}.consultedAt`);
+    requireString(source?.notes, `${sourceScope}.notes`, { max: 240, optional: true });
+  });
+
+  return ids;
+}
+
+function validateTransportPlaceNotesBucket(value, scope, options) {
+  if (!requireArray(value, scope)) return;
+
+  const ids = new Set();
+  value.forEach((note, index) => {
+    const noteScope = `${scope}[${index}]`;
+    requireKebabId(note?.id, `${noteScope}.id`);
+    addUnique(ids, note?.id, `${noteScope}.id`);
+    if (options.requireType || note?.type !== undefined) {
+      requireEnum(note?.type, `${noteScope}.type`, [
+        "network",
+        "geography",
+        "name",
+        "history",
+        "landmark",
+        "anecdote",
+        "culture",
+        "architecture",
+      ]);
+    }
+    requireString(note?.text, `${noteScope}.text`, { max: options.textMax });
+    requireEnum(note?.status, `${noteScope}.status`, ["raw", "draft", "reviewed", "published"]);
+    requireSourceRefs(note?.sourceIds, `${noteScope}.sourceIds`, options.sourceIds, { optional: true });
+    requireKebabArray(note?.externalSourceIds, `${noteScope}.externalSourceIds`, { optional: true });
+
+    const sharedSourceCount = Array.isArray(note?.sourceIds) ? note.sourceIds.length : 0;
+    const externalSourceCount = Array.isArray(note?.externalSourceIds) ? note.externalSourceIds.length : 0;
+    if (sharedSourceCount + externalSourceCount < 1) {
+      errors.push(`${noteScope} doit pointer vers au moins une source commune ou externe.`);
+    }
+    note?.externalSourceIds?.forEach((externalSourceId, sourceIndex) => {
+      if (!options.externalSourceIds.has(externalSourceId)) {
+        errors.push(`${noteScope}.externalSourceIds[${sourceIndex}] ne correspond a aucune source externe locale.`);
+      }
+    });
+  });
 }
 
 function buildForbiddenLabels(excludedSensitiveItems, candidateItems) {

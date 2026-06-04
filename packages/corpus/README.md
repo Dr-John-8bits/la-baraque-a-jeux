@@ -13,6 +13,8 @@ Source de verite editoriale commune au portail et aux jeux.
 - `station-mystere/tram-stations.json` : socle technique des stations du niveau Tramway Mystere.
 - `station-mystere/vlille-stations.json` : socle technique des stations du niveau Velo Mystere.
 - `station-mystere/bus-network.json` : inventaire technique complet du niveau Bus Mystere.
+- `station-mystere/editorial-entries.json` : fiches jouables, indices et reponses acceptees de Station Mystere.
+- `documentation/processed/transport/transport-places-notes.json` : reserve documentaire mutualisable des lieux, stations et lignes de transport.
 - `schema/` : schemas de reference pour cadrer les donnees.
 
 ## Conventions
@@ -29,4 +31,12 @@ Source de verite editoriale commune au portail et aux jeux.
 npm run check:corpus
 ```
 
-Le validateur controle les formats, les doublons, les references de sources et les contraintes propres a chaque jeu. Les jeux chargent ces fichiers directement en statique depuis GitHub Pages.
+Le validateur controle les formats, les doublons, les references de sources, les references techniques Station Mystere et les contraintes propres a chaque jeu. Les jeux chargent ces fichiers directement en statique depuis GitHub Pages.
+
+## Synchronisation Station Mystere
+
+```bash
+npm run sync:station-transport-notes
+```
+
+Cette commande complete `transport-places-notes.json` depuis les corpus techniques Metro et Tramway. Elle ajoute les lieux manquants, fusionne les stations communes aux deux reseaux et preserve les notes editoriales deja saisies.

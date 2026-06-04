@@ -42,7 +42,7 @@ const output = {
   generatedAt,
   status: "technical-baseline",
   description:
-    "Premier corpus technique pour le niveau 2 Velo Mystere. Les champs culturels sont a enrichir et sourcer avant publication jouable.",
+    "Premier corpus technique pour le niveau 3 Velo Mystere. Les champs culturels sont a enrichir et sourcer avant publication jouable.",
   level: "velo",
   system: {
     id: systemInformation.data.system_id,

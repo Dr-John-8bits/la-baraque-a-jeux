@@ -1,0 +1,664 @@
+{
+  "generatedAt": "2026-06-04",
+  "status": "draft",
+  "description": "Premier lot editorial jouable pour Station Mystere. Ces fiches referencent les corpus techniques et restent volontairement sobres tant que les enrichissements patrimoniaux ne sont pas sources.",
+  "sourceIds": [
+    "gtfs-ilevia-data-gouv",
+    "ilevia-arret-point-datamel"
+  ],
+  "format": {
+    "indiceCount": 5,
+    "levels": [
+      "metro",
+      "tramway",
+      "velo",
+      "bus"
+    ],
+    "answerTypes": [
+      "station",
+      "line"
+    ]
+  },
+  "entries": [
+    {
+      "id": "metro-gare-lille-flandres",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "gare-lille-flandres",
+      "reponse": "Gare Lille Flandres",
+      "reponsesAcceptees": [
+        "Gare Lille Flandres",
+        "Lille Flandres",
+        "Gare Flandres"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par les lignes M1 et M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je fais partie des correspondances entre les deux lignes de metro."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom reprend celui d'une grande gare lilloise."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Gare Lille Flandres",
+        "texte": "Station de metro situee a Lille, Gare Lille Flandres est l'une des correspondances entre les lignes M1 et M2.",
+        "faits": [
+          "Niveau : Metro Mystere.",
+          "Lignes : M1 et M2.",
+          "Commune : Lille.",
+          "Statut de jeu : reponse candidate pour le niveau Metro."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "m2",
+        "lille",
+        "correspondance"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-porte-des-postes",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "porte-des-postes",
+      "reponse": "Porte des Postes",
+      "reponsesAcceptees": [
+        "Porte des Postes",
+        "Porte Des Postes"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par les lignes M1 et M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis l'une des deux correspondances metro du corpus technique."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom commence par Porte."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Porte des Postes",
+        "texte": "Station de metro lilloise, Porte des Postes relie les lignes M1 et M2 dans le corpus Station Mystere.",
+        "faits": [
+          "Niveau : Metro Mystere.",
+          "Lignes : M1 et M2.",
+          "Commune : Lille.",
+          "Statut de jeu : reponse candidate pour le niveau Metro."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "m2",
+        "lille",
+        "correspondance"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-quatre-cantons-stade-p-mauroy",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "4-cantons-stade-p-mauroy",
+      "reponse": "4 Cantons Stade P. Mauroy",
+      "reponsesAcceptees": [
+        "4 Cantons Stade P. Mauroy",
+        "4 Cantons",
+        "Quatre Cantons",
+        "4 Cantons Stade Pierre Mauroy"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Villeneuve-d'Ascq."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis un terminus de la ligne M1 dans le corpus technique."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom commence par un chiffre."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "4 Cantons Stade P. Mauroy",
+        "texte": "Station de la ligne M1 situee a Villeneuve-d'Ascq, 4 Cantons Stade P. Mauroy est un terminus dans le corpus technique.",
+        "faits": [
+          "Niveau : Metro Mystere.",
+          "Ligne : M1.",
+          "Commune : Villeneuve-d'Ascq.",
+          "Statut technique : terminus."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "villeneuve-d-ascq",
+        "terminus"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-chu-eurasante",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "chu-eurasante",
+      "reponse": "CHU Eurasante",
+      "reponsesAcceptees": [
+        "CHU Eurasante",
+        "Chu Eurasante",
+        "CHU Eurasanté"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis un terminus de la ligne M1 dans le corpus technique."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom contient CHU."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "CHU Eurasante",
+        "texte": "Station de la ligne M1 situee a Lille, CHU Eurasante est un terminus dans le corpus technique Station Mystere.",
+        "faits": [
+          "Niveau : Metro Mystere.",
+          "Ligne : M1.",
+          "Commune : Lille.",
+          "Statut technique : terminus."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "lille",
+        "terminus"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-c-h-dron",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "c-h-dron",
+      "reponse": "C.H. Dron",
+      "reponsesAcceptees": [
+        "C.H. Dron",
+        "CH Dron",
+        "C H Dron"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis un terminus de la ligne M2 dans le corpus technique."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom est souvent ecrit avec des initiales."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "C.H. Dron",
+        "texte": "Station de la ligne M2 situee a Tourcoing, C.H. Dron est un terminus dans le corpus technique.",
+        "faits": [
+          "Niveau : Metro Mystere.",
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "Statut technique : terminus."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing",
+        "terminus"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "tram-gare-lille-flandres",
+      "niveau": "tramway",
+      "typeReponse": "station",
+      "technicalId": "gare-lille-flandres",
+      "reponse": "Gare Lille Flandres",
+      "reponsesAcceptees": [
+        "Gare Lille Flandres",
+        "Lille Flandres",
+        "Gare Flandres"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du tramway Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "branche",
+          "texte": "Je suis sur le tronc commun des branches Roubaix et Tourcoing."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis un terminus du tramway dans le corpus technique."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom reprend celui d'une grande gare lilloise."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Gare Lille Flandres",
+        "texte": "Station du tramway situee a Lille, Gare Lille Flandres appartient au tronc commun des branches Roubaix et Tourcoing.",
+        "faits": [
+          "Niveau : Tramway Mystere.",
+          "Branches : Roubaix et Tourcoing.",
+          "Commune : Lille.",
+          "Statut technique : terminus et tronc commun."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "tramway",
+        "lille",
+        "tronc-commun",
+        "terminus"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "tram-croise-laroche",
+      "niveau": "tramway",
+      "typeReponse": "station",
+      "technicalId": "croise-laroche",
+      "reponse": "Croise Laroche",
+      "reponsesAcceptees": [
+        "Croise Laroche",
+        "Croisé Laroche"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du tramway Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "branche",
+          "texte": "Je suis sur le tronc commun des branches Roubaix et Tourcoing."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Marcq-en-Baroeul."
+        },
+        {
+          "ordre": 4,
+          "type": "position",
+          "texte": "Sur les deux branches, je suis situee avant la separation vers Roubaix ou Tourcoing."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom contient Laroche."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Croise Laroche",
+        "texte": "Station du tramway situee a Marcq-en-Baroeul, Croise Laroche appartient au tronc commun avant les branches Roubaix et Tourcoing.",
+        "faits": [
+          "Niveau : Tramway Mystere.",
+          "Branches : Roubaix et Tourcoing.",
+          "Commune : Marcq-en-Baroeul.",
+          "Statut technique : station du tronc commun."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "tramway",
+        "marcq-en-baroeul",
+        "tronc-commun"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "tram-villa-cavrois",
+      "niveau": "tramway",
+      "typeReponse": "station",
+      "technicalId": "villa-cavrois",
+      "reponse": "Villa Cavrois",
+      "reponsesAcceptees": [
+        "Villa Cavrois"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du tramway Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "branche",
+          "texte": "Je suis sur la branche Roubaix."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Croix."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je ne fais pas partie du tronc commun des deux branches."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom contient le mot Villa."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Villa Cavrois",
+        "texte": "Station du tramway situee a Croix, Villa Cavrois appartient a la branche Roubaix dans le corpus technique.",
+        "faits": [
+          "Niveau : Tramway Mystere.",
+          "Branche : Roubaix.",
+          "Commune : Croix.",
+          "Statut technique : station hors tronc commun."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "tramway",
+        "roubaix",
+        "croix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "tram-parc-barbieux",
+      "niveau": "tramway",
+      "typeReponse": "station",
+      "technicalId": "parc-barbieux",
+      "reponse": "Parc Barbieux",
+      "reponsesAcceptees": [
+        "Parc Barbieux"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du tramway Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "branche",
+          "texte": "Je suis sur la branche Roubaix."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Roubaix."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis entre Euroteleport et le tronc commun lorsque l'on revient vers Lille."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom contient le mot Parc."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Parc Barbieux",
+        "texte": "Station du tramway situee a Roubaix, Parc Barbieux appartient a la branche Roubaix dans le corpus technique.",
+        "faits": [
+          "Niveau : Tramway Mystere.",
+          "Branche : Roubaix.",
+          "Commune : Roubaix.",
+          "Statut technique : station hors tronc commun."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "tramway",
+        "roubaix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "tram-tourcoing-centre",
+      "niveau": "tramway",
+      "typeReponse": "station",
+      "technicalId": "tourcoing-centre",
+      "reponse": "Tourcoing Centre",
+      "reponsesAcceptees": [
+        "Tourcoing Centre"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du tramway Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "branche",
+          "texte": "Je suis sur la branche Tourcoing."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis un terminus du tramway dans le corpus technique."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom contient Centre."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Tourcoing Centre",
+        "texte": "Station du tramway situee a Tourcoing, Tourcoing Centre est le terminus de la branche Tourcoing dans le corpus technique.",
+        "faits": [
+          "Niveau : Tramway Mystere.",
+          "Branche : Tourcoing.",
+          "Commune : Tourcoing.",
+          "Statut technique : terminus."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "tramway",
+        "tourcoing",
+        "terminus"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    }
+  ]
+}

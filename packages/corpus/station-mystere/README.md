@@ -13,6 +13,53 @@ Pour le niveau Bus, les arrets, poles, terminus et communes desservies restent
 des donnees documentaires importantes, mais ils servent d'indices et ne sont pas
 les reponses du MVP.
 
+## Corpus editorial jouable
+
+- `editorial-entries.json` : premier lot de fiches jouables referencees par
+  `technicalId`.
+
+Ce fichier ne doit pas etre genere automatiquement depuis les donnees brutes :
+il contient le travail editorial stable, les reponses acceptees, les cinq
+indices ordonnes et la fiche decouverte. Les fichiers techniques peuvent donc
+etre regeneres sans effacer les fiches redigees.
+
+Le premier lot contient :
+
+- 5 fiches Metro Mystere ;
+- 5 fiches Tramway Mystere.
+
+## Base documentaire mutualisee
+
+- `../documentation/processed/transport/transport-places-notes.json` : reserve commune de notes sur les lieux, stations, poles et lignes de transport.
+
+Cette base sert de sas entre les sources documentaires et les fiches jouables.
+Elle peut contenir des notes brutes, des anecdotes, l'origine d'un nom, des
+reperes de quartier ou des sources externes ponctuelles. Une meme entree peut
+pointer vers plusieurs corpus techniques : Gare Lille Flandres, par exemple,
+sert au metro et au tramway.
+
+Le squelette actuel couvre :
+
+- 91 lieux mutualises ;
+- 60 stations de metro ;
+- 36 stations de tramway ;
+- 5 stations communes au metro et au tramway.
+
+Depuis la racine du depot, la base peut etre completee ou resynchronisee avec :
+
+```bash
+npm run sync:station-transport-notes
+```
+
+La commande ajoute les lieux manquants et preserve les notes editoriales deja
+saisies.
+
+Le flux editorial recommande est le suivant :
+
+1. Ajouter les sources externes locales et les notes dans `transport-places-notes.json`.
+2. Relire et reformuler les notes utiles pour le jeu.
+3. Copier seulement les indices et fiches finalises dans `editorial-entries.json`.
+
 ## Niveau 1 - Metro Mystere
 
 - `metro-stations.json` : premier socle technique des stations des lignes M1 et M2.

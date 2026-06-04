@@ -209,27 +209,41 @@ Le contraste doit être suffisant pour une utilisation mobile en extérieur.
 
 ## Architecture des données
 
-Chaque réponse jouable est représentée par une fiche JSON.
+Chaque réponse jouable est représentée par une fiche éditoriale JSON séparée des corpus techniques.
+
+Les corpus techniques servent à vérifier les lignes, branches, communes, terminus et identifiants.
+
+Le fichier `packages/corpus/documentation/processed/transport/transport-places-notes.json` sert de réserve documentaire mutualisable. Il reçoit les notes sourcées, les anecdotes, les origines de noms et les repères de quartier avant sélection éditoriale.
+
+Le fichier `packages/corpus/station-mystere/editorial-entries.json` contient les réponses réellement utilisables par le jeu : réponse canonique, réponses acceptées, cinq indices, fiche découverte et sources.
 
 Exemple de fiche station :
 
 ```json
 {
-  "id": "montebello",
-  "type": "metro",
-  "nom": "Montebello",
-  "commune": "Lille",
-  "ligne": "1",
-  "origine": "Nom du duc de Montebello",
-  "particularites": [
-    "Aquariums dans la station"
+  "id": "metro-gare-lille-flandres",
+  "niveau": "metro",
+  "typeReponse": "station",
+  "technicalId": "gare-lille-flandres",
+  "reponse": "Gare Lille Flandres",
+  "reponsesAcceptees": [
+    "Gare Lille Flandres",
+    "Lille Flandres"
   ],
   "indices": [
-    "Je suis sur la ligne 1",
-    "Je suis située à Lille",
-    "Mon nom est celui d'un maréchal de Napoléon",
-    "Des aquariums sont visibles dans la station"
-  ]
+    {
+      "ordre": 1,
+      "type": "transport",
+      "texte": "Je suis une station du métro Ilévia."
+    }
+  ],
+  "ficheDecouverte": {
+    "titre": "Gare Lille Flandres",
+    "texte": "Courte fiche affichée après résolution.",
+    "faits": [],
+    "sourceIds": []
+  },
+  "sourceIds": []
 }
 ```
 

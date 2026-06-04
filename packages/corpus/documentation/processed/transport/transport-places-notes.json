@@ -1,0 +1,4696 @@
+{
+  "generatedAt": "2026-06-04",
+  "status": "draft",
+  "description": "Base mutualisable de notes documentaires sur les lieux, stations et lignes de transport. Elle sert de reserve commune pour Station Mystere et les futurs jeux du portail.",
+  "sourceIds": [
+    "gtfs-ilevia-data-gouv",
+    "ilevia-arret-point-datamel"
+  ],
+  "model": {
+    "noteBuckets": [
+      "nameOrigin",
+      "history",
+      "anecdotes",
+      "nearbyLandmarks",
+      "clueAtoms"
+    ],
+    "externalSourcesPurpose": "URLs et references ponctuelles, par exemple pages Wikipedia station par station, sans gonfler le registre commun sources.json."
+  },
+  "items": [
+    {
+      "id": "4-cantons-stade-p-mauroy",
+      "label": "4 Cantons Stade P. Mauroy",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "4-cantons-stade-p-mauroy"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "terminus-m1",
+          "type": "network",
+          "text": "Terminus de la ligne M1 dans le corpus technique.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "acacias",
+      "label": "Acacias",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "acacias"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "alfred-mongy",
+      "label": "Alfred Mongy",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "alfred-mongy"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "alsace",
+      "label": "Alsace",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "alsace"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "bois-blancs",
+      "label": "Bois Blancs",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lambersart",
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "bois-blancs"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lambersart",
+          "type": "geography",
+          "text": "La station est situee a Lambersart.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "bol-d-air",
+      "label": "Bol D'Air",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "bol-d-air"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "botanique",
+      "label": "Botanique",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "La Madeleine"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "botanique"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-la-madeleine",
+          "type": "geography",
+          "text": "La station est situee a La Madeleine.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "bourg",
+      "label": "Bourg",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lomme"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "bourg"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lomme",
+          "type": "geography",
+          "text": "La station est situee a Lomme.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "bourgogne",
+      "label": "Bourgogne",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "bourgogne"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "brossolette",
+      "label": "Brossolette",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "brossolette"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "buisson",
+      "label": "Buisson",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "buisson"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "c-h-dron",
+      "label": "C.H. Dron",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "c-h-dron"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "terminus-m2",
+          "type": "network",
+          "text": "Terminus de la ligne M2 dans le corpus technique.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "canteleu",
+      "label": "Canteleu",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lambersart",
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "canteleu"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lambersart",
+          "type": "geography",
+          "text": "La station est situee a Lambersart.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "carliers",
+      "label": "Carliers",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "carliers"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "cartelot",
+      "label": "Cartelot",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Wasquehal"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "cartelot"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-wasquehal",
+          "type": "geography",
+          "text": "La station est situee a Wasquehal.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "cerisaie-c-d-affaires",
+      "label": "Cerisaie C. D'Affaires",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "cerisaie-c-d-affaires"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "chateau-rouge",
+      "label": "Chateau Rouge",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "chateau-rouge"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "chu-eurasante",
+      "label": "CHU Eurasante",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "chu-eurasante"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "terminus-m1",
+          "type": "network",
+          "text": "Terminus de la ligne M1 dans le corpus technique.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "chu-centre-o-lambret",
+      "label": "Chu-Centre O. Lambret",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "chu-centre-o-lambret"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "cite-scientifique",
+      "label": "Cité Scientifique",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "cite-scientifique"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "clemenceau-hippodrome",
+      "label": "Clemenceau Hippodrome",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "clemenceau-hippodrome"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "colbert",
+      "label": "Colbert",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "colbert"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "cormontaigne",
+      "label": "Cormontaigne",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "cormontaigne"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "croise-laroche",
+      "label": "Croise Laroche",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Baroeul",
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "croise-laroche"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Baroeul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "croix-centre",
+      "label": "Croix Centre",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Croix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "croix-centre"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-croix",
+          "type": "geography",
+          "text": "La station est situee a Croix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "ep-montesquieu",
+      "label": "Ep. Montesquieu",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "ep-montesquieu"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "euroteleport",
+      "label": "Euroteleport",
+      "types": [
+        "metro-station",
+        "tramway-station",
+        "transport-hub"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "euroteleport"
+        },
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "euroteleport"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "terminus-tramway-roubaix",
+          "type": "network",
+          "text": "Terminus de la branche Roubaix du tramway dans le corpus technique.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "faidherbe",
+      "label": "Faidherbe",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Mouvaux"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "faidherbe"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-mouvaux",
+          "type": "geography",
+          "text": "La station est situee a Mouvaux.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "fives",
+      "label": "Fives",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "fives"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "foch",
+      "label": "Foch",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "foch"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "fort-de-mons",
+      "label": "Fort De Mons",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Mons-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "fort-de-mons"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-mons-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Mons-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "gambetta",
+      "label": "Gambetta",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "gambetta"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "gare-de-tourcoing",
+      "label": "Gare De Tourcoing",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "gare-de-tourcoing"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "gare-jean-lebas",
+      "label": "Gare Jean Lebas",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "gare-jean-lebas"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "gare-lille-flandres",
+      "label": "Gare Lille Flandres",
+      "types": [
+        "metro-station",
+        "tramway-station",
+        "transport-hub"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "gare-lille-flandres"
+        },
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "gare-lille-flandres"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-correspondance-m1-m2",
+          "type": "network",
+          "text": "Station de correspondance entre les lignes M1 et M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "terminus-tramway-roubaix",
+          "type": "network",
+          "text": "Terminus de la branche Roubaix du tramway dans le corpus technique.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "terminus-tramway-tourcoing",
+          "type": "network",
+          "text": "Terminus de la branche Tourcoing du tramway dans le corpus technique.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "grand-cottignies",
+      "label": "Grand Cottignies",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Wasquehal"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "grand-cottignies"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-wasquehal",
+          "type": "geography",
+          "text": "La station est situee a Wasquehal.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "grand-palais",
+      "label": "Grand Palais",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "grand-palais"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "hopital-victor-provo",
+      "label": "Hopital Victor Provo",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "hopital-victor-provo"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "hotel-de-ville-villeneuve-d-ascq",
+      "label": "Hotel De Ville",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "hotel-de-ville-villeneuve-d-ascq"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "hotel-de-ville-wasquehal",
+      "label": "Hotel De Ville",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Wasquehal"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "hotel-de-ville-wasquehal"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-wasquehal",
+          "type": "geography",
+          "text": "La station est situee a Wasquehal.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "jean-jaures",
+      "label": "Jean Jaures",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "jean-jaures"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "jean-moulin",
+      "label": "Jean Moulin",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "jean-moulin"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "la-marque",
+      "label": "La Marque",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Croix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "la-marque"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-croix",
+          "type": "geography",
+          "text": "La station est situee a Croix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "la-terrasse",
+      "label": "La Terrasse",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Wasquehal"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "la-terrasse"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-wasquehal",
+          "type": "geography",
+          "text": "La station est situee a Wasquehal.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "le-quesne",
+      "label": "Le Quesne",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Marcq-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "le-quesne"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-marcq-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Marcq-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "le-sart",
+      "label": "Le Sart",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "le-sart"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "les-pres-e-pisani",
+      "label": "Les Pres-E. Pisani",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "les-pres-e-pisani"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "lille-europe",
+      "label": "Lille Europe",
+      "types": [
+        "metro-station",
+        "tramway-station",
+        "transport-hub"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "lille-europe"
+        },
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "lille-europe"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "lomme-lambersart",
+      "label": "Lomme-Lambersart",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lomme"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "lomme-lambersart"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lomme",
+          "type": "geography",
+          "text": "La station est situee a Lomme.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "ma-campagne",
+      "label": "Ma Campagne",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "ma-campagne"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "madeleine-caulier",
+      "label": "Madeleine Caulier",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "madeleine-caulier"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "mairie-d-hellemmes",
+      "label": "Mairie D'Hellemmes",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Hellemmes-Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "mairie-d-hellemmes"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-hellemmes-lille",
+          "type": "geography",
+          "text": "La station est situee a Hellemmes-Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "mairie-de-croix",
+      "label": "Mairie De Croix",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Croix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "mairie-de-croix"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-croix",
+          "type": "geography",
+          "text": "La station est situee a Croix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "mairie-de-lille",
+      "label": "Mairie De Lille",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "mairie-de-lille"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "mairie-de-mons",
+      "label": "Mairie De Mons",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Mons-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "mairie-de-mons"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-mons-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Mons-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "maison-des-enfants",
+      "label": "Maison Des Enfants",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lomme"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "maison-des-enfants"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lomme",
+          "type": "geography",
+          "text": "La station est situee a Lomme.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "marbrerie",
+      "label": "Marbrerie",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Hellemmes-Lille",
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "marbrerie"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-hellemmes-lille",
+          "type": "geography",
+          "text": "La station est situee a Hellemmes-Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "mercure",
+      "label": "Mercure",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "mercure"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "mitterie",
+      "label": "Mitterie",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lomme"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "mitterie"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lomme",
+          "type": "geography",
+          "text": "La station est situee a Lomme.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "mons-sarts",
+      "label": "Mons Sarts",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Mons-en-Barœul"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "mons-sarts"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-mons-en-baroeul",
+          "type": "geography",
+          "text": "La station est situee a Mons-en-Barœul.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "montebello",
+      "label": "Montebello",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "montebello"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "parc-barbieux",
+      "label": "Parc Barbieux",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "parc-barbieux"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "phalempins",
+      "label": "Phalempins",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "phalempins"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "planche-epinoy",
+      "label": "Planche Epinoy",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "planche-epinoy"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "pont-de-bois",
+      "label": "Pont De Bois",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "pont-de-bois"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "pont-de-neuville",
+      "label": "Pont De Neuville",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "pont-de-neuville"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "pont-de-wasquehal",
+      "label": "Pont De Wasquehal",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Wasquehal"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "pont-de-wasquehal"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-wasquehal",
+          "type": "geography",
+          "text": "La station est situee a Wasquehal.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "pont-hydraulique",
+      "label": "Pont Hydraulique",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "pont-hydraulique"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "pont-superieur",
+      "label": "Pont Superieur",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lomme"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "pont-superieur"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lomme",
+          "type": "geography",
+          "text": "La station est situee a Lomme.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "port-de-lille",
+      "label": "Port De Lille",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "port-de-lille"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "porte-d-arras",
+      "label": "Porte D'Arras",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "porte-d-arras"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "porte-de-douai",
+      "label": "Porte De Douai",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "porte-de-douai"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "porte-de-valenciennes",
+      "label": "Porte De Valenciennes",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "porte-de-valenciennes"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "porte-des-postes",
+      "label": "Porte des Postes",
+      "types": [
+        "metro-station",
+        "transport-hub"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "porte-des-postes"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-correspondance-m1-m2",
+          "type": "network",
+          "text": "Station de correspondance entre les lignes M1 et M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "republique-beaux-arts",
+      "label": "République Beaux-Arts",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "republique-beaux-arts"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "rihour",
+      "label": "Rihour",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "rihour"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "romarin",
+      "label": "Romarin",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "La Madeleine"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "romarin"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-la-madeleine",
+          "type": "geography",
+          "text": "La station est situee a La Madeleine.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "roubaix-charles-de-gaulle",
+      "label": "Roubaix Charles De Gaulle",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "roubaix-charles-de-gaulle"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "roubaix-place",
+      "label": "Roubaix Place",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Roubaix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "roubaix-place"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-roubaix",
+          "type": "geography",
+          "text": "La station est situee a Roubaix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "saint-maur",
+      "label": "Saint Maur",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "La Madeleine"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "saint-maur"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-tronc-commun-roubaix-tourcoing",
+          "type": "network",
+          "text": "Station du tronc commun du tramway vers les branches Roubaix et Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-la-madeleine",
+          "type": "geography",
+          "text": "La station est situee a La Madeleine.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "square-flandres",
+      "label": "Square Flandres",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Hellemmes-Lille",
+        "Lezennes"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "square-flandres"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-hellemmes-lille",
+          "type": "geography",
+          "text": "La station est situee a Hellemmes-Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lezennes",
+          "type": "geography",
+          "text": "La station est situee a Lezennes.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "st-maurice-pellevoisin",
+      "label": "St Maurice Pellevoisin",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "st-maurice-pellevoisin"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "st-philibert",
+      "label": "St. Philibert",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lomme"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "st-philibert"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "terminus-m2",
+          "type": "network",
+          "text": "Terminus de la ligne M2 dans le corpus technique.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lomme",
+          "type": "geography",
+          "text": "La station est situee a Lomme.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "tourcoing-centre",
+      "label": "Tourcoing Centre",
+      "types": [
+        "metro-station",
+        "tramway-station",
+        "transport-hub"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "tourcoing-centre"
+        },
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "tourcoing-centre"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "terminus-tramway-tourcoing",
+          "type": "network",
+          "text": "Terminus de la branche Tourcoing du tramway dans le corpus technique.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "triez",
+      "label": "Triez",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Mouvaux"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "triez"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-mouvaux",
+          "type": "geography",
+          "text": "La station est situee a Mouvaux.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "triolo",
+      "label": "Triolo",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Villeneuve-d'Ascq"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "triolo"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-villeneuve-d-ascq",
+          "type": "geography",
+          "text": "La station est situee a Villeneuve-d'Ascq.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "trois-suisses",
+      "label": "Trois Suisses",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Mouvaux"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "trois-suisses"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-mouvaux",
+          "type": "geography",
+          "text": "La station est situee a Mouvaux.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "victoire",
+      "label": "Victoire",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Tourcoing"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "victoire"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-tourcoing",
+          "type": "network",
+          "text": "Station de la branche Tourcoing du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-tourcoing",
+          "type": "geography",
+          "text": "La station est situee a Tourcoing.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "villa-cavrois",
+      "label": "Villa Cavrois",
+      "types": [
+        "tramway-station"
+      ],
+      "communes": [
+        "Croix"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "villa-cavrois"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-croix",
+          "type": "geography",
+          "text": "La station est situee a Croix.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "wasquehal-pave-de-lille",
+      "label": "Wasquehal Pavé De Lille",
+      "types": [
+        "metro-station",
+        "tramway-station",
+        "transport-hub"
+      ],
+      "communes": [
+        "Wasquehal"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "wasquehal-pave-de-lille"
+        },
+        {
+          "system": "station-mystere",
+          "level": "tramway",
+          "answerType": "station",
+          "technicalId": "wasquehal-pave-de-lille"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m2",
+          "type": "network",
+          "text": "Station de la ligne M2 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "tramway-branche-roubaix",
+          "type": "network",
+          "text": "Station de la branche Roubaix du tramway.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-wasquehal",
+          "type": "geography",
+          "text": "La station est situee a Wasquehal.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    },
+    {
+      "id": "wazemmes",
+      "label": "Wazemmes",
+      "types": [
+        "metro-station"
+      ],
+      "communes": [
+        "Lille"
+      ],
+      "technicalRefs": [
+        {
+          "system": "station-mystere",
+          "level": "metro",
+          "answerType": "station",
+          "technicalId": "wazemmes"
+        }
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ],
+      "externalSources": [],
+      "nameOrigin": [],
+      "history": [],
+      "anecdotes": [],
+      "nearbyLandmarks": [],
+      "clueAtoms": [
+        {
+          "id": "metro-ligne-m1",
+          "type": "network",
+          "text": "Station de la ligne M1 du metro.",
+          "status": "draft",
+          "sourceIds": [
+            "gtfs-ilevia-data-gouv"
+          ],
+          "externalSourceIds": []
+        },
+        {
+          "id": "commune-lille",
+          "type": "geography",
+          "text": "La station est situee a Lille.",
+          "status": "draft",
+          "sourceIds": [
+            "ilevia-arret-point-datamel"
+          ],
+          "externalSourceIds": []
+        }
+      ]
+    }
+  ]
+}

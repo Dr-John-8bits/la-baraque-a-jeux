@@ -108,7 +108,7 @@ const output = {
   generatedAt,
   status: "technical-baseline",
   description:
-    "Premier corpus technique complet pour le niveau 3 Bus Mystere. Il conserve les lignes, parcours distincts et arrets regroupes avant selection editoriale.",
+    "Premier corpus technique complet pour le niveau 4 Bus Mystere. Il conserve les lignes, parcours distincts et arrets regroupes avant selection editoriale.",
   level: "bus",
   sourceIds,
   stats: {

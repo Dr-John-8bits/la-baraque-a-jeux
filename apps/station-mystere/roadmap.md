@@ -56,6 +56,7 @@ Travaux :
 - nettoyer les exports ;
 - isoler les informations exploitables pour le jeu ;
 - documenter les limites des données récupérées ;
+- créer une réserve documentaire transport mutualisable ;
 - préparer les premières fiches candidates.
 
 Priorité de travail :
@@ -72,6 +73,7 @@ Livrable :
 - premiers fichiers de données brutes et nettoyées pour les niveaux Métro, Tramway, Vélo et Bus ;
 - socle technique Tramway Mystère extrait du GTFS Ilévia ;
 - inventaire technique complet du bus, à réduire ensuite en corpus de lignes jouables.
+- base `transport-places-notes.json` prête à recevoir les notes station par station.
 
 ---
 
@@ -88,6 +90,8 @@ Travaux :
 - définir les identifiants uniques ;
 - distinguer les données brutes issues des API des données éditoriales enrichies à la main ;
 - gérer à la fois des réponses de type station et des réponses de type ligne.
+- stabiliser `editorial-entries.json` comme fichier des fiches jouables.
+- stabiliser `transport-places-notes.json` comme réserve mutualisée des notes transport.
 
 Livrable :
 
@@ -109,6 +113,8 @@ Travaux :
 - anecdotes ;
 - œuvres d'art ;
 - particularités architecturales.
+- alimentation de `transport-places-notes.json` avant rédaction des fiches jouables.
+- fiches jouables dans `editorial-entries.json`.
 
 ### Tramway
 
@@ -119,6 +125,8 @@ Travaux :
 - origine des noms ;
 - anecdotes ;
 - repères de quartier utiles aux indices.
+- alimentation de `transport-places-notes.json` avant rédaction des fiches jouables.
+- fiches jouables dans `editorial-entries.json`.
 
 ### Vélo
 
@@ -139,6 +147,7 @@ Travaux :
 
 Livrable :
 
+- reserve documentaire transport mutualisee ;
 - premier corpus éditorial exploitable pour les quatre niveaux.
 
 ---
