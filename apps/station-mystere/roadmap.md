@@ -21,9 +21,57 @@ Lorsqu'un choix est possible entre une solution originale et une solution cohér
 
 ---
 
+## État au 4 juin 2026
+
+Le projet est encore en phase corpus.
+
+Le développement du jeu n'a pas commencé volontairement. La priorité actuelle est de construire une base documentaire solide, mutualisable et sourcée avant de produire le moteur de jeu.
+
+Éléments cadrés :
+
+- gameplay quotidien en quatre niveaux ;
+- niveau 1 : Métro Mystère, réponse attendue station de métro ;
+- niveau 2 : Tramway Mystère, réponse attendue station de tramway ;
+- niveau 3 : Vélo Mystère, réponse attendue station V'Lille ;
+- niveau 4 : Bus Mystère, réponse attendue ligne de bus ;
+- barème de score et condition de défaite ;
+- révélation de la réponse avec fiche découverte après victoire ou défaite ;
+- séparation entre corpus technique, réserve documentaire et fiches jouables.
+
+Éléments réalisés :
+
+- page placeholder Station Mystère dans `apps/station-mystere/` ;
+- tuile Station Mystère sur l'index du portail ;
+- actualité de blog annonçant le projet ;
+- socle technique Métro Mystère : 60 stations ;
+- socle technique Tramway Mystère : 36 stations ;
+- socle technique Vélo Mystère : 268 stations V'Lille, dont 255 candidates ;
+- inventaire technique Bus Mystère : 143 lignes bus ;
+- premier fichier `editorial-entries.json` avec 10 fiches jouables de départ ;
+- réserve documentaire mutualisée `transport-places-notes.json` ;
+- squelette documentaire mutualisé Métro + Tramway : 91 lieux, dont 5 lieux communs ;
+- récupération locale hors Git des pages Wikipédia métro : 60 pages sur 60 ;
+- récupération locale hors Git des pages Wikipédia tramway disponibles : 5 pages sur 36.
+
+Constat important :
+
+- le métro dispose d'une couverture Wikipédia station par station complète ;
+- le tramway dispose de peu de pages dédiées, il faudra donc compléter avec des sources de contexte : Grand Boulevard, communes, lieux proches, patrimoine, Ilévia, MEL et sources locales ;
+- les fichiers Wikipédia complets restent dans `packages/corpus/documentation/raw/`, ignoré par Git.
+
+Position actuelle dans la roadmap :
+
+- phases 2 et 3 largement avancées ;
+- phase 4 à démarrer réellement par l'analyse éditoriale du métro ;
+- phases 5 à 8 non démarrées.
+
+---
+
 ## Phase 1 — Analyse de l'existant
 
 Objectif : comprendre et réutiliser les mécanismes déjà présents dans le portail.
+
+Statut : à faire avant le développement du moteur.
 
 Travaux :
 
@@ -48,6 +96,8 @@ Objectif : constituer une première base documentaire propre avant de lancer le 
 
 Cette phase est menée manuellement avec l'assistant, avant l'implémentation technique.
 
+Statut : largement avancée.
+
 Travaux :
 
 - identifier les sources de données ouvertes utiles ;
@@ -58,6 +108,8 @@ Travaux :
 - documenter les limites des données récupérées ;
 - créer une réserve documentaire transport mutualisable ;
 - préparer les premières fiches candidates.
+- récupérer localement les pages Wikipédia utiles, sans les versionner ;
+- consigner les limites de couverture des sources.
 
 Priorité de travail :
 
@@ -66,20 +118,23 @@ Priorité de travail :
 3. niveau 3 — V'Lille ;
 4. niveau 4 — bus.
 
-Pour le niveau 1, le premier chantier consiste à requêter les données Ilévia afin de récupérer les stations de métro, leurs lignes, leurs identifiants et leurs informations de base.
+Le premier chantier Ilévia est réalisé pour les quatre niveaux techniques. Le prochain chantier de corpus n'est plus la récupération, mais l'analyse et la sélection éditoriale.
 
 Livrable :
 
-- premiers fichiers de données brutes et nettoyées pour les niveaux Métro, Tramway, Vélo et Bus ;
-- socle technique Tramway Mystère extrait du GTFS Ilévia ;
-- inventaire technique complet du bus, à réduire ensuite en corpus de lignes jouables.
-- base `transport-places-notes.json` prête à recevoir les notes station par station.
+- fichiers de données brutes et nettoyées pour les niveaux Métro, Tramway, Vélo et Bus ;
+- socles techniques Métro, Tramway et Vélo ;
+- inventaire technique complet du bus, à réduire ensuite en corpus de lignes jouables ;
+- base `transport-places-notes.json` prête à recevoir les notes station par station ;
+- pages Wikipédia métro et tramway disponibles stockées localement hors Git.
 
 ---
 
 ## Phase 3 — Modèle de données
 
 Objectif : définir le format unique des données du jeu à partir des premiers corpus récupérés.
+
+Statut : première version en place, à ajuster pendant l'analyse éditoriale.
 
 Travaux :
 
@@ -89,19 +144,30 @@ Travaux :
 - définir le système de sélection quotidienne ;
 - définir les identifiants uniques ;
 - distinguer les données brutes issues des API des données éditoriales enrichies à la main ;
-- gérer à la fois des réponses de type station et des réponses de type ligne.
-- stabiliser `editorial-entries.json` comme fichier des fiches jouables.
-- stabiliser `transport-places-notes.json` comme réserve mutualisée des notes transport.
+- gérer à la fois des réponses de type station et des réponses de type ligne ;
+- stabiliser `editorial-entries.json` comme fichier des fiches jouables ;
+- stabiliser `transport-places-notes.json` comme réserve mutualisée des notes transport ;
+- valider les références techniques et les sources.
 
 Livrable :
 
-- schéma JSON documenté.
+- format JSON documenté et contrôlé par `npm run check:corpus`.
 
 ---
 
 ## Phase 4 — Constitution du corpus éditorial
 
 Objectif : enrichir les données brutes avec des informations culturelles, historiques et patrimoniales.
+
+Statut : prochaine grande phase.
+
+Principe :
+
+- analyser les sources brutes ;
+- extraire seulement les faits utiles ;
+- ranger les notes dans `transport-places-notes.json` ;
+- reformuler avant toute publication ;
+- produire ensuite les fiches jouables dans `editorial-entries.json`.
 
 Travaux :
 
@@ -112,9 +178,16 @@ Travaux :
 - origine des noms ;
 - anecdotes ;
 - œuvres d'art ;
-- particularités architecturales.
-- alimentation de `transport-places-notes.json` avant rédaction des fiches jouables.
+- particularités architecturales ;
+- analyse des 60 pages Wikipédia récupérées localement ;
+- alimentation de `transport-places-notes.json` avant rédaction des fiches jouables ;
 - fiches jouables dans `editorial-entries.json`.
+
+Priorité immédiate :
+
+- traiter un lot pilote de 5 stations métro ;
+- valider le niveau de détail, le style et la structure des notes ;
+- généraliser ensuite à l'ensemble du métro.
 
 ### Tramway
 
@@ -124,8 +197,10 @@ Travaux :
 - terminus ;
 - origine des noms ;
 - anecdotes ;
-- repères de quartier utiles aux indices.
-- alimentation de `transport-places-notes.json` avant rédaction des fiches jouables.
+- repères de quartier utiles aux indices ;
+- exploitation des 5 pages Wikipédia disponibles ;
+- recherche de sources complémentaires pour les 31 stations sans page dédiée ;
+- alimentation de `transport-places-notes.json` avant rédaction des fiches jouables ;
 - fiches jouables dans `editorial-entries.json`.
 
 ### Vélo
@@ -156,6 +231,8 @@ Livrable :
 
 Objectif : développer la logique principale.
 
+Statut : non démarrée.
+
 Travaux :
 
 - sélection de l'énigme du jour ;
@@ -175,6 +252,8 @@ Livrable :
 ## Phase 6 — Interface utilisateur
 
 Objectif : intégrer le moteur dans l'univers de La Baraque à Jeux.
+
+Statut : non démarrée.
 
 Travaux :
 
@@ -196,6 +275,8 @@ Livrable :
 
 Objectif : harmoniser l'expérience avec les autres jeux du portail.
 
+Statut : non démarrée.
+
 Travaux :
 
 - partage des résultats ;
@@ -216,6 +297,8 @@ Livrable :
 
 Objectif : préparer l'intégration officielle dans le portail.
 
+Statut : non démarrée.
+
 Travaux :
 
 - optimisation mobile ;
@@ -231,11 +314,53 @@ Livrable :
 
 ---
 
+## Prochaines étapes recommandées
+
+### Étape 1
+
+Faire un checkpoint Git de l'état actuel.
+
+Objectif : sécuriser tout le travail de cadrage, de corpus technique et de récupération documentaire déjà réalisé.
+
+### Étape 2
+
+Analyser un lot pilote métro.
+
+Lot recommandé :
+
+- Gare Lille-Flandres ;
+- Rihour ;
+- République Beaux-Arts ;
+- Porte des Postes ;
+- Quatre Cantons - Stade Pierre-Mauroy.
+
+Objectif : transformer les pages Wikipédia brutes en notes sourcées, reformulées et exploitables dans `transport-places-notes.json`.
+
+### Étape 3
+
+Produire cinq fiches jouables finales.
+
+Objectif : valider la qualité des indices, le ton des fiches découverte et la structure de `editorial-entries.json`.
+
+### Étape 4
+
+Dérouler tout le métro.
+
+Objectif : rendre Métro Mystère complet avant de passer au tramway.
+
+### Étape 5
+
+Attaquer le tramway avec une stratégie de sources mixtes.
+
+Objectif : compléter les stations sans page Wikipédia dédiée avec des sources de contexte fiables.
+
+---
+
 ## Priorités absolues
 
 1. Cohérence avec La Baraque à Jeux.
 2. Constitution d'un corpus fiable avant développement.
-3. Démarrage par le niveau Métro Mystère.
+3. Analyse éditoriale du métro avant développement du moteur.
 4. Jeu entièrement autonome dans le navigateur.
 5. Aucune dépendance à un backend.
 6. Réutilisation maximale des composants existants.
