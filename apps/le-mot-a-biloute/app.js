@@ -3,7 +3,7 @@ import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { copyText, shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 
-const APP_VERSION = "26.06.03.1";
+const APP_VERSION = "26.06.04.1";
 const GAME_URL = new URL(".", window.location.href).href;
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
@@ -40,7 +40,9 @@ const KEYBOARD_ROWS = [
 const LETTER_RANK = { absent: 1, present: 2, correct: 3 };
 
 const els = {
+  loadingState: document.getElementById("loadingState"),
   board: document.getElementById("board"),
+  gameActions: document.getElementById("gameActions"),
   keyboard: document.getElementById("keyboard"),
   categoryLabel: document.getElementById("categoryLabel"),
   tryCount: document.getElementById("tryCount"),
@@ -405,6 +407,13 @@ function finishGame(result, options = {}) {
 }
 
 function render() {
+  els.loadingState.hidden = true;
+  els.board.hidden = false;
+  els.gameActions.hidden = false;
+  els.keyboard.hidden = false;
+  els.helpButton.disabled = false;
+  els.archiveButton.disabled = false;
+  els.statsButton.disabled = false;
   const active = isGameActive();
   els.categoryLabel.textContent = archiveMode ? `Archive · ${word.category}` : word.category;
   els.tryCount.textContent = formatTryCount();

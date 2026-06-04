@@ -51,6 +51,10 @@ button:disabled {
   white-space: nowrap;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .eyebrow,
 .label {
   margin: 0;
@@ -150,9 +154,31 @@ h3 {
 }
 
 .board-wrap {
+  min-height: 292px;
   display: grid;
   place-items: center;
   padding: 4px 0;
+}
+
+.loading-state {
+  min-height: 220px;
+  display: grid;
+  gap: 12px;
+  place-items: center;
+  align-content: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 42px;
+  height: 42px;
+  border: 5px solid #e7ddcb;
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: loading-spin 820ms linear infinite;
 }
 
 .board {
@@ -249,6 +275,12 @@ h3 {
   }
   75% {
     transform: translateX(5px);
+  }
+}
+
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 

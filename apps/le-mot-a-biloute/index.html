@@ -86,6 +86,7 @@
           type="button"
           aria-label="Ouvrir les règles du jeu"
           title="Règles du jeu"
+          disabled
         >
           Hein ?
         </button>
@@ -95,6 +96,7 @@
           type="button"
           aria-label="Ouvrir les archives"
           title="Archives"
+          disabled
         >
           Archives
         </button>
@@ -104,6 +106,7 @@
           type="button"
           aria-label="Ouvrir le calepin de statistiques"
           title="Calepin de statistiques"
+          disabled
         >
           Calepin
         </button>
@@ -111,20 +114,25 @@
       <p class="visually-hidden" id="statusAnnouncer" role="status" aria-live="polite"></p>
 
       <section class="board-wrap" aria-label="Grille de jeu">
+        <div class="loading-state" id="loadingState" role="status" aria-live="polite">
+          <span class="loading-spinner" aria-hidden="true"></span>
+          <span>Chargement en cours...</span>
+        </div>
         <div
           class="board"
           id="board"
           role="grid"
           aria-label="Propositions et indices de position des lettres"
+          hidden
         ></div>
       </section>
 
-      <section class="actions">
+      <section class="actions" id="gameActions" hidden>
         <button id="hintButton" type="button">Ch’ti coup d'pouce gratuit</button>
         <button id="primaryActionButton" type="button" disabled>Valider</button>
       </section>
 
-      <section class="keyboard" id="keyboard" aria-label="Clavier virtuel"></section>
+      <section class="keyboard" id="keyboard" aria-label="Clavier virtuel" hidden></section>
 
       <dialog class="result-dialog" id="resultDialog" aria-labelledby="resultTitle">
         <form method="dialog">

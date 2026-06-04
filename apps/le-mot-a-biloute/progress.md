@@ -54,3 +54,7 @@ Original prompt: Aligne les documents, et fais une première version du jeu.
 
 - Itération victoire 26.06.03.1 : après une bonne réponse, la modale de résultat attend la fin du flip lettre par lettre, laisse un court souffle, déclenche un rebond discret de la ligne gagnante, puis s'ouvre.
 - Vérification 26.06.03.1 : test Playwright ciblé OK sur victoire `BOUQUE` : pas de modale pendant le flip, ligne gagnante célébrée avant l'ouverture, modale visible ensuite, aucune erreur console.
+
+## 2026-06-04
+
+- Itération chargement 26.06.04.1 : ajout d'un loader HTML/CSS visible pendant le chargement des JSON du Mot à Biloute. La grille, les actions et le clavier sont masqués jusqu'au premier `render()`.
