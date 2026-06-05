@@ -15,6 +15,12 @@ Le joueur doit identifier successivement :
 
 La progression est linéaire : chaque niveau n'est accessible qu'après avoir réussi le niveau précédent.
 
+Note de version :
+
+- la vision complète reste structurée en quatre niveaux ;
+- la v1 développée en premier doit se concentrer uniquement sur Métro Mystère ;
+- Tramway, V'Lille et Bus seront ajoutés après validation du moteur, du flow et de l'interface sur le métro.
+
 ---
 
 ## Périmètre des réponses par niveau

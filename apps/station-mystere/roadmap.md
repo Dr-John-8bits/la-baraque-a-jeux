@@ -30,6 +30,7 @@ Le développement du jeu n'a pas commencé volontairement. La priorité actuelle
 Éléments cadrés :
 
 - gameplay quotidien en quatre niveaux ;
+- cadrage game design v1 centré sur Métro Mystère ;
 - niveau 1 : Métro Mystère, réponse attendue station de métro ;
 - niveau 2 : Tramway Mystère, réponse attendue station de tramway ;
 - niveau 3 : Vélo Mystère, réponse attendue station V'Lille ;
@@ -37,6 +38,7 @@ Le développement du jeu n'a pas commencé volontairement. La priorité actuelle
 - barème de score et condition de défaite ;
 - révélation de la réponse avec fiche découverte après victoire ou défaite ;
 - séparation entre corpus technique, réserve documentaire et fiches jouables.
+- principe d'interface : panneau de station mystère, recherche de station, calepin, stats et fiche découverte.
 
 Éléments réalisés :
 
@@ -57,6 +59,9 @@ Le développement du jeu n'a pas commencé volontairement. La priorité actuelle
 - ligne M1 entièrement enrichie dans la réserve documentaire : 18 stations sur 18 ;
 - ligne M2 entièrement enrichie dans la réserve documentaire : 44 stations sur 44 ;
 - corpus documentaire métro complet : 60 stations enrichies sur 60.
+- document de game design v1 : `apps/station-mystere/game-design.md`.
+- document `game-design.md` renforcé comme référence principale pour lancer le développement de la v1.
+- plan d'implémentation v1 : `apps/station-mystere/implementation-plan.md`.
 
 Constat important :
 
@@ -68,6 +73,8 @@ Position actuelle dans la roadmap :
 
 - phases 2 et 3 largement avancées ;
 - phase 4 complète côté métro pour la réserve documentaire et les fiches jouables v1 ;
+- phase 1 cadrée dans `game-design.md` pour le périmètre v1 ;
+- plan technique d'exécution disponible dans `implementation-plan.md` ;
 - développement du jeu prêt à démarrer pour une v1 centrée sur Métro Mystère ;
 - tramway, V'Lille et bus reportés à une v2 ou à des itérations ultérieures.
 
@@ -77,7 +84,7 @@ Position actuelle dans la roadmap :
 
 Objectif : comprendre et réutiliser les mécanismes déjà présents dans le portail.
 
-Statut : à faire avant le développement du moteur.
+Statut : cadrage initial réalisé, à compléter si besoin avant le développement du moteur.
 
 Travaux :
 
@@ -89,10 +96,11 @@ Travaux :
 - identifier les mécanismes de partage ;
 - identifier les mécanismes de sauvegarde locale ;
 - identifier les composants communs pouvant être mutualisés.
+- cadrer le flow v1, la recherche de station, le calepin, les stats et la fiche découverte.
 
 Livrable :
 
-- document d'inventaire des composants réutilisables.
+- document de game design et d'inventaire des composants réutilisables : `game-design.md`.
 
 ---
 
@@ -193,7 +201,7 @@ Priorité immédiate :
 
 - relire le corpus documentaire métro complet ;
 - relire les 60 fiches jouables métro v1 dans `editorial-entries.json` ;
-- analyser les jeux existants du portail pour réutiliser les bons composants ;
+- s'appuyer sur le cadrage `game-design.md` pour réutiliser les bons composants ;
 - lancer ensuite le développement du moteur v1 Métro Mystère.
 
 ### Tramway
@@ -239,6 +247,8 @@ Livrable :
 Objectif : développer la logique principale.
 
 Statut : non démarrée.
+
+Périmètre de départ : v1 Métro Mystère uniquement, avec une structure compatible avec les futurs niveaux.
 
 Travaux :
 

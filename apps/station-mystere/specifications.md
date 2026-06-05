@@ -15,6 +15,12 @@ Chaque jour, quatre énigmes sont proposées.
 
 Les quatre énigmes sont indépendantes mais partagent le même moteur de jeu.
 
+Note de version :
+
+- le moteur doit être pensé pour accueillir plusieurs niveaux à terme ;
+- la première version jouable doit implémenter uniquement Métro Mystère ;
+- le périmètre métro permet de valider la recherche de station, les indices, le score, le calepin, les statistiques et la fiche découverte avant d'élargir le jeu.
+
 ---
 
 ## Périmètre fonctionnel des réponses
