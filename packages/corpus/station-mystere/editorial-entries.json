@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-04",
+  "generatedAt": "2026-06-05",
   "status": "draft",
-  "description": "Premier lot editorial jouable pour Station Mystere. Ces fiches referencent les corpus techniques et restent volontairement sobres tant que les enrichissements patrimoniaux ne sont pas sources.",
+  "description": "Fiches jouables Station Mystere. La v1 cible le metro ; les autres niveaux restent en brouillon pour une iteration ulterieure.",
   "sourceIds": [
     "gtfs-ilevia-data-gouv",
     "ilevia-arret-point-datamel"
@@ -21,6 +21,655 @@
   },
   "entries": [
     {
+      "id": "metro-4-cantons-stade-p-mauroy",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "4-cantons-stade-p-mauroy",
+      "reponse": "4 Cantons Stade P. Mauroy",
+      "reponsesAcceptees": [
+        "4 Cantons Stade P. Mauroy",
+        "Quatre Cantons - Stade Pierre-Mauroy",
+        "Quatre Cantons Stade Pierre-Mauroy",
+        "Quatre Cantons-Stade Pierre-Mauroy",
+        "4 Cantons Stade P Mauroy",
+        "4 Cantons",
+        "Quatre Cantons",
+        "4 Cantons Stade Pierre Mauroy"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Villeneuve-d'Ascq."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis un terminus de la ligne M1."
+        },
+        {
+          "ordre": 5,
+          "type": "landmark",
+          "texte": "Je sers d'acces metro a la Cite scientifique."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "4 Cantons Stade P. Mauroy",
+        "texte": "4 Cantons Stade P. Mauroy est une station de la ligne M1 situee a Villeneuve-d'Ascq. La Cite scientifique de l'Universite de Lille et plusieurs ecoles d'ingenieurs sont desservies par la station.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Villeneuve-d'Ascq.",
+          "Particularite : terminus.",
+          "Ouverte sous le nom Quatre Cantons, la station a ensuite pris un sous-titre lie au Grand Stade avant d'adopter la reference au Stade Pierre-Mauroy.",
+          "Mise en service en 1982 sur le premier troncon du VAL, la station fait partie des points de depart historiques du metro lillois avant l'inauguration officielle de 1983."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "villeneuve-d-ascq",
+        "terminus"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-cite-scientifique",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "cite-scientifique",
+      "reponse": "Cité Scientifique",
+      "reponsesAcceptees": [
+        "Cité Scientifique",
+        "Cité Scientifique - Professeur Gabillard",
+        "Cité Scientifique Professeur Gabillard",
+        "Cité Scientifique-Professeur Gabillard",
+        "Cite Scientifique",
+        "Cite Scientifique - Professeur Gabillard"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Villeneuve-d'Ascq."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers le campus scientifique de l'Universite de Lille."
+        },
+        {
+          "ordre": 5,
+          "type": "architecture",
+          "texte": "Mon batiment aerien utilise du verre bleu autour du viaduc."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Cité Scientifique",
+        "texte": "Cité Scientifique est une station de la ligne M1 situee a Villeneuve-d'Ascq. Elle dessert le campus scientifique de l'Universite de Lille.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Villeneuve-d'Ascq.",
+          "La station ajoute Professeur Gabillard a son nom en hommage a Robert Gabillard, figure associee a l'invention du VAL.",
+          "Mise en service en 1982 sur le premier troncon Quatre Cantons - Hotel de Ville, elle appartient aux stations pionnieres du metro lillois.",
+          "Le batiment aerien, en verre bleu et en acier, enveloppe le viaduc de la ligne 1."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "villeneuve-d-ascq"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-triolo",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "triolo",
+      "reponse": "Triolo",
+      "reponsesAcceptees": [
+        "Triolo"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Villeneuve-d'Ascq."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je suis reliee au centre commercial du Triolo."
+        },
+        {
+          "ordre": 5,
+          "type": "architecture",
+          "texte": "J'ai ete construite en tranchee ouverte pour eviter un viaduc dans le quartier."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Triolo",
+        "texte": "Triolo est une station de la ligne M1 situee a Villeneuve-d'Ascq. Le centre commercial du Triolo est directement relie a la station.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Villeneuve-d'Ascq.",
+          "Le nom reprend celui du quartier du Triolo a Villeneuve-d'Ascq.",
+          "Le refus du viaduc par les habitants conduit a construire la station en tranchee ouverte plutot qu'en hauteur.",
+          "La station est concue comme un puits de lumiere, avec une voute vitree au dessin futuriste."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "villeneuve-d-ascq"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-hotel-de-ville-villeneuve-d-ascq",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "hotel-de-ville-villeneuve-d-ascq",
+      "reponse": "Hotel De Ville",
+      "reponsesAcceptees": [
+        "Hotel De Ville",
+        "Villeneuve-d'Ascq - Hôtel de Ville",
+        "Villeneuve-d'Ascq Hôtel de Ville",
+        "Villeneuve-d'Ascq-Hôtel de Ville",
+        "Villeneuve-d'Ascq - Hotel de Ville"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Villeneuve-d'Ascq."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers le centre commercial V2."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Un niveau de la station est lie a une gare routiere."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Hotel De Ville",
+        "texte": "Hotel De Ville est une station de la ligne M1 situee a Villeneuve-d'Ascq. La mairie de Villeneuve-d'Ascq se trouve a proximite immediate.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Villeneuve-d'Ascq.",
+          "La station, d'abord appelee Hotel de Ville, devient Villeneuve-d'Ascq - Hotel de Ville en 1999 pour eviter la confusion avec Wasquehal - Hotel de Ville.",
+          "Elle appartient au troncon de 1982 ou le public pouvait observer les premiers essais du VAL.",
+          "Contrairement a beaucoup de stations lilloises, elle possede un quai central encadre par les voies."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "villeneuve-d-ascq"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-pont-de-bois",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "pont-de-bois",
+      "reponse": "Pont De Bois",
+      "reponsesAcceptees": [
+        "Pont De Bois"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Villeneuve-d'Ascq."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers le campus litteraire de l'Universite de Lille."
+        },
+        {
+          "ordre": 5,
+          "type": "culture",
+          "texte": "On trouve dans ma station la sculpture L'Homme du metro."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Pont De Bois",
+        "texte": "Pont De Bois est une station de la ligne M1 situee a Villeneuve-d'Ascq. Le campus litteraire de l'Universite de Lille se trouve a quelques metres.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Villeneuve-d'Ascq.",
+          "Le nom reprend celui du quartier Pont-de-Bois de Villeneuve-d'Ascq.",
+          "La station est inauguree le 25 avril 1983 lors du passage de Francois Mitterrand.",
+          "Une sculpture en bronze de Silviane Leger y est connue sous les noms La Paternite et L'Homme du metro."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "villeneuve-d-ascq"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-square-flandres",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "square-flandres",
+      "reponse": "Square Flandres",
+      "reponsesAcceptees": [
+        "Square Flandres"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Hellemmes-Lille / Lezennes."
+        },
+        {
+          "ordre": 4,
+          "type": "architecture",
+          "texte": "Mes deux quais ont des acces separes de chaque cote de la rue."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers Hellemmes plutot que la commune indiquee par son ancien nom."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Square Flandres",
+        "texte": "Square Flandres est une station de la ligne M1 situee a Hellemmes-Lille / Lezennes. La station dessert Hellemmes, commune associee a Lille.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Hellemmes-Lille / Lezennes.",
+          "Ouverte sous le nom Lezennes, la station est renommee Square Flandres en 2017 pour eviter une confusion avec la commune voisine.",
+          "La station est inauguree le 25 avril 1983 sous le nom Lezennes.",
+          "Son ancien nom pretait a confusion, car la commune de Lezennes se trouvait a environ vingt minutes a pied."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "hellemmes-lille",
+        "lezennes"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-mairie-d-hellemmes",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "mairie-d-hellemmes",
+      "reponse": "Mairie D'Hellemmes",
+      "reponsesAcceptees": [
+        "Mairie D'Hellemmes"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Hellemmes-Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Elle donne sur une place de marche d'Hellemmes."
+        },
+        {
+          "ordre": 5,
+          "type": "architecture",
+          "texte": "Ma couleur dominante est l'orange."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Mairie D'Hellemmes",
+        "texte": "Mairie D'Hellemmes est une station de la ligne M1 situee a Hellemmes-Lille. Le parc de l'Hotel de Ville est cite parmi les reperes proches.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Hellemmes-Lille.",
+          "La station ouvre sous le nom Hellemmes puis devient Mairie d'Hellemmes en 2017.",
+          "Elle est inauguree le 25 avril 1983 lors de l'ouverture du metro lillois.",
+          "La station souterraine est fortement marquee par la couleur orange."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "hellemmes-lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-marbrerie",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "marbrerie",
+      "reponse": "Marbrerie",
+      "reponsesAcceptees": [
+        "Marbrerie"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Hellemmes-Lille / Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "history",
+          "texte": "La premiere station V'Lille a ete installee ici."
+        },
+        {
+          "ordre": 5,
+          "type": "culture",
+          "texte": "Mon oeuvre d'art utilise le bois de charpente."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Marbrerie",
+        "texte": "Marbrerie est une station de la ligne M1 situee a Hellemmes-Lille / Lille. Elle dessert le quartier de Fives.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Hellemmes-Lille / Lille.",
+          "Le nom localise la station dans le secteur Marbrerie du quartier de Fives.",
+          "La station est inauguree le 25 avril 1983 lors de la venue de Francois Mitterrand.",
+          "Jean-Remy Locret y realise une animation en bois de charpente."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "hellemmes-lille",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-fives",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "fives",
+      "reponse": "Fives",
+      "reponsesAcceptees": [
+        "Fives"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "culture",
+          "texte": "On trouve dans ma station les fresques Le Cri et Graffitis."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le quartier de Fives."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Fives",
+        "texte": "Fives est une station de la ligne M1 situee a Lille. La mairie de quartier de Fives est citee parmi les reperes proches.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Lille.",
+          "Le nom reprend celui du quartier de Fives, qu'elle dessert directement.",
+          "La station est mise en service le 25 avril 1983.",
+          "Elle se situe a l'intersection des rues Pierre-Legrand et de Lannoy, deux axes majeurs du quartier."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-madeleine-caulier",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "madeleine-caulier",
+      "reponse": "Madeleine Caulier",
+      "reponsesAcceptees": [
+        "Madeleine Caulier"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers directement la place Madeleine-Caulier."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je longe la voie ferrree vers Mouscron."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Madeleine Caulier",
+        "texte": "Madeleine Caulier est une station de la ligne M1 situee a Lille. La place Madeleine-Caulier est le repere immediat de la station.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Lille.",
+          "La station tient son nom de la place Madeleine-Caulier et de Madeleine Caulier ; elle s'appelait simplement Caulier a l'ouverture.",
+          "La station est inauguree le 25 avril 1983 sous le nom Caulier.",
+          "Le sol est dalle et les murs sont en briques, avec une organisation souterraine sur trois niveaux."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
       "id": "metro-gare-lille-flandres",
       "niveau": "metro",
       "typeReponse": "station",
@@ -28,6 +677,7 @@
       "reponse": "Gare Lille Flandres",
       "reponsesAcceptees": [
         "Gare Lille Flandres",
+        "Gare Lille-Flandres",
         "Lille Flandres",
         "Gare Flandres"
       ],
@@ -52,22 +702,23 @@
         {
           "ordre": 4,
           "type": "reseau",
-          "texte": "Je fais partie des correspondances entre les deux lignes de metro."
+          "texte": "Je suis une correspondance entre les deux lignes de metro."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom reprend celui d'une grande gare lilloise."
+          "type": "landmark",
+          "texte": "Une sortie de la station mene directement a la gare Lille-Flandres."
         }
       ],
       "ficheDecouverte": {
         "titre": "Gare Lille Flandres",
-        "texte": "Station de metro situee a Lille, Gare Lille Flandres est l'une des correspondances entre les lignes M1 et M2.",
+        "texte": "Gare Lille Flandres est une station de les lignes M1 et M2 situee a Lille. La gare Lille-Flandres est le repere immediat et donne son nom au pole de correspondance.",
         "faits": [
-          "Niveau : Metro Mystere.",
-          "Lignes : M1 et M2.",
+          "Ligne : M1 et M2.",
           "Commune : Lille.",
-          "Statut de jeu : reponse candidate pour le niveau Metro."
+          "Particularite : correspondance entre M1 et M2.",
+          "La station a d'abord porte le nom Gares, puis a ete renommee Gare Lille-Flandres pour la distinguer du pole Lille-Europe.",
+          "La ligne 1 y est mise en service en 1983, puis la ligne 2 arrive en avril 1989, faisant de la station un noeud majeur du metro lillois."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
@@ -87,13 +738,268 @@
       ]
     },
     {
+      "id": "metro-rihour",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "rihour",
+      "reponse": "Rihour",
+      "reponsesAcceptees": [
+        "Rihour"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je me trouve sous la place Rihour."
+        },
+        {
+          "ordre": 5,
+          "type": "architecture",
+          "texte": "Une pyramide de verre marque l'acces en surface."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Rihour",
+        "texte": "Rihour est une station de la ligne M1 situee a Lille. Le Palais Rihour et la Grand-Place forment les reperes les plus immediats autour de la station.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Lille.",
+          "Le nom reprend celui de la place Rihour, sous laquelle la station est implantee au coeur de Lille-Centre.",
+          "Ouverte le 25 avril 1983 sur la ligne 1, la station fait partie du lancement officiel du metro lillois.",
+          "Une pyramide de verre sur la place sert de signal en surface et apporte de la lumiere vers la station souterraine."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-republique-beaux-arts",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "republique-beaux-arts",
+      "reponse": "République Beaux-Arts",
+      "reponsesAcceptees": [
+        "République Beaux-Arts",
+        "République - Beaux-Arts",
+        "République-Beaux-Arts",
+        "Republique Beaux-Arts",
+        "Republique - Beaux-Arts"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers le Palais des Beaux-Arts."
+        },
+        {
+          "ordre": 5,
+          "type": "architecture",
+          "texte": "Une ouverture dans la place apporte de la lumiere naturelle a la station."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "République Beaux-Arts",
+        "texte": "République Beaux-Arts est une station de la ligne M1 situee a Lille. Le Palais des Beaux-Arts et la Prefecture du Nord sont les deux grands reperes monumentaux de la station.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Lille.",
+          "La station s'appelait d'abord Republique avant d'ajouter Beaux-Arts en 1997, apres la reouverture du palais voisin.",
+          "Ouverte en 1983 sous le nom Republique, la station appartient au premier temps fort du metro lillois sur la ligne 1.",
+          "La station est pensee comme un forum creuse dans la place, avec une ouverture qui fait descendre la lumiere naturelle."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-gambetta",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "gambetta",
+      "reponse": "Gambetta",
+      "reponsesAcceptees": [
+        "Gambetta"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Une grande rue commercante portant le meme nom est proche."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le nord de Wazemmes."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Gambetta",
+        "texte": "Gambetta est une station de la ligne M1 situee a Lille. La rue Leon-Gambetta est un axe commercant proche.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Lille.",
+          "Le nom fait echo a la rue commercante Leon-Gambetta, citee parmi les reperes proches.",
+          "La station est inauguree le 2 mai 1984 lors du prolongement de la ligne 1 vers CHR B-Calmette.",
+          "La page signale qu'au 25 decembre 2021 aucune ligne de bus ne dessert directement la station."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-wazemmes",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "wazemmes",
+      "reponse": "Wazemmes",
+      "reponsesAcceptees": [
+        "Wazemmes"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M1."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le marche de Wazemmes est un repere proche."
+        },
+        {
+          "ordre": 5,
+          "type": "culture",
+          "texte": "La sculpture Source de vie est associee a la station."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Wazemmes",
+        "texte": "Wazemmes est une station de la ligne M1 situee a Lille. La Maison folie de Wazemmes se trouve a proximite.",
+        "faits": [
+          "Ligne : M1.",
+          "Commune : Lille.",
+          "Le nom reprend celui du quartier lillois de Wazemmes.",
+          "La station ouvre le 2 mai 1984 lors du prolongement de la ligne 1 vers CHR B-Calmette.",
+          "La sculpture Source de vie de Fleckenstein est mise en valeur par une architecture volontairement sobre."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m1",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
       "id": "metro-porte-des-postes",
       "niveau": "metro",
       "typeReponse": "station",
       "technicalId": "porte-des-postes",
-      "reponse": "Porte des Postes",
+      "reponse": "Porte Des Postes",
       "reponsesAcceptees": [
-        "Porte des Postes",
         "Porte Des Postes"
       ],
       "difficulte": "facile",
@@ -117,22 +1023,23 @@
         {
           "ordre": 4,
           "type": "reseau",
-          "texte": "Je suis l'une des deux correspondances metro du corpus technique."
+          "texte": "Je suis une correspondance entre les deux lignes de metro."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom commence par Porte."
+          "type": "history",
+          "texte": "La toiture de la station a ete partiellement endommagee lors d'un accident routier en 2017."
         }
       ],
       "ficheDecouverte": {
-        "titre": "Porte des Postes",
-        "texte": "Station de metro lilloise, Porte des Postes relie les lignes M1 et M2 dans le corpus Station Mystere.",
+        "titre": "Porte Des Postes",
+        "texte": "Porte Des Postes est une station de les lignes M1 et M2 situee a Lille. Le lycee international Montebello et les Archives departementales du Nord figurent parmi les reperes proches.",
         "faits": [
-          "Niveau : Metro Mystere.",
-          "Lignes : M1 et M2.",
+          "Ligne : M1 et M2.",
           "Commune : Lille.",
-          "Statut de jeu : reponse candidate pour le niveau Metro."
+          "Particularite : correspondance entre M1 et M2.",
+          "Le nom renvoie a l'ancienne Porte des Postes de Lille, disparue lors de la suppression des remparts sud dans les annees 1930.",
+          "La partie ligne 1 ouvre en 1984, puis la ligne 1 bis arrive en 1989 avant de devenir la ligne 2 quelques annees plus tard."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
@@ -152,18 +1059,19 @@
       ]
     },
     {
-      "id": "metro-quatre-cantons-stade-p-mauroy",
+      "id": "metro-chu-centre-o-lambret",
       "niveau": "metro",
       "typeReponse": "station",
-      "technicalId": "4-cantons-stade-p-mauroy",
-      "reponse": "4 Cantons Stade P. Mauroy",
+      "technicalId": "chu-centre-o-lambret",
+      "reponse": "Chu-Centre O. Lambret",
       "reponsesAcceptees": [
-        "4 Cantons Stade P. Mauroy",
-        "4 Cantons",
-        "Quatre Cantons",
-        "4 Cantons Stade Pierre Mauroy"
+        "Chu-Centre O. Lambret",
+        "CHU - Centre Oscar-Lambret",
+        "CHU Centre Oscar-Lambret",
+        "CHU-Centre Oscar-Lambret",
+        "Chu-Centre O Lambret"
       ],
-      "difficulte": "moyenne",
+      "difficulte": "facile",
       "statut": "draft",
       "indices": [
         {
@@ -179,27 +1087,28 @@
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Villeneuve-d'Ascq."
+          "texte": "Je suis situee a Lille."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis un terminus de la ligne M1 dans le corpus technique."
+          "type": "landmark",
+          "texte": "La gare de Lille-CHR est proche."
         },
         {
           "ordre": 5,
           "type": "nom",
-          "texte": "Mon nom commence par un chiffre."
+          "texte": "Mon nom associe le CHU desservi et l'avenue Oscar-Lambret ; Oscar Lambret est lie a la creation du centre hospitalier regional universitaire de Lille."
         }
       ],
       "ficheDecouverte": {
-        "titre": "4 Cantons Stade P. Mauroy",
-        "texte": "Station de la ligne M1 situee a Villeneuve-d'Ascq, 4 Cantons Stade P. Mauroy est un terminus dans le corpus technique.",
+        "titre": "Chu-Centre O. Lambret",
+        "texte": "Chu-Centre O. Lambret est une station de la ligne M1 situee a Lille. L'hopital Claude-Huriez est directement desservi.",
         "faits": [
-          "Niveau : Metro Mystere.",
           "Ligne : M1.",
-          "Commune : Villeneuve-d'Ascq.",
-          "Statut technique : terminus."
+          "Commune : Lille.",
+          "Le nom associe le CHU desservi et l'avenue Oscar-Lambret ; Oscar Lambret est lie a la creation du centre hospitalier regional universitaire de Lille.",
+          "La station ouvre le 2 mai 1984 sous le nom CHR Oscar-Lambret.",
+          "La station est aerienne et organisee sur deux niveaux autour des voies centrales."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
@@ -209,8 +1118,7 @@
       "tags": [
         "metro",
         "m1",
-        "villeneuve-d-ascq",
-        "terminus"
+        "lille"
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
@@ -222,13 +1130,15 @@
       "niveau": "metro",
       "typeReponse": "station",
       "technicalId": "chu-eurasante",
-      "reponse": "CHU Eurasante",
+      "reponse": "Chu Eurasanté",
       "reponsesAcceptees": [
-        "CHU Eurasante",
+        "Chu Eurasanté",
+        "CHU - Eurasanté",
+        "CHU-Eurasanté",
         "Chu Eurasante",
-        "CHU Eurasanté"
+        "CHU - Eurasante"
       ],
-      "difficulte": "moyenne",
+      "difficulte": "facile",
       "statut": "draft",
       "indices": [
         {
@@ -249,22 +1159,23 @@
         {
           "ordre": 4,
           "type": "reseau",
-          "texte": "Je suis un terminus de la ligne M1 dans le corpus technique."
+          "texte": "Je suis un terminus de la ligne M1."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom contient CHU."
+          "type": "landmark",
+          "texte": "Mon nom actuel renvoie au pole Eurasante."
         }
       ],
       "ficheDecouverte": {
-        "titre": "CHU Eurasante",
-        "texte": "Station de la ligne M1 situee a Lille, CHU Eurasante est un terminus dans le corpus technique Station Mystere.",
+        "titre": "Chu Eurasanté",
+        "texte": "Chu Eurasanté est une station de la ligne M1 situee a Lille. Elle dessert le centre hospitalier regional universitaire de Lille.",
         "faits": [
-          "Niveau : Metro Mystere.",
           "Ligne : M1.",
           "Commune : Lille.",
-          "Statut technique : terminus."
+          "Particularite : terminus.",
+          "Ouverte sous le nom CHR B-Calmette, la station devient CHU - Eurasante en mars 2017.",
+          "La station ouvre le 2 mai 1984 comme terminus sud de la ligne 1."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
@@ -293,7 +1204,7 @@
         "CH Dron",
         "C H Dron"
       ],
-      "difficulte": "moyenne",
+      "difficulte": "facile",
       "statut": "draft",
       "indices": [
         {
@@ -314,22 +1225,23 @@
         {
           "ordre": 4,
           "type": "reseau",
-          "texte": "Je suis un terminus de la ligne M2 dans le corpus technique."
+          "texte": "Je suis un terminus de la ligne M2."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom est souvent ecrit avec des initiales."
+          "type": "landmark",
+          "texte": "Un centre hospitalier porte le meme nom a proximite."
         }
       ],
       "ficheDecouverte": {
         "titre": "C.H. Dron",
-        "texte": "Station de la ligne M2 situee a Tourcoing, C.H. Dron est un terminus dans le corpus technique.",
+        "texte": "C.H. Dron est une station de la ligne M2 situee a Tourcoing. Le centre hospitalier Gustave-Dron est le repere principal du secteur.",
         "faits": [
-          "Niveau : Metro Mystere.",
           "Ligne : M2.",
           "Commune : Tourcoing.",
-          "Statut technique : terminus."
+          "Particularite : terminus.",
+          "Le nom renvoie au centre hospitalier Gustave-Dron situe a proximite.",
+          "La station marque l'extremite nord-est de la ligne M2, a Tourcoing et pres de la frontiere belge."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
@@ -340,6 +1252,2647 @@
         "metro",
         "m2",
         "tourcoing",
+        "terminus"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-bourgogne",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "bourgogne",
+      "reponse": "Bourgogne",
+      "reponsesAcceptees": [
+        "Bourgogne"
+      ],
+      "difficulte": "difficile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "network",
+          "texte": "Je suis situee entre CH Dron et Pont de Neuville."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom renvoie au secteur Bourgogne de Tourcoing."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Bourgogne",
+        "texte": "Bourgogne est une station de la ligne M2 situee a Tourcoing. Elle s'inscrit dans le nord-est de Tourcoing, sur la partie finale de M2.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "Le nom renvoie au secteur Bourgogne de Tourcoing.",
+          "La station appartient au troncon tourquennois de la ligne M2, entre CH Dron et Pont de Neuville.",
+          "La page signale une desserte par la ligne Z1 du reseau Ilevia."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-pont-de-neuville",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "pont-de-neuville",
+      "reponse": "Pont De Neuville",
+      "reponsesAcceptees": [
+        "Pont De Neuville"
+      ],
+      "difficulte": "difficile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Un grand cimetiere municipal est cite a proximite."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Je me trouve entre Bourgogne et Phalempins."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Pont De Neuville",
+        "texte": "Pont De Neuville est une station de la ligne M2 situee a Tourcoing. Le cimetiere municipal est cite comme repere proche.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "Le nom reprend le secteur Pont de Neuville a Tourcoing.",
+          "La station se situe sur le troncon nord de M2, entre Bourgogne et Phalempins.",
+          "Elle est desservie par plusieurs lignes locales, dont CITT, Z1 et des services sur reservation."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-phalempins",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "phalempins",
+      "reponse": "Phalempins",
+      "reponsesAcceptees": [
+        "Phalempins"
+      ],
+      "difficulte": "difficile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "network",
+          "texte": "Aucune ligne de bus n'est signalee directement a la station."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom renvoie au secteur des Phalempins a Tourcoing."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Phalempins",
+        "texte": "Phalempins est une station de la ligne M2 situee a Tourcoing. Elle appartient au chapelet de stations tourquennoises de M2.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "Le nom renvoie au secteur des Phalempins a Tourcoing.",
+          "La station dessert Tourcoing sur la partie nord de la ligne M2.",
+          "La page indique qu'aucune ligne de bus ne dessert directement la station."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-colbert",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "colbert",
+      "reponse": "Colbert",
+      "reponsesAcceptees": [
+        "Colbert"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le Grand Mix est un repere culturel proche."
+        },
+        {
+          "ordre": 5,
+          "type": "culture",
+          "texte": "Je suis associee a un decor de 1800 carreaux de ceramique."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Colbert",
+        "texte": "Colbert est une station de la ligne M2 situee a Tourcoing. Le parc Clemenceau est un repere proche.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "La station tient son nom du lycee Colbert situe non loin.",
+          "Ben Bella a decore la station avec 1800 carreaux de ceramique.",
+          "La station est batie sur trois niveaux, avec un niveau intermediaire pour choisir la direction."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-tourcoing-centre",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "tourcoing-centre",
+      "reponse": "Tourcoing Centre",
+      "reponsesAcceptees": [
+        "Tourcoing Centre",
+        "Tourcoing - Centre",
+        "Tourcoing-Centre"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "L'hotel de ville de Tourcoing est proche."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Je suis le terminus tourquennois de la ligne T du tramway."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Tourcoing Centre",
+        "texte": "Tourcoing Centre est une station de la ligne M2 situee a Tourcoing. L'hotel de ville de Tourcoing est un repere majeur voisin.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "Le nom vient de sa situation au centre de Tourcoing.",
+          "La station a ete ouverte comme terminus de la ligne T du tramway et de la ligne 2 du metro.",
+          "Elle reste le terminus de la ligne T du tramway."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-gare-de-tourcoing",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "gare-de-tourcoing",
+      "reponse": "Gare De Tourcoing",
+      "reponsesAcceptees": [
+        "Gare De Tourcoing"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je suis liee a une gare desservie par Ouigo."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Elle combine repere ferroviaire et ligne M2."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Gare De Tourcoing",
+        "texte": "Gare De Tourcoing est une station de la ligne M2 situee a Tourcoing. La gare ferroviaire de Tourcoing est le repere principal.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "La station s'appelait Tourcoing - Sebastopol avant de prendre le nom de la gare ferroviaire voisine.",
+          "La station est associee a la gare de Tourcoing, desservie par TER, TGV inOui et Ouigo.",
+          "La Liane 4 dessert egalement le secteur de la gare."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-carliers",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "carliers",
+      "reponse": "Carliers",
+      "reponsesAcceptees": [
+        "Carliers"
+      ],
+      "difficulte": "difficile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "geography",
+          "texte": "Je dessers le quartier Gambetta a Tourcoing."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom vient de la rue des Carliers, qui traverse le boulevard Gambetta."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Carliers",
+        "texte": "Carliers est une station de la ligne M2 situee a Tourcoing. Le lycee Leon-Gambetta est cite parmi les lieux proches.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "Le nom vient de la rue des Carliers, qui traverse le boulevard Gambetta.",
+          "La station permet de desservir le quartier Gambetta de Tourcoing.",
+          "Elle beneficie de deux acces et d'un ascenseur en surface."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-mercure",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "mercure",
+      "reponse": "Mercure",
+      "reponsesAcceptees": [
+        "Mercure"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Tourcoing."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dois son nom a un centre d'affaires."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le secteur de la zone de l'Union."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Mercure",
+        "texte": "Mercure est une station de la ligne M2 situee a Tourcoing. Le batiment Mercure est le repere direct de la station.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Tourcoing.",
+          "La station tient son nom du centre d'affaires Le Mercure.",
+          "Le batiment Mercure a accueilli l'entreprise Quelle avant d'etre associe au tribunal de commerce.",
+          "La page indique qu'aucune ligne de bus ne dessert la station."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "tourcoing"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-alsace",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "alsace",
+      "reponse": "Alsace",
+      "reponsesAcceptees": [
+        "Alsace",
+        "Alsace - Plaine Images",
+        "Alsace Plaine Images",
+        "Alsace-Plaine Images"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Roubaix."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le Fresnoy est un repere culturel proche."
+        },
+        {
+          "ordre": 5,
+          "type": "culture",
+          "texte": "Je dessers un pole d'industries culturelles et creatives."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Alsace",
+        "texte": "Alsace est une station de la ligne M2 situee a Roubaix. Le Fresnoy est cite parmi les reperes proches.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Roubaix.",
+          "Son nom originel renvoie au boulevard d'Alsace qu'elle dessert.",
+          "La station devient Alsace - Plaine Images en 2024 pour signaler le pole d'industries culturelles et creatives voisin.",
+          "Plaine Images rassemble entreprises, ecoles, recherche, tournage, doublage et coworking."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "roubaix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-gare-jean-lebas",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "gare-jean-lebas",
+      "reponse": "Gare Jean Lebas",
+      "reponsesAcceptees": [
+        "Gare Jean Lebas",
+        "Gare Jean-Lebas Roubaix"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Roubaix."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers la gare de Roubaix."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom associe l'avenue Jean-Lebas et la gare de Roubaix."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Gare Jean Lebas",
+        "texte": "Gare Jean Lebas est une station de la ligne M2 situee a Roubaix. La gare de Roubaix est le repere direct.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Roubaix.",
+          "Le nom associe l'avenue Jean-Lebas et la gare de Roubaix.",
+          "La station s'appelait auparavant Gare - Jean-Lebas.",
+          "La station est l'oeuvre de Jean-Charles Huet et s'organise sur trois niveaux."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "roubaix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-roubaix-place",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "roubaix-place",
+      "reponse": "Roubaix Place",
+      "reponsesAcceptees": [
+        "Roubaix Place",
+        "Roubaix - Grand-Place",
+        "Roubaix Grand-Place",
+        "Roubaix-Grand-Place"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Roubaix."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers la Grand-Place de Roubaix."
+        },
+        {
+          "ordre": 5,
+          "type": "history",
+          "texte": "Ma construction a donne lieu a des fouilles archeologiques."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Roubaix Place",
+        "texte": "Roubaix Place est une station de la ligne M2 situee a Roubaix. L'hotel de ville de Roubaix est un repere majeur.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Roubaix.",
+          "La station doit son nom a la Grand-Place de Roubaix qu'elle dessert.",
+          "Des fouilles archeologiques sont menees des 1990 lors de la construction de la station.",
+          "La station donne acces au coeur civique et culturel de Roubaix."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "roubaix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-euroteleport",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "euroteleport",
+      "reponse": "Euroteleport",
+      "reponsesAcceptees": [
+        "Euroteleport",
+        "Eurotéléport"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Roubaix."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Les Archives nationales du monde du travail sont proches."
+        },
+        {
+          "ordre": 5,
+          "type": "architecture",
+          "texte": "Un grand dome se trouve dans la salle des billets."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Euroteleport",
+        "texte": "Euroteleport est une station de la ligne M2 situee a Roubaix. Les Archives nationales du monde du travail sont citees parmi les reperes proches.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Roubaix.",
+          "Le nom Euroteleport identifie un grand pole d'echange de Roubaix.",
+          "La station de metro est inauguree en 1999 sur la ligne 2.",
+          "Un grand dome marque la salle des billets de la station."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "roubaix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-roubaix-charles-de-gaulle",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "roubaix-charles-de-gaulle",
+      "reponse": "Roubaix Charles De Gaulle",
+      "reponsesAcceptees": [
+        "Roubaix Charles De Gaulle",
+        "Roubaix - Charles-de-Gaulle",
+        "Roubaix Charles-de-Gaulle",
+        "Roubaix-Charles-de-Gaulle"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Roubaix."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le conservatoire de Roubaix est proche."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Mon boulevard fait partie du Grand Boulevard."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Roubaix Charles De Gaulle",
+        "texte": "Roubaix Charles De Gaulle est une station de la ligne M2 situee a Roubaix. Le conservatoire de Roubaix est cite a proximite.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Roubaix.",
+          "Le nom renvoie au boulevard du General-de-Gaulle situe a proximite.",
+          "Ce boulevard constitue une portion du Grand Boulevard reliant Roubaix, Tourcoing et Lille.",
+          "La station n'est desservie par aucune ligne de bus d'apres la page."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "roubaix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-ep-montesquieu",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "ep-montesquieu",
+      "reponse": "Ep. Montesquieu",
+      "reponsesAcceptees": [
+        "Ep. Montesquieu",
+        "Épeule - Montesquieu",
+        "Épeule Montesquieu",
+        "Épeule-Montesquieu",
+        "Ep Montesquieu",
+        "Epeule - Montesquieu",
+        "Epeule Montesquieu"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Roubaix."
+        },
+        {
+          "ordre": 4,
+          "type": "architecture",
+          "texte": "Je suis attribuee a l'architecte Alain Raigaud."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je me trouve pres des boulevards de Cambrai et Montesquieu."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Ep. Montesquieu",
+        "texte": "Ep. Montesquieu est une station de la ligne M2 situee a Roubaix. La salle des sports Dominique-Saint-Maxens est citee a proximite.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Roubaix.",
+          "Le nom associe le quartier de l'Epeule et le boulevard Montesquieu.",
+          "La station est attribuee a l'architecte Alain Raigaud.",
+          "Elle se situe au croisement de plusieurs axes, dont les boulevards de Cambrai et de Montesquieu."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "roubaix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-mairie-de-croix",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "mairie-de-croix",
+      "reponse": "Mairie De Croix",
+      "reponsesAcceptees": [
+        "Mairie De Croix"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Croix."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers la mairie de Croix."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom vient de l'hotel de ville de Croix."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Mairie De Croix",
+        "texte": "Mairie De Croix est une station de la ligne M2 situee a Croix. La mairie de Croix est le repere principal.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Croix.",
+          "La station tient son nom de l'hotel de ville de Croix.",
+          "Elle dessert le secteur de la mairie de Croix sur la ligne M2.",
+          "La page signale une desserte par la ligne 36 du reseau Ilevia."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "croix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-croix-centre",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "croix-centre",
+      "reponse": "Croix Centre",
+      "reponsesAcceptees": [
+        "Croix Centre",
+        "Croix - Centre",
+        "Croix-Centre"
+      ],
+      "difficulte": "difficile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Croix."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Les 3 Suisses sont un repere mentionne a proximite."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le centre-ville de Croix."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Croix Centre",
+        "texte": "Croix Centre est une station de la ligne M2 situee a Croix. Le siege social des 3 Suisses est cite parmi les reperes proches.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Croix.",
+          "La station doit son nom au centre-ville de Croix qu'elle dessert.",
+          "Elle constitue la station M2 du centre-ville de Croix.",
+          "La page signale une desserte par la ligne 32 du reseau Ilevia."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "croix"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-hotel-de-ville-wasquehal",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "hotel-de-ville-wasquehal",
+      "reponse": "Hotel De Ville",
+      "reponsesAcceptees": [
+        "Hotel De Ville",
+        "Wasquehal - Hôtel de Ville",
+        "Wasquehal Hôtel de Ville",
+        "Wasquehal-Hôtel de Ville",
+        "Wasquehal - Hotel de Ville"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Wasquehal."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers l'hotel de ville de Wasquehal."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom vient a la mairie de Wasquehal, aussi appelee hotel de ville."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Hotel De Ville",
+        "texte": "Hotel De Ville est une station de la ligne M2 situee a Wasquehal. La mairie de Wasquehal est le repere direct.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Wasquehal.",
+          "La station doit son nom a la mairie de Wasquehal, aussi appelee hotel de ville.",
+          "Elle dessert le secteur administratif central de Wasquehal.",
+          "Elle est desservie par les lignes 30, C11 et 906 du reseau Ilevia."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "wasquehal"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-wasquehal-pave-de-lille",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "wasquehal-pave-de-lille",
+      "reponse": "Wasquehal Pavé De Lille",
+      "reponsesAcceptees": [
+        "Wasquehal Pavé De Lille",
+        "Wasquehal - Pavé de Lille",
+        "Wasquehal-Pavé de Lille",
+        "Wasquehal Pave De Lille",
+        "Wasquehal - Pave de Lille"
+      ],
+      "difficulte": "difficile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Wasquehal."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Mon nom vient d'un batiment administratif local."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Je permets une correspondance avec le tramway vers Roubaix."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Wasquehal Pavé De Lille",
+        "texte": "Wasquehal Pavé De Lille est une station de la ligne M2 situee a Wasquehal. Le Pavé de Lille est le repere administratif voisin.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Wasquehal.",
+          "La station doit son nom au Pavé de Lille, batiment administratif de Wasquehal.",
+          "Le secteur accueille a la fois une station de tramway et une station de metro.",
+          "La station de metro se situe juste sous la ligne de tramway reliant Lille a Roubaix."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "wasquehal"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-jean-jaures",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "jean-jaures",
+      "reponse": "Jean Jaures",
+      "reponsesAcceptees": [
+        "Jean Jaures",
+        "Jean-Jaurès",
+        "Jean-Jaures"
+      ],
+      "difficulte": "difficile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Villeneuve-d'Ascq."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le chateau du Sart est proche."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le quartier du Sart-Babylone."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Jean Jaures",
+        "texte": "Jean Jaures est une station de la ligne M2 situee a Villeneuve-d'Ascq. Le chateau du Sart et son golf figurent parmi les reperes proches.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Villeneuve-d'Ascq.",
+          "Elle doit son nom a la rue Jean-Jaures, artère principale du quartier.",
+          "La station dessert le quartier du Sart-Babylone a Villeneuve-d'Ascq.",
+          "Elle est batie sur deux niveaux avec un acces et un ascenseur en surface."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "villeneuve-d-ascq"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-les-pres-e-pisani",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "les-pres-e-pisani",
+      "reponse": "Les Pres-E. Pisani",
+      "reponsesAcceptees": [
+        "Les Pres-E. Pisani",
+        "Les Prés - Edgard-Pisani",
+        "Les Prés Edgard-Pisani",
+        "Les Prés-Edgard-Pisani",
+        "Les Pres-E Pisani",
+        "Les Pres - Edgard-Pisani"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Villeneuve-d'Ascq."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Decathlon Campus est un repere proche."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Mon parking a ete agrandi pour une navette vers le stade."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Les Pres-E. Pisani",
+        "texte": "Les Pres-E. Pisani est une station de la ligne M2 situee a Villeneuve-d'Ascq. Le centre commercial Decathlon Campus est cite a proximite.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Villeneuve-d'Ascq.",
+          "Elle doit son nom au quartier des Prés, auquel le nom Edgard-Pisani a ete accole.",
+          "Le parking de la station est agrandi pour creer une liaison navette avec le stade Pierre-Mauroy.",
+          "La station est aerienne avec des quais disposes de biais."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "villeneuve-d-ascq"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-fort-de-mons",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "fort-de-mons",
+      "reponse": "Fort De Mons",
+      "reponsesAcceptees": [
+        "Fort De Mons"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Mons-en-Barœul."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Une maison folie porte le meme nom a proximite."
+        },
+        {
+          "ordre": 5,
+          "type": "architecture",
+          "texte": "Je dispose d'un quai central."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Fort De Mons",
+        "texte": "Fort De Mons est une station de la ligne M2 situee a Mons-en-Barœul. La maison folie Fort de Mons est un repere proche.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Mons-en-Barœul.",
+          "Elle doit son nom au fort de Mons qu'elle dessert.",
+          "Elle est inauguree avec les autres stations de Mons-en-Baroeul lors du prolongement de la ligne.",
+          "La station possede un quai central et des voies opposees."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "mons-en-baroeul"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-mairie-de-mons",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "mairie-de-mons",
+      "reponse": "Mairie De Mons",
+      "reponsesAcceptees": [
+        "Mairie De Mons"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Mons-en-Barœul."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers la mairie de Mons-en-Baroeul."
+        },
+        {
+          "ordre": 5,
+          "type": "history",
+          "texte": "Elle ouvre dans le cadre du prolongement vers Fort de Mons."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Mairie De Mons",
+        "texte": "Mairie De Mons est une station de la ligne M2 situee a Mons-en-Barœul. La mairie de Mons-en-Baroeul est le repere direct.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Mons-en-Barœul.",
+          "Elle doit son nom a la mairie de Mons-en-Baroeul.",
+          "La station est inauguree lors du prolongement vers Fort de Mons.",
+          "Elle est desservie par les lignes C9 et CO3 du reseau Ilevia."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "mons-en-baroeul"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-mons-sarts",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "mons-sarts",
+      "reponse": "Mons Sarts",
+      "reponsesAcceptees": [
+        "Mons Sarts"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Mons-en-Barœul."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le siege d'AG2R La Mondiale est proche."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le quartier des Sarts."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Mons Sarts",
+        "texte": "Mons Sarts est une station de la ligne M2 situee a Mons-en-Barœul. Le siege social d'AG2R La Mondiale est cite a proximite.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Mons-en-Barœul.",
+          "La station doit son nom au quartier des Sarts qu'elle dessert.",
+          "Elle est inauguree lors du prolongement de M2 vers Fort de Mons.",
+          "La station est desservie par la ligne 13 du reseau Ilevia."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "mons-en-baroeul"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-st-maurice-pellevoisin",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "st-maurice-pellevoisin",
+      "reponse": "St Maurice Pellevoisin",
+      "reponsesAcceptees": [
+        "St Maurice Pellevoisin",
+        "Saint-Maurice Pellevoisin"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Une mairie de quartier est proche."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le quartier Saint-Maurice Pellevoisin."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "St Maurice Pellevoisin",
+        "texte": "St Maurice Pellevoisin est une station de la ligne M2 situee a Lille. La mairie de quartier est citee parmi les reperes proches.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "Elle doit son nom au quartier Saint-Maurice Pellevoisin qu'elle dessert.",
+          "La station est inauguree lors du prolongement vers Fort de Mons.",
+          "Elle est desservie par les lignes L91E et 50 du reseau Ilevia."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-lille-europe",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "lille-europe",
+      "reponse": "Lille Europe",
+      "reponsesAcceptees": [
+        "Lille Europe",
+        "Gare Lille-Europe",
+        "Gare Lille Europe"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Euralille est un repere immediat."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Je dessers une gare TGV et Eurostar."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Lille Europe",
+        "texte": "Lille Europe est une station de la ligne M2 situee a Lille. Euralille est le grand repere urbain voisin.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "Elle doit son nom a la gare de Lille-Europe qu'elle dessert.",
+          "La station accompagne l'arrivee de la gare Lille-Europe et la ligne prend ensuite le nom de ligne 2.",
+          "La station descend sous la gare avec des niveaux plus hauts que dans une station ordinaire."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-mairie-de-lille",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "mairie-de-lille",
+      "reponse": "Mairie De Lille",
+      "reponsesAcceptees": [
+        "Mairie De Lille"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers la mairie centrale de Lille."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom vient a la mairie centrale de Lille."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Mairie De Lille",
+        "texte": "Mairie De Lille est une station de la ligne M2 situee a Lille. L'hotel de ville et son beffroi inscrit a l'UNESCO sont les reperes majeurs.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "La station doit son nom a la mairie centrale de Lille.",
+          "Elle ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
+          "La page indique qu'aucune ligne de bus ne dessert directement la station."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-grand-palais",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "grand-palais",
+      "reponse": "Grand Palais",
+      "reponsesAcceptees": [
+        "Grand Palais",
+        "Lille Grand Palais"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le Zenith de Lille est desservi par la station."
+        },
+        {
+          "ordre": 5,
+          "type": "history",
+          "texte": "Je suis proche de l'ancien emplacement de la porte Louis XIV."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Grand Palais",
+        "texte": "Grand Palais est une station de la ligne M2 situee a Lille. L'Institut Pasteur est cite a proximite.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "La station s'appelait Foire Commerciale avant de prendre le nom Lille Grand Palais.",
+          "La station est proche de l'emplacement de l'ancienne porte Louis XIV, disparue lors du demantelement des remparts.",
+          "Elle dessert a la fois Lille Grand Palais et le Zenith de Lille."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-porte-de-valenciennes",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "porte-de-valenciennes",
+      "reponse": "Porte De Valenciennes",
+      "reponsesAcceptees": [
+        "Porte De Valenciennes"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "geography",
+          "texte": "Je dessers le quartier Moulins."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom vient de l'ancien emplacement de la Porte de Valenciennes, disparue avec les remparts."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Porte De Valenciennes",
+        "texte": "Porte De Valenciennes est une station de la ligne M2 situee a Lille. La station dessert le quartier Moulins.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "Le nom vient de l'ancien emplacement de la Porte de Valenciennes, disparue avec les remparts.",
+          "La station ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
+          "Elle s'inscrit dans un secteur de Moulins marque par des amenagements urbains."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-porte-de-douai",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "porte-de-douai",
+      "reponse": "Porte De Douai",
+      "reponsesAcceptees": [
+        "Porte De Douai",
+        "Porte de Douai - Jardin des Plantes",
+        "Porte de Douai Jardin des Plantes",
+        "Porte de Douai-Jardin des Plantes"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le Jardin des plantes est associe a son nom actuel."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Une gare SNCF se trouve a environ 800 metres."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Porte De Douai",
+        "texte": "Porte De Douai est une station de la ligne M2 situee a Lille. Le Jardin des plantes est le repere ajoute au nom de 2024.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "Le nom vient de l'ancien emplacement de la Porte de Douai, disparue avec les remparts.",
+          "La station ouvre avec la ligne 1 bis, devenue ligne 2 en 1994.",
+          "La gare SNCF de Lille-Porte-de-Douai est situee a environ 800 metres."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-porte-d-arras",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "porte-d-arras",
+      "reponse": "Porte D'Arras",
+      "reponsesAcceptees": [
+        "Porte D'Arras"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "architecture",
+          "texte": "Mon batiment est decrit comme futuriste."
+        },
+        {
+          "ordre": 5,
+          "type": "network",
+          "texte": "Je dispose d'un parking relais d'environ 100 places."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Porte D'Arras",
+        "texte": "Porte D'Arras est une station de la ligne M2 situee a Lille. Elle se situe dans le quartier Moulins.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "Le nom renvoie a une ancienne porte du sud de Lille.",
+          "La station est mise en service en 1989 lors de l'ouverture de la ligne entre Saint-Philibert et Gares.",
+          "Le batiment est decrit avec une architecture futuriste, massive et geometrique."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-montebello",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "montebello",
+      "reponse": "Montebello",
+      "reponsesAcceptees": [
+        "Montebello"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Un lycee international porte le meme nom a proximite."
+        },
+        {
+          "ordre": 5,
+          "type": "culture",
+          "texte": "Le tunnel vers Cormontaigne a accueilli une oeuvre cinetique."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Montebello",
+        "texte": "Montebello est une station de la ligne M2 situee a Lille. Le boulevard Montebello est le repere principal.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "La station doit son nom au boulevard Montebello qu'elle dessert.",
+          "Elle ouvre avec la ligne 1 bis, devenue ligne 2 en 1994.",
+          "La station n'est desservie par aucune ligne de bus d'apres la page."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-cormontaigne",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "cormontaigne",
+      "reponse": "Cormontaigne",
+      "reponsesAcceptees": [
+        "Cormontaigne"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "culture",
+          "texte": "Le tunnel vers Montebello a accueilli une projection urbaine."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers Vauban Esquermes."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Cormontaigne",
+        "texte": "Cormontaigne est une station de la ligne M2 situee a Lille. La place Cormontaigne est le repere direct de la station.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "La station doit son nom a la place Cormontaigne, ou debouchent ses sorties.",
+          "Elle ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
+          "La station dessert le quartier Vauban Esquermes."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-port-de-lille",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "port-de-lille",
+      "reponse": "Port De Lille",
+      "reponsesAcceptees": [
+        "Port De Lille"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je dessers le port fluvial de Lille."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je me situe dans Vauban Esquermes."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Port De Lille",
+        "texte": "Port De Lille est une station de la ligne M2 situee a Lille. Le port fluvial de Lille est le repere principal.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lille.",
+          "La station doit son nom au port fluvial de Lille.",
+          "Elle ouvre avec la ligne 1 bis, devenue ligne 2 en 1994.",
+          "Elle dessert le quartier Vauban Esquermes."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-bois-blancs",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "bois-blancs",
+      "reponse": "Bois Blancs",
+      "reponsesAcceptees": [
+        "Bois Blancs"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lambersart / Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Le Grand Bleu est proche de la station."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le quartier des Bois-Blancs."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Bois Blancs",
+        "texte": "Bois Blancs est une station de la ligne M2 situee a Lambersart / Lille. La piscine olympique Marx-Dormoy est citee a proximite.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lambersart / Lille.",
+          "La station, ouverte sous le nom Petite Chapelle, prend le nom Bois Blancs en 1994.",
+          "Elle ouvre le 1er avril 1989 lors de la mise en route de la ligne 1 bis, devenue ligne 2.",
+          "Elle est implantee pres de l'avenue de Dunkerque et de l'avenue de la Roseraie."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lambersart",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-canteleu",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "canteleu",
+      "reponse": "Canteleu",
+      "reponsesAcceptees": [
+        "Canteleu",
+        "Canteleu - Euratechnologies",
+        "Canteleu Euratechnologies",
+        "Canteleu-Euratechnologies"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lambersart / Lille."
+        },
+        {
+          "ordre": 4,
+          "type": "history",
+          "texte": "Canteleu a un passe de bourg ayant envisage de devenir commune."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Elle touche Lille, Lambersart et Lomme par ses quartiers desservis."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Canteleu",
+        "texte": "Canteleu est une station de la ligne M2 situee a Lambersart / Lille. Euratechnologies donne aujourd'hui un repere fort au nom de la station.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lambersart / Lille.",
+          "La station est rebaptisee Canteleu - Euratechnologies en 2024.",
+          "Canteleu est mise en service en 1989 lors de l'ouverture de la section Saint-Philibert - Gare Lille-Flandres.",
+          "Elle dessert le nord des Bois-Blancs, Canteleu a Lambersart et des secteurs de Lomme."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lambersart",
+        "lille"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-lomme-lambersart",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "lomme-lambersart",
+      "reponse": "Lomme-Lambersart",
+      "reponsesAcceptees": [
+        "Lomme-Lambersart",
+        "Lomme - Lambersart - Arthur-Notebart",
+        "Lomme Lambersart Arthur-Notebart",
+        "Lomme-Lambersart-Arthur-Notebart",
+        "Lomme Lambersart",
+        "Lomme Lambersart Arthur Notebart"
+      ],
+      "difficulte": "difficile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lomme."
+        },
+        {
+          "ordre": 4,
+          "type": "geography",
+          "texte": "Mes acces encadrent l'avenue de Dunkerque."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom associe Lomme, Lambersart et Arthur Notebart, initiateur du metro automatique et ancien maire de Lomme."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Lomme-Lambersart",
+        "texte": "Lomme-Lambersart est une station de la ligne M2 situee a Lomme. La station dessert les secteurs de Lomme et Lambersart autour de l'avenue de Dunkerque.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lomme.",
+          "Le nom associe Lomme, Lambersart et Arthur Notebart, initiateur du metro automatique et ancien maire de Lomme.",
+          "Le nom Arthur-Notebart est ajoute apres une mobilisation familiale et politique.",
+          "Deux acces et deux ascenseurs sont disposes de chaque cote de l'avenue de Dunkerque."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lomme"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-pont-superieur",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "pont-superieur",
+      "reponse": "Pont Superieur",
+      "reponsesAcceptees": [
+        "Pont Superieur",
+        "Pont Supérieur"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lomme."
+        },
+        {
+          "ordre": 4,
+          "type": "history",
+          "texte": "Une ancienne gare de Lomme est citee a proximite."
+        },
+        {
+          "ordre": 5,
+          "type": "nom",
+          "texte": "Mon nom vient au pont de la ligne d'Haubourdin a Saint-Andre au-dessus de l'avenue de Dunkerque."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Pont Superieur",
+        "texte": "Pont Superieur est une station de la ligne M2 situee a Lomme. La piscine municipale de Lomme est un repere proche.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lomme.",
+          "La station doit son nom au pont de la ligne d'Haubourdin a Saint-Andre au-dessus de l'avenue de Dunkerque.",
+          "Elle ouvre avec la ligne 1 bis, devenue ligne 2 en 1994.",
+          "La gare de Lomme, aujourd'hui hors service, est citee a proximite."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lomme"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-mitterie",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "mitterie",
+      "reponse": "Mitterie",
+      "reponsesAcceptees": [
+        "Mitterie"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lomme."
+        },
+        {
+          "ordre": 4,
+          "type": "history",
+          "texte": "Le quartier voisin de la Delivrance est lie a l'histoire ferroviaire."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je dessers le quartier Mitterie de Lomme."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Mitterie",
+        "texte": "Mitterie est une station de la ligne M2 situee a Lomme. Le quartier de la Delivrance, construit pour des employes de la SNCF, est cite a proximite.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lomme.",
+          "La station doit son nom au quartier Mitterie de Lomme.",
+          "Elle ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
+          "La page indique qu'aucune ligne de bus ne dessert directement la station."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lomme"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-maison-des-enfants",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "maison-des-enfants",
+      "reponse": "Maison Des Enfants",
+      "reponsesAcceptees": [
+        "Maison Des Enfants"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lomme."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "L'Odyssee est une mediatheque proche."
+        },
+        {
+          "ordre": 5,
+          "type": "geography",
+          "texte": "Je me situe dans le quartier de la Delivrance."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Maison Des Enfants",
+        "texte": "Maison Des Enfants est une station de la ligne M2 situee a Lomme. L'Odyssee, mediatheque de Lomme, est citee a proximite.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lomme.",
+          "Le nom vient d'un batiment appele Maison des Enfants, ancien restaurant scolaire devenu centre d'activites.",
+          "Elle est mise en service en 1989 sur la ligne 1 bis, devenue ligne 2.",
+          "La station se situe au coeur du quartier de la Delivrance."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lomme"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-bourg",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "bourg",
+      "reponse": "Bourg",
+      "reponsesAcceptees": [
+        "Bourg"
+      ],
+      "difficulte": "moyenne",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lomme."
+        },
+        {
+          "ordre": 4,
+          "type": "landmark",
+          "texte": "Je me situe sous la place du Marechal-Leclerc."
+        },
+        {
+          "ordre": 5,
+          "type": "history",
+          "texte": "Je dessers le coeur historique de Lomme."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "Bourg",
+        "texte": "Bourg est une station de la ligne M2 situee a Lomme. La station est situee sous la place du Marechal-Leclerc.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lomme.",
+          "La station doit son nom au quartier Bourg, coeur historique de Lomme.",
+          "Elle ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
+          "Les murs de la station presentent des plans et photos d'epoque retraçant l'histoire de Lomme."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lomme"
+      ],
+      "sourceIds": [
+        "gtfs-ilevia-data-gouv",
+        "ilevia-arret-point-datamel"
+      ]
+    },
+    {
+      "id": "metro-st-philibert",
+      "niveau": "metro",
+      "typeReponse": "station",
+      "technicalId": "st-philibert",
+      "reponse": "St. Philibert",
+      "reponsesAcceptees": [
+        "St. Philibert",
+        "Saint-Philibert",
+        "St Philibert",
+        "Saint Philibert"
+      ],
+      "difficulte": "facile",
+      "statut": "draft",
+      "indices": [
+        {
+          "ordre": 1,
+          "type": "transport",
+          "texte": "Je suis une station du metro Ilevia."
+        },
+        {
+          "ordre": 2,
+          "type": "ligne",
+          "texte": "Je suis desservie par la ligne M2."
+        },
+        {
+          "ordre": 3,
+          "type": "commune",
+          "texte": "Je suis situee a Lomme."
+        },
+        {
+          "ordre": 4,
+          "type": "reseau",
+          "texte": "Je suis un terminus de la ligne M2."
+        },
+        {
+          "ordre": 5,
+          "type": "landmark",
+          "texte": "Je dessers la zone du Grand But."
+        }
+      ],
+      "ficheDecouverte": {
+        "titre": "St. Philibert",
+        "texte": "St. Philibert est une station de la ligne M2 situee a Lomme. La zone du Grand But, avec commerces et cinema, est desservie par la station.",
+        "faits": [
+          "Ligne : M2.",
+          "Commune : Lomme.",
+          "Particularite : terminus.",
+          "La station doit son nom a l'hopital Saint-Philibert situe a l'ouest.",
+          "Elle ouvre en 1989 comme terminus ouest de la ligne devenue M2."
+        ],
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ]
+      },
+      "tags": [
+        "metro",
+        "m2",
+        "lomme",
         "terminus"
       ],
       "sourceIds": [

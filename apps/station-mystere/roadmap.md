@@ -21,7 +21,7 @@ Lorsqu'un choix est possible entre une solution originale et une solution cohér
 
 ---
 
-## État au 4 juin 2026
+## État au 5 juin 2026
 
 Le projet est encore en phase corpus.
 
@@ -48,10 +48,15 @@ Le développement du jeu n'a pas commencé volontairement. La priorité actuelle
 - socle technique Vélo Mystère : 268 stations V'Lille, dont 255 candidates ;
 - inventaire technique Bus Mystère : 143 lignes bus ;
 - premier fichier `editorial-entries.json` avec 10 fiches jouables de départ ;
+- corpus jouable Métro Mystère v1 : 60 fiches métro dans `editorial-entries.json` ;
 - réserve documentaire mutualisée `transport-places-notes.json` ;
 - squelette documentaire mutualisé Métro + Tramway : 91 lieux, dont 5 lieux communs ;
 - récupération locale hors Git des pages Wikipédia métro : 60 pages sur 60 ;
-- récupération locale hors Git des pages Wikipédia tramway disponibles : 5 pages sur 36.
+- récupération locale hors Git des pages Wikipédia tramway disponibles : 5 pages sur 36 ;
+- lot pilote métro analysé et intégré à la réserve documentaire : Gare Lille-Flandres, Rihour, République Beaux-Arts, Porte des Postes, 4 Cantons Stade P. Mauroy ;
+- ligne M1 entièrement enrichie dans la réserve documentaire : 18 stations sur 18 ;
+- ligne M2 entièrement enrichie dans la réserve documentaire : 44 stations sur 44 ;
+- corpus documentaire métro complet : 60 stations enrichies sur 60.
 
 Constat important :
 
@@ -62,8 +67,9 @@ Constat important :
 Position actuelle dans la roadmap :
 
 - phases 2 et 3 largement avancées ;
-- phase 4 à démarrer réellement par l'analyse éditoriale du métro ;
-- phases 5 à 8 non démarrées.
+- phase 4 complète côté métro pour la réserve documentaire et les fiches jouables v1 ;
+- développement du jeu prêt à démarrer pour une v1 centrée sur Métro Mystère ;
+- tramway, V'Lille et bus reportés à une v2 ou à des itérations ultérieures.
 
 ---
 
@@ -159,7 +165,7 @@ Livrable :
 
 Objectif : enrichir les données brutes avec des informations culturelles, historiques et patrimoniales.
 
-Statut : prochaine grande phase.
+Statut : démarrée avec un lot pilote métro.
 
 Principe :
 
@@ -185,9 +191,10 @@ Travaux :
 
 Priorité immédiate :
 
-- traiter un lot pilote de 5 stations métro ;
-- valider le niveau de détail, le style et la structure des notes ;
-- généraliser ensuite à l'ensemble du métro.
+- relire le corpus documentaire métro complet ;
+- relire les 60 fiches jouables métro v1 dans `editorial-entries.json` ;
+- analyser les jeux existants du portail pour réutiliser les bons composants ;
+- lancer ensuite le développement du moteur v1 Métro Mystère.
 
 ### Tramway
 
@@ -326,7 +333,9 @@ Objectif : sécuriser tout le travail de cadrage, de corpus technique et de réc
 
 Analyser un lot pilote métro.
 
-Lot recommandé :
+Statut : réalisé dans `transport-places-notes.json`.
+
+Lot traité :
 
 - Gare Lille-Flandres ;
 - Rihour ;
@@ -338,17 +347,37 @@ Objectif : transformer les pages Wikipédia brutes en notes sourcées, reformul�
 
 ### Étape 3
 
-Produire cinq fiches jouables finales.
+Enrichir toute la ligne M1.
 
-Objectif : valider la qualité des indices, le ton des fiches découverte et la structure de `editorial-entries.json`.
+Statut : réalisé dans `transport-places-notes.json`.
+
+Objectif : obtenir un premier tronçon complet du métro pour valider la méthode au-delà du lot pilote.
 
 ### Étape 4
 
-Dérouler tout le métro.
+Dérouler la ligne M2.
 
-Objectif : rendre Métro Mystère complet avant de passer au tramway.
+Statut : réalisé dans `transport-places-notes.json`.
+
+Objectif : rendre Métro Mystère complet côté réserve documentaire avant de produire les fiches jouables.
 
 ### Étape 5
+
+Produire les fiches jouables métro v1.
+
+Statut : réalisé dans `editorial-entries.json`.
+
+Objectif : valider la qualité des indices, le ton des fiches découverte et la structure de `editorial-entries.json`.
+
+### Étape 6
+
+Décider du lancement du développement du jeu.
+
+Statut : réalisé pour une v1 centrée sur le métro.
+
+Objectif : commencer le moteur uniquement si le corpus métro est suffisamment riche, validé et jouable.
+
+### Étape 7
 
 Attaquer le tramway avec une stratégie de sources mixtes.
 
