@@ -28,6 +28,7 @@ for (const file of [
 
 await validateFetches("apps/le-mot-a-biloute/app.js");
 await validateFetches("apps/lille-mele/app.js");
+await validateFetches("apps/station-mystere/app.js");
 
 if (errors.length > 0) {
   console.error("Pages statiques invalides :");

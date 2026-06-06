@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="station-page">
     <header class="labaj-header">
       <nav class="labaj-nav" aria-label="Menu principal">
         <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
@@ -44,52 +44,154 @@
       </nav>
     </header>
 
-    <main class="station-shell">
-      <section class="station-hero" aria-labelledby="station-title">
-        <div class="station-hero__copy">
-          <p class="eyebrow">Nouveau jeu en préparation</p>
-          <h1 id="station-title">Station Mystère</h1>
-          <p class="subtitle">
-            Un jeu quotidien en 4 niveaux pour retrouver des stations, lignes
-            et lieux de transport de la métropole lilloise.
+    <main class="station-game" id="stationApp">
+      <section class="station-game__intro" aria-labelledby="stationTitle">
+        <div>
+          <p class="eyebrow">Métro Mystère</p>
+          <h1 id="stationTitle">Station Mystère</h1>
+          <p id="stationSubtitle">
+            Trouve la station de métro du jour grâce aux indices du calepin.
           </p>
         </div>
-        <div class="route-board" aria-label="Progression prévue du jeu">
-          <span>4 niveaux quotidiens</span>
-          <strong>
-            <span class="transport-emoji" aria-hidden="true">🚇</span>
-            N1 - Métro
-          </strong>
-          <strong>
-            <span class="transport-emoji" aria-hidden="true">🚋</span>
-            N2 - Tramway
-          </strong>
-          <strong>
-            <span class="transport-emoji" aria-hidden="true">🚲</span>
-            N3 - V'Lille
-          </strong>
-          <strong>
-            <span class="transport-emoji" aria-hidden="true">🚌</span>
-            N4 - Bus
-          </strong>
+        <div class="daily-ticket" aria-label="Énigme du jour">
+          <span>Aujourd'hui</span>
+          <strong id="dailyDate">Chargement</strong>
         </div>
       </section>
 
-      <section class="construction-panel" aria-labelledby="construction-title">
-        <p class="eyebrow">Chantier documentaire</p>
-        <h2 id="construction-title">Un tout nouveau projet en cours de construction</h2>
-        <p>
-          Avant de coder le jeu, le corpus se construit autour de quatre
-          familles de mobilité : métro, tramway, V'Lille et bus. Chaque niveau
-          aura ses indices, ses anecdotes et ses fiches découverte.
-        </p>
-        <p>
-          L'objectif sera de progresser de N1 - Métro à N4 - Bus, en découvrant
-          le territoire lillois à travers ses stations, ses lignes et ses lieux
-          de passage.
-        </p>
+      <section class="station-board" aria-label="Partie du jour">
+        <div class="station-status" aria-label="État de la partie">
+          <div>
+            <span>Score</span>
+            <strong id="scoreValue">1000</strong>
+          </div>
+          <div>
+            <span>Indices</span>
+            <strong id="hintProgress">1/5</strong>
+          </div>
+          <div>
+            <span>Série</span>
+            <strong id="streakValue">0</strong>
+          </div>
+        </div>
+
+        <div class="station-playfield">
+          <article class="mystery-panel" id="mysteryPanel" aria-labelledby="mysteryLabel">
+            <div class="mystery-panel__top">
+              <p class="eyebrow" id="mysteryEyebrow">Station inconnue</p>
+              <p class="mystery-badge" id="mysteryStatus">En cours</p>
+            </div>
+            <h2 id="mysteryLabel">Nom de station masqué</h2>
+            <ol class="hint-list" id="hintList"></ol>
+          </article>
+
+          <aside class="side-panel" aria-label="Résumé du calepin">
+            <div class="side-panel__top">
+              <p class="eyebrow">Calepin</p>
+              <button class="link-button" id="notebookButton" type="button">Ouvrir</button>
+            </div>
+            <div class="notebook-preview" id="notebookPreview">
+              <p>Les indices et les tentatives apparaîtront ici.</p>
+            </div>
+          </aside>
+        </div>
+
+        <form class="answer-form" id="answerForm" autocomplete="off">
+          <div class="answer-field">
+            <label for="answerInput">Rechercher une station</label>
+            <input
+              id="answerInput"
+              type="search"
+              name="answer"
+              placeholder="Ex. Rihour"
+              autocomplete="off"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="stationSuggestions"
+            />
+            <div class="suggestion-list" id="stationSuggestions" role="listbox" hidden></div>
+          </div>
+          <button class="primary-action" id="validateButton" type="submit">Valider</button>
+        </form>
+
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+
+        <div class="station-actions">
+          <button id="nextHintButton" type="button">Indice suivant</button>
+          <button id="notebookActionButton" type="button">Calepin</button>
+          <button id="statsButton" type="button">Stats</button>
+          <button id="helpButton" type="button">Aide</button>
+        </div>
+      </section>
+
+      <section class="result-panel" id="resultPanel" aria-live="polite" hidden>
+        <p class="eyebrow" id="resultKicker">Résultat</p>
+        <h2 id="resultTitle">Station révélée</h2>
+        <p id="resultSummary"></p>
+        <article class="discovery-card" id="discoveryCard"></article>
+        <div class="result-actions">
+          <button id="shareButton" type="button">Partager</button>
+          <button id="resultStatsButton" type="button">Voir les stats</button>
+        </div>
       </section>
     </main>
+
+    <dialog class="station-dialog" id="notebookDialog" aria-labelledby="notebookTitle">
+      <article class="dialog-panel">
+        <header>
+          <div>
+            <p class="eyebrow">Calepin</p>
+            <h2 id="notebookTitle">Notes de partie</h2>
+          </div>
+          <form method="dialog">
+            <button class="icon-close" type="submit" aria-label="Fermer">×</button>
+          </form>
+        </header>
+        <div id="notebookContent"></div>
+      </article>
+    </dialog>
+
+    <dialog class="station-dialog" id="statsDialog" aria-labelledby="statsTitle">
+      <article class="dialog-panel">
+        <header>
+          <div>
+            <p class="eyebrow">Stats</p>
+            <h2 id="statsTitle">Tes trajets mystère</h2>
+          </div>
+          <form method="dialog">
+            <button class="icon-close" type="submit" aria-label="Fermer">×</button>
+          </form>
+        </header>
+        <div id="statsContent"></div>
+      </article>
+    </dialog>
+
+    <dialog class="station-dialog" id="helpDialog" aria-labelledby="helpTitle">
+      <article class="dialog-panel">
+        <header>
+          <div>
+            <p class="eyebrow">Aide</p>
+            <h2 id="helpTitle">Comment jouer</h2>
+          </div>
+          <form method="dialog">
+            <button class="icon-close" type="submit" aria-label="Fermer">×</button>
+          </form>
+        </header>
+        <div class="help-content">
+          <p>Chaque jour, une station de métro est à retrouver.</p>
+          <ul>
+            <li>Le premier indice est gratuit.</li>
+            <li>Les indices suivants coûtent des points.</li>
+            <li>Une mauvaise réponse retire 100 points.</li>
+            <li>À 0 point, la station est révélée avec sa fiche découverte.</li>
+          </ul>
+        </div>
+      </article>
+    </dialog>
+
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+
     <script type="module" src="../../packages/ui/about-dialog.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

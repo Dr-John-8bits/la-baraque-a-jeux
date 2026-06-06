@@ -136,9 +136,56 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(bbbState.lastRound.playerChoice).toBe("biloute");
   expect(bbbState.score.player + bbbState.score.computer).toBeLessThanOrEqual(1);
 
+  await page.evaluate(() => localStorage.clear());
   await page.goto(`${base}apps/station-mystere/`);
   await expect(page).toHaveTitle("Station Mystère");
   await expect(page.getByRole("heading", { name: "Station Mystère", exact: true })).toBeVisible();
-  await expect(page.getByText("nouveau projet en cours de construction")).toBeVisible();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  const stationInitial = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(stationInitial.dailyRollover.hour).toBe(12);
+  expect(stationInitial.dailyRollover.timeZone).toBe("Europe/Paris");
+  expect(stationInitial.entry.niveau).toBe("metro");
+  expect(stationInitial.status).toBe("playing");
+  expect(stationInitial.score).toBe(1000);
+  expect(stationInitial.revealedHintCount).toBe(1);
+  await expect(page.locator("#hintList .hint-card:not(.hint-card--locked)")).toHaveCount(1);
+
+  const stationInput = page.getByLabel("Rechercher une station");
+  await expect(stationInput).toBeVisible();
+  await stationInput.fill("ga");
+  await expect(page.locator("#stationSuggestions [role='option']").first()).toBeVisible();
+
+  await stationInput.fill("zzzz");
+  await page.getByRole("button", { name: "Valider", exact: true }).click();
+  const stationAfterWrong = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(stationAfterWrong.score).toBe(900);
+  expect(stationAfterWrong.attempts).toHaveLength(1);
+  await expect(page.locator("#feedback")).toContainText("-100 points");
+
+  await page.getByRole("button", { name: /Indice suivant/ }).click();
+  const stationAfterHint = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(stationAfterHint.score).toBe(750);
+  expect(stationAfterHint.revealedHintCount).toBe(2);
+  await expect(page.locator("#hintList .hint-card:not(.hint-card--locked)")).toHaveCount(2);
+
+  await stationInput.fill(stationAfterHint.entry.reponse);
+  await page.getByRole("button", { name: "Valider", exact: true }).click();
+  await expect(page.locator("#resultPanel")).toBeVisible();
+  await expect(page.locator("#resultTitle")).toContainText(stationAfterHint.entry.reponse);
+  await expect(page.locator("#discoveryCard")).toBeVisible();
+  const stationAfterWin = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(stationAfterWin.status).toBe("won");
+  expect(stationAfterWin.score).toBe(750);
+  expect(stationAfterWin.statsApplied).toBe(true);
+  expect(stationAfterWin.stats.played).toBe(1);
+  expect(stationAfterWin.stats.wins).toBe(1);
+
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  const stationAfterReload = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(stationAfterReload.status).toBe("won");
+  expect(stationAfterReload.score).toBe(750);
+  expect(stationAfterReload.stats.played).toBe(1);
+  expect(stationAfterReload.stats.wins).toBe(1);
   expect(errors).toEqual([]);
 });
