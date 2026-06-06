@@ -27,7 +27,7 @@ Le projet est passé de la phase corpus à une première v1 jouable centrée sur
 
 Le corpus métro reste le socle prioritaire. Tramway, V'Lille et Bus demeurent dans la vision globale, mais ne doivent pas ralentir la stabilisation de la v1 métro.
 
-La v1 actuelle doit être considérée comme une alpha jouable : le moteur fonctionne, le flow principal existe, les tests passent, mais une passe de relecture éditoriale, de playtest et de finition mobile reste nécessaire avant de la considérer comme réellement prête pour le portail.
+La v1 actuelle doit être considérée comme une alpha jouable : le moteur fonctionne, le flow principal existe, les tests passent, l'écran de jeu a été compacté, mais une passe de relecture éditoriale, de playtest et de finition mobile reste nécessaire avant de la considérer comme réellement prête pour le portail.
 
 Éléments cadrés :
 
@@ -69,12 +69,17 @@ La v1 actuelle doit être considérée comme une alpha jouable : le moteur fonct
 - sélection quotidienne à midi, heure de Paris ;
 - recherche de station avec suggestions ;
 - score, indices payants, mauvaises réponses, victoire et défaite ;
+- démarrage à 0 indice visible, premier indice demandé gratuitement ;
+- indices consultés et débloqués dans une modale, sur le modèle du Mot à Biloute ;
 - calepin, statistiques locales et partage sans spoiler ;
+- aide et contexte du jeu affichés dans une modale au lancement ;
 - fiche découverte affichée après victoire ou défaite ;
 - sauvegarde et reprise de partie via LocalStorage ;
 - hook de test `window.render_game_to_text` ;
 - smoke test navigateur couvrant Station Mystère ;
-- validation statique des imports `fetchJson` de Station Mystère.
+- validation statique des imports `fetchJson` de Station Mystère ;
+- première passe UI compacte : suppression du surtitre rouge, du sous-texte d'intro et du grand encart date ;
+- vérification desktop et mobile : champ de recherche et actions visibles sans scroll initial.
 
 Constat important :
 
@@ -89,10 +94,20 @@ Position actuelle dans la roadmap :
 - phase 1 cadrée dans `game-design.md` pour le périmètre v1 ;
 - plan technique d'exécution disponible dans `implementation-plan.md` ;
 - phase 5 implémentée en alpha pour Métro Mystère ;
-- phase 6 implémentée en première version jouable, à polir ;
+- phase 6 implémentée en première version jouable compacte, à valider par playtest ;
 - phase 7 implémentée en socle simple, à relire ;
 - phase 8 non démarrée ;
 - tramway, V'Lille et bus reportés à une v2 ou à des itérations ultérieures.
+
+Point d'arrêt avant pause :
+
+- le jeu v1 métro est jouable dans le navigateur ;
+- l'interface ne force plus le joueur à scroller avant de commencer ;
+- l'aide s'ouvre automatiquement au lancement d'une partie en cours ;
+- les indices ne sont plus affichés sur le plateau, ils vivent dans une modale ;
+- le premier indice reste gratuit ;
+- les contrôles `npm run check` et `npm run test:browser` passent ;
+- la prochaine reprise doit commencer par du playtest et de la relecture, pas par l'ajout du tramway.
 
 ---
 
@@ -113,13 +128,17 @@ Travaux :
 - vérifier reprise après rechargement ;
 - vérifier stats non dupliquées après rechargement ;
 - vérifier partage sans spoiler ;
-- vérifier calepin, stats et aide en conditions réelles.
+- vérifier calepin, stats et aide en conditions réelles ;
+- vérifier que l'aide au lancement n'est pas trop intrusive ;
+- vérifier que la modale d'indices reste compréhensible après plusieurs indices ;
+- vérifier que le joueur comprend qu'il doit demander le premier indice.
 
 Critère de sortie :
 
 - aucun blocage de partie ;
 - le joueur comprend quoi faire sans explication extérieure ;
-- le champ de recherche et le bouton Valider restent accessibles sur mobile.
+- le champ de recherche et le bouton Valider restent accessibles sur mobile ;
+- le premier indice est demandé naturellement, sans que le joueur se sente bloqué.
 
 ### Priorité 2 — Relecture éditoriale des 60 fiches métro
 
@@ -153,16 +172,18 @@ Travaux :
 - tester largeur 390 px et équivalents iPhone/Android ;
 - vérifier que la recherche reste visible avec clavier ouvert ;
 - vérifier que la liste de suggestions ne masque pas l'écran de manière incohérente ;
-- vérifier les dialogues Calepin, Stats et Aide ;
+- vérifier les dialogues Indices, Calepin, Stats et Aide ;
 - vérifier les très longs noms de stations ;
 - vérifier les textes longs dans les fiches découverte ;
+- vérifier le confort réel avec clavier mobile ouvert ;
 - ajuster les espacements si nécessaire.
 
 Critère de sortie :
 
 - le jeu peut se jouer d'une main sans frustration ;
 - aucun texte critique ne déborde ;
-- l'action principale reste évidente.
+- l'action principale reste évidente ;
+- aucun retour au grand écran avec scroll obligatoire.
 
 ### Priorité 4 — Accessibilité et robustesse
 
@@ -381,7 +402,7 @@ Périmètre de départ : v1 Métro Mystère uniquement, avec une structure compa
 Travaux réalisés :
 
 - sélection de l'énigme du jour ;
-- affichage progressif des indices ;
+- affichage progressif des indices sur demande ;
 - validation des réponses ;
 - calcul du score ;
 - attribution des coupes ;
@@ -398,6 +419,7 @@ Travaux restants :
 - vérifier LocalStorage invalide ;
 - vérifier corpus indisponible ;
 - confirmer la mécanique de série sur plusieurs jours réels ;
+- vérifier les transitions entre premier indice gratuit et indices payants dans davantage de scénarios ;
 - relire les intitulés de récompenses.
 
 Livrable :
@@ -410,13 +432,17 @@ Livrable :
 
 Objectif : intégrer le moteur dans l'univers de La Baraque à Jeux.
 
-Statut : première interface jouable implémentée, à polir.
+Statut : première interface jouable compactée, à polir après playtest.
 
 Travaux réalisés :
 
 - panneau Station Mystère ;
 - score, indices et série ;
 - recherche avec suggestions ;
+- suppression des éléments d'intro trop hauts ;
+- écran de jeu visible sans scroll initial sur desktop et mobile de test ;
+- modale d'aide et de contexte au lancement ;
+- modale d'indices avec premier indice gratuit puis indices payants ;
 - écran de victoire ;
 - écran de défaite ;
 - écran de statistiques ;
@@ -429,6 +455,8 @@ Travaux reportés ou restants :
 - animation du niveau actif à reporter ;
 - finition mobile après playtest ;
 - vérification des longs noms de stations ;
+- vérification du confort avec clavier mobile réel ;
+- ajustement éventuel du wording de l'aide et de la modale d'indices ;
 - ajustements visuels après retour utilisateur.
 
 Livrable :
@@ -471,7 +499,7 @@ Livrable :
 
 Objectif : préparer l'intégration officielle dans le portail.
 
-Statut : non démarrée.
+Statut : non démarrée côté publication.
 
 Travaux :
 
@@ -479,6 +507,7 @@ Travaux :
 - vérifications d'accessibilité ;
 - vérifications des performances ;
 - relecture de l'aide intégrée ;
+- validation finale du flow d'indices en modale ;
 - rédaction de la page À propos ;
 - mise à jour éventuelle de la page d'accueil de La Baraque à Jeux ;
 - mise à jour éventuelle du blog pour annoncer la v1 jouable.
@@ -493,11 +522,11 @@ Livrable :
 
 ### Étape 1
 
-Stabiliser le gameplay v1 métro.
+Stabiliser le gameplay v1 métro par playtest.
 
 Statut : à faire.
 
-Objectif : jouer plusieurs parties complètes, vérifier les cas limites et corriger les points bloquants.
+Objectif : jouer plusieurs parties complètes, vérifier les cas limites et corriger les points bloquants. Le socle automatisé passe, mais il faut maintenant une validation humaine.
 
 ### Étape 2
 
@@ -518,11 +547,11 @@ Points à vérifier :
 
 ### Étape 3
 
-Finaliser l'expérience mobile.
+Finaliser l'expérience mobile réelle.
 
 Statut : à faire.
 
-Objectif : confirmer que la recherche, les suggestions, le calepin et la fiche découverte restent confortables sur smartphone.
+Objectif : confirmer que la recherche, les suggestions, les modales, le calepin et la fiche découverte restent confortables sur smartphone, notamment avec le clavier ouvert.
 
 ### Étape 4
 
