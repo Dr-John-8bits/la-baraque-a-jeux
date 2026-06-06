@@ -147,7 +147,9 @@ Objectif : rendre les textes visibles dignes d'une v1 publique.
 Travaux :
 
 - relire les noms affichés des stations ;
-- restaurer les accents et la typographie éditoriale dans les textes visibles ;
+- restaurer systématiquement les accents et la typographie éditoriale dans tous les textes visibles ;
+- clarifier les stations homonymes ou ambiguës en ajoutant la commune lorsque nécessaire ;
+- traiter en priorité les cas comme Hôtel de Ville, où plusieurs stations peuvent porter le même nom dans des communes différentes ;
 - relire les cinq indices de chaque station ;
 - vérifier que les indices vont bien du plus général au plus précis ;
 - éviter les indices trop évidents dès le début ;
@@ -161,6 +163,8 @@ Critère de sortie :
 
 - les 60 stations sont jouables sans impression de brouillon ;
 - les textes visibles ne donnent pas l'impression d'un export technique ;
+- les libellés de stations sont écrits en français correct, avec accents ;
+- les stations ambiguës sont identifiables sans hésitation par leur commune ;
 - les réponses acceptées couvrent les graphies naturelles.
 
 ### Priorité 3 — Finition mobile
