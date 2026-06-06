@@ -46,17 +46,7 @@
 
     <main class="station-game" id="stationApp">
       <section class="station-game__intro" aria-labelledby="stationTitle">
-        <div>
-          <p class="eyebrow">Métro Mystère</p>
-          <h1 id="stationTitle">Station Mystère</h1>
-          <p id="stationSubtitle">
-            Trouve la station de métro du jour grâce aux indices du calepin.
-          </p>
-        </div>
-        <div class="daily-ticket" aria-label="Énigme du jour">
-          <span>Aujourd'hui</span>
-          <strong id="dailyDate">Chargement</strong>
-        </div>
+        <h1 id="stationTitle">Station Mystère</h1>
       </section>
 
       <section class="station-board" aria-label="Partie du jour">
@@ -82,7 +72,9 @@
               <p class="mystery-badge" id="mysteryStatus">En cours</p>
             </div>
             <h2 id="mysteryLabel">Nom de station masqué</h2>
-            <ol class="hint-list" id="hintList"></ol>
+            <p class="mystery-note" id="mysteryNote">
+              Ouvre un indice quand tu veux, puis propose une station.
+            </p>
           </article>
 
           <aside class="side-panel" aria-label="Résumé du calepin">
@@ -136,6 +128,28 @@
       </section>
     </main>
 
+    <dialog class="station-dialog hint-dialog" id="hintDialog" aria-labelledby="hintTitle">
+      <article class="dialog-panel">
+        <header>
+          <div>
+            <p class="eyebrow">Indices</p>
+            <h2 id="hintTitle">Tes indices</h2>
+          </div>
+          <form method="dialog">
+            <button class="icon-close" type="submit" aria-label="Fermer">×</button>
+          </form>
+        </header>
+        <div class="hint-dialog-content" id="hintDialogContent"></div>
+        <p class="hint-cost" id="hintCostText"></p>
+        <div class="dialog-actions">
+          <button id="revealHintButton" type="button">Premier indice gratuit</button>
+          <form method="dialog">
+            <button type="submit">Fermer</button>
+          </form>
+        </div>
+      </article>
+    </dialog>
+
     <dialog class="station-dialog" id="notebookDialog" aria-labelledby="notebookTitle">
       <article class="dialog-panel">
         <header>
@@ -178,13 +192,20 @@
           </form>
         </header>
         <div class="help-content">
-          <p>Chaque jour, une station de métro est à retrouver.</p>
+          <p>
+            Station Mystère est une enquête quotidienne sur les transports de la métropole
+            lilloise. La v1 démarre avec le métro : une station est masquée, et les indices
+            te font remonter la piste.
+          </p>
           <ul>
-            <li>Le premier indice est gratuit.</li>
+            <li>Demande le premier indice gratuitement quand tu es prêt.</li>
             <li>Les indices suivants coûtent des points.</li>
             <li>Une mauvaise réponse retire 100 points.</li>
             <li>À 0 point, la station est révélée avec sa fiche découverte.</li>
           </ul>
+        </div>
+        <div class="dialog-actions dialog-actions--single">
+          <button id="helpStartButton" type="button">Jouer</button>
         </div>
       </article>
     </dialog>

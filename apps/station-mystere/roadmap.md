@@ -21,11 +21,13 @@ Lorsqu'un choix est possible entre une solution originale et une solution cohér
 
 ---
 
-## État au 5 juin 2026
+## État au 6 juin 2026
 
-Le projet est encore en phase corpus.
+Le projet est passé de la phase corpus à une première v1 jouable centrée sur Métro Mystère.
 
-Le développement du jeu n'a pas commencé volontairement. La priorité actuelle est de construire une base documentaire solide, mutualisable et sourcée avant de produire le moteur de jeu.
+Le corpus métro reste le socle prioritaire. Tramway, V'Lille et Bus demeurent dans la vision globale, mais ne doivent pas ralentir la stabilisation de la v1 métro.
+
+La v1 actuelle doit être considérée comme une alpha jouable : le moteur fonctionne, le flow principal existe, les tests passent, mais une passe de relecture éditoriale, de playtest et de finition mobile reste nécessaire avant de la considérer comme réellement prête pour le portail.
 
 Éléments cadrés :
 
@@ -37,12 +39,12 @@ Le développement du jeu n'a pas commencé volontairement. La priorité actuelle
 - niveau 4 : Bus Mystère, réponse attendue ligne de bus ;
 - barème de score et condition de défaite ;
 - révélation de la réponse avec fiche découverte après victoire ou défaite ;
-- séparation entre corpus technique, réserve documentaire et fiches jouables.
+- séparation entre corpus technique, réserve documentaire et fiches jouables ;
 - principe d'interface : panneau de station mystère, recherche de station, calepin, stats et fiche découverte.
 
 Éléments réalisés :
 
-- page placeholder Station Mystère dans `apps/station-mystere/` ;
+- page Station Mystère transformée en v1 jouable dans `apps/station-mystere/` ;
 - tuile Station Mystère sur l'index du portail ;
 - actualité de blog annonçant le projet ;
 - socle technique Métro Mystère : 60 stations ;
@@ -58,10 +60,21 @@ Le développement du jeu n'a pas commencé volontairement. La priorité actuelle
 - lot pilote métro analysé et intégré à la réserve documentaire : Gare Lille-Flandres, Rihour, République Beaux-Arts, Porte des Postes, 4 Cantons Stade P. Mauroy ;
 - ligne M1 entièrement enrichie dans la réserve documentaire : 18 stations sur 18 ;
 - ligne M2 entièrement enrichie dans la réserve documentaire : 44 stations sur 44 ;
-- corpus documentaire métro complet : 60 stations enrichies sur 60.
-- document de game design v1 : `apps/station-mystere/game-design.md`.
-- document `game-design.md` renforcé comme référence principale pour lancer le développement de la v1.
-- plan d'implémentation v1 : `apps/station-mystere/implementation-plan.md`.
+- corpus documentaire métro complet : 60 stations enrichies sur 60 ;
+- document de game design v1 : `apps/station-mystere/game-design.md` ;
+- document `game-design.md` renforcé comme référence principale pour lancer le développement de la v1 ;
+- plan d'implémentation v1 : `apps/station-mystere/implementation-plan.md` ;
+- moteur v1 métro dans `apps/station-mystere/app.js` ;
+- interface v1 dans `index.html` et `styles.css` ;
+- sélection quotidienne à midi, heure de Paris ;
+- recherche de station avec suggestions ;
+- score, indices payants, mauvaises réponses, victoire et défaite ;
+- calepin, statistiques locales et partage sans spoiler ;
+- fiche découverte affichée après victoire ou défaite ;
+- sauvegarde et reprise de partie via LocalStorage ;
+- hook de test `window.render_game_to_text` ;
+- smoke test navigateur couvrant Station Mystère ;
+- validation statique des imports `fetchJson` de Station Mystère.
 
 Constat important :
 
@@ -75,8 +88,122 @@ Position actuelle dans la roadmap :
 - phase 4 complète côté métro pour la réserve documentaire et les fiches jouables v1 ;
 - phase 1 cadrée dans `game-design.md` pour le périmètre v1 ;
 - plan technique d'exécution disponible dans `implementation-plan.md` ;
-- développement du jeu prêt à démarrer pour une v1 centrée sur Métro Mystère ;
+- phase 5 implémentée en alpha pour Métro Mystère ;
+- phase 6 implémentée en première version jouable, à polir ;
+- phase 7 implémentée en socle simple, à relire ;
+- phase 8 non démarrée ;
 - tramway, V'Lille et bus reportés à une v2 ou à des itérations ultérieures.
+
+---
+
+## Reste à faire pour une v1 bien jouable
+
+### Priorité 1 — Playtest du flow complet
+
+Objectif : vérifier que le jeu est agréable, compréhensible et sans blocage sur plusieurs parties.
+
+Travaux :
+
+- jouer plusieurs scénarios complets sur desktop ;
+- jouer plusieurs scénarios complets sur mobile ;
+- vérifier victoire parfaite ;
+- vérifier victoire avec erreurs ;
+- vérifier victoire avec indices payants ;
+- vérifier défaite à 0 point ;
+- vérifier reprise après rechargement ;
+- vérifier stats non dupliquées après rechargement ;
+- vérifier partage sans spoiler ;
+- vérifier calepin, stats et aide en conditions réelles.
+
+Critère de sortie :
+
+- aucun blocage de partie ;
+- le joueur comprend quoi faire sans explication extérieure ;
+- le champ de recherche et le bouton Valider restent accessibles sur mobile.
+
+### Priorité 2 — Relecture éditoriale des 60 fiches métro
+
+Objectif : rendre les textes visibles dignes d'une v1 publique.
+
+Travaux :
+
+- relire les noms affichés des stations ;
+- restaurer les accents et la typographie éditoriale dans les textes visibles ;
+- relire les cinq indices de chaque station ;
+- vérifier que les indices vont bien du plus général au plus précis ;
+- éviter les indices trop évidents dès le début ;
+- éviter les indices trop vagues en fin de progression ;
+- vérifier les fiches découverte ;
+- harmoniser les formulations ;
+- repérer les stations dont les indices se ressemblent trop ;
+- vérifier les réponses acceptées et variantes courantes.
+
+Critère de sortie :
+
+- les 60 stations sont jouables sans impression de brouillon ;
+- les textes visibles ne donnent pas l'impression d'un export technique ;
+- les réponses acceptées couvrent les graphies naturelles.
+
+### Priorité 3 — Finition mobile
+
+Objectif : rendre la v1 confortable sur smartphone.
+
+Travaux :
+
+- tester largeur 390 px et équivalents iPhone/Android ;
+- vérifier que la recherche reste visible avec clavier ouvert ;
+- vérifier que la liste de suggestions ne masque pas l'écran de manière incohérente ;
+- vérifier les dialogues Calepin, Stats et Aide ;
+- vérifier les très longs noms de stations ;
+- vérifier les textes longs dans les fiches découverte ;
+- ajuster les espacements si nécessaire.
+
+Critère de sortie :
+
+- le jeu peut se jouer d'une main sans frustration ;
+- aucun texte critique ne déborde ;
+- l'action principale reste évidente.
+
+### Priorité 4 — Accessibilité et robustesse
+
+Objectif : éviter les régressions invisibles.
+
+Travaux :
+
+- vérifier la navigation clavier complète ;
+- vérifier les suggestions avec flèches, Entrée et Échap ;
+- vérifier les labels des champs et boutons ;
+- vérifier les messages `aria-live` ;
+- tester un LocalStorage invalide ;
+- tester un corpus indisponible ;
+- tester une partie déjà terminée ;
+- vérifier contraste et focus visible.
+
+Critère de sortie :
+
+- le jeu reste utilisable au clavier ;
+- une erreur de données n'entraîne pas une page cassée ;
+- les états importants sont annoncés clairement.
+
+### Priorité 5 — Préparation publication
+
+Objectif : passer de l'alpha jouable à une v1 assumée sur le portail.
+
+Travaux :
+
+- mettre à jour les textes de présentation si besoin ;
+- décider si la tuile d'accueil doit passer de "en construction" à "jouer" ;
+- décider si l'actualité blog doit être complétée par une actualité de lancement ;
+- relire le format de partage ;
+- faire un dernier `npm run check` ;
+- faire un dernier `npm run test:browser` ;
+- faire un test navigateur manuel avant commit de release.
+
+Critère de sortie :
+
+- la v1 peut être montrée à un joueur sans accompagnement ;
+- les textes publics ne promettent pas encore Tramway, V'Lille et Bus comme niveaux jouables ;
+- les tests automatisés passent.
 
 ---
 
@@ -84,7 +211,7 @@ Position actuelle dans la roadmap :
 
 Objectif : comprendre et réutiliser les mécanismes déjà présents dans le portail.
 
-Statut : cadrage initial réalisé, à compléter si besoin avant le développement du moteur.
+Statut : réalisé pour la v1 métro.
 
 Travaux :
 
@@ -95,7 +222,7 @@ Travaux :
 - identifier les conventions visuelles ;
 - identifier les mécanismes de partage ;
 - identifier les mécanismes de sauvegarde locale ;
-- identifier les composants communs pouvant être mutualisés.
+- identifier les composants communs pouvant être mutualisés ;
 - cadrer le flow v1, la recherche de station, le calepin, les stats et la fiche découverte.
 
 Livrable :
@@ -121,7 +248,7 @@ Travaux :
 - isoler les informations exploitables pour le jeu ;
 - documenter les limites des données récupérées ;
 - créer une réserve documentaire transport mutualisable ;
-- préparer les premières fiches candidates.
+- préparer les premières fiches candidates ;
 - récupérer localement les pages Wikipédia utiles, sans les versionner ;
 - consigner les limites de couverture des sources.
 
@@ -148,7 +275,7 @@ Livrable :
 
 Objectif : définir le format unique des données du jeu à partir des premiers corpus récupérés.
 
-Statut : première version en place, à ajuster pendant l'analyse éditoriale.
+Statut : première version en place et utilisée par la v1 métro.
 
 Travaux :
 
@@ -173,7 +300,7 @@ Livrable :
 
 Objectif : enrichir les données brutes avec des informations culturelles, historiques et patrimoniales.
 
-Statut : démarrée avec un lot pilote métro.
+Statut : complète côté métro, à relire éditorialement pour publication.
 
 Principe :
 
@@ -199,10 +326,11 @@ Travaux :
 
 Priorité immédiate :
 
-- relire le corpus documentaire métro complet ;
 - relire les 60 fiches jouables métro v1 dans `editorial-entries.json` ;
-- s'appuyer sur le cadrage `game-design.md` pour réutiliser les bons composants ;
-- lancer ensuite le développement du moteur v1 Métro Mystère.
+- restaurer accents, typographie et formulations éditoriales dans les textes visibles ;
+- vérifier que les variantes acceptées couvrent les usages naturels ;
+- vérifier que les indices produisent une difficulté progressive ;
+- valider la qualité des fiches découverte.
 
 ### Tramway
 
@@ -237,7 +365,7 @@ Priorité immédiate :
 
 Livrable :
 
-- reserve documentaire transport mutualisee ;
+- réserve documentaire transport mutualisée ;
 - premier corpus éditorial exploitable pour les quatre niveaux.
 
 ---
@@ -246,11 +374,11 @@ Livrable :
 
 Objectif : développer la logique principale.
 
-Statut : non démarrée.
+Statut : implémentée en alpha pour la v1 métro.
 
 Périmètre de départ : v1 Métro Mystère uniquement, avec une structure compatible avec les futurs niveaux.
 
-Travaux :
+Travaux réalisés :
 
 - sélection de l'énigme du jour ;
 - affichage progressif des indices ;
@@ -258,11 +386,23 @@ Travaux :
 - calcul du score ;
 - attribution des coupes ;
 - attribution des médailles ;
-- sauvegarde locale.
+- sauvegarde locale ;
+- reprise de partie après rechargement ;
+- défaite à 0 point ;
+- révélation immédiate de la réponse ;
+- hook `render_game_to_text` pour les tests.
+
+Travaux restants :
+
+- tester plus largement les cas limites ;
+- vérifier LocalStorage invalide ;
+- vérifier corpus indisponible ;
+- confirmer la mécanique de série sur plusieurs jours réels ;
+- relire les intitulés de récompenses.
 
 Livrable :
 
-- moteur jouable sans interface finalisée.
+- moteur v1 métro jouable, à stabiliser par playtest.
 
 ---
 
@@ -270,21 +410,30 @@ Livrable :
 
 Objectif : intégrer le moteur dans l'univers de La Baraque à Jeux.
 
-Statut : non démarrée.
+Statut : première interface jouable implémentée, à polir.
 
-Travaux :
+Travaux réalisés :
 
-- fil de progression Métro → Tramway → Vélo → Bus ;
-- animation du niveau actif ;
+- panneau Station Mystère ;
+- score, indices et série ;
+- recherche avec suggestions ;
 - écran de victoire ;
 - écran de défaite ;
 - écran de statistiques ;
 - adaptation mobile ;
 - cohérence graphique avec les autres jeux.
 
+Travaux reportés ou restants :
+
+- fil de progression Métro → Tramway → Vélo → Bus à reporter après la v1 métro ;
+- animation du niveau actif à reporter ;
+- finition mobile après playtest ;
+- vérification des longs noms de stations ;
+- ajustements visuels après retour utilisateur.
+
 Livrable :
 
-- première version complète jouable.
+- première version jouable, à rendre confortable avant publication.
 
 ---
 
@@ -292,15 +441,23 @@ Livrable :
 
 Objectif : harmoniser l'expérience avec les autres jeux du portail.
 
-Statut : non démarrée.
+Statut : socle v1 implémenté.
 
-Travaux :
+Travaux réalisés :
 
 - partage des résultats ;
 - format de score ;
 - récapitulatif quotidien ;
 - suivi des séries ;
 - historique local.
+
+Travaux restants :
+
+- relire le texte de partage ;
+- vérifier le partage sur mobile réel ;
+- vérifier le fallback copie sur desktop ;
+- décider si les stats doivent afficher davantage d'historique ;
+- vérifier que les stats ne se dupliquent jamais après rechargement.
 
 Le comportement doit être cohérent avec les mécanismes déjà présents dans La Baraque à Jeux.
 
@@ -321,9 +478,10 @@ Travaux :
 - optimisation mobile ;
 - vérifications d'accessibilité ;
 - vérifications des performances ;
-- rédaction des pages d'aide ;
+- relecture de l'aide intégrée ;
 - rédaction de la page À propos ;
-- intégration dans la page d'accueil de La Baraque à Jeux.
+- mise à jour éventuelle de la page d'accueil de La Baraque à Jeux ;
+- mise à jour éventuelle du blog pour annoncer la v1 jouable.
 
 Livrable :
 
@@ -335,71 +493,60 @@ Livrable :
 
 ### Étape 1
 
-Faire un checkpoint Git de l'état actuel.
+Stabiliser le gameplay v1 métro.
 
-Objectif : sécuriser tout le travail de cadrage, de corpus technique et de récupération documentaire déjà réalisé.
+Statut : à faire.
+
+Objectif : jouer plusieurs parties complètes, vérifier les cas limites et corriger les points bloquants.
 
 ### Étape 2
 
-Analyser un lot pilote métro.
+Relire les textes visibles du corpus métro.
 
-Statut : réalisé dans `transport-places-notes.json`.
+Statut : à faire.
 
-Lot traité :
+Objectif : éviter l'impression d'export technique dans les noms, indices et fiches découverte.
 
-- Gare Lille-Flandres ;
-- Rihour ;
-- République Beaux-Arts ;
-- Porte des Postes ;
-- Quatre Cantons - Stade Pierre-Mauroy.
+Points à vérifier :
 
-Objectif : transformer les pages Wikipédia brutes en notes sourcées, reformulées et exploitables dans `transport-places-notes.json`.
+- accents ;
+- casse ;
+- tirets ;
+- noms officiels ;
+- variantes acceptées ;
+- ton éditorial.
 
 ### Étape 3
 
-Enrichir toute la ligne M1.
+Finaliser l'expérience mobile.
 
-Statut : réalisé dans `transport-places-notes.json`.
+Statut : à faire.
 
-Objectif : obtenir un premier tronçon complet du métro pour valider la méthode au-delà du lot pilote.
+Objectif : confirmer que la recherche, les suggestions, le calepin et la fiche découverte restent confortables sur smartphone.
 
 ### Étape 4
 
-Dérouler la ligne M2.
+Vérifier accessibilité et robustesse.
 
-Statut : réalisé dans `transport-places-notes.json`.
+Statut : à faire.
 
-Objectif : rendre Métro Mystère complet côté réserve documentaire avant de produire les fiches jouables.
+Objectif : couvrir clavier, focus, messages d'état, LocalStorage invalide et erreur de chargement corpus.
 
 ### Étape 5
 
-Produire les fiches jouables métro v1.
+Préparer le lancement v1.
 
-Statut : réalisé dans `editorial-entries.json`.
+Statut : à faire après stabilisation.
 
-Objectif : valider la qualité des indices, le ton des fiches découverte et la structure de `editorial-entries.json`.
-
-### Étape 6
-
-Décider du lancement du développement du jeu.
-
-Statut : réalisé pour une v1 centrée sur le métro.
-
-Objectif : commencer le moteur uniquement si le corpus métro est suffisamment riche, validé et jouable.
-
-### Étape 7
-
-Attaquer le tramway avec une stratégie de sources mixtes.
-
-Objectif : compléter les stations sans page Wikipédia dédiée avec des sources de contexte fiables.
+Objectif : décider du wording public, de la tuile d'accueil, du blog et du commit de release.
 
 ---
 
 ## Priorités absolues
 
 1. Cohérence avec La Baraque à Jeux.
-2. Constitution d'un corpus fiable avant développement.
-3. Analyse éditoriale du métro avant développement du moteur.
+2. Stabilisation de la v1 métro avant ajout d'autres niveaux.
+3. Relecture éditoriale des 60 fiches métro visibles dans le jeu.
 4. Jeu entièrement autonome dans le navigateur.
 5. Aucune dépendance à un backend.
 6. Réutilisation maximale des composants existants.

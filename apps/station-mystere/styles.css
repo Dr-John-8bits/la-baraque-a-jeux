@@ -20,22 +20,17 @@ button:disabled {
 .station-game {
   width: min(1080px, calc(100% - 24px));
   margin: 0 auto;
-  padding: 18px 0 26px;
+  padding: 10px 0 20px;
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .station-game__intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(170px, 240px);
-  gap: 14px;
-  align-items: end;
+  display: block;
 }
 
 .station-game__intro h1,
 .station-game__intro p,
-.daily-ticket span,
-.daily-ticket strong,
 .mystery-panel h2,
 .mystery-panel p,
 .result-panel h2,
@@ -54,46 +49,9 @@ button:disabled {
 }
 
 .station-game__intro h1 {
-  font-size: clamp(2.2rem, 10vw, 4.5rem);
+  font-size: clamp(1.9rem, 7vw, 3.15rem);
   line-height: 0.95;
   letter-spacing: 0;
-}
-
-#stationSubtitle {
-  max-width: 620px;
-  margin-top: 8px;
-  color: var(--labaj-muted);
-  font-size: 1.04rem;
-  line-height: 1.45;
-}
-
-.daily-ticket {
-  min-height: 104px;
-  display: grid;
-  align-content: center;
-  gap: 7px;
-  border: 2px solid var(--labaj-ink);
-  border-radius: var(--labaj-radius);
-  padding: 14px;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 50%, transparent 50%) 0 0 /
-      14px 100%,
-    var(--labaj-ink);
-  color: #ffffff;
-  box-shadow: var(--labaj-shadow-strong);
-}
-
-.daily-ticket span {
-  color: color-mix(in srgb, var(--labaj-gold), white 18%);
-  font-size: 0.76rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.daily-ticket strong {
-  font-size: 1.35rem;
-  line-height: 1;
 }
 
 .station-board,
@@ -107,8 +65,8 @@ button:disabled {
 
 .station-board {
   display: grid;
-  gap: 14px;
-  padding: 14px;
+  gap: 10px;
+  padding: 12px;
 }
 
 .station-status {
@@ -121,7 +79,7 @@ button:disabled {
   min-width: 0;
   border: 1px solid var(--labaj-line);
   border-radius: var(--labaj-radius);
-  padding: 10px;
+  padding: 8px 10px;
   background: color-mix(in srgb, var(--labaj-paper), white 55%);
 }
 
@@ -135,9 +93,9 @@ button:disabled {
 
 .station-status strong {
   display: block;
-  margin-top: 4px;
+  margin-top: 3px;
   color: var(--labaj-ink);
-  font-size: clamp(1.25rem, 5vw, 1.9rem);
+  font-size: clamp(1.15rem, 4vw, 1.7rem);
   line-height: 1;
 }
 
@@ -148,13 +106,13 @@ button:disabled {
 }
 
 .mystery-panel {
-  min-height: 260px;
+  min-height: 154px;
   display: grid;
   align-content: start;
-  gap: 14px;
+  gap: 10px;
   border: 2px solid var(--labaj-ink);
   border-radius: var(--labaj-radius);
-  padding: 16px;
+  padding: 12px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.97)),
     repeating-linear-gradient(
@@ -196,12 +154,20 @@ button:disabled {
   max-width: 100%;
   border: 2px solid var(--labaj-ink);
   border-radius: var(--labaj-radius);
-  padding: 10px 12px;
+  padding: 8px 10px;
   background: #ffffff;
   color: var(--labaj-ink);
-  font-size: clamp(1.65rem, 8vw, 3.4rem);
+  font-size: clamp(1.35rem, 5vw, 2.35rem);
   line-height: 0.96;
   letter-spacing: 0;
+}
+
+.mystery-note,
+.empty-hints,
+.hint-cost {
+  color: var(--labaj-muted);
+  font-weight: 800;
+  line-height: 1.42;
 }
 
 .hint-list {
@@ -252,10 +218,10 @@ button:disabled {
   min-width: 0;
   display: grid;
   align-content: start;
-  gap: 12px;
+  gap: 10px;
   border: 1px solid var(--labaj-line);
   border-radius: var(--labaj-radius);
-  padding: 14px;
+  padding: 12px;
   background: color-mix(in srgb, var(--labaj-paper), white 62%);
 }
 
@@ -308,7 +274,7 @@ button:disabled {
 
 .answer-field input {
   width: 100%;
-  min-height: 52px;
+  min-height: 48px;
   border: 2px solid var(--labaj-ink);
   border-radius: var(--labaj-radius);
   padding: 0 13px;
@@ -327,7 +293,7 @@ button:disabled {
 }
 
 .primary-action {
-  min-height: 52px;
+  min-height: 48px;
 }
 
 .suggestion-list {
@@ -379,10 +345,33 @@ button:disabled {
 }
 
 .station-actions,
-.result-actions {
+.result-actions,
+.dialog-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
+}
+
+.dialog-actions form {
+  display: contents;
+}
+
+.dialog-actions button {
+  min-height: 44px;
+  padding: 0 14px;
+  background: var(--labaj-ink);
+  color: #ffffff;
+  font-weight: 950;
+}
+
+.dialog-actions--single button,
+.hint-dialog .dialog-actions > button {
+  background: var(--labaj-blue);
+}
+
+.hint-dialog-content {
+  display: grid;
+  gap: 10px;
 }
 
 .station-actions button {

@@ -4,7 +4,7 @@ import { shareText as shareTextWithFallback } from "../../packages/game-utils/sh
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { escapeHtml } from "../../packages/game-utils/text-render.js";
 
-const APP_VERSION = "26.06.06.1";
+const APP_VERSION = "26.06.06.2";
 const GAME_MODE = "metro";
 const STORAGE_PREFIX = "station-mystere.v1.";
 const DAILY_EPOCH_ID = "2026-01-01";
@@ -35,6 +35,7 @@ const DEFAULT_STATS = {
   totalScore: 0,
   totalHintsUsed: 0,
   winsByHintsUsed: {
+    0: 0,
     1: 0,
     2: 0,
     3: 0,
@@ -58,8 +59,12 @@ const els = {
   mysteryEyebrow: document.querySelector("#mysteryEyebrow"),
   mysteryLabel: document.querySelector("#mysteryLabel"),
   mysteryStatus: document.querySelector("#mysteryStatus"),
-  hintList: document.querySelector("#hintList"),
   nextHintButton: document.querySelector("#nextHintButton"),
+  hintDialog: document.querySelector("#hintDialog"),
+  hintTitle: document.querySelector("#hintTitle"),
+  hintDialogContent: document.querySelector("#hintDialogContent"),
+  hintCostText: document.querySelector("#hintCostText"),
+  revealHintButton: document.querySelector("#revealHintButton"),
   answerForm: document.querySelector("#answerForm"),
   answerInput: document.querySelector("#answerInput"),
   suggestions: document.querySelector("#stationSuggestions"),
@@ -82,6 +87,7 @@ const els = {
   statsDialog: document.querySelector("#statsDialog"),
   statsContent: document.querySelector("#statsContent"),
   helpDialog: document.querySelector("#helpDialog"),
+  helpStartButton: document.querySelector("#helpStartButton"),
   toast: document.querySelector("#toast"),
 };
 
@@ -108,6 +114,7 @@ async function init() {
     state = hydrateState(loadGame(), todayEntry, todayId);
     bindEvents();
     render();
+    showLaunchHelp();
   } catch (error) {
     state = createErrorState(error);
     bindEvents();
@@ -120,7 +127,8 @@ function bindEvents() {
   els.answerInput?.addEventListener("input", updateSuggestions);
   els.answerInput?.addEventListener("keydown", handleAnswerKeydown);
   els.suggestions?.addEventListener("click", handleSuggestionClick);
-  els.nextHintButton?.addEventListener("click", revealNextHint);
+  els.nextHintButton?.addEventListener("click", openHintDialog);
+  els.revealHintButton?.addEventListener("click", () => revealNextHint({ openDialogAfter: true }));
   els.notebookButton?.addEventListener("click", () => openDialog(els.notebookDialog));
   els.notebookActionButton?.addEventListener("click", () => openDialog(els.notebookDialog));
   els.statsButton?.addEventListener("click", () => openDialog(els.statsDialog));
@@ -129,6 +137,7 @@ function bindEvents() {
     writeJson(STORAGE_KEYS.firstHelpSeen, true);
     openDialog(els.helpDialog);
   });
+  els.helpStartButton?.addEventListener("click", closeHelpDialog);
   els.shareButton?.addEventListener("click", shareResult);
   document.addEventListener("click", handleOutsideSuggestionClick);
 }
@@ -197,14 +206,14 @@ function createInitialState(entry, dateId) {
     entryId: entry.id,
     status: "playing",
     score: BASE_SCORE,
-    revealedHintCount: 1,
+    revealedHintCount: 0,
     attempts: [],
     penalties: [],
     startedAt: new Date().toISOString(),
     completedAt: null,
     result: null,
     statsApplied: false,
-    lastFeedback: "Premier indice gratuit. À toi de trouver la station.",
+    lastFeedback: "Demande un premier indice gratuit pour commencer l'enquête.",
     feedbackTone: "neutral",
   };
 }
@@ -324,30 +333,43 @@ function isCorrectAnswer(normalizedAnswer) {
   return todayEntry.normalizedAcceptedAnswers.includes(normalizedAnswer);
 }
 
-function revealNextHint() {
+function revealNextHint({ openDialogAfter = false } = {}) {
   if (!isGameActive() || !canRevealNextHint()) return;
 
   const nextHintNumber = state.revealedHintCount + 1;
   const cost = getNextHintCost();
   state.revealedHintCount = nextHintNumber;
-  applyPenalty("hint", cost, { hintNumber: nextHintNumber });
+  if (cost > 0) applyPenalty("hint", cost, { hintNumber: nextHintNumber });
 
   if (state.score === 0) {
     finishGame("lost");
     return;
   }
 
-  showFeedback("Nouvel indice débloqué.", "neutral");
+  showFeedback(
+    cost > 0 ? `Indice ${nextHintNumber} débloqué. -${cost} points.` : "Premier indice débloqué gratuitement.",
+    "neutral"
+  );
   saveGame();
   render();
+  if (openDialogAfter) openDialog(els.hintDialog);
 }
 
 function canRevealNextHint() {
-  return state.revealedHintCount < Math.min(todayEntry.sortedHints.length, TOTAL_HINTS);
+  return Boolean(todayEntry) && state.revealedHintCount < Math.min(todayEntry.sortedHints.length, TOTAL_HINTS);
 }
 
 function getNextHintCost() {
   return HINT_COSTS[state.revealedHintCount] || 0;
+}
+
+function openHintDialog() {
+  if (!todayEntry || state?.status === "error") return;
+  if (isGameActive() && state.revealedHintCount === 0) {
+    revealNextHint({ openDialogAfter: true });
+    return;
+  }
+  openDialog(els.hintDialog);
 }
 
 function applyPenalty(type, points, extra = {}) {
@@ -501,7 +523,7 @@ function clearSuggestions() {
 
 function render() {
   renderStatus();
-  renderHints();
+  renderHintDialog();
   renderAnswerForm();
   renderActions();
   renderFeedback();
@@ -543,33 +565,50 @@ function renderStatus() {
   }
 }
 
-function renderHints() {
-  if (!els.hintList) return;
-  if (!todayEntry) {
-    els.hintList.innerHTML = "";
+function renderHintDialog() {
+  if (!els.hintDialogContent) return;
+  if (!todayEntry || !state) {
+    els.hintDialogContent.innerHTML = "";
     return;
   }
 
   const visibleHints = todayEntry.sortedHints.slice(0, state.revealedHintCount);
+  const canReveal = isGameActive() && canRevealNextHint();
   const nextHintNumber = state.revealedHintCount + 1;
-  const canPreviewNextHint = state.status === "playing" && nextHintNumber <= TOTAL_HINTS;
-  const visibleCards = visibleHints.map(
-    (hint) => `
-      <li class="hint-card">
-        <p>${escapeHtml(hint.texte)}</p>
-      </li>
-    `
-  );
+  const nextHintCost = getNextHintCost();
 
-  if (canPreviewNextHint) {
-    visibleCards.push(`
-      <li class="hint-card hint-card--locked">
-        <p>Indice ${nextHintNumber} verrouillé · -${getNextHintCost()} points</p>
-      </li>
-    `);
+  if (els.hintTitle) {
+    els.hintTitle.textContent = visibleHints.length ? "Tes indices" : "Premier indice";
   }
 
-  els.hintList.innerHTML = visibleCards.join("");
+  els.hintDialogContent.innerHTML = visibleHints.length
+    ? `<ol class="hint-list">${visibleHints
+        .map(
+          (hint) => `
+            <li class="hint-card">
+              <p>${escapeHtml(hint.texte)}</p>
+            </li>
+          `
+        )
+        .join("")}</ol>`
+    : `<p class="empty-hints">Aucun indice ouvert pour l'instant.</p>`;
+
+  if (els.revealHintButton) {
+    els.revealHintButton.disabled = !canReveal;
+    els.revealHintButton.textContent = canReveal
+      ? nextHintCost > 0
+        ? `Indice ${nextHintNumber} (-${nextHintCost})`
+        : "Premier indice gratuit"
+      : "Tous les indices sont révélés";
+  }
+
+  if (els.hintCostText) {
+    els.hintCostText.textContent = canReveal
+      ? nextHintCost > 0
+        ? `Demander cet indice retirera ${nextHintCost} points.`
+        : "Le premier indice ne retire aucun point."
+      : "Tous les indices disponibles sont affichés.";
+  }
 }
 
 function renderAnswerForm() {
@@ -581,16 +620,15 @@ function renderAnswerForm() {
 
 function renderActions() {
   const active = isGameActive();
-  const canReveal = active && todayEntry && canRevealNextHint();
 
   if (els.nextHintButton) {
-    const cost = getNextHintCost();
-    els.nextHintButton.disabled = !canReveal;
-    els.nextHintButton.textContent = canReveal
-      ? `Indice suivant (-${cost})`
-      : state?.status === "playing"
-        ? "Tous les indices sont révélés"
-        : "Indice terminé";
+    els.nextHintButton.disabled = !active || !todayEntry;
+    els.nextHintButton.textContent =
+      state?.revealedHintCount === 0
+        ? "Indice gratuit"
+        : state?.status === "playing"
+          ? "Indices"
+          : "Indices consultés";
   }
 
   if (els.shareButton) els.shareButton.disabled = state?.status === "playing" || state?.status === "error";
@@ -850,8 +888,22 @@ function openDialog(dialog) {
   if (!dialog) return;
   renderNotebook();
   renderStats();
+  renderHintDialog();
+  if (dialog.open) return;
   if (typeof dialog.showModal === "function") dialog.showModal();
   else dialog.setAttribute("open", "");
+}
+
+function closeHelpDialog() {
+  writeJson(STORAGE_KEYS.firstHelpSeen, true);
+  if (els.helpDialog?.open && typeof els.helpDialog.close === "function") els.helpDialog.close();
+  else els.helpDialog?.removeAttribute("open");
+  els.nextHintButton?.focus();
+}
+
+function showLaunchHelp() {
+  if (state?.status !== "playing" || !els.helpDialog) return;
+  window.requestAnimationFrame(() => openDialog(els.helpDialog));
 }
 
 function showFeedback(message, tone = "neutral") {
@@ -917,7 +969,7 @@ function normalizeAnswer(value) {
 }
 
 function clampHintCount(value) {
-  return Math.min(TOTAL_HINTS, Math.max(1, Math.round(Number(value) || 1)));
+  return Math.min(TOTAL_HINTS, Math.max(0, Math.round(Number(value) || 0)));
 }
 
 function clampScore(value) {
@@ -950,6 +1002,8 @@ function renderGameToText() {
     attempts: state?.attempts || [],
     result: state?.result || null,
     statsApplied: Boolean(state?.statsApplied),
+    helpDialogVisible: Boolean(els.helpDialog?.open),
+    hintDialogVisible: Boolean(els.hintDialog?.open),
     suggestions: currentSuggestions.map((entry) => entry.reponse),
     stats: getStats(),
     dailyRollover: {

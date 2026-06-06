@@ -30,3 +30,7 @@ Original prompt: Ok, c'est parti. Tu peux construire la v1 du jeu.
 - Captures vérifiées : desktop initial, suggestions, erreur + indice, victoire avec fiche découverte, mobile initial.
 - Correction logique : le calcul du jour précédent pour les séries part maintenant du `dateId` actif, afin de respecter le renouvellement quotidien à midi.
 - Vérifications après correction : `npm run check` passe et `npm run test:browser` passe.
+- Itération UI compacte : suppression de l'eyebrow "Métro Mystère", du sous-texte d'intro et du ticket date, réduction du titre, démarrage à 0/5 indice.
+- Itération indices : reprise du principe du Mot à Biloute avec une modale d'indices. Le premier indice est demandé gratuitement, les suivants se débloquent depuis la modale avec leur coût.
+- Itération onboarding : ouverture automatique d'une modale d'aide et de contexte au lancement d'une partie en cours.
+- Vérification UI compacte : `npm run check` OK, `npm run test:browser` OK, captures desktop et mobile inspectées. Le champ de recherche et les actions sont visibles à `scrollY: 0`.

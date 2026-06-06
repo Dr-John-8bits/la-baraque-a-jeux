@@ -141,14 +141,24 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await expect(page).toHaveTitle("Station Mystère");
   await expect(page.getByRole("heading", { name: "Station Mystère", exact: true })).toBeVisible();
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await expect(page.locator("#helpDialog")).toBeVisible();
+  await page.getByRole("button", { name: "Jouer", exact: true }).click();
   const stationInitial = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(stationInitial.dailyRollover.hour).toBe(12);
   expect(stationInitial.dailyRollover.timeZone).toBe("Europe/Paris");
   expect(stationInitial.entry.niveau).toBe("metro");
   expect(stationInitial.status).toBe("playing");
   expect(stationInitial.score).toBe(1000);
-  expect(stationInitial.revealedHintCount).toBe(1);
-  await expect(page.locator("#hintList .hint-card:not(.hint-card--locked)")).toHaveCount(1);
+  expect(stationInitial.revealedHintCount).toBe(0);
+  await expect(page.locator("#hintList")).toHaveCount(0);
+
+  await page.getByRole("button", { name: "Indice gratuit", exact: true }).click();
+  await expect(page.locator("#hintDialog")).toBeVisible();
+  await expect(page.locator("#hintDialog .hint-card")).toHaveCount(1);
+  const stationAfterFreeHint = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(stationAfterFreeHint.score).toBe(1000);
+  expect(stationAfterFreeHint.revealedHintCount).toBe(1);
+  await page.locator("#hintDialog .dialog-actions").getByRole("button", { name: "Fermer" }).click();
 
   const stationInput = page.getByLabel("Rechercher une station");
   await expect(stationInput).toBeVisible();
@@ -162,11 +172,14 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(stationAfterWrong.attempts).toHaveLength(1);
   await expect(page.locator("#feedback")).toContainText("-100 points");
 
-  await page.getByRole("button", { name: /Indice suivant/ }).click();
+  await page.getByRole("button", { name: "Indices", exact: true }).click();
+  await expect(page.locator("#hintDialog")).toBeVisible();
+  await page.locator("#hintDialog").getByRole("button", { name: "Indice 2 (-150)", exact: true }).click();
   const stationAfterHint = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(stationAfterHint.score).toBe(750);
   expect(stationAfterHint.revealedHintCount).toBe(2);
-  await expect(page.locator("#hintList .hint-card:not(.hint-card--locked)")).toHaveCount(2);
+  await expect(page.locator("#hintDialog .hint-card")).toHaveCount(2);
+  await page.locator("#hintDialog .dialog-actions").getByRole("button", { name: "Fermer" }).click();
 
   await stationInput.fill(stationAfterHint.entry.reponse);
   await page.getByRole("button", { name: "Valider", exact: true }).click();
