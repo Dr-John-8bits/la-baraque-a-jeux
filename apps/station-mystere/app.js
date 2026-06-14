@@ -578,10 +578,10 @@ function renderStatus() {
   if (els.mysteryPanel) {
     els.mysteryPanel.classList.toggle("mystery-panel--won", state?.status === "won");
     els.mysteryPanel.classList.toggle("mystery-panel--lost", state?.status === "lost");
-    // « Chaleur » du masque : 0 indice = teal calme, 5 indices = rouge à découvert.
-    els.mysteryPanel.dataset.heat = String(
-      Math.min(TOTAL_HINTS, Math.max(0, state?.revealedHintCount || 0))
-    );
+    // « Chaleur » du masque : monte avec les indices ouverts ET les mauvaises tentatives
+    // (les deux coûtent des points). 0 = teal calme, 5 = rouge à découvert.
+    const heat = (state?.revealedHintCount || 0) + getWrongAnswerCount();
+    els.mysteryPanel.dataset.heat = String(Math.min(TOTAL_HINTS, Math.max(0, heat)));
   }
 
   if (els.mysteryLabel) {
