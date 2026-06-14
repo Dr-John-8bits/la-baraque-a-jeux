@@ -110,15 +110,19 @@ relit avec une mauvaise grille de lecture.
 
 ### Bloc 4 — Débloquer le contenu *(éditorial lourd, sous-lots)*
 
-- **Lot 4.x** — 🔄 *En cours (2026-06-14)* — Lille-Mêle : grilles relues **10 → 25**
-  (cible 30-45). Modèle validé par l'éditeur ; grilles marquées `reviewed` (confiance
-  déléguée + vérification systématique). Audit d'intégrité : **0 problème**.
-  - Depuis la 24 : grilles **non-transport** (quartiers, patrimoine, lieux de culture,
-    douceurs/plats du Nord), sources `ville-lille-*` / `hello-lille` / dictionnaires ch'ti
-    (précédent des grilles prototypes). Générateur dédié (refuse religieux/doublons/source
-    non enregistrée) → a écarté « Gare Saint-Sauveur » (« Saint »).
-  - Règle de curation : **une seule famille gourmande par grille** (éviter l'ambiguïté
-    plats/douceurs/braderie).
+- **Lot 4.x** — ✅ *Fait (2026-06-14)* — Lille-Mêle : grilles relues **10 → 33** —
+  **cible V1 atteinte** (30-45). Audit d'intégrité : **0 problème** sur les 33 reviewed.
+  - Filons : transport/communes (exports Ilévia/MEL) + non-transport (quartiers, patrimoine,
+    parcs, lieux de culture, douceurs/plats du Nord — sources `ville-lille-*`, `hello-lille`,
+    dictionnaires ch'ti, sur le précédent des grilles prototypes).
+  - Production outillée : générateurs + validateurs déterministes (cross-modal, religieux,
+    pureté de ligne M1/M2, tram-only, 16 distincts, sources enregistrées) → impossible de
+    certifier une grille fausse. A écarté en route : « Gare Saint-Sauveur » (religieux),
+    « Lille Europe » / « Wasquehal Pavé de Lille » (cross-modal).
+  - 2 bugs corrigés dans des grilles existantes (correspondances/cross-modal).
+  - Règle de curation : une seule famille gourmande par grille (éviter l'ambiguïté food).
+  - *Reste possible (optionnel) :* monter vers 45 demanderait de nouvelles sources
+    (autres lignes de bus, lieux culturels via recherche web) — pas nécessaire pour la V1.
   - Production outillée : générateur + validateur déterministe (cross-modal, religieux,
     pureté de ligne M1/M2, tram-only, 16 distincts) → impossible de certifier une grille fausse.
   - Auto-rattrapage : une erreur dans ma propre grille 19 (« Wasquehal Pavé De Lille » =

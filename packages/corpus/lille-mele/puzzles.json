@@ -2166,5 +2166,705 @@
         "note": "Des plats salés bien du Nord."
       }
     ]
+  },
+  {
+    "id": "lille-parcs-douceurs-001",
+    "number": 30,
+    "title": "Du jardin à la gourmandise",
+    "intro": "Quatre familles lilloises à démêler.",
+    "finalNote": "Grille bâtie à partir des données ouvertes de la Ville de Lille et de sources éditoriales locales, sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "lille",
+      "quartiers",
+      "nature",
+      "gastronomie"
+    ],
+    "sourceIds": [
+      "banque-chtimi-gastronomie-jeux",
+      "comptoir-flandres-dictionnaire-chti",
+      "hello-lille",
+      "ville-lille-parcs-jardins-data-gouv",
+      "ville-lille-quartiers-data-gouv"
+    ],
+    "bonus": {
+      "question": "La gaufre et le spéculoos sont des douceurs du Nord.",
+      "answer": true,
+      "explanation": "Vrai. La gaufre fourrée et le spéculoos comptent parmi les douceurs emblématiques du Nord."
+    },
+    "groups": [
+      {
+        "id": "quartiers-lille-3",
+        "title": "Quartiers de Lille",
+        "difficulty": "medium",
+        "sourceIds": [
+          "ville-lille-quartiers-data-gouv"
+        ],
+        "items": [
+          "Fives",
+          "Hellemmes",
+          "Lomme",
+          "Wazemmes"
+        ],
+        "note": "Quatre quartiers de Lille (ou communes associées)."
+      },
+      {
+        "id": "parcs-lille-1",
+        "title": "Parcs et jardins",
+        "difficulty": "medium",
+        "sourceIds": [
+          "ville-lille-parcs-jardins-data-gouv"
+        ],
+        "items": [
+          "Jardin botanique Nicolas Boulay",
+          "Jardin des Géants",
+          "Jardin des Plantes",
+          "Jardin de la Treille"
+        ],
+        "note": "Des espaces verts de la métropole."
+      },
+      {
+        "id": "culture-lille-3",
+        "title": "Lieux de culture",
+        "difficulty": "medium",
+        "sourceIds": [
+          "hello-lille"
+        ],
+        "items": [
+          "Palais des Beaux-Arts",
+          "Musée d'Histoire Naturelle",
+          "Le Splendid",
+          "Maison Folie"
+        ],
+        "note": "Des lieux de culture lillois."
+      },
+      {
+        "id": "douceurs-2",
+        "title": "Douceurs du Nord",
+        "difficulty": "tricky",
+        "sourceIds": [
+          "banque-chtimi-gastronomie-jeux",
+          "comptoir-flandres-dictionnaire-chti"
+        ],
+        "items": [
+          "Spéculoos",
+          "Cassonade",
+          "Gaufre",
+          "Tarte au sucre"
+        ],
+        "note": "Des douceurs typiques du Nord."
+      }
+    ]
+  },
+  {
+    "id": "lille-eau-saveurs-001",
+    "number": 31,
+    "title": "Pierres, scènes et saveurs",
+    "intro": "Quatre familles lilloises à démêler.",
+    "finalNote": "Grille bâtie à partir des données ouvertes de la Ville de Lille et de sources éditoriales locales, sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "lille",
+      "patrimoine",
+      "culture",
+      "gastronomie"
+    ],
+    "sourceIds": [
+      "banque-chtimi-gastronomie-jeux",
+      "comptoir-flandres-dictionnaire-chti",
+      "hello-lille",
+      "ville-lille",
+      "ville-lille-monuments-historiques-data-gouv"
+    ],
+    "bonus": {
+      "question": "Le maroilles est un fromage du Nord.",
+      "answer": true,
+      "explanation": "Vrai. Le maroilles est un fromage à pâte molle de l'Avesnois, dans le Nord."
+    },
+    "groups": [
+      {
+        "id": "eau-fortifs-1",
+        "title": "Eau et fortifications",
+        "difficulty": "medium",
+        "sourceIds": [
+          "ville-lille"
+        ],
+        "items": [
+          "Deûle",
+          "Vauban",
+          "Esplanade",
+          "Noble Tour"
+        ],
+        "note": "L'eau et les remparts qui ont façonné Lille."
+      },
+      {
+        "id": "patrimoine-lille-3",
+        "title": "Patrimoine lillois",
+        "difficulty": "hard",
+        "sourceIds": [
+          "ville-lille-monuments-historiques-data-gouv"
+        ],
+        "items": [
+          "Hôtel des Postes",
+          "Hôtel de Madre",
+          "Hôtel de Tenremonde",
+          "Hôtel de Marchiennes"
+        ],
+        "note": "Des hôtels particuliers du patrimoine lillois."
+      },
+      {
+        "id": "culture-lille-4",
+        "title": "Lieux de culture",
+        "difficulty": "medium",
+        "sourceIds": [
+          "hello-lille"
+        ],
+        "items": [
+          "La Piscine",
+          "Le Fresnoy",
+          "LaM",
+          "Tripostal"
+        ],
+        "note": "Des lieux culturels de la métropole."
+      },
+      {
+        "id": "plats-nord-2",
+        "title": "Spécialités du Nord",
+        "difficulty": "tricky",
+        "sourceIds": [
+          "banque-chtimi-gastronomie-jeux",
+          "comptoir-flandres-dictionnaire-chti"
+        ],
+        "items": [
+          "Maroilles",
+          "Mimolette",
+          "Flamiche",
+          "Waterzoï"
+        ],
+        "note": "Fromages et plats bien du Nord."
+      }
+    ]
+  },
+  {
+    "id": "tourcoing-portes-001",
+    "number": 32,
+    "title": "Deux bouts de la ligne 2",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 dessert à la fois Tourcoing et le sud de Lille.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 va de Tourcoing au sud de Lille, en passant par le centre."
+    },
+    "groups": [
+      {
+        "id": "m2-tg",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "C.H. Dron",
+          "Bourgogne",
+          "Pont De Neuville",
+          "Colbert"
+        ],
+        "note": "La ligne 2 côté Tourcoing."
+      },
+      {
+        "id": "m2-pt",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Grand Palais",
+          "Porte De Valenciennes",
+          "Porte De Douai",
+          "Porte D'Arras"
+        ],
+        "note": "La ligne 2 au sud de Lille."
+      },
+      {
+        "id": "co-tq",
+        "title": "Communes du Tourquennois",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Bondues",
+          "Bousbecque",
+          "Comines",
+          "Halluin"
+        ],
+        "note": "Territoire du Tourquennois."
+      },
+      {
+        "id": "co-est",
+        "title": "Communes de l'est",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Anstaing",
+          "Baisieux",
+          "Bouvines",
+          "Chéreng"
+        ],
+        "note": "Territoire Est."
+      }
+    ]
+  },
+  {
+    "id": "mons-croix-001",
+    "number": 33,
+    "title": "De Mons à Croix",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 dessert Mons-en-Barœul et Croix.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 passe par Mons-en-Barœul puis par Croix avant Roubaix."
+    },
+    "groups": [
+      {
+        "id": "m2-mo",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Fort De Mons",
+          "Mairie De Mons",
+          "Mons Sarts",
+          "Les Pres-E. Pisani"
+        ],
+        "note": "La ligne 2 à Mons-en-Barœul."
+      },
+      {
+        "id": "m2-cx",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Alsace",
+          "Mairie De Croix",
+          "Croix Centre",
+          "Ep. Montesquieu"
+        ],
+        "note": "La ligne 2 vers Croix."
+      },
+      {
+        "id": "co-rb",
+        "title": "Communes du Roubaisien",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Croix",
+          "Hem",
+          "Lannoy",
+          "Leers"
+        ],
+        "note": "Territoire Roubaisien."
+      },
+      {
+        "id": "co-arm",
+        "title": "Communes de l'Armentiérois",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Armentières",
+          "Deûlémont",
+          "Erquinghem-Lys",
+          "Frelinghien"
+        ],
+        "note": "Territoire de l'Armentiérois."
+      }
+    ]
+  },
+  {
+    "id": "roubaix-va-001",
+    "number": 34,
+    "title": "D'un campus à l'autre",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 1 mène au campus de Villeneuve-d'Ascq.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 1 dessert la Cité scientifique et les pôles universitaires de Villeneuve-d'Ascq."
+    },
+    "groups": [
+      {
+        "id": "m2-rx",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Roubaix Place",
+          "Roubaix Charles De Gaulle",
+          "Gare Jean Lebas",
+          "Mercure"
+        ],
+        "note": "La ligne 2 à Roubaix."
+      },
+      {
+        "id": "m1-va",
+        "title": "Stations de la ligne 1",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "4 Cantons Stade P. Mauroy",
+          "Cité Scientifique",
+          "Triolo",
+          "Pont De Bois"
+        ],
+        "note": "La ligne 1 à Villeneuve-d'Ascq."
+      },
+      {
+        "id": "co-we",
+        "title": "Communes des Weppes",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Aubers",
+          "Beaucamps-Ligny",
+          "Bois-Grenier",
+          "Don"
+        ],
+        "note": "Territoire des Weppes."
+      },
+      {
+        "id": "co-su",
+        "title": "Communes de la couronne sud",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Allennes-les-Marais",
+          "Annœullin",
+          "Bauvin",
+          "Carnin"
+        ],
+        "note": "Territoire de la couronne Sud."
+      }
+    ]
+  },
+  {
+    "id": "lomme-ouest-001",
+    "number": 35,
+    "title": "Le métro vers l'ouest",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 dessert Lomme et l'ouest de Lille.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 file vers l'ouest, de Lille à Lomme."
+    },
+    "groups": [
+      {
+        "id": "m2-lo",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Pont Superieur",
+          "Maison Des Enfants",
+          "Bourg",
+          "Mitterie"
+        ],
+        "note": "La ligne 2 à Lomme."
+      },
+      {
+        "id": "m2-we",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Montebello",
+          "Cormontaigne",
+          "Port De Lille",
+          "Bois Blancs"
+        ],
+        "note": "La ligne 2 à l'ouest de Lille."
+      },
+      {
+        "id": "co-no",
+        "title": "Communes de la couronne nord",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Capinghem",
+          "La Madeleine",
+          "Lambersart",
+          "Lompret"
+        ],
+        "note": "Territoire de la couronne Nord."
+      },
+      {
+        "id": "co-es2",
+        "title": "Communes de l'est",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Forest-sur-Marque",
+          "Gruson",
+          "Mons-en-Barœul",
+          "Péronne-en-Mélantois"
+        ],
+        "note": "Territoire Est."
+      }
+    ]
+  },
+  {
+    "id": "centre-lille-001",
+    "number": 36,
+    "title": "Au cœur de Lille",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 1 traverse le centre de Lille.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 1 dessert Rihour et République Beaux-Arts, au cœur de Lille."
+    },
+    "groups": [
+      {
+        "id": "m1-ce",
+        "title": "Stations de la ligne 1",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "République Beaux-Arts",
+          "Gambetta",
+          "Wazemmes",
+          "Rihour"
+        ],
+        "note": "La ligne 1 au centre de Lille."
+      },
+      {
+        "id": "m1-he",
+        "title": "Stations de la ligne 1",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Square Flandres",
+          "Mairie D'Hellemmes",
+          "Marbrerie",
+          "Madeleine Caulier"
+        ],
+        "note": "La ligne 1 vers Hellemmes."
+      },
+      {
+        "id": "co-tq2",
+        "title": "Communes du Tourquennois",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Linselles",
+          "Mouvaux",
+          "Neuville-en-Ferrain",
+          "Roncq"
+        ],
+        "note": "Territoire du Tourquennois."
+      },
+      {
+        "id": "co-su2",
+        "title": "Communes de la couronne sud",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Emmerin",
+          "Faches-Thumesnil",
+          "Fretin",
+          "Houplin-Ancoisne"
+        ],
+        "note": "Territoire de la couronne Sud."
+      }
+    ]
+  },
+  {
+    "id": "communes-quatre-002",
+    "number": 37,
+    "title": "La métropole en quatre",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "Roubaix et Tourcoing sont desservies par le métro.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 du métro dessert Roubaix et Tourcoing."
+    },
+    "groups": [
+      {
+        "id": "co-me1",
+        "title": "Communes desservies par le métro",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Croix",
+          "Lambersart",
+          "Lezennes",
+          "Lille"
+        ],
+        "note": "Des communes desservies par le métro."
+      },
+      {
+        "id": "co-me2",
+        "title": "Communes desservies par le métro",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Mons-en-Barœul",
+          "Roubaix",
+          "Tourcoing",
+          "Villeneuve-d'Ascq"
+        ],
+        "note": "De grandes communes desservies par le métro."
+      },
+      {
+        "id": "co-no2",
+        "title": "Communes de la couronne nord",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Marcq-en-Barœul",
+          "Marquette-lez-Lille",
+          "Pérenchies",
+          "Prémesques"
+        ],
+        "note": "Territoire de la couronne Nord."
+      },
+      {
+        "id": "co-rb2",
+        "title": "Communes du Roubaisien",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Lys-lez-Lannoy",
+          "Toufflers",
+          "Wasquehal",
+          "Hem"
+        ],
+        "note": "Territoire Roubaisien."
+      }
+    ]
   }
 ]
