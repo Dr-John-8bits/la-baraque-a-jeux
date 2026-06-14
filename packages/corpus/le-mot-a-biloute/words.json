@@ -1229,5 +1229,499 @@
       "title": "Cafiot",
       "text": "Un cafiot, c'est un café léger, un peu clairet. Le mot se dit avec un sourire pour le jus du matin qu'on aurait pu faire plus serré."
     }
+  },
+  {
+    "id": "greine",
+    "answer": "GREINE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "La tête de celui à qui on a refusé une deuxième part.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "expression"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Une grimace, une mine boudeuse.",
+      "« Faire la greine », c'est bouder, faire la moue."
+    ],
+    "acceptedAnswers": ["GREINE"],
+    "bonus": {
+      "title": "Greine",
+      "text": "Faire la greine, c'est bouder, tirer la tête. La mine de travers de celui qui n'a pas eu ce qu'il voulait."
+    }
+  },
+  {
+    "id": "maronne",
+    "answer": "MARONNE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Ce qu'on enfile sur les jambes avant de sortir.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "vetement"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Un pantalon, une culotte.",
+      "« Remonte tes maronnes ! » : tes pantalons."
+    ],
+    "acceptedAnswers": ["MARONNE"],
+    "bonus": {
+      "title": "Maronne",
+      "text": "Une maronne (ou marone), c'est le pantalon. « Remonte tes maronnes » s'entend encore dans les cours d'école du Nord."
+    }
+  },
+  {
+    "id": "canchon",
+    "answer": "CANCHON",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Le P'tit Quinquin en est la plus célèbre, version berceuse.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "musique"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Une chanson, à la prononciation du Nord.",
+      "Le « P'tit Quinquin » est une canchon dormoire, une berceuse."
+    ],
+    "acceptedAnswers": ["CANCHON"],
+    "bonus": {
+      "title": "Canchon",
+      "text": "Une canchon, c'est une chanson en parler du Nord. La plus connue, le « P'tit Quinquin », est une canchon dormoire : une berceuse lilloise."
+    }
+  },
+  {
+    "id": "frichti",
+    "answer": "FRICHTI",
+    "category": "Cuisine du Nord",
+    "starterHint": "Le petit repas vite fait, sans cérémonie.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["gastronomie", "quotidien"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Un repas préparé à la va-vite.",
+      "Cousin du fricot, mais encore plus express."
+    ],
+    "acceptedAnswers": ["FRICHTI"],
+    "bonus": {
+      "title": "Frichti",
+      "text": "Un frichti, c'est un repas vite préparé, sans façon. On se fait un frichti quand l'estomac n'attend pas."
+    }
+  },
+  {
+    "id": "detouiller",
+    "answer": "DETOUILLER",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Ce qu'on fait à la pelote de laine après le passage du chat.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "quotidien"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Démêler, défaire ce qui est emmêlé.",
+      "L'inverse de « touiller » : on remet de l'ordre."
+    ],
+    "acceptedAnswers": ["DETOUILLER"],
+    "bonus": {
+      "title": "Détouiller",
+      "text": "Détouiller, c'est démêler, défaire les nœuds. Là où « touiller » mélange, « détouiller » remet de l'ordre."
+    }
+  },
+  {
+    "id": "chirloute",
+    "answer": "CHIRLOUTE",
+    "category": "Cuisine du Nord",
+    "starterHint": "Le jus brunâtre qu'on n'ose pas appeler café.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["gastronomie", "boisson"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Boisson à base de chicorée.",
+      "Souvent dit, moqueur, d'un café raté."
+    ],
+    "acceptedAnswers": ["CHIRLOUTE"],
+    "bonus": {
+      "title": "Chirloute",
+      "text": "La chirloute, c'est la chicorée, ou par moquerie un café trop léger. Le Nord, grand amateur de chicorée, sait de quoi il parle."
+    }
+  },
+  {
+    "id": "roubaix",
+    "answer": "ROUBAIX",
+    "category": "Métropole lilloise",
+    "starterHint": "La cité textile au bout de « l'Enfer du Nord ».",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Grande voisine de Lille, capitale du textile.",
+      "Sa Piscine est devenue un musée ; sa course, une légende du vélo."
+    ],
+    "acceptedAnswers": ["ROUBAIX"],
+    "bonus": {
+      "title": "Roubaix",
+      "text": "Roubaix, c'est la ville du textile, le musée de La Piscine installé dans une ancienne piscine art déco, et l'arrivée mythique de Paris-Roubaix, « l'Enfer du Nord »."
+    }
+  },
+  {
+    "id": "tourcoing",
+    "answer": "TOURCOING",
+    "category": "Métropole lilloise",
+    "starterHint": "La jumelle de Roubaix, filée du même fil.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Ville textile voisine de Roubaix.",
+      "Son musée, le MUba, veille sur les beaux-arts."
+    ],
+    "acceptedAnswers": ["TOURCOING"],
+    "bonus": {
+      "title": "Tourcoing",
+      "text": "Tourcoing, longtemps filée et tissée comme sa voisine Roubaix, garde de son passé textile un riche patrimoine et le musée des beaux-arts MUba."
+    }
+  },
+  {
+    "id": "armentieres",
+    "answer": "ARMENTIERES",
+    "category": "Métropole lilloise",
+    "starterHint": "Une demoiselle l'a rendue célèbre dans une chanson de soldats.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Ville de la Lys, au nord de la métropole.",
+      "« Mademoiselle from Armentières » : la chanson des poilus."
+    ],
+    "acceptedAnswers": ["ARMENTIERES"],
+    "bonus": {
+      "title": "Armentières",
+      "text": "Armentières, sur la Lys, fut une cité textile. La Grande Guerre l'a immortalisée dans la chanson « Mademoiselle from Armentières »."
+    }
+  },
+  {
+    "id": "bouvines",
+    "answer": "BOUVINES",
+    "category": "Métropole lilloise",
+    "starterHint": "En 1214, un roi de France y gagna une bataille décisive.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "histoire"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Petit village à l'est de la métropole.",
+      "Sa bataille de 1214 est restée dans tous les manuels."
+    ],
+    "acceptedAnswers": ["BOUVINES"],
+    "bonus": {
+      "title": "Bouvines",
+      "text": "Bouvines, paisible village aujourd'hui, a donné son nom à la bataille de 1214 où Philippe Auguste l'emporta. L'un des grands souvenirs d'histoire de la région."
+    }
+  },
+  {
+    "id": "comines",
+    "answer": "COMINES",
+    "category": "Métropole lilloise",
+    "starterHint": "Une ville coupée en deux par une frontière et une rivière.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Sur la Lys, à cheval sur la frontière belge.",
+      "Sa fête des Louches anime le bord de l'eau."
+    ],
+    "acceptedAnswers": ["COMINES"],
+    "bonus": {
+      "title": "Comines",
+      "text": "Comines est partagée entre la France et la Belgique par la Lys. Sa fête des Louches, héritée du Moyen Âge, reste un grand rendez-vous local."
+    }
+  },
+  {
+    "id": "lezennes",
+    "answer": "LEZENNES",
+    "category": "Métropole lilloise",
+    "starterHint": "Sous ses pieds, les carrières qui ont bâti le Vieux-Lille.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "histoire"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Commune au sud-est de Lille.",
+      "Ses « catiches » souterraines ont fourni la pierre de Lille."
+    ],
+    "acceptedAnswers": ["LEZENNES"],
+    "bonus": {
+      "title": "Lezennes",
+      "text": "Sous Lezennes courent les « catiches », d'anciennes carrières souterraines d'où l'on a extrait la pierre qui a bâti une partie du Vieux-Lille."
+    }
+  },
+  {
+    "id": "wattrelos",
+    "answer": "WATTRELOS",
+    "category": "Métropole lilloise",
+    "starterHint": "Voisine de Roubaix, on la surnomme la ville aux mille cheminées.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Commune du versant nord-est de la métropole.",
+      "Son carnaval et son musée des traditions populaires l'animent."
+    ],
+    "acceptedAnswers": ["WATTRELOS"],
+    "bonus": {
+      "title": "Wattrelos",
+      "text": "Wattrelos, longtemps industrielle, a gardé le surnom de « ville aux mille cheminées ». Son carnaval et son musée des arts et traditions populaires entretiennent la mémoire."
+    }
+  },
+  {
+    "id": "lambersart",
+    "answer": "LAMBERSART",
+    "category": "Métropole lilloise",
+    "starterHint": "La voisine résidentielle de Lille, le long de la Deûle.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Commune cossue à l'ouest de Lille.",
+      "Son Bois de Boulogne longe les berges de la Deûle."
+    ],
+    "acceptedAnswers": ["LAMBERSART"],
+    "bonus": {
+      "title": "Lambersart",
+      "text": "Lambersart, voisine résidentielle de Lille, déroule ses avenues et son Bois de Boulogne le long de la Deûle."
+    }
+  },
+  {
+    "id": "vauban",
+    "answer": "VAUBAN",
+    "category": "Quartier lillois",
+    "starterHint": "Le quartier qui porte le nom du bâtisseur de la Citadelle.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["quartier", "lille"],
+    "sourceIds": ["ville-lille-quartiers-data-gouv"],
+    "hints": [
+      "Quartier de l'ouest lillois, côté Citadelle.",
+      "Il doit son nom à l'ingénieur militaire de Louis XIV."
+    ],
+    "acceptedAnswers": ["VAUBAN"],
+    "bonus": {
+      "title": "Vauban",
+      "text": "Le quartier Vauban-Esquermes borde la Citadelle de Lille, chef-d'œuvre de l'ingénieur Vauban surnommé la « Reine des citadelles »."
+    }
+  },
+  {
+    "id": "moulins",
+    "answer": "MOULINS",
+    "category": "Quartier lillois",
+    "starterHint": "Le quartier étudiant qui doit son nom aux moulins d'autrefois.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["quartier", "lille"],
+    "sourceIds": ["ville-lille-quartiers-data-gouv"],
+    "hints": [
+      "Quartier du sud de Lille.",
+      "Universités et facultés y donnent le ton aujourd'hui."
+    ],
+    "acceptedAnswers": ["MOULINS"],
+    "bonus": {
+      "title": "Moulins",
+      "text": "Le quartier Moulins, qui tient son nom des moulins d'antan, est aujourd'hui un quartier étudiant marqué par les facultés et la vie de campus."
+    }
+  },
+  {
+    "id": "halluin",
+    "answer": "HALLUIN",
+    "category": "Métropole lilloise",
+    "starterHint": "Tout au nord, collée à la frontière belge.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Commune frontalière sur la Lys.",
+      "Longtemps réputée pour son tabac et ses cigares."
+    ],
+    "acceptedAnswers": ["HALLUIN"],
+    "bonus": {
+      "title": "Halluin",
+      "text": "Halluin, tout au nord de la métropole, colle à la frontière belge. La ville fut longtemps un grand centre du tabac et de la cigarette."
+    }
+  },
+  {
+    "id": "bondues",
+    "answer": "BONDUES",
+    "category": "Métropole lilloise",
+    "starterHint": "Commune verte du nord, connue pour son château et son golf.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Commune résidentielle au nord de la métropole.",
+      "Son château du Vert-Bois abrite une fondation d'art."
+    ],
+    "acceptedAnswers": ["BONDUES"],
+    "bonus": {
+      "title": "Bondues",
+      "text": "Bondues, commune verte du nord de la métropole, est connue pour son golf et le château du Vert-Bois, qui accueille une fondation et des collections d'art."
+    }
+  },
+  {
+    "id": "wambrechies",
+    "answer": "WAMBRECHIES",
+    "category": "Métropole lilloise",
+    "starterHint": "Au nord de Lille, on y distille le genièvre depuis deux siècles.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "biere"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Commune sur la Deûle, au nord de Lille.",
+      "Sa distillerie de genièvre est l'une des plus anciennes de France."
+    ],
+    "acceptedAnswers": ["WAMBRECHIES"],
+    "bonus": {
+      "title": "Wambrechies",
+      "text": "À Wambrechies, sur la Deûle, la distillerie Claeyssens produit du genièvre depuis 1817. C'est l'une des plus vieilles distilleries de France."
+    }
+  },
+  {
+    "id": "lannoy",
+    "answer": "LANNOY",
+    "category": "Métropole lilloise",
+    "starterHint": "Minuscule sur la carte : l'une des plus petites de France.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Petite commune coincée près de Roubaix.",
+      "Par sa superficie, l'une des plus petites communes de France."
+    ],
+    "acceptedAnswers": ["LANNOY"],
+    "bonus": {
+      "title": "Lannoy",
+      "text": "Lannoy, près de Roubaix, est l'une des plus petites communes de France par sa superficie. Quelques rues suffisent à en faire le tour."
+    }
+  },
+  {
+    "id": "lesquin",
+    "answer": "LESQUIN",
+    "category": "Métropole lilloise",
+    "starterHint": "Quand on atterrit près de Lille, c'est souvent ici.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["metropole", "ville"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Commune au sud-est de la métropole.",
+      "Elle accueille l'aéroport de Lille."
+    ],
+    "acceptedAnswers": ["LESQUIN"],
+    "bonus": {
+      "title": "Lesquin",
+      "text": "Lesquin, au sud-est de la métropole, accueille l'aéroport de Lille (Lille-Lesquin), la porte d'entrée aérienne de la région."
+    }
+  },
+  {
+    "id": "citadelle",
+    "answer": "CITADELLE",
+    "category": "Patrimoine",
+    "starterHint": "L'étoile à cinq branches que Vauban a posée sur Lille.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["patrimoine", "lille"],
+    "sourceIds": ["ville-lille-monuments-historiques-data-gouv"],
+    "hints": [
+      "Forteresse en étoile, à l'ouest de Lille.",
+      "Vauban l'a surnommée la « Reine des citadelles »."
+    ],
+    "acceptedAnswers": ["CITADELLE"],
+    "bonus": {
+      "title": "Citadelle",
+      "text": "La Citadelle de Lille, bâtie par Vauban vers 1670 en étoile à cinq branches, fut surnommée la « Reine des citadelles ». Elle veille sur le Bois de Boulogne lillois."
+    }
+  },
+  {
+    "id": "fromelles",
+    "answer": "FROMELLES",
+    "category": "Métropole lilloise",
+    "starterHint": "Un nom gravé dans la mémoire de la Grande Guerre.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "histoire"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Village des Weppes, à l'ouest de la métropole.",
+      "Sa bataille de 1916 et son mémorial australien y sont gardés en mémoire."
+    ],
+    "acceptedAnswers": ["FROMELLES"],
+    "bonus": {
+      "title": "Fromelles",
+      "text": "Fromelles, village des Weppes, garde la mémoire d'une dure bataille de 1916. Un cimetière et un mémorial y honorent notamment les soldats australiens."
+    }
+  },
+  {
+    "id": "seclin",
+    "answer": "SECLIN",
+    "category": "Métropole lilloise",
+    "starterHint": "Au sud, un fort du XIXe siècle veille encore.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["metropole", "histoire"],
+    "sourceIds": ["mel-communes-datamel"],
+    "hints": [
+      "Commune du sud de la métropole.",
+      "Son fort, du système Séré de Rivières, se visite."
+    ],
+    "acceptedAnswers": ["SECLIN"],
+    "bonus": {
+      "title": "Seclin",
+      "text": "Seclin, au sud de la métropole, conserve son Fort, bâti au XIXe siècle dans le système Séré de Rivières et aujourd'hui ouvert à la visite."
+    }
+  },
+  {
+    "id": "hellemmes",
+    "answer": "HELLEMMES",
+    "category": "Métropole lilloise",
+    "starterHint": "Petite commune avalée par Lille, terre de cheminots.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["metropole", "histoire"],
+    "sourceIds": ["ville-lille-quartiers-data-gouv"],
+    "hints": [
+      "Commune associée à Lille, à l'est.",
+      "Ses ateliers ferroviaires ont marqué son histoire."
+    ],
+    "acceptedAnswers": ["HELLEMMES"],
+    "bonus": {
+      "title": "Hellemmes",
+      "text": "Hellemmes, commune associée à Lille depuis 1977, doit beaucoup au rail : ses ateliers ferroviaires ont longtemps fait battre son cœur."
+    }
+  },
+  {
+    "id": "lomme",
+    "answer": "LOMME",
+    "category": "Métropole lilloise",
+    "starterHint": "Côté ouest de Lille, la cité-jardin des cheminots.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["metropole", "histoire"],
+    "sourceIds": ["ville-lille-quartiers-data-gouv"],
+    "hints": [
+      "Commune associée à Lille, à l'ouest.",
+      "Son quartier de la Délivrance fut bâti pour les cheminots."
+    ],
+    "acceptedAnswers": ["LOMME"],
+    "bonus": {
+      "title": "Lomme",
+      "text": "Lomme, commune associée à Lille, abrite la cité de la Délivrance, une cité-jardin construite au début du XXe siècle pour les cheminots de la gare de triage."
+    }
   }
 ]
