@@ -18,6 +18,7 @@ const CACHE = `labaj-${VERSION}`;
 const CORE = [
   "./",
   "./blog.html",
+  "./manifest.webmanifest",
   "./packages/ui/tokens.css",
   "./packages/ui/base.css",
   "./packages/ui/site-nav.css",
@@ -25,6 +26,7 @@ const CORE = [
   "./packages/ui/about-dialog.js",
   "./packages/ui/register-sw.js",
   "./packages/ui/portal-hub.js",
+  "./packages/ui/portal-calepin.js",
   "./packages/game-utils/daily.js",
   "./packages/game-utils/fetch-json.js",
   "./packages/game-utils/markdown.js",

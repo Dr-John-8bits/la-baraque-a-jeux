@@ -296,3 +296,257 @@ body.labaj-site {
     padding: 12px;
   }
 }
+
+/* ===== Mon calepin (modale stats + heatmap + jalons) ===== */
+.calepin-dialog {
+  width: min(560px, calc(100% - 24px));
+  max-height: min(82svh, 760px);
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--labaj-ink);
+}
+
+.calepin-dialog::backdrop {
+  background: rgba(7, 27, 49, 0.42);
+  backdrop-filter: blur(8px);
+}
+
+.calepin-dialog__panel {
+  max-height: min(82svh, 760px);
+  overflow: auto;
+  display: grid;
+  gap: 14px;
+  border: 1px solid var(--labaj-line);
+  border-radius: var(--labaj-radius);
+  padding: 16px;
+  background: var(--labaj-surface);
+  box-shadow: var(--labaj-shadow);
+}
+
+.calepin-dialog__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.calepin-dialog__top h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.calepin-dialog__close {
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  border: var(--labaj-border-strong);
+  border-radius: var(--labaj-radius);
+  box-shadow: var(--labaj-shadow-hard-sm);
+  background: var(--labaj-gold);
+  color: var(--labaj-ink);
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.calepin-lead {
+  margin: 0;
+  font-weight: 850;
+}
+
+.calepin-section {
+  display: grid;
+  gap: 8px;
+}
+
+.calepin-section h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.calepin-section__sub {
+  color: var(--labaj-muted);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.calepin-games {
+  display: grid;
+  gap: 10px;
+}
+
+.calepin-game {
+  border: 1px solid var(--labaj-line);
+  border-left: 5px solid var(--accent, var(--labaj-ink));
+  border-radius: var(--labaj-radius);
+  padding: 10px 12px;
+}
+
+.calepin-game h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.calepin-game__today {
+  color: var(--labaj-green);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.calepin-game__stats {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+  gap: 8px;
+}
+
+.calepin-game__stats dt {
+  color: var(--labaj-muted);
+  font-size: 0.68rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.calepin-game__stats dd {
+  margin: 2px 0 0;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+
+.heatmap {
+  display: grid;
+  grid-template-rows: repeat(7, 13px);
+  grid-auto-flow: column;
+  grid-auto-columns: 13px;
+  gap: 3px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.heatmap__cell {
+  border-radius: 3px;
+  background: var(--labaj-line);
+}
+
+.heatmap__cell--blank {
+  background: transparent;
+}
+
+.heatmap__cell[data-level="1"],
+.heatmap__legend i[data-level="1"] {
+  background: color-mix(in srgb, var(--labaj-green), white 62%);
+}
+.heatmap__cell[data-level="2"],
+.heatmap__legend i[data-level="2"] {
+  background: color-mix(in srgb, var(--labaj-green), white 30%);
+}
+.heatmap__cell[data-level="3"],
+.heatmap__legend i[data-level="3"] {
+  background: var(--labaj-green);
+}
+
+.heatmap__legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: var(--labaj-muted);
+  font-size: 0.72rem;
+}
+
+.heatmap__legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--labaj-line);
+}
+
+.calepin-badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.calepin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 2px solid var(--labaj-line);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 0.82rem;
+  font-weight: 850;
+  color: var(--labaj-muted);
+  opacity: 0.55;
+}
+
+.calepin-badge.is-earned {
+  border-color: var(--labaj-ink);
+  background: color-mix(in srgb, var(--labaj-gold), white 60%);
+  color: var(--labaj-ink);
+  opacity: 1;
+}
+
+/* ===== Célébration 3/3 ===== */
+.celebration {
+  position: fixed;
+  left: 50%;
+  top: 16px;
+  z-index: 50;
+  max-width: min(520px, calc(100% - 24px));
+  margin: 0;
+  border: var(--labaj-border-strong);
+  border-radius: var(--labaj-radius);
+  box-shadow: var(--labaj-shadow-hard);
+  padding: 12px 16px;
+  background: var(--labaj-gold);
+  color: var(--labaj-ink);
+  font-weight: 900;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-18px);
+  transition:
+    opacity 320ms ease,
+    transform 320ms ease;
+}
+
+.celebration.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.celebration[hidden] {
+  display: none;
+}
+
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-layer i {
+  position: absolute;
+  top: -14px;
+  width: 9px;
+  height: 14px;
+  border-radius: 2px;
+  animation: confetti-fall 2700ms linear forwards;
+}
+
+@keyframes confetti-fall {
+  to {
+    transform: translateY(104vh) rotate(560deg);
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dr-john-8bits.github.io/la-baraque-a-jeux/sitemap.xml

@@ -14,8 +14,12 @@
       property="og:description"
       content="Des mini-jeux lillois à lancer en un geste : Le mot à Biloute, Lille-Mêle, Biloute · Bière · Braderie et Station Mystère."
     />
-    <meta property="og:image" content="assets/brand/og-image.png" />
+    <meta property="og:image" content="https://dr-john-8bits.github.io/la-baraque-a-jeux/assets/brand/og-image.png" />
+    <meta property="og:url" content="https://dr-john-8bits.github.io/la-baraque-a-jeux/" />
+    <meta name="twitter:image" content="https://dr-john-8bits.github.io/la-baraque-a-jeux/assets/brand/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>La baraque à jeux</title>
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" type="image/png" href="assets/brand/favicon-48.png" />
     <link
       rel="apple-touch-icon"
@@ -57,6 +61,7 @@
 
         <div class="labaj-links">
           <a class="labaj-link labaj-link--home" href="./" aria-current="page">Accueil</a>
+          <button class="labaj-link" type="button" id="calepinButton">Calepin</button>
           <a class="labaj-link" href="blog.html">Blog</a>
           <button class="labaj-link" type="button" data-about-trigger>À propos</button>
         </div>
@@ -93,6 +98,19 @@
           </a>
 
           <a
+            class="game-card game-card--station"
+            href="apps/station-mystere/"
+            aria-label="Ouvrir Station Mystère"
+          >
+            <span class="game-card__top">
+              <span class="game-card__tag">Métro</span>
+              <span class="game-card__action" aria-hidden="true">Jouer</span>
+            </span>
+            <strong>Station Mystère</strong>
+            <span>Devine la station de métro lilloise du jour à partir d'indices.</span>
+          </a>
+
+          <a
             class="game-card game-card--links"
             href="apps/lille-mele/"
             aria-label="Ouvrir Lille-Mêle"
@@ -117,19 +135,6 @@
             <strong>Biloute · Bière · Braderie</strong>
             <span>Affronte l'ordinateur dans le triangle le plus lillois du quartier.</span>
           </a>
-
-          <a
-            class="game-card game-card--station"
-            href="apps/station-mystere/"
-            aria-label="Ouvrir Station Mystère"
-          >
-            <span class="game-card__top">
-              <span class="game-card__tag">Métro</span>
-              <span class="game-card__action" aria-hidden="true">Jouer</span>
-            </span>
-            <strong>Station Mystère</strong>
-            <span>Devine la station de métro lilloise du jour à partir d'indices.</span>
-          </a>
         </div>
       </section>
 
@@ -138,9 +143,22 @@
       <p>La baraque à jeux par Dr. John</p>
     </footer>
 
+    <div class="celebration" id="celebration" role="status" aria-live="polite" hidden></div>
+
+    <dialog class="calepin-dialog" id="calepinDialog" aria-labelledby="calepinTitle">
+      <div class="calepin-dialog__panel">
+        <div class="calepin-dialog__top">
+          <h2 id="calepinTitle">Mon calepin</h2>
+          <button class="calepin-dialog__close" type="button" data-calepin-close aria-label="Fermer le calepin">✕</button>
+        </div>
+        <div id="calepinContent"></div>
+      </div>
+    </dialog>
+
     <script type="module" src="packages/ui/about-dialog.js"></script>
     <script type="module" src="packages/ui/register-sw.js"></script>
     <script type="module" src="packages/ui/portal-hub.js"></script>
+    <script type="module" src="packages/ui/portal-calepin.js"></script>
     <script>
       const gamePrompts = {
         lundi: {
