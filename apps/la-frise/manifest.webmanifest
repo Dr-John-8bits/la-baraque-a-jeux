@@ -1,0 +1,23 @@
+{
+  "name": "La Frise du Nord",
+  "short_name": "La Frise",
+  "description": "Remets dans l'ordre des faits de l'histoire et du patrimoine des Hauts-de-France.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fbf7ef",
+  "theme_color": "#071b31",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "../../assets/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../../assets/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

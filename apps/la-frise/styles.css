@@ -1,0 +1,38 @@
+/*
+ * La Frise du Nord — styles.
+ * SCAFFOLDING : juste la coquille centrée. Tout le reste est à habiller dans
+ * l'identité « chunky » du site (bordures var(--labaj-border-strong), ombres
+ * var(--labaj-shadow-hard), tricolore, crème/marine). Cf. specifications.md §6.
+ */
+body.frise-page {
+  min-height: 100svh;
+  background:
+    linear-gradient(180deg, rgba(243, 198, 66, 0.22), transparent 260px),
+    var(--labaj-paper);
+}
+
+.frise-game {
+  width: min(720px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 12px 0 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.frise-intro h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 7vw, 3.15rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.frise-instruction {
+  margin: 4px 0 0;
+  color: var(--labaj-muted);
+  font-weight: 800;
+}
+
+/* TODO : .frise-cards (cartes à ordonner, chunky, avec poignée glisser + flèches
+   monter/descendre accessibles au clavier), feedback bien/mal placé après validation,
+   .frise-reveal (dates + fiches), .next-frise-countdown — réutiliser les patterns
+   de Lille-Mêle (feedback) et Station (fiche révélée). */

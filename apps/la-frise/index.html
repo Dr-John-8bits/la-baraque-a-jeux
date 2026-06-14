@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="La Frise du Nord : remets dans l'ordre des faits de l'histoire et du patrimoine des Hauts-de-France."
+    />
+    <meta name="theme-color" content="#071b31" />
+    <title>La Frise du Nord</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="../../assets/brand/favicon-48.png" />
+    <link rel="apple-touch-icon" href="../../assets/brand/favicon-180.png" />
+    <link
+      rel="preload"
+      href="../../assets/fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../../packages/ui/tokens.css" />
+    <link rel="stylesheet" href="../../packages/ui/base.css" />
+    <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- TODO (au branchement) : og:title/type/description/image absolus + twitter:card, comme les autres jeux. -->
+  </head>
+  <body class="frise-page">
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
+          <picture class="labaj-brand__logo">
+            <source srcset="../../assets/brand/la-baraque-a-jeux-lille.webp" type="image/webp" />
+            <img src="../../assets/brand/la-baraque-a-jeux-lille-logo.png" alt="" width="48" height="48" />
+          </picture>
+          <span class="labaj-brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Accueil</span>
+          </span>
+        </a>
+        <div class="labaj-links">
+          <a class="labaj-link labaj-link--home" href="../../">Accueil</a>
+          <a class="labaj-link" href="../../blog.html">Blog</a>
+          <button class="labaj-link" type="button" data-about-trigger>À propos</button>
+        </div>
+      </nav>
+    </header>
+
+    <!--
+      SCAFFOLDING — squelette à habiller (voir specifications.md §6).
+      Variante A (recommandée) : pile de cartes à ordonner du plus ancien au plus récent.
+      Les id sont des ancres proposées pour app.js ; à ajuster librement.
+    -->
+    <main class="frise-game" aria-live="polite">
+      <section class="frise-intro">
+        <p class="eyebrow">Chronologie · Hauts-de-France</p>
+        <h1>La Frise du Nord</h1>
+        <p class="frise-instruction" id="instruction">Remets les faits dans l'ordre, du plus ancien au plus récent.</p>
+      </section>
+
+      <!-- Pile de cartes à ordonner (glisser-déposer ou flèches monter/descendre) — TODO -->
+      <ol class="frise-cards" id="cardList" aria-label="Faits à ordonner"></ol>
+
+      <div class="frise-actions">
+        <button type="button" id="validateButton">Valider</button>
+      </div>
+
+      <!-- Révélation : vraies dates + fiches (blurb + source) — TODO -->
+      <section class="frise-reveal" id="revealPanel" hidden></section>
+
+      <p class="yesterday-line" id="yesterdayLine"></p>
+      <p class="next-frise-countdown" id="nextFriseCountdown"></p>
+    </main>
+
+    <script type="module" src="../../packages/ui/about-dialog.js"></script>
+    <script type="module" src="../../packages/ui/register-sw.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

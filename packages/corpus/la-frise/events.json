@@ -1,0 +1,79 @@
+{
+  "description": "Faits datés du patrimoine et de l'histoire des Hauts-de-France pour le jeu « La Frise du Nord ». CORPUS-GRAINE : 8 faits de démonstration — à étendre à ~50-100, chacun sourcé (cf. specifications.md §3).",
+  "epochId": "2026-01-01",
+  "status": "seed",
+  "events": [
+    {
+      "id": "bataille-bouvines",
+      "label": "La bataille de Bouvines",
+      "year": 1214,
+      "precision": "an",
+      "category": "histoire",
+      "blurb": "Philippe Auguste y écrase une coalition ; victoire fondatrice, à Bouvines près de Lille.",
+      "sourceIds": ["wikipedia-a-sourcer"]
+    },
+    {
+      "id": "vieille-bourse-lille",
+      "label": "La Vieille Bourse de Lille",
+      "year": 1653,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Joyau de l'architecture flamande, bâtie quand Lille était encore sous administration espagnole.",
+      "sourceIds": ["wikipedia-a-sourcer"]
+    },
+    {
+      "id": "citadelle-vauban-lille",
+      "label": "La Citadelle de Lille (Vauban)",
+      "year": 1667,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Vauban entame la « reine des citadelles » après le rattachement de Lille à la France.",
+      "sourceIds": ["wikipedia-a-sourcer"]
+    },
+    {
+      "id": "mongy-tramway",
+      "label": "Le Mongy (tramway Lille–Roubaix–Tourcoing)",
+      "year": 1909,
+      "precision": "an",
+      "category": "transport",
+      "blurb": "Mise en service du tramway interurbain, surnommé d'après l'ingénieur Alfred Mongy.",
+      "sourceIds": ["wikipedia-a-sourcer"]
+    },
+    {
+      "id": "beffroi-hotel-ville-lille",
+      "label": "Le beffroi de l'hôtel de ville de Lille",
+      "year": 1932,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "104 m, classé à l'UNESCO : le plus haut beffroi civil d'Europe.",
+      "sourceIds": ["wikipedia-a-sourcer"]
+    },
+    {
+      "id": "metro-val-lille",
+      "label": "Le métro VAL de Lille",
+      "year": 1983,
+      "precision": "an",
+      "category": "transport",
+      "blurb": "Premier métro entièrement automatique au monde.",
+      "sourceIds": ["wikipedia-a-sourcer"]
+    },
+    {
+      "id": "euralille",
+      "label": "Le quartier d'affaires Euralille",
+      "year": 1994,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Conçu autour de la gare TGV Lille-Europe, sous la houlette de Rem Koolhaas.",
+      "sourceIds": ["wikipedia-a-sourcer"]
+    },
+    {
+      "id": "louvre-lens",
+      "label": "Le Louvre-Lens",
+      "year": 2012,
+      "precision": "an",
+      "category": "culture",
+      "blurb": "Une antenne du Louvre sur une ancienne fosse minière, à Lens.",
+      "sourceIds": ["wikipedia-a-sourcer"]
+    }
+  ]
+}
