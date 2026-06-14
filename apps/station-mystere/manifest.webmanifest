@@ -1,7 +1,7 @@
 {
-  "name": "Biloute · Bière · Braderie",
-  "short_name": "BBB",
-  "description": "Le ch’tifoumi lillois où tout finit dans la foule, la mousse ou la mauvaise foi.",
+  "name": "Station Mystère",
+  "short_name": "Station",
+  "description": "Devine chaque jour la station de métro lilloise à partir d'indices.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fbf7ef",

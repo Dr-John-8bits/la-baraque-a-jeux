@@ -217,12 +217,6 @@ body.labaj-site {
   }
 }
 
-@media (min-width: 980px) {
-  .games-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 380px) {
   .page-shell,
   .site-footer {

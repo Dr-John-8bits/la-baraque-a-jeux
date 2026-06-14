@@ -7,6 +7,18 @@
   "background_color": "#fbf7ef",
   "theme_color": "#071b31",
   "lang": "fr",
-  "icons": []
+  "icons": [
+    {
+      "src": "../../assets/brand/la-baraque-a-jeux-lille-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../../assets/brand/la-baraque-a-jeux-lille-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
 

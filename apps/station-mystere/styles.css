@@ -1,7 +1,7 @@
 body.station-page {
   min-height: 100svh;
   background:
-    linear-gradient(180deg, rgba(71, 126, 179, 0.1), transparent 260px),
+    linear-gradient(180deg, rgba(243, 198, 66, 0.22), transparent 260px),
     var(--labaj-paper);
 }
 
@@ -14,15 +14,33 @@ button {
 
 button:disabled {
   cursor: not-allowed;
-  opacity: 0.56;
+}
+
+.primary-action:disabled,
+.station-actions button:disabled,
+.result-actions button:disabled,
+.dialog-actions button:disabled,
+.link-button:disabled {
+  border-color: var(--labaj-line);
+  background: var(--labaj-line);
+  color: var(--labaj-muted);
+  box-shadow: none;
 }
 
 .station-game {
-  width: min(1080px, calc(100% - 24px));
+  width: min(920px, calc(100% - 24px));
   margin: 0 auto;
   padding: 10px 0 20px;
   display: grid;
   gap: 10px;
+}
+
+@media (min-width: 821px) {
+  .station-game {
+    min-height: calc(100svh - 62px);
+    align-content: center;
+    padding: 24px 0 32px;
+  }
 }
 
 .station-game__intro {
@@ -67,6 +85,8 @@ button:disabled {
   display: grid;
   gap: 10px;
   padding: 12px;
+  border: var(--labaj-border-strong);
+  box-shadow: var(--labaj-shadow-hard);
 }
 
 .station-status {
@@ -77,8 +97,9 @@ button:disabled {
 
 .station-status div {
   min-width: 0;
-  border: 1px solid var(--labaj-line);
+  border: var(--labaj-border-strong);
   border-radius: var(--labaj-radius);
+  box-shadow: var(--labaj-shadow-hard-sm);
   padding: 8px 10px;
   background: color-mix(in srgb, var(--labaj-paper), white 55%);
 }
@@ -97,6 +118,7 @@ button:disabled {
   color: var(--labaj-ink);
   font-size: clamp(1.15rem, 4vw, 1.7rem);
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .station-playfield {
@@ -219,8 +241,9 @@ button:disabled {
   display: grid;
   align-content: start;
   gap: 10px;
-  border: 1px solid var(--labaj-line);
+  border: var(--labaj-border-strong);
   border-radius: var(--labaj-radius);
+  box-shadow: var(--labaj-shadow-hard);
   padding: 12px;
   background: color-mix(in srgb, var(--labaj-paper), white 62%);
 }
@@ -228,6 +251,8 @@ button:disabled {
 .link-button {
   min-height: 38px;
   padding: 0 11px;
+  border: var(--labaj-border-strong);
+  box-shadow: var(--labaj-shadow-hard-sm);
   background: var(--labaj-ink);
   color: #ffffff;
   font-size: 0.88rem;
@@ -287,6 +312,8 @@ button:disabled {
 .station-actions button,
 .result-actions button {
   padding: 0 14px;
+  border: var(--labaj-border-strong);
+  box-shadow: var(--labaj-shadow-hard-sm);
   background: var(--labaj-red);
   color: #ffffff;
   font-weight: 950;
@@ -358,6 +385,8 @@ button:disabled {
 .dialog-actions button {
   min-height: 44px;
   padding: 0 14px;
+  border: var(--labaj-border-strong);
+  box-shadow: var(--labaj-shadow-hard-sm);
   background: var(--labaj-ink);
   color: #ffffff;
   font-weight: 950;
@@ -385,7 +414,9 @@ button:disabled {
   display: grid;
   gap: 12px;
   padding: 16px;
+  border: var(--labaj-border-strong);
   border-left: 6px solid var(--labaj-green);
+  box-shadow: var(--labaj-shadow-hard);
 }
 
 .result-panel--lost {
@@ -464,8 +495,10 @@ button:disabled {
   min-height: 44px;
   display: grid;
   place-items: center;
-  background: var(--labaj-ink);
-  color: #ffffff;
+  border: var(--labaj-border-strong);
+  box-shadow: var(--labaj-shadow-hard-sm);
+  background: var(--labaj-gold);
+  color: var(--labaj-ink);
   font-size: 1.35rem;
   font-weight: 900;
   line-height: 1;
@@ -518,8 +551,9 @@ button:disabled {
 }
 
 .stats-grid div {
-  border: 1px solid var(--labaj-line);
+  border: var(--labaj-border-strong);
   border-radius: var(--labaj-radius);
+  box-shadow: var(--labaj-shadow-hard-sm);
   padding: 10px;
   background: color-mix(in srgb, var(--labaj-paper), white 64%);
 }
@@ -536,6 +570,7 @@ button:disabled {
   color: var(--labaj-ink);
   font-size: 1.45rem;
   font-weight: 950;
+  font-variant-numeric: tabular-nums;
 }
 
 .help-content p,

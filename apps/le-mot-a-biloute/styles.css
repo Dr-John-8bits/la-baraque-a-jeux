@@ -61,7 +61,7 @@ button:disabled {
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 900;
-  letter-spacing: 0;
+  letter-spacing: 0.08em;
   overflow-wrap: normal;
   text-transform: uppercase;
 }
@@ -119,6 +119,7 @@ h3 {
   margin: 4px 0 0;
   font-size: 0.86rem;
   font-weight: 900;
+  font-variant-numeric: tabular-nums;
 }
 
 .meta-grid {

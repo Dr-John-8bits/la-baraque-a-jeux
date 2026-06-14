@@ -7,9 +7,6 @@ playwright-report/
 .DS_Store
 **/.DS_Store
 
-# Temporary reference projects kept outside version control.
-
-
 # Suspended app concepts kept outside version control.
 apps/chti-fil/
 

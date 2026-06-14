@@ -68,6 +68,8 @@ h1 {
   height: var(--tap);
   display: inline-grid;
   place-items: center;
+  border: var(--labaj-border-strong);
+  box-shadow: var(--labaj-shadow-hard-sm);
   cursor: pointer;
 }
 
@@ -91,8 +93,9 @@ h1 {
   min-height: 0;
   height: 54px;
   padding: 7px 8px;
-  border: 1px solid var(--line);
+  border: var(--labaj-border-strong);
   border-radius: var(--radius);
+  box-shadow: var(--labaj-shadow-hard-sm);
   background: var(--surface);
 }
 
@@ -110,6 +113,7 @@ h1 {
   font-size: clamp(0.96rem, 3.6vw, 1.05rem);
   line-height: 1.05;
   font-weight: 800;
+  font-variant-numeric: tabular-nums;
 }
 
 .game-layout {
@@ -282,9 +286,10 @@ h1 {
 .action-button {
   min-height: 44px;
   padding: 0 10px;
+  border: var(--labaj-border-strong);
   font-weight: 850;
   cursor: pointer;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--labaj-shadow-hard-sm);
 }
 
 .action-button.primary {
@@ -294,14 +299,17 @@ h1 {
 }
 
 .action-button:disabled {
-  opacity: 0.45;
+  border-color: var(--line);
+  background: var(--line);
+  color: var(--muted);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
 .message {
   min-height: 44px;
   padding: 10px 12px;
-  border: 1px solid var(--line);
+  border: var(--labaj-border-strong);
   border-radius: var(--radius);
   background: var(--surface);
   color: var(--ink);
@@ -383,8 +391,9 @@ h1 {
 .first-help button {
   min-height: var(--tap);
   padding: 0 12px;
-  border: 1px solid var(--line);
+  border: var(--labaj-border-strong);
   border-radius: var(--radius);
+  box-shadow: var(--labaj-shadow-hard-sm);
   background: var(--surface);
   color: var(--ink);
   font-weight: 800;
@@ -527,25 +536,9 @@ body.help-open {
 
 @media (min-width: 780px) {
   .app {
+    width: min(680px, 100%);
     padding: 22px;
-    grid-template-columns: 0.82fr 1.18fr;
-    align-content: start;
-    gap: 10px;
-  }
-
-  .topbar,
-  .status-row,
-  .result {
-    grid-column: 1 / -1;
-  }
-
-  .game-layout {
-    grid-column: 2;
-  }
-
-  .found-groups {
-    grid-column: 1;
-    align-content: start;
+    gap: 12px;
   }
 
   .tile {
