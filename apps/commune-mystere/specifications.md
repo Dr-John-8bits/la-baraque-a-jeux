@@ -35,6 +35,7 @@ Alternatives qui évoquent mieux la mécanique géo :
 - Métadonnées utiles : `epochId: "2026-01-01"`, **`maxDistanceKm: 35`** (plus grande distance entre 2 communes, La Bassée ↔ Neuville-en-Ferrain) — sert à normaliser le % de proximité.
 - Source : **geo.api.gouv.fr (IGN / INSEE)**, Licence Ouverte Etalab 2.0. À créditer dans `À propos` / `sources.json`.
 - ~11 Ko. Aucune pépite éditoriale requise : le jeu tourne sur la pure géométrie (donc **zéro corvée éditoriale quotidienne**, contrairement à Station).
+- **Donnée optionnelle (variante carte recommandée, cf. §5 bis)** : contours GeoJSON simplifiés des 95 communes (~100-200 Ko), à récupérer une fois sur l'open data. Non requise pour la v1 « liste seule ».
 
 ## 4. Règles du jeu
 
@@ -56,6 +57,27 @@ Les helpers sont déjà dans `app.js`, testés sur de vraies distances (Lille �
 - `haversineKm(a, b)` → distance à vol d'oiseau ;
 - `bearingDeg(a, b)` puis `cardinal8(deg)` → `N…NO` + flèche ;
 - `normalizeName(s)` → match de saisie tolérant.
+
+## 5 bis. Affichage : variante carte « Globle lillois » (RECOMMANDÉE)
+
+On n'a pas de silhouette toute faite (comme le Worldle des pays), et ce n'est pas grave : un jeu de proximité marche très bien sans visuel — cf. **Globle** (on devine, chaque proposition se colore selon sa proximité, aucune forme affichée). Mais on peut faire **mieux** qu'une simple liste, en **générant une carte** depuis l'open data.
+
+**Principe.** Afficher une **carte SVG des 95 communes de la MEL**. À chaque essai, la commune proposée **s'allume en dégradé chaud → froid** selon sa proximité de la cible (rouge = loin, vert = tout proche). Le joueur voit la métropole se remplir et resserre visuellement. La liste distance / flèche / % (§6) reste en complément (et reste la source d'info pour les lecteurs d'écran).
+
+**Pourquoi cette variante.** Plus fun que la silhouette (interactif, on voit tout le territoire), uniquement lillois, et **toujours zéro corvée éditoriale** (purement géométrique). C'est la cible.
+
+**Données à ajouter (une seule fois).**
+- Contours des communes en **GeoJSON simplifié** → `packages/corpus/commune-mystere/communes-contours.geojson` (ou fusionnés au corpus).
+- Source : **geo.api.gouv.fr** (`?fields=contour&format=geojson`) ou le jeu « découpage administratif » (IGN / Etalab). Open data, Licence Ouverte.
+- **Simplifier** les polygones (Douglas-Peucker, ex. `mapshaper`) pour viser **~100-200 Ko** au total. « Forme reconnaissable » suffit, pas le tracé cadastral.
+
+**Rendu (sans librairie).**
+- projeter `lon/lat` → coordonnées SVG en équirectangulaire local : `x = (lon − lonMin) · k · cos(latMoy)`, `y = (latMax − lat) · k` (le `cos(latMoy)` évite l'étirement horizontal) ;
+- un `<path>` par commune, couleur pilotée par l'état (`non joué` = neutre ; sinon dégradé par % de proximité) ;
+- la **cible n'est jamais surlignée** avant la victoire (pas de spoiler) ;
+- accessibilité : `role="img"` + `aria-label` résumant (« carte de la métropole, 3 communes proposées »).
+
+**Repli / découpage.** L'**option A** (liste seule, déjà couverte) tourne avec les seuls centroïdes. On peut donc livrer **A en v1** et brancher **la carte en v1.1** sans rien jeter — le moteur (distance/direction/%) est identique, la carte n'est qu'une couche d'affichage en plus.
 
 ## 6. UI / identité
 
