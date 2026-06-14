@@ -1001,5 +1001,233 @@
       "title": "Amiteux",
       "text": "Amiteux (ou amitieux) qualifie quelqu'un d'affectueux, de câlin. Un accueil amiteux, c'est un accueil tout en chaleur."
     }
+  },
+  {
+    "id": "brassin",
+    "answer": "BRASSIN",
+    "category": "Bière du Nord",
+    "starterHint": "Ce que le brasseur sort d'une seule fournée de cuve.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["biere", "gastronomie"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord", "regional-words-source-index"],
+    "hints": [
+      "Une cuvée, une production de bière en une fois.",
+      "Le Nord en compte des centaines, des grandes brasseries aux artisans."
+    ],
+    "acceptedAnswers": ["BRASSIN"],
+    "bonus": {
+      "title": "Brassin",
+      "text": "Un brassin, c'est la quantité de bière produite en une seule opération de brassage. Le Nord, terre de brasseurs, en aligne du géant à l'artisan."
+    }
+  },
+  {
+    "id": "cumulet",
+    "answer": "CUMULET",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Ce que font les enfants dans l'herbe, tête par-dessus talons.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "jeu"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Une roulade, une galipette.",
+      "« Faire un cumulet », c'est culbuter dans l'herbe."
+    ],
+    "acceptedAnswers": ["CUMULET"],
+    "bonus": {
+      "title": "Cumulet",
+      "text": "Faire un cumulet, c'est faire la roulade, la galipette. Un mot d'enfance encore vivant dans les cours de récré du Nord."
+    }
+  },
+  {
+    "id": "dache",
+    "answer": "DACHE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Du petit clou de cordonnier à l'endroit où l'on envoie les fâcheux.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "objet"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "À l'origine, un petit clou de chaussure.",
+      "« À dache », c'est très loin, au bout du monde."
+    ],
+    "acceptedAnswers": ["DACHE"],
+    "bonus": {
+      "title": "Dache",
+      "text": "Dache désignait un petit clou de cordonnier. Mais le mot vit surtout dans l'expression « à dache » : très loin, là où l'on envoie promener les gêneurs."
+    }
+  },
+  {
+    "id": "catouilles",
+    "answer": "CATOUILLES",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Le supplice qui fait rire même quand on déteste ça.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "quotidien"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Des chatouilles, version du Nord.",
+      "« Faire des catouilles », c'est titiller jusqu'au fou rire."
+    ],
+    "acceptedAnswers": ["CATOUILLES"],
+    "bonus": {
+      "title": "Catouilles",
+      "text": "Catouilles, c'est tout simplement les chatouilles. « Faire des catouilles » aux p'tits, c'est déclencher le fou rire à coup sûr."
+    }
+  },
+  {
+    "id": "fricot",
+    "answer": "FRICOT",
+    "category": "Cuisine du Nord",
+    "starterHint": "Le petit plat mijoté sans chichi, pour tous les jours.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["gastronomie", "plat"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Un plat cuisiné simplement, du quotidien.",
+      "« Fricoter », c'est mijoter… ou manigancer."
+    ],
+    "acceptedAnswers": ["FRICOT"],
+    "bonus": {
+      "title": "Fricot",
+      "text": "Un fricot, c'est un plat mijoté sans façon. Le verbe « fricoter » a gardé deux sens : cuisiner, et manigancer en douce."
+    }
+  },
+  {
+    "id": "jatte",
+    "answer": "JATTE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Ce dans quoi on sert le café du matin, par ici.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "objet"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Un bol, un verre ou une tasse selon l'usage.",
+      "« Eune jatte ed'café » : un grand bol de café."
+    ],
+    "acceptedAnswers": ["JATTE"],
+    "bonus": {
+      "title": "Jatte",
+      "text": "Dans le Nord, une jatte, c'est le bol (ou la tasse) du café. « Eune jatte ed'café » se déguste bien trempée d'une tartine."
+    }
+  },
+  {
+    "id": "longin",
+    "answer": "LONGIN",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Toujours le dernier prêt, jamais pressé.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "caractere"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Une personne lente, qui traîne.",
+      "« Espèce ed'longin ! » : allez, dépêche-toi."
+    ],
+    "acceptedAnswers": ["LONGIN"],
+    "bonus": {
+      "title": "Longin",
+      "text": "Un longin, c'est quelqu'un de lent, qui traîne. « Espèce ed'longin ! » se lance, gentiment, à celui qui n'en finit pas de se préparer."
+    }
+  },
+  {
+    "id": "malaju",
+    "answer": "MALAJU",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Le matin sans café : pas la peine de lui parler.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "humeur"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "De mauvaise humeur, mal disposé.",
+      "Littéralement « mal ajusté » : de travers ce jour-là."
+    ],
+    "acceptedAnswers": ["MALAJU"],
+    "bonus": {
+      "title": "Malaju",
+      "text": "Être malaju, c'est être de mauvais poil, mal luné. Le mot dit « mal ajusté » : tout part de travers ce jour-là."
+    }
+  },
+  {
+    "id": "guiffe",
+    "answer": "GUIFFE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Familièrement, ce qu'on ouvre pour parler ou pour manger.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "corps"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "La bouche, dans un registre familier.",
+      "« Ferme te guiffe » : tais-toi un peu."
+    ],
+    "acceptedAnswers": ["GUIFFE"],
+    "bonus": {
+      "title": "Guiffe",
+      "text": "La guiffe, c'est la bouche (ou la figure) en parler familier. « Ferme te guiffe » reste la façon ch'ti de réclamer un peu de silence."
+    }
+  },
+  {
+    "id": "arniquer",
+    "answer": "ARNIQUER",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Se mettre sur son trente-et-un avant la ducasse.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "quotidien"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "S'habiller, se mettre en tenue.",
+      "« S'arniquer », c'est se préparer, parfois trop."
+    ],
+    "acceptedAnswers": ["ARNIQUER"],
+    "bonus": {
+      "title": "Arniquer",
+      "text": "S'arniquer, c'est s'habiller, se mettre en tenue. Parfois avec une pointe d'ironie pour celui qui en fait un peu trop pour sortir."
+    }
+  },
+  {
+    "id": "badoule",
+    "answer": "BADOULE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Celui qui part dans tous les sens et qu'on ne suit plus.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "caractere"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Une personne un peu extravagante.",
+      "« Quelle badoule ! » se dit d'un original imprévisible."
+    ],
+    "acceptedAnswers": ["BADOULE"],
+    "bonus": {
+      "title": "Badoule",
+      "text": "Une badoule, c'est une personne extravagante, qui part dans tous les sens. Affectueux ou moqueur, tout dépend du ton."
+    }
+  },
+  {
+    "id": "cafiot",
+    "answer": "CAFIOT",
+    "category": "Cuisine du Nord",
+    "starterHint": "Le café tellement léger qu'on voit le fond de la jatte.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["gastronomie", "boisson"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Un café léger, sans grande force.",
+      "Dit avec un brin de moquerie pour un jus trop clair."
+    ],
+    "acceptedAnswers": ["CAFIOT"],
+    "bonus": {
+      "title": "Cafiot",
+      "text": "Un cafiot, c'est un café léger, un peu clairet. Le mot se dit avec un sourire pour le jus du matin qu'on aurait pu faire plus serré."
+    }
   }
 ]

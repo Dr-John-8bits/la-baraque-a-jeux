@@ -113,14 +113,19 @@ relit avec une mauvaise grille de lecture.
 - **Lot 4.x** — Lille-Mêle : grilles relues manquantes, **5 grilles par session**
   (≈4-6 sessions), sourcées, sans item `avoid`, sans référence religieuse.
 - **Lot 4.y** — Le Mot à Biloute : corpus vers 100 mots, **~15 mots par session**, sourcés.
-  - 🔄 *En cours (2026-06-14)* — 1er lot : **40 → 52 mots**. Tirés de
+  - 🔄 *En cours (2026-06-14)* — **40 → 64 mots** (2 lots). Tirés de
     `regional-word-seeds.json` (définitions sourcées des dictionnaires ch'ti, `sourceIds`
     enregistrés). Charte appliquée : amorce-devinette + 2 hints d'angles distincts + pépite.
-    Écartés volontairement : respellings phonétiques plats, et mots à risque (RATON = aussi
-    une injure ; MARABOU = connotation religieuse). Statut `prototype` en attente de relecture
-    éditeur. Mots déjà présents dans le dictionnaire de propositions (pas de régénération).
-    Mots ajoutés : baraque, friterie, carnaval, galopin, godale, mitan, muche, fouffe,
-    nactieux, buquer, galafe, amiteux.
+    Écartés volontairement : respellings phonétiques plats ; mots à risque (RATON = aussi une
+    injure ; MARABOU = connotation religieuse) ; définitions à faible confiance (mafler,
+    bidoule, touquette). Statut `prototype` en attente de relecture éditeur. Mots déjà présents
+    dans le dictionnaire de propositions (pas de régénération).
+    - Lot 1 : baraque, friterie, carnaval, galopin, godale, mitan, muche, fouffe, nactieux,
+      buquer, galafe, amiteux.
+    - Lot 2 : brassin, cumulet, dache, catouilles, fricot, jatte, longin, malaju, guiffe,
+      arniquer, badoule, cafiot.
+    - Reste vers 100 : ~36 mots (encore ~40 graines candidates dans le seed, + recherche
+      web sourcée si besoin).
 
 ## Garde-fous
 
