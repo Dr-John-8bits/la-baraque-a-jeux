@@ -87,7 +87,7 @@ Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 - Ajout d'indices supplémentaires avec pénalité de points.
 - Ajout d'un score basé sur les essais et les indices.
 - Enrichissement du partage avec le score et le lien public.
-- Ajout du footer crédité `Le mot à Biloute par Dr. John & Lady Em`.
+- Ajout du footer crédité `Le mot à Biloute par Dr. John`.
 
 ## 26.05.31.1
 

@@ -486,6 +486,18 @@ button:disabled {
   flex: none;
 }
 
+.yesterday-line {
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--labaj-muted);
+}
+
+.yesterday-line:empty {
+  display: none;
+}
+
 .notebook-section,
 .stats-section,
 .help-content {

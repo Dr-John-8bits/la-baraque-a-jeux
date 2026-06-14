@@ -78,7 +78,7 @@
 }
 
 .labaj-link {
-  min-height: 36px;
+  min-height: 44px;
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
@@ -212,9 +212,9 @@ button.labaj-link {
   }
 
   .labaj-link {
-    min-height: 34px;
-    padding: 0 5px;
-    font-size: 0.72rem;
+    min-height: 44px;
+    padding: 0 6px;
+    font-size: 0.74rem;
   }
 
   .about-dialog__text {

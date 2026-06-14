@@ -81,6 +81,7 @@ const els = {
   resultPanel: document.querySelector("#resultPanel"),
   resultKicker: document.querySelector("#resultKicker"),
   resultTitle: document.querySelector("#resultTitle"),
+  yesterdayLine: document.querySelector("#yesterdayLine"),
   resultSummary: document.querySelector("#resultSummary"),
   discoveryCard: document.querySelector("#discoveryCard"),
   notebookDialog: document.querySelector("#notebookDialog"),
@@ -116,6 +117,7 @@ async function init() {
     state = hydrateState(loadGame(), todayEntry, todayId);
     bindEvents();
     render();
+    renderYesterday();
     showLaunchHelp();
   } catch (error) {
     state = createErrorState(error);
@@ -199,6 +201,16 @@ function getPreviousDateId(dateId) {
     return getRelativeDateId(-1, new Date(), { timeZone: DAILY_TIME_ZONE });
   }
   return getRelativeDateId(-1, new Date(`${dateId}T12:00:00Z`), { timeZone: DAILY_TIME_ZONE });
+}
+
+function renderYesterday() {
+  if (!els.yesterdayLine || !previousDailyId || !playableEntries.length) return;
+  try {
+    const yesterday = selectDailyItem(playableEntries, previousDailyId, { epochId: DAILY_EPOCH_ID });
+    els.yesterdayLine.textContent = `Station d'hier : ${yesterday.reponse}`;
+  } catch {
+    // pas de station d'hier à afficher
+  }
 }
 
 function createInitialState(entry, dateId) {

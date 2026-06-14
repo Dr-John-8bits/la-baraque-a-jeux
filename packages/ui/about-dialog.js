@@ -14,7 +14,7 @@ const aboutDialogHtml = `
       <div class="about-dialog__text">
         <p>
           Ce portail et les jeux qu'il rassemble sont imaginés, adaptés et
-          assemblés par Dr. John et Lady Em, avec l'envie de proposer de petits
+          assemblés par Dr. John, avec l'envie de proposer de petits
           jeux web accessibles, amusants, et ancrés dans l'univers de Lille.
         </p>
         <p>
@@ -29,7 +29,7 @@ const aboutDialogHtml = `
         </p>
         <a
           class="support-button"
-          href="https://ko-fi.com/C7V120JWOV"
+          href="https://ko-fi.com/drjohn88218"
           target="_blank"
           rel="noopener noreferrer"
         >

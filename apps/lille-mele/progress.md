@@ -15,7 +15,7 @@ Original prompt: Commence à développer le jeu index.hmtl, on verra pour le con
 - Itération 26.05.31.2 :
   - suppression du bandeau/illustration du haut ;
   - remplacement du disclaimer par `Lille-Mêle par Dr. John · v26.05.31.2` ;
-  - crédit ensuite ajusté en `Lille-Mêle par Dr. John et Lady Em · v26.05.31.2` ;
+  - crédit ensuite ajusté en `Lille-Mêle par Dr. John · v26.05.31.2` ;
   - retrait des références religieuses détectées dans les contenus prototype (`Catholique`, `Saint-André-lez-Lille`, etc.) ;
   - ajout d'un retour visuel sur erreur et "trois sur quatre" ;
   - validation Playwright : feedback visuel OK, aucune erreur console, mots longs corrigés pour éviter les débordements.

@@ -87,4 +87,4 @@ Le jeu ne doit contenir aucune référence religieuse dans les grilles, textes, 
 
 ## Crédit
 
-Lille-Mêle par Dr. John et Lady Em.
+Lille-Mêle par Dr. John.

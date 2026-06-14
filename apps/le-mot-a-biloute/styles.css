@@ -205,6 +205,18 @@ h3 {
   flex: none;
 }
 
+.yesterday-line {
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.yesterday-line:empty {
+  display: none;
+}
+
 .board {
   width: min(100%, 286px);
   display: grid;
@@ -813,7 +825,7 @@ h3 {
 
   .eyebrow,
   .label {
-    font-size: 0.66rem;
+    font-size: 0.72rem;
   }
 
   h1 {

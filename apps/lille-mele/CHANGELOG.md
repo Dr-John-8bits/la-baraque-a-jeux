@@ -161,7 +161,7 @@ Le format de version suit `AA.MM.JJ.i`, où `i` est l'itération du jour.
 ### Modifié
 
 - Le statut visible n'affiche plus `Grille #n`, mais la date du jour.
-- Le crédit affiche `Lille-Mêle par Dr. John et Lady Em`.
+- Le crédit affiche `Lille-Mêle par Dr. John`.
 - Les libellés de tuiles sont redimensionnés pour éviter les coupures disgracieuses.
 
 ### Vérifié

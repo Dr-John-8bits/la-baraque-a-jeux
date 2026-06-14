@@ -214,7 +214,7 @@ Responsable : Codex.
 
 ### Chantier éditorial
 
-Responsable : Dr. John & Lady Em.
+Responsable : Dr. John.
 
 - Fournir corpus documentaire.
 - Vérifier mots et variantes.

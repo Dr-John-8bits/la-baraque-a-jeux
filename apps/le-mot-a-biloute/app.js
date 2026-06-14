@@ -61,6 +61,7 @@ const LETTER_RANK = { absent: 1, present: 2, correct: 3 };
 
 const els = {
   loadingState: document.getElementById("loadingState"),
+  yesterdayLine: document.getElementById("yesterdayLine"),
   board: document.getElementById("board"),
   gameActions: document.getElementById("gameActions"),
   keyboard: document.getElementById("keyboard"),
@@ -140,6 +141,20 @@ bindEvents();
 scheduleDailyRefresh();
 scheduleCountdownRefresh();
 showLaunchHelp();
+renderYesterdayWord();
+
+function renderYesterdayWord() {
+  if (!els.yesterdayLine) return;
+  try {
+    const yesterdayId = getRelativeDateId(-1, new Date(`${todayId}T12:00:00Z`), {
+      timeZone: DAILY_TIME_ZONE,
+    });
+    const yesterday = selectDailyItem(WORDS, yesterdayId, { epochId: DAILY_EPOCH_ID });
+    els.yesterdayLine.textContent = `Le mot d'hier : ${yesterday.answer}`;
+  } catch {
+    // pas de mot d'hier à afficher
+  }
+}
 
 function syncHelpOptOut() {
   if (els.helpOptOut) els.helpOptOut.checked = readJson(hideHelpKey, false) === true;
