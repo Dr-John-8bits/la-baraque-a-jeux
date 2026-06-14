@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Commune Mystère : devine chaque jour une commune de la métropole lilloise à la distance et à la direction."
+    />
+    <meta name="theme-color" content="#071b31" />
+    <title>Commune Mystère</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="../../assets/brand/favicon-48.png" />
+    <link rel="apple-touch-icon" href="../../assets/brand/favicon-180.png" />
+    <link
+      rel="preload"
+      href="../../assets/fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="../../packages/ui/tokens.css" />
+    <link rel="stylesheet" href="../../packages/ui/base.css" />
+    <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- TODO (à finaliser au branchement) : og:title/type/description/image absolus + twitter:card, comme les autres jeux. -->
+  </head>
+  <body class="commune-page">
+    <header class="labaj-header">
+      <nav class="labaj-nav" aria-label="Menu principal">
+        <a class="labaj-brand" href="../../" aria-label="Retour à l'accueil">
+          <picture class="labaj-brand__logo">
+            <source srcset="../../assets/brand/la-baraque-a-jeux-lille.webp" type="image/webp" />
+            <img src="../../assets/brand/la-baraque-a-jeux-lille-logo.png" alt="" width="48" height="48" />
+          </picture>
+          <span class="labaj-brand__text">
+            <strong>La baraque à jeux</strong>
+            <span>Accueil</span>
+          </span>
+        </a>
+        <div class="labaj-links">
+          <a class="labaj-link labaj-link--home" href="../../">Accueil</a>
+          <a class="labaj-link" href="../../blog.html">Blog</a>
+          <button class="labaj-link" type="button" data-about-trigger>À propos</button>
+        </div>
+      </nav>
+    </header>
+
+    <!--
+      SCAFFOLDING — squelette à habiller (voir specifications.md §6 + la maquette validée).
+      Les id ci-dessous sont des points d'ancrage proposés pour app.js ; à ajuster librement.
+    -->
+    <main class="commune-game" aria-live="polite">
+      <section class="commune-intro">
+        <p class="eyebrow">Géo · métropole de Lille</p>
+        <h1>Commune Mystère</h1>
+      </section>
+
+      <!-- Bandeau stats : score / série / essais — TODO -->
+      <section class="commune-status" aria-label="État de la partie" id="statusRow"></section>
+
+      <!-- Masque de la commune cible (style brouillard, cf. Station) — TODO -->
+      <section class="commune-target" id="targetPanel"></section>
+
+      <!-- Liste des essais : nom · distance · flèche direction · % · barre — TODO -->
+      <ol class="commune-guesses" id="guessList" aria-label="Tes essais"></ol>
+
+      <!-- Saisie + autocomplétion + Valider — TODO -->
+      <form class="commune-form" id="guessForm" autocomplete="off">
+        <label for="guessInput">Propose une commune</label>
+        <input id="guessInput" type="text" placeholder="Ex. Roubaix" />
+        <button type="submit" id="submitButton">Valider</button>
+      </form>
+
+      <p class="yesterday-line" id="yesterdayLine"></p>
+      <p class="next-commune-countdown" id="nextCommuneCountdown"></p>
+    </main>
+
+    <script type="module" src="../../packages/ui/about-dialog.js"></script>
+    <script type="module" src="../../packages/ui/register-sw.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

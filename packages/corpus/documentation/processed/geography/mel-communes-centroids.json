@@ -1,0 +1,572 @@
+[
+  {
+    "name": "Allennes-les-Marais",
+    "codeInsee": "59005",
+    "lat": 50.5406,
+    "lon": 2.946
+  },
+  {
+    "name": "Annœullin",
+    "codeInsee": "59011",
+    "lat": 50.5275,
+    "lon": 2.9242
+  },
+  {
+    "name": "Anstaing",
+    "codeInsee": "59013",
+    "lat": 50.6026,
+    "lon": 3.1876
+  },
+  {
+    "name": "Armentières",
+    "codeInsee": "59017",
+    "lat": 50.6925,
+    "lon": 2.8787
+  },
+  {
+    "name": "Aubers",
+    "codeInsee": "59025",
+    "lat": 50.5995,
+    "lon": 2.8187
+  },
+  {
+    "name": "Baisieux",
+    "codeInsee": "59044",
+    "lat": 50.6101,
+    "lon": 3.2379
+  },
+  {
+    "name": "Bauvin",
+    "codeInsee": "59052",
+    "lat": 50.5173,
+    "lon": 2.8932
+  },
+  {
+    "name": "Beaucamps-Ligny",
+    "codeInsee": "59056",
+    "lat": 50.6037,
+    "lon": 2.9154
+  },
+  {
+    "name": "Bois-Grenier",
+    "codeInsee": "59088",
+    "lat": 50.6486,
+    "lon": 2.8717
+  },
+  {
+    "name": "Bondues",
+    "codeInsee": "59090",
+    "lat": 50.7062,
+    "lon": 3.1002
+  },
+  {
+    "name": "Bousbecque",
+    "codeInsee": "59098",
+    "lat": 50.7646,
+    "lon": 3.0782
+  },
+  {
+    "name": "Bouvines",
+    "codeInsee": "59106",
+    "lat": 50.5829,
+    "lon": 3.1946
+  },
+  {
+    "name": "Capinghem",
+    "codeInsee": "59128",
+    "lat": 50.648,
+    "lon": 2.9633
+  },
+  {
+    "name": "Carnin",
+    "codeInsee": "59133",
+    "lat": 50.5194,
+    "lon": 2.9606
+  },
+  {
+    "name": "Chéreng",
+    "codeInsee": "59146",
+    "lat": 50.6108,
+    "lon": 3.211
+  },
+  {
+    "name": "Comines",
+    "codeInsee": "59152",
+    "lat": 50.7496,
+    "lon": 3.0136
+  },
+  {
+    "name": "Croix",
+    "codeInsee": "59163",
+    "lat": 50.6754,
+    "lon": 3.155
+  },
+  {
+    "name": "Deûlémont",
+    "codeInsee": "59173",
+    "lat": 50.7275,
+    "lon": 2.9723
+  },
+  {
+    "name": "Don",
+    "codeInsee": "59670",
+    "lat": 50.545,
+    "lon": 2.9157
+  },
+  {
+    "name": "Emmerin",
+    "codeInsee": "59193",
+    "lat": 50.5906,
+    "lon": 3.0062
+  },
+  {
+    "name": "Englos",
+    "codeInsee": "59195",
+    "lat": 50.6266,
+    "lon": 2.9564
+  },
+  {
+    "name": "Ennetières-en-Weppes",
+    "codeInsee": "59196",
+    "lat": 50.6423,
+    "lon": 2.931
+  },
+  {
+    "name": "Erquinghem-le-Sec",
+    "codeInsee": "59201",
+    "lat": 50.6109,
+    "lon": 2.9336
+  },
+  {
+    "name": "Erquinghem-Lys",
+    "codeInsee": "59202",
+    "lat": 50.6691,
+    "lon": 2.8403
+  },
+  {
+    "name": "Escobecques",
+    "codeInsee": "59208",
+    "lat": 50.6219,
+    "lon": 2.9326
+  },
+  {
+    "name": "Faches-Thumesnil",
+    "codeInsee": "59220",
+    "lat": 50.5956,
+    "lon": 3.0714
+  },
+  {
+    "name": "Forest-sur-Marque",
+    "codeInsee": "59247",
+    "lat": 50.6324,
+    "lon": 3.1867
+  },
+  {
+    "name": "Fournes-en-Weppes",
+    "codeInsee": "59250",
+    "lat": 50.5934,
+    "lon": 2.8968
+  },
+  {
+    "name": "Frelinghien",
+    "codeInsee": "59252",
+    "lat": 50.7043,
+    "lon": 2.9525
+  },
+  {
+    "name": "Fretin",
+    "codeInsee": "59256",
+    "lat": 50.5676,
+    "lon": 3.1306
+  },
+  {
+    "name": "Fromelles",
+    "codeInsee": "59257",
+    "lat": 50.6115,
+    "lon": 2.8546
+  },
+  {
+    "name": "Gruson",
+    "codeInsee": "59275",
+    "lat": 50.5925,
+    "lon": 3.2156
+  },
+  {
+    "name": "Hallennes-lez-Haubourdin",
+    "codeInsee": "59278",
+    "lat": 50.6131,
+    "lon": 2.9553
+  },
+  {
+    "name": "Halluin",
+    "codeInsee": "59279",
+    "lat": 50.7759,
+    "lon": 3.1257
+  },
+  {
+    "name": "Hantay",
+    "codeInsee": "59281",
+    "lat": 50.5384,
+    "lon": 2.8682
+  },
+  {
+    "name": "Haubourdin",
+    "codeInsee": "59286",
+    "lat": 50.6002,
+    "lon": 2.9893
+  },
+  {
+    "name": "Hem",
+    "codeInsee": "59299",
+    "lat": 50.6531,
+    "lon": 3.1913
+  },
+  {
+    "name": "Herlies",
+    "codeInsee": "59303",
+    "lat": 50.5814,
+    "lon": 2.8504
+  },
+  {
+    "name": "Houplin-Ancoisne",
+    "codeInsee": "59316",
+    "lat": 50.5686,
+    "lon": 2.9943
+  },
+  {
+    "name": "Houplines",
+    "codeInsee": "59317",
+    "lat": 50.6832,
+    "lon": 2.9271
+  },
+  {
+    "name": "Illies",
+    "codeInsee": "59320",
+    "lat": 50.5643,
+    "lon": 2.8315
+  },
+  {
+    "name": "La Bassée",
+    "codeInsee": "59051",
+    "lat": 50.5393,
+    "lon": 2.8103
+  },
+  {
+    "name": "La Chapelle-d'Armentières",
+    "codeInsee": "59143",
+    "lat": 50.6641,
+    "lon": 2.8944
+  },
+  {
+    "name": "La Madeleine",
+    "codeInsee": "59368",
+    "lat": 50.6541,
+    "lon": 3.0699
+  },
+  {
+    "name": "Lambersart",
+    "codeInsee": "59328",
+    "lat": 50.6538,
+    "lon": 3.0248
+  },
+  {
+    "name": "Lannoy",
+    "codeInsee": "59332",
+    "lat": 50.666,
+    "lon": 3.2104
+  },
+  {
+    "name": "Le Maisnil",
+    "codeInsee": "59371",
+    "lat": 50.6184,
+    "lon": 2.8776
+  },
+  {
+    "name": "Leers",
+    "codeInsee": "59339",
+    "lat": 50.6794,
+    "lon": 3.2398
+  },
+  {
+    "name": "Lesquin",
+    "codeInsee": "59343",
+    "lat": 50.5904,
+    "lon": 3.1132
+  },
+  {
+    "name": "Lezennes",
+    "codeInsee": "59346",
+    "lat": 50.6101,
+    "lon": 3.1174
+  },
+  {
+    "name": "Lille",
+    "codeInsee": "59350",
+    "lat": 50.6311,
+    "lon": 3.0468
+  },
+  {
+    "name": "Linselles",
+    "codeInsee": "59352",
+    "lat": 50.7367,
+    "lon": 3.0724
+  },
+  {
+    "name": "Lompret",
+    "codeInsee": "59356",
+    "lat": 50.6638,
+    "lon": 2.9949
+  },
+  {
+    "name": "Loos",
+    "codeInsee": "59360",
+    "lat": 50.6078,
+    "lon": 3.0215
+  },
+  {
+    "name": "Lys-lez-Lannoy",
+    "codeInsee": "59367",
+    "lat": 50.6729,
+    "lon": 3.2186
+  },
+  {
+    "name": "Marcq-en-Barœul",
+    "codeInsee": "59378",
+    "lat": 50.6793,
+    "lon": 3.1006
+  },
+  {
+    "name": "Marquette-lez-Lille",
+    "codeInsee": "59386",
+    "lat": 50.6746,
+    "lon": 3.0539
+  },
+  {
+    "name": "Marquillies",
+    "codeInsee": "59388",
+    "lat": 50.551,
+    "lon": 2.8687
+  },
+  {
+    "name": "Mons-en-Barœul",
+    "codeInsee": "59410",
+    "lat": 50.6436,
+    "lon": 3.1091
+  },
+  {
+    "name": "Mouvaux",
+    "codeInsee": "59421",
+    "lat": 50.7044,
+    "lon": 3.1368
+  },
+  {
+    "name": "Neuville-en-Ferrain",
+    "codeInsee": "59426",
+    "lat": 50.7559,
+    "lon": 3.1614
+  },
+  {
+    "name": "Noyelles-lès-Seclin",
+    "codeInsee": "59437",
+    "lat": 50.5717,
+    "lon": 3.0144
+  },
+  {
+    "name": "Pérenchies",
+    "codeInsee": "59457",
+    "lat": 50.6708,
+    "lon": 2.9682
+  },
+  {
+    "name": "Péronne-en-Mélantois",
+    "codeInsee": "59458",
+    "lat": 50.5644,
+    "lon": 3.1707
+  },
+  {
+    "name": "Prémesques",
+    "codeInsee": "59470",
+    "lat": 50.6611,
+    "lon": 2.9481
+  },
+  {
+    "name": "Provin",
+    "codeInsee": "59477",
+    "lat": 50.5158,
+    "lon": 2.9107
+  },
+  {
+    "name": "Quesnoy-sur-Deûle",
+    "codeInsee": "59482",
+    "lat": 50.713,
+    "lon": 3.0063
+  },
+  {
+    "name": "Radinghem-en-Weppes",
+    "codeInsee": "59487",
+    "lat": 50.6299,
+    "lon": 2.8988
+  },
+  {
+    "name": "Ronchin",
+    "codeInsee": "59507",
+    "lat": 50.6034,
+    "lon": 3.0931
+  },
+  {
+    "name": "Roncq",
+    "codeInsee": "59508",
+    "lat": 50.7453,
+    "lon": 3.1152
+  },
+  {
+    "name": "Roubaix",
+    "codeInsee": "59512",
+    "lat": 50.6887,
+    "lon": 3.1843
+  },
+  {
+    "name": "Sailly-lez-Lannoy",
+    "codeInsee": "59522",
+    "lat": 50.6458,
+    "lon": 3.227
+  },
+  {
+    "name": "Sainghin-en-Mélantois",
+    "codeInsee": "59523",
+    "lat": 50.5856,
+    "lon": 3.1632
+  },
+  {
+    "name": "Sainghin-en-Weppes",
+    "codeInsee": "59524",
+    "lat": 50.5564,
+    "lon": 2.8972
+  },
+  {
+    "name": "Saint-André-lez-Lille",
+    "codeInsee": "59527",
+    "lat": 50.6599,
+    "lon": 3.0415
+  },
+  {
+    "name": "Salomé",
+    "codeInsee": "59550",
+    "lat": 50.5381,
+    "lon": 2.8361
+  },
+  {
+    "name": "Santes",
+    "codeInsee": "59553",
+    "lat": 50.588,
+    "lon": 2.9561
+  },
+  {
+    "name": "Seclin",
+    "codeInsee": "59560",
+    "lat": 50.5453,
+    "lon": 3.0268
+  },
+  {
+    "name": "Sequedin",
+    "codeInsee": "59566",
+    "lat": 50.6252,
+    "lon": 2.9887
+  },
+  {
+    "name": "Templemars",
+    "codeInsee": "59585",
+    "lat": 50.5705,
+    "lon": 3.059
+  },
+  {
+    "name": "Toufflers",
+    "codeInsee": "59598",
+    "lat": 50.6608,
+    "lon": 3.2324
+  },
+  {
+    "name": "Tourcoing",
+    "codeInsee": "59599",
+    "lat": 50.721,
+    "lon": 3.1577
+  },
+  {
+    "name": "Tressin",
+    "codeInsee": "59602",
+    "lat": 50.6196,
+    "lon": 3.1897
+  },
+  {
+    "name": "Vendeville",
+    "codeInsee": "59609",
+    "lat": 50.5731,
+    "lon": 3.0805
+  },
+  {
+    "name": "Verlinghem",
+    "codeInsee": "59611",
+    "lat": 50.682,
+    "lon": 2.9965
+  },
+  {
+    "name": "Villeneuve-d'Ascq",
+    "codeInsee": "59009",
+    "lat": 50.6362,
+    "lon": 3.1619
+  },
+  {
+    "name": "Wambrechies",
+    "codeInsee": "59636",
+    "lat": 50.6983,
+    "lon": 3.0449
+  },
+  {
+    "name": "Warneton",
+    "codeInsee": "59643",
+    "lat": 50.7466,
+    "lon": 2.966
+  },
+  {
+    "name": "Wasquehal",
+    "codeInsee": "59646",
+    "lat": 50.6726,
+    "lon": 3.1296
+  },
+  {
+    "name": "Wattignies",
+    "codeInsee": "59648",
+    "lat": 50.5862,
+    "lon": 3.0389
+  },
+  {
+    "name": "Wattrelos",
+    "codeInsee": "59650",
+    "lat": 50.7125,
+    "lon": 3.2159
+  },
+  {
+    "name": "Wavrin",
+    "codeInsee": "59653",
+    "lat": 50.5735,
+    "lon": 2.9356
+  },
+  {
+    "name": "Wervicq-Sud",
+    "codeInsee": "59656",
+    "lat": 50.7602,
+    "lon": 3.0495
+  },
+  {
+    "name": "Wicres",
+    "codeInsee": "59658",
+    "lat": 50.5691,
+    "lon": 2.8668
+  },
+  {
+    "name": "Willems",
+    "codeInsee": "59660",
+    "lat": 50.6322,
+    "lon": 3.2314
+  }
+]

@@ -1,0 +1,32 @@
+/*
+ * Commune Mystère — styles.
+ * SCAFFOLDING : juste la coquille centrée. Tout le reste est à habiller dans
+ * l'identité « chunky » du site (bordures var(--labaj-border-strong), ombres
+ * var(--labaj-shadow-hard), tricolore, crème/marine). Cf. specifications.md §6
+ * et la maquette validée (essais = nom · distance · flèche · % · barre colorée).
+ */
+body.commune-page {
+  min-height: 100svh;
+  background:
+    linear-gradient(180deg, rgba(243, 198, 66, 0.22), transparent 260px),
+    var(--labaj-paper);
+}
+
+.commune-game {
+  width: min(920px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 12px 0 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.commune-intro h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 7vw, 3.15rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+/* TODO : .commune-status, .commune-target (masque brouillard), .commune-guesses
+   (lignes d'essai chunky avec barre de proximité rouge/ambre/vert), .commune-form,
+   .next-commune-countdown — voir la maquette et réutiliser les patterns de Station. */
