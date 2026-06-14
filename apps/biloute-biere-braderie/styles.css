@@ -391,6 +391,12 @@ h1 {
   color: var(--bbb-ink);
 }
 
+/* Le texte de détail "muted" passe sous 4.5:1 sur les fonds clairs perte/egalite. */
+.outcome-banner--loss > span:last-child,
+.outcome-banner--tie > span:last-child {
+  color: var(--bbb-ink);
+}
+
 .timer-panel {
   min-height: 50px;
   display: grid;
@@ -454,7 +460,7 @@ h1 {
 }
 
 .round-button {
-  min-height: 36px;
+  min-height: 44px;
   border: 2px solid var(--bbb-ink);
   border-radius: var(--labaj-radius);
   padding: 0 12px;
@@ -462,6 +468,10 @@ h1 {
   color: #ffffff;
   font-weight: 950;
   cursor: pointer;
+}
+
+.round-button:focus-visible {
+  outline-color: #ffffff;
 }
 
 .round-button:disabled {
@@ -509,7 +519,7 @@ h1 {
 }
 
 .choice-button {
-  min-width: 0;
+  min-width: 44px;
   min-height: 82px;
   display: grid;
   grid-template-columns: minmax(0, 1fr);

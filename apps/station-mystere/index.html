@@ -101,7 +101,7 @@
               aria-expanded="false"
               aria-controls="stationSuggestions"
             />
-            <div class="suggestion-list" id="stationSuggestions" role="listbox" hidden></div>
+            <div class="suggestion-list" id="stationSuggestions" role="listbox" aria-live="polite" hidden></div>
           </div>
           <button class="primary-action" id="validateButton" type="submit">Valider</button>
         </form>
@@ -118,7 +118,7 @@
 
       <section class="result-panel" id="resultPanel" aria-live="polite" hidden>
         <p class="eyebrow" id="resultKicker">Résultat</p>
-        <h2 id="resultTitle">Station révélée</h2>
+        <h2 id="resultTitle" tabindex="-1">Station révélée</h2>
         <p id="resultSummary"></p>
         <article class="discovery-card" id="discoveryCard"></article>
         <div class="result-actions">

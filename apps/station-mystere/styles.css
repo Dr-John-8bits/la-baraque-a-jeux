@@ -461,8 +461,8 @@ button:disabled {
 }
 
 .icon-close {
-  width: 42px;
-  min-height: 42px;
+  width: 44px;
+  min-height: 44px;
   display: grid;
   place-items: center;
   background: var(--labaj-ink);

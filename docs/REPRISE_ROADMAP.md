@@ -58,8 +58,23 @@ relit avec une mauvaise grille de lecture.
     `await` sans catch → page bloquée). Message d'erreur lisible et accessible si le corpus
     est indisponible. Station Mystère gérait déjà ce cas.
   - Test navigateur dédié : coupure réseau du corpus → message affiché (2 specs OK).
-- **Lot 1.2** — Passe accessibilité : `aria-live`, focus, navigation clavier sur
-  `packages/ui` et chaque jeu.
+- **Lot 1.2** — ✅ *Fait (2026-06-14)* — Passe accessibilité (audit multi-agents WCAG 2.1 AA,
+  31 findings vérifiés, faux positifs écartés) :
+  - Cibles tactiles ≥ 44px : clavier et boutons utilitaires (Mot à Biloute), boutons de
+    choix et « Lancer » (BBB), croix de fermeture (Station + `packages/ui`).
+  - Contraste : textes de détail des bannières perte/égalité (BBB) repassés en encre ;
+    focus blanc sur le bouton rouge « Lancer ».
+  - Focus : restitution au déclencheur sur la modale « À propos » partagée ; arrière-plan
+    `inert` derrière la modale d'accueil non-native de Lille-Mêle ; focus porté sur le
+    résultat révélé (Station).
+  - ARIA : combobox de recherche `aria-activedescendant` + ids d'options + `aria-live`
+    (Station) ; résultat de fin en `aria-live="assertive"` (Lille-Mêle) ; labels manquants
+    (input fichier Mot à Biloute, boutons bonus Lille-Mêle).
+  - Faux positifs écartés : `prefers-reduced-motion` déjà couvert globalement par `base.css` ;
+    « focus trap » des `<dialog>` natifs déjà assuré par le navigateur.
+  - 2 tests navigateur ajoutés (combobox `aria-activedescendant`, arrière-plan `inert`).
+  - Reporté (faible valeur) : annonce des tuiles révélées et `aria-live` assertif des erreurs
+    (Mot à Biloute), `aria-label` des pastilles de score et raccourcis clavier (BBB).
 
 ### Bloc 2 — Finir ce qui est presque fini *(code, léger)*
 

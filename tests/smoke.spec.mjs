@@ -212,3 +212,30 @@ test("les jeux affichent un message lisible quand le corpus est indisponible", a
   await page.goto(`${base}apps/lille-mele/`);
   await expect(page.locator("#message.error")).toContainText("n'a pas pu être chargée");
 });
+
+test("station: la navigation clavier des suggestions expose aria-activedescendant", async ({ page }) => {
+  await page.goto(`${base}apps/station-mystere/`);
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  if (await page.locator("#helpDialog").isVisible()) {
+    await page.getByRole("button", { name: "Jouer", exact: true }).click();
+  }
+  const input = page.getByLabel("Rechercher une station");
+  await input.fill("ga");
+  await expect(page.locator("#stationSuggestions [role='option']").first()).toBeVisible();
+  await input.press("ArrowDown");
+  await expect(input).toHaveAttribute("aria-activedescendant", /^stationSuggestion-\d+$/);
+  const activeId = await input.getAttribute("aria-activedescendant");
+  await expect(page.locator(`#${activeId}`)).toHaveAttribute("aria-selected", "true");
+});
+
+test("lille-mele: la modale d'accueil rend l'arrière-plan inert", async ({ page }) => {
+  await page.goto(`${base}apps/lille-mele/`);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await expect(page.locator("#firstHelp")).toBeVisible();
+  const headerInert = await page.evaluate(
+    () => document.querySelector("body > header")?.inert === true
+  );
+  expect(headerInert).toBe(true);
+});

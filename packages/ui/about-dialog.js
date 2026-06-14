@@ -40,6 +40,8 @@ const aboutDialogHtml = `
   </dialog>
 `;
 
+let lastTrigger = null;
+
 initAboutDialog();
 
 function initAboutDialog() {
@@ -49,12 +51,24 @@ function initAboutDialog() {
   const dialog = ensureAboutDialog();
 
   triggers.forEach((trigger) => {
-    trigger.addEventListener("click", () => openDialog(dialog));
+    trigger.addEventListener("click", () => {
+      lastTrigger = trigger;
+      openDialog(dialog);
+    });
   });
 
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) closeDialog(dialog);
   });
+
+  // Restitue le focus au bouton déclencheur quelle que soit la voie de fermeture
+  // (croix, Échap, clic sur le fond). Couvre aussi le repli sans <dialog> natif.
+  dialog.addEventListener("close", restoreTriggerFocus);
+}
+
+function restoreTriggerFocus() {
+  if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+  lastTrigger = null;
 }
 
 function ensureAboutDialog() {
@@ -75,8 +89,9 @@ function openDialog(dialog) {
 
 function closeDialog(dialog) {
   if (typeof dialog.close === "function" && dialog.open) {
-    dialog.close();
+    dialog.close(); // déclenche l'événement "close" -> restoreTriggerFocus
   } else {
     dialog.removeAttribute("open");
+    restoreTriggerFocus();
   }
 }

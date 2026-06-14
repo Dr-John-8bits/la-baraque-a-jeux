@@ -397,6 +397,8 @@ function finishGame(status) {
   saveGame();
   render();
   els.resultPanel?.scrollIntoView({ block: "start" });
+  // Porte le focus clavier sur le résultat révélé (et pas seulement l'annonce aria-live).
+  els.resultTitle?.focus();
 }
 
 function getReward() {
@@ -457,6 +459,7 @@ function renderSuggestions() {
     els.suggestions.hidden = true;
     els.suggestions.innerHTML = "";
     els.answerInput.setAttribute("aria-expanded", "false");
+    els.answerInput.removeAttribute("aria-activedescendant");
     return;
   }
 
@@ -469,12 +472,20 @@ function renderSuggestions() {
           class="suggestion-option"
           type="button"
           role="option"
+          id="stationSuggestion-${index}"
           data-suggestion-id="${escapeHtml(entry.id)}"
           aria-selected="${index === activeSuggestionIndex ? "true" : "false"}"
         >${escapeHtml(entry.reponse)}</button>
       `
     )
     .join("");
+
+  // Expose l'option active aux lecteurs d'écran pendant la navigation au clavier.
+  if (activeSuggestionIndex >= 0) {
+    els.answerInput.setAttribute("aria-activedescendant", `stationSuggestion-${activeSuggestionIndex}`);
+  } else {
+    els.answerInput.removeAttribute("aria-activedescendant");
+  }
 }
 
 function handleSuggestionClick(event) {

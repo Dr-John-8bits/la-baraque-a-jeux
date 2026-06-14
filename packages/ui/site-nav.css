@@ -173,8 +173,8 @@ button.labaj-link {
 }
 
 .about-dialog__close {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   display: inline-grid;
   place-items: center;
   border: 2px solid var(--labaj-ink);

@@ -355,8 +355,8 @@ function createBonusHtml() {
         answered
           ? `<p><strong>${correct ? "Vrai bon." : "Raté."}</strong> ${escapeHtml(bonus.explanation)}</p>`
           : `<div class="bonus-options">
-              <button type="button" data-bonus-answer="true">Vrai</button>
-              <button type="button" data-bonus-answer="false">Bidon</button>
+              <button type="button" data-bonus-answer="true" aria-label="Répondre Vrai au bonus">Vrai</button>
+              <button type="button" data-bonus-answer="false" aria-label="Répondre Bidon au bonus">Bidon</button>
             </div>`
       }
     </div>
@@ -509,10 +509,21 @@ function shouldShowFirstHelp() {
   return readJson(FIRST_HELP_KEY, false) !== true;
 }
 
+function setBackgroundInert(inert) {
+  // Empêche le focus clavier de s'échapper vers le header et le jeu derrière la
+  // modale (#firstHelp n'est pas un <dialog> natif, il ne piège donc pas le focus).
+  document
+    .querySelectorAll("body > header, #app > *:not(#firstHelp)")
+    .forEach((element) => {
+      element.inert = inert;
+    });
+}
+
 function showFirstHelp() {
   if (!els.firstHelp) return;
   els.firstHelp.hidden = false;
   document.body.classList.add("help-open");
+  setBackgroundInert(true);
   window.requestAnimationFrame(() => els.firstHelpStartButton?.focus());
 }
 
@@ -521,6 +532,7 @@ function hideFirstHelp({ returnFocus = false } = {}) {
   writeJson(FIRST_HELP_KEY, true);
   els.firstHelp.hidden = true;
   document.body.classList.remove("help-open");
+  setBackgroundInert(false);
   if (returnFocus) els.rulesButton?.focus();
 }
 

@@ -128,7 +128,7 @@ h3 {
 }
 
 .utility-button {
-  min-height: 38px;
+  min-height: 44px;
   border: 2px solid var(--ink);
   padding: 0 12px;
   box-shadow: 4px 4px 0 var(--ink);
@@ -367,7 +367,7 @@ h3 {
 
 .key {
   min-width: 0;
-  height: 38px;
+  height: 44px;
   flex: 1 1 0;
   padding: 0 4px;
   border: 2px solid var(--ink);
