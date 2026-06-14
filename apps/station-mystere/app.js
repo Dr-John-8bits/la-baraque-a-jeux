@@ -17,6 +17,7 @@ const MIN_SUGGESTION_CHARS = 2;
 const MAX_SUGGESTIONS = 6;
 const TOTAL_HINTS = 5;
 const CORPUS_URL = "../../packages/corpus/station-mystere/editorial-entries.json";
+const GAME_URL = new URL(".", window.location.href).href;
 
 const STORAGE_KEYS = {
   currentGame: `${STORAGE_PREFIX}currentGame`,
@@ -901,15 +902,24 @@ async function shareResult() {
 
 function buildShareText(gameState = state) {
   if (!gameState || gameState.status === "playing") return "";
-  const lines = [`Station Mystère #${gameState.dateId}`];
+  const used = Math.min(TOTAL_HINTS, Math.max(0, gameState.revealedHintCount || 0));
+  const lines = [`Station Mystère ${gameState.dateId}`];
   if (gameState.status === "won") {
-    lines.push(`Métro : trouvé en ${gameState.revealedHintCount} indice${gameState.revealedHintCount > 1 ? "s" : ""}`);
+    lines.push(
+      used === 0
+        ? "🚇 Trouvé sans indice !"
+        : `🚇 Trouvé en ${used} indice${used > 1 ? "s" : ""}`
+    );
+    lines.push("🟦".repeat(used) + "⬜".repeat(TOTAL_HINTS - used));
     lines.push(`Score : ${gameState.score}`);
-    lines.push(getRewardLabel(gameState.result));
+    const reward = getRewardLabel(gameState.result);
+    if (reward && reward !== "Pas de récompense") lines.push(reward);
   } else {
-    lines.push("Métro : perdu");
+    lines.push("🚇 Raté");
+    lines.push("🟥".repeat(TOTAL_HINTS));
     lines.push("Score : 0");
   }
+  lines.push(GAME_URL);
   return lines.join("\n");
 }
 

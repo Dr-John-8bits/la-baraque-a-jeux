@@ -23,17 +23,32 @@ const WIN_DIALOG_PAUSE_MS = 220;
 let WORDS;
 let GUESS_POLICY;
 let ACCEPTED_GUESSES;
-let FRENCH_GUESSES;
+// Le grand dictionnaire français (~5,8 Mo) ne sert qu'à valider les propositions :
+// il est chargé en arrière-plan après le premier rendu pour ne pas le bloquer.
+let FRENCH_GUESSES = { words: [] };
+let dictionaryReady = false;
 try {
-  [WORDS, GUESS_POLICY, ACCEPTED_GUESSES, FRENCH_GUESSES] = await Promise.all([
+  [WORDS, GUESS_POLICY, ACCEPTED_GUESSES] = await Promise.all([
     fetchJson("../../packages/corpus/le-mot-a-biloute/words.json"),
     fetchJson("../../packages/corpus/le-mot-a-biloute/guess-policy.json"),
     fetchJson("../../packages/corpus/le-mot-a-biloute/accepted-guesses.json"),
-    fetchJson("../../packages/corpus/le-mot-a-biloute/french-guesses.json"),
   ]);
 } catch (error) {
   reportCorpusError();
   throw error;
+}
+
+function loadFrenchGuesses() {
+  fetchJson("../../packages/corpus/le-mot-a-biloute/french-guesses.json")
+    .then((data) => {
+      FRENCH_GUESSES = data || { words: [] };
+      acceptedGuessSet = buildAcceptedGuessSet();
+      dictionaryReady = true;
+    })
+    .catch(() => {
+      // Échec réseau : on reste sur le calepin curé (validation moins large mais fonctionnelle).
+      dictionaryReady = true;
+    });
 }
 
 function reportCorpusError() {
@@ -142,6 +157,7 @@ scheduleDailyRefresh();
 scheduleCountdownRefresh();
 showLaunchHelp();
 renderYesterdayWord();
+loadFrenchGuesses();
 
 function renderYesterdayWord() {
   if (!els.yesterdayLine) return;
@@ -373,7 +389,9 @@ function validateGuess(guess) {
   }
 
   const rules = GUESS_POLICY.rules || {};
-  if (GUESS_POLICY.mode === "strict") {
+  // Tant que le dictionnaire français n'est pas chargé, on n'applique pas le rejet
+  // « mot inconnu » pour ne pas refuser à tort un mot valide pendant le chargement.
+  if (GUESS_POLICY.mode === "strict" && dictionaryReady) {
     if (!acceptedGuessSet.has(guess)) {
       return {
         valid: false,

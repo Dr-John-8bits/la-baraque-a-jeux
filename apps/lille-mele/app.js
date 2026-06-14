@@ -495,7 +495,7 @@ function buildShareText() {
   });
   while (lines.length < 5) lines.push("⬛⬛⬛⬛");
   lines.push(`Erreurs : ${state.mistakes}/${MAX_MISTAKES}`);
-  lines.push(window.location.href.split("#")[0]);
+  lines.push(new URL(".", window.location.href).href);
   return lines.join("\n");
 }
 
