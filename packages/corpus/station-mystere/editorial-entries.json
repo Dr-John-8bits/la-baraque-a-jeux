@@ -41,28 +41,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis un terminus de la ligne 1, près d'un grand stade et d'un campus."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Villeneuve-d'Ascq."
+          "texte": "Je suis située à Villeneuve-d'Ascq."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis un terminus de la ligne M1."
+          "type": "landmark",
+          "texte": "Le grand stade de la métropole, au toit mobile, est accessible à pied depuis mes quais."
         },
         {
           "ordre": 5,
-          "type": "landmark",
-          "texte": "Je sers d'acces metro a la Cite scientifique."
+          "type": "etymologie",
+          "texte": "Mon nom mêle un lieu-dit à quatre angles et un ancien maire de Lille devenu Premier ministre."
         }
       ],
       "ficheDecouverte": {
@@ -73,11 +73,13 @@
           "Commune : Villeneuve-d'Ascq.",
           "Particularite : terminus.",
           "Ouverte sous le nom Quatre Cantons, la station a ensuite pris un sous-titre lie au Grand Stade avant d'adopter la reference au Stade Pierre-Mauroy.",
-          "Mise en service en 1982 sur le premier troncon du VAL, la station fait partie des points de depart historiques du metro lillois avant l'inauguration officielle de 1983."
+          "Mise en service en 1982 sur le premier troncon du VAL, la station fait partie des points de depart historiques du metro lillois avant l'inauguration officielle de 1983.",
+          "Lieu remarquable : le Stade Pierre-Mauroy, à proximité."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -88,7 +90,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -110,28 +113,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le grand campus universitaire et scientifique de la métropole."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Villeneuve-d'Ascq."
+          "texte": "Je suis située à Villeneuve-d'Ascq."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je dessers le campus scientifique de l'Universite de Lille."
+          "type": "architecture",
+          "texte": "Station aérienne, mon bâtiment de verre bleu et d'acier enveloppe le viaduc de la ligne 1."
         },
         {
           "ordre": 5,
-          "type": "architecture",
-          "texte": "Mon batiment aerien utilise du verre bleu autour du viaduc."
+          "type": "etymologie",
+          "texte": "Mon nom dit clairement la vocation savante du quartier."
         }
       ],
       "ficheDecouverte": {
@@ -142,11 +145,13 @@
           "Commune : Villeneuve-d'Ascq.",
           "La station ajoute Professeur Gabillard a son nom en hommage a Robert Gabillard, figure associee a l'invention du VAL.",
           "Mise en service en 1982 sur le premier troncon Quatre Cantons - Hotel de Ville, elle appartient aux stations pionnieres du metro lillois.",
-          "Le batiment aerien, en verre bleu et en acier, enveloppe le viaduc de la ligne 1."
+          "Le batiment aerien, en verre bleu et en acier, enveloppe le viaduc de la ligne 1.",
+          "Architecture : station aérienne au bâtiment de verre bleu enveloppant le viaduc."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -156,7 +161,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -173,28 +179,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier de Villeneuve-d'Ascq, près de la Cité scientifique."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Villeneuve-d'Ascq."
+          "texte": "Je suis située à Villeneuve-d'Ascq."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je suis reliee au centre commercial du Triolo."
+          "type": "art",
+          "texte": "Une fresque de céramique émaillée aux tons jaune et bleu habille ma station."
         },
         {
           "ordre": 5,
-          "type": "architecture",
-          "texte": "J'ai ete construite en tranchee ouverte pour eviter un viaduc dans le quartier."
+          "type": "etymologie",
+          "texte": "Mon nom, court et chantant, désigne un quartier né avec la ville nouvelle."
         }
       ],
       "ficheDecouverte": {
@@ -205,11 +211,13 @@
           "Commune : Villeneuve-d'Ascq.",
           "Le nom reprend celui du quartier du Triolo a Villeneuve-d'Ascq.",
           "Le refus du viaduc par les habitants conduit a construire la station en tranchee ouverte plutot qu'en hauteur.",
-          "La station est concue comme un puits de lumiere, avec une voute vitree au dessin futuriste."
+          "La station est concue comme un puits de lumiere, avec une voute vitree au dessin futuriste.",
+          "Œuvre d'art : fresque de céramique émaillée aux tons jaune et bleu."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -219,7 +227,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -240,28 +249,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "histoire",
+          "texte": "Je fais partie du tout premier tronçon du métro lillois, ouvert en 1982."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Villeneuve-d'Ascq."
+          "texte": "Je suis située à Villeneuve-d'Ascq."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je dessers le centre commercial V2."
+          "type": "art",
+          "texte": "Mes quais sont décorés par l'artiste Brigitte Denoyelle."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Un niveau de la station est lie a une gare routiere."
+          "type": "etymologie",
+          "texte": "Mon nom désigne la maison commune de la ville nouvelle."
         }
       ],
       "ficheDecouverte": {
@@ -272,11 +281,13 @@
           "Commune : Villeneuve-d'Ascq.",
           "La station, d'abord appelee Hotel de Ville, devient Villeneuve-d'Ascq - Hotel de Ville en 1999 pour eviter la confusion avec Wasquehal - Hotel de Ville.",
           "Elle appartient au troncon de 1982 ou le public pouvait observer les premiers essais du VAL.",
-          "Contrairement a beaucoup de stations lilloises, elle possede un quai central encadre par les voies."
+          "Contrairement a beaucoup de stations lilloises, elle possede un quai central encadre par les voies.",
+          "Histoire : station du premier tronçon expérimental du VAL (1982). Œuvre d'art : décor de Brigitte Denoyelle."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -286,7 +297,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -303,28 +315,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis un grand pôle d'échanges de Villeneuve-d'Ascq, près de l'université."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Villeneuve-d'Ascq."
+          "texte": "Je suis située à Villeneuve-d'Ascq."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je dessers le campus litteraire de l'Universite de Lille."
+          "type": "art",
+          "texte": "Une sculpture en bronze de Silviane Léger, « La Paternité », haute de deux mètres, orne ma station."
         },
         {
           "ordre": 5,
-          "type": "culture",
-          "texte": "On trouve dans ma station la sculpture L'Homme du metro."
+          "type": "etymologie",
+          "texte": "Mon nom évoque un ouvrage de bois qui franchissait jadis un cours d'eau."
         }
       ],
       "ficheDecouverte": {
@@ -335,11 +347,13 @@
           "Commune : Villeneuve-d'Ascq.",
           "Le nom reprend celui du quartier Pont-de-Bois de Villeneuve-d'Ascq.",
           "La station est inauguree le 25 avril 1983 lors du passage de Francois Mitterrand.",
-          "Une sculpture en bronze de Silviane Leger y est connue sous les noms La Paternite et L'Homme du metro."
+          "Une sculpture en bronze de Silviane Leger y est connue sous les noms La Paternite et L'Homme du metro.",
+          "Œuvre d'art : « La Paternité », sculpture en bronze de Silviane Léger (deux mètres de hauteur)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -349,7 +363,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -366,28 +381,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis une station de l'est de Lille, à la limite de Lezennes."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Hellemmes-Lille / Lezennes."
+          "type": "anecdote",
+          "texte": "Mes accès aux deux quais sont séparés de part et d'autre d'une rue, sans étage intermédiaire."
         },
         {
           "ordre": 4,
-          "type": "architecture",
-          "texte": "Mes deux quais ont des acces separes de chaque cote de la rue."
+          "type": "histoire",
+          "texte": "Mon ancien nom prêtait à confusion : la commune qu'il évoquait était à vingt minutes à pied."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers Hellemmes plutot que la commune indiquee par son ancien nom."
+          "type": "etymologie",
+          "texte": "Mon nom actuel associe un petit jardin public à une région du Nord."
         }
       ],
       "ficheDecouverte": {
@@ -398,11 +413,13 @@
           "Commune : Hellemmes-Lille / Lezennes.",
           "Ouverte sous le nom Lezennes, la station est renommee Square Flandres en 2017 pour eviter une confusion avec la commune voisine.",
           "La station est inauguree le 25 avril 1983 sous le nom Lezennes.",
-          "Son ancien nom pretait a confusion, car la commune de Lezennes se trouvait a environ vingt minutes a pied."
+          "Son ancien nom pretait a confusion, car la commune de Lezennes se trouvait a environ vingt minutes a pied.",
+          "Anecdote : l'ancien nom de la station prêtait à confusion avec Lezennes, distante d'une vingtaine de minutes à pied."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -413,7 +430,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -430,28 +448,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le cœur d'une commune associée à Lille, sur sa place du marché."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Hellemmes-Lille."
+          "texte": "Je suis située à Hellemmes."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Elle donne sur une place de marche d'Hellemmes."
+          "type": "art",
+          "texte": "Une œuvre de Danièle Hemerick, en grès émaillé, papier de verre et galets de mer, orne ma station."
         },
         {
           "ordre": 5,
-          "type": "architecture",
-          "texte": "Ma couleur dominante est l'orange."
+          "type": "etymologie",
+          "texte": "Mon nom associe un bâtiment officiel à celui d'une ancienne commune ferroviaire."
         }
       ],
       "ficheDecouverte": {
@@ -462,11 +480,13 @@
           "Commune : Hellemmes-Lille.",
           "La station ouvre sous le nom Hellemmes puis devient Mairie d'Hellemmes en 2017.",
           "Elle est inauguree le 25 avril 1983 lors de l'ouverture du metro lillois.",
-          "La station souterraine est fortement marquee par la couleur orange."
+          "La station souterraine est fortement marquee par la couleur orange.",
+          "Œuvre d'art : composition de Danièle Hemerick en grès émaillé, papier de verre et galets de mer."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -476,7 +496,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -493,28 +514,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis une petite station de l'est de Lille, entre deux quartiers."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Hellemmes-Lille / Lille."
+          "type": "anecdote",
+          "texte": "La toute première station V'Lille a été installée près de moi, en 2011."
         },
         {
           "ordre": 4,
-          "type": "history",
-          "texte": "La premiere station V'Lille a ete installee ici."
+          "type": "art",
+          "texte": "Une animation en bois de charpente, signée Jean-Rémy Locret, habille ma station."
         },
         {
           "ordre": 5,
-          "type": "culture",
-          "texte": "Mon oeuvre d'art utilise le bois de charpente."
+          "type": "etymologie",
+          "texte": "Mon nom évoque un atelier où l'on travaillait la pierre."
         }
       ],
       "ficheDecouverte": {
@@ -525,11 +546,13 @@
           "Commune : Hellemmes-Lille / Lille.",
           "Le nom localise la station dans le secteur Marbrerie du quartier de Fives.",
           "La station est inauguree le 25 avril 1983 lors de la venue de Francois Mitterrand.",
-          "Jean-Remy Locret y realise une animation en bois de charpente."
+          "Jean-Remy Locret y realise une animation en bois de charpente.",
+          "Œuvre d'art : animation en bois de charpente de Jean-Rémy Locret, artiste ayant aussi travaillé pour le métro parisien."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -540,7 +563,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -557,28 +581,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier de l'est de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "type": "histoire",
+          "texte": "Mon quartier garde une forte mémoire ouvrière, autour du rail et de la métallurgie."
         },
         {
           "ordre": 4,
-          "type": "culture",
-          "texte": "On trouve dans ma station les fresques Le Cri et Graffitis."
+          "type": "art",
+          "texte": "Mes murs portent les fresques « Le Cri » et « Graffitis » de Michel Degand."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le quartier de Fives."
+          "type": "etymologie",
+          "texte": "Mon nom court a aussi désigné une grande compagnie de constructions mécaniques."
         }
       ],
       "ficheDecouverte": {
@@ -589,11 +613,13 @@
           "Commune : Lille.",
           "Le nom reprend celui du quartier de Fives, qu'elle dessert directement.",
           "La station est mise en service le 25 avril 1983.",
-          "Elle se situe a l'intersection des rues Pierre-Legrand et de Lannoy, deux axes majeurs du quartier."
+          "Elle se situe a l'intersection des rues Pierre-Legrand et de Lannoy, deux axes majeurs du quartier.",
+          "Œuvre d'art : fresques « Le Cri » et « Graffitis » de Michel Degand."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -603,7 +629,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -620,28 +647,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis une station de l'est de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "type": "anecdote",
+          "texte": "J'ai changé de nom en 2024 pour honorer une figure locale."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je dessers directement la place Madeleine-Caulier."
+          "type": "art",
+          "texte": "Une œuvre de Silviane Léger orne ma station."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je longe la voie ferrree vers Mouscron."
+          "type": "etymologie",
+          "texte": "Mon nom associe un prénom féminin à un patronyme du Nord."
         }
       ],
       "ficheDecouverte": {
@@ -652,11 +679,13 @@
           "Commune : Lille.",
           "La station tient son nom de la place Madeleine-Caulier et de Madeleine Caulier ; elle s'appelait simplement Caulier a l'ouverture.",
           "La station est inauguree le 25 avril 1983 sous le nom Caulier.",
-          "Le sol est dalle et les murs sont en briques, avec une organisation souterraine sur trois niveaux."
+          "Le sol est dalle et les murs sont en briques, avec une organisation souterraine sur trois niveaux.",
+          "La station, anciennement « Caulier », a été rebaptisée « Madeleine Caulier » en 2024. Œuvre d'art : création de Silviane Léger."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -666,7 +695,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -686,28 +716,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis l'un des plus grands carrefours de transports de la métropole."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par les lignes M1 et M2."
+          "texte": "Je suis l'unique station desservie à la fois par les lignes 1 et 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis une correspondance entre les deux lignes de metro."
+          "type": "landmark",
+          "texte": "Une de mes sorties donne directement dans une grande gare, près d'Euralille et du Tripostal."
         },
         {
           "ordre": 5,
-          "type": "landmark",
-          "texte": "Une sortie de la station mene directement a la gare Lille-Flandres."
+          "type": "etymologie",
+          "texte": "Mon nom associe la grande gare de la ville à la région historique du Nord."
         }
       ],
       "ficheDecouverte": {
@@ -718,11 +748,13 @@
           "Commune : Lille.",
           "Particularite : correspondance entre M1 et M2.",
           "La station a d'abord porte le nom Gares, puis a ete renommee Gare Lille-Flandres pour la distinguer du pole Lille-Europe.",
-          "La ligne 1 y est mise en service en 1983, puis la ligne 2 arrive en avril 1989, faisant de la station un noeud majeur du metro lillois."
+          "La ligne 1 y est mise en service en 1983, puis la ligne 2 arrive en avril 1989, faisant de la station un noeud majeur du metro lillois.",
+          "Particularité : seule station en correspondance entre les lignes 1 et 2 ; accès direct à la gare Lille-Flandres."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -734,7 +766,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -751,28 +784,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis en plein centre de Lille, à deux pas d'une grande place piétonne."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "type": "art",
+          "texte": "Mes fresques de Michel Degand m'ont valu le surnom de « petit Louvre »."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je me trouve sous la place Rihour."
+          "type": "histoire",
+          "texte": "Mon nom rappelle un palais des ducs de Bourgogne dont il subsiste une trace."
         },
         {
           "ordre": 5,
-          "type": "architecture",
-          "texte": "Une pyramide de verre marque l'acces en surface."
+          "type": "landmark",
+          "texte": "On sort chez moi pour rejoindre la Grand-Place et l'office de tourisme."
         }
       ],
       "ficheDecouverte": {
@@ -783,11 +816,13 @@
           "Commune : Lille.",
           "Le nom reprend celui de la place Rihour, sous laquelle la station est implantee au coeur de Lille-Centre.",
           "Ouverte le 25 avril 1983 sur la ligne 1, la station fait partie du lancement officiel du metro lillois.",
-          "Une pyramide de verre sur la place sert de signal en surface et apporte de la lumiere vers la station souterraine."
+          "Une pyramide de verre sur la place sert de signal en surface et apporte de la lumiere vers la station souterraine.",
+          "Œuvre d'art : fresques de Michel Degand, qui ont valu à la station le surnom de « petit Louvre »."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -797,7 +832,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -818,28 +854,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis en plein centre de Lille, près d'une grande place."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "type": "culture",
+          "texte": "Je dessers le Palais des Beaux-Arts, l'un des plus grands musées de France."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je dessers le Palais des Beaux-Arts."
+          "type": "art",
+          "texte": "La sculpture « Les Muses » d'Armand Debève et des copies d'œuvres célèbres décorent mes quais."
         },
         {
           "ordre": 5,
-          "type": "architecture",
-          "texte": "Une ouverture dans la place apporte de la lumiere naturelle a la station."
+          "type": "etymologie",
+          "texte": "Mon nom double associe un idéal politique et le temple de l'art voisin."
         }
       ],
       "ficheDecouverte": {
@@ -850,11 +886,13 @@
           "Commune : Lille.",
           "La station s'appelait d'abord Republique avant d'ajouter Beaux-Arts en 1997, apres la reouverture du palais voisin.",
           "Ouverte en 1983 sous le nom Republique, la station appartient au premier temps fort du metro lillois sur la ligne 1.",
-          "La station est pensee comme un forum creuse dans la place, avec une ouverture qui fait descendre la lumiere naturelle."
+          "La station est pensee comme un forum creuse dans la place, avec une ouverture qui fait descendre la lumiere naturelle.",
+          "Œuvre d'art : « Les Muses », sculpture d'Armand Debève, accompagnée de copies de sculptures célèbres."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -864,7 +902,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -881,28 +920,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le nord du quartier de Wazemmes, à Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Une grande rue commercante portant le meme nom est proche."
+          "texte": "Le marché et les Halles de Wazemmes, la place Sébastopol et son théâtre sont dans mon voisinage."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le nord de Wazemmes."
+          "type": "etymologie",
+          "texte": "Je porte le nom d'une rue commerçante, qui honore un homme d'État de la IIIe République."
         }
       ],
       "ficheDecouverte": {
@@ -913,11 +952,13 @@
           "Commune : Lille.",
           "Le nom fait echo a la rue commercante Leon-Gambetta, citee parmi les reperes proches.",
           "La station est inauguree le 2 mai 1984 lors du prolongement de la ligne 1 vers CHR B-Calmette.",
-          "La page signale qu'au 25 decembre 2021 aucune ligne de bus ne dessert directement la station."
+          "La page signale qu'au 25 decembre 2021 aucune ligne de bus ne dessert directement la station.",
+          "Lieux remarquables : marché et Halles de Wazemmes, place Sébastopol et son théâtre."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -927,7 +968,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -944,28 +986,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier populaire et cosmopolite de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "type": "anecdote",
+          "texte": "Le dimanche matin, mon quartier vit au rythme de l'un des plus grands marchés de Lille."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Le marche de Wazemmes est un repere proche."
+          "type": "art",
+          "texte": "La sculpture « La Source de vie » de Fleckenstein orne ma station."
         },
         {
           "ordre": 5,
-          "type": "culture",
-          "texte": "La sculpture Source de vie est associee a la station."
+          "type": "etymologie",
+          "texte": "Mon nom est celui d'un ancien village devenu quartier de Lille."
         }
       ],
       "ficheDecouverte": {
@@ -976,11 +1018,13 @@
           "Commune : Lille.",
           "Le nom reprend celui du quartier lillois de Wazemmes.",
           "La station ouvre le 2 mai 1984 lors du prolongement de la ligne 1 vers CHR B-Calmette.",
-          "La sculpture Source de vie de Fleckenstein est mise en valeur par une architecture volontairement sobre."
+          "La sculpture Source de vie de Fleckenstein est mise en valeur par une architecture volontairement sobre.",
+          "Œuvre d'art : sculpture « La Source de vie » de Fleckenstein."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -990,7 +1034,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1007,28 +1052,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis un grand point de correspondance du réseau, à Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par les lignes M1 et M2."
+          "texte": "Je suis l'une des deux stations où se croisent les lignes 1 et 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille, entre Wazemmes et Moulins."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis une correspondance entre les deux lignes de metro."
+          "type": "histoire",
+          "texte": "Comme plusieurs voisines, je tiens mon nom d'une ancienne porte des remparts de Lille."
         },
         {
           "ordre": 5,
-          "type": "history",
-          "texte": "La toiture de la station a ete partiellement endommagee lors d'un accident routier en 2017."
+          "type": "etymologie",
+          "texte": "Mon nom évoque le courrier autant que les fortifications disparues."
         }
       ],
       "ficheDecouverte": {
@@ -1039,11 +1084,13 @@
           "Commune : Lille.",
           "Particularite : correspondance entre M1 et M2.",
           "Le nom renvoie a l'ancienne Porte des Postes de Lille, disparue lors de la suppression des remparts sud dans les annees 1930.",
-          "La partie ligne 1 ouvre en 1984, puis la ligne 1 bis arrive en 1989 avant de devenir la ligne 2 quelques annees plus tard."
+          "La partie ligne 1 ouvre en 1984, puis la ligne 1 bis arrive en 1989 avant de devenir la ligne 2 quelques annees plus tard.",
+          "Particularité : l'une des deux correspondances entre les lignes 1 et 2 ; le nom vient d'une ancienne porte des fortifications de Lille."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1055,7 +1102,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1076,28 +1124,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le grand centre hospitalier de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "La gare de Lille-CHR est proche."
+          "texte": "Station aérienne sur deux niveaux, je donne accès à la cité hospitalière et à la gare de Lille-CHR."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom associe le CHU desservi et l'avenue Oscar-Lambret ; Oscar Lambret est lie a la creation du centre hospitalier regional universitaire de Lille."
+          "type": "etymologie",
+          "texte": "Mon nom abrège un centre hospitalier et honore un professeur de médecine."
         }
       ],
       "ficheDecouverte": {
@@ -1108,11 +1156,13 @@
           "Commune : Lille.",
           "Le nom associe le CHU desservi et l'avenue Oscar-Lambret ; Oscar Lambret est lie a la creation du centre hospitalier regional universitaire de Lille.",
           "La station ouvre le 2 mai 1984 sous le nom CHR Oscar-Lambret.",
-          "La station est aerienne et organisee sur deux niveaux autour des voies centrales."
+          "La station est aerienne et organisee sur deux niveaux autour des voies centrales.",
+          "Lieu remarquable : la cité hospitalière de Lille et la gare de Lille-CHR."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1122,7 +1172,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1143,28 +1194,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis un terminus de la ligne 1, au sud de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M1."
+          "texte": "Je suis desservie par la ligne 1."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis un terminus de la ligne M1."
+          "type": "landmark",
+          "texte": "Je dessers le grand centre hospitalier de Lille et le parc Eurasanté, pôle de la santé et des biotechnologies."
         },
         {
           "ordre": 5,
-          "type": "landmark",
-          "texte": "Mon nom actuel renvoie au pole Eurasante."
+          "type": "etymologie",
+          "texte": "Mon nom associe un hôpital universitaire à un parc dédié à la santé."
         }
       ],
       "ficheDecouverte": {
@@ -1175,11 +1226,13 @@
           "Commune : Lille.",
           "Particularite : terminus.",
           "Ouverte sous le nom CHR B-Calmette, la station devient CHU - Eurasante en mars 2017.",
-          "La station ouvre le 2 mai 1984 comme terminus sud de la ligne 1."
+          "La station ouvre le 2 mai 1984 comme terminus sud de la ligne 1.",
+          "Lieu remarquable : la cité hospitalière de Lille et le parc d'activités Eurasanté (santé, biotechnologies). Terminus sud de la ligne 1."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1190,7 +1243,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1209,28 +1263,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis un terminus de la ligne 2, tout au nord de la métropole."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing, près de la frontière belge."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis un terminus de la ligne M2."
+          "type": "anecdote",
+          "texte": "On peut prolonger le voyage chez moi par un bus du réseau wallon TEC, vers la Belgique."
         },
         {
           "ordre": 5,
-          "type": "landmark",
-          "texte": "Un centre hospitalier porte le meme nom a proximite."
+          "type": "etymologie",
+          "texte": "Mon nom abrège celui d'un grand centre hospitalier tourquennois."
         }
       ],
       "ficheDecouverte": {
@@ -1241,11 +1295,13 @@
           "Commune : Tourcoing.",
           "Particularite : terminus.",
           "Le nom renvoie au centre hospitalier Gustave-Dron situe a proximite.",
-          "La station marque l'extremite nord-est de la ligne M2, a Tourcoing et pres de la frontiere belge."
+          "La station marque l'extremite nord-est de la ligne M2, a Tourcoing et pres de la frontiere belge.",
+          "Particularité : terminus nord de la ligne 2, en correspondance avec une ligne du réseau belge TEC Hainaut."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1256,7 +1312,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1273,28 +1330,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur du nord-est de Tourcoing, sur la fin de la ligne 2."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing."
         },
         {
           "ordre": 4,
-          "type": "network",
-          "texte": "Je suis situee entre CH Dron et Pont de Neuville."
+          "type": "secteur",
+          "texte": "Je me trouve entre le terminus C.H. Dron et la station Pont de Neuville."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom renvoie au secteur Bourgogne de Tourcoing."
+          "type": "etymologie",
+          "texte": "Mon nom est celui d'une grande région viticole de l'est de la France."
         }
       ],
       "ficheDecouverte": {
@@ -1305,11 +1362,13 @@
           "Commune : Tourcoing.",
           "Le nom renvoie au secteur Bourgogne de Tourcoing.",
           "La station appartient au troncon tourquennois de la ligne M2, entre CH Dron et Pont de Neuville.",
-          "La page signale une desserte par la ligne Z1 du reseau Ilevia."
+          "La page signale une desserte par la ligne Z1 du reseau Ilevia.",
+          "Situation : station du tronçon tourquennois de la ligne 2, dans le secteur Bourgogne."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1319,7 +1378,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1336,28 +1396,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur résidentiel du nord de Tourcoing."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Un grand cimetiere municipal est cite a proximite."
+          "type": "secteur",
+          "texte": "Je me situe sur le tronçon nord de la ligne 2, entre Bourgogne et Phalempins."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Je me trouve entre Bourgogne et Phalempins."
+          "type": "etymologie",
+          "texte": "Mon nom évoque un ouvrage qui enjambe, dans un secteur tourquennois."
         }
       ],
       "ficheDecouverte": {
@@ -1368,11 +1428,13 @@
           "Commune : Tourcoing.",
           "Le nom reprend le secteur Pont de Neuville a Tourcoing.",
           "La station se situe sur le troncon nord de M2, entre Bourgogne et Phalempins.",
-          "Elle est desservie par plusieurs lignes locales, dont CITT, Z1 et des services sur reservation."
+          "Elle est desservie par plusieurs lignes locales, dont CITT, Z1 et des services sur reservation.",
+          "Situation : station du secteur Pont de Neuville, au nord de Tourcoing."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1382,7 +1444,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1399,28 +1462,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier du nord de Tourcoing."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing."
         },
         {
           "ordre": 4,
-          "type": "network",
-          "texte": "Aucune ligne de bus n'est signalee directement a la station."
+          "type": "architecture",
+          "texte": "Je suis organisée sur deux niveaux, avec voies centrales et quais opposés."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom renvoie au secteur des Phalempins a Tourcoing."
+          "type": "etymologie",
+          "texte": "Mon nom, peu courant, désigne un secteur de Tourcoing."
         }
       ],
       "ficheDecouverte": {
@@ -1431,11 +1494,13 @@
           "Commune : Tourcoing.",
           "Le nom renvoie au secteur des Phalempins a Tourcoing.",
           "La station dessert Tourcoing sur la partie nord de la ligne M2.",
-          "La page indique qu'aucune ligne de bus ne dessert directement la station."
+          "La page indique qu'aucune ligne de bus ne dessert directement la station.",
+          "Situation : station du secteur des Phalempins, au nord de Tourcoing."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1445,7 +1510,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1462,28 +1528,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier de la ville textile du nord."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Le Grand Mix est un repere culturel proche."
+          "texte": "La salle de concert Le Grand Mix, scène de musiques actuelles, est dans mon voisinage."
         },
         {
           "ordre": 5,
-          "type": "culture",
-          "texte": "Je suis associee a un decor de 1800 carreaux de ceramique."
+          "type": "etymologie",
+          "texte": "Mon nom est celui d'un grand ministre de Louis XIV."
         }
       ],
       "ficheDecouverte": {
@@ -1494,11 +1560,13 @@
           "Commune : Tourcoing.",
           "La station tient son nom du lycee Colbert situe non loin.",
           "Ben Bella a decore la station avec 1800 carreaux de ceramique.",
-          "La station est batie sur trois niveaux, avec un niveau intermediaire pour choisir la direction."
+          "La station est batie sur trois niveaux, avec un niveau intermediaire pour choisir la direction.",
+          "Lieu remarquable : la salle de concert Le Grand Mix, à Tourcoing."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1508,7 +1576,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1527,28 +1596,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le cœur d'une grande ville textile du nord de la métropole."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "L'hotel de ville de Tourcoing est proche."
+          "texte": "L'hôtel de ville, le beffroi et d'anciennes places marchandes m'entourent ; je suis aussi un terminus du tramway."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Je suis le terminus tourquennois de la ligne T du tramway."
+          "type": "etymologie",
+          "texte": "Mon nom dit que je marque le centre de la ville aux mille cheminées."
         }
       ],
       "ficheDecouverte": {
@@ -1559,11 +1628,13 @@
           "Commune : Tourcoing.",
           "Le nom vient de sa situation au centre de Tourcoing.",
           "La station a ete ouverte comme terminus de la ligne T du tramway et de la ligne 2 du metro.",
-          "Elle reste le terminus de la ligne T du tramway."
+          "Elle reste le terminus de la ligne T du tramway.",
+          "Particularité : terminus de la ligne T du tramway, au centre de Tourcoing (hôtel de ville, beffroi)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1573,7 +1644,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1590,28 +1662,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le quartier d'une gare, dans la ville textile du nord."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je suis liee a une gare desservie par Ouigo."
+          "type": "histoire",
+          "texte": "Je m'appelais « Tourcoing - Sébastopol » avant de prendre le nom de la gare voisine, desservie par le TGV et Ouigo."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Elle combine repere ferroviaire et ligne M2."
+          "type": "etymologie",
+          "texte": "Mon nom associe la grande ville textile à sa gare."
         }
       ],
       "ficheDecouverte": {
@@ -1622,11 +1694,13 @@
           "Commune : Tourcoing.",
           "La station s'appelait Tourcoing - Sebastopol avant de prendre le nom de la gare ferroviaire voisine.",
           "La station est associee a la gare de Tourcoing, desservie par TER, TGV inOui et Ouigo.",
-          "La Liane 4 dessert egalement le secteur de la gare."
+          "La Liane 4 dessert egalement le secteur de la gare.",
+          "Histoire : ancienne station « Tourcoing - Sébastopol », renommée d'après la gare ferroviaire voisine."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1636,7 +1710,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1653,28 +1728,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier de la ville textile du nord."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing."
         },
         {
           "ordre": 4,
-          "type": "geography",
-          "texte": "Je dessers le quartier Gambetta a Tourcoing."
+          "type": "landmark",
+          "texte": "Le lycée Léon-Gambetta est l'un de mes repères proches."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom vient de la rue des Carliers, qui traverse le boulevard Gambetta."
+          "type": "etymologie",
+          "texte": "Mon nom, au pluriel, sonne comme un patronyme du Nord."
         }
       ],
       "ficheDecouverte": {
@@ -1685,11 +1760,13 @@
           "Commune : Tourcoing.",
           "Le nom vient de la rue des Carliers, qui traverse le boulevard Gambetta.",
           "La station permet de desservir le quartier Gambetta de Tourcoing.",
-          "Elle beneficie de deux acces et d'un ascenseur en surface."
+          "Elle beneficie de deux acces et d'un ascenseur en surface.",
+          "Lieu remarquable : le lycée Léon-Gambetta, à Tourcoing."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1699,7 +1776,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1716,28 +1794,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur d'affaires de Tourcoing."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis située à Tourcoing."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Je dois son nom a un centre d'affaires."
+          "texte": "Je tiens mon nom d'un centre d'affaires qui abrita l'entreprise de vente Quelle, puis le tribunal de commerce."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le secteur de la zone de l'Union."
+          "type": "etymologie",
+          "texte": "Mon nom est celui du dieu romain du commerce."
         }
       ],
       "ficheDecouverte": {
@@ -1748,11 +1826,13 @@
           "Commune : Tourcoing.",
           "La station tient son nom du centre d'affaires Le Mercure.",
           "Le batiment Mercure a accueilli l'entreprise Quelle avant d'etre associe au tribunal de commerce.",
-          "La page indique qu'aucune ligne de bus ne dessert la station."
+          "La page indique qu'aucune ligne de bus ne dessert la station.",
+          "Lieu remarquable : le centre d'affaires Le Mercure, ancien siège de l'entreprise Quelle."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1762,7 +1842,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1782,28 +1863,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur reconverti de la ville textile."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Roubaix."
+          "texte": "Je suis située à Roubaix."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Le Fresnoy est un repere culturel proche."
+          "texte": "À deux pas, la Plaine Images réunit studios de tournage, jeux vidéo et création audiovisuelle."
         },
         {
           "ordre": 5,
-          "type": "culture",
-          "texte": "Je dessers un pole d'industries culturelles et creatives."
+          "type": "etymologie",
+          "texte": "Mon nom est celui d'une région française de l'est."
         }
       ],
       "ficheDecouverte": {
@@ -1814,11 +1895,13 @@
           "Commune : Roubaix.",
           "Son nom originel renvoie au boulevard d'Alsace qu'elle dessert.",
           "La station devient Alsace - Plaine Images en 2024 pour signaler le pole d'industries culturelles et creatives voisin.",
-          "Plaine Images rassemble entreprises, ecoles, recherche, tournage, doublage et coworking."
+          "Plaine Images rassemble entreprises, ecoles, recherche, tournage, doublage et coworking.",
+          "Lieu remarquable : la Plaine Images, pôle de l'image et de l'audiovisuel, à proximité."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1828,7 +1911,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1846,28 +1930,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le quartier d'une gare, dans la grande ville textile."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Roubaix."
+          "texte": "Je suis située à Roubaix."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Je dessers la gare de Roubaix."
+          "texte": "Le musée La Piscine, installé dans une ancienne piscine art déco, est tout proche."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom associe l'avenue Jean-Lebas et la gare de Roubaix."
+          "type": "etymologie",
+          "texte": "Mon nom associe la gare de la ville à un ancien maire de Roubaix."
         }
       ],
       "ficheDecouverte": {
@@ -1878,11 +1962,13 @@
           "Commune : Roubaix.",
           "Le nom associe l'avenue Jean-Lebas et la gare de Roubaix.",
           "La station s'appelait auparavant Gare - Jean-Lebas.",
-          "La station est l'oeuvre de Jean-Charles Huet et s'organise sur trois niveaux."
+          "La station est l'oeuvre de Jean-Charles Huet et s'organise sur trois niveaux.",
+          "Lieu remarquable : le musée d'art et d'industrie La Piscine, à proximité."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1892,7 +1978,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1912,28 +1999,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le cœur d'une grande ville textile voisine de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Roubaix."
+          "texte": "Je suis située à Roubaix."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je dessers la Grand-Place de Roubaix."
+          "type": "art",
+          "texte": "Une œuvre du peintre roubaisien Paul Hémery orne mon intérieur."
         },
         {
           "ordre": 5,
-          "type": "history",
-          "texte": "Ma construction a donne lieu a des fouilles archeologiques."
+          "type": "landmark",
+          "texte": "Je débouche sur la grand-place de la ville, près de son hôtel de ville."
         }
       ],
       "ficheDecouverte": {
@@ -1944,11 +2031,13 @@
           "Commune : Roubaix.",
           "La station doit son nom a la Grand-Place de Roubaix qu'elle dessert.",
           "Des fouilles archeologiques sont menees des 1990 lors de la construction de la station.",
-          "La station donne acces au coeur civique et culturel de Roubaix."
+          "La station donne acces au coeur civique et culturel de Roubaix.",
+          "Œuvre d'art : peinture de Paul Hémery, artiste roubaisien, à l'intérieur de la station."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -1958,7 +2047,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -1976,28 +2066,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis un grand carrefour des transports de la ville textile."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Roubaix."
+          "texte": "Je suis située à Roubaix."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Les Archives nationales du monde du travail sont proches."
+          "type": "architecture",
+          "texte": "Un grand dôme coiffe ma salle des billets ; je suis aussi un terminus du tramway."
         },
         {
           "ordre": 5,
-          "type": "architecture",
-          "texte": "Un grand dome se trouve dans la salle des billets."
+          "type": "etymologie",
+          "texte": "Mon nom, très moderne, mêle l'Europe et les télécommunications."
         }
       ],
       "ficheDecouverte": {
@@ -2008,11 +2098,13 @@
           "Commune : Roubaix.",
           "Le nom Euroteleport identifie un grand pole d'echange de Roubaix.",
           "La station de metro est inauguree en 1999 sur la ligne 2.",
-          "Un grand dome marque la salle des billets de la station."
+          "Un grand dome marque la salle des billets de la station.",
+          "Particularité : grand dôme sur la salle des billets ; carrefour métro, tramway (terminus branche Roubaix) et bus."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2022,7 +2114,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2042,28 +2135,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers une grande ville textile au nord-est de la métropole."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Roubaix."
+          "texte": "Je suis située à Roubaix."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Le conservatoire de Roubaix est proche."
+          "type": "art",
+          "texte": "Une œuvre de l'artiste Pascal Barbe orne ma station."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Mon boulevard fait partie du Grand Boulevard."
+          "type": "etymologie",
+          "texte": "Mon nom complet associe la ville à un grand homme d'État du XXe siècle."
         }
       ],
       "ficheDecouverte": {
@@ -2074,11 +2167,13 @@
           "Commune : Roubaix.",
           "Le nom renvoie au boulevard du General-de-Gaulle situe a proximite.",
           "Ce boulevard constitue une portion du Grand Boulevard reliant Roubaix, Tourcoing et Lille.",
-          "La station n'est desservie par aucune ligne de bus d'apres la page."
+          "La station n'est desservie par aucune ligne de bus d'apres la page.",
+          "Œuvre d'art : création de Pascal Barbe (architecte de la station : Jean-Claude Burdese)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2088,7 +2183,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2111,28 +2207,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur de la ville textile, au croisement de grands boulevards."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Roubaix."
+          "texte": "Je suis située à Roubaix."
         },
         {
           "ordre": 4,
-          "type": "architecture",
-          "texte": "Je suis attribuee a l'architecte Alain Raigaud."
+          "type": "landmark",
+          "texte": "Je me trouve au croisement des boulevards de Cambrai et de Montesquieu."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je me trouve pres des boulevards de Cambrai et Montesquieu."
+          "type": "etymologie",
+          "texte": "Mon nom abrège un quartier roubaisien et celui d'un grand philosophe des Lumières."
         }
       ],
       "ficheDecouverte": {
@@ -2143,11 +2239,13 @@
           "Commune : Roubaix.",
           "Le nom associe le quartier de l'Epeule et le boulevard Montesquieu.",
           "La station est attribuee a l'architecte Alain Raigaud.",
-          "Elle se situe au croisement de plusieurs axes, dont les boulevards de Cambrai et de Montesquieu."
+          "Elle se situe au croisement de plusieurs axes, dont les boulevards de Cambrai et de Montesquieu.",
+          "Situation : au croisement des boulevards de Cambrai et de Montesquieu, à Roubaix."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2157,7 +2255,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2174,28 +2273,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le centre d'une commune de l'agglomération roubaisienne."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Croix."
+          "texte": "Je suis située à Croix."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Je dessers la mairie de Croix."
+          "texte": "La grande école de commerce EDHEC est l'un de mes repères proches."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom vient de l'hotel de ville de Croix."
+          "type": "etymologie",
+          "texte": "Mon nom associe la maison commune à celui de ma commune."
         }
       ],
       "ficheDecouverte": {
@@ -2206,11 +2305,13 @@
           "Commune : Croix.",
           "La station tient son nom de l'hotel de ville de Croix.",
           "Elle dessert le secteur de la mairie de Croix sur la ligne M2.",
-          "La page signale une desserte par la ligne 36 du reseau Ilevia."
+          "La page signale une desserte par la ligne 36 du reseau Ilevia.",
+          "Lieu remarquable : l'EDHEC, grande école de commerce, à proximité."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2220,7 +2321,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2239,28 +2341,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le centre d'une commune de l'agglomération roubaisienne."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Croix."
+          "texte": "Je suis située à Croix."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Les 3 Suisses sont un repere mentionne a proximite."
+          "texte": "Le siège historique des 3 Suisses, célèbre maison de vente par correspondance, est tout près."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le centre-ville de Croix."
+          "type": "etymologie",
+          "texte": "Mon nom de commune est court, et je marque son centre."
         }
       ],
       "ficheDecouverte": {
@@ -2271,11 +2373,13 @@
           "Commune : Croix.",
           "La station doit son nom au centre-ville de Croix qu'elle dessert.",
           "Elle constitue la station M2 du centre-ville de Croix.",
-          "La page signale une desserte par la ligne 32 du reseau Ilevia."
+          "La page signale une desserte par la ligne 32 du reseau Ilevia.",
+          "Lieu remarquable : le siège des 3 Suisses, à Croix."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2285,7 +2389,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2306,28 +2411,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le centre administratif d'une commune du nord-est de la métropole."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Wasquehal."
+          "texte": "Je suis située à Wasquehal."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Je dessers l'hotel de ville de Wasquehal."
+          "texte": "La mairie et l'office de tourisme de la commune sont mes repères directs."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom vient a la mairie de Wasquehal, aussi appelee hotel de ville."
+          "type": "etymologie",
+          "texte": "Mon nom désigne la maison commune de ma ville."
         }
       ],
       "ficheDecouverte": {
@@ -2338,11 +2443,13 @@
           "Commune : Wasquehal.",
           "La station doit son nom a la mairie de Wasquehal, aussi appelee hotel de ville.",
           "Elle dessert le secteur administratif central de Wasquehal.",
-          "Elle est desservie par les lignes 30, C11 et 906 du reseau Ilevia."
+          "Elle est desservie par les lignes 30, C11 et 906 du reseau Ilevia.",
+          "Situation : station du secteur administratif de Wasquehal (mairie, office de tourisme)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2352,7 +2459,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2373,28 +2481,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur de Wasquehal, au nord-est de la métropole."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Wasquehal."
+          "texte": "Je suis située à Wasquehal."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Mon nom vient d'un batiment administratif local."
+          "type": "anecdote",
+          "texte": "Ma station de métro passe juste sous la ligne de tramway qui relie Lille à Roubaix."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Je permets une correspondance avec le tramway vers Roubaix."
+          "type": "etymologie",
+          "texte": "Mon nom associe ma commune à un bâtiment administratif au nom lillois."
         }
       ],
       "ficheDecouverte": {
@@ -2405,11 +2513,13 @@
           "Commune : Wasquehal.",
           "La station doit son nom au Pavé de Lille, batiment administratif de Wasquehal.",
           "Le secteur accueille a la fois une station de tramway et une station de metro.",
-          "La station de metro se situe juste sous la ligne de tramway reliant Lille a Roubaix."
+          "La station de metro se situe juste sous la ligne de tramway reliant Lille a Roubaix.",
+          "Particularité : la station de métro est située sous la ligne de tramway Lille-Roubaix."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2419,7 +2529,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2438,28 +2549,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le quartier du Sart-Babylone, à Villeneuve-d'Ascq."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Villeneuve-d'Ascq."
+          "texte": "Je suis située à Villeneuve-d'Ascq."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Le chateau du Sart est proche."
+          "texte": "Le château du Sart et son golf figurent parmi mes repères proches."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le quartier du Sart-Babylone."
+          "type": "etymologie",
+          "texte": "Je porte le nom d'une artère qui honore un grand orateur socialiste."
         }
       ],
       "ficheDecouverte": {
@@ -2470,11 +2581,13 @@
           "Commune : Villeneuve-d'Ascq.",
           "Elle doit son nom a la rue Jean-Jaures, artère principale du quartier.",
           "La station dessert le quartier du Sart-Babylone a Villeneuve-d'Ascq.",
-          "Elle est batie sur deux niveaux avec un acces et un ascenseur en surface."
+          "Elle est batie sur deux niveaux avec un acces et un ascenseur en surface.",
+          "Lieux remarquables : le château du Sart et son golf, à Villeneuve-d'Ascq."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2484,7 +2597,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2506,28 +2620,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un parc d'activités de Villeneuve-d'Ascq."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Villeneuve-d'Ascq."
+          "texte": "Je suis située à Villeneuve-d'Ascq."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Decathlon Campus est un repere proche."
+          "texte": "Le Decathlon Campus, siège de l'enseigne de sport, est à deux pas, et mon parking sert de navette vers le grand stade."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Mon parking a ete agrandi pour une navette vers le stade."
+          "type": "etymologie",
+          "texte": "Mon nom accole au quartier des Prés celui d'un ancien ministre."
         }
       ],
       "ficheDecouverte": {
@@ -2538,11 +2652,13 @@
           "Commune : Villeneuve-d'Ascq.",
           "Elle doit son nom au quartier des Prés, auquel le nom Edgard-Pisani a ete accole.",
           "Le parking de la station est agrandi pour creer une liaison navette avec le stade Pierre-Mauroy.",
-          "La station est aerienne avec des quais disposes de biais."
+          "La station est aerienne avec des quais disposes de biais.",
+          "Lieu remarquable : le Decathlon Campus ; parking-navette vers le Stade Pierre-Mauroy."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2552,7 +2668,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2569,28 +2686,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur de Mons-en-Barœul, à l'est de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Mons-en-Barœul."
+          "texte": "Je suis située à Mons-en-Barœul."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Une maison folie porte le meme nom a proximite."
+          "texte": "Je tiens mon nom d'un ancien fort, devenu une maison folie."
         },
         {
           "ordre": 5,
-          "type": "architecture",
-          "texte": "Je dispose d'un quai central."
+          "type": "etymologie",
+          "texte": "Mon nom associe un ouvrage militaire à ma commune."
         }
       ],
       "ficheDecouverte": {
@@ -2601,11 +2718,13 @@
           "Commune : Mons-en-Barœul.",
           "Elle doit son nom au fort de Mons qu'elle dessert.",
           "Elle est inauguree avec les autres stations de Mons-en-Baroeul lors du prolongement de la ligne.",
-          "La station possede un quai central et des voies opposees."
+          "La station possede un quai central et des voies opposees.",
+          "Lieu remarquable : le fort de Mons, devenu maison folie."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2615,7 +2734,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2632,28 +2752,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le centre d'une commune de l'est de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Mons-en-Barœul."
+          "texte": "Je suis située à Mons-en-Barœul."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Je dessers la mairie de Mons-en-Baroeul."
+          "texte": "La mairie de la commune est mon repère direct."
         },
         {
           "ordre": 5,
-          "type": "history",
-          "texte": "Elle ouvre dans le cadre du prolongement vers Fort de Mons."
+          "type": "etymologie",
+          "texte": "Mon nom désigne la maison commune d'une ville au nom partagé avec une cité belge."
         }
       ],
       "ficheDecouverte": {
@@ -2664,11 +2784,13 @@
           "Commune : Mons-en-Barœul.",
           "Elle doit son nom a la mairie de Mons-en-Baroeul.",
           "La station est inauguree lors du prolongement vers Fort de Mons.",
-          "Elle est desservie par les lignes C9 et CO3 du reseau Ilevia."
+          "Elle est desservie par les lignes C9 et CO3 du reseau Ilevia.",
+          "Situation : station du centre de Mons-en-Barœul (mairie)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2678,7 +2800,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2695,28 +2818,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le quartier des Sarts, à Mons-en-Barœul."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Mons-en-Barœul."
+          "texte": "Je suis située à Mons-en-Barœul."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Le siege d'AG2R La Mondiale est proche."
+          "texte": "Le siège social du groupe de protection sociale AG2R La Mondiale est l'un de mes repères proches."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le quartier des Sarts."
+          "type": "etymologie",
+          "texte": "Mon nom associe ma commune à un quartier au nom court."
         }
       ],
       "ficheDecouverte": {
@@ -2727,11 +2850,13 @@
           "Commune : Mons-en-Barœul.",
           "La station doit son nom au quartier des Sarts qu'elle dessert.",
           "Elle est inauguree lors du prolongement de M2 vers Fort de Mons.",
-          "La station est desservie par la ligne 13 du reseau Ilevia."
+          "La station est desservie par la ligne 13 du reseau Ilevia.",
+          "Lieu remarquable : le siège d'AG2R La Mondiale, à Mons-en-Barœul."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2741,7 +2866,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2759,28 +2885,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier du nord-est de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Une mairie de quartier est proche."
+          "texte": "La mairie de quartier et la polyclinique de La Louvière sont parmi mes repères proches."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le quartier Saint-Maurice Pellevoisin."
+          "type": "etymologie",
+          "texte": "Mon nom de quartier est double et se termine par « Pellevoisin »."
         }
       ],
       "ficheDecouverte": {
@@ -2791,11 +2917,13 @@
           "Commune : Lille.",
           "Elle doit son nom au quartier Saint-Maurice Pellevoisin qu'elle dessert.",
           "La station est inauguree lors du prolongement vers Fort de Mons.",
-          "Elle est desservie par les lignes L91E et 50 du reseau Ilevia."
+          "Elle est desservie par les lignes L91E et 50 du reseau Ilevia.",
+          "Situation : station du quartier Saint-Maurice Pellevoisin, au nord-est de Lille (polyclinique de La Louvière à proximité)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2805,7 +2933,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2824,28 +2953,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers l'une des deux grandes gares de Lille, celle des trains à grande vitesse."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "type": "secteur",
+          "texte": "Je suis au pied du quartier d'affaires Euralille."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Euralille est un repere immediat."
+          "type": "art",
+          "texte": "Une fresque de Jean Pattou, « Piranèse 2000 », y mêle monuments du monde et repères lillois sur cinquante mètres."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Je dessers une gare TGV et Eurostar."
+          "type": "etymologie",
+          "texte": "Mon nom associe la ville à tout un continent."
         }
       ],
       "ficheDecouverte": {
@@ -2856,11 +2985,13 @@
           "Commune : Lille.",
           "Elle doit son nom a la gare de Lille-Europe qu'elle dessert.",
           "La station accompagne l'arrivee de la gare Lille-Europe et la ligne prend ensuite le nom de ligne 2.",
-          "La station descend sous la gare avec des niveaux plus hauts que dans une station ordinaire."
+          "La station descend sous la gare avec des niveaux plus hauts que dans une station ordinaire.",
+          "Œuvre d'art : « Piranèse 2000 », fresque de Jean Pattou (environ 50 m sur 18 m), inspirée du graveur Piranèse."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2870,7 +3001,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2887,28 +3019,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le siège de la municipalité de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Je dessers la mairie centrale de Lille."
+          "texte": "L'hôtel de ville et son beffroi, inscrit au patrimoine mondial de l'UNESCO, sont mes repères majeurs."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom vient a la mairie centrale de Lille."
+          "type": "etymologie",
+          "texte": "Mon nom désigne la maison commune de la grande ville."
         }
       ],
       "ficheDecouverte": {
@@ -2919,11 +3051,13 @@
           "Commune : Lille.",
           "La station doit son nom a la mairie centrale de Lille.",
           "Elle ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
-          "La page indique qu'aucune ligne de bus ne dessert directement la station."
+          "La page indique qu'aucune ligne de bus ne dessert directement la station.",
+          "Lieu remarquable : l'hôtel de ville de Lille et son beffroi, inscrit au patrimoine mondial de l'UNESCO ; la Porte de Paris à proximité."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2933,7 +3067,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -2951,28 +3086,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un grand espace de congrès, d'expositions et de concerts."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Le Zenith de Lille est desservi par la station."
+          "type": "histoire",
+          "texte": "Je m'appelais « Foire Commerciale » avant de prendre le nom de ce grand équipement."
         },
         {
           "ordre": 5,
-          "type": "history",
-          "texte": "Je suis proche de l'ancien emplacement de la porte Louis XIV."
+          "type": "etymologie",
+          "texte": "Mon nom associe l'adjectif « grand » à un édifice de prestige."
         }
       ],
       "ficheDecouverte": {
@@ -2983,11 +3118,13 @@
           "Commune : Lille.",
           "La station s'appelait Foire Commerciale avant de prendre le nom Lille Grand Palais.",
           "La station est proche de l'emplacement de l'ancienne porte Louis XIV, disparue lors du demantelement des remparts.",
-          "Elle dessert a la fois Lille Grand Palais et le Zenith de Lille."
+          "Elle dessert a la fois Lille Grand Palais et le Zenith de Lille.",
+          "Histoire : ancienne station « Foire Commerciale », renommée d'après Lille Grand Palais (congrès, expositions, Zénith)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -2997,7 +3134,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3014,28 +3152,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "histoire",
+          "texte": "Je marque l'emplacement d'une ancienne porte des remparts de Lille, aujourd'hui disparue."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "type": "secteur",
+          "texte": "Je dessers le quartier de Moulins, à Lille."
         },
         {
           "ordre": 4,
-          "type": "geography",
-          "texte": "Je dessers le quartier Moulins."
+          "type": "art",
+          "texte": "Une main monumentale du sculpteur César veille sur mes quais."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom vient de l'ancien emplacement de la Porte de Valenciennes, disparue avec les remparts."
+          "type": "etymologie",
+          "texte": "Mon nom évoque la route vers une grande ville du Hainaut."
         }
       ],
       "ficheDecouverte": {
@@ -3046,11 +3184,13 @@
           "Commune : Lille.",
           "Le nom vient de l'ancien emplacement de la Porte de Valenciennes, disparue avec les remparts.",
           "La station ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
-          "Elle s'inscrit dans un secteur de Moulins marque par des amenagements urbains."
+          "Elle s'inscrit dans un secteur de Moulins marque par des amenagements urbains.",
+          "Œuvre d'art : « La Main », sculpture monumentale du sculpteur César, installée dans la station."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3060,7 +3200,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3080,28 +3221,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le quartier de Moulins, au sud de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Le Jardin des plantes est associe a son nom actuel."
+          "texte": "Le Jardin des plantes, ajouté à mon nom en 2024, la faculté de droit et le théâtre Le Prato m'entourent."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Une gare SNCF se trouve a environ 800 metres."
+          "type": "etymologie",
+          "texte": "Mon nom évoque une ancienne porte des remparts, vers une ville du bassin minier."
         }
       ],
       "ficheDecouverte": {
@@ -3112,11 +3253,13 @@
           "Commune : Lille.",
           "Le nom vient de l'ancien emplacement de la Porte de Douai, disparue avec les remparts.",
           "La station ouvre avec la ligne 1 bis, devenue ligne 2 en 1994.",
-          "La gare SNCF de Lille-Porte-de-Douai est situee a environ 800 metres."
+          "La gare SNCF de Lille-Porte-de-Douai est situee a environ 800 metres.",
+          "Lieu remarquable : le Jardin des plantes (ajouté au nom en 2024), la faculté de droit, le théâtre Le Prato."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3126,7 +3269,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3143,28 +3287,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le quartier de Moulins, au sud de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
-          "type": "architecture",
-          "texte": "Mon batiment est decrit comme futuriste."
+          "type": "landmark",
+          "texte": "Le Jardin des plantes et la faculté de droit sont mes repères proches ; mon bâtiment a une allure futuriste et géométrique."
         },
         {
           "ordre": 5,
-          "type": "network",
-          "texte": "Je dispose d'un parking relais d'environ 100 places."
+          "type": "etymologie",
+          "texte": "Mon nom évoque une ancienne porte des remparts, vers la capitale de l'Artois."
         }
       ],
       "ficheDecouverte": {
@@ -3175,11 +3319,13 @@
           "Commune : Lille.",
           "Le nom renvoie a une ancienne porte du sud de Lille.",
           "La station est mise en service en 1989 lors de l'ouverture de la ligne entre Saint-Philibert et Gares.",
-          "Le batiment est decrit avec une architecture futuriste, massive et geometrique."
+          "Le batiment est decrit avec une architecture futuriste, massive et geometrique.",
+          "Lieux remarquables : le Jardin des plantes et la faculté de droit ; architecture massive et géométrique."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3189,7 +3335,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3206,28 +3353,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur du sud-ouest de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Un lycee international porte le meme nom a proximite."
+          "texte": "Le lycée international Montebello est mon repère proche ; lors de Lille 2004, une œuvre cinétique animait le trajet vers Cormontaigne."
         },
         {
           "ordre": 5,
-          "type": "culture",
-          "texte": "Le tunnel vers Cormontaigne a accueilli une oeuvre cinetique."
+          "type": "etymologie",
+          "texte": "Je porte le nom d'un boulevard évoquant une bataille napoléonienne."
         }
       ],
       "ficheDecouverte": {
@@ -3238,11 +3385,13 @@
           "Commune : Lille.",
           "La station doit son nom au boulevard Montebello qu'elle dessert.",
           "Elle ouvre avec la ligne 1 bis, devenue ligne 2 en 1994.",
-          "La station n'est desservie par aucune ligne de bus d'apres la page."
+          "La station n'est desservie par aucune ligne de bus d'apres la page.",
+          "Lieu remarquable : le lycée international Montebello. Lors de Lille 2004, une œuvre cinétique animait le tunnel."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3252,7 +3401,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3269,28 +3419,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le quartier de Vauban-Esquermes, à Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
-          "type": "culture",
-          "texte": "Le tunnel vers Montebello a accueilli une projection urbaine."
+          "type": "landmark",
+          "texte": "Mes sorties débouchent sur une place qui porte le nom d'un ingénieur militaire."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers Vauban Esquermes."
+          "type": "etymologie",
+          "texte": "Je porte le nom d'un successeur de Vauban dans l'art des fortifications."
         }
       ],
       "ficheDecouverte": {
@@ -3301,11 +3451,13 @@
           "Commune : Lille.",
           "La station doit son nom a la place Cormontaigne, ou debouchent ses sorties.",
           "Elle ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
-          "La station dessert le quartier Vauban Esquermes."
+          "La station dessert le quartier Vauban Esquermes.",
+          "Situation : station de la place Cormontaigne, du nom d'un ingénieur des fortifications. Quartier Vauban-Esquermes."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3315,7 +3467,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3332,28 +3485,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le quartier de Vauban-Esquermes, à Lille, près de l'eau."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis située à Lille."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Je dessers le port fluvial de Lille."
+          "texte": "Je tiens mon nom du port fluvial de la ville, sur la Deûle."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je me situe dans Vauban Esquermes."
+          "type": "etymologie",
+          "texte": "Mon nom dit que la grande ville a, aussi, son port."
         }
       ],
       "ficheDecouverte": {
@@ -3364,11 +3517,13 @@
           "Commune : Lille.",
           "La station doit son nom au port fluvial de Lille.",
           "Elle ouvre avec la ligne 1 bis, devenue ligne 2 en 1994.",
-          "Elle dessert le quartier Vauban Esquermes."
+          "Elle dessert le quartier Vauban Esquermes.",
+          "Lieu remarquable : le port fluvial de Lille, sur la Deûle."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3378,7 +3533,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3395,28 +3551,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier d'îles et de berges, entre deux bras de la Deûle."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lambersart / Lille."
+          "texte": "Je suis située à Lille, à la limite de Lambersart."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "Le Grand Bleu est proche de la station."
+          "texte": "La piscine olympique Marx-Dormoy et le théâtre Le Grand Bleu sont mes repères proches."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le quartier des Bois-Blancs."
+          "type": "etymologie",
+          "texte": "J'ai d'abord porté le nom de « Petite Chapelle » avant de prendre celui de mon quartier."
         }
       ],
       "ficheDecouverte": {
@@ -3427,11 +3583,13 @@
           "Commune : Lambersart / Lille.",
           "La station, ouverte sous le nom Petite Chapelle, prend le nom Bois Blancs en 1994.",
           "Elle ouvre le 1er avril 1989 lors de la mise en route de la ligne 1 bis, devenue ligne 2.",
-          "Elle est implantee pres de l'avenue de Dunkerque et de l'avenue de la Roseraie."
+          "Elle est implantee pres de l'avenue de Dunkerque et de l'avenue de la Roseraie.",
+          "Histoire : station ouverte sous le nom « Petite Chapelle », renommée Bois Blancs en 1994. Piscine Marx-Dormoy et théâtre Le Grand Bleu à proximité."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3442,7 +3600,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3462,28 +3621,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur reconverti à l'ouest de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lambersart / Lille."
+          "texte": "Je suis située à Lille, vers Lambersart et Lomme."
         },
         {
           "ordre": 4,
-          "type": "history",
-          "texte": "Canteleu a un passe de bourg ayant envisage de devenir commune."
+          "type": "landmark",
+          "texte": "On m'a rebaptisée en 2024 du nom d'Euratechnologies, grand pôle du numérique installé dans une ancienne usine."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Elle touche Lille, Lambersart et Lomme par ses quartiers desservis."
+          "type": "etymologie",
+          "texte": "Mon nom d'origine est celui d'un ancien bourg."
         }
       ],
       "ficheDecouverte": {
@@ -3494,11 +3653,13 @@
           "Commune : Lambersart / Lille.",
           "La station est rebaptisee Canteleu - Euratechnologies en 2024.",
           "Canteleu est mise en service en 1989 lors de l'ouverture de la section Saint-Philibert - Gare Lille-Flandres.",
-          "Elle dessert le nord des Bois-Blancs, Canteleu a Lambersart et des secteurs de Lomme."
+          "Elle dessert le nord des Bois-Blancs, Canteleu a Lambersart et des secteurs de Lomme.",
+          "Lieu remarquable : Euratechnologies, pôle du numérique (nom ajouté à la station en 2024)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3509,7 +3670,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3531,28 +3693,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers les abords de l'avenue de Dunkerque, entre deux communes."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lomme."
+          "texte": "Je suis située à Lomme."
         },
         {
           "ordre": 4,
-          "type": "geography",
-          "texte": "Mes acces encadrent l'avenue de Dunkerque."
+          "type": "histoire",
+          "texte": "Mon nom honore aussi Arthur Notebart, élu local et initiateur du métro automatique lillois."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom associe Lomme, Lambersart et Arthur Notebart, initiateur du metro automatique et ancien maire de Lomme."
+          "type": "etymologie",
+          "texte": "Mon nom associe deux communes voisines de Lille."
         }
       ],
       "ficheDecouverte": {
@@ -3563,11 +3725,13 @@
           "Commune : Lomme.",
           "Le nom associe Lomme, Lambersart et Arthur Notebart, initiateur du metro automatique et ancien maire de Lomme.",
           "Le nom Arthur-Notebart est ajoute apres une mobilisation familiale et politique.",
-          "Deux acces et deux ascenseurs sont disposes de chaque cote de l'avenue de Dunkerque."
+          "Deux acces et deux ascenseurs sont disposes de chaque cote de l'avenue de Dunkerque.",
+          "Histoire : le nom honore Arthur Notebart, initiateur du métro automatique VAL. Station entre Lomme et Lambersart."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3577,7 +3741,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3595,28 +3760,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un secteur de Lomme, le long de l'avenue de Dunkerque."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lomme."
+          "texte": "Je suis située à Lomme."
         },
         {
           "ordre": 4,
-          "type": "history",
-          "texte": "Une ancienne gare de Lomme est citee a proximite."
+          "type": "landmark",
+          "texte": "La piscine municipale et le monument aux morts de Lomme sont mes repères proches."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom vient au pont de la ligne d'Haubourdin a Saint-Andre au-dessus de l'avenue de Dunkerque."
+          "type": "etymologie",
+          "texte": "Mon nom vient d'un pont ferroviaire qui enjambe l'avenue de Dunkerque."
         }
       ],
       "ficheDecouverte": {
@@ -3627,11 +3792,13 @@
           "Commune : Lomme.",
           "La station doit son nom au pont de la ligne d'Haubourdin a Saint-Andre au-dessus de l'avenue de Dunkerque.",
           "Elle ouvre avec la ligne 1 bis, devenue ligne 2 en 1994.",
-          "La gare de Lomme, aujourd'hui hors service, est citee a proximite."
+          "La gare de Lomme, aujourd'hui hors service, est citee a proximite.",
+          "Lieux remarquables : la piscine municipale et le monument aux morts de Lomme. Le nom vient d'un pont ferroviaire."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3641,7 +3808,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3658,28 +3826,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers un quartier de Lomme, à l'ouest de Lille."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
-          "type": "commune",
-          "texte": "Je suis situee a Lomme."
+          "type": "histoire",
+          "texte": "Le quartier voisin de la Délivrance fut une cité-jardin bâtie pour les cheminots."
         },
         {
           "ordre": 4,
-          "type": "history",
-          "texte": "Le quartier voisin de la Delivrance est lie a l'histoire ferroviaire."
+          "type": "art",
+          "texte": "Une grande fresque en mosaïque de Didier Patte, « Maisons aux jeux de cartes », orne mes murs : des maisons du Nord coiffées de cœur, carreau, trèfle et pique."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je dessers le quartier Mitterie de Lomme."
+          "type": "etymologie",
+          "texte": "Mon nom est celui d'un quartier de Lomme."
         }
       ],
       "ficheDecouverte": {
@@ -3690,11 +3858,14 @@
           "Commune : Lomme.",
           "La station doit son nom au quartier Mitterie de Lomme.",
           "Elle ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
-          "La page indique qu'aucune ligne de bus ne dessert directement la station."
+          "La page indique qu'aucune ligne de bus ne dessert directement la station.",
+          "Œuvre d'art : « Maisons aux jeux de cartes », fresque en mosaïque de Didier Patte — des maisons du Nord ornées des enseignes de cartes à jouer (cœur, carreau, trèfle, pique)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille",
+          "releve-editorial-stations"
         ]
       },
       "tags": [
@@ -3704,7 +3875,9 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille",
+        "releve-editorial-stations"
       ]
     },
     {
@@ -3721,28 +3894,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers la cité de la Délivrance, à Lomme."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lomme."
+          "texte": "Je suis située à Lomme."
         },
         {
           "ordre": 4,
           "type": "landmark",
-          "texte": "L'Odyssee est une mediatheque proche."
+          "texte": "La médiathèque L'Odyssée de Lomme est l'un de mes repères proches."
         },
         {
           "ordre": 5,
-          "type": "geography",
-          "texte": "Je me situe dans le quartier de la Delivrance."
+          "type": "etymologie",
+          "texte": "Mon nom vient d'un bâtiment, ancien restaurant scolaire devenu centre d'activités."
         }
       ],
       "ficheDecouverte": {
@@ -3753,11 +3926,13 @@
           "Commune : Lomme.",
           "Le nom vient d'un batiment appele Maison des Enfants, ancien restaurant scolaire devenu centre d'activites.",
           "Elle est mise en service en 1989 sur la ligne 1 bis, devenue ligne 2.",
-          "La station se situe au coeur du quartier de la Delivrance."
+          "La station se situe au coeur du quartier de la Delivrance.",
+          "Histoire : le nom vient d'un ancien restaurant scolaire devenu centre d'activités. Médiathèque L'Odyssée à proximité."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3767,7 +3942,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3784,28 +3960,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je dessers le cœur historique de Lomme."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lomme."
+          "texte": "Je suis située à Lomme, sous la place du Maréchal-Leclerc."
         },
         {
           "ordre": 4,
-          "type": "landmark",
-          "texte": "Je me situe sous la place du Marechal-Leclerc."
+          "type": "anecdote",
+          "texte": "Mes murs présentent des plans et des photos d'époque qui racontent l'histoire de Lomme."
         },
         {
           "ordre": 5,
-          "type": "history",
-          "texte": "Je dessers le coeur historique de Lomme."
+          "type": "etymologie",
+          "texte": "Mon nom désigne le noyau ancien d'une ville."
         }
       ],
       "ficheDecouverte": {
@@ -3816,11 +3992,13 @@
           "Commune : Lomme.",
           "La station doit son nom au quartier Bourg, coeur historique de Lomme.",
           "Elle ouvre lors de la mise en route de la ligne 1 bis, devenue ligne 2 en 1994.",
-          "Les murs de la station presentent des plans et photos d'epoque retraçant l'histoire de Lomme."
+          "Les murs de la station presentent des plans et photos d'epoque retraçant l'histoire de Lomme.",
+          "Anecdote : les murs de la station présentent des plans et photos anciennes retraçant l'histoire de Lomme."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3830,7 +4008,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3850,28 +4029,28 @@
       "indices": [
         {
           "ordre": 1,
-          "type": "transport",
-          "texte": "Je suis une station du metro Ilevia."
+          "type": "ambiance",
+          "texte": "Je suis un terminus de la ligne 2, à l'ouest, à Lomme."
         },
         {
           "ordre": 2,
           "type": "ligne",
-          "texte": "Je suis desservie par la ligne M2."
+          "texte": "Je suis desservie par la ligne 2."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lomme."
+          "texte": "Je suis située à Lomme."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis un terminus de la ligne M2."
+          "type": "landmark",
+          "texte": "Je dessers la zone du Grand But, avec commerces et cinéma, le quartier Humanicité et le Parc Naturel Urbain de Lomme."
         },
         {
           "ordre": 5,
-          "type": "landmark",
-          "texte": "Je dessers la zone du Grand But."
+          "type": "etymologie",
+          "texte": "Je tiens mon nom d'un hôpital situé à l'ouest."
         }
       ],
       "ficheDecouverte": {
@@ -3882,11 +4061,13 @@
           "Commune : Lomme.",
           "Particularite : terminus.",
           "La station doit son nom a l'hopital Saint-Philibert situe a l'ouest.",
-          "Elle ouvre en 1989 comme terminus ouest de la ligne devenue M2."
+          "Elle ouvre en 1989 comme terminus ouest de la ligne devenue M2.",
+          "Particularité : terminus ouest de la ligne 2. Dessert la zone du Grand But (commerces, cinéma) et le Parc Naturel Urbain de Lomme."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3897,7 +4078,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -3917,27 +4099,27 @@
         {
           "ordre": 1,
           "type": "transport",
-          "texte": "Je suis une station du tramway Ilevia."
+          "texte": "Je suis un arrêt du tramway de la métropole lilloise."
         },
         {
           "ordre": 2,
-          "type": "branche",
-          "texte": "Je suis sur le tronc commun des branches Roubaix et Tourcoing."
+          "type": "ligne",
+          "texte": "Je suis desservi par le tramway Ilévia."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Lille."
+          "texte": "Je suis situé à Lille."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis un terminus du tramway dans le corpus technique."
+          "type": "landmark",
+          "texte": "Je suis en correspondance avec le métro et une grande gare."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom reprend celui d'une grande gare lilloise."
+          "type": "etymologie",
+          "texte": "Mon nom est celui de la gare voisine."
         }
       ],
       "ficheDecouverte": {
@@ -3947,11 +4129,13 @@
           "Niveau : Tramway Mystere.",
           "Branches : Roubaix et Tourcoing.",
           "Commune : Lille.",
-          "Statut technique : terminus et tronc commun."
+          "Statut technique : terminus et tronc commun.",
+          "Particularité : seule station en correspondance entre les lignes 1 et 2 ; accès direct à la gare Lille-Flandres, près d'Euralille et du Tripostal."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -3962,7 +4146,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     },
     {
@@ -4166,27 +4351,27 @@
         {
           "ordre": 1,
           "type": "transport",
-          "texte": "Je suis une station du tramway Ilevia."
+          "texte": "Je suis un arrêt du tramway de la métropole lilloise."
         },
         {
           "ordre": 2,
-          "type": "branche",
-          "texte": "Je suis sur la branche Tourcoing."
+          "type": "ligne",
+          "texte": "Je suis le terminus de la ligne T du tramway."
         },
         {
           "ordre": 3,
           "type": "commune",
-          "texte": "Je suis situee a Tourcoing."
+          "texte": "Je suis situé à Tourcoing."
         },
         {
           "ordre": 4,
-          "type": "reseau",
-          "texte": "Je suis un terminus du tramway dans le corpus technique."
+          "type": "landmark",
+          "texte": "Je dessers le centre de Tourcoing."
         },
         {
           "ordre": 5,
-          "type": "nom",
-          "texte": "Mon nom contient Centre."
+          "type": "etymologie",
+          "texte": "Mon nom dit que je marque le centre-ville."
         }
       ],
       "ficheDecouverte": {
@@ -4196,11 +4381,13 @@
           "Niveau : Tramway Mystere.",
           "Branche : Tourcoing.",
           "Commune : Tourcoing.",
-          "Statut technique : terminus."
+          "Statut technique : terminus.",
+          "Particularité : terminus de la ligne T du tramway, au centre de Tourcoing (hôtel de ville, beffroi)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
+          "ilevia-arret-point-datamel",
+          "wikipedia-metro-lille"
         ]
       },
       "tags": [
@@ -4210,7 +4397,8 @@
       ],
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
-        "ilevia-arret-point-datamel"
+        "ilevia-arret-point-datamel",
+        "wikipedia-metro-lille"
       ]
     }
   ]

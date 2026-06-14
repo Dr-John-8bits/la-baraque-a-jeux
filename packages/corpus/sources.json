@@ -241,5 +241,23 @@
     "license": "GPL-3.0",
     "consultedAt": "2026-06-02",
     "notes": "Dictionnaire français utilisé uniquement pour accepter les propositions des joueurs, pas pour choisir les mots du jour."
+  },
+  {
+    "id": "wikipedia-metro-lille",
+    "label": "Wikipédia — stations du métro de Lille",
+    "url": "https://fr.wikipedia.org/wiki/Métro_de_Lille",
+    "publisher": "Wikipédia",
+    "license": "CC BY-SA 4.0",
+    "consultedAt": "2026-06-14",
+    "notes": "Pages des stations du métro lillois (œuvres d'art, étymologie, histoire). Faits reformulés, sources secondaires citées (La Voix du Nord, guide Michelin)."
+  },
+  {
+    "id": "releve-editorial-stations",
+    "label": "Relevé éditorial sur place — œuvres en station",
+    "url": "https://www.ville-lomme.fr/",
+    "publisher": "Relevé éditorial (La Baraque à Jeux)",
+    "license": "Vérification sur place",
+    "consultedAt": "2026-06-14",
+    "notes": "Œuvres signées et visibles dans les stations, documentées sur place par l'éditeur. Ex. : « Maisons aux jeux de cartes » de Didier Patte, station Mitterie."
   }
 ]

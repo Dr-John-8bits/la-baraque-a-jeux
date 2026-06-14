@@ -39,9 +39,25 @@ Issu d'un retour éditeur : indices souvent redondants ou génériques, pépites
 relit avec une mauvaise grille de lecture.
 
 - **Lot 0.1** — ✅ Charte des indices et des pépites : `docs/editorial/charte-indices.md`.
-- **Lot 0.2** — Passe de recherche assistée *Station Mystère* : pour chaque fiche métro,
-  trouver la pépite sourcée, la soumettre à l'éditeur, réécrire les 5 indices (structure
-  libre menée par la pépite). En sous-lots de ~8-10 fiches.
+- **Lot 0.2** — ✅ *Fait (2026-06-14)* — Passe de recherche assistée *Station Mystère* :
+  **les 60 fiches métro** ont des indices menés par la pépite sourcée (plus aucun indice
+  générique « métro Ilévia », indice final qui ne livre plus le nom, accents restaurés).
+  - **~17 stations à œuvre d'art** sourcée (champ `artiste` des pages Wikipédia du dépôt) :
+    Porte de Valenciennes/César « La Main », Lille-Europe/Pattou « Piranèse 2000 »,
+    Fives & Rihour/Degand, Wazemmes/Fleckenstein, Pont de Bois/Léger, République Beaux-Arts/Debève,
+    Marbrerie/Locret, Hellemmes/Hemerick, Roubaix Place/Hémery, Hôtel de Ville VA/Denoyelle,
+    Roubaix CdG/Barbe, Triolo, Madeleine Caulier, et **Mitterie** (cf. ci-dessous).
+  - Les autres via `transport-places-notes.json` (étymologie, histoire, lieux remarquables) :
+    3 Suisses à Croix Centre, La Piscine à Gare Jean Lebas, Plaine Images à Alsace, TEC Hainaut
+    belge à C.H. Dron, Euratechnologies à Canteleu, port fluvial à Port de Lille, Arthur Notebart
+    à Lomme-Lambersart, beffroi UNESCO à Mairie de Lille, etc.
+  - **Mitterie / Didier Patte** : source = l'éditeur (relevé sur place + photo) → fresque mosaïque
+    « Maisons aux jeux de cartes » de Didier Patte (maisons du Nord coiffées de cœur/carreau/
+    trèfle/pique — clin d'œil parfait à *La Baraque à Jeux*). Non documenté en ligne (probable
+    confusion publique avec Jean Pattou). Source `releve-editorial-stations` enregistrée.
+  - Sources `wikipedia-metro-lille` et `releve-editorial-stations` ajoutées à `sources.json`.
+  - À relire par l'éditeur (Jean), notamment les faits « repère connu + source » et les
+    quelques stations à notes minces (Bourgogne, Pont de Neuville, Phalempins).
 - **Lot 0.3** — Passe *Le Mot à Biloute* : dé-redonder les `hints` (deux angles distincts),
   enrichir les bonus si besoin. Par sous-lots de ~15 mots.
 - **Lot 0.4** — Passe *Lille-Mêle* : vérifier/enrichir les anecdotes (fait neuf + source).
