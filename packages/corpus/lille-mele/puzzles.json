@@ -1256,18 +1256,18 @@
     "tags": ["transport", "metro", "tramway", "communes"],
     "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel"],
     "bonus": {
-      "question": "Le tramway dessert Wasquehal.",
+      "question": "La ligne 2 du métro dessert Roubaix.",
       "answer": true,
-      "explanation": "Vrai. Le tramway compte plusieurs arrêts à Wasquehal, dont Wasquehal Pavé De Lille."
+      "explanation": "Vrai. La ligne 2 traverse Roubaix, avec des stations comme Gare Jean Lebas et Roubaix Charles de Gaulle."
     },
     "groups": [
       {
-        "id": "tram-wasquehal-sart",
+        "id": "tram-sart-roubaix",
         "title": "Arrêts du tramway",
         "difficulty": "medium",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
-        "items": ["La Terrasse", "Wasquehal Pavé De Lille", "Le Sart", "Planche Epinoy"],
-        "note": "Le tramway dessert Wasquehal et Le Sart."
+        "items": ["La Terrasse", "Triez", "Le Sart", "Planche Epinoy"],
+        "note": "Le tramway file vers Le Sart et Roubaix."
       },
       {
         "id": "communes-couronne-nord-2",
@@ -1292,6 +1292,362 @@
         "sourceIds": ["mel-communes-datamel"],
         "items": ["Armentières", "Deûlémont", "Erquinghem-Lys", "Frelinghien"],
         "note": "Des communes de l'Armentiérois, le long de la Lys."
+      }
+    ]
+  },
+  {
+    "id": "metro-lomme-weppes-001",
+    "number": 20,
+    "title": "Le métro file vers Lomme",
+    "intro": "Du bout de la ligne 2 aux villages des Weppes.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes, communes et lignes de transport), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 du métro dessert Lomme.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 traverse Lomme, avec des stations comme Mitterie et Bois Blancs."
+    },
+    "groups": [
+      {
+        "id": "m2-lomme",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Bois Blancs",
+          "Canteleu",
+          "Lomme-Lambersart",
+          "Mitterie"
+        ],
+        "note": "La ligne 2 dessert le secteur de Lomme."
+      },
+      {
+        "id": "communes-weppes-2",
+        "title": "Communes des Weppes",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Englos",
+          "Ennetières-en-Weppes",
+          "Erquinghem-le-Sec",
+          "Escobecques"
+        ],
+        "note": "Des communes rurales du territoire des Weppes."
+      },
+      {
+        "id": "tram-lille-centre",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Romarin",
+          "Botanique",
+          "Buisson",
+          "Victoire"
+        ],
+        "note": "Le tramway dessert le centre de Lille."
+      },
+      {
+        "id": "liane-2",
+        "title": "Arrêts de la Liane 2",
+        "difficulty": "tricky",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Les Oliveaux",
+          "College Descartes",
+          "La Paix",
+          "Chatelet"
+        ],
+        "note": "Quatre premiers arrêts de la Liane 2."
+      }
+    ]
+  },
+  {
+    "id": "portes-est-001",
+    "number": 21,
+    "title": "Toutes les portes mènent au sud",
+    "intro": "Des portes de Lille aux communes de l'est.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes, communes et lignes de transport), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "Porte de Douai et Porte d'Arras sont sur la ligne 2.",
+      "answer": true,
+      "explanation": "Vrai. Ces deux stations « Porte » desservent le sud de Lille sur la ligne 2."
+    },
+    "groups": [
+      {
+        "id": "m2-portes",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Grand Palais",
+          "Porte De Valenciennes",
+          "Porte De Douai",
+          "Porte D'Arras"
+        ],
+        "note": "Quatre stations de la ligne 2 au sud de Lille."
+      },
+      {
+        "id": "communes-est-2",
+        "title": "Communes de l'est",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Forest-sur-Marque",
+          "Gruson",
+          "Mons-en-Barœul",
+          "Péronne-en-Mélantois"
+        ],
+        "note": "Des communes du territoire Est."
+      },
+      {
+        "id": "tram-faidherbe",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Faidherbe",
+          "Trois Suisses",
+          "Pont Hydraulique",
+          "Ma Campagne"
+        ],
+        "note": "Le tramway dessert ces arrêts du nord-est."
+      },
+      {
+        "id": "liane-5",
+        "title": "Arrêts de la Liane 5",
+        "difficulty": "tricky",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Ferme Aux Oies",
+          "Bailly",
+          "Place",
+          "Quesne Mairie"
+        ],
+        "note": "Quatre premiers arrêts de la Liane 5."
+      }
+    ]
+  },
+  {
+    "id": "mons-roubaisien-001",
+    "number": 22,
+    "title": "De Mons au Roubaisien",
+    "intro": "Stations de Mons, communes du Roubaisien, tram et bus.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes, communes et lignes de transport), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "Mons-en-Barœul est desservie par la ligne 2 du métro.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 dessert Mons-en-Barœul, avec Fort de Mons, Mairie de Mons et Mons Sarts."
+    },
+    "groups": [
+      {
+        "id": "m2-mons",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Fort De Mons",
+          "Mairie De Mons",
+          "Mons Sarts",
+          "Les Pres-E. Pisani"
+        ],
+        "note": "Quatre stations de la ligne 2 à Mons-en-Barœul."
+      },
+      {
+        "id": "communes-roubaisien-1",
+        "title": "Communes du Roubaisien",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Croix",
+          "Hem",
+          "Lannoy",
+          "Leers"
+        ],
+        "note": "Des communes du territoire Roubaisien."
+      },
+      {
+        "id": "tram-roubaix-branche",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Grand Cottignies",
+          "Cartelot",
+          "Chateau Rouge",
+          "Le Quesne"
+        ],
+        "note": "Le tramway file vers Roubaix."
+      },
+      {
+        "id": "liane-3",
+        "title": "Arrêts de la Liane 3",
+        "difficulty": "tricky",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Quart. Beaulieu",
+          "Herriot",
+          "Foch",
+          "Vallon"
+        ],
+        "note": "Quatre premiers arrêts de la Liane 3."
+      }
+    ]
+  },
+  {
+    "id": "croix-couronne-nord-001",
+    "number": 23,
+    "title": "Côté Croix",
+    "intro": "Stations de Croix, communes du nord, tram et bus.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes, communes et lignes de transport), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "transport",
+      "metro",
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 du métro dessert Croix.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 dessert Croix, avec les stations Mairie de Croix et Croix Centre."
+    },
+    "groups": [
+      {
+        "id": "m2-croix",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Alsace",
+          "Mairie De Croix",
+          "Croix Centre",
+          "Ep. Montesquieu"
+        ],
+        "note": "Quatre stations de la ligne 2 vers Croix."
+      },
+      {
+        "id": "communes-couronne-nord-3",
+        "title": "Communes de la couronne nord",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Marcq-en-Barœul",
+          "Marquette-lez-Lille",
+          "Pérenchies",
+          "Prémesques"
+        ],
+        "note": "Des communes du territoire de la couronne Nord."
+      },
+      {
+        "id": "tram-mongy",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Brossolette",
+          "Cerisaie C. D'Affaires",
+          "Alfred Mongy",
+          "Jean Moulin"
+        ],
+        "note": "Le tramway, le célèbre Mongy."
+      },
+      {
+        "id": "liane-99",
+        "title": "Arrêts de la Liane 99",
+        "difficulty": "tricky",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Le Bizet",
+          "Louis Bleriot",
+          "Herons",
+          "Jacques Cartier"
+        ],
+        "note": "Quatre premiers arrêts de la Liane 99."
       }
     ]
   }

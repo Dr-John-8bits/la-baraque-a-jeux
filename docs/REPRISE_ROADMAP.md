@@ -110,9 +110,17 @@ relit avec une mauvaise grille de lecture.
 
 ### Bloc 4 — Débloquer le contenu *(éditorial lourd, sous-lots)*
 
-- **Lot 4.x** — 🔄 *En cours (2026-06-14)* — Lille-Mêle : grilles relues **10 → 15**
+- **Lot 4.x** — 🔄 *En cours (2026-06-14)* — Lille-Mêle : grilles relues **10 → 19**
   (cible 30-45). Modèle validé par l'éditeur ; grilles marquées `reviewed` (confiance
   déléguée + vérification systématique).
+  - Production outillée : générateur + validateur déterministe (cross-modal, religieux,
+    pureté de ligne M1/M2, tram-only, 16 distincts) → impossible de certifier une grille fausse.
+  - Auto-rattrapage : une erreur dans ma propre grille 19 (« Wasquehal Pavé De Lille » =
+    métro M2 + tram, mise par erreur en famille tram) détectée et corrigée avant commit.
+  - ⚠️ **Bugs trouvés dans 2 grilles existantes (pré-réécriture)** à corriger : `rames-rives-001`
+    (« Gare Lille Flandres » = correspondance M1+M2 dans une famille de ligne) et
+    `tourcoing-weppes-001` (« Tourcoing Centre » cross-modal métro+tram avec familles concurrentes).
+  - Helper de test durci (`exact: true`) pour gérer les faux-amis à noms imbriqués.
   - Méthode : familles tirées de `candidate-families.json` (exports Ilévia/MEL sourcés),
     items **croisés contre `metro-stations.json`** pour éliminer les ambiguïtés.
   - Pièges écartés : correspondances (Porte des Postes, Gare Lille Flandres = M1+M2),

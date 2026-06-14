@@ -13,7 +13,7 @@ function buildWrongSelectionsAfterFirstGroup(puzzle) {
 
 async function submitLilleMeleSelection(page, items) {
   for (const item of items) {
-    await page.getByRole("button", { name: item }).click();
+    await page.getByRole("button", { name: item, exact: true }).click();
   }
   await page.getByRole("button", { name: "Valider" }).click();
 }
