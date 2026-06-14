@@ -189,6 +189,22 @@ h3 {
   line-height: 1.45;
 }
 
+.help-optout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.help-optout input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
 .board {
   width: min(100%, 286px);
   display: grid;

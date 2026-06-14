@@ -7,7 +7,7 @@ import { escapeHtml } from "../../packages/game-utils/text-render.js";
 
 const MAX_MISTAKES = 4;
 const STORAGE_PREFIX = "lillemele.v1.";
-const FIRST_HELP_KEY = `${STORAGE_PREFIX}firstHelpSeen`;
+const HIDE_HELP_KEY = `${STORAGE_PREFIX}hideHelpOnLaunch`;
 const APP_VERSION = "26.06.02.4";
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
@@ -61,6 +61,7 @@ const els = {
   rulesButton: document.querySelector("#rulesButton"),
   firstHelp: document.querySelector("#firstHelp"),
   firstHelpStartButton: document.querySelector("#firstHelpStartButton"),
+  firstHelpOptOut: document.querySelector("#firstHelpOptOut"),
   toast: document.querySelector("#toast"),
 };
 
@@ -506,7 +507,7 @@ function showToast(text) {
 }
 
 function shouldShowFirstHelp() {
-  return readJson(FIRST_HELP_KEY, false) !== true;
+  return readJson(HIDE_HELP_KEY, false) !== true;
 }
 
 function setBackgroundInert(inert) {
@@ -521,6 +522,7 @@ function setBackgroundInert(inert) {
 
 function showFirstHelp() {
   if (!els.firstHelp) return;
+  if (els.firstHelpOptOut) els.firstHelpOptOut.checked = readJson(HIDE_HELP_KEY, false) === true;
   els.firstHelp.hidden = false;
   document.body.classList.add("help-open");
   setBackgroundInert(true);
@@ -529,7 +531,7 @@ function showFirstHelp() {
 
 function hideFirstHelp({ returnFocus = false } = {}) {
   if (!els.firstHelp) return;
-  writeJson(FIRST_HELP_KEY, true);
+  if (els.firstHelpOptOut) writeJson(HIDE_HELP_KEY, els.firstHelpOptOut.checked);
   els.firstHelp.hidden = true;
   document.body.classList.remove("help-open");
   setBackgroundInert(false);

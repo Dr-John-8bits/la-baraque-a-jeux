@@ -22,6 +22,7 @@ const STORAGE_KEYS = {
   currentGame: `${STORAGE_PREFIX}currentGame`,
   stats: `${STORAGE_PREFIX}stats`,
   firstHelpSeen: `${STORAGE_PREFIX}firstHelpSeen`,
+  hideHelpOnLaunch: `${STORAGE_PREFIX}hideHelpOnLaunch`,
 };
 
 const DEFAULT_STATS = {
@@ -87,6 +88,7 @@ const els = {
   statsDialog: document.querySelector("#statsDialog"),
   statsContent: document.querySelector("#statsContent"),
   helpDialog: document.querySelector("#helpDialog"),
+  helpOptOut: document.querySelector("#helpOptOut"),
   helpStartButton: document.querySelector("#helpStartButton"),
   toast: document.querySelector("#toast"),
 };
@@ -135,6 +137,7 @@ function bindEvents() {
   els.resultStatsButton?.addEventListener("click", () => openDialog(els.statsDialog));
   els.helpButton?.addEventListener("click", () => {
     writeJson(STORAGE_KEYS.firstHelpSeen, true);
+    syncHelpOptOut();
     openDialog(els.helpDialog);
   });
   els.helpStartButton?.addEventListener("click", closeHelpDialog);
@@ -911,13 +914,20 @@ function openDialog(dialog) {
 
 function closeHelpDialog() {
   writeJson(STORAGE_KEYS.firstHelpSeen, true);
+  if (els.helpOptOut) writeJson(STORAGE_KEYS.hideHelpOnLaunch, els.helpOptOut.checked);
   if (els.helpDialog?.open && typeof els.helpDialog.close === "function") els.helpDialog.close();
   else els.helpDialog?.removeAttribute("open");
   els.nextHintButton?.focus();
 }
 
+function syncHelpOptOut() {
+  if (els.helpOptOut) els.helpOptOut.checked = readJson(STORAGE_KEYS.hideHelpOnLaunch, false) === true;
+}
+
 function showLaunchHelp() {
   if (state?.status !== "playing" || !els.helpDialog) return;
+  if (readJson(STORAGE_KEYS.hideHelpOnLaunch, false) === true) return;
+  syncHelpOptOut();
   window.requestAnimationFrame(() => openDialog(els.helpDialog));
 }
 

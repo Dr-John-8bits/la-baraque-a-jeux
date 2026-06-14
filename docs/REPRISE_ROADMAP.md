@@ -110,8 +110,18 @@ relit avec une mauvaise grille de lecture.
 
 ### Bloc 4 — Débloquer le contenu *(éditorial lourd, sous-lots)*
 
-- **Lot 4.x** — Lille-Mêle : grilles relues manquantes, **5 grilles par session**
-  (≈4-6 sessions), sourcées, sans item `avoid`, sans référence religieuse.
+- **Lot 4.x** — 🔄 *En cours (2026-06-14)* — Lille-Mêle : grilles relues **10 → 15**
+  (cible 30-45). Modèle validé par l'éditeur ; grilles marquées `reviewed` (confiance
+  déléguée + vérification systématique).
+  - Méthode : familles tirées de `candidate-families.json` (exports Ilévia/MEL sourcés),
+    items **croisés contre `metro-stations.json`** pour éliminer les ambiguïtés.
+  - Pièges écartés : correspondances (Porte des Postes, Gare Lille Flandres = M1+M2),
+    homonymes (deux « Hôtel de Ville »), cross-modal (Euroteleport = métro+tram),
+    religieux dans les arrêts de bus (« Vieil Dieu » sur la Liane 90), familles brutes
+    bruitées (parcs/monuments/équipements à curer à la main).
+  - Faux-amis travaillés : Tourcoing/Tourquennois, La Madeleine/Madeleine Caulier,
+    Neuville-en-Ferrain/Pont de Neuville, Wasquehal/Pont de Wasquehal.
+  - **Reste ~15-30 grilles** pour atteindre la cible V1.
 - **Lot 4.y** — Le Mot à Biloute : corpus vers 100 mots, **~15 mots par session**, sourcés.
   - ✅ *Fait (2026-06-14)* — **40 → 90 mots** (+50, 5 lots). Tous sourcés, charte appliquée
     (amorce-devinette + 2 hints d'angles distincts + pépite), statut `prototype` en attente de

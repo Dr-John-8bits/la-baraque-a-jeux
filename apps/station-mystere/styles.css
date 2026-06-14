@@ -471,6 +471,21 @@ button:disabled {
   line-height: 1;
 }
 
+.help-optout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.help-optout input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
 .notebook-section,
 .stats-section,
 .help-content {

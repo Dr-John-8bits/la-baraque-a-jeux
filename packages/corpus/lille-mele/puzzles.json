@@ -1029,5 +1029,270 @@
         "note": "Quatre premiers arrêts candidats de la Liane 5."
       }
     ]
+  },
+  {
+    "id": "lignes-territoires-001",
+    "number": 15,
+    "title": "Chacun sa ligne, chacun son coin",
+    "intro": "Range les stations par ligne et les villes par territoire.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "communes", "metropole"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel"],
+    "bonus": {
+      "question": "Tourcoing est desservie par la ligne 2 du métro.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 relie Lille à Tourcoing et Roubaix ; Tourcoing Centre et Gare de Tourcoing en font partie."
+    },
+    "groups": [
+      {
+        "id": "m1-centre-lille",
+        "title": "Stations de la ligne 1",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "République Beaux-Arts",
+          "Gambetta",
+          "Wazemmes",
+          "Rihour"
+        ],
+        "note": "Quatre stations de la ligne 1 au cœur de Lille."
+      },
+      {
+        "id": "m2-tourcoing",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": [
+          "Tourcoing Centre",
+          "Gare De Tourcoing",
+          "Carliers",
+          "Phalempins"
+        ],
+        "note": "La ligne 2 file vers Tourcoing."
+      },
+      {
+        "id": "communes-weppes",
+        "title": "Communes des Weppes",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Aubers",
+          "Beaucamps-Ligny",
+          "Bois-Grenier",
+          "Don"
+        ],
+        "note": "Des communes rurales du territoire des Weppes."
+      },
+      {
+        "id": "communes-tourquennois",
+        "title": "Communes du Tourquennois",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": [
+          "Bondues",
+          "Bousbecque",
+          "Comines",
+          "Halluin"
+        ],
+        "note": "Des communes du territoire du Tourquennois, vers la frontière belge."
+      }
+    ]
+  },
+  {
+    "id": "madeleine-couronnes-001",
+    "number": 16,
+    "title": "Méfie-toi des Madeleine",
+    "intro": "Une station, une commune : ne te trompe pas de Madeleine.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes, communes et tramway), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "tramway", "communes"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel"],
+    "bonus": {
+      "question": "Lambersart fait partie de la couronne nord de la métropole.",
+      "answer": true,
+      "explanation": "Vrai. Lambersart est rattachée au territoire de la couronne Nord dans les données de la MEL."
+    },
+    "groups": [
+      {
+        "id": "communes-couronne-nord-1",
+        "title": "Communes de la couronne nord",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": ["Capinghem", "La Madeleine", "Lambersart", "Lompret"],
+        "note": "Des communes du territoire de la couronne Nord."
+      },
+      {
+        "id": "m1-lille-hellemmes",
+        "title": "Stations de la ligne 1",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": ["Square Flandres", "Mairie D'Hellemmes", "Marbrerie", "Madeleine Caulier"],
+        "note": "Quatre stations de la ligne 1 entre Lille et Hellemmes."
+      },
+      {
+        "id": "tram-marcq-roubaix",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": ["La Marque", "Villa Cavrois", "Bol D'Air", "Parc Barbieux"],
+        "note": "Le tramway longe les beaux quartiers du nord-est."
+      },
+      {
+        "id": "communes-couronne-sud-1",
+        "title": "Communes de la couronne sud",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": ["Allennes-les-Marais", "Annœullin", "Bauvin", "Carnin"],
+        "note": "Des communes du territoire de la couronne Sud."
+      }
+    ]
+  },
+  {
+    "id": "neuville-wasquehal-001",
+    "number": 17,
+    "title": "Ne confonds pas les Neuville",
+    "intro": "Stations, communes et tram se ressemblent parfois beaucoup.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes, communes et tramway), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "tramway", "communes"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel"],
+    "bonus": {
+      "question": "La ligne 2 du métro dessert Tourcoing.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 relie Lille à Tourcoing, où l'on trouve notamment les stations C.H. Dron et Bourgogne."
+    },
+    "groups": [
+      {
+        "id": "m2-tourcoing-nord",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": ["C.H. Dron", "Bourgogne", "Pont De Neuville", "Colbert"],
+        "note": "Quatre stations de la ligne 2 côté Tourcoing."
+      },
+      {
+        "id": "communes-tourquennois-2",
+        "title": "Communes du Tourquennois",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": ["Linselles", "Mouvaux", "Neuville-en-Ferrain", "Roncq"],
+        "note": "Des communes du territoire du Tourquennois."
+      },
+      {
+        "id": "communes-roubaisien-2",
+        "title": "Communes du Roubaisien",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": ["Lys-lez-Lannoy", "Roubaix", "Toufflers", "Wasquehal"],
+        "note": "Des communes du territoire Roubaisien."
+      },
+      {
+        "id": "tram-croise-laroche",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": ["Clemenceau Hippodrome", "Croisé Laroche", "Acacias", "Pont De Wasquehal"],
+        "note": "Le tramway file vers Croisé Laroche et Wasquehal."
+      }
+    ]
+  },
+  {
+    "id": "sud-est-liane-001",
+    "number": 18,
+    "title": "Au sud, à l'est, en bus",
+    "intro": "Communes du sud, communes de l'est, métro et bus à démêler.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes, communes et lignes de bus), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "bus", "communes"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel"],
+    "bonus": {
+      "question": "Faches-Thumesnil se situe au sud de Lille.",
+      "answer": true,
+      "explanation": "Vrai. Faches-Thumesnil appartient au territoire de la couronne Sud de la métropole."
+    },
+    "groups": [
+      {
+        "id": "communes-couronne-sud-2",
+        "title": "Communes de la couronne sud",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": ["Emmerin", "Faches-Thumesnil", "Fretin", "Houplin-Ancoisne"],
+        "note": "Des communes du territoire de la couronne Sud."
+      },
+      {
+        "id": "communes-est",
+        "title": "Communes de l'est",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": ["Anstaing", "Baisieux", "Bouvines", "Chéreng"],
+        "note": "Des communes du territoire Est."
+      },
+      {
+        "id": "m1-sud-est",
+        "title": "Stations de la ligne 1",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": ["Chu-Centre O. Lambret", "Chu Eurasanté", "Fives", "Pont De Bois"],
+        "note": "Quatre stations de la ligne 1, du sud à Villeneuve-d'Ascq."
+      },
+      {
+        "id": "liane-8-arrets",
+        "title": "Arrêts de la Liane 8",
+        "difficulty": "tricky",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": ["Blanchisserie", "Laennec", "Dunant", "Coty"],
+        "note": "Quatre premiers arrêts de la Liane 8."
+      }
+    ]
+  },
+  {
+    "id": "tram-nord-armentieres-001",
+    "number": 19,
+    "title": "Du tram à la Lys",
+    "intro": "Du tramway du nord-est aux communes de la Lys.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes, communes et tramway), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": ["transport", "metro", "tramway", "communes"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel"],
+    "bonus": {
+      "question": "Le tramway dessert Wasquehal.",
+      "answer": true,
+      "explanation": "Vrai. Le tramway compte plusieurs arrêts à Wasquehal, dont Wasquehal Pavé De Lille."
+    },
+    "groups": [
+      {
+        "id": "tram-wasquehal-sart",
+        "title": "Arrêts du tramway",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": ["La Terrasse", "Wasquehal Pavé De Lille", "Le Sart", "Planche Epinoy"],
+        "note": "Le tramway dessert Wasquehal et Le Sart."
+      },
+      {
+        "id": "communes-couronne-nord-2",
+        "title": "Communes de la couronne nord",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": ["Marcq-en-Barœul", "Marquette-lez-Lille", "Pérenchies", "Prémesques"],
+        "note": "Des communes du territoire de la couronne Nord."
+      },
+      {
+        "id": "m2-roubaix",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "items": ["Roubaix Charles De Gaulle", "Roubaix Place", "Gare Jean Lebas", "Mercure"],
+        "note": "Quatre stations de la ligne 2 côté Roubaix."
+      },
+      {
+        "id": "communes-armentierois",
+        "title": "Communes de l'Armentiérois",
+        "difficulty": "hard",
+        "sourceIds": ["mel-communes-datamel"],
+        "items": ["Armentières", "Deûlémont", "Erquinghem-Lys", "Frelinghien"],
+        "note": "Des communes de l'Armentiérois, le long de la Lys."
+      }
+    ]
   }
 ]

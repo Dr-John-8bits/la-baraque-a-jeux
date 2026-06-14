@@ -51,6 +51,9 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await page.evaluate(() => localStorage.clear());
   await page.goto(`${base}apps/le-mot-a-biloute/`);
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  if (await page.locator("#helpDialog").isVisible()) {
+    await page.locator("#helpDialog").getByRole("button", { name: "Fermer" }).click();
+  }
   await page.getByRole("button", { name: /Ch’ti coup d'pouce/ }).click();
   const wordState = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
   expect(wordState.visibleHints.length).toBeGreaterThanOrEqual(1);
@@ -72,11 +75,20 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(lilleState.dailyRollover.timeZone).toBe("Europe/Paris");
   expect(lilleState.puzzle.status).toBe("reviewed");
   expect(lilleState.firstHelpVisible).toBe(true);
+  // Sans cocher l'opt-out : l'aide revient au prochain démarrage.
+  await page.getByRole("button", { name: "Jouer" }).click();
+  await expect(page.locator("#firstHelp")).toBeHidden();
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await expect(page.locator("#firstHelp")).toBeVisible();
+  // En cochant « Ne plus afficher », l'aide ne revient plus au démarrage.
+  await page.locator("#firstHelpOptOut").check();
   await page.getByRole("button", { name: "Jouer" }).click();
   await expect(page.locator("#firstHelp")).toBeHidden();
   await page.reload();
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
   await expect(page.locator("#firstHelp")).toBeHidden();
+  // Le bouton Règles rouvre toujours l'aide à la demande.
   await page.getByRole("button", { name: "Règles" }).click();
   await expect(page.locator("#firstHelp")).toBeVisible();
   await page.getByRole("button", { name: "Jouer" }).click();

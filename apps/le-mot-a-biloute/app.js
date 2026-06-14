@@ -51,6 +51,7 @@ function reportCorpusError() {
 const MAX_GUESSES = 6;
 const STORAGE_PREFIX = "mot-a-biloute";
 const statsKey = `${STORAGE_PREFIX}:stats`;
+const hideHelpKey = `${STORAGE_PREFIX}:hideHelpOnLaunch`;
 const KEYBOARD_ROWS = [
   ["A", "Z", "E", "R", "T", "Y", "U", "I", "O", "P"],
   ["Q", "S", "D", "F", "G", "H", "J", "K", "L", "M"],
@@ -91,6 +92,7 @@ const els = {
   copyFallbackButton: document.getElementById("copyFallbackButton"),
   helpButton: document.getElementById("helpButton"),
   helpDialog: document.getElementById("helpDialog"),
+  helpOptOut: document.getElementById("helpOptOut"),
   archiveButton: document.getElementById("archiveButton"),
   archiveDialog: document.getElementById("archiveDialog"),
   archivePrevButton: document.getElementById("archivePrevButton"),
@@ -137,6 +139,17 @@ render();
 bindEvents();
 scheduleDailyRefresh();
 scheduleCountdownRefresh();
+showLaunchHelp();
+
+function syncHelpOptOut() {
+  if (els.helpOptOut) els.helpOptOut.checked = readJson(hideHelpKey, false) === true;
+}
+
+function showLaunchHelp() {
+  if (!els.helpDialog || readJson(hideHelpKey, false) === true) return;
+  syncHelpOptOut();
+  els.helpDialog.showModal();
+}
 
 function bindEvents() {
   document.addEventListener("keydown", (event) => {
@@ -173,7 +186,11 @@ function bindEvents() {
   els.dialogShareButton.addEventListener("click", shareResult);
   els.copyFallbackButton.addEventListener("click", copyManualShareText);
   els.helpButton.addEventListener("click", () => {
+    syncHelpOptOut();
     els.helpDialog.showModal();
+  });
+  els.helpDialog.addEventListener("close", () => {
+    if (els.helpOptOut) writeJson(hideHelpKey, els.helpOptOut.checked);
   });
   els.archiveButton.addEventListener("click", openArchiveDialog);
   els.archivePrevButton.addEventListener("click", () => moveArchiveSelection(-1));
