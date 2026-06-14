@@ -110,9 +110,15 @@ relit avec une mauvaise grille de lecture.
 
 ### Bloc 4 — Débloquer le contenu *(éditorial lourd, sous-lots)*
 
-- **Lot 4.x** — 🔄 *En cours (2026-06-14)* — Lille-Mêle : grilles relues **10 → 23**
+- **Lot 4.x** — 🔄 *En cours (2026-06-14)* — Lille-Mêle : grilles relues **10 → 25**
   (cible 30-45). Modèle validé par l'éditeur ; grilles marquées `reviewed` (confiance
-  déléguée + vérification systématique). Audit d'intégrité : **0 problème** sur les 23 reviewed.
+  déléguée + vérification systématique). Audit d'intégrité : **0 problème**.
+  - Depuis la 24 : grilles **non-transport** (quartiers, patrimoine, lieux de culture,
+    douceurs/plats du Nord), sources `ville-lille-*` / `hello-lille` / dictionnaires ch'ti
+    (précédent des grilles prototypes). Générateur dédié (refuse religieux/doublons/source
+    non enregistrée) → a écarté « Gare Saint-Sauveur » (« Saint »).
+  - Règle de curation : **une seule famille gourmande par grille** (éviter l'ambiguïté
+    plats/douceurs/braderie).
   - Production outillée : générateur + validateur déterministe (cross-modal, religieux,
     pureté de ligne M1/M2, tram-only, 16 distincts) → impossible de certifier une grille fausse.
   - Auto-rattrapage : une erreur dans ma propre grille 19 (« Wasquehal Pavé De Lille » =

@@ -1991,5 +1991,180 @@
         "note": "Des communes du territoire de la couronne Nord."
       }
     ]
+  },
+  {
+    "id": "lille-saveurs-001",
+    "number": 28,
+    "title": "Lille en quatre saveurs",
+    "intro": "Quartiers, monuments, lieux de culture et douceurs : tout est lillois.",
+    "finalNote": "Grille bâtie à partir des données ouvertes de la Ville de Lille et de sources éditoriales locales, sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "lille",
+      "patrimoine",
+      "culture",
+      "gastronomie"
+    ],
+    "sourceIds": [
+      "banque-chtimi-gastronomie-jeux",
+      "comptoir-flandres-dictionnaire-chti",
+      "hello-lille",
+      "ville-lille-monuments-historiques-data-gouv",
+      "ville-lille-quartiers-data-gouv"
+    ],
+    "bonus": {
+      "question": "L'Hospice Comtesse est un monument du Vieux-Lille devenu musée.",
+      "answer": true,
+      "explanation": "Vrai. L'ancien Hospice Comtesse, dans le Vieux-Lille, abrite aujourd'hui un musée municipal."
+    },
+    "groups": [
+      {
+        "id": "quartiers-lille-1",
+        "title": "Quartiers de Lille",
+        "difficulty": "medium",
+        "sourceIds": [
+          "ville-lille-quartiers-data-gouv"
+        ],
+        "items": [
+          "Vieux-Lille",
+          "Wazemmes",
+          "Lille-Sud",
+          "Bois-Blancs"
+        ],
+        "note": "Quatre quartiers officiels de Lille."
+      },
+      {
+        "id": "patrimoine-lille-1",
+        "title": "Patrimoine lillois",
+        "difficulty": "hard",
+        "sourceIds": [
+          "ville-lille-monuments-historiques-data-gouv"
+        ],
+        "items": [
+          "Citadelle",
+          "Hospice Comtesse",
+          "Chambre de Commerce et d'Industrie",
+          "Caserne Souham"
+        ],
+        "note": "Des monuments inscrits au patrimoine lillois."
+      },
+      {
+        "id": "culture-lille-1",
+        "title": "Lieux de culture",
+        "difficulty": "medium",
+        "sourceIds": [
+          "hello-lille"
+        ],
+        "items": [
+          "La Piscine",
+          "Le Fresnoy",
+          "LaM",
+          "Tripostal"
+        ],
+        "note": "Des lieux culturels de la métropole."
+      },
+      {
+        "id": "douceurs-1",
+        "title": "Douceurs du Nord",
+        "difficulty": "tricky",
+        "sourceIds": [
+          "banque-chtimi-gastronomie-jeux",
+          "comptoir-flandres-dictionnaire-chti"
+        ],
+        "items": [
+          "Babelutte",
+          "Merveilleux",
+          "Cramique",
+          "Vergeoise"
+        ],
+        "note": "Des douceurs typiques du Nord."
+      }
+    ]
+  },
+  {
+    "id": "lille-patrimoine-002",
+    "number": 29,
+    "title": "Du quartier à l'assiette",
+    "intro": "Quatre quartiers, des monuments, des scènes et des plats du Nord.",
+    "finalNote": "Grille bâtie à partir des données ouvertes de la Ville de Lille et de sources éditoriales locales, sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "lille",
+      "patrimoine",
+      "culture",
+      "gastronomie"
+    ],
+    "sourceIds": [
+      "hello-lille",
+      "ville-lille-monuments-historiques-data-gouv",
+      "ville-lille-quartiers-data-gouv"
+    ],
+    "bonus": {
+      "question": "Le potjevleesch est une terrine de viandes typique des Flandres.",
+      "answer": true,
+      "explanation": "Vrai. Le potjevleesch (« petit pot de viande ») est une terrine froide de viandes blanches, spécialité flamande."
+    },
+    "groups": [
+      {
+        "id": "quartiers-lille-2",
+        "title": "Quartiers de Lille",
+        "difficulty": "medium",
+        "sourceIds": [
+          "ville-lille-quartiers-data-gouv"
+        ],
+        "items": [
+          "Lille-Centre",
+          "Lille-Moulins",
+          "Faubourg de Béthune",
+          "Vauban-Esquermes"
+        ],
+        "note": "Quatre quartiers officiels de Lille."
+      },
+      {
+        "id": "patrimoine-lille-2",
+        "title": "Patrimoine lillois",
+        "difficulty": "hard",
+        "sourceIds": [
+          "ville-lille-monuments-historiques-data-gouv"
+        ],
+        "items": [
+          "Hospice Ganthois",
+          "Bâtiment dit la Grande Garde",
+          "Ancien canal de la Baignerie",
+          "Ancienne Maladrerie"
+        ],
+        "note": "Des éléments moins connus du patrimoine lillois."
+      },
+      {
+        "id": "culture-lille-2",
+        "title": "Lieux de culture",
+        "difficulty": "medium",
+        "sourceIds": [
+          "hello-lille"
+        ],
+        "items": [
+          "La Condition Publique",
+          "L'Aéronef",
+          "Opéra de Lille",
+          "Théâtre du Nord"
+        ],
+        "note": "Des scènes et lieux culturels de la métropole."
+      },
+      {
+        "id": "plats-nord-1",
+        "title": "Plats du Nord",
+        "difficulty": "tricky",
+        "sourceIds": [
+          "hello-lille"
+        ],
+        "items": [
+          "Carbonnade",
+          "Potjevleesch",
+          "Hochepot",
+          "Welsh"
+        ],
+        "note": "Des plats salés bien du Nord."
+      }
+    ]
   }
 ]
