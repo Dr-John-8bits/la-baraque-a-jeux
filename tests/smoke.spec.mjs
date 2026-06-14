@@ -34,10 +34,11 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
     page.getByRole("link", { name: "Ouvrir Le mot à Biloute", exact: true })
   ).toBeVisible();
   await expect(page.getByRole("link", { name: "Ouvrir Lille-Mêle", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Ouvrir Station Mystère", exact: true })).toBeVisible();
+  // BBB est retiré du portail (jeu de hasard sans rituel quotidien) ; sa page existe toujours.
   await expect(
     page.getByRole("link", { name: "Ouvrir Biloute Bière Braderie", exact: true })
-  ).toBeVisible();
-  await expect(page.getByRole("link", { name: "Ouvrir Station Mystère", exact: true })).toBeVisible();
+  ).toHaveCount(0);
   await page.getByRole("button", { name: "À propos", exact: true }).click();
   await expect(page.getByRole("dialog", { name: "À propos", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Fermer", exact: true }).click();

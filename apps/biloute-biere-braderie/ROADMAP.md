@@ -7,7 +7,7 @@ Le principe actuel : lancer `CH'TI FOU MI`, choisir avant la fin du compte à re
 
 Version jouable en webapp statique :
 
-- intégration dans `apps/biloute-biere-braderie/` et dans le portail ;
+- code dans `apps/biloute-biere-braderie/` (jeu toujours jouable par URL), mais **retiré du portail** depuis juin 2026 — voir la décision ci-dessous ;
 - thème `Biloute · Bière · Braderie` avec sous-titre et règles du triangle ;
 - règles locales :
   - Biloute bat Bière ;
@@ -29,6 +29,30 @@ Version jouable en webapp statique :
 - partage du résultat ;
 - stockage local des statistiques de base ;
 - `window.render_game_to_text()` et `window.advanceTime(ms)` disponibles pour les tests.
+
+## Décision (juin 2026) · retiré du portail
+
+BBB a été **débranché du portail** (carte, OG, sitemap), le code restant en place. Raison : c'est un **jeu de pur hasard**. L'ordinateur joue 100 % aléatoirement (`getComputerChoice()` = `Math.random()`), donc contre lui le choix du joueur ne change rien (1/3 gagné, 1/3 nul, 1/3 perdu). Le seul « skill » est de cliquer avant la fin des 3 s. Le jeu détonne sur les 3 axes qui font la force des autres : il n'est ni **quotidien**, ni un **puzzle**, ni **éducatif sur Lille** (juste de l'habillage ch'ti sur du pierre-papier-ciseaux).
+
+**Condition de retour au portail : lui donner un cerveau (Priorité 0 ci-dessous).** Sans ça, ne pas le réafficher.
+
+## Priorité 0 · Lui donner un cerveau (IA prédictive, sans API ni serveur)
+
+C'est *le* chantier qui transforme BBB de « pile ou face » en vrai jeu d'adresse : « bats le bot ch'ti qui apprend tes tics ». **Aucune IA distante, aucune clé API** : un humain est mauvais pour être aléatoire (il rejoue le coup gagnant, change après une défaite, évite de répéter, a un favori). Un petit prédicteur exploite ces tics.
+
+Approche :
+
+- modèle de fréquences conditionné par le **contexte** = `dernier coup du joueur` + `résultat de la manche précédente` (les humains « stick after a win, switch after a loss ») ;
+- à chaque tour : prédire le coup le plus probable du joueur dans ce contexte, puis jouer **le contre** ;
+- les données sont **déjà là** : `state.history` garde les coups. ~30-40 lignes de JS pur dans `getComputerChoice()`.
+
+Dosage (essentiel pour que ce soit fun, pas frustrant) :
+
+- contrer seulement **55-65 % du temps**, jouer aléatoire le reste — sinon le bot devient imbattable ;
+- exposable comme niveaux de difficulté : `Biloute débutant` (≈ aléatoire) → `Biloute madré` (prédiction agressive) ;
+- ajouter un feedback quand le bot anticipe (« 👀 le bot a senti ton coup venir ») pour rendre la méta lisible.
+
+Effort estimé : **S–M** (une après-midi). Le prédicteur est trivial ; le travail est le réglage et le feedback. Quand c'est fait et amusant, on peut réintégrer la carte au portail.
 
 ## Décisions UX actées
 
