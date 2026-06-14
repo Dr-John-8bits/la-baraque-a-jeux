@@ -110,17 +110,20 @@ relit avec une mauvaise grille de lecture.
 
 ### Bloc 4 — Débloquer le contenu *(éditorial lourd, sous-lots)*
 
-- **Lot 4.x** — 🔄 *En cours (2026-06-14)* — Lille-Mêle : grilles relues **10 → 19**
+- **Lot 4.x** — 🔄 *En cours (2026-06-14)* — Lille-Mêle : grilles relues **10 → 23**
   (cible 30-45). Modèle validé par l'éditeur ; grilles marquées `reviewed` (confiance
-  déléguée + vérification systématique).
+  déléguée + vérification systématique). Audit d'intégrité : **0 problème** sur les 23 reviewed.
   - Production outillée : générateur + validateur déterministe (cross-modal, religieux,
     pureté de ligne M1/M2, tram-only, 16 distincts) → impossible de certifier une grille fausse.
   - Auto-rattrapage : une erreur dans ma propre grille 19 (« Wasquehal Pavé De Lille » =
-    métro M2 + tram, mise par erreur en famille tram) détectée et corrigée avant commit.
-  - ⚠️ **Bugs trouvés dans 2 grilles existantes (pré-réécriture)** à corriger : `rames-rives-001`
-    (« Gare Lille Flandres » = correspondance M1+M2 dans une famille de ligne) et
-    `tourcoing-weppes-001` (« Tourcoing Centre » cross-modal métro+tram avec familles concurrentes).
+    métro M2 + tram) détectée et corrigée avant commit.
+  - ✅ **2 bugs corrigés dans des grilles existantes (pré-réécriture)** : `rames-rives-001`
+    (« Gare Lille Flandres » et « Porte des Postes » = correspondances M1+M2) et
+    `tourcoing-weppes-001` (« Tourcoing Centre » et « Wasquehal Pavé de Lille » cross-modal).
   - Helper de test durci (`exact: true`) pour gérer les faux-amis à noms imbriqués.
+  - **Reste ~7-22 grilles**. Matériel transport/communes propre presque épuisé : aller plus
+    loin avec variété demandera de **curer des familles non-transport** (douceurs, patrimoine,
+    quartiers) — plus de travail à la main par famille.
   - Méthode : familles tirées de `candidate-families.json` (exports Ilévia/MEL sourcés),
     items **croisés contre `metro-stations.json`** pour éliminer les ambiguïtés.
   - Pièges écartés : correspondances (Porte des Postes, Gare Lille Flandres = M1+M2),

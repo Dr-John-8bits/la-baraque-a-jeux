@@ -465,7 +465,7 @@
         "items": [
           "Fives",
           "Madeleine Caulier",
-          "Gare Lille Flandres",
+          "Gambetta",
           "Rihour"
         ],
         "note": "Quatre stations de la ligne 1 dans la traversée lilloise."
@@ -476,7 +476,7 @@
         "difficulty": "medium",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
-          "Porte des Postes",
+          "Bois Blancs",
           "Montebello",
           "Cormontaigne",
           "Port de Lille"
@@ -525,9 +525,9 @@
       "mel-communes-datamel"
     ],
     "bonus": {
-      "question": "Le tramway dessert des arrêts à Wasquehal.",
+      "question": "Le tramway relie Lille à Roubaix et Tourcoing.",
       "answer": true,
-      "explanation": "Vrai. Les exports métro-tram listent notamment Pont de Wasquehal et Wasquehal Pavé de Lille."
+      "explanation": "Vrai. Le tramway, le célèbre Mongy, compte deux branches : l'une vers Roubaix, l'autre vers Tourcoing."
     },
     "groups": [
       {
@@ -537,7 +537,7 @@
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "Colbert",
-          "Tourcoing Centre",
+          "Phalempins",
           "Gare de Tourcoing",
           "Carliers"
         ],
@@ -550,11 +550,11 @@
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "La Terrasse",
-          "Wasquehal Pavé de Lille",
+          "Hopital Victor Provo",
           "Le Sart",
           "Planche Epinoy"
         ],
-        "note": "Une série d'arrêts du tramway côté Wasquehal et environs."
+        "note": "Une série d'arrêts du tramway sur la branche vers Roubaix."
       },
       {
         "id": "communes-armentierois-lys",
@@ -1648,6 +1648,347 @@
           "Jacques Cartier"
         ],
         "note": "Quatre premiers arrêts de la Liane 99."
+      }
+    ]
+  },
+  {
+    "id": "lomme-va-001",
+    "number": 24,
+    "title": "D'un bout à l'autre du métro",
+    "intro": "Le métro va de Lomme à Villeneuve-d'Ascq, et dessert bien des communes.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "communes",
+      "metro",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 du métro dessert Lomme.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 traverse Lomme, avec Mitterie, Bourg et Maison des Enfants."
+    },
+    "groups": [
+      {
+        "id": "m2-lomme-2",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Pont Superieur",
+          "Maison Des Enfants",
+          "Bourg",
+          "Mitterie"
+        ],
+        "note": "La ligne 2 dessert le secteur de Lomme."
+      },
+      {
+        "id": "m1-va-2",
+        "title": "Stations de la ligne 1",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "4 Cantons Stade P. Mauroy",
+          "Cité Scientifique",
+          "Triolo",
+          "Pont De Bois"
+        ],
+        "note": "La ligne 1 file jusqu'au campus de Villeneuve-d'Ascq."
+      },
+      {
+        "id": "communes-metro-1",
+        "title": "Communes desservies par le métro",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Croix",
+          "Lambersart",
+          "Lezennes",
+          "Lille"
+        ],
+        "note": "Des communes que le métro dessert."
+      },
+      {
+        "id": "communes-sud-3",
+        "title": "Communes de la couronne sud",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Emmerin",
+          "Faches-Thumesnil",
+          "Fretin",
+          "Houplin-Ancoisne"
+        ],
+        "note": "Des communes du territoire de la couronne Sud."
+      }
+    ]
+  },
+  {
+    "id": "lille-centre-002",
+    "number": 25,
+    "title": "Au centre et tout autour",
+    "intro": "Le cœur de la ligne 2 et les communes de la métropole.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "communes",
+      "metro",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 du métro dessert le centre de Lille.",
+      "answer": true,
+      "explanation": "Vrai. Mairie de Lille et Lille Grand Palais sont des stations de la ligne 2."
+    },
+    "groups": [
+      {
+        "id": "m2-lille-centre",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Mairie De Lille",
+          "Grand Palais",
+          "Porte De Valenciennes",
+          "Porte De Douai"
+        ],
+        "note": "Quatre stations de la ligne 2 au centre et au sud de Lille."
+      },
+      {
+        "id": "communes-metro-2",
+        "title": "Communes desservies par le métro",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Mons-en-Barœul",
+          "Roubaix",
+          "Tourcoing",
+          "Villeneuve-d'Ascq"
+        ],
+        "note": "De grandes communes desservies par le métro."
+      },
+      {
+        "id": "communes-nord-3",
+        "title": "Communes de la couronne nord",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Capinghem",
+          "La Madeleine",
+          "Lambersart",
+          "Lompret"
+        ],
+        "note": "Des communes du territoire de la couronne Nord."
+      },
+      {
+        "id": "communes-est-3",
+        "title": "Communes de l'est",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Anstaing",
+          "Baisieux",
+          "Bouvines",
+          "Chéreng"
+        ],
+        "note": "Des communes du territoire Est."
+      }
+    ]
+  },
+  {
+    "id": "roubaix-territoires-001",
+    "number": 26,
+    "title": "Roubaix et les villages",
+    "intro": "La ligne 2 vers Roubaix, et trois territoires de communes.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "communes",
+      "metro",
+      "metropole"
+    ],
+    "sourceIds": [
+      "gtfs-ilevia-data-gouv",
+      "ilevia-arret-point-datamel",
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "La ligne 2 du métro dessert Roubaix.",
+      "answer": true,
+      "explanation": "Vrai. La ligne 2 dessert Roubaix, avec Gare Jean Lebas et Roubaix Charles de Gaulle."
+    },
+    "groups": [
+      {
+        "id": "m2-roubaix-2",
+        "title": "Stations de la ligne 2",
+        "difficulty": "medium",
+        "sourceIds": [
+          "gtfs-ilevia-data-gouv",
+          "ilevia-arret-point-datamel"
+        ],
+        "items": [
+          "Jean Jaures",
+          "Roubaix Place",
+          "Roubaix Charles De Gaulle",
+          "Gare Jean Lebas"
+        ],
+        "note": "Quatre stations de la ligne 2 vers Roubaix."
+      },
+      {
+        "id": "communes-tourquennois-3",
+        "title": "Communes du Tourquennois",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Bondues",
+          "Bousbecque",
+          "Comines",
+          "Halluin"
+        ],
+        "note": "Des communes du territoire du Tourquennois."
+      },
+      {
+        "id": "communes-weppes-3",
+        "title": "Communes des Weppes",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Aubers",
+          "Beaucamps-Ligny",
+          "Bois-Grenier",
+          "Don"
+        ],
+        "note": "Des communes rurales du territoire des Weppes."
+      },
+      {
+        "id": "communes-roubaisien-3",
+        "title": "Communes du Roubaisien",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Croix",
+          "Hem",
+          "Lannoy",
+          "Leers"
+        ],
+        "note": "Des communes du territoire Roubaisien."
+      }
+    ]
+  },
+  {
+    "id": "quatre-territoires-001",
+    "number": 27,
+    "title": "Quatre coins de la métropole",
+    "intro": "Seize communes, quatre territoires : à toi de les ranger.",
+    "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
+    "status": "reviewed",
+    "tags": [
+      "communes",
+      "metropole"
+    ],
+    "sourceIds": [
+      "mel-communes-datamel"
+    ],
+    "bonus": {
+      "question": "Mons-en-Barœul appartient au territoire Est de la métropole.",
+      "answer": true,
+      "explanation": "Vrai. Les données de la MEL rattachent Mons-en-Barœul au territoire Est."
+    },
+    "groups": [
+      {
+        "id": "communes-sud-4",
+        "title": "Communes de la couronne sud",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Allennes-les-Marais",
+          "Annœullin",
+          "Bauvin",
+          "Carnin"
+        ],
+        "note": "Des communes du territoire de la couronne Sud."
+      },
+      {
+        "id": "communes-est-4",
+        "title": "Communes de l'est",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Forest-sur-Marque",
+          "Gruson",
+          "Mons-en-Barœul",
+          "Péronne-en-Mélantois"
+        ],
+        "note": "Des communes du territoire Est."
+      },
+      {
+        "id": "communes-tourquennois-4",
+        "title": "Communes du Tourquennois",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Linselles",
+          "Mouvaux",
+          "Neuville-en-Ferrain",
+          "Roncq"
+        ],
+        "note": "Des communes du territoire du Tourquennois."
+      },
+      {
+        "id": "communes-nord-4",
+        "title": "Communes de la couronne nord",
+        "difficulty": "hard",
+        "sourceIds": [
+          "mel-communes-datamel"
+        ],
+        "items": [
+          "Marcq-en-Barœul",
+          "Marquette-lez-Lille",
+          "Pérenchies",
+          "Prémesques"
+        ],
+        "note": "Des communes du territoire de la couronne Nord."
       }
     ]
   }
