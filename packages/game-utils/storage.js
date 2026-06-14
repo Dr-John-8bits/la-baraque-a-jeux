@@ -8,6 +8,13 @@ export function readJson(key, fallback = null) {
 }
 
 export function writeJson(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch {
+    // localStorage indisponible (mode privé, quota plein, accès bloqué) :
+    // la persistance est best-effort, on ne casse pas la partie en cours.
+    return false;
+  }
 }
 

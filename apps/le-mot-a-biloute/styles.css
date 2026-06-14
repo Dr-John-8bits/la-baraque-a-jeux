@@ -181,6 +181,14 @@ h3 {
   animation: loading-spin 820ms linear infinite;
 }
 
+.loading-error {
+  margin: 0;
+  max-width: 32ch;
+  color: var(--red);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
 .board {
   width: min(100%, 286px);
   display: grid;

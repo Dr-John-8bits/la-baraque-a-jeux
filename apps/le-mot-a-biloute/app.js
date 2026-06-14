@@ -20,14 +20,33 @@ const WIN_BOUNCE_DELAY_MS = 420;
 const WIN_BOUNCE_MS = 520;
 const WIN_DIALOG_PAUSE_MS = 220;
 
-const WORDS = await fetchJson("../../packages/corpus/le-mot-a-biloute/words.json");
-const GUESS_POLICY = await fetchJson("../../packages/corpus/le-mot-a-biloute/guess-policy.json");
-const ACCEPTED_GUESSES = await fetchJson(
-  "../../packages/corpus/le-mot-a-biloute/accepted-guesses.json"
-);
-const FRENCH_GUESSES = await fetchJson(
-  "../../packages/corpus/le-mot-a-biloute/french-guesses.json"
-);
+let WORDS;
+let GUESS_POLICY;
+let ACCEPTED_GUESSES;
+let FRENCH_GUESSES;
+try {
+  [WORDS, GUESS_POLICY, ACCEPTED_GUESSES, FRENCH_GUESSES] = await Promise.all([
+    fetchJson("../../packages/corpus/le-mot-a-biloute/words.json"),
+    fetchJson("../../packages/corpus/le-mot-a-biloute/guess-policy.json"),
+    fetchJson("../../packages/corpus/le-mot-a-biloute/accepted-guesses.json"),
+    fetchJson("../../packages/corpus/le-mot-a-biloute/french-guesses.json"),
+  ]);
+} catch (error) {
+  reportCorpusError();
+  throw error;
+}
+
+function reportCorpusError() {
+  const loading = document.getElementById("loadingState");
+  if (!loading) return;
+  loading.classList.add("loading-state--error");
+  loading.replaceChildren();
+  const message = document.createElement("p");
+  message.className = "loading-error";
+  message.textContent =
+    "Le mot du jour n'a pas pu être chargé. Vérifie ta connexion, puis recharge la page.";
+  loading.append(message);
+}
 
 const MAX_GUESSES = 6;
 const STORAGE_PREFIX = "mot-a-biloute";

@@ -324,6 +324,12 @@ h1 {
   background: color-mix(in srgb, var(--primary), var(--surface) 82%);
 }
 
+.message.error {
+  border-color: var(--red);
+  background: color-mix(in srgb, var(--red), var(--surface) 86%);
+  color: var(--ink);
+}
+
 .result {
   display: none;
   padding: 14px;

@@ -202,3 +202,13 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(stationAfterReload.stats.wins).toBe(1);
   expect(errors).toEqual([]);
 });
+
+test("les jeux affichent un message lisible quand le corpus est indisponible", async ({ page }) => {
+  await page.route("**/packages/corpus/le-mot-a-biloute/**", (route) => route.abort());
+  await page.goto(`${base}apps/le-mot-a-biloute/`);
+  await expect(page.locator(".loading-error")).toContainText("n'a pas pu être chargé");
+
+  await page.route("**/packages/corpus/lille-mele/**", (route) => route.abort());
+  await page.goto(`${base}apps/lille-mele/`);
+  await expect(page.locator("#message.error")).toContainText("n'a pas pu être chargée");
+});

@@ -28,7 +28,21 @@ const DEFAULT_STATS = {
   lastWinDateId: "",
 };
 
-const puzzles = await fetchJson("../../packages/corpus/lille-mele/puzzles.json");
+let puzzles;
+try {
+  puzzles = await fetchJson("../../packages/corpus/lille-mele/puzzles.json");
+} catch (error) {
+  reportCorpusError();
+  throw error;
+}
+
+function reportCorpusError() {
+  const message = document.getElementById("message");
+  if (!message) return;
+  message.textContent =
+    "La grille du jour n'a pas pu être chargée. Vérifie ta connexion, puis recharge la page.";
+  message.classList.add("error");
+}
 
 const els = {
   intro: document.querySelector("#intro"),
