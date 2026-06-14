@@ -44,8 +44,8 @@ Le principe on joue tout seul et on joue contre l'ordinateur. Inspire toi du dos
 - 2026-06-01 : ajustement du suspense de révélation à 1,5 s et mise à jour du smoke test associé.
 - 2026-06-01 : suppression des boutons hauts `?` et réinitialisation, remplacement du compteur de manche central par l'objectif `Premier à 5`, et ajout d'un bandeau objectif compact.
 - 2026-06-01 : création de `ROADMAP.md` pour consigner l'état réel du mini-jeu, les décisions UX actées et les pistes de reprise inspirées du Mot à Biloute.
+- 2026-06-14 : Lot 2.1 — ajout du calepin (modale `<dialog>` à la convention des jeux mûrs : tournées jouées/gagnées/perdues, taux, séries, plus belle victoire, manches gagnées, temps morts, 10 dernières tournées) + export/import JSON ; textes de fin selon le score ; « Rejouer » → « Revanche » ; `render_game_to_text` expose `stats`. Tests dédiés : tournée gagnée 5-0 (crochet `__forceComputerChoice`) et défaite par 5 temps morts. `npm run check` et `npm run test:browser` OK.
 
 ## TODO
 
-- Priorité de reprise : calepin minimal avec tournées gagnées/perdues, série actuelle et partage enrichi.
-- Prévoir des tests dédiés de fin de tournée gagnée, fin de tournée perdue, phase de révélation et timeout.
+- Reste optionnel (priorité basse) : aide courte « Hein ? », micro-copies variées, badges de performance.

@@ -141,7 +141,7 @@
         <p id="resultText"></p>
         <div class="result-actions">
           <button class="action-button action-button--primary" type="button" id="playAgainButton">
-            Rejouer
+            Revanche
           </button>
           <button class="action-button" type="button" id="shareButton">Partager</button>
         </div>
@@ -184,10 +184,56 @@
       </section>
 
       <section class="history-panel" aria-labelledby="historyTitle">
-        <h2 id="historyTitle">Dernières manches</h2>
+        <div class="history-head">
+          <h2 id="historyTitle">Dernières manches</h2>
+          <button class="ghost-button" type="button" id="calepinButton">Calepin</button>
+        </div>
         <ol class="history-list" id="historyList"></ol>
       </section>
     </main>
+
+    <dialog class="bbb-dialog" id="statsDialog" aria-labelledby="statsTitle">
+      <form method="dialog" class="bbb-dialog__panel">
+        <header class="bbb-dialog__head">
+          <div>
+            <p class="eyebrow">Calepin</p>
+            <h2 id="statsTitle">Tes tournées</h2>
+          </div>
+          <div class="bbb-dialog__tools">
+            <button
+              class="icon-tool"
+              type="button"
+              id="exportStatsButton"
+              aria-label="Exporter le calepin"
+              title="Exporter le calepin"
+            >
+              ↓
+            </button>
+            <button
+              class="icon-tool"
+              type="button"
+              id="importStatsButton"
+              aria-label="Importer le calepin"
+              title="Importer le calepin"
+            >
+              ↑
+            </button>
+            <input
+              id="importStatsInput"
+              type="file"
+              accept="application/json"
+              aria-label="Importer un calepin au format JSON"
+            />
+            <button class="icon-close" type="submit" aria-label="Fermer le calepin">×</button>
+          </div>
+        </header>
+        <dl class="stats-grid" id="statsGrid"></dl>
+        <section class="calepin-history" aria-label="Dernières tournées">
+          <h3>10 dernières tournées</h3>
+          <ol class="calepin-list" id="tournamentHistory"></ol>
+        </section>
+      </form>
+    </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 

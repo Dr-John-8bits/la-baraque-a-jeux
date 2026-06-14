@@ -239,3 +239,47 @@ test("lille-mele: la modale d'accueil rend l'arrière-plan inert", async ({ page
   );
   expect(headerInert).toBe(true);
 });
+
+test("bbb: une tournée gagnée 5-0 enrichit le calepin", async ({ page }) => {
+  await page.goto(`${base}apps/biloute-biere-braderie/`);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await page.evaluate(() => window.__forceComputerChoice("biere")); // biloute bat biere
+
+  for (let i = 0; i < 5; i += 1) {
+    await page.locator("#roundButton").click();
+    await page.getByRole("button", { name: /Biloute bat Bière/ }).click();
+    await page.evaluate(() => window.advanceTime(1600));
+  }
+
+  const won = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(won.status).toBe("player_won");
+  expect(won.score).toMatchObject({ player: 5, computer: 0 });
+  expect(won.stats).toMatchObject({ played: 1, won: 1, fewestConceded: 0 });
+  expect(won.stats.history[0]).toMatchObject({ result: "won", playerScore: 5, computerScore: 0 });
+  await expect(page.locator("#resultText")).toContainText("Tournée parfaite");
+
+  await page.getByRole("button", { name: "Calepin", exact: true }).click();
+  await expect(page.locator("#statsDialog")).toBeVisible();
+  await expect(page.locator("#statsGrid")).toContainText("Tournées gagnées");
+  await expect(page.locator("#tournamentHistory .calepin-row--win").first()).toBeVisible();
+});
+
+test("bbb: cinq temps morts font perdre la tournée", async ({ page }) => {
+  await page.goto(`${base}apps/biloute-biere-braderie/`);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+
+  for (let i = 0; i < 5; i += 1) {
+    await page.locator("#roundButton").click();
+    await page.evaluate(() => window.advanceTime(3100)); // dépasse les 3 s -> timeout
+  }
+
+  const lost = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(lost.status).toBe("computer_won");
+  expect(lost.score).toMatchObject({ player: 0, computer: 5 });
+  expect(lost.stats).toMatchObject({ lost: 1, timeouts: 5 });
+  await expect(page.locator("#resultText")).toContainText("Balayé");
+});

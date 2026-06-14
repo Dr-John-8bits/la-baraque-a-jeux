@@ -48,6 +48,11 @@ const DEFAULT_STATS = {
   lost: 0,
   bestStreak: 0,
   currentStreak: 0,
+  roundsPlayed: 0,
+  roundsWon: 0,
+  timeouts: 0,
+  fewestConceded: null,
+  history: [],
 };
 
 const els = {
@@ -78,6 +83,13 @@ const els = {
   playAgainButton: document.querySelector("#playAgainButton"),
   shareButton: document.querySelector("#shareButton"),
   historyList: document.querySelector("#historyList"),
+  calepinButton: document.querySelector("#calepinButton"),
+  statsDialog: document.querySelector("#statsDialog"),
+  statsGrid: document.querySelector("#statsGrid"),
+  tournamentHistory: document.querySelector("#tournamentHistory"),
+  exportStatsButton: document.querySelector("#exportStatsButton"),
+  importStatsButton: document.querySelector("#importStatsButton"),
+  importStatsInput: document.querySelector("#importStatsInput"),
   toast: document.querySelector("#toast"),
 };
 
@@ -85,6 +97,7 @@ let state = createInitialState();
 let toastTimer = 0;
 let countdownFrame = 0;
 let lastCountdownTick = 0;
+let forcedComputerChoice = null;
 
 bindEvents();
 render();
@@ -104,6 +117,8 @@ function createInitialState() {
     lastRound: null,
     pendingRound: null,
     history: [],
+    roundsThisTournament: 0,
+    timeoutsThisTournament: 0,
     completedRecorded: false,
   };
 }
@@ -115,6 +130,14 @@ function bindEvents() {
   els.roundButton.addEventListener("click", startRound);
   els.playAgainButton.addEventListener("click", resetGame);
   els.shareButton.addEventListener("click", shareResult);
+  els.calepinButton?.addEventListener("click", openStats);
+  els.exportStatsButton?.addEventListener("click", exportStats);
+  els.importStatsButton?.addEventListener("click", () => els.importStatsInput?.click());
+  els.importStatsInput?.addEventListener("change", (event) => {
+    const file = event.target.files?.[0];
+    if (file) importStats(file);
+    event.target.value = "";
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.metaKey || event.ctrlKey || event.altKey) return;
@@ -143,6 +166,11 @@ function bindEvents() {
     render();
   };
   window.render_game_to_text = renderGameToText;
+  // Crochet de test (comme advanceTime) : force le coup de l'ordi pour des
+  // scénarios déterministes. Sans effet tant qu'il n'est pas appelé.
+  window.__forceComputerChoice = (id) => {
+    forcedComputerChoice = CHOICE_ORDER.includes(id) ? id : null;
+  };
 }
 
 function startRound() {
@@ -201,6 +229,8 @@ function playRound(playerChoiceId) {
 
 function finishRound(roundResult) {
   applyRoundScore(roundResult);
+  state.roundsThisTournament += 1;
+  if (roundResult.result === "timeout") state.timeoutsThisTournament += 1;
   state.lastRound = roundResult;
   state.pendingRound = null;
   state.revealRemainingMs = 0;
@@ -295,6 +325,7 @@ function finishPendingRound() {
 }
 
 function getComputerChoice() {
+  if (forcedComputerChoice) return forcedComputerChoice;
   return CHOICE_ORDER[Math.floor(Math.random() * CHOICE_ORDER.length)];
 }
 
@@ -312,21 +343,133 @@ function resetGame() {
 function recordCompletion() {
   if (state.completedRecorded) return;
   const stats = getStats();
+  const won = state.status === "player_won";
   stats.played += 1;
-  if (state.status === "player_won") {
+  stats.roundsPlayed += state.roundsThisTournament;
+  stats.roundsWon += state.playerScore; // chaque point joueur = une manche gagnée
+  stats.timeouts += state.timeoutsThisTournament;
+  if (won) {
     stats.won += 1;
     stats.currentStreak += 1;
     stats.bestStreak = Math.max(stats.bestStreak, stats.currentStreak);
+    if (stats.fewestConceded === null || state.computerScore < stats.fewestConceded) {
+      stats.fewestConceded = state.computerScore;
+    }
   } else {
     stats.lost += 1;
     stats.currentStreak = 0;
   }
+  stats.history.unshift({
+    result: won ? "won" : "lost",
+    playerScore: state.playerScore,
+    computerScore: state.computerScore,
+  });
+  stats.history = stats.history.slice(0, 10);
   state.completedRecorded = true;
   writeJson(`${STORAGE_PREFIX}:stats`, stats);
 }
 
 function getStats() {
   return { ...DEFAULT_STATS, ...readJson(`${STORAGE_PREFIX}:stats`, {}) };
+}
+
+function openStats() {
+  renderStats();
+  if (typeof els.statsDialog.showModal === "function") els.statsDialog.showModal();
+  else els.statsDialog.setAttribute("open", "");
+}
+
+function renderStats() {
+  const stats = getStats();
+  const winRate = stats.played ? Math.round((stats.won / stats.played) * 100) : 0;
+  const bestWin = stats.fewestConceded === null ? "—" : `5-${stats.fewestConceded}`;
+  const rows = [
+    ["Tournées jouées", stats.played],
+    ["Tournées gagnées", stats.won],
+    ["Tournées perdues", stats.lost],
+    ["Taux de victoire", `${winRate} %`],
+    ["Série en cours", stats.currentStreak],
+    ["Meilleure série", stats.bestStreak],
+    ["Plus belle victoire", bestWin],
+    ["Manches gagnées", `${stats.roundsWon}/${stats.roundsPlayed}`],
+    ["Temps morts", stats.timeouts],
+  ];
+  els.statsGrid.innerHTML = rows
+    .map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(String(value))}</dd></div>`)
+    .join("");
+
+  if (!stats.history.length) {
+    els.tournamentHistory.innerHTML = `<li class="calepin-empty">Aucune tournée terminée pour l'instant.</li>`;
+    return;
+  }
+  els.tournamentHistory.innerHTML = stats.history
+    .map((tournament) => {
+      const win = tournament.result === "won";
+      return `<li class="calepin-row calepin-row--${win ? "win" : "loss"}">
+          <strong>${win ? "Gagnée" : "Perdue"}</strong>
+          <span>${tournament.playerScore}-${tournament.computerScore}</span>
+        </li>`;
+    })
+    .join("");
+}
+
+function exportStats() {
+  const payload = {
+    game: "biloute-biere-braderie",
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    stats: getStats(),
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "calepin-biloute-biere-braderie.json";
+  link.click();
+  URL.revokeObjectURL(url);
+  showToast("Calepin exporté.");
+}
+
+async function importStats(file) {
+  try {
+    const payload = JSON.parse(await file.text());
+    const merged = sanitizeImportedStats(payload?.stats ?? payload);
+    if (!writeJson(`${STORAGE_PREFIX}:stats`, merged)) {
+      showToast("Stockage indisponible.");
+      return;
+    }
+    renderStats();
+    render();
+    showToast("Calepin importé.");
+  } catch {
+    showToast("Calepin illisible.");
+  }
+}
+
+function sanitizeImportedStats(incoming) {
+  const stats = { ...DEFAULT_STATS };
+  if (!incoming || typeof incoming !== "object") return stats;
+  const toCount = (value) => (Number.isFinite(value) && value >= 0 ? Math.floor(value) : 0);
+  stats.played = toCount(incoming.played);
+  stats.won = toCount(incoming.won);
+  stats.lost = toCount(incoming.lost);
+  stats.bestStreak = toCount(incoming.bestStreak);
+  stats.currentStreak = toCount(incoming.currentStreak);
+  stats.roundsPlayed = toCount(incoming.roundsPlayed);
+  stats.roundsWon = toCount(incoming.roundsWon);
+  stats.timeouts = toCount(incoming.timeouts);
+  stats.fewestConceded =
+    Number.isFinite(incoming.fewestConceded) && incoming.fewestConceded >= 0
+      ? Math.floor(incoming.fewestConceded)
+      : null;
+  stats.history = Array.isArray(incoming.history)
+    ? incoming.history.slice(0, 10).map((tournament) => ({
+        result: tournament?.result === "won" ? "won" : "lost",
+        playerScore: toCount(tournament?.playerScore),
+        computerScore: toCount(tournament?.computerScore),
+      }))
+    : [];
+  return stats;
 }
 
 function render() {
@@ -495,11 +638,23 @@ function renderResultPanel() {
 
   const won = state.status === "player_won";
   const stats = getStats();
+  const flavor = getFinalFlavor(won, state.playerScore, state.computerScore);
   els.resultPanel.className = ["result-panel", won ? "result-panel--win" : "result-panel--loss"].join(" ");
   els.resultTitle.textContent = won ? "Tournée gagnée." : "La braderie t'a retourné.";
   els.resultText.textContent = won
-    ? `Score final ${state.playerScore}-${state.computerScore}. Série en cours : ${stats.currentStreak}.`
-    : `Score final ${state.playerScore}-${state.computerScore}. Meilleure série : ${stats.bestStreak}.`;
+    ? `Score final ${state.playerScore}-${state.computerScore}. ${flavor} Série en cours : ${stats.currentStreak}.`
+    : `Score final ${state.playerScore}-${state.computerScore}. ${flavor} Meilleure série : ${stats.bestStreak}.`;
+}
+
+function getFinalFlavor(won, player, computer) {
+  if (won) {
+    if (computer === 0) return "Tournée parfaite, pas une miette pour l'ordi.";
+    if (computer <= 2) return "Tournée bien tenue.";
+    return "Tournée serrée, mais ça passe.";
+  }
+  if (player === 0) return "Balayé d'entrée, l'ordi t'a roulé dessus.";
+  if (player >= 4) return "À un point près, la revanche t'attend.";
+  return "Pas cette fois, on remet ça ?";
 }
 
 function getVisibleOutcome() {
@@ -672,5 +827,6 @@ function renderGameToText() {
     lastRound: state.lastRound,
     visibleOutcome: getVisibleOutcome(),
     message: state.message,
+    stats: getStats(),
   });
 }

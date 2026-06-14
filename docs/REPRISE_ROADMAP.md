@@ -78,9 +78,16 @@ relit avec une mauvaise grille de lecture.
 
 ### Bloc 2 — Finir ce qui est presque fini *(code, léger)*
 
-- **Lot 2.1** — Biloute · Bière · Braderie : calepin + stats (tournées jouées/gagnées,
-  série, meilleure série), textes de fin selon le score, tests dédiés (fin gagnée/perdue,
-  timeout, révélation).
+- **Lot 2.1** — ✅ *Fait (2026-06-14)* — Biloute · Bière · Braderie :
+  - Calepin (modale `<dialog>` à la convention des jeux mûrs) ouvert par un bouton discret :
+    tournées jouées/gagnées/perdues, taux de victoire, série en cours, meilleure série,
+    plus belle victoire, manches gagnées, temps morts, historique des 10 dernières tournées.
+  - Stats enrichies (les anciennes clés restent compatibles via fusion `DEFAULT_STATS`) +
+    export/import JSON du calepin.
+  - Textes de fin variant selon le score (5-0 parfait … 4-5 serré) ; « Rejouer » → « Revanche ».
+  - `render_game_to_text` expose désormais `stats` (additif).
+  - 2 tests navigateur : tournée gagnée 5-0 (déterministe via le crochet de test
+    `__forceComputerChoice`) et tournée perdue par 5 temps morts.
 
 ### Bloc 3 — Stabiliser Station Mystère *(code + éditorial, moyen)*
 
