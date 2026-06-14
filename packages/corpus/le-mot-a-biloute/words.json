@@ -773,5 +773,233 @@
       "title": "Bêtises",
       "text": "Les bêtises de Cambrai prouvent qu'une erreur peut parfois finir en bonbon. Voilà une morale plutôt arrangeante."
     }
+  },
+  {
+    "id": "baraque",
+    "answer": "BARAQUE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Sans elle, pas de frites à la ducasse.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["vocabulaire", "marche"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Petite installation de vente, sur un marché ou une fête.",
+      "Elle a même donné son nom à cette baraque à jeux."
+    ],
+    "acceptedAnswers": ["BARAQUE"],
+    "bonus": {
+      "title": "Baraque",
+      "text": "Dans le Nord, une baraque, c'est le stand de marché ou de ducasse, celui qui sent bon la frite. C'est aussi, forcément, le nom de cette baraque à jeux."
+    }
+  },
+  {
+    "id": "friterie",
+    "answer": "FRITERIE",
+    "category": "Cuisine du Nord",
+    "starterHint": "On y commande un cornet sans avoir à s'asseoir.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["gastronomie", "frites"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Lieu populaire où l'on mange sur le pouce.",
+      "La frite y est reine, souvent avec une fricadelle."
+    ],
+    "acceptedAnswers": ["FRITERIE"],
+    "bonus": {
+      "title": "Friterie",
+      "text": "La friterie, c'est le temple de la frite du Nord : un cornet, une sauce, parfois une fricadelle. On y mange debout, et c'est très bien comme ça."
+    }
+  },
+  {
+    "id": "carnaval",
+    "answer": "CARNAVAL",
+    "category": "Tradition populaire",
+    "starterHint": "À Dunkerque, on s'y serre sous les parapluies en chantant.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["tradition", "fete"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Grande fête populaire de l'hiver dans le Nord.",
+      "Bandes, masques et chahut bon enfant : celui de Dunkerque est célèbre."
+    ],
+    "acceptedAnswers": ["CARNAVAL"],
+    "bonus": {
+      "title": "Carnaval",
+      "text": "Le carnaval rythme l'hiver du Nord. Celui de Dunkerque, avec ses bandes et son chahut bon enfant, est l'un des plus connus de France."
+    }
+  },
+  {
+    "id": "galopin",
+    "answer": "GALOPIN",
+    "category": "Bière du Nord",
+    "starterHint": "Un demi ? Non, encore plus modeste : la moitié.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["biere", "gastronomie"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord", "regional-words-source-index"],
+    "hints": [
+      "Le plus petit des verres à bière.",
+      "Ailleurs, le même mot désigne un garnement."
+    ],
+    "acceptedAnswers": ["GALOPIN"],
+    "bonus": {
+      "title": "Galopin",
+      "text": "Au comptoir, un galopin, c'est le plus petit verre de bière, environ 12 cl. Le même mot désigne ailleurs un garnement : deux façons de faire des bêtises."
+    }
+  },
+  {
+    "id": "godale",
+    "answer": "GODALE",
+    "category": "Bière du Nord",
+    "starterHint": "Le vieux mot pour dire qu'on allait boire un coup.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["biere", "vocabulaire"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord", "regional-words-source-index"],
+    "hints": [
+      "Ancien mot régional pour la bière.",
+      "Faire la « godaille », c'est festoyer autour d'un verre."
+    ],
+    "acceptedAnswers": ["GODALE"],
+    "bonus": {
+      "title": "Godale",
+      "text": "Godale, ou godaille, est un ancien mot du Nord pour la bière et, par extension, pour la bonne franquette autour d'un verre."
+    }
+  },
+  {
+    "id": "mitan",
+    "answer": "MITAN",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Ni au début, ni à la fin : pile là.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "position"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Le milieu, le centre de quelque chose.",
+      "« Au mitan d'la rue » : comprendre, en plein milieu."
+    ],
+    "acceptedAnswers": ["MITAN"],
+    "bonus": {
+      "title": "Mitan",
+      "text": "Mitan, c'est le milieu. Le mot, ancien, a presque disparu du français courant mais reste bien vivant dans le parler du Nord et dans les vieilles chansons."
+    }
+  },
+  {
+    "id": "muche",
+    "answer": "MUCHE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "L'endroit où l'on compte jusqu'à dix avant de te chercher.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "quotidien"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Une cachette, en parler du Nord.",
+      "« Se mucher », c'est se cacher."
+    ],
+    "acceptedAnswers": ["MUCHE"],
+    "bonus": {
+      "title": "Muche",
+      "text": "Une muche, c'est une cachette. Le verbe « se mucher » (se cacher) est encore courant dans le Nord, des cours d'école aux parties de cache-cache."
+    }
+  },
+  {
+    "id": "fouffe",
+    "answer": "FOUFFE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Le vieux bout de tissu avec lequel on fait les poussières.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "objet"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Un chiffon, un vieux vêtement sans valeur.",
+      "« Être en fouffes », c'est être mal fagoté."
+    ],
+    "acceptedAnswers": ["FOUFFE"],
+    "bonus": {
+      "title": "Fouffe",
+      "text": "Une fouffe, c'est un chiffon ou un vieux vêtement. « Être en fouffes », c'est être habillé n'importe comment."
+    }
+  },
+  {
+    "id": "nactieux",
+    "answer": "NACTIEUX",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Celui qui repousse les petits pois sur le bord de l'assiette.",
+    "difficulty": "hard",
+    "status": "prototype",
+    "tags": ["vocabulaire", "caractere"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Difficile et capricieux, surtout à table.",
+      "Méticuleux au point d'en devenir maniaque."
+    ],
+    "acceptedAnswers": ["NACTIEUX"],
+    "bonus": {
+      "title": "Nactieux",
+      "text": "Être nactieux, c'est être difficile, capricieux, souvent sur la nourriture. Le cousin ch'ti du « chichiteux »."
+    }
+  },
+  {
+    "id": "buquer",
+    "answer": "BUQUER",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Ce qu'on fait à la porte avant d'entrer.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "quotidien"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Frapper, toquer à une porte.",
+      "« Se buquer », c'est aussi se cogner contre quelque chose."
+    ],
+    "acceptedAnswers": ["BUQUER"],
+    "bonus": {
+      "title": "Buquer",
+      "text": "Buquer, c'est frapper ou toquer. On « buque à l'huche » (à la porte), et quand on est maladroit, on « se buque » dans les meubles."
+    }
+  },
+  {
+    "id": "galafe",
+    "answer": "GALAFE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Celui qui finit le plat… et celui des autres.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "caractere"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Un gros mangeur, un goinfre.",
+      "À table, c'est lui qui se ressert avant tout le monde."
+    ],
+    "acceptedAnswers": ["GALAFE"],
+    "bonus": {
+      "title": "Galafe",
+      "text": "Un galafe, c'est un gros mangeur, un goinfre. Le mot claque bien quand le plat de carbonade arrive sur la table."
+    }
+  },
+  {
+    "id": "amiteux",
+    "answer": "AMITEUX",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Tout doux, tout câlin : difficile de lui résister.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "caractere"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Affectueux et caressant.",
+      "Un accueil amiteux, c'est un accueil tout chaleureux."
+    ],
+    "acceptedAnswers": ["AMITEUX"],
+    "bonus": {
+      "title": "Amiteux",
+      "text": "Amiteux (ou amitieux) qualifie quelqu'un d'affectueux, de câlin. Un accueil amiteux, c'est un accueil tout en chaleur."
+    }
   }
 ]
