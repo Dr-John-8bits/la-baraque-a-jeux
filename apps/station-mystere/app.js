@@ -54,6 +54,7 @@ const FEEDBACK_TONES = new Set(["success", "danger", "neutral"]);
 const els = {
   app: document.querySelector("#stationApp"),
   dailyDate: document.querySelector("#dailyDate"),
+  nextStationCountdown: document.querySelector("#nextStationCountdown"),
   scoreValue: document.querySelector("#scoreValue"),
   streakValue: document.querySelector("#streakValue"),
   hintProgress: document.querySelector("#hintProgress"),
@@ -121,6 +122,8 @@ async function init() {
     render();
     renderYesterday();
     showLaunchHelp();
+    scheduleDailyRefresh();
+    scheduleCountdownRefresh();
   } catch (error) {
     state = createErrorState(error);
     bindEvents();
@@ -213,6 +216,85 @@ function renderYesterday() {
   } catch {
     // pas de station d'hier à afficher
   }
+}
+
+// Bascule automatique à midi (onglet laissé ouvert) — même logique que Le Mot / Lille-Mêle.
+function scheduleDailyRefresh() {
+  window.setInterval(() => {
+    if (getStationMystereDateId() !== todayId) {
+      window.location.reload();
+    }
+  }, 60 * 1000);
+}
+
+function scheduleCountdownRefresh() {
+  renderCountdown();
+  window.setInterval(renderCountdown, 1000);
+}
+
+function renderCountdown() {
+  if (!els.nextStationCountdown) return;
+  els.nextStationCountdown.textContent = `Prochaine station à 12 h : ${formatDuration(
+    getNextRolloverDate().getTime() - Date.now()
+  )}`;
+}
+
+function getNextRolloverDate(now = new Date()) {
+  const parts = getZonedDateTimeParts(now, DAILY_TIME_ZONE);
+  const currentDateId = `${parts.year}-${parts.month}-${parts.day}`;
+  const targetDateId =
+    Number(parts.hour) < DAILY_ROLLOVER_HOUR
+      ? currentDateId
+      : getRelativeDateId(1, new Date(`${currentDateId}T00:00:00Z`), { timeZone: "UTC" });
+  const [year, month, day] = targetDateId.split("-").map(Number);
+  return zonedTimeToUtc(year, month, day, DAILY_ROLLOVER_HOUR, 0, DAILY_TIME_ZONE);
+}
+
+function zonedTimeToUtc(year, month, day, hour, minute, timeZone) {
+  const wallTime = Date.UTC(year, month - 1, day, hour, minute, 0);
+  let utcTime = wallTime;
+  for (let index = 0; index < 3; index += 1) {
+    utcTime = wallTime - getTimeZoneOffsetMs(new Date(utcTime), timeZone);
+  }
+  return new Date(utcTime);
+}
+
+function getTimeZoneOffsetMs(date, timeZone) {
+  const parts = getZonedDateTimeParts(date, timeZone);
+  const asUtc = Date.UTC(
+    Number(parts.year),
+    Number(parts.month) - 1,
+    Number(parts.day),
+    Number(parts.hour),
+    Number(parts.minute),
+    Number(parts.second)
+  );
+  return asUtc - date.getTime();
+}
+
+function getZonedDateTimeParts(date, timeZone) {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hourCycle: "h23",
+  });
+  const parts = Object.fromEntries(
+    formatter.formatToParts(date).map((part) => [part.type, part.value])
+  );
+  return parts;
+}
+
+function formatDuration(ms) {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  return `${String(hours).padStart(2, "0")} h ${String(minutes).padStart(2, "0")} min ${String(seconds).padStart(2, "0")} s`;
 }
 
 function createInitialState(entry, dateId) {

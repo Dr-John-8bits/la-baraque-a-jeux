@@ -33,35 +33,21 @@ Les indices peuvent porter sur :
 
 En cas de défaite, la réponse est révélée immédiatement avec une fiche découverte afin de conserver la dimension documentaire du jeu.
 
-## Les quatre paliers
+## Niveaux de difficulté
 
-Le jeu est organisé en quatre épreuves quotidiennes.
+La v1 livrée est **mono-niveau : Métro Mystère**. Le système de paliers reste une *vision*, pas un engagement public.
 
-### 🥉 Coupe de Bronze — Métro Mystère
+### 🥉 Métro Mystère — livré (v1)
 
-Le joueur doit retrouver une station du métro lillois.
+Le joueur doit retrouver une station du métro lillois (lignes 1 et 2). Corpus : 60 fiches relues, chacune menée par une pépite sourcée.
 
-Le corpus est limité aux stations des lignes 1 et 2.
+### 🥈 Tramway Mystère — vision v2
 
-### 🥈 Coupe d'Argent — Tramway Mystère
+Unique candidat d'extension : un niveau 2 débloqué après le métro. Les ~36 stations du tramway Ilévia (branches Roubaix et Tourcoing) ont, comme le métro, une vraie matière éditoriale (le Mongy, le Parc Barbieux, la Villa Cavrois…). À n'engager que par envie, et dans cet ordre : décision → mécanisme de progression → corpus relu au niveau des fiches métro.
 
-Le joueur doit retrouver une station du tramway lillois.
+### V'Lille et Bus — abandonnés
 
-Le corpus couvre la ligne de tramway Ilévia et ses deux branches principales vers Roubaix et Tourcoing.
-
-### 🥇 Coupe d'Or — Vélo Mystère
-
-Le joueur doit retrouver une station V'Lille.
-
-Le corpus doit être filtré et relu afin de conserver des stations réellement identifiables par des indices.
-
-### 💎 Coupe de Platine — Bus Mystère
-
-Le joueur doit retrouver une ligne de bus du réseau Ilévia.
-
-Les arrêts, pôles de correspondance, terminus et communes desservies servent de matière documentaire pour construire les indices.
-
-Cette épreuve est volontairement plus difficile.
+Écartés volontairement. Une borne V'Lille (268) ou une ligne de bus (143) n'a pas de « pépite » sourçable distincte : ce serait un puits éditorial sans intérêt, contraire à la charte. Les inventaires techniques sont conservés pour mémoire (régénération), hors ambition produit.
 
 ## Résultats
 

@@ -82,6 +82,32 @@ body.labaj-site {
   box-shadow: var(--labaj-shadow);
   color: var(--labaj-ink);
   text-decoration: none;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+  /* Entrée douce et décalée des cartes (désactivée par prefers-reduced-motion global). */
+  animation: card-rise 480ms cubic-bezier(0.2, 0.9, 0.25, 1.05) backwards;
+}
+
+.game-card:nth-child(2) {
+  animation-delay: 70ms;
+}
+.game-card:nth-child(3) {
+  animation-delay: 140ms;
+}
+.game-card:nth-child(4) {
+  animation-delay: 210ms;
+}
+
+@keyframes card-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .game-card--links {
@@ -116,6 +142,37 @@ body.labaj-site {
   font-weight: 900;
 }
 
+/* Hub : la pastille « Jouer » devient « Joué ✓ » verte quand la partie du jour est faite. */
+.game-card__action.is-done {
+  background: var(--labaj-green);
+  animation: pill-pop 460ms cubic-bezier(0.2, 0.9, 0.25, 1.1) backwards;
+}
+
+@keyframes pill-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+  60% {
+    transform: scale(1.14);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.games-progress {
+  margin: 4px 0 0;
+  color: var(--labaj-muted);
+  font-size: 0.92rem;
+  font-weight: 850;
+}
+
+.games-progress[hidden] {
+  display: none;
+}
+
 .game-card strong {
   font-size: clamp(1.4rem, 6vw, 2rem);
   line-height: 1;
@@ -127,7 +184,8 @@ body.labaj-site {
 }
 
 .game-card:hover {
-  transform: translateY(-1px);
+  transform: translateY(-3px);
+  box-shadow: var(--labaj-shadow-strong);
 }
 
 .blog-shell {
