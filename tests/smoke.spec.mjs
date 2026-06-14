@@ -182,6 +182,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   await page.locator("#hintDialog .dialog-actions").getByRole("button", { name: "Fermer" }).click();
 
   await stationInput.fill(stationAfterHint.entry.reponse);
+  await stationInput.press("Escape"); // ferme la liste de suggestions qui couvre "Valider"
   await page.getByRole("button", { name: "Valider", exact: true }).click();
   await expect(page.locator("#resultPanel")).toBeVisible();
   await expect(page.locator("#resultTitle")).toContainText(stationAfterHint.entry.reponse);
@@ -264,6 +265,34 @@ test("bbb: une tournée gagnée 5-0 enrichit le calepin", async ({ page }) => {
   await expect(page.locator("#statsDialog")).toBeVisible();
   await expect(page.locator("#statsGrid")).toContainText("Tournées gagnées");
   await expect(page.locator("#tournamentHistory .calepin-row--win").first()).toBeVisible();
+});
+
+test("station mystere rejette un état sauvegardé au statut aberrant", async ({ page }) => {
+  await page.goto(`${base}apps/station-mystere/`);
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  const st = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  // État de forme valide (version/date/entrée) mais au statut corrompu et au score non par défaut.
+  await page.evaluate((s) => {
+    localStorage.setItem(
+      "station-mystere.v1.currentGame",
+      JSON.stringify({
+        version: 1,
+        dateId: s.dateId,
+        entryId: s.entry.id,
+        status: "corrompu",
+        score: 500,
+        revealedHintCount: 2,
+        attempts: [],
+        penalties: [],
+      })
+    );
+  }, st);
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  const after = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(after.status).toBe("playing");
+  expect(after.score).toBe(1000); // état frais, pas le score 500 de l'état corrompu
+  expect(after.revealedHintCount).toBe(0);
 });
 
 test("bbb: cinq temps morts font perdre la tournée", async ({ page }) => {

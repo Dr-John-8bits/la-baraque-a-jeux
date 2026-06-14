@@ -263,7 +263,8 @@ function isStateCompatible(saved, entry, dateId) {
     typeof saved === "object" &&
     saved.version === 1 &&
     saved.dateId === dateId &&
-    saved.entryId === entry.id
+    saved.entryId === entry.id &&
+    ["playing", "won", "lost"].includes(saved.status)
   );
 }
 
@@ -510,6 +511,7 @@ function handleAnswerKeydown(event) {
     event.preventDefault();
     selectSuggestion(currentSuggestions[activeSuggestionIndex].id);
   } else if (event.key === "Escape") {
+    event.preventDefault(); // ferme la liste sans vider le champ (natif sur input[type=search])
     clearSuggestions();
   }
 }
@@ -808,7 +810,7 @@ function getStats() {
 }
 
 function setStats(stats) {
-  writeJson(STORAGE_KEYS.stats, sanitizeStats(stats));
+  return writeJson(STORAGE_KEYS.stats, sanitizeStats(stats));
 }
 
 function sanitizeStats(value) {
@@ -832,8 +834,8 @@ function applyStatsIfNeeded() {
 
   const stats = getStats();
   if (stats.lastPlayedDateId === todayId) {
-    state.statsApplied = true;
-    setStats(stats);
+    // Déjà compté aujourd'hui : on ne marque "appliqué" que si la persistance réussit.
+    state.statsApplied = setStats(stats);
     return;
   }
 
@@ -857,8 +859,9 @@ function applyStatsIfNeeded() {
   }
 
   stats.history = [buildHistoryEntry(), ...stats.history.filter((entry) => entry.dateId !== todayId)].slice(0, 30);
-  state.statsApplied = true;
-  setStats(stats);
+  // Si l'écriture échoue (stockage bloqué), statsApplied reste faux : la prochaine
+  // fin de partie réessaiera, sans double-comptage (lastPlayedDateId n'aura pas changé).
+  state.statsApplied = setStats(stats);
 }
 
 function buildHistoryEntry() {
@@ -897,6 +900,7 @@ function buildShareText(gameState = state) {
 
 function openDialog(dialog) {
   if (!dialog) return;
+  clearSuggestions(); // évite une liste de suggestions résiduelle derrière la modale
   renderNotebook();
   renderStats();
   renderHintDialog();

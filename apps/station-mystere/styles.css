@@ -299,11 +299,10 @@ button:disabled {
 .suggestion-list {
   position: absolute;
   z-index: 4;
-  top: auto;
+  top: calc(100% + 6px);
   right: 0;
-  bottom: calc(100% + 6px);
   left: 0;
-  max-height: 276px;
+  max-height: clamp(180px, 50svh, 276px);
   overflow: auto;
   border: 2px solid var(--labaj-ink);
   border-radius: var(--labaj-radius);

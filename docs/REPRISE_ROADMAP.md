@@ -91,11 +91,22 @@ relit avec une mauvaise grille de lecture.
 
 ### Bloc 3 — Stabiliser Station Mystère *(code + éditorial, moyen)*
 
-- **Lot 3.1** — Playtests desktop/mobile, corrections UX (suggestions, focus, aria-live,
-  corpus indisponible).
-- **Lot 3.2** — Relecture des 60 fiches métro (accents, typo, stations ambiguës avec
-  commune). S'appuie sur le Bloc 0.
-- **Lot 3.3** — Décision tuile portail « En construction → Jouer » + actu blog.
+- **Lot 3.1** — ✅ *Fait (2026-06-14)* — Playtests + corrections code :
+  - Playtest mobile complet (victoire avec indices, mauvaise réponse, calepin) : 0 erreur
+    console ; LocalStorage corrompu → le jeu démarre frais sans planter.
+  - Chasse aux bugs multi-agents (7 findings vérifiés, faux positifs écartés). Corrigés :
+    rejet d'un état sauvegardé au `status` aberrant ; plus de décompte incohérent de
+    `stats.played` quand le stockage est bloqué (s'appuie sur le booléen de `writeJson`) ;
+    `max-height` des suggestions adaptatif (`clamp 50svh`) pour les écrans courts/paysage ;
+    fermeture des suggestions à l'ouverture d'une modale.
+  - Suggestions : ouverture **vers le bas** (le puzzle reste visible pendant la saisie) ;
+    Échap ferme la liste **sans vider** le champ.
+  - 1 test de régression ajouté (rejet d'un état au statut corrompu).
+- **Lot 3.2** — *Reporté à la phase éditoriale* — Relecture des 60 fiches métro (pépites,
+  anti-redondance, accents, stations ambiguës). S'appuie sur le Bloc 0.
+- **Lot 3.3** — ✅ *Fait (2026-06-14)* — Tuile portail Station Mystère passée de
+  « En construction / Voir » à « Métro / Jouer », description au présent. *Reste optionnel :
+  une actu blog annonçant l'ouverture.*
 
 ### Bloc 4 — Débloquer le contenu *(éditorial lourd, sous-lots)*
 
