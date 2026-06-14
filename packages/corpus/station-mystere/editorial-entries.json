@@ -1345,8 +1345,8 @@
         },
         {
           "ordre": 4,
-          "type": "secteur",
-          "texte": "Je me trouve entre le terminus C.H. Dron et la station Pont de Neuville."
+          "type": "architecture",
+          "texte": "Le quartier que je dessers a été dessiné dans les années 1960 par l'architecte Jean Willerval, en rupture avec la cité-dortoir, avec ses quatre tours de neuf étages."
         },
         {
           "ordre": 5,
@@ -1363,12 +1363,14 @@
           "Le nom renvoie au secteur Bourgogne de Tourcoing.",
           "La station appartient au troncon tourquennois de la ligne M2, entre CH Dron et Pont de Neuville.",
           "La page signale une desserte par la ligne Z1 du reseau Ilevia.",
-          "Situation : station du tronçon tourquennois de la ligne 2, dans le secteur Bourgogne."
+          "Situation : station du tronçon tourquennois de la ligne 2, dans le secteur Bourgogne.",
+          "Le quartier de la Bourgogne a été conçu par l'architecte Jean Willerval (ZUP, 1962-1974)."
         ],
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel",
-          "wikipedia-metro-lille"
+          "wikipedia-metro-lille",
+          "wikipedia-jean-willerval"
         ]
       },
       "tags": [
@@ -1379,7 +1381,8 @@
       "sourceIds": [
         "gtfs-ilevia-data-gouv",
         "ilevia-arret-point-datamel",
-        "wikipedia-metro-lille"
+        "wikipedia-metro-lille",
+        "wikipedia-jean-willerval"
       ]
     },
     {

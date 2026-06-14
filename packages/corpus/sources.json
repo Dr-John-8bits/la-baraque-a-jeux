@@ -259,5 +259,14 @@
     "license": "Vérification sur place",
     "consultedAt": "2026-06-14",
     "notes": "Œuvres signées et visibles dans les stations, documentées sur place par l'éditeur. Ex. : « Maisons aux jeux de cartes » de Didier Patte, station Mitterie."
+  },
+  {
+    "id": "wikipedia-jean-willerval",
+    "label": "Wikipédia — Jean Willerval (architecte-urbaniste)",
+    "url": "https://fr.wikipedia.org/wiki/Jean_Willerval",
+    "publisher": "Wikipédia",
+    "license": "CC BY-SA 4.0",
+    "consultedAt": "2026-06-14",
+    "notes": "Réalisations de Jean Willerval, dont « ZUP de la Bourgogne à Tourcoing (1962-1974) », confirmant l'attribution du quartier de la Bourgogne."
   }
 ]

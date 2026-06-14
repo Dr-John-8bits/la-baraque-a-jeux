@@ -2,6 +2,7 @@
   {
     "id": "drache",
     "answer": "DRACHE",
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ça peut ruiner une belle sortie sans demander la permission.",
     "difficulty": "easy",
@@ -22,6 +23,7 @@
   {
     "id": "chicon",
     "answer": "CHICON",
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "banque-chtimi-gastronomie-jeux", "regional-words-source-index"],
     "category": "Cuisine du Nord",
     "starterHint": "Il divise la table, surtout quand il assume son amertume.",
     "difficulty": "medium",
@@ -84,6 +86,7 @@
   {
     "id": "ducasse",
     "answer": "DUCASSE",
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "banque-chtimi-gastronomie-jeux", "regional-words-source-index"],
     "category": "Tradition populaire",
     "starterHint": "On y va rarement pour le silence.",
     "difficulty": "medium",
@@ -125,6 +128,7 @@
   {
     "id": "quinquin",
     "answer": "QUINQUIN",
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "category": "Parler régional",
     "starterHint": "Un mot tendre qui a presque une mélodie.",
     "difficulty": "hard",
@@ -187,6 +191,7 @@
   {
     "id": "biloute",
     "answer": "BILOUTE",
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "category": "Parler régional",
     "starterHint": "Le jeu te tutoie presque avec ce mot.",
     "difficulty": "easy",
@@ -481,7 +486,7 @@
     "sourceIds": ["banque-chtimi-gastronomie-jeux"],
     "hints": [
       "Mot régional lié à une crème de pâtisserie.",
-      "On pense notamment à la tarte au libouli."
+      "C'est la crème cuite qui garnit la célèbre tarte du Nord."
     ],
     "acceptedAnswers": ["LIBOULI"],
     "bonus": {
@@ -785,7 +790,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Petite installation de vente, sur un marché ou une fête.",
-      "Elle a même donné son nom à cette baraque à jeux."
+      "Elle a même donné son nom à ce p'tit portail de jeux."
     ],
     "acceptedAnswers": ["BARAQUE"],
     "bonus": {
@@ -880,7 +885,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Le milieu, le centre de quelque chose.",
-      "« Au mitan d'la rue » : comprendre, en plein milieu."
+      "« Au … d'la rue », ça veut dire en plein milieu."
     ],
     "acceptedAnswers": ["MITAN"],
     "bonus": {
@@ -899,7 +904,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Une cachette, en parler du Nord.",
-      "« Se mucher », c'est se cacher."
+      "Quand on « se … », on se cache."
     ],
     "acceptedAnswers": ["MUCHE"],
     "bonus": {
@@ -918,7 +923,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Un chiffon, un vieux vêtement sans valeur.",
-      "« Être en fouffes », c'est être mal fagoté."
+      "« Être en … », c'est être mal fagoté."
     ],
     "acceptedAnswers": ["FOUFFE"],
     "bonus": {
@@ -956,7 +961,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Frapper, toquer à une porte.",
-      "« Se buquer », c'est aussi se cogner contre quelque chose."
+      "« Se … », c'est aussi se cogner contre quelque chose."
     ],
     "acceptedAnswers": ["BUQUER"],
     "bonus": {
@@ -994,7 +999,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Affectueux et caressant.",
-      "Un accueil amiteux, c'est un accueil tout chaleureux."
+      "Un accueil tout chaleureux, on dit qu'il est « … »."
     ],
     "acceptedAnswers": ["AMITEUX"],
     "bonus": {
@@ -1032,7 +1037,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Une roulade, une galipette.",
-      "« Faire un cumulet », c'est culbuter dans l'herbe."
+      "« Faire un … », c'est culbuter dans l'herbe."
     ],
     "acceptedAnswers": ["CUMULET"],
     "bonus": {
@@ -1051,7 +1056,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "À l'origine, un petit clou de chaussure.",
-      "« À dache », c'est très loin, au bout du monde."
+      "« À … », c'est très loin, au bout du monde."
     ],
     "acceptedAnswers": ["DACHE"],
     "bonus": {
@@ -1070,7 +1075,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Des chatouilles, version du Nord.",
-      "« Faire des catouilles », c'est titiller jusqu'au fou rire."
+      "« Faire des … », c'est titiller jusqu'au fou rire."
     ],
     "acceptedAnswers": ["CATOUILLES"],
     "bonus": {
@@ -1089,7 +1094,7 @@
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Un plat cuisiné simplement, du quotidien.",
-      "« Fricoter », c'est mijoter… ou manigancer."
+      "Un bon p'tit plat mijoté avec soin."
     ],
     "acceptedAnswers": ["FRICOT"],
     "bonus": {
@@ -1108,7 +1113,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Un bol, un verre ou une tasse selon l'usage.",
-      "« Eune jatte ed'café » : un grand bol de café."
+      "« Eune … ed'café » : un grand bol de café."
     ],
     "acceptedAnswers": ["JATTE"],
     "bonus": {
@@ -1127,7 +1132,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Une personne lente, qui traîne.",
-      "« Espèce ed'longin ! » : allez, dépêche-toi."
+      "« Espèce ed'… ! » : allez, dépêche-toi."
     ],
     "acceptedAnswers": ["LONGIN"],
     "bonus": {
@@ -1165,7 +1170,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "La bouche, dans un registre familier.",
-      "« Ferme te guiffe » : tais-toi un peu."
+      "« Ferme te … » : tais-toi un peu."
     ],
     "acceptedAnswers": ["GUIFFE"],
     "bonus": {
@@ -1184,7 +1189,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "S'habiller, se mettre en tenue.",
-      "« S'arniquer », c'est se préparer, parfois trop."
+      "« S'… », c'est se préparer, parfois trop."
     ],
     "acceptedAnswers": ["ARNIQUER"],
     "bonus": {
@@ -1203,7 +1208,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Une personne un peu extravagante.",
-      "« Quelle badoule ! » se dit d'un original imprévisible."
+      "« Quelle … ! » se dit d'un original imprévisible."
     ],
     "acceptedAnswers": ["BADOULE"],
     "bonus": {
@@ -1241,7 +1246,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Une grimace, une mine boudeuse.",
-      "« Faire la greine », c'est bouder, faire la moue."
+      "« Faire la … », c'est bouder, faire la moue."
     ],
     "acceptedAnswers": ["GREINE"],
     "bonus": {
@@ -1260,7 +1265,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Un pantalon, une culotte.",
-      "« Remonte tes maronnes ! » : tes pantalons."
+      "« Remonte tes … ! » : tes pantalons."
     ],
     "acceptedAnswers": ["MARONNE"],
     "bonus": {
@@ -1279,7 +1284,7 @@
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
       "Une chanson, à la prononciation du Nord.",
-      "Le « P'tit Quinquin » est une canchon dormoire, une berceuse."
+      "Le « P'tit Quinquin » en est une version dormoire, une berceuse."
     ],
     "acceptedAnswers": ["CANCHON"],
     "bonus": {
@@ -1640,7 +1645,7 @@
     "sourceIds": ["ville-lille-monuments-historiques-data-gouv"],
     "hints": [
       "Forteresse en étoile, à l'ouest de Lille.",
-      "Vauban l'a surnommée la « Reine des citadelles »."
+      "Vauban l'a surnommée la « Reine des … »."
     ],
     "acceptedAnswers": ["CITADELLE"],
     "bonus": {
