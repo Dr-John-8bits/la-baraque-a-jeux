@@ -11,9 +11,9 @@ Le brief est deja precis sur la mecanique. Le point critique du projet sera plut
 
 ## Etat au 1er juin 2026
 
-Le socle technique n'est plus le principal risque. Le jeu est jouable, le validateur bloque deja les erreurs structurantes, et le corpus final contient 14 grilles dans `../../packages/corpus/lille-mele/puzzles.json`.
+Le socle technique n'est plus le principal risque. Le jeu est jouable, le validateur bloque deja les erreurs structurantes, et le corpus final contient 33 grilles dans `../../packages/corpus/lille-mele/puzzles.json`.
 
-Le point bloquant est editorial : seules 10 grilles sont marquees `reviewed`, soit 160 emplacements de cartes et 157 libelles uniques relus. La cible V1 reste 30 a 45 grilles pretes, donc il manque environ 20 a 35 grilles relues avant un lancement confortable.
+Le corpus compte desormais 33 grilles, toutes marquees `reviewed` et jouees (les brouillons prototypes ont ete retires). La cible V1 (30 a 45 grilles pretes) est atteinte.
 
 Le dossier `../../packages/corpus/documentation/processed/` reste utile comme base de verification, de tri et d'inspiration. Il ne doit plus etre considere comme un reservoir suffisant de contenu jouable direct : les familles encore exploitables sans doublon ont ete largement consommees.
 

@@ -23,7 +23,7 @@
 - Relire les coups d'pouce.
 - Vérifier les bonus.
 
-État : fait pour le premier lot. Le jeu dispose de 40 mots relus, d'une liste séparée de propositions locales générée depuis le corpus traité, et d'un dictionnaire français large pour accepter les essais courants.
+État : fait. Le jeu dispose de 90 mots en rotation quotidienne (dont 30 relus, 60 prototypes), d'une liste séparée de propositions locales générée depuis le corpus traité, et d'un dictionnaire français large (chargé en différé) pour accepter les essais courants.
 
 ## 0.3 — Identité visuelle
 

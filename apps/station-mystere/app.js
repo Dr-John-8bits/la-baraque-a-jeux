@@ -60,6 +60,7 @@ const els = {
   mysteryPanel: document.querySelector("#mysteryPanel"),
   mysteryEyebrow: document.querySelector("#mysteryEyebrow"),
   mysteryLabel: document.querySelector("#mysteryLabel"),
+  mysteryReveal: document.querySelector("#mysteryReveal"),
   mysteryStatus: document.querySelector("#mysteryStatus"),
   nextHintButton: document.querySelector("#nextHintButton"),
   hintDialog: document.querySelector("#hintDialog"),
@@ -229,7 +230,7 @@ function createInitialState(entry, dateId) {
     completedAt: null,
     result: null,
     statsApplied: false,
-    lastFeedback: "Demande un premier indice gratuit pour commencer l'enquête.",
+    lastFeedback: "Prends ton indice gratuit et pars à l'enquête, biloute.",
     feedbackTone: "neutral",
   };
 }
@@ -572,16 +573,25 @@ function renderStatus() {
     els.hintProgress.textContent = `${visibleHints}/${TOTAL_HINTS}`;
   }
 
+  const revealed = state?.status === "won" || state?.status === "lost";
+
   if (els.mysteryPanel) {
     els.mysteryPanel.classList.toggle("mystery-panel--won", state?.status === "won");
     els.mysteryPanel.classList.toggle("mystery-panel--lost", state?.status === "lost");
+    // « Chaleur » du masque : 0 indice = teal calme, 5 indices = rouge à découvert.
+    els.mysteryPanel.dataset.heat = String(
+      Math.min(TOTAL_HINTS, Math.max(0, state?.revealedHintCount || 0))
+    );
   }
 
   if (els.mysteryLabel) {
-    els.mysteryLabel.textContent =
-      state?.status === "won" || state?.status === "lost"
-        ? todayEntry?.reponse || "Station révélée"
-        : "Nom de station masqué";
+    const name = todayEntry?.reponse || "Station révélée";
+    if (els.mysteryReveal) els.mysteryReveal.textContent = revealed ? name : "";
+    els.mysteryLabel.classList.toggle("is-revealed", revealed);
+    els.mysteryLabel.setAttribute(
+      "aria-label",
+      revealed ? `Station : ${name}` : "Nom de la station, masqué"
+    );
   }
 
   if (els.mysteryEyebrow) {
@@ -620,7 +630,7 @@ function renderHintDialog() {
           `
         )
         .join("")}</ol>`
-    : `<p class="empty-hints">Aucun indice ouvert pour l'instant.</p>`;
+    : `<p class="empty-hints">Pas l'ombre d'un indice pour l'instant.</p>`;
 
   if (els.revealHintButton) {
     els.revealHintButton.disabled = !canReveal;
@@ -683,7 +693,7 @@ function renderNotebookPreview() {
         ? `<ol class="mini-list">${lastAttempts
             .map((attempt) => `<li>${escapeHtml(attempt.answer)}</li>`)
             .join("")}</ol>`
-        : "<p>Aucune tentative pour l'instant.</p>"
+        : "<p>Aucun essai pour l'instant. À toi de jouer, biloute.</p>"
     }
   `;
 }
@@ -748,7 +758,7 @@ function renderNotebook() {
           ? `<ol class="mini-list">${visibleHints
               .map((hint) => `<li>${escapeHtml(hint.texte)}</li>`)
               .join("")}</ol>`
-          : "<p>Aucun indice visible.</p>"
+          : "<p>Pas un indice ouvert.</p>"
       }
     </section>
     <section class="notebook-section">
@@ -761,7 +771,7 @@ function renderNotebook() {
                   `<li>${escapeHtml(attempt.answer)} · ${attempt.isCorrect ? "juste" : `-${attempt.penalty} points`}</li>`
               )
               .join("")}</ol>`
-          : "<p>Aucune tentative pour l'instant.</p>"
+          : "<p>Aucun essai pour l'instant. À toi de jouer, biloute.</p>"
       }
     </section>
     <section class="notebook-section">

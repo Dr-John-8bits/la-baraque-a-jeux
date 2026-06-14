@@ -174,14 +174,134 @@ button:disabled {
 .mystery-panel h2 {
   width: fit-content;
   max-width: 100%;
+  display: inline-grid;
+  align-items: center;
   border: 2px solid var(--labaj-ink);
   border-radius: var(--labaj-radius);
-  padding: 8px 10px;
+  padding: 8px 12px;
   background: #ffffff;
   color: var(--labaj-ink);
   font-size: clamp(1.35rem, 5vw, 2.35rem);
   line-height: 0.96;
   letter-spacing: 0;
+}
+
+/* Le masque (brouillard de pastilles) et le nom révélé sont empilés dans la même cellule. */
+.mystery-panel h2 > .mystery-mask,
+.mystery-panel h2 > .mystery-reveal {
+  grid-area: 1 / 1;
+}
+
+.mystery-mask {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(6px, 2.2vw, 11px);
+  min-height: 1.1em;
+  padding: 0.1em 0;
+}
+
+.mystery-mask span {
+  width: clamp(12px, 3.4vw, 20px);
+  height: clamp(12px, 3.4vw, 20px);
+  border-radius: 50%;
+  background: var(--heat-color, var(--labaj-teal));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--heat-color, var(--labaj-teal)), transparent 80%);
+  animation: fog-drift 2400ms ease-in-out infinite;
+  transition: background 480ms ease, box-shadow 480ms ease;
+}
+.mystery-mask span:nth-child(2) { animation-delay: 180ms; }
+.mystery-mask span:nth-child(3) { animation-delay: 360ms; }
+.mystery-mask span:nth-child(4) { animation-delay: 540ms; }
+.mystery-mask span:nth-child(5) { animation-delay: 720ms; }
+.mystery-mask span:nth-child(6) { animation-delay: 900ms; }
+.mystery-mask span:nth-child(7) { animation-delay: 1080ms; }
+
+.mystery-reveal {
+  align-self: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* « Chaleur » : la couleur du brouillard glisse du teal au rouge selon les indices ouverts. */
+.mystery-panel {
+  --heat-color: var(--labaj-teal);
+}
+.mystery-panel[data-heat="1"] {
+  --heat-color: color-mix(in srgb, var(--labaj-teal), var(--labaj-gold) 55%);
+}
+.mystery-panel[data-heat="2"] {
+  --heat-color: var(--labaj-gold);
+}
+.mystery-panel[data-heat="3"] {
+  --heat-color: color-mix(in srgb, var(--labaj-gold), var(--labaj-red) 50%);
+}
+.mystery-panel[data-heat="4"] {
+  --heat-color: color-mix(in srgb, var(--labaj-red), var(--labaj-gold) 16%);
+}
+.mystery-panel[data-heat="5"] {
+  --heat-color: var(--labaj-red);
+}
+
+/* Révélation : le brouillard se dissipe, le nom émerge du flou. */
+.mystery-panel h2.is-revealed .mystery-mask span {
+  animation: fog-dissipate-dot 520ms ease forwards;
+}
+.mystery-panel h2.is-revealed .mystery-reveal {
+  visibility: visible;
+  animation: name-emerge 640ms cubic-bezier(0.2, 0.9, 0.25, 1.05) 120ms forwards;
+}
+.mystery-panel--won h2.is-revealed .mystery-reveal {
+  color: var(--labaj-green);
+}
+.mystery-panel--lost h2.is-revealed .mystery-reveal {
+  color: var(--labaj-brick);
+}
+
+@keyframes fog-drift {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-3px) scale(1.14);
+    opacity: 0.92;
+  }
+}
+@keyframes fog-dissipate-dot {
+  to {
+    transform: translateY(-16px) scale(0.2);
+    opacity: 0;
+    filter: blur(3px);
+  }
+}
+@keyframes name-emerge {
+  from {
+    opacity: 0;
+    filter: blur(9px);
+    transform: scale(0.95);
+    letter-spacing: 0.14em;
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    letter-spacing: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mystery-mask span {
+    animation: none;
+    opacity: 0.85;
+  }
+  .mystery-panel h2.is-revealed .mystery-mask {
+    display: none;
+  }
+  .mystery-panel h2.is-revealed .mystery-reveal {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .mystery-note,

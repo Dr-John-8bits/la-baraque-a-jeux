@@ -37,7 +37,7 @@
         "4 Cantons Stade Pierre Mauroy"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -109,7 +109,7 @@
         "Cite Scientifique - Professeur Gabillard"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -175,7 +175,7 @@
         "Triolo"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -245,7 +245,7 @@
         "Villeneuve-d'Ascq - Hotel de Ville"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -311,7 +311,7 @@
         "Pont De Bois"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -377,7 +377,7 @@
         "Square Flandres"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -444,7 +444,7 @@
         "Mairie D'Hellemmes"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -510,7 +510,7 @@
         "Marbrerie"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -577,7 +577,7 @@
         "Fives"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -643,7 +643,7 @@
         "Madeleine Caulier"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -712,7 +712,7 @@
         "Gare Flandres"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -780,7 +780,7 @@
         "Rihour"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -850,7 +850,7 @@
         "Republique - Beaux-Arts"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -916,7 +916,7 @@
         "Gambetta"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -982,7 +982,7 @@
         "Wazemmes"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1048,7 +1048,7 @@
         "Porte Des Postes"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1120,7 +1120,7 @@
         "Chu-Centre O Lambret"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1190,7 +1190,7 @@
         "CHU - Eurasante"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1259,7 +1259,7 @@
         "C H Dron"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1326,7 +1326,7 @@
         "Bourgogne"
       ],
       "difficulte": "difficile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1395,7 +1395,7 @@
         "Pont De Neuville"
       ],
       "difficulte": "difficile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1461,7 +1461,7 @@
         "Phalempins"
       ],
       "difficulte": "difficile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1527,7 +1527,7 @@
         "Colbert"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1595,7 +1595,7 @@
         "Tourcoing-Centre"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1661,7 +1661,7 @@
         "Gare De Tourcoing"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1727,7 +1727,7 @@
         "Carliers"
       ],
       "difficulte": "difficile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1793,7 +1793,7 @@
         "Mercure"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1862,7 +1862,7 @@
         "Alsace-Plaine Images"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1929,7 +1929,7 @@
         "Gare Jean-Lebas Roubaix"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -1998,7 +1998,7 @@
         "Roubaix-Grand-Place"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2065,7 +2065,7 @@
         "Eurotéléport"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2134,7 +2134,7 @@
         "Roubaix-Charles-de-Gaulle"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2206,7 +2206,7 @@
         "Epeule Montesquieu"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2272,7 +2272,7 @@
         "Mairie De Croix"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2340,7 +2340,7 @@
         "Croix-Centre"
       ],
       "difficulte": "difficile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2410,7 +2410,7 @@
         "Wasquehal - Hotel de Ville"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2480,7 +2480,7 @@
         "Wasquehal - Pave de Lille"
       ],
       "difficulte": "difficile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2548,7 +2548,7 @@
         "Jean-Jaures"
       ],
       "difficulte": "difficile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2619,7 +2619,7 @@
         "Les Pres - Edgard-Pisani"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2685,7 +2685,7 @@
         "Fort De Mons"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2751,7 +2751,7 @@
         "Mairie De Mons"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2817,7 +2817,7 @@
         "Mons Sarts"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2884,7 +2884,7 @@
         "Saint-Maurice Pellevoisin"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -2952,7 +2952,7 @@
         "Gare Lille Europe"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3018,7 +3018,7 @@
         "Mairie De Lille"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3085,7 +3085,7 @@
         "Lille Grand Palais"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3151,7 +3151,7 @@
         "Porte De Valenciennes"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3220,7 +3220,7 @@
         "Porte de Douai-Jardin des Plantes"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3286,7 +3286,7 @@
         "Porte D'Arras"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3352,7 +3352,7 @@
         "Montebello"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3418,7 +3418,7 @@
         "Cormontaigne"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3484,7 +3484,7 @@
         "Port De Lille"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3550,7 +3550,7 @@
         "Bois Blancs"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3620,7 +3620,7 @@
         "Canteleu-Euratechnologies"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3692,7 +3692,7 @@
         "Lomme Lambersart Arthur Notebart"
       ],
       "difficulte": "difficile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3759,7 +3759,7 @@
         "Pont Supérieur"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3825,7 +3825,7 @@
         "Mitterie"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3893,7 +3893,7 @@
         "Maison Des Enfants"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -3959,7 +3959,7 @@
         "Bourg"
       ],
       "difficulte": "moyenne",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,
@@ -4028,7 +4028,7 @@
         "Saint Philibert"
       ],
       "difficulte": "facile",
-      "statut": "draft",
+      "statut": "reviewed",
       "indices": [
         {
           "ordre": 1,

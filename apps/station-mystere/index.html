@@ -89,7 +89,12 @@
               <p class="eyebrow" id="mysteryEyebrow">Station inconnue</p>
               <p class="mystery-badge" id="mysteryStatus">En cours</p>
             </div>
-            <h2 id="mysteryLabel">Nom de station masqué</h2>
+            <h2 id="mysteryLabel" aria-label="Nom de la station, masqué">
+              <span class="mystery-mask" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </span>
+              <span class="mystery-reveal" id="mysteryReveal"></span>
+            </h2>
             <p class="mystery-note" id="mysteryNote">
               Ouvre un indice quand tu veux, puis propose une station.
             </p>
@@ -101,7 +106,7 @@
               <button class="link-button" id="notebookButton" type="button">Ouvrir</button>
             </div>
             <div class="notebook-preview" id="notebookPreview">
-              <p>Les indices et les tentatives apparaîtront ici.</p>
+              <p>Tes indices et tes essais s'afficheront ichi.</p>
             </div>
           </aside>
         </div>
