@@ -1728,5 +1728,100 @@
       "title": "Lomme",
       "text": "Lomme, commune associée à Lille, abrite la cité de la Délivrance, une cité-jardin construite au début du XXe siècle pour les cheminots de la gare de triage."
     }
+  },
+  {
+    "id": "mimolette",
+    "answer": "MIMOLETTE",
+    "category": "Fromage du Nord",
+    "starterHint": "Orange comme une boule de quille, et plus elle vieillit, plus elle durcit.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["gastronomie", "fromage"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Boule orange à la croûte grise, emblème fromager de Lille.",
+      "Sa croûte est creusée par de minuscules cirons."
+    ],
+    "acceptedAnswers": ["MIMOLETTE"],
+    "bonus": {
+      "title": "Mimolette",
+      "text": "La mimolette « vieille Lille » doit son orange au rocou et sa croûte grise aux cirons, de minuscules acariens. Plus elle vieillit, plus elle devient dure, cassante et fruitée."
+    }
+  },
+  {
+    "id": "cramique",
+    "answer": "CRAMIQUE",
+    "category": "Douceur du Nord",
+    "starterHint": "Une brioche du Nord constellée de petits raisins secs.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["gastronomie", "boulangerie"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Pain brioché du Nord et de Belgique, garni de raisins secs.",
+      "Avec du sucre perlé à la place, il devient une couque."
+    ],
+    "acceptedAnswers": ["CRAMIQUE"],
+    "bonus": {
+      "title": "Cramique",
+      "text": "Le cramique est un pain brioché du Nord et de Belgique, parsemé de raisins secs. Remplacez les raisins par du sucre perlé et vous obtenez une couque. À déguster tiède et beurré au goûter."
+    }
+  },
+  {
+    "id": "vergeoise",
+    "answer": "VERGEOISE",
+    "category": "Douceur du Nord",
+    "starterHint": "Le sucre roux et moelleux qui parfume la tarte au sucre.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["gastronomie", "sucre"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Sucre brun et moelleux issu de la betterave, blond ou brun.",
+      "Sans elle, pas de vraie tarte au sucre ni de spéculoos."
+    ],
+    "acceptedAnswers": ["VERGEOISE"],
+    "bonus": {
+      "title": "Vergeoise",
+      "text": "La vergeoise est un sucre roux et moelleux issu de la betterave, typique du Nord. Blonde ou brune, elle donne leur goût à la tarte au sucre, aux spéculoos et aux bêtises de Cambrai."
+    }
+  },
+  {
+    "id": "gaufre",
+    "answer": "GAUFRE",
+    "category": "Douceur du Nord",
+    "starterHint": "À Lille, elle est fine, ovale et fourrée à la vergeoise.",
+    "difficulty": "easy",
+    "status": "prototype",
+    "tags": ["gastronomie", "patisserie"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Pâtisserie à alvéoles, croustillante ou fourrée.",
+      "La version lilloise, fine et ovale, est garnie de crème à la vergeoise."
+    ],
+    "acceptedAnswers": ["GAUFRE"],
+    "bonus": {
+      "title": "Gaufre",
+      "text": "La gaufre de Lille, fine et ovale, est fourrée d'une crème à la vergeoise. La maison Méert, dans le Vieux-Lille, en a fait une institution depuis le XIXe siècle."
+    }
+  },
+  {
+    "id": "wassingue",
+    "answer": "WASSINGUE",
+    "category": "Vocabulaire ch'ti",
+    "starterHint": "Pour nettoyer le carrelage, on la trempe dans le seau.",
+    "difficulty": "medium",
+    "status": "prototype",
+    "tags": ["vocabulaire", "maison"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
+    "hints": [
+      "Dans le Nord, on la passe au lieu de la serpillière.",
+      "Ce mot du Nord viendrait du flamand."
+    ],
+    "acceptedAnswers": ["WASSINGUE"],
+    "bonus": {
+      "title": "Wassingue",
+      "text": "Dans le Nord, on ne passe pas la serpillière : on passe la wassingue. Le mot viendrait du flamand « wassching ». La corvée, elle, n'a pas d'accent."
+    }
   }
 ]
