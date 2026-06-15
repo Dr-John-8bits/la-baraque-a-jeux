@@ -33,14 +33,33 @@ const FORBIDDEN = [
 ];
 // libellés trop génériques pour faire une carte reconnaissable
 const GENERIC = [/^maisons?\b/, /^immeubles?\b/, /^rue /, /^place /, /^h[oô]tel particulier/, /^ancienne? /];
+// faits obscurs/hors-sujet pour le grand public (cf. vérif adverse) → écartés :
+// fondations d'institutions, stations de métro (déjà le terrain de Station Mystère),
+// compétitions génériques, édifices cultuels non couverts par FORBIDDEN.
+const OBSCURE = /\b(ecole|lycee|institut|faculte|universite|seminaire|conservatoire|couvent|hospice|departement de|chambre de commerce|consulat|caserne|business school|\bschool\b|station du metro|station de metro|championnats?|aerospatiale|office national|synagogue|reserve naturelle|world forum|canoe club|chaire)\b/;
+// Plancher de notoriété par type. Pour les LIEUX : volontairement bas — les monuments
+// LOCAUX (porte, colonne…) ont peu de wikis mais restent reconnaissables des Lillois.
+// Pour naissances/événements : la notoriété (nb de wikis) suit mieux la reconnaissance.
+const MIN_FAME = { lieu: 2, naissance: 9, evenement: 6 };
 // œuvres de musée (datées mais hors-sujet pour une frise de lieux/événements) — repérées via la description
 const ART = /^(tableau|peinture|toile|sculpture|statue|gravure|estampe|dessin|œuvre|retable|triptyque|portrait|vitrail)\b/i;
 // corrections issues de la vérification factuelle adverse (cf. workflow verif-frise-dates)
 const DENY_QIDS = new Set([
-  "Q2421499", // « Lille Grand Palais » : QID = station de métro (1989), inception 1899 erronée — entrée écartée
+  "Q2421499", // « Lille Grand Palais » : QID = station de métro (1989), inception 1899 erronée
+  // tri éditorial (peu reconnaissables ou redondants) :
+  "Q26257798", // Hôtel Catel-Béghin (hôtel particulier obscur)
+  "Q901844", // Stade Henri-Jooris (démoli, éclipsé — flaggé par la vérif)
+  "Q55597907", // Ligne 2 du tramway (redondant avec « le Mongy » des graines)
+  "Q113578402", // Piscine olympique Marx-Dormoy (équipement obscur)
+  "Q13629025", // « Ici Nord » (obscur)
+  "Q3234867", // « Les Poussins, Parc de la Citadelle » (sculpture obscure)
+  "Q3533115", // Tour Lilleurope (redondant avec Tour de Lille)
 ]);
 const YEAR_OVERRIDE = {
   Q801098: 1848, // Gare de Lille-Flandres : ouverture voyageurs intra-muros 1848 (P571=1842 = début des travaux à Fives)
+};
+const LABEL_OVERRIDE = {
+  Q299703: "Gaël Kakuta", // libellé Wikidata bruité (« Gaël Ernesto washington Kakuta »)
 };
 
 function normalize(s) {
@@ -109,17 +128,20 @@ async function runQuery(sparql) {
   }));
 }
 
-const stats = { fetched: 0, religieux: 0, generique: 0, art: 0, deny: 0, sansLabel: 0, doublon: 0 };
+const stats = { fetched: 0, religieux: 0, generique: 0, art: 0, obscur: 0, peuNotoire: 0, deny: 0, sansLabel: 0, doublon: 0 };
 function curate(rows, kind, seen) {
   const out = [];
   for (const r of rows) {
     stats.fetched++;
     if (DENY_QIDS.has(r.qid)) { stats.deny++; continue; }
     if (YEAR_OVERRIDE[r.qid]) r.year = YEAR_OVERRIDE[r.qid];
+    if (LABEL_OVERRIDE[r.qid]) r.label = LABEL_OVERRIDE[r.qid];
     if (!r.label || /^Q\d+$/.test(r.label) || !Number.isFinite(r.year)) { stats.sansLabel++; continue; }
+    if (r.fame < (MIN_FAME[kind] || 0)) { stats.peuNotoire++; continue; }
     const norm = normalize(r.label);
     if (FORBIDDEN.some((re) => re.test(` ${norm} `)) || FORBIDDEN.some((re) => re.test(norm))) { stats.religieux++; continue; }
     if (kind !== "naissance" && ART.test(r.desc)) { stats.art++; continue; }
+    if (kind !== "naissance" && OBSCURE.test(`${norm} ${normalize(r.desc)}`)) { stats.obscur++; continue; }
     if (kind !== "naissance" && GENERIC.some((re) => re.test(norm))) { stats.generique++; continue; }
     const isBirth = kind === "naissance";
     const label = isBirth ? `Naissance de ${r.label}` : cap(r.label);
@@ -163,9 +185,13 @@ async function main() {
   }
 
   // 3) plafonnement par type puis fusion
-  const picked = Object.entries(CAPS)
-    .flatMap(([kind, cap]) => (pools[kind] || []).slice(0, cap))
-    .map(({ _fame, ...e }) => e);
+  const selectedRaw = Object.entries(CAPS).flatMap(([kind, cap]) => (pools[kind] || []).slice(0, cap));
+  if (process.env.LABAJ_DEBUG) {
+    [...selectedRaw].sort((a, b) => a.year - b.year).forEach((e) =>
+      process.stderr.write(`  ${(e.wikidataId || "").padEnd(11)} fame ${String(e._fame).padStart(3)} [${e.category.padEnd(16)}] ${e.year}  ${e.label}\n`)
+    );
+  }
+  const picked = selectedRaw.map(({ _fame, ...e }) => e);
 
   // 4) fusion + tri chronologique
   const events = [...seeds.map(({ _fame, ...e }) => e), ...picked].sort((a, b) => a.year - b.year);
@@ -183,7 +209,7 @@ async function main() {
 
   process.stderr.write(
     `\nOK — ${events.length} faits écrits (${seeds.length} graines + ${picked.length} Wikidata).\n` +
-    `Récupérés: ${stats.fetched} | écartés → religieux: ${stats.religieux}, œuvres: ${stats.art}, génériques: ${stats.generique}, sans label: ${stats.sansLabel}, doublons: ${stats.doublon}\n` +
+    `Récupérés: ${stats.fetched} | écartés → peu notoires: ${stats.peuNotoire}, institutions/obscurs: ${stats.obscur}, religieux: ${stats.religieux}, œuvres: ${stats.art}, génériques: ${stats.generique}, sans label: ${stats.sansLabel}, doublons: ${stats.doublon}\n` +
     `Catégories: ${JSON.stringify(byCat)} | années: ${events[0]?.year}–${events[events.length - 1]?.year}\n`
   );
 }

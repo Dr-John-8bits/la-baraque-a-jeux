@@ -62,30 +62,6 @@
       ]
     },
     {
-      "id": "hospice-general-de-lille",
-      "label": "Hospice général de Lille",
-      "year": 1743,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Hôpital à Lille (Nord).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3140951"
-    },
-    {
-      "id": "ecole-des-beaux-arts-de-lille",
-      "label": "École des beaux-arts de Lille",
-      "year": 1755,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "Enseignements en peinture, sculpture et architecture à Lille.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q60847289"
-    },
-    {
       "id": "archives-departementales-du-nord",
       "label": "Archives départementales du Nord",
       "year": 1796,
@@ -96,18 +72,6 @@
         "wikidata"
       ],
       "wikidataId": "Q16303821"
-    },
-    {
-      "id": "conservatoire-a-rayonnement-regional-de-lille",
-      "label": "Conservatoire à rayonnement régional de Lille",
-      "year": 1803,
-      "precision": "an",
-      "category": "culture",
-      "blurb": "Conservatoire de musique.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q2994564"
     },
     {
       "id": "palais-des-beaux-arts-de-lille",
@@ -134,18 +98,6 @@
       "wikidataId": "Q224002"
     },
     {
-      "id": "chaire-a-precher-a-lille",
-      "label": "Chaire à prêcher à Lille",
-      "year": 1825,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Chaire à prêcher monument historique (PM59000849) située à Lille (Nord, France).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q29272107"
-    },
-    {
       "id": "colonne-de-la-deesse",
       "label": "Colonne de la Déesse",
       "year": 1845,
@@ -168,18 +120,6 @@
         "wikidata"
       ],
       "wikidataId": "Q801098"
-    },
-    {
-      "id": "ecole-des-arts-industriels-et-des-mines",
-      "label": "École des arts industriels et des mines",
-      "year": 1854,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "École publique de formation d'ingénieurs civils à Lille (France), créée en 1854 , dont l'École centrale de Lille est héritière.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3577919"
     },
     {
       "id": "naissance-de-emile-bernard",
@@ -206,54 +146,6 @@
       "wikidataId": "Q134085"
     },
     {
-      "id": "institut-industriel-du-nord",
-      "label": "Institut industriel du Nord",
-      "year": 1872,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "Entité de recherche et de formation des ingénieurs à l’École centrale de Lille de 1872 à 1991.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3152321"
-    },
-    {
-      "id": "departement-de-medecine-de-lille",
-      "label": "Département de médecine de Lille",
-      "year": 1876,
-      "precision": "an",
-      "category": "sport",
-      "blurb": "Département universitaire de médecine de l'UFR3S, unité de formation et de recherche des sciences de la santé et du sport de l'université de Lille, situé sur le campus santé du CHU",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q16011209"
-    },
-    {
-      "id": "hotel-catel-beghin",
-      "label": "Hôtel Catel-Béghin",
-      "year": 1877,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Hôtel particulier situé à Lille.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q26257798"
-    },
-    {
-      "id": "imt-nord-europe",
-      "label": "IMT Nord Europe",
-      "year": 1878,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "École d'ingénieurs composante de l'Université de Lille.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q28494780"
-    },
-    {
       "id": "naissance-de-charles-de-gaulle",
       "label": "Naissance de Charles de Gaulle",
       "year": 1890,
@@ -264,30 +156,6 @@
         "wikidata"
       ],
       "wikidataId": "Q2042"
-    },
-    {
-      "id": "synagogue-de-lille",
-      "label": "Synagogue de Lille",
-      "year": 1891,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Synagogue située dans le Nord, en France.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3508056"
-    },
-    {
-      "id": "ecole-superieure-de-commerce-de-lille",
-      "label": "École supérieure de commerce de Lille",
-      "year": 1892,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "À Lille (1892).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3578435"
     },
     {
       "id": "naissance-de-julien-duvivier",
@@ -302,42 +170,6 @@
       "wikidataId": "Q453683"
     },
     {
-      "id": "stade-henri-jooris",
-      "label": "Stade Henri-Jooris",
-      "year": 1902,
-      "precision": "an",
-      "category": "sport",
-      "blurb": "Ancien stade de football.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q901844"
-    },
-    {
-      "id": "ecole-speciale-de-mecanique-et-d-electricite",
-      "label": "École spéciale de mécanique et d'électricité",
-      "year": 1905,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "École d'ingénieurs privé française.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q1572655"
-    },
-    {
-      "id": "ligne-2-du-tramway-de-lille",
-      "label": "Ligne 2 du tramway de Lille",
-      "year": 1908,
-      "precision": "an",
-      "category": "transport",
-      "blurb": "À Lille (1908).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q55597907"
-    },
-    {
       "id": "mongy-tramway",
       "label": "Le Mongy (tramway Lille–Roubaix–Tourcoing)",
       "year": 1909,
@@ -347,18 +179,6 @@
       "sourceIds": [
         "wikipedia-fr"
       ]
-    },
-    {
-      "id": "chambre-de-commerce-de-lille",
-      "label": "Chambre de commerce de Lille",
-      "year": 1910,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Bâtiment à Lille (Nord).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q2948151"
     },
     {
       "id": "naissance-de-herve-bazin",
@@ -371,18 +191,6 @@
         "wikidata"
       ],
       "wikidataId": "Q358479"
-    },
-    {
-      "id": "consulat-general-de-pologne-a-lille",
-      "label": "Consulat général de Pologne à Lille",
-      "year": 1923,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Poste consulaire polonais en France.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q16507600"
     },
     {
       "id": "les-fusilles-lillois",
@@ -432,18 +240,6 @@
       "wikidataId": "Q2945741"
     },
     {
-      "id": "office-national-d-etudes-et-de-recherches-aerospatiales",
-      "label": "Office national d'études et de recherches aérospatiales",
-      "year": 1946,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Principal centre de recherche français du secteur aéronautique, spatial et défense.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q2007769"
-    },
-    {
       "id": "parc-zoologique-de-lille",
       "label": "Parc zoologique de Lille",
       "year": 1950,
@@ -454,90 +250,6 @@
         "wikidata"
       ],
       "wikidataId": "Q2180449"
-    },
-    {
-      "id": "institut-superieur-d-electronique-et-du-numerique",
-      "label": "Institut supérieur d'électronique et du numérique",
-      "year": 1956,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "Grande école d'ingénieurs du numérique.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3152574"
-    },
-    {
-      "id": "iae-lille",
-      "label": "IAE Lille",
-      "year": 1956,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "École universitaire française de management, composante de l'université de Lille.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3151898"
-    },
-    {
-      "id": "supinfo",
-      "label": "SUPINFO",
-      "year": 1965,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "École supérieure privée d'informatique.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q739704"
-    },
-    {
-      "id": "lycee-baggio-de-lille",
-      "label": "Lycée Baggio de Lille",
-      "year": 1965,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Établissement scolaire secondaire public à Lille (Hauts-de-France).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3268639"
-    },
-    {
-      "id": "lycee-faidherbe-de-lille",
-      "label": "Lycée Faidherbe de Lille",
-      "year": 1965,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Lycée d'enseignement général et technologique situé à Lille, en France.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3268666"
-    },
-    {
-      "id": "couvent-des-dominicains-de-lille",
-      "label": "Couvent des Dominicains de Lille",
-      "year": 1965,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Couvent situé dans le Nord, en France.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3001710"
-    },
-    {
-      "id": "piscine-olympique-marx-dormoy",
-      "label": "Piscine olympique Marx-Dormoy",
-      "year": 1972,
-      "precision": "an",
-      "category": "sport",
-      "blurb": "À Lille (1972).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q113578402"
     },
     {
       "id": "stade-grimonprez-jooris",
@@ -552,42 +264,6 @@
       "wikidataId": "Q1129681"
     },
     {
-      "id": "coupe-d-europe-des-epreuves-combinees-1977",
-      "label": "Coupe d'Europe des épreuves combinées 1977",
-      "year": 1977,
-      "precision": "an",
-      "category": "sport",
-      "blurb": "À Lille (1977).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q11831003"
-    },
-    {
-      "id": "ici-nord",
-      "label": "Ici Nord",
-      "year": 1980,
-      "precision": "an",
-      "category": "transport",
-      "blurb": "Station de radio du réseau France Bleu.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q13629025"
-    },
-    {
-      "id": "championnats-du-monde-d-halterophilie-1981",
-      "label": "Championnats du monde d'haltérophilie 1981",
-      "year": 1981,
-      "precision": "an",
-      "category": "sport",
-      "blurb": "À Lille (1981).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q4580065"
-    },
-    {
       "id": "metro-val-lille",
       "label": "Le métro VAL de Lille",
       "year": 1983,
@@ -597,66 +273,6 @@
       "sourceIds": [
         "wikipedia-fr"
       ]
-    },
-    {
-      "id": "madeleine-caulier",
-      "label": "Madeleine Caulier",
-      "year": 1983,
-      "precision": "an",
-      "category": "transport",
-      "blurb": "Station du métro de Lille Métropole.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q2274687"
-    },
-    {
-      "id": "les-poussins-parc-de-la-citadelle",
-      "label": "Les Poussins, Parc de la Citadelle",
-      "year": 1986,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "À Lille (1986).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3234867"
-    },
-    {
-      "id": "reserve-naturelle-du-jardin-ecologique-du-vieux-lille",
-      "label": "Réserve naturelle du Jardin écologique du Vieux-Lille",
-      "year": 1986,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "À Lille (1986).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3457449"
-    },
-    {
-      "id": "congres-de-lille",
-      "label": "Congrès de Lille",
-      "year": 1987,
-      "precision": "an",
-      "category": "culture",
-      "blurb": "Congrès du Parti Socialiste Français en 1987.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q2993074"
-    },
-    {
-      "id": "mairie-de-lille",
-      "label": "Mairie de Lille",
-      "year": 1989,
-      "precision": "an",
-      "category": "transport",
-      "blurb": "Station du métro de Lille Métropole.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q2595165"
     },
     {
       "id": "le-p-tit-jacques",
@@ -671,8 +287,8 @@
       "wikidataId": "Q113570435"
     },
     {
-      "id": "naissance-de-gael-ernesto-washington-kakuta",
-      "label": "Naissance de Gaël Ernesto washington Kakuta",
+      "id": "naissance-de-gael-kakuta",
+      "label": "Naissance de Gaël Kakuta",
       "year": 1991,
       "precision": "an",
       "category": "histoire",
@@ -681,42 +297,6 @@
         "wikidata"
       ],
       "wikidataId": "Q299703"
-    },
-    {
-      "id": "institut-d-etudes-politiques-de-lille",
-      "label": "Institut d’études politiques de Lille",
-      "year": 1992,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "Établissement d'enseignement supérieur à Lille, Hauts-de-France.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3151958"
-    },
-    {
-      "id": "lycee-international-montebello-de-lille",
-      "label": "Lycée international Montebello de Lille",
-      "year": 1992,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Établissement scolaire à Lille.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3269042"
-    },
-    {
-      "id": "mod-spe-paris",
-      "label": "MOD'SPE Paris",
-      "year": 1993,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "École française de mode.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q119648588"
     },
     {
       "id": "naissance-de-raphael-varane",
@@ -802,90 +382,6 @@
       "wikidataId": "Q3533359"
     },
     {
-      "id": "tour-lilleurope",
-      "label": "Tour Lilleurope",
-      "year": 1995,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Tour de bureaux situé dans le quartier d'affaires Euralille, à Lille, France.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3533115"
-    },
-    {
-      "id": "coupe-d-europe-des-nations-d-athletisme-1995",
-      "label": "Coupe d'Europe des nations d'athlétisme 1995",
-      "year": 1995,
-      "precision": "an",
-      "category": "sport",
-      "blurb": "À Lille (1995).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q2999676"
-    },
-    {
-      "id": "marche-des-fiertes-de-lille-2002",
-      "label": "Marche des fiertés de Lille 2002",
-      "year": 2002,
-      "precision": "an",
-      "category": "transport",
-      "blurb": "Manifestation.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q55186110"
-    },
-    {
-      "id": "laboratoire-de-catalyse-de-lille",
-      "label": "Laboratoire de catalyse de Lille",
-      "year": 2006,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "Laboratoire de recherche de l'université de Lille.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3214445"
-    },
-    {
-      "id": "world-forum-for-a-responsible-economy",
-      "label": "World Forum for a Responsible Economy",
-      "year": 2007,
-      "precision": "an",
-      "category": "patrimoine",
-      "blurb": "Cycle annuel d’événements dont l’objectif est de provoquer une économie mondiale responsable, en faisant connaître les « Bonnes Pratiques » d’entreprises qui, partout dans le monde",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3078659"
-    },
-    {
-      "id": "skema-business-school",
-      "label": "Skema Business School",
-      "year": 2009,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "Établissement d'enseignement français.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q3486229"
-    },
-    {
-      "id": "web-cademie",
-      "label": "Web@cademie",
-      "year": 2010,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "École privée d'informatique.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q27887255"
-    },
-    {
       "id": "series-mania",
       "label": "Séries Mania",
       "year": 2010,
@@ -898,18 +394,6 @@
       "wikidataId": "Q16928457"
     },
     {
-      "id": "championnats-du-monde-d-athletisme-jeunesse-2011",
-      "label": "Championnats du monde d'athlétisme jeunesse 2011",
-      "year": 2011,
-      "precision": "an",
-      "category": "sport",
-      "blurb": "À Lille (2011).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q1814417"
-    },
-    {
       "id": "louvre-lens",
       "label": "Le Louvre-Lens",
       "year": 2012,
@@ -919,78 +403,6 @@
       "sourceIds": [
         "wikipedia-fr"
       ]
-    },
-    {
-      "id": "miss-france-2016",
-      "label": "Miss France 2016",
-      "year": 2016,
-      "precision": "an",
-      "category": "culture",
-      "blurb": "86e élection de Miss France, à Lille en décembre 2015.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q20967532"
-    },
-    {
-      "id": "championnats-d-europe-d-athletisme-par-equipes-2017",
-      "label": "Championnats d'Europe d'athlétisme par équipes 2017",
-      "year": 2017,
-      "precision": "an",
-      "category": "sport",
-      "blurb": "7e édition de ces championnats.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q21028769"
-    },
-    {
-      "id": "isg-luxury-management",
-      "label": "ISG Luxury Management",
-      "year": 2018,
-      "precision": "an",
-      "category": "industrie-social",
-      "blurb": "Grande école de commerce.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q52821707"
-    },
-    {
-      "id": "marche-des-fiertes-de-lille-2018",
-      "label": "Marche des fiertés de Lille 2018",
-      "year": 2018,
-      "precision": "an",
-      "category": "culture",
-      "blurb": "Marche des fiertés de Lille - édition de 2018.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q63381090"
-    },
-    {
-      "id": "marche-des-fiertes-de-lille-2021",
-      "label": "Marche des fiertés de Lille 2021",
-      "year": 2021,
-      "precision": "an",
-      "category": "culture",
-      "blurb": "À Lille (2021).",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q109837760"
-    },
-    {
-      "id": "marche-des-fiertes-de-lille-2022",
-      "label": "Marche des Fiertés de Lille 2022",
-      "year": 2022,
-      "precision": "an",
-      "category": "culture",
-      "blurb": "Édition de la marche des fiértes LGBTQIA+ 2022.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q119458128"
     }
   ]
 }
