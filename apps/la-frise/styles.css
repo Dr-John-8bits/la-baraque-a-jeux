@@ -138,6 +138,22 @@ body.frise-page {
   font-weight: 700;
   color: var(--labaj-blue);
 }
+.frise-card__hint {
+  justify-self: start;
+  margin-top: 3px;
+  border: 1.5px dashed var(--labaj-blue);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--labaj-blue);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 1px 9px;
+  cursor: pointer;
+}
+.frise-card__hint:hover {
+  background: color-mix(in srgb, var(--labaj-blue), white 85%);
+}
 .frise-card__moves {
   flex: 0 0 auto;
   display: grid;
