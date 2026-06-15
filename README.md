@@ -1,58 +1,52 @@
-# La baraque a jeux Lille
+# La Baraque à Jeux Lille
 
-Monorepo des mini-jeux lillois :
+Monorepo des mini-jeux quotidiens lillois : un portail et plusieurs jeux « du jour » autour de Lille, du Nord et du parler ch'ti.
 
-- le portail **La baraque a jeux** ;
-- **Le mot a Biloute** ;
-- **Lille-Mele**.
-- **Biloute · Bière · Braderie**.
+**En ligne :** https://dr-john-8bits.github.io/la-baraque-a-jeux/
 
-Le projet reste volontairement leger : applications statiques, pas de backend obligatoire, et une base commune pour le style, le corpus editorial et les scripts de validation.
+## Les jeux
+
+Quatre jeux quotidiens sont en ligne, chacun avec une mécanique différente :
+
+| Jeu | Mécanique |
+|---|---|
+| **Le Mot à Biloute** | deviner le mot du jour, lettre par lettre — vocabulaire du Nord et ch'ti |
+| **Station Mystère** | retrouver la station de métro lilloise du jour à partir d'indices |
+| **La Frise du Nord** | remettre cinq faits régionaux dans l'ordre chronologique |
+| **Lille-Mêle** | regrouper seize mots en quatre familles lilloises |
+
+Deux autres sont en chantier : **Commune Mystère** (géographie, à coder) et **Biloute · Bière · Braderie** (retiré du portail, page conservée).
+
+Le projet reste volontairement léger : applications statiques, pas de backend, déploiement sur GitHub Pages. Une base commune sert au style, au corpus éditorial et aux scripts de validation.
 
 ## Structure
 
 ```text
 .
-├── assets/
-│   └── brand/
-├── apps/
+├── index.html              portail public (GitHub Pages)
+├── apps/                   un dossier par jeu
 │   ├── le-mot-a-biloute/
-│   ├── biloute-biere-braderie/
-│   └── lille-mele/
+│   ├── station-mystere/
+│   ├── la-frise/
+│   ├── lille-mele/
+│   ├── commune-mystere/    (scaffold)
+│   └── biloute-biere-braderie/
 ├── packages/
-│   ├── corpus/
-│   ├── game-utils/
-│   └── ui/
+│   ├── corpus/             données par jeu + sources.json + shared/ (socle mutualisé)
+│   ├── game-utils/         helpers : date du jour, partage, stockage, JSON, Markdown
+│   └── ui/                 tokens, styles, navigation, calepin partagé
 ├── docs/
-│   ├── blog/
+│   ├── blog/               NEWS.md → blog.html
 │   └── editorial/
-└── scripts/
+└── scripts/                validateurs et outils de génération
 ```
 
 ## Principes
 
-- `index.html` est le portail public servi par GitHub Pages.
-- `assets/brand/` contient les assets de marque communs.
-- `apps/` contient les experiences publiques.
-- `packages/corpus/` contient les donnees partagees, schemas et notes de validation.
-- `packages/ui/` contient les styles, tokens et composants communs.
-- `packages/game-utils/` contient les helpers communs : date du jour, partage, stockage local, rendu Markdown et chargement JSON.
-- `docs/blog/NEWS.md` alimente la page publique `blog.html` et se genere depuis `docs/blog/entries/`.
-- `scripts/` contient les validateurs et outils de generation.
+- `index.html` est le portail public servi par GitHub Pages ; chaque jeu vit dans `apps/<slug>/`.
+- Chaque jeu garde son moteur propre, mais s'appuie sur les briques communes (`packages/ui`, `packages/game-utils`) : identité « chunky », cadence quotidienne (bascule à midi, heure de Paris), calepin de stats partagé, partage spoiler-free, service worker pour le hors-ligne.
+- `packages/corpus/` contient les données de chaque jeu, le registre des sources (`sources.json`) et le socle mutualisé (`shared/`, par exemple les monuments Mérimée réutilisés par plusieurs jeux).
+- **Charte éditoriale** : chaque fait ou pépite est sourcé et réutilisable (open data — Wikidata en CC0, Mérimée et données de la MEL sous Licence Ouverte…). Une donnée non sourçable est écartée, pas maquillée. Des outils de build re-jouables (`npm run build:*`) récupèrent, vérifient et curent les données.
+- `docs/blog/NEWS.md` alimente la page publique `blog.html`, générée depuis `docs/blog/entries/`.
 
-Chaque jeu garde son moteur propre, mais s'appuie sur les briques communes pour les fondations.
-
-## Verification
-
-```bash
-npm run build:blog
-npm run check
-```
-
-Smoke test navigateur optionnel :
-
-```bash
-npm run test:browser
-```
-
-Cette commande sert uniquement a la verification : elle demarre un serveur statique de test si aucun serveur local n'est deja disponible.
+Principe de **mutualisation frugale** : toute donnée récoltée pour un jeu est passée en revue pour les autres — pas un critère de sélection, un réflexe pour amortir chaque source.
