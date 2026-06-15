@@ -1,6 +1,8 @@
 /*
  * La Frise du Nord — jeu de chronologie quotidien.
  * Variante A : on remet 5 faits régionaux dans l'ordre, du plus ancien au plus récent.
+ * 3 essais avec feedback : à chaque validation, les cartes bien placées passent au vert,
+ * se verrouillent et révèlent leur date (repère pour placer les autres).
  * Cadence et identité partagées avec les autres jeux (daily.js, calepin, partage, SW).
  */
 import { getDailyDateId, getRelativeDateId } from "../../packages/game-utils/daily.js";
@@ -10,11 +12,12 @@ import { shareText as shareTextWithFallback } from "../../packages/game-utils/sh
 import { escapeHtml } from "../../packages/game-utils/text-render.js";
 import { renderCalepin, setupCalepinTools } from "../../packages/ui/calepin.js";
 
-const APP_VERSION = "26.06.15.0";
+const APP_VERSION = "26.06.15.1";
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
 const SET_SIZE = 5; // nombre de faits à ordonner par jour
+const MAX_ATTEMPTS = 3; // essais avant révélation
 const MIN_GAP = 3; // écart d'années minimal entre deux faits d'une frise (ordre net, cf. specifications.md §5)
 const CORPUS_URL = "../../packages/corpus/la-frise/events.json";
 const GAME_URL = new URL(".", window.location.href).href;
@@ -80,7 +83,6 @@ function shuffled(list, rng) {
   }
   return arr;
 }
-// Choisit SET_SIZE faits aux années distinctes et bien séparées (ordre non ambigu).
 function pickDailySet(events, dateId) {
   const seed = daysSinceEpoch(dateId);
   const pool = shuffled(events, mulberry32(seed >>> 0));
@@ -93,7 +95,6 @@ function pickDailySet(events, dateId) {
   }
   return chosen;
 }
-// Mélange de départ : différent de la solution (sinon on rote la pile).
 function scrambleOrder(set, dateId) {
   const ids = set.map((e) => e.id);
   const solution = [...set].sort((a, b) => comparableYear(a) - comparableYear(b)).map((e) => e.id);
@@ -110,7 +111,6 @@ const DEFAULT_STATS = {
   won: 0,
   currentStreak: 0,
   bestStreak: 0,
-  bestScore: 0,
   lastPlayedDateId: null,
   lastWinDateId: null,
   history: [],
@@ -135,6 +135,8 @@ function cacheEls() {
     "firstHelp", "helpStartButton", "helpOptOut", "rulesDialog",
   ].forEach((id) => (els[id] = document.getElementById(id)));
 }
+
+const isTerminal = () => state && state.status !== "playing";
 
 /* ------------------------------------------------------------------ *
  * Init
@@ -164,20 +166,36 @@ function loadDay() {
   todayId = getTodayId();
   dailySet = pickDailySet(events, todayId);
   const saved = readJson(STORAGE_KEYS.currentGame, null);
-  if (saved && saved.dateId === todayId && Array.isArray(saved.order) && saved.order.length === dailySet.length) {
+  if (
+    saved &&
+    saved.dateId === todayId &&
+    Array.isArray(saved.order) &&
+    saved.order.length === dailySet.length &&
+    saved.order.every((id) => byId.has(id))
+  ) {
     state = {
       dateId: todayId,
-      order: saved.order.filter((id) => byId.has(id)),
-      submitted: Boolean(saved.submitted),
+      order: saved.order,
+      lockedIds: Array.isArray(saved.lockedIds) ? saved.lockedIds.filter((id) => byId.has(id)) : [],
+      attempts: Number(saved.attempts) || 0,
+      attemptScores: Array.isArray(saved.attemptScores) ? saved.attemptScores : [],
+      status: ["playing", "won", "lost"].includes(saved.status) ? saved.status : "playing",
       score: saved.score || null,
     };
-    if (state.order.length !== dailySet.length) state = freshState();
   } else {
     state = freshState();
   }
 }
 function freshState() {
-  return { dateId: todayId, order: scrambleOrder(dailySet, todayId), submitted: false, score: null };
+  return {
+    dateId: todayId,
+    order: scrambleOrder(dailySet, todayId),
+    lockedIds: [],
+    attempts: 0,
+    attemptScores: [],
+    status: "playing",
+    score: null,
+  };
 }
 function saveGame() {
   writeJson(STORAGE_KEYS.currentGame, state);
@@ -191,46 +209,54 @@ function orderedEvents() {
 }
 function render() {
   if (!state) return;
+  const terminal = isTerminal();
   if (els.statusDate) els.statusDate.textContent = formatDay(todayId);
   if (els.statusStreak) els.statusStreak.textContent = String(stats.currentStreak || 0);
   if (els.statusScore) {
-    els.statusScore.textContent = state.submitted && state.score ? `${state.score.exact}/${state.score.total}` : `–/${SET_SIZE}`;
+    els.statusScore.textContent = state.score ? `${state.score.exact}/${SET_SIZE}` : `–/${SET_SIZE}`;
   }
-  if (els.instruction) {
-    els.instruction.textContent = state.submitted
-      ? state.score.exact === state.score.total
-        ? "Sans faute ! Frise parfaite."
-        : `${state.score.exact}/${state.score.total} bien placés. Les dates sont révélées.`
-      : "Remets les faits dans l'ordre, du plus ancien au plus récent.";
-  }
+  if (els.instruction) els.instruction.textContent = instructionText();
   renderCards();
   if (els.validateButton) {
-    els.validateButton.disabled = state.submitted;
-    els.validateButton.textContent = state.submitted ? "Frise validée" : "Valider";
+    els.validateButton.disabled = terminal;
+    els.validateButton.textContent = terminal
+      ? state.status === "won" ? "Frise résolue" : "Frise révélée"
+      : state.attempts > 0 ? `Valider (essai ${state.attempts + 1}/${MAX_ATTEMPTS})` : "Valider";
   }
-  if (els.shareButton) els.shareButton.hidden = !state.submitted;
+  if (els.shareButton) els.shareButton.hidden = !terminal;
   renderReveal();
+}
+
+function instructionText() {
+  if (state.status === "won") return `Bravo ! Résolu en ${state.attempts} essai${state.attempts > 1 ? "s" : ""}.`;
+  if (state.status === "lost") return "Raté — l'ordre exact se révèle.";
+  if (state.attempts > 0) return `Essai ${state.attempts + 1}/${MAX_ATTEMPTS} · les cartes vertes sont bien placées, réarrange les autres.`;
+  return "Remets les faits dans l'ordre, du plus ancien au plus récent.";
 }
 
 function renderCards() {
   if (!els.cardList) return;
+  const terminal = isTerminal();
+  const locked = new Set(state.lockedIds);
   const list = orderedEvents();
   els.cardList.innerHTML = list
     .map((ev, i) => {
-      const correct = state.submitted && state.score ? state.score.perEvent[i] : null;
-      const stateClass = correct === null ? "" : correct ? " is-correct" : " is-wrong";
-      const cat = CATEGORY_LABELS[ev.category] || ev.category || "";
-      const revealed = state.submitted
+      const isLocked = locked.has(ev.id);
+      const revealed = isLocked || terminal; // les cartes verrouillées (ou en fin de partie) montrent leur date
+      const stateClass = isLocked ? " is-correct" : terminal ? " is-wrong" : "";
+      const movable = !terminal && !isLocked;
+      const lead = revealed
         ? `<span class="frise-card__year">${ev.year}</span>`
         : `<span class="frise-card__rank" aria-hidden="true">${i + 1}</span>`;
-      const controls = state.submitted
-        ? ""
-        : `<span class="frise-card__moves">
-             <button type="button" class="frise-move" data-move="up" data-index="${i}" aria-label="Monter « ${escapeHtml(ev.label)} »"${i === 0 ? " disabled" : ""}>▲</button>
-             <button type="button" class="frise-move" data-move="down" data-index="${i}" aria-label="Descendre « ${escapeHtml(ev.label)} »"${i === list.length - 1 ? " disabled" : ""}>▼</button>
-           </span>`;
-      return `<li class="frise-card${stateClass}" data-id="${ev.id}" data-index="${i}"${state.submitted ? "" : ' draggable="true"'}>
-        ${revealed}
+      const cat = CATEGORY_LABELS[ev.category] || ev.category || "";
+      const controls = movable
+        ? `<span class="frise-card__moves">
+             <button type="button" class="frise-move" data-move="up" data-id="${ev.id}" aria-label="Monter « ${escapeHtml(ev.label)} »">▲</button>
+             <button type="button" class="frise-move" data-move="down" data-id="${ev.id}" aria-label="Descendre « ${escapeHtml(ev.label)} »">▼</button>
+           </span>`
+        : "";
+      return `<li class="frise-card${stateClass}" data-id="${ev.id}" data-index="${i}"${movable ? ' draggable="true"' : ""}>
+        ${lead}
         <span class="frise-card__body">
           <span class="frise-card__label">${escapeHtml(ev.label)}</span>
           ${cat ? `<span class="frise-card__cat">${escapeHtml(cat)}</span>` : ""}
@@ -239,11 +265,17 @@ function renderCards() {
       </li>`;
     })
     .join("");
+  // désactive les flèches sans cible (carte non verrouillée isolée en bout)
+  const unlocked = state.order.filter((id) => !locked.has(id));
+  if (unlocked.length) {
+    els.cardList.querySelector(`.frise-move[data-id="${unlocked[0]}"][data-move="up"]`)?.setAttribute("disabled", "");
+    els.cardList.querySelector(`.frise-move[data-id="${unlocked[unlocked.length - 1]}"][data-move="down"]`)?.setAttribute("disabled", "");
+  }
 }
 
 function renderReveal() {
   if (!els.revealPanel) return;
-  if (!state.submitted) {
+  if (!isTerminal()) {
     els.revealPanel.hidden = true;
     els.revealPanel.innerHTML = "";
     return;
@@ -274,53 +306,70 @@ function sourceLabel(ev) {
 }
 
 /* ------------------------------------------------------------------ *
- * Réordonnancement (flèches + glisser-déposer)
+ * Réordonnancement (flèches + glisser-déposer) — respecte les cartes verrouillées
  * ------------------------------------------------------------------ */
-function moveCard(index, dir) {
-  if (state.submitted) return;
-  const target = index + (dir === "up" ? -1 : 1);
-  if (target < 0 || target >= state.order.length) return;
-  const order = [...state.order];
-  [order[index], order[target]] = [order[target], order[index]];
-  state.order = order;
+function reinterleave(unlockedSeq, lockedSet) {
+  let u = 0;
+  return state.order.map((id) => (lockedSet.has(id) ? id : unlockedSeq[u++]));
+}
+function moveCard(id, dir) {
+  if (isTerminal()) return;
+  const locked = new Set(state.lockedIds);
+  if (locked.has(id)) return;
+  const unlocked = state.order.filter((x) => !locked.has(x));
+  const u = unlocked.indexOf(id);
+  const target = u + (dir === "up" ? -1 : 1);
+  if (target < 0 || target >= unlocked.length) return;
+  [unlocked[u], unlocked[target]] = [unlocked[target], unlocked[u]];
+  state.order = reinterleave(unlocked, locked);
   saveGame();
   render();
-  focusCard(target);
+  els.cardList?.querySelector(`.frise-move[data-id="${id}"][data-move="${dir}"]:not([disabled])`)?.focus();
 }
 function reorderByDrop(fromId, toId) {
-  if (state.submitted || fromId === toId) return;
-  const order = [...state.order];
-  const from = order.indexOf(fromId);
-  const to = order.indexOf(toId);
+  if (isTerminal() || fromId === toId) return;
+  const locked = new Set(state.lockedIds);
+  if (locked.has(fromId) || locked.has(toId)) return;
+  const unlocked = state.order.filter((x) => !locked.has(x));
+  const from = unlocked.indexOf(fromId);
+  const to = unlocked.indexOf(toId);
   if (from < 0 || to < 0) return;
-  order.splice(to, 0, order.splice(from, 1)[0]);
-  state.order = order;
+  unlocked.splice(to, 0, unlocked.splice(from, 1)[0]);
+  state.order = reinterleave(unlocked, locked);
   saveGame();
   render();
-}
-function focusCard(index) {
-  const btn = els.cardList?.querySelector(`.frise-card[data-index="${index}"] .frise-move[data-move="up"]:not([disabled]), .frise-card[data-index="${index}"] .frise-move`);
-  btn?.focus();
 }
 
 /* ------------------------------------------------------------------ *
- * Validation
+ * Validation (jusqu'à MAX_ATTEMPTS essais)
  * ------------------------------------------------------------------ */
 function validate() {
-  if (!state || state.submitted) return;
+  if (!state || isTerminal()) return;
   const score = scoreOrder(orderedEvents());
+  state.attempts += 1;
   state.score = score;
-  state.submitted = true;
-  updateStats(score);
+  state.attemptScores = [...(state.attemptScores || []), score.perEvent];
+  // verrouille les cartes bien placées
+  const newlyLocked = orderedEvents().filter((ev, i) => score.perEvent[i]).map((e) => e.id);
+  state.lockedIds = [...new Set([...state.lockedIds, ...newlyLocked])];
+
+  if (score.exact === score.total) state.status = "won";
+  else if (state.attempts >= MAX_ATTEMPTS) state.status = "lost";
+
+  if (isTerminal()) updateStats();
   saveGame();
   render();
-  celebrate(score);
-  els.revealPanel?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  if (isTerminal()) {
+    celebrate();
+    els.revealPanel?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } else {
+    showToast(`${score.exact}/${SET_SIZE} bien placées. Encore ${MAX_ATTEMPTS - state.attempts} essai${MAX_ATTEMPTS - state.attempts > 1 ? "s" : ""}.`);
+  }
 }
 
-function updateStats(score) {
-  if (stats.lastPlayedDateId === todayId) return; // déjà compté
-  const won = score.exact === score.total;
+function updateStats() {
+  if (stats.lastPlayedDateId === todayId) return;
+  const won = state.status === "won";
   stats.played += 1;
   if (won) {
     stats.won += 1;
@@ -331,26 +380,26 @@ function updateStats(score) {
   } else {
     stats.currentStreak = 0;
   }
-  stats.bestScore = Math.max(stats.bestScore || 0, score.exact);
   stats.lastPlayedDateId = todayId;
-  stats.history = [{ date: todayId, won, exact: score.exact }, ...stats.history].slice(0, 60);
+  stats.history = [{ date: todayId, won, attempts: state.attempts, exact: state.score.exact }, ...stats.history].slice(0, 60);
   writeJson(STORAGE_KEYS.stats, stats);
 }
 
-function celebrate(score) {
-  showToast(score.exact === score.total ? "Sans faute, biloute ! 🎉" : `${score.exact}/${score.total} bien placés.`);
+function celebrate() {
+  showToast(
+    state.status === "won"
+      ? `Résolu en ${state.attempts} essai${state.attempts > 1 ? "s" : ""}, biloute ! 🎉`
+      : "Frise révélée — à demain midi."
+  );
 }
 
 /* ------------------------------------------------------------------ *
- * Partage (spoiler-free)
+ * Partage (spoiler-free : une rangée par essai)
  * ------------------------------------------------------------------ */
 function buildShareText() {
-  const squares = (state.score?.perEvent || []).map((ok) => (ok ? "🟩" : "⬛")).join("");
-  return [
-    `La Frise du Nord ${todayId}`,
-    `${squares} (${state.score?.exact ?? 0}/${SET_SIZE} bien placés)`,
-    GAME_URL,
-  ].join("\n");
+  const head = state.status === "won" ? `${state.attempts}/${MAX_ATTEMPTS}` : `✗/${MAX_ATTEMPTS}`;
+  const rows = (state.attemptScores || []).map((pe) => pe.map((ok) => (ok ? "🟩" : "⬛")).join("")).join("\n");
+  return [`La Frise du Nord ${todayId} ${head}`, rows, GAME_URL].filter(Boolean).join("\n");
 }
 async function shareResult() {
   const ok = await shareTextWithFallback(buildShareText());
@@ -371,13 +420,13 @@ function renderCalepinStats() {
     {
       metrics: [
         { label: "Frises jouées", value: stats.played },
-        { label: "Sans faute", value: stats.won },
+        { label: "Résolues", value: stats.won },
         { label: "Réussite", value: `${winRate}%` },
         { label: "Série en cours", value: stats.currentStreak || 0 },
         { label: "Meilleure série", value: stats.bestStreak || 0 },
       ],
       historyLines: (stats.history || []).map(
-        (h) => `${h.date} · ${h.won ? "sans faute" : `${h.exact}/${SET_SIZE}`}`
+        (h) => `${h.date} · ${h.won ? `résolu en ${h.attempts || "?"} essai${(h.attempts || 0) > 1 ? "s" : ""}` : `${h.exact}/${SET_SIZE} · raté`}`
       ),
       perfBars: (stats.history || [])
         .slice(0, 7)
@@ -385,7 +434,7 @@ function renderCalepinStats() {
         .map((h) => ({
           ratio: Math.max(0, Math.min(1, (Number(h.exact) || 0) / SET_SIZE)),
           result: h.won ? "won" : "lost",
-          label: (h.exact ?? 0),
+          label: h.exact ?? 0,
           ariaLabel: `${h.date} : ${h.exact}/${SET_SIZE}`,
         })),
       historyEmpty: "Aucune frise terminée pour l'instant.",
@@ -401,13 +450,12 @@ function sanitizeStats(raw) {
     won: num(r.won),
     currentStreak: num(r.currentStreak),
     bestStreak: num(r.bestStreak),
-    bestScore: num(r.bestScore),
     lastPlayedDateId: typeof r.lastPlayedDateId === "string" ? r.lastPlayedDateId : null,
     lastWinDateId: typeof r.lastWinDateId === "string" ? r.lastWinDateId : null,
     history: Array.isArray(r.history)
       ? r.history
           .filter((h) => h && typeof h.date === "string")
-          .map((h) => ({ date: h.date, won: Boolean(h.won), exact: num(h.exact) }))
+          .map((h) => ({ date: h.date, won: Boolean(h.won), attempts: num(h.attempts), exact: num(h.exact) }))
           .slice(0, 60)
       : [],
   };
@@ -439,7 +487,7 @@ function msToNextNoon() {
     timeZone: DAILY_TIME_ZONE, hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23",
   }).formatToParts(now);
   const get = (t) => Number(parts.find((p) => p.type === t)?.value || 0);
-  let secondsLeft = ((DAILY_ROLLOVER_HOUR - get("hour")) * 3600) - get("minute") * 60 - get("second");
+  let secondsLeft = (DAILY_ROLLOVER_HOUR - get("hour")) * 3600 - get("minute") * 60 - get("second");
   if (secondsLeft <= 0) secondsLeft += 24 * 3600;
   const h = Math.floor(secondsLeft / 3600);
   const m = Math.floor((secondsLeft % 3600) / 60);
@@ -479,12 +527,11 @@ function bindEvents() {
 
   els.cardList?.addEventListener("click", (e) => {
     const btn = e.target.closest(".frise-move");
-    if (btn) moveCard(Number(btn.dataset.index), btn.dataset.move);
+    if (btn) moveCard(btn.dataset.id, btn.dataset.move);
   });
-  // glisser-déposer (souris/desktop)
   els.cardList?.addEventListener("dragstart", (e) => {
     const li = e.target.closest(".frise-card");
-    if (!li || state.submitted) return;
+    if (!li || !li.getAttribute("draggable")) return;
     dragId = li.dataset.id;
     li.classList.add("is-dragging");
     e.dataTransfer.effectAllowed = "move";
@@ -527,7 +574,7 @@ function bindEvents() {
  * Format + hook de test
  * ------------------------------------------------------------------ */
 function formatDay(dateId) {
-  const [y, m, d] = dateId.split("-").map(Number);
+  const [, m, d] = dateId.split("-").map(Number);
   const mois = ["janv.", "févr.", "mars", "avril", "mai", "juin", "juill.", "août", "sept.", "oct.", "nov.", "déc."];
   return `${d} ${mois[m - 1]}`;
 }
@@ -539,7 +586,10 @@ function exposeTestHook() {
       date: todayId,
       setSize: dailySet.length,
       order: state.order,
-      submitted: state.submitted,
+      lockedIds: state.lockedIds,
+      attempts: state.attempts,
+      maxAttempts: MAX_ATTEMPTS,
+      status: state.status,
       score: state.score,
       labels: orderedEvents().map((e) => e.label),
     });

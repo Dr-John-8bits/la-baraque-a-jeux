@@ -218,7 +218,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
-test("la-frise: charge, ordonne et révèle la frise du jour", async ({ page }) => {
+test("la-frise: ordonne, gagne et révèle la frise du jour", async ({ page }) => {
   await page.goto(`${base}apps/la-frise/`);
   await page.evaluate(() => localStorage.clear());
   await page.reload();
@@ -227,17 +227,30 @@ test("la-frise: charge, ordonne et révèle la frise du jour", async ({ page }) 
   await page.getByRole("button", { name: "Jouer", exact: true }).click();
   await expect(page.locator("#firstHelp")).toBeHidden();
 
-  const initial = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
-  expect(initial.setSize).toBe(5);
+  const m0 = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(m0.setSize).toBe(5);
+  expect(m0.maxAttempts).toBe(3);
   await expect(page.locator("#cardList .frise-card")).toHaveCount(5);
 
-  // descendre la première carte d'un cran, puis valider
-  await page.locator('.frise-card[data-index="0"] .frise-move[data-move="down"]').click();
+  // résoudre : trier par année (corpus) via les flèches ▲
+  const corpus = JSON.parse(await readFile("packages/corpus/la-frise/events.json", "utf8"));
+  const yearById = new Map(corpus.events.map((e) => [e.id, e.year]));
+  const target = [...m0.order].sort((a, b) => yearById.get(a) - yearById.get(b));
+  for (let p = 0; p < target.length; p += 1) {
+    for (let guard = 0; guard < 10; guard += 1) {
+      const idx = await page.evaluate(
+        (x) => Number(document.querySelector(`.frise-card[data-id="${x}"]`)?.dataset.index),
+        target[p]
+      );
+      if (idx <= p) break;
+      await page.click(`.frise-card[data-id="${target[p]}"] .frise-move[data-move="up"]`);
+    }
+  }
   await page.getByRole("button", { name: "Valider", exact: true }).click();
 
-  const after = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
-  expect(after.submitted).toBe(true);
-  expect(after.score.total).toBe(5);
+  const won = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(won.status).toBe("won");
+  expect(won.score.exact).toBe(5);
   await expect(page.locator("#revealPanel")).toBeVisible();
   await expect(page.locator("#revealPanel .reveal-card")).toHaveCount(5);
   await expect(page.locator("#shareButton")).toBeVisible();
@@ -246,7 +259,7 @@ test("la-frise: charge, ordonne et révèle la frise du jour", async ({ page }) 
   await page.reload();
   await page.waitForFunction(() => typeof window.render_game_to_text === "function");
   const reloaded = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
-  expect(reloaded.submitted).toBe(true);
+  expect(reloaded.status).toBe("won");
 });
 
 test("les jeux affichent un message lisible quand le corpus est indisponible", async ({ page }) => {
