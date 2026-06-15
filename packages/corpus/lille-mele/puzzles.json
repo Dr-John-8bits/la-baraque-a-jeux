@@ -433,17 +433,12 @@
   {
     "id": "lianes-couronnes-jardins-001",
     "number": 11,
-    "title": "Lianes, couronnes et jardins",
+    "title": "Bus, communes, jardins et vedettes",
     "intro": "Connecte les mots avant la prochaine station.",
-    "finalNote": "Les familles de bus et d'espaces verts élargissent le jeu au-delà des stations de métro les plus connues.",
+    "finalNote": "Un bus, des communes de la couronne nord, des jardins et des personnalités nées à Lille.",
     "status": "reviewed",
-    "tags": ["transport", "bus", "communes", "espaces-verts"],
-    "sourceIds": [
-      "gtfs-ilevia-data-gouv",
-      "ilevia-arret-point-datamel",
-      "mel-communes-datamel",
-      "ville-lille-parcs-jardins-data-gouv"
-    ],
+    "tags": ["transport", "bus", "communes", "espaces-verts", "lille"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel", "ville-lille-parcs-jardins-data-gouv", "wikidata"],
     "bonus": {
       "question": "Le parc de la Citadelle est le plus grand espace vert de Lille.",
       "answer": true,
@@ -463,18 +458,18 @@
         ],
         "note": "Quatre arrêts de bus, pour varier le rail automatique."
       },
-      {
-        "id": "liane-99-premiers-arrets",
-        "title": "Arrêts de la Liane 99",
+            {
+        "id": "personnalites-nees-lille-2",
+        "title": "Personnalités nées à Lille",
         "difficulty": "tricky",
-        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "sourceIds": ["wikidata"],
         "items": [
-          "Le Bizet",
-          "Louis Bleriot",
-          "Herons",
-          "Jacques Cartier"
+          "Édouard Lalo",
+          "Émile Bernard",
+          "Julien Duvivier",
+          "Iris Mittenaere"
         ],
-        "note": "Une autre famille de bus, plus périphérique dans l'imaginaire lillois."
+        "note": "Des personnalités nées à Lille."
       },
       {
         "id": "communes-couronne-nord-est",
@@ -660,15 +655,12 @@
   {
     "id": "premiers-arrets-lianes-001",
     "number": 14,
-    "title": "Premiers arrêts de Lianes",
+    "title": "Bus, vedettes, douceurs et culture",
     "intro": "Connecte les mots avant la prochaine station.",
-    "finalNote": "Cette grille est plus corsée : elle exploite des familles bus non doublonnées, utiles pour élargir Lille-Mêle au-delà du métro.",
+    "finalNote": "Un bus, des personnalités nées à Lille, des douceurs et des lieux de culture : une grille bien mélangée.",
     "status": "reviewed",
-    "tags": ["transport", "bus", "liane"],
-    "sourceIds": [
-      "gtfs-ilevia-data-gouv",
-      "ilevia-arret-point-datamel"
-    ],
+    "tags": ["transport", "bus", "lille", "gastronomie", "culture"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "wikidata", "banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "hello-lille"],
     "bonus": {
       "question": "Les Lianes sont les principales lignes de bus du réseau Ilévia.",
       "answer": true,
@@ -688,44 +680,44 @@
         ],
         "note": "Quatre premiers arrêts candidats de la Liane 1."
       },
-      {
-        "id": "liane-3-premiers-arrets",
-        "title": "Arrêts de la Liane 3",
+            {
+        "id": "personnalites-nees-lille-1",
+        "title": "Personnalités nées à Lille",
         "difficulty": "medium",
-        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "sourceIds": ["wikidata"],
         "items": [
-          "Quart. Beaulieu",
-          "Herriot",
-          "Foch",
-          "Vallon"
+          "Charles de Gaulle",
+          "Jean Perrin",
+          "Philippe Noiret",
+          "Raphaël Varane"
         ],
-        "note": "Quatre premiers arrêts candidats de la Liane 3."
+        "note": "Des personnalités nées à Lille."
       },
-      {
-        "id": "liane-4-premiers-arrets",
-        "title": "Arrêts de la Liane 4",
+            {
+        "id": "douceurs-nord-9",
+        "title": "Douceurs du Nord",
         "difficulty": "hard",
-        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
         "items": [
-          "Gounod",
-          "Lp Colbras",
-          "Semard",
-          "Hotel de Ville"
+          "Merveilleux",
+          "Babelutte",
+          "Cramique",
+          "Vergeoise"
         ],
-        "note": "Quatre premiers arrêts candidats de la Liane 4."
+        "note": "Des douceurs typiques du Nord."
       },
-      {
-        "id": "liane-5-premiers-arrets",
-        "title": "Arrêts de la Liane 5",
+            {
+        "id": "culture-9",
+        "title": "Lieux de culture",
         "difficulty": "tricky",
-        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "sourceIds": ["hello-lille"],
         "items": [
-          "Ferme aux Oies",
-          "Bailly",
-          "Place",
-          "Quesne Mairie"
+          "La Piscine",
+          "Le Fresnoy",
+          "LaM",
+          "Tripostal"
         ],
-        "note": "Quatre premiers arrêts candidats de la Liane 5."
+        "note": "Des lieux culturels de la métropole."
       }
     ]
   },

@@ -273,6 +273,11 @@ function validatePuzzles(value, sourceIds, forbiddenLabels) {
     if (normalizedItemIds.size !== 16) {
       errors.push(`${scope}.groups doit contenir 16 items distincts apres normalisation.`);
     }
+    // Régulation : au plus une famille « Liane » (bus) par grille, sinon trop mono-thématique.
+    const lianeCount = (puzzle?.groups || []).filter((group) => /\bliane\b/i.test(group?.title || "")).length;
+    if (lianeCount > 1) {
+      errors.push(`${scope} contient ${lianeCount} familles « Liane » : une seule autorisee par grille (eviter une grille trop mono-thematique).`);
+    }
   });
 }
 
