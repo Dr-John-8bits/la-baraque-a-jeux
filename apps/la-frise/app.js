@@ -12,7 +12,7 @@ import { shareText as shareTextWithFallback } from "../../packages/game-utils/sh
 import { escapeHtml } from "../../packages/game-utils/text-render.js";
 import { renderCalepin, setupCalepinTools } from "../../packages/ui/calepin.js";
 
-const APP_VERSION = "26.06.15.3";
+const APP_VERSION = "26.06.15.4";
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
@@ -153,7 +153,7 @@ const els = {};
 function cacheEls() {
   [
     "instruction", "cardList", "validateButton", "revealPanel", "yesterdayLine",
-    "nextFriseCountdown", "statusDate", "statusScore", "statusStreak", "shareButton",
+    "nextFriseCountdown", "statusDate", "statusScore", "statusStreak", "shareButton", "hintButton",
     "calepinButton", "rulesButton", "toast",
     "statsDialog", "statsList", "statsHistory", "statsChart",
     "exportStatsButton", "importStatsButton", "importStatsInput",
@@ -206,6 +206,7 @@ function loadDay() {
       attemptScores: Array.isArray(saved.attemptScores) ? saved.attemptScores : [],
       status: ["playing", "won", "lost"].includes(saved.status) ? saved.status : "playing",
       score: saved.score || null,
+      hintUsed: Boolean(saved.hintUsed),
     };
   } else {
     state = freshState();
@@ -220,6 +221,7 @@ function freshState() {
     attemptScores: [],
     status: "playing",
     score: null,
+    hintUsed: false,
   };
 }
 function saveGame() {
@@ -248,12 +250,25 @@ function render() {
       ? state.status === "won" ? "Frise résolue" : "Frise révélée"
       : state.attempts > 0 ? `Valider (essai ${state.attempts + 1}/${MAX_ATTEMPTS})` : "Valider";
   }
+  if (els.hintButton) {
+    els.hintButton.hidden = terminal;
+    els.hintButton.disabled = state.hintUsed;
+    els.hintButton.textContent = state.hintUsed ? "Indice révélé" : "Indice d'époque";
+  }
   if (els.shareButton) els.shareButton.hidden = !terminal;
   renderReveal();
 }
 
+function revealHint() {
+  if (!state || isTerminal() || state.hintUsed) return;
+  state.hintUsed = true;
+  saveGame();
+  render();
+  showToast("Indice d'époque révélé — ta frise sera marquée « avec indice ».");
+}
+
 function instructionText() {
-  if (state.status === "won") return `Bravo ! Résolu en ${state.attempts} essai${state.attempts > 1 ? "s" : ""}.`;
+  if (state.status === "won") return `Bravo ! Résolu en ${state.attempts} essai${state.attempts > 1 ? "s" : ""}${state.hintUsed ? " (avec indice)" : ""}.`;
   if (state.status === "lost") return "Raté — l'ordre exact se révèle.";
   if (state.attempts > 0) return `Essai ${state.attempts + 1}/${MAX_ATTEMPTS} · les cartes vertes sont bien placées, réarrange les autres.`;
   return "Remets les faits dans l'ordre, du plus ancien au plus récent.";
@@ -285,7 +300,7 @@ function renderCards() {
         <span class="frise-card__body">
           <span class="frise-card__label">${escapeHtml(ev.label)}</span>
           ${cat ? `<span class="frise-card__cat">${escapeHtml(cat)}</span>` : ""}
-          ${!revealed && eraMarker(comparableYear(ev)) ? `<span class="frise-card__era">≈ ${escapeHtml(eraMarker(comparableYear(ev)))}</span>` : ""}
+          ${!revealed && state.hintUsed && eraMarker(comparableYear(ev)) ? `<span class="frise-card__era">≈ ${escapeHtml(eraMarker(comparableYear(ev)))}</span>` : ""}
         </span>
         ${controls}
       </li>`;
@@ -429,7 +444,7 @@ function updateStats() {
     stats.currentStreak = 0;
   }
   stats.lastPlayedDateId = todayId;
-  stats.history = [{ date: todayId, won, attempts: state.attempts, exact: state.score.exact }, ...stats.history].slice(0, 60);
+  stats.history = [{ date: todayId, won, attempts: state.attempts, exact: state.score.exact, hintUsed: Boolean(state.hintUsed) }, ...stats.history].slice(0, 60);
   writeJson(STORAGE_KEYS.stats, stats);
 }
 
@@ -447,7 +462,7 @@ function celebrate() {
 function buildShareText() {
   const head = state.status === "won" ? `${state.attempts}/${MAX_ATTEMPTS}` : `✗/${MAX_ATTEMPTS}`;
   const rows = (state.attemptScores || []).map((pe) => pe.map((ok) => (ok ? "🟩" : "⬛")).join("")).join("\n");
-  return [`La Frise du Nord ${todayId} ${head}`, rows, GAME_URL].filter(Boolean).join("\n");
+  return [`La Frise du Nord ${todayId} ${head}${state.hintUsed ? " 💡" : ""}`, rows, GAME_URL].filter(Boolean).join("\n");
 }
 async function shareResult() {
   const ok = await shareTextWithFallback(buildShareText());
@@ -474,7 +489,7 @@ function renderCalepinStats() {
         { label: "Meilleure série", value: stats.bestStreak || 0 },
       ],
       historyLines: (stats.history || []).map(
-        (h) => `${h.date} · ${h.won ? `résolu en ${h.attempts || "?"} essai${(h.attempts || 0) > 1 ? "s" : ""}` : `${h.exact}/${SET_SIZE} · raté`}`
+        (h) => `${h.date} · ${h.won ? `résolu en ${h.attempts || "?"} essai${(h.attempts || 0) > 1 ? "s" : ""}` : `${h.exact}/${SET_SIZE} · raté`}${h.hintUsed ? " · indice" : ""}`
       ),
       perfBars: (stats.history || [])
         .slice(0, 7)
@@ -503,7 +518,7 @@ function sanitizeStats(raw) {
     history: Array.isArray(r.history)
       ? r.history
           .filter((h) => h && typeof h.date === "string")
-          .map((h) => ({ date: h.date, won: Boolean(h.won), attempts: num(h.attempts), exact: num(h.exact) }))
+          .map((h) => ({ date: h.date, won: Boolean(h.won), attempts: num(h.attempts), exact: num(h.exact), hintUsed: Boolean(h.hintUsed) }))
           .slice(0, 60)
       : [],
   };
@@ -569,6 +584,7 @@ function showToast(message) {
  * ------------------------------------------------------------------ */
 function bindEvents() {
   els.validateButton?.addEventListener("click", validate);
+  els.hintButton?.addEventListener("click", revealHint);
   els.shareButton?.addEventListener("click", shareResult);
   els.calepinButton?.addEventListener("click", openCalepin);
   els.rulesButton?.addEventListener("click", () => openDialog(els.rulesDialog));
