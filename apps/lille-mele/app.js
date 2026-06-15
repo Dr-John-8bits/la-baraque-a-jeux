@@ -582,6 +582,9 @@ function buildShareText() {
   });
   while (lines.length < 5) lines.push("⬛⬛⬛⬛");
   lines.push(`Score : ${computeScore()} · Erreurs : ${state.mistakes}/${MAX_MISTAKES}`);
+  if (state.bonusAnswered !== null && puzzle.bonus) {
+    lines.push(`Vrai ou Bidon : ${state.bonusAnswered === puzzle.bonus.answer ? "✅" : "❌"}`);
+  }
   lines.push(new URL(".", window.location.href).href);
   return lines.join("\n");
 }
