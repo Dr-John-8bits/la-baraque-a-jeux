@@ -1,6 +1,6 @@
 # Cahier des charges — La Frise du Nord
 
-> **Statut : scaffolding.** Répertoire + cahier des charges + squelette + un corpus-graine de démonstration. Le jeu reste à coder ; le gros du travail est **éditorial** (constituer la liste de faits datés et sourcés). Point de départ de la prochaine session.
+> **Statut : corpus draft + jeu à coder.** Répertoire + cahier des charges + squelette. Le corpus compte **~83 faits datés et sourcés** (8 graines rédigées main + faits Wikidata CC0 via `tools/build-events-from-wikidata.mjs`, re-jouable avec `npm run build:frise-events`). Restent : **polir éditorialement** le draft (libellés/blurbs auto, quelques recatégorisations, cas religieux non filtrés type « Synagogue »/« Chaire ») puis **coder le jeu** (moteur déjà esquissé : `comparableYear`/`scoreOrder`).
 
 ## 1. Concept
 

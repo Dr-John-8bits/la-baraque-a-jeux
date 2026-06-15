@@ -268,5 +268,23 @@
     "license": "CC BY-SA 4.0",
     "consultedAt": "2026-06-14",
     "notes": "Réalisations de Jean Willerval, dont « ZUP de la Bourgogne à Tourcoing (1962-1974) », confirmant l'attribution du quartier de la Bourgogne."
+  },
+  {
+    "id": "wikidata",
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org",
+    "publisher": "Wikimedia Foundation",
+    "license": "CC0 1.0",
+    "consultedAt": "2026-06-15",
+    "notes": "Données structurées réutilisables (domaine public). Faits datés requêtés via SPARQL (query.wikidata.org) ; chaque fait conserve son identifiant d'entité (QID) pour traçabilité."
+  },
+  {
+    "id": "wikipedia-fr",
+    "label": "Wikipédia (français)",
+    "url": "https://fr.wikipedia.org",
+    "publisher": "Wikipédia",
+    "license": "CC BY-SA 4.0",
+    "consultedAt": "2026-06-15",
+    "notes": "Faits historiques et patrimoniaux généraux (dates, contexte), reformulés et non recopiés. Sert de source aux faits-graines de La Frise du Nord."
   }
 ]
