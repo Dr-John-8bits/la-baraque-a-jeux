@@ -131,6 +131,13 @@ body.frise-page {
   color: var(--labaj-muted);
   font-weight: 800;
 }
+.frise-card__era {
+  margin-top: 1px;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--labaj-blue);
+}
 .frise-card__moves {
   flex: 0 0 auto;
   display: grid;

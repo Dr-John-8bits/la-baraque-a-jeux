@@ -12,7 +12,7 @@ import { shareText as shareTextWithFallback } from "../../packages/game-utils/sh
 import { escapeHtml } from "../../packages/game-utils/text-render.js";
 import { renderCalepin, setupCalepinTools } from "../../packages/ui/calepin.js";
 
-const APP_VERSION = "26.06.15.2";
+const APP_VERSION = "26.06.15.3";
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
@@ -35,6 +35,31 @@ const CATEGORY_LABELS = {
   sport: "Sport",
   "industrie-social": "Industrie & société",
 };
+
+// Indice d'amorçage : un repère culturel célèbre par tranche d'années, affiché sur
+// les cartes non révélées. Vague (pas l'année), guide la réflexion sans trivialiser :
+// deux faits d'une même tranche partagent le même repère (à départager soi-même).
+const ERAS = [
+  [-Infinity, 1300, "au temps des croisades"],
+  [1300, 1430, "pendant la guerre de Cent Ans"],
+  [1430, 1500, "du temps de Jeanne d'Arc"],
+  [1500, 1600, "à la Renaissance"],
+  [1600, 1700, "au temps de Louis XIV"],
+  [1700, 1789, "au siècle des Lumières"],
+  [1789, 1815, "sous la Révolution et Napoléon"],
+  [1815, 1870, "pendant la révolution industrielle"],
+  [1870, 1914, "à la Belle Époque"],
+  [1914, 1919, "pendant la Grande Guerre"],
+  [1919, 1939, "dans les Années folles"],
+  [1939, 1945, "pendant la Seconde Guerre mondiale"],
+  [1945, 1975, "pendant les Trente Glorieuses"],
+  [1975, 2000, "à la fin du XXe siècle"],
+  [2000, Infinity, "dans les années 2000"],
+];
+function eraMarker(year) {
+  const band = ERAS.find(([from, to]) => year >= from && year < to);
+  return band ? band[2] : "";
+}
 
 /* ------------------------------------------------------------------ *
  * Moteur (exporté pour les tests)
@@ -260,6 +285,7 @@ function renderCards() {
         <span class="frise-card__body">
           <span class="frise-card__label">${escapeHtml(ev.label)}</span>
           ${cat ? `<span class="frise-card__cat">${escapeHtml(cat)}</span>` : ""}
+          ${!revealed && eraMarker(comparableYear(ev)) ? `<span class="frise-card__era">≈ ${escapeHtml(eraMarker(comparableYear(ev)))}</span>` : ""}
         </span>
         ${controls}
       </li>`;
