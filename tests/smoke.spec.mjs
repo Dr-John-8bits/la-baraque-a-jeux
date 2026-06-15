@@ -35,6 +35,7 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByRole("link", { name: "Ouvrir Lille-Mêle", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Ouvrir Station Mystère", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Ouvrir La Frise du Nord", exact: true })).toBeVisible();
   // BBB est retiré du portail (jeu de hasard sans rituel quotidien) ; sa page existe toujours.
   await expect(
     page.getByRole("link", { name: "Ouvrir Biloute Bière Braderie", exact: true })
@@ -215,6 +216,37 @@ test("portail, blog et jeux chargent depuis le monorepo", async ({ page }) => {
   expect(stationAfterReload.stats.played).toBe(1);
   expect(stationAfterReload.stats.wins).toBe(1);
   expect(errors).toEqual([]);
+});
+
+test("la-frise: charge, ordonne et révèle la frise du jour", async ({ page }) => {
+  await page.goto(`${base}apps/la-frise/`);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  await expect(page.locator("#firstHelp")).toBeVisible();
+  await page.getByRole("button", { name: "Jouer", exact: true }).click();
+  await expect(page.locator("#firstHelp")).toBeHidden();
+
+  const initial = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(initial.setSize).toBe(5);
+  await expect(page.locator("#cardList .frise-card")).toHaveCount(5);
+
+  // descendre la première carte d'un cran, puis valider
+  await page.locator('.frise-card[data-index="0"] .frise-move[data-move="down"]').click();
+  await page.getByRole("button", { name: "Valider", exact: true }).click();
+
+  const after = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(after.submitted).toBe(true);
+  expect(after.score.total).toBe(5);
+  await expect(page.locator("#revealPanel")).toBeVisible();
+  await expect(page.locator("#revealPanel .reveal-card")).toHaveCount(5);
+  await expect(page.locator("#shareButton")).toBeVisible();
+
+  // l'état persiste après rechargement
+  await page.reload();
+  await page.waitForFunction(() => typeof window.render_game_to_text === "function");
+  const reloaded = JSON.parse(await page.evaluate(() => window.render_game_to_text()));
+  expect(reloaded.submitted).toBe(true);
 });
 
 test("les jeux affichent un message lisible quand le corpus est indisponible", async ({ page }) => {

@@ -11,6 +11,7 @@ const pages = [
   "apps/lille-mele/index.html",
   "apps/biloute-biere-braderie/index.html",
   "apps/station-mystere/index.html",
+  "apps/la-frise/index.html",
 ];
 
 for (const page of pages) {

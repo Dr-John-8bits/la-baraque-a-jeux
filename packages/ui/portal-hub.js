@@ -13,6 +13,7 @@ const todayId = getDailyDateId(new Date(), { timeZone: TIME_ZONE, rolloverHour: 
 
 const DAILY_GAMES = [
   { href: "apps/le-mot-a-biloute/", statsKey: "mot-a-biloute:stats", playedKey: "lastPlayed", streakKey: "streak" },
+  { href: "apps/la-frise/", statsKey: "la-frise.v1.stats", playedKey: "lastPlayedDateId", streakKey: "currentStreak" },
   { href: "apps/lille-mele/", statsKey: "lillemele.v1.stats", playedKey: "lastPlayedDateId", streakKey: "currentStreak" },
   { href: "apps/station-mystere/", statsKey: "station-mystere.v1.stats", playedKey: "lastPlayedDateId", streakKey: "currentStreak" },
 ];
@@ -54,7 +55,7 @@ const summary = document.getElementById("gamesProgress");
 if (summary) {
   const parts = [
     done === DAILY_GAMES.length
-      ? "🎉 Les 3 jeux du jour bouclés — reviens demain à midi"
+      ? `🎉 Les ${DAILY_GAMES.length} jeux du jour bouclés — reviens demain à midi`
       : `${done}/${DAILY_GAMES.length} jeux du jour bouclés`,
   ];
   if (bestStreak > 1) parts.push(`ta plus longue série : ${bestStreak} j`);

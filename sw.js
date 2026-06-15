@@ -12,7 +12,7 @@
  * Les chemins sont relatifs au service worker (racine du déploiement), donc portables
  * que le site soit servi à la racine d'un domaine ou dans un sous-dossier GitHub Pages.
  */
-const VERSION = "labaj-v5-2026-06-15";
+const VERSION = "labaj-v6-2026-06-15";
 const CACHE = `labaj-${VERSION}`;
 
 const CORE = [
@@ -51,6 +51,9 @@ const CORE = [
   "./apps/station-mystere/",
   "./apps/station-mystere/styles.css",
   "./apps/station-mystere/app.js",
+  "./apps/la-frise/",
+  "./apps/la-frise/styles.css",
+  "./apps/la-frise/app.js",
 ];
 
 self.addEventListener("install", (event) => {
