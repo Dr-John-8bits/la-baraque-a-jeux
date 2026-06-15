@@ -1,7 +1,7 @@
 {
   "description": "Faits datés du patrimoine et de l'histoire de Lille et des Hauts-de-France pour « La Frise du Nord ». Graines rédigées main + faits issus de Wikidata (CC0) via tools/build-events-from-wikidata.mjs. Blurbs auto = brouillons à polir.",
   "epochId": "2026-01-01",
-  "status": "draft",
+  "status": "published",
   "generatedAt": "2026-06-15",
   "events": [
     {
@@ -10,7 +10,7 @@
       "year": 1117,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Écrivain français du XIIe siècle.",
+      "blurb": "Théologien et poète médiéval surnommé le « Docteur universel », né à Lille au XIIe siècle.",
       "sourceIds": [
         "wikidata"
       ],
@@ -33,7 +33,7 @@
       "year": 1472,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Hospice — monument historique de Lille.",
+      "blurb": "Ancien hôpital fondé par la comtesse Jeanne de Flandre, reconstruit au XVe siècle ; aujourd'hui musée du Vieux-Lille.",
       "sourceIds": [
         "merimee"
       ],
@@ -45,7 +45,7 @@
       "year": 1621,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Porte de ville à Lille (Nord).",
+      "blurb": "Vestige des anciennes fortifications de Lille, l'une des portes de l'enceinte du XVIIe siècle.",
       "sourceIds": [
         "wikidata"
       ],
@@ -79,7 +79,7 @@
       "year": 1796,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "À Lille (1796).",
+      "blurb": "Créées sous la Révolution, elles conservent la mémoire écrite du département du Nord.",
       "sourceIds": [
         "wikidata"
       ],
@@ -91,7 +91,7 @@
       "year": 1809,
       "precision": "an",
       "category": "culture",
-      "blurb": "Musée de Lille, France.",
+      "blurb": "L'un des plus grands musées de France, place de la République, fondé sous le Premier Empire.",
       "sourceIds": [
         "wikidata"
       ],
@@ -103,7 +103,7 @@
       "year": 1823,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Compositeur français.",
+      "blurb": "Compositeur né à Lille, célèbre pour sa fougueuse « Symphonie espagnole ».",
       "sourceIds": [
         "wikidata"
       ],
@@ -115,7 +115,7 @@
       "year": 1845,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Monument commémoratif de Lille.",
+      "blurb": "Sur la Grand'Place, elle célèbre la résistance de Lille au siège autrichien de 1792.",
       "sourceIds": [
         "wikidata"
       ],
@@ -127,7 +127,7 @@
       "year": 1848,
       "precision": "an",
       "category": "transport",
-      "blurb": "Gare ferroviaire française.",
+      "blurb": "La plus ancienne gare de Lille ; sa façade provient de l'ancienne gare du Nord de Paris.",
       "sourceIds": [
         "wikidata"
       ],
@@ -139,7 +139,7 @@
       "year": 1868,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Peintre et graveur français.",
+      "blurb": "Peintre né à Lille, compagnon de route de Gauguin et de Van Gogh, pionnier du symbolisme.",
       "sourceIds": [
         "wikidata"
       ],
@@ -151,7 +151,7 @@
       "year": 1870,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Physicien, chimiste et homme politique français.",
+      "blurb": "Physicien né à Lille, prix Nobel 1926 pour la preuve de l'existence des atomes.",
       "sourceIds": [
         "wikidata"
       ],
@@ -163,7 +163,7 @@
       "year": 1875,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Pavillon d'exposition — monument historique de Lille.",
+      "blurb": "Halle horticole léguée par le mécène Charles Rameau, dédiée aux expositions florales.",
       "sourceIds": [
         "merimee"
       ],
@@ -175,7 +175,7 @@
       "year": 1890,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Militaire, résistant, homme d'État et écrivain français.",
+      "blurb": "Le général et fondateur de la Ve République est né à Lille, rue Princesse, en 1890.",
       "sourceIds": [
         "wikidata"
       ],
@@ -187,7 +187,7 @@
       "year": 1896,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Réalisateur français, XXe siècle.",
+      "blurb": "Réalisateur né à Lille, maître du cinéma français des années 1930 (« Pépé le Moko »).",
       "sourceIds": [
         "wikidata"
       ],
@@ -199,7 +199,7 @@
       "year": 1896,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Monument — monument historique de Lille.",
+      "blurb": "Monument au général Faidherbe, gouverneur du Sénégal lui-même né à Lille.",
       "sourceIds": [
         "merimee"
       ],
@@ -211,7 +211,7 @@
       "year": 1907,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Opéra — monument historique de Lille.",
+      "blurb": "Grand opéra à l'italienne dessiné par l'architecte Louis Cordonnier.",
       "sourceIds": [
         "merimee"
       ],
@@ -234,23 +234,11 @@
       "year": 1910,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Bourse de commerce — monument historique de Lille.",
+      "blurb": "La Nouvelle Bourse et son beffroi de 76 m, qui domine le centre de Lille.",
       "sourceIds": [
         "merimee"
       ],
       "merimeeRef": "PA59000191"
-    },
-    {
-      "id": "naissance-de-herve-bazin",
-      "label": "Naissance de Hervé Bazin",
-      "year": 1911,
-      "precision": "an",
-      "category": "histoire",
-      "blurb": "Écrivain français.",
-      "sourceIds": [
-        "wikidata"
-      ],
-      "wikidataId": "Q358479"
     },
     {
       "id": "poissonnerie-a-l-huitriere",
@@ -258,7 +246,7 @@
       "year": 1928,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Magasin de commerce — monument historique de Lille.",
+      "blurb": "Devanture Art déco en mosaïque du Vieux-Lille, ancienne poissonnerie célèbre.",
       "sourceIds": [
         "merimee"
       ],
@@ -270,7 +258,7 @@
       "year": 1929,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Monument situé à Lille, Nord, France.",
+      "blurb": "Monument aux Lillois fusillés par l'occupant durant la Première Guerre mondiale.",
       "sourceIds": [
         "wikidata"
       ],
@@ -282,7 +270,7 @@
       "year": 1930,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Acteur français.",
+      "blurb": "Acteur né à Lille, l'une des grandes figures du cinéma français.",
       "sourceIds": [
         "wikidata"
       ],
@@ -305,7 +293,7 @@
       "year": 1934,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Lycée — monument historique de Lille.",
+      "blurb": "Vaste lycée technique de Lille de style Art déco, ancien institut Diderot.",
       "sourceIds": [
         "merimee"
       ],
@@ -317,7 +305,7 @@
       "year": 1936,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Hôpital à Lille.",
+      "blurb": "L'un des plus grands centres hospitaliers de France, au sud de Lille.",
       "sourceIds": [
         "wikidata"
       ],
@@ -329,7 +317,7 @@
       "year": 1950,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Parc zoologique français.",
+      "blurb": "Petit zoo gratuit installé près de la Citadelle, sortie familiale lilloise.",
       "sourceIds": [
         "wikidata"
       ],
@@ -341,7 +329,7 @@
       "year": 1975,
       "precision": "an",
       "category": "sport",
-      "blurb": "Stade de football.",
+      "blurb": "Ancien stade du LOSC, niché au pied de la Citadelle.",
       "sourceIds": [
         "wikidata"
       ],
@@ -364,7 +352,7 @@
       "year": 1991,
       "precision": "an",
       "category": "culture",
-      "blurb": "Théâtre de marionnettes situé à Lille.",
+      "blurb": "Théâtre de marionnettes du jardin Vauban, institution familiale lilloise.",
       "sourceIds": [
         "wikidata"
       ],
@@ -376,7 +364,7 @@
       "year": 1991,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Footballeur congolais (RDC) et français.",
+      "blurb": "Footballeur né à Lille, formé puis revenu au LOSC après un passage à Chelsea.",
       "sourceIds": [
         "wikidata"
       ],
@@ -388,7 +376,7 @@
       "year": 1993,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Footballeur français.",
+      "blurb": "Footballeur né à Lille, champion du monde 2018.",
       "sourceIds": [
         "wikidata"
       ],
@@ -400,7 +388,7 @@
       "year": 1993,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Miss France, miss Univers 2016 et animatrice de télévision française.",
+      "blurb": "Née à Lille, Miss France puis Miss Univers 2016.",
       "sourceIds": [
         "wikidata"
       ],
@@ -423,7 +411,7 @@
       "year": 1994,
       "precision": "an",
       "category": "transport",
-      "blurb": "Gare ferroviaire française.",
+      "blurb": "Gare TGV d'Euralille, reliant Lille à Paris, Londres et Bruxelles.",
       "sourceIds": [
         "wikidata"
       ],
@@ -435,7 +423,7 @@
       "year": 1994,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Salle de spectable lilloise.",
+      "blurb": "Grande salle de concerts et de spectacles de la métropole lilloise.",
       "sourceIds": [
         "wikidata"
       ],
@@ -447,7 +435,7 @@
       "year": 1994,
       "precision": "an",
       "category": "histoire",
-      "blurb": "Footballeur algérien et français.",
+      "blurb": "Footballeur international algérien né à Lille.",
       "sourceIds": [
         "wikidata"
       ],
@@ -459,7 +447,7 @@
       "year": 1995,
       "precision": "an",
       "category": "patrimoine",
-      "blurb": "Tour de bureaux située dans le quartier Euralille, à Lille.",
+      "blurb": "Gratte-ciel d'Euralille en forme de L signé Christian de Portzamparc, au-dessus de la gare Lille-Europe.",
       "sourceIds": [
         "wikidata"
       ],
@@ -471,7 +459,7 @@
       "year": 2010,
       "precision": "an",
       "category": "culture",
-      "blurb": "Festival de séries télévisées à Lille, France.",
+      "blurb": "Grand festival international des séries télévisées, organisé à Lille.",
       "sourceIds": [
         "wikidata"
       ],

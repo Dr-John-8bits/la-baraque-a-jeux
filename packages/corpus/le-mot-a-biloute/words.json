@@ -6,7 +6,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ça peut ruiner une belle sortie sans demander la permission.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "meteo"],
     "hints": [
       "Météo bien du Nord, version généreuse.",
@@ -27,7 +27,7 @@
     "category": "Cuisine du Nord",
     "starterHint": "Il divise la table, surtout quand il assume son amertume.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "vocabulaire"],
     "hints": [
       "On l'appelle plus souvent endive ailleurs.",
@@ -47,7 +47,7 @@
     "category": "Quartier lillois",
     "starterHint": "Un nom court, mais pas une petite histoire.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["quartier", "lille"],
     "sourceIds": ["ville-lille"],
     "hints": [
@@ -68,7 +68,7 @@
     "category": "Patrimoine",
     "starterHint": "Il donne envie de lever la tête.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["patrimoine", "architecture"],
     "sourceIds": ["ville-lille"],
     "hints": [
@@ -90,7 +90,7 @@
     "category": "Tradition populaire",
     "starterHint": "On y va rarement pour le silence.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["tradition", "fete"],
     "hints": [
       "Tradition populaire locale.",
@@ -110,7 +110,7 @@
     "category": "Quartier lillois",
     "starterHint": "Un matin calme peut vite y changer d'avis.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["quartier", "marche"],
     "sourceIds": ["ville-lille"],
     "hints": [
@@ -132,7 +132,7 @@
     "category": "Parler régional",
     "starterHint": "Un mot tendre qui a presque une mélodie.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "parler-regional"],
     "hints": [
       "Mot régional lié à l'enfance.",
@@ -152,7 +152,7 @@
     "category": "Cuisine du Nord",
     "starterHint": "Elles peuvent voler la vedette au plat principal.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "braderie"],
     "sourceIds": ["ville-lille-braderie"],
     "hints": [
@@ -173,7 +173,7 @@
     "category": "Événement lillois",
     "starterHint": "Quand Lille devient un immense terrain de fouille.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["evenement", "lille"],
     "sourceIds": ["ville-lille-braderie"],
     "hints": [
@@ -195,7 +195,7 @@
     "category": "Parler régional",
     "starterHint": "Le jeu te tutoie presque avec ce mot.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "parler-regional"],
     "hints": [
       "Mot affectueux du Nord.",
@@ -785,7 +785,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Sans elle, pas de frites à la ducasse.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "marche"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -804,7 +804,7 @@
     "category": "Cuisine du Nord",
     "starterHint": "On y commande un cornet sans avoir à s'asseoir.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "frites"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -823,7 +823,7 @@
     "category": "Tradition populaire",
     "starterHint": "À Dunkerque, on s'y serre sous les parapluies en chantant.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["tradition", "fete"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -842,7 +842,7 @@
     "category": "Bière du Nord",
     "starterHint": "Un demi ? Non, encore plus modeste : la moitié.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["biere", "gastronomie"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord", "regional-words-source-index"],
     "hints": [
@@ -861,7 +861,7 @@
     "category": "Bière du Nord",
     "starterHint": "Le vieux mot pour dire qu'on allait boire un coup.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["biere", "vocabulaire"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord", "regional-words-source-index"],
     "hints": [
@@ -880,7 +880,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ni au début, ni à la fin : pile là.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "position"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -899,7 +899,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "L'endroit où l'on compte jusqu'à dix avant de te chercher.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "quotidien"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -918,7 +918,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Le vieux bout de tissu avec lequel on fait les poussières.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "objet"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -937,7 +937,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Celui qui repousse les petits pois sur le bord de l'assiette.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "caractere"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -956,7 +956,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ce qu'on fait à la porte avant d'entrer.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "quotidien"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -975,7 +975,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Celui qui finit le plat… et celui des autres.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "caractere"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -994,7 +994,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Tout doux, tout câlin : difficile de lui résister.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "caractere"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1013,7 +1013,7 @@
     "category": "Bière du Nord",
     "starterHint": "Ce que le brasseur sort d'une seule fournée de cuve.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["biere", "gastronomie"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord", "regional-words-source-index"],
     "hints": [
@@ -1032,7 +1032,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ce que font les enfants dans l'herbe, tête par-dessus talons.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "jeu"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1051,7 +1051,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Du petit clou de cordonnier à l'endroit où l'on envoie les fâcheux.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "objet"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1070,7 +1070,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Le supplice qui fait rire même quand on déteste ça.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "quotidien"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1089,7 +1089,7 @@
     "category": "Cuisine du Nord",
     "starterHint": "Le petit plat mijoté sans chichi, pour tous les jours.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "plat"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1108,7 +1108,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ce dans quoi on sert le café du matin, par ici.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "objet"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1127,7 +1127,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Toujours le dernier prêt, jamais pressé.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "caractere"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1146,7 +1146,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Le matin sans café : pas la peine de lui parler.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "humeur"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1165,7 +1165,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Familièrement, ce qu'on ouvre pour parler ou pour manger.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "corps"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1184,7 +1184,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Se mettre sur son trente-et-un avant la ducasse.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "quotidien"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1203,7 +1203,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Celui qui part dans tous les sens et qu'on ne suit plus.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "caractere"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1222,7 +1222,7 @@
     "category": "Cuisine du Nord",
     "starterHint": "Le café tellement léger qu'on voit le fond de la jatte.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "boisson"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1241,7 +1241,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "La tête de celui à qui on a refusé une deuxième part.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "expression"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1260,7 +1260,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ce qu'on enfile sur les jambes avant de sortir.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "vetement"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1279,7 +1279,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Le P'tit Quinquin en est la plus célèbre, version berceuse.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "musique"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1298,7 +1298,7 @@
     "category": "Cuisine du Nord",
     "starterHint": "Le petit repas vite fait, sans cérémonie.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "quotidien"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1317,7 +1317,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Ce qu'on fait à la pelote de laine après le passage du chat.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "quotidien"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1336,7 +1336,7 @@
     "category": "Cuisine du Nord",
     "starterHint": "Le jus brunâtre qu'on n'ose pas appeler café.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "boisson"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1355,7 +1355,7 @@
     "category": "Métropole lilloise",
     "starterHint": "La cité textile au bout de « l'Enfer du Nord ».",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1374,7 +1374,7 @@
     "category": "Métropole lilloise",
     "starterHint": "La jumelle de Roubaix, filée du même fil.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1393,7 +1393,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Une demoiselle l'a rendue célèbre dans une chanson de soldats.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1412,7 +1412,7 @@
     "category": "Métropole lilloise",
     "starterHint": "En 1214, un roi de France y gagna une bataille décisive.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "histoire"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1431,7 +1431,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Une ville coupée en deux par une frontière et une rivière.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1450,7 +1450,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Sous ses pieds, les carrières qui ont bâti le Vieux-Lille.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "histoire"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1469,7 +1469,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Voisine de Roubaix, on la surnomme la ville aux mille cheminées.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1488,7 +1488,7 @@
     "category": "Métropole lilloise",
     "starterHint": "La voisine résidentielle de Lille, le long de la Deûle.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1507,7 +1507,7 @@
     "category": "Quartier lillois",
     "starterHint": "Le quartier qui porte le nom du bâtisseur de la Citadelle.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["quartier", "lille"],
     "sourceIds": ["ville-lille-quartiers-data-gouv"],
     "hints": [
@@ -1526,7 +1526,7 @@
     "category": "Quartier lillois",
     "starterHint": "Le quartier étudiant qui doit son nom aux moulins d'autrefois.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["quartier", "lille"],
     "sourceIds": ["ville-lille-quartiers-data-gouv"],
     "hints": [
@@ -1545,7 +1545,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Tout au nord, collée à la frontière belge.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1564,7 +1564,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Commune verte du nord, connue pour son château et son golf.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1583,7 +1583,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Au nord de Lille, on y distille le genièvre depuis deux siècles.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "biere"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1602,7 +1602,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Minuscule sur la carte : l'une des plus petites de France.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1621,7 +1621,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Quand on atterrit près de Lille, c'est souvent ici.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "ville"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1640,7 +1640,7 @@
     "category": "Patrimoine",
     "starterHint": "L'étoile à cinq branches que Vauban a posée sur Lille.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["patrimoine", "lille"],
     "sourceIds": ["ville-lille-monuments-historiques-data-gouv"],
     "hints": [
@@ -1659,7 +1659,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Un nom gravé dans la mémoire de la Grande Guerre.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "histoire"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1678,7 +1678,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Au sud, un fort du XIXe siècle veille encore.",
     "difficulty": "hard",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "histoire"],
     "sourceIds": ["mel-communes-datamel"],
     "hints": [
@@ -1697,7 +1697,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Petite commune avalée par Lille, terre de cheminots.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "histoire"],
     "sourceIds": ["ville-lille-quartiers-data-gouv"],
     "hints": [
@@ -1716,7 +1716,7 @@
     "category": "Métropole lilloise",
     "starterHint": "Côté ouest de Lille, la cité-jardin des cheminots.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["metropole", "histoire"],
     "sourceIds": ["ville-lille-quartiers-data-gouv"],
     "hints": [
@@ -1735,7 +1735,7 @@
     "category": "Fromage du Nord",
     "starterHint": "Orange comme une boule de quille, et plus elle vieillit, plus elle durcit.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "fromage"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1754,7 +1754,7 @@
     "category": "Douceur du Nord",
     "starterHint": "Une brioche du Nord constellée de petits raisins secs.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "boulangerie"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1773,7 +1773,7 @@
     "category": "Douceur du Nord",
     "starterHint": "Le sucre roux et moelleux qui parfume la tarte au sucre.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "sucre"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1792,7 +1792,7 @@
     "category": "Douceur du Nord",
     "starterHint": "À Lille, elle est fine, ovale et fourrée à la vergeoise.",
     "difficulty": "easy",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["gastronomie", "patisserie"],
     "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [
@@ -1811,7 +1811,7 @@
     "category": "Vocabulaire ch'ti",
     "starterHint": "Pour nettoyer le carrelage, on la trempe dans le seau.",
     "difficulty": "medium",
-    "status": "prototype",
+    "status": "reviewed",
     "tags": ["vocabulaire", "maison"],
     "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "regional-words-source-index"],
     "hints": [

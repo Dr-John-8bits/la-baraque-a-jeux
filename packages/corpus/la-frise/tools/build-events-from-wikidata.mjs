@@ -69,12 +69,50 @@ const DENY_QIDS = new Set([
   "Q13629025", // « Ici Nord » (obscur)
   "Q3234867", // « Les Poussins, Parc de la Citadelle » (sculpture obscure)
   "Q3533115", // Tour Lilleurope (redondant avec Tour de Lille)
+  "Q358479", // Hervé Bazin : né à Angers, pas à Lille (P19 Wikidata erroné, confirmé par vérif)
+  "Q230050", // Isabelle de Hainaut : lieu de naissance non établi (sources → Valenciennes) + obscure
 ]);
 const YEAR_OVERRIDE = {
   Q801098: 1848, // Gare de Lille-Flandres : ouverture voyageurs intra-muros 1848 (P571=1842 = début des travaux à Fives)
 };
 const LABEL_OVERRIDE = {
   Q299703: "Gaël Kakuta", // libellé Wikidata bruité (« Gaël Ernesto washington Kakuta »)
+};
+// Blurbs rédigés main (la révélation de La Frise) — remplacent les descriptions auto
+// génériques de Wikidata/Mérimée. Clé = QID Wikidata ou référence Mérimée (PA…).
+const BLURB_OVERRIDE = {
+  Q4313: "Théologien et poète médiéval surnommé le « Docteur universel », né à Lille au XIIe siècle.",
+  PA00107586: "Ancien hôpital fondé par la comtesse Jeanne de Flandre, reconstruit au XVe siècle ; aujourd'hui musée du Vieux-Lille.",
+  Q3399082: "Vestige des anciennes fortifications de Lille, l'une des portes de l'enceinte du XVIIe siècle.",
+  Q16303821: "Créées sous la Révolution, elles conservent la mémoire écrite du département du Nord.",
+  Q2628596: "L'un des plus grands musées de France, place de la République, fondé sous le Premier Empire.",
+  Q224002: "Compositeur né à Lille, célèbre pour sa fougueuse « Symphonie espagnole ».",
+  Q2984316: "Sur la Grand'Place, elle célèbre la résistance de Lille au siège autrichien de 1792.",
+  Q801098: "La plus ancienne gare de Lille ; sa façade provient de l'ancienne gare du Nord de Paris.",
+  Q264193: "Peintre né à Lille, compagnon de route de Gauguin et de Van Gogh, pionnier du symbolisme.",
+  Q134085: "Physicien né à Lille, prix Nobel 1926 pour la preuve de l'existence des atomes.",
+  PA00107720: "Halle horticole léguée par le mécène Charles Rameau, dédiée aux expositions florales.",
+  Q2042: "Le général et fondateur de la Ve République est né à Lille, rue Princesse, en 1890.",
+  Q453683: "Réalisateur né à Lille, maître du cinéma français des années 1930 (« Pépé le Moko »).",
+  PA00107726: "Monument au général Faidherbe, gouverneur du Sénégal lui-même né à Lille.",
+  PA59000043: "Grand opéra à l'italienne dessiné par l'architecte Louis Cordonnier.",
+  PA59000191: "La Nouvelle Bourse et son beffroi de 76 m, qui domine le centre de Lille.",
+  PA59000192: "Devanture Art déco en mosaïque du Vieux-Lille, ancienne poissonnerie célèbre.",
+  Q3232854: "Monument aux Lillois fusillés par l'occupant durant la Première Guerre mondiale.",
+  Q106482: "Acteur né à Lille, l'une des grandes figures du cinéma français.",
+  PA59000010: "Vaste lycée technique de Lille de style Art déco, ancien institut Diderot.",
+  Q2945741: "L'un des plus grands centres hospitaliers de France, au sud de Lille.",
+  Q2180449: "Petit zoo gratuit installé près de la Citadelle, sortie familiale lilloise.",
+  Q1129681: "Ancien stade du LOSC, niché au pied de la Citadelle.",
+  Q113570435: "Théâtre de marionnettes du jardin Vauban, institution familiale lilloise.",
+  Q299703: "Footballeur né à Lille, formé puis revenu au LOSC après un passage à Chelsea.",
+  Q489039: "Footballeur né à Lille, champion du monde 2018.",
+  Q21782661: "Née à Lille, Miss France puis Miss Univers 2016.",
+  Q801099: "Gare TGV d'Euralille, reliant Lille à Paris, Londres et Bruxelles.",
+  Q20055541: "Grande salle de concerts et de spectacles de la métropole lilloise.",
+  Q15410320: "Footballeur international algérien né à Lille.",
+  Q3533359: "Gratte-ciel d'Euralille en forme de L signé Christian de Portzamparc, au-dessus de la gare Lille-Europe.",
+  Q16928457: "Grand festival international des séries télévisées, organisé à Lille.",
 };
 
 function normalize(s) {
@@ -208,7 +246,7 @@ async function main() {
   seeds.forEach((e) => { seen.add(e.id); seen.add(normalize(e.label)); });
 
   // 2) fetch + curation Wikidata (pools séparés, déjà triés par notoriété)
-  const CAPS = { lieu: 52, naissance: 12, evenement: 18 }; // équilibrage : éviter une frise « 100 % naissances »
+  const CAPS = { lieu: 52, naissance: 11, evenement: 18 }; // équilibrage : éviter une frise « 100 % naissances »
   const pools = {};
   for (const q of QUERIES) {
     process.stderr.write(`… requête « ${q.kind} »\n`);
@@ -230,13 +268,18 @@ async function main() {
 
   // 4) fusion + tri chronologique
   const events = [...seeds.map(({ _fame, ...e }) => e), ...picked, ...merimee].sort((a, b) => a.year - b.year);
+  // blurbs rédigés main (sinon description auto de Wikidata/Mérimée)
+  events.forEach((e) => {
+    const key = e.wikidataId || e.merimeeRef;
+    if (key && BLURB_OVERRIDE[key]) e.blurb = BLURB_OVERRIDE[key];
+  });
   const byCat = {};
   events.forEach((e) => (byCat[e.category] = (byCat[e.category] || 0) + 1));
 
   const corpus = {
     description: "Faits datés du patrimoine et de l'histoire de Lille et des Hauts-de-France pour « La Frise du Nord ». Graines rédigées main + faits issus de Wikidata (CC0) via tools/build-events-from-wikidata.mjs. Blurbs auto = brouillons à polir.",
     epochId: current.epochId || "2026-01-01",
-    status: "draft",
+    status: "published",
     generatedAt: process.env.LABAJ_BUILD_DATE || "",
     events,
   };
