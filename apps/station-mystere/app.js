@@ -3,6 +3,7 @@ import { fetchJson } from "../../packages/game-utils/fetch-json.js";
 import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { escapeHtml } from "../../packages/game-utils/text-render.js";
+import { renderCalepin, setupCalepinTools } from "../../packages/ui/calepin.js";
 
 const APP_VERSION = "26.06.06.2";
 const GAME_MODE = "metro";
@@ -90,7 +91,12 @@ const els = {
   notebookDialog: document.querySelector("#notebookDialog"),
   notebookContent: document.querySelector("#notebookContent"),
   statsDialog: document.querySelector("#statsDialog"),
-  statsContent: document.querySelector("#statsContent"),
+  statsList: document.querySelector("#statsList"),
+  statsHistory: document.querySelector("#statsHistory"),
+  statsChart: document.querySelector("#statsChart"),
+  exportStatsButton: document.querySelector("#exportStatsButton"),
+  importStatsButton: document.querySelector("#importStatsButton"),
+  importStatsInput: document.querySelector("#importStatsInput"),
   helpDialog: document.querySelector("#helpDialog"),
   helpOptOut: document.querySelector("#helpOptOut"),
   helpStartButton: document.querySelector("#helpStartButton"),
@@ -869,47 +875,55 @@ function renderNotebook() {
   `;
 }
 
+let calepinToolsBound = false;
 function renderStats() {
-  if (!els.statsContent) return;
+  if (!els.statsList) return;
   const stats = getStats();
-  const winRate = stats.played ? Math.round((stats.wins / stats.played) * 100) : 0;
-  const averageScore = stats.wins ? Math.round(stats.totalScore / stats.wins) : 0;
-  const averageHints = stats.played ? (stats.totalHintsUsed / stats.played).toFixed(1) : "0";
+  const played = stats.played || 0;
+  const wins = stats.wins || 0;
 
-  els.statsContent.innerHTML = `
-    <section class="stats-section">
-      <dl class="stats-grid">
-        ${renderStatItem("Parties", stats.played)}
-        ${renderStatItem("Victoires", stats.wins)}
-        ${renderStatItem("Réussite", `${winRate}%`)}
-        ${renderStatItem("Série", stats.currentStreak)}
-        ${renderStatItem("Meilleure série", stats.bestStreak)}
-        ${renderStatItem("Meilleur score", stats.bestScore || "-")}
-        ${renderStatItem("Score moyen", averageScore || "-")}
-        ${renderStatItem("Indices moyens", averageHints)}
-      </dl>
-    </section>
-    <section class="stats-section">
-      <h3>Historique récent</h3>
-      ${
-        stats.history.length
-          ? `<ol class="mini-list">${stats.history
-              .slice(0, 8)
-              .map((entry) => `<li>${escapeHtml(formatHistoryEntry(entry))}</li>`)
-              .join("")}</ol>`
-          : "<p>Aucune partie terminée pour l'instant.</p>"
+  if (!calepinToolsBound) {
+    setupCalepinTools(
+      {
+        exportButton: els.exportStatsButton,
+        importButton: els.importStatsButton,
+        importInput: els.importStatsInput,
+      },
+      {
+        statsKey: STORAGE_KEYS.stats,
+        fileName: "calepin-station-mystere.json",
+        gameName: "station-mystere",
+        getStats,
+        sanitize: sanitizeStats,
+        onImported: renderStats,
       }
-    </section>
-  `;
-}
+    );
+    calepinToolsBound = true;
+  }
 
-function renderStatItem(label, value) {
-  return `
-    <div>
-      <dt>${escapeHtml(label)}</dt>
-      <dd>${escapeHtml(String(value))}</dd>
-    </div>
-  `;
+  renderCalepin(
+    { statsList: els.statsList, history: els.statsHistory, chart: els.statsChart },
+    {
+      metrics: [
+        { label: "Parties", value: played },
+        { label: "Réussites", value: wins },
+        { label: "Série", value: stats.currentStreak || 0 },
+        { label: "Meilleur score", value: stats.bestScore || "-" },
+        { label: "Réussite", value: played ? `${Math.round((wins / played) * 100)}%` : "-" },
+      ],
+      historyLines: (stats.history || []).map(formatHistoryEntry),
+      perfBars: (stats.history || [])
+        .slice(0, 7)
+        .reverse()
+        .map((entry) => ({
+          ratio: Math.max(0, Math.min(1, (Number(entry.score) || 0) / BASE_SCORE)),
+          label: String(Number(entry.score) || 0),
+          result: entry.status === "won" ? "won" : "lost",
+          ariaLabel: `${entry.dateId}, ${entry.score} points`,
+        })),
+      historyEmpty: "Aucune partie terminée pour l'instant.",
+    }
+  );
 }
 
 function getStats() {

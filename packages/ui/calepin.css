@@ -1,0 +1,136 @@
+/*
+ * Calepin partagé — le même rendu de statistiques pour tous les jeux quotidiens
+ * (repris du « calepin » du Mot à Biloute, qui sert de référence).
+ * Chaque jeu remplit ces éléments via packages/ui/calepin.js.
+ */
+.calepin-tools {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: -4px 0 10px;
+}
+
+.calepin-tools .icon-tool {
+  width: 42px;
+  min-height: 38px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--labaj-ink);
+  border-radius: var(--labaj-radius);
+  background: var(--labaj-blue);
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 950;
+  box-shadow: var(--labaj-shadow-hard-sm);
+  cursor: pointer;
+}
+
+.calepin-tools input {
+  display: none;
+}
+
+.stats-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.stats-list div {
+  padding: 12px;
+  border: 2px solid var(--labaj-ink);
+  border-radius: var(--labaj-radius);
+  background: color-mix(in srgb, var(--labaj-paper), var(--labaj-line) 35%);
+}
+
+.stats-list dt {
+  color: var(--labaj-muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stats-list dd {
+  margin: 4px 0 0;
+  font-size: 1.4rem;
+  font-weight: 950;
+  font-variant-numeric: tabular-nums;
+}
+
+.history-block,
+.performance-block {
+  margin: 0 0 16px;
+  padding: 10px;
+  border: 2px solid var(--labaj-ink);
+  border-radius: var(--labaj-radius);
+  background: color-mix(in srgb, var(--labaj-paper), var(--labaj-line) 35%);
+}
+
+.history-block h3,
+.performance-block h3 {
+  margin: 0;
+  color: var(--labaj-muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.history-block ol {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--labaj-muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.performance-chart {
+  min-height: 130px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  align-items: end;
+  margin-top: 10px;
+}
+
+.performance-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--labaj-muted);
+  font-weight: 600;
+}
+
+.performance-bar {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+  align-content: end;
+  justify-items: center;
+}
+
+.performance-bar span:first-child {
+  width: 100%;
+  min-height: 8px;
+  border: 2px solid var(--labaj-ink);
+  border-radius: 6px 6px 2px 2px;
+  background: var(--labaj-green);
+}
+
+.performance-bar.is-recovered span:first-child {
+  background: var(--labaj-gold);
+}
+
+.performance-bar.is-lost span:first-child {
+  background: color-mix(in srgb, var(--labaj-line), var(--labaj-ink) 8%);
+}
+
+.performance-bar span:last-child {
+  color: var(--labaj-muted);
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}

@@ -12,7 +12,7 @@
  * Les chemins sont relatifs au service worker (racine du déploiement), donc portables
  * que le site soit servi à la racine d'un domaine ou dans un sous-dossier GitHub Pages.
  */
-const VERSION = "labaj-v3-2026-06-14";
+const VERSION = "labaj-v4-2026-06-14";
 const CACHE = `labaj-${VERSION}`;
 
 const CORE = [
@@ -24,6 +24,8 @@ const CORE = [
   "./packages/ui/site-nav.css",
   "./packages/ui/components.css",
   "./packages/ui/about-dialog.js",
+  "./packages/ui/calepin.css",
+  "./packages/ui/calepin.js",
   "./packages/ui/register-sw.js",
   "./packages/ui/portal-hub.js",
   "./packages/ui/portal-calepin.js",

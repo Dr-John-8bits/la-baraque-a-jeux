@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../../packages/ui/tokens.css" />
     <link rel="stylesheet" href="../../packages/ui/base.css" />
     <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="../../packages/ui/calepin.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="station-page">
@@ -196,14 +197,27 @@
       <article class="dialog-panel">
         <header>
           <div>
-            <p class="eyebrow">Stats</p>
-            <h2 id="statsTitle">Tes trajets mystère</h2>
+            <p class="eyebrow">Stats locales</p>
+            <h2 id="statsTitle">Ton calepin</h2>
           </div>
           <form method="dialog">
             <button class="icon-close" type="submit" aria-label="Fermer">×</button>
           </form>
         </header>
-        <div id="statsContent"></div>
+        <div class="calepin-tools" aria-label="Importer ou exporter le calepin">
+          <button class="icon-tool" id="exportStatsButton" type="button" aria-label="Exporter le calepin" title="Exporter le calepin"><span aria-hidden="true">↓</span></button>
+          <button class="icon-tool" id="importStatsButton" type="button" aria-label="Importer le calepin" title="Importer le calepin"><span aria-hidden="true">↑</span></button>
+          <input id="importStatsInput" type="file" accept="application/json" aria-label="Importer un calepin au format JSON" />
+        </div>
+        <dl class="stats-list" id="statsList"></dl>
+        <section class="history-block" aria-labelledby="statsHistoryTitle">
+          <h3 id="statsHistoryTitle">Dernières parties</h3>
+          <ol id="statsHistory"></ol>
+        </section>
+        <section class="performance-block" aria-labelledby="statsPerfTitle">
+          <h3 id="statsPerfTitle">Performance</h3>
+          <div class="performance-chart" id="statsChart"></div>
+        </section>
       </article>
     </dialog>
 

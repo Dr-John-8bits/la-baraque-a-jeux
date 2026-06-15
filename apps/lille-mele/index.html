@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../../packages/ui/tokens.css" />
     <link rel="stylesheet" href="../../packages/ui/base.css" />
     <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="../../packages/ui/calepin.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -71,6 +72,15 @@
           <p class="subtitle" id="intro">La grille du jour à démêler, biloute.</p>
         </div>
         <div class="top-actions" aria-label="Navigation">
+          <button
+            class="icon-button calepin-button"
+            type="button"
+            id="statsButton"
+            title="Calepin"
+            aria-label="Calepin"
+          >
+            Calepin
+          </button>
           <button
             class="icon-button"
             type="button"
@@ -151,6 +161,34 @@
       </section>
 
     </main>
+
+    <dialog class="lm-dialog" id="statsDialog" aria-labelledby="statsTitle">
+      <div class="lm-dialog__panel">
+        <header class="lm-dialog__head">
+          <div>
+            <p class="first-help-kicker">Stats locales</p>
+            <h2 id="statsTitle">Ton calepin</h2>
+          </div>
+          <form method="dialog">
+            <button class="lm-dialog__close" type="submit" aria-label="Fermer">×</button>
+          </form>
+        </header>
+        <div class="calepin-tools" aria-label="Importer ou exporter le calepin">
+          <button class="icon-tool" id="exportStatsButton" type="button" aria-label="Exporter le calepin" title="Exporter le calepin"><span aria-hidden="true">↓</span></button>
+          <button class="icon-tool" id="importStatsButton" type="button" aria-label="Importer le calepin" title="Importer le calepin"><span aria-hidden="true">↑</span></button>
+          <input id="importStatsInput" type="file" accept="application/json" aria-label="Importer un calepin au format JSON" />
+        </div>
+        <dl class="stats-list" id="statsList"></dl>
+        <section class="history-block" aria-labelledby="statsHistoryTitle">
+          <h3 id="statsHistoryTitle">Dernières parties</h3>
+          <ol id="statsHistory"></ol>
+        </section>
+        <section class="performance-block" aria-labelledby="statsPerfTitle">
+          <h3 id="statsPerfTitle">Performance</h3>
+          <div class="performance-chart" id="statsChart"></div>
+        </section>
+      </div>
+    </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 

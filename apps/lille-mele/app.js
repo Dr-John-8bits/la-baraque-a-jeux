@@ -4,6 +4,7 @@ import { hashString, seededShuffle } from "../../packages/game-utils/random.js";
 import { readJson, writeJson } from "../../packages/game-utils/storage.js";
 import { shareText as shareTextWithFallback } from "../../packages/game-utils/share.js";
 import { escapeHtml } from "../../packages/game-utils/text-render.js";
+import { renderCalepin, setupCalepinTools } from "../../packages/ui/calepin.js";
 
 const MAX_MISTAKES = 4;
 const STORAGE_PREFIX = "lillemele.v1.";
@@ -26,6 +27,7 @@ const DEFAULT_STATS = {
   bestStreak: 0,
   lastPlayedDateId: "",
   lastWinDateId: "",
+  history: [],
 };
 
 let puzzles;
@@ -59,6 +61,14 @@ const els = {
   submitButton: document.querySelector("#submitButton"),
   result: document.querySelector("#result"),
   rulesButton: document.querySelector("#rulesButton"),
+  statsButton: document.querySelector("#statsButton"),
+  statsDialog: document.querySelector("#statsDialog"),
+  statsList: document.querySelector("#statsList"),
+  statsHistory: document.querySelector("#statsHistory"),
+  statsChart: document.querySelector("#statsChart"),
+  exportStatsButton: document.querySelector("#exportStatsButton"),
+  importStatsButton: document.querySelector("#importStatsButton"),
+  importStatsInput: document.querySelector("#importStatsInput"),
   firstHelp: document.querySelector("#firstHelp"),
   firstHelpStartButton: document.querySelector("#firstHelpStartButton"),
   firstHelpOptOut: document.querySelector("#firstHelpOptOut"),
@@ -176,6 +186,11 @@ function updateStatsIfNeeded() {
   } else {
     stats.currentStreak = 0;
   }
+
+  stats.history = [
+    { dateId: todayId, won: state.status === "won", mistakes: state.mistakes },
+    ...(Array.isArray(stats.history) ? stats.history : []),
+  ].slice(0, 30);
 
   state.officialResultRecorded = true;
   state.endedAt = state.endedAt || new Date().toISOString();
@@ -743,10 +758,84 @@ function refitTileLabels() {
   });
 }
 
+let calepinToolsBound = false;
+function openCalepin() {
+  if (!els.statsDialog) return;
+  renderCalepinStats();
+  if (typeof els.statsDialog.showModal === "function") els.statsDialog.showModal();
+  else els.statsDialog.setAttribute("open", "");
+}
+
+function renderCalepinStats() {
+  if (!calepinToolsBound) {
+    setupCalepinTools(
+      {
+        exportButton: els.exportStatsButton,
+        importButton: els.importStatsButton,
+        importInput: els.importStatsInput,
+      },
+      {
+        statsKey: `${STORAGE_PREFIX}stats`,
+        fileName: "calepin-lille-mele.json",
+        gameName: "lille-mele",
+        getStats,
+        sanitize: sanitizeStats,
+        onImported: renderCalepinStats,
+      }
+    );
+    calepinToolsBound = true;
+  }
+
+  const stats = getStats();
+  const played = stats.played || 0;
+  const won = stats.won || 0;
+
+  renderCalepin(
+    { statsList: els.statsList, history: els.statsHistory, chart: els.statsChart },
+    {
+      metrics: [
+        { label: "Parties", value: played },
+        { label: "Réussites", value: won },
+        { label: "Série", value: stats.currentStreak || 0 },
+        { label: "Meilleure série", value: stats.bestStreak || 0 },
+        { label: "Réussite", value: played ? `${Math.round((won / played) * 100)}%` : "-" },
+      ],
+      historyLines: (stats.history || []).map(formatCalepinHistory),
+      perfBars: (stats.history || [])
+        .slice(0, 7)
+        .reverse()
+        .map((entry) => ({
+          ratio: entry.won ? Math.max(0.2, (MAX_MISTAKES - (entry.mistakes || 0)) / MAX_MISTAKES) : 0.12,
+          label: `${entry.mistakes || 0}✗`,
+          result: entry.won ? "won" : "lost",
+          ariaLabel: `${entry.dateId}, ${entry.mistakes || 0} erreurs, ${entry.won ? "réussi" : "raté"}`,
+        })),
+      historyEmpty: "Aucune grille terminée pour l'instant.",
+    }
+  );
+}
+
+function formatCalepinHistory(entry) {
+  const errors = entry.mistakes || 0;
+  return `${entry.dateId} · ${entry.won ? "réussi" : "raté"} · ${errors} erreur${errors > 1 ? "s" : ""}`;
+}
+
+function sanitizeStats(raw) {
+  const out = { ...DEFAULT_STATS };
+  if (raw && typeof raw === "object") {
+    for (const key of ["played", "won", "currentStreak", "bestStreak"]) out[key] = Number(raw[key]) || 0;
+    if (typeof raw.lastPlayedDateId === "string") out.lastPlayedDateId = raw.lastPlayedDateId;
+    if (typeof raw.lastWinDateId === "string") out.lastWinDateId = raw.lastWinDateId;
+    if (Array.isArray(raw.history)) out.history = raw.history.slice(0, 30);
+  }
+  return out;
+}
+
 els.submitButton.addEventListener("click", submitSelection);
 els.clearButton.addEventListener("click", clearSelection);
 els.shuffleButton.addEventListener("click", shuffleActiveItems);
 els.rulesButton.addEventListener("click", showFirstHelp);
+els.statsButton?.addEventListener("click", openCalepin);
 els.firstHelpStartButton?.addEventListener("click", () => hideFirstHelp());
 window.addEventListener("keydown", handleHelpKeydown);
 window.addEventListener("resize", refitTileLabels);

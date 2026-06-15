@@ -95,7 +95,8 @@ button.labaj-link {
   border: 0;
   background: transparent;
   cursor: pointer;
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .labaj-link:hover,
