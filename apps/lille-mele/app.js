@@ -345,7 +345,7 @@ function renderResult() {
   const groupsHtml = won ? `<div class="found-groups">${allGroups}</div>` : "";
   const bonusHtml = won ? createBonusHtml() : "";
   els.result.innerHTML = `
-    <h2>${won ? "Grille démêlée." : "Perdu à Porte des Postes."}</h2>
+    <h2>${won ? "Bravo, grille démêlée !" : "Raté pour aujourd'hui."}</h2>
     <p>${
       won
         ? `${escapeHtml(puzzle.finalNote)} Reviens demain à midi pour une nouvelle grille.`
