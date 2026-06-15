@@ -12,7 +12,7 @@ import { shareText as shareTextWithFallback } from "../../packages/game-utils/sh
 import { escapeHtml } from "../../packages/game-utils/text-render.js";
 import { renderCalepin, setupCalepinTools } from "../../packages/ui/calepin.js";
 
-const APP_VERSION = "26.06.15.1";
+const APP_VERSION = "26.06.15.2";
 const DAILY_EPOCH_ID = "2026-01-01";
 const DAILY_TIME_ZONE = "Europe/Paris";
 const DAILY_ROLLOVER_HOUR = 12;
@@ -349,9 +349,11 @@ function validate() {
   state.attempts += 1;
   state.score = score;
   state.attemptScores = [...(state.attemptScores || []), score.perEvent];
-  // verrouille les cartes bien placées
-  const newlyLocked = orderedEvents().filter((ev, i) => score.perEvent[i]).map((e) => e.id);
-  state.lockedIds = [...new Set([...state.lockedIds, ...newlyLocked])];
+  // verrouille les cartes bien placées (et repère celles qui le deviennent CE tour)
+  const wasLocked = new Set(state.lockedIds);
+  const allCorrect = orderedEvents().filter((ev, i) => score.perEvent[i]).map((e) => e.id);
+  const newlyLocked = allCorrect.filter((id) => !wasLocked.has(id));
+  state.lockedIds = [...new Set([...state.lockedIds, ...allCorrect])];
 
   if (score.exact === score.total) state.status = "won";
   else if (state.attempts >= MAX_ATTEMPTS) state.status = "lost";
@@ -359,12 +361,32 @@ function validate() {
   if (isTerminal()) updateStats();
   saveGame();
   render();
+  playFeedback(newlyLocked);
   if (isTerminal()) {
     celebrate();
     els.revealPanel?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   } else {
     showToast(`${score.exact}/${SET_SIZE} bien placées. Encore ${MAX_ATTEMPTS - state.attempts} essai${MAX_ATTEMPTS - state.attempts > 1 ? "s" : ""}.`);
   }
+}
+
+// Retour visuel après validation : flip révélateur sur les cartes qui se verrouillent,
+// tremblement sur celles encore mal placées.
+function playFeedback(newlyLocked) {
+  if (!els.cardList) return;
+  const fresh = new Set(newlyLocked);
+  const locked = new Set(state.lockedIds);
+  let i = 0;
+  els.cardList.querySelectorAll(".frise-card").forEach((card) => {
+    const id = card.dataset.id;
+    if (fresh.has(id)) {
+      card.style.setProperty("--flip-delay", `${i * 90}ms`);
+      card.classList.add("is-flipping");
+      i += 1;
+    } else if (!locked.has(id)) {
+      card.classList.add("is-shaking");
+    }
+  });
 }
 
 function updateStats() {

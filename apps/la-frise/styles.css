@@ -87,6 +87,7 @@ body.frise-page {
   padding: 0;
   display: grid;
   gap: 8px;
+  perspective: 900px;
 }
 .frise-card {
   display: flex;
@@ -154,6 +155,30 @@ body.frise-page {
 .frise-card.is-correct .frise-card__year { background: var(--labaj-green); }
 .frise-card.is-wrong { background: color-mix(in srgb, var(--labaj-red), white 84%); }
 .frise-card.is-wrong .frise-card__year { background: var(--labaj-brick); }
+
+/* Retours de validation (mêmes codes que Le Mot / Lille-Mêle) :
+   les cartes bien placées « se retournent » pour révéler leur date, les autres tremblent. */
+.frise-card.is-flipping {
+  animation: frise-flip 520ms ease both;
+  animation-delay: var(--flip-delay, 0ms);
+  transform-origin: center;
+}
+.frise-card.is-shaking {
+  animation: frise-shake 380ms ease-in-out;
+}
+@keyframes frise-flip {
+  0% { transform: rotateX(0); }
+  45% { transform: rotateX(-87deg); }
+  55% { transform: rotateX(-87deg); }
+  100% { transform: rotateX(0); }
+}
+@keyframes frise-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-7px); }
+  40% { transform: translateX(7px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
 
 /* --- Actions --- */
 .frise-actions {
@@ -314,4 +339,6 @@ body.frise-page {
 @media (prefers-reduced-motion: reduce) {
   .action-button:hover:not(:disabled) { transform: none; }
   .toast { transition: none; }
+  .frise-card.is-flipping,
+  .frise-card.is-shaking { animation: none; }
 }
