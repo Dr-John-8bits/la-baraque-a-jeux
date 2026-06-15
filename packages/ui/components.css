@@ -499,12 +499,14 @@ body.labaj-site {
   opacity: 1;
 }
 
-/* ===== Célébration 3/3 ===== */
+/* ===== Célébration : tous les jeux du jour bouclés ===== */
 .celebration {
   position: fixed;
   left: 50%;
-  top: 16px;
-  z-index: 50;
+  /* sous l'en-tête sticky (62px, z-index 100) et au-dessus de lui, pour ne pas être tronqué */
+  top: 74px;
+  z-index: 200;
+  width: max-content;
   max-width: min(520px, calc(100% - 24px));
   margin: 0;
   border: var(--labaj-border-strong);
@@ -534,7 +536,7 @@ body.labaj-site {
 .confetti-layer {
   position: fixed;
   inset: 0;
-  z-index: 49;
+  z-index: 199;
   pointer-events: none;
   overflow: hidden;
 }

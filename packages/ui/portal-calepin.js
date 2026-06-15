@@ -21,6 +21,7 @@ const GAMES = [
   { key: "le-mot", label: "Le mot à Biloute", accent: "var(--labaj-red)", statsKey: "mot-a-biloute:stats", dateField: "lastPlayed", wonField: "won", streakField: "streak", bestStreakField: null, bestScoreField: "bestScore" },
   { key: "lille-mele", label: "Lille-Mêle", accent: "var(--labaj-teal)", statsKey: "lillemele.v1.stats", dateField: "lastPlayedDateId", wonField: "won", streakField: "currentStreak", bestStreakField: "bestStreak", bestScoreField: null },
   { key: "station", label: "Station Mystère", accent: "var(--labaj-blue)", statsKey: "station-mystere.v1.stats", dateField: "lastPlayedDateId", wonField: "wins", streakField: "currentStreak", bestStreakField: "bestStreak", bestScoreField: "bestScore" },
+  { key: "la-frise", label: "La Frise du Nord", accent: "var(--labaj-green)", statsKey: "la-frise.v1.stats", dateField: "lastPlayedDateId", wonField: "won", streakField: "currentStreak", bestStreakField: "bestStreak", bestScoreField: "bestScore" },
 ];
 
 function readJson(key, fallback) {
@@ -132,7 +133,7 @@ function renderHeatmap() {
 function renderBadges() {
   const badges = [
     { icon: "🎯", label: "Première victoire", earned: totalVictoires >= 1 },
-    { icon: "🏅", label: "Triplé du jour", earned: doneToday === 3 },
+    { icon: "🏅", label: "Carton plein du jour", earned: doneToday === GAMES.length },
     { icon: "🧢", label: "10 parties", earned: totalParties >= 10 },
     { icon: "🔥", label: "Série de 7", earned: maxSerie >= 7 },
     { icon: "⭐", label: "50 parties", earned: totalParties >= 50 },
@@ -156,7 +157,7 @@ function renderCalepin() {
   const target = document.getElementById("calepinContent");
   if (!target) return;
   target.innerHTML = `
-    <p class="calepin-lead">${doneToday}/3 jeux du jour bouclés${maxSerie > 1 ? ` · ta plus longue série : ${maxSerie} j` : ""}.</p>
+    <p class="calepin-lead">${doneToday}/${GAMES.length} jeux du jour bouclés${maxSerie > 1 ? ` · ta plus longue série : ${maxSerie} j` : ""}.</p>
     <section class="calepin-section">
       <div class="calepin-games">${games.map(renderStatCard).join("")}</div>
     </section>
@@ -181,13 +182,13 @@ if (dialog && openButton) {
 
 // --- Célébration « 3/3 » ---
 function celebrate() {
-  if (doneToday !== 3) return;
+  if (doneToday !== GAMES.length) return;
   if (readJson(CELEBRATED_KEY, null) === todayId) return; // une fois par jour
   writeJson(CELEBRATED_KEY, todayId);
 
   const banner = document.getElementById("celebration");
   if (!banner) return;
-  banner.textContent = "🎉 Triplé ! T'as bouclé les 3 jeux du jour, biloute. À demain midi !";
+  banner.textContent = `🎉 Carton plein ! Les ${GAMES.length} jeux du jour bouclés, biloute. À demain midi !`;
   banner.hidden = false;
   banner.classList.add("is-visible");
 
@@ -210,6 +211,6 @@ function celebrate() {
   window.setTimeout(() => {
     banner.classList.remove("is-visible");
     window.setTimeout(() => (banner.hidden = true), 400);
-  }, 5000);
+  }, 8000);
 }
 celebrate();
