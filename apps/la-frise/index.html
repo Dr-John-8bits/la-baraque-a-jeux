@@ -8,6 +8,16 @@
       content="La Frise du Nord : remets dans l'ordre des faits de l'histoire et du patrimoine des Hauts-de-France."
     />
     <meta name="theme-color" content="#071b31" />
+    <meta property="og:title" content="La Frise du Nord" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Remets chaque jour cinq faits du Nord dans l'ordre, du plus ancien au plus récent."
+    />
+    <meta property="og:image" content="https://dr-john-8bits.github.io/la-baraque-a-jeux/assets/brand/og-image.png" />
+    <meta property="og:url" content="https://dr-john-8bits.github.io/la-baraque-a-jeux/apps/la-frise/" />
+    <meta name="twitter:image" content="https://dr-john-8bits.github.io/la-baraque-a-jeux/assets/brand/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>La Frise du Nord</title>
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" type="image/png" href="../../assets/brand/favicon-48.png" />
@@ -22,8 +32,8 @@
     <link rel="stylesheet" href="../../packages/ui/tokens.css" />
     <link rel="stylesheet" href="../../packages/ui/base.css" />
     <link rel="stylesheet" href="../../packages/ui/site-nav.css" />
+    <link rel="stylesheet" href="../../packages/ui/calepin.css" />
     <link rel="stylesheet" href="styles.css" />
-    <!-- TODO (au branchement) : og:title/type/description/image absolus + twitter:card, comme les autres jeux. -->
   </head>
   <body class="frise-page">
     <header class="labaj-header">
@@ -46,31 +56,117 @@
       </nav>
     </header>
 
-    <!--
-      SCAFFOLDING — squelette à habiller (voir specifications.md §6).
-      Variante A (recommandée) : pile de cartes à ordonner du plus ancien au plus récent.
-      Les id sont des ancres proposées pour app.js ; à ajuster librement.
-    -->
-    <main class="frise-game" aria-live="polite">
+    <main class="frise-game">
       <section class="frise-intro">
-        <p class="eyebrow">Chronologie · Hauts-de-France</p>
+        <div class="frise-intro__head">
+          <p class="eyebrow">Chronologie · Hauts-de-France</p>
+          <div class="frise-top-actions">
+            <button class="calepin-button" type="button" id="calepinButton">Calepin</button>
+            <button class="icon-button" type="button" id="rulesButton" aria-label="Comment jouer">?</button>
+          </div>
+        </div>
         <h1>La Frise du Nord</h1>
-        <p class="frise-instruction" id="instruction">Remets les faits dans l'ordre, du plus ancien au plus récent.</p>
+        <p class="frise-instruction" id="instruction" aria-live="polite">
+          Remets les faits dans l'ordre, du plus ancien au plus récent.
+        </p>
       </section>
 
-      <!-- Pile de cartes à ordonner (glisser-déposer ou flèches monter/descendre) — TODO -->
-      <ol class="frise-cards" id="cardList" aria-label="Faits à ordonner"></ol>
+      <section class="status-row" aria-label="État de la frise">
+        <div class="status-pill"><span>Frise du jour</span><strong id="statusDate">—</strong></div>
+        <div class="status-pill"><span>Bien placés</span><strong id="statusScore">–/5</strong></div>
+        <div class="status-pill"><span>Série</span><strong id="statusStreak">0</strong></div>
+      </section>
+
+      <ol class="frise-cards" id="cardList" aria-label="Faits à ordonner, du plus ancien (en haut) au plus récent (en bas)"></ol>
 
       <div class="frise-actions">
-        <button type="button" id="validateButton">Valider</button>
+        <button class="action-button primary" type="button" id="validateButton">Valider</button>
+        <button class="action-button" type="button" id="shareButton" hidden>Partager</button>
       </div>
 
-      <!-- Révélation : vraies dates + fiches (blurb + source) — TODO -->
-      <section class="frise-reveal" id="revealPanel" hidden></section>
+      <section class="frise-reveal" id="revealPanel" aria-live="polite" hidden></section>
 
       <p class="yesterday-line" id="yesterdayLine"></p>
       <p class="next-frise-countdown" id="nextFriseCountdown"></p>
     </main>
+
+    <dialog class="frise-dialog" id="firstHelp" aria-labelledby="firstHelpTitle">
+      <article class="dialog-panel">
+        <header>
+          <div>
+            <p class="eyebrow">La Frise du Nord</p>
+            <h2 id="firstHelpTitle">Comment jouer</h2>
+          </div>
+        </header>
+        <div class="help-content">
+          <p>Chaque jour, cinq faits de l'histoire et du patrimoine du Nord, en désordre.</p>
+          <ul>
+            <li>Remets-les dans l'ordre, du <strong>plus ancien</strong> (en haut) au <strong>plus récent</strong> (en bas).</li>
+            <li>Réordonne avec les flèches ▲▼ ou en glissant les cartes.</li>
+            <li>Une seule validation : on compte les faits <strong>bien placés</strong>.</li>
+            <li>À la révélation, on découvre les vraies dates et une petite fiche sourcée.</li>
+          </ul>
+        </div>
+        <label class="help-optout">
+          <input type="checkbox" id="helpOptOut" />
+          Ne plus afficher au démarrage
+        </label>
+        <div class="dialog-actions dialog-actions--single">
+          <button type="button" id="helpStartButton">Jouer</button>
+        </div>
+      </article>
+    </dialog>
+
+    <dialog class="frise-dialog" id="rulesDialog" aria-labelledby="rulesTitle">
+      <article class="dialog-panel">
+        <header>
+          <div>
+            <p class="eyebrow">Aide</p>
+            <h2 id="rulesTitle">Comment jouer</h2>
+          </div>
+          <button class="icon-close" type="button" data-close-dialog aria-label="Fermer">×</button>
+        </header>
+        <div class="help-content">
+          <p>Remets les cinq faits dans l'ordre chronologique, du plus ancien au plus récent.</p>
+          <ul>
+            <li>Flèches ▲▼ ou glisser-déposer pour réordonner.</li>
+            <li>« Valider » fige ta frise et révèle les dates.</li>
+            <li>Score = nombre de faits à la bonne place. Une nouvelle frise chaque jour à midi.</li>
+          </ul>
+        </div>
+        <div class="dialog-actions dialog-actions--single">
+          <button type="button" data-close-dialog>Fermer</button>
+        </div>
+      </article>
+    </dialog>
+
+    <dialog class="frise-dialog" id="statsDialog" aria-labelledby="statsTitle">
+      <article class="dialog-panel">
+        <header>
+          <div>
+            <p class="eyebrow">Stats locales</p>
+            <h2 id="statsTitle">Ton calepin</h2>
+          </div>
+          <button class="icon-close" type="button" data-close-dialog aria-label="Fermer">×</button>
+        </header>
+        <div class="calepin-tools" aria-label="Importer ou exporter le calepin">
+          <button class="icon-tool" id="exportStatsButton" type="button" aria-label="Exporter le calepin" title="Exporter le calepin"><span aria-hidden="true">↓</span></button>
+          <button class="icon-tool" id="importStatsButton" type="button" aria-label="Importer le calepin" title="Importer le calepin"><span aria-hidden="true">↑</span></button>
+          <input id="importStatsInput" type="file" accept="application/json" aria-label="Importer un calepin au format JSON" />
+        </div>
+        <dl class="stats-list" id="statsList"></dl>
+        <section class="history-block" aria-labelledby="statsHistoryTitle">
+          <h3 id="statsHistoryTitle">Dernières frises</h3>
+          <ol id="statsHistory"></ol>
+        </section>
+        <section class="performance-block" aria-labelledby="statsPerfTitle">
+          <h3 id="statsPerfTitle">Performance</h3>
+          <div class="performance-chart" id="statsChart"></div>
+        </section>
+      </article>
+    </dialog>
+
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
 
     <script type="module" src="../../packages/ui/about-dialog.js"></script>
     <script type="module" src="../../packages/ui/register-sw.js"></script>

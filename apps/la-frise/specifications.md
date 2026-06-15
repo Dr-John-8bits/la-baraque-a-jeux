@@ -1,6 +1,6 @@
 # Cahier des charges — La Frise du Nord
 
-> **Statut : corpus draft + jeu à coder.** Répertoire + cahier des charges + squelette. Le corpus compte **~83 faits datés et sourcés** (8 graines rédigées main + faits Wikidata CC0 via `tools/build-events-from-wikidata.mjs`, re-jouable avec `npm run build:frise-events`). Restent : **polir éditorialement** le draft (libellés/blurbs auto, quelques recatégorisations, cas religieux non filtrés type « Synagogue »/« Chaire ») puis **coder le jeu** (moteur déjà esquissé : `comparableYear`/`scoreOrder`).
+> **Statut : jouable (v1, variante A) + corpus draft.** Jeu **codé et testé** (`app.js`/`index.html`/`styles.css`) : tirage déterministe de 5 faits aux années bien séparées, réordonnancement flèches + glisser-déposer, validation/score, révélation (dates + fiche + source), partage spoiler-free, calepin partagé, première-aide, compte à rebours. Corpus = **~83 faits datés sourcés** (8 graines + Wikidata CC0 via `tools/build-events-from-wikidata.mjs`, `npm run build:frise-events`). **Restent** : (1) **brancher au portail** (grille 5 jeux, cf. §9) + SW precache + validateur de pages ; (2) **polir éditorialement** le corpus draft (libellés/blurbs auto, recatégorisations, cas religieux non filtrés type « Synagogue »/« Chaire »).
 
 ## 1. Concept
 
