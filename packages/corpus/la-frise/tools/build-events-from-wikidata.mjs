@@ -19,6 +19,21 @@ import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = resolve(HERE, "../events.json");
+const MERIMEE_PATH = resolve(HERE, "../../shared/monuments-lille.json");
+// monuments Mérimée écartés pour La Frise (obscurs ou doublons d'un fait déjà présent)
+const MERIMEE_DENY = new Set([
+  "PA59000185", // Ancien siège social de la Société des Mines de Lens (obscur)
+  "PA59000062", // Salle des fêtes, à Lille-Fives (obscur)
+  "PA59000079", // Observatoire de l'Institut de mathématiques (obscur)
+  "PA59000184", // Hôtel Catel-Béghin (hôtel particulier obscur)
+  "PA00107719", // Palais des Beaux-Arts (déjà présent via Wikidata)
+  "PA59000078", // Hôtel de ville (doublonne avec le beffroi des graines)
+  // écartés après vérification adverse (date trompeuse, hors Lille ou trop obscurs) :
+  "PA00107603", // Hôtel de Marchiennes (1626 = seul le porche ; bâtiment 1710-20 ; obscur)
+  "PA00107597", // Hôtel Castiaux (hôtel particulier discret)
+  "PA59000008", // École des Arts et Métiers (1886 = 1re pierre, ouverte 1900 ; peu connue)
+  "PA59000071", // Grands Moulins de Paris (en réalité à Marquette-lez-Lille, pas Lille)
+]);
 const ENDPOINT = "https://query.wikidata.org/sparql";
 const UA = "LaBaraqueAJeux/1.0 (jeux locaux Lille; +https://dr-john-8bits.github.io/la-baraque-a-jeux/; contact jean.debaecker@gmail.com)";
 const LILLE = "wd:Q648";
@@ -162,12 +177,29 @@ function curate(rows, kind, seen) {
   return out;
 }
 
+function loadMerimeeMonuments(seen) {
+  let data;
+  try { data = JSON.parse(readFileSync(MERIMEE_PATH, "utf8")); } catch { return []; }
+  const out = [];
+  for (const m of data.monuments || []) {
+    if (m.precision !== "an") continue; // années exactes : le siècle fausserait la date révélée
+    if (MERIMEE_DENY.has(m.ref)) continue;
+    const label = String(m.label || "").split(",")[0].trim(); // « Lycée Baggio, ... » -> « Lycée Baggio »
+    const id = kebab(label);
+    const key = normalize(label);
+    if (!label || seen.has(key) || seen.has(id)) continue;
+    seen.add(key); seen.add(id);
+    out.push({ id, label, year: m.year, precision: "an", category: "patrimoine", blurb: m.blurb, sourceIds: ["merimee"], merimeeRef: m.ref });
+  }
+  return out;
+}
+
 async function main() {
   // 1) graines existantes -> re-sourcées proprement (placeholder -> wikipedia-fr)
   const current = JSON.parse(readFileSync(OUT, "utf8"));
   // idempotence : on ne garde QUE les graines rédigées main (sans wikidataId), pas nos propres sorties
   const seeds = (current.events || [])
-    .filter((e) => !e.wikidataId)
+    .filter((e) => !e.wikidataId && !e.merimeeRef)
     .map((e) => ({
       ...e,
       sourceIds: (e.sourceIds || []).map((s) => (s === "wikipedia-a-sourcer" ? "wikipedia-fr" : s)),
@@ -193,8 +225,11 @@ async function main() {
   }
   const picked = selectedRaw.map(({ _fame, ...e }) => e);
 
+  // 3bis) monuments Mérimée (socle mutualisé, Licence Ouverte) — années exactes seulement
+  const merimee = loadMerimeeMonuments(seen);
+
   // 4) fusion + tri chronologique
-  const events = [...seeds.map(({ _fame, ...e }) => e), ...picked].sort((a, b) => a.year - b.year);
+  const events = [...seeds.map(({ _fame, ...e }) => e), ...picked, ...merimee].sort((a, b) => a.year - b.year);
   const byCat = {};
   events.forEach((e) => (byCat[e.category] = (byCat[e.category] || 0) + 1));
 
@@ -208,7 +243,7 @@ async function main() {
   writeFileSync(OUT, JSON.stringify(corpus, null, 2) + "\n");
 
   process.stderr.write(
-    `\nOK — ${events.length} faits écrits (${seeds.length} graines + ${picked.length} Wikidata).\n` +
+    `\nOK — ${events.length} faits écrits (${seeds.length} graines + ${picked.length} Wikidata + ${merimee.length} Mérimée).\n` +
     `Récupérés: ${stats.fetched} | écartés → peu notoires: ${stats.peuNotoire}, institutions/obscurs: ${stats.obscur}, religieux: ${stats.religieux}, œuvres: ${stats.art}, génériques: ${stats.generique}, sans label: ${stats.sansLabel}, doublons: ${stats.doublon}\n` +
     `Catégories: ${JSON.stringify(byCat)} | années: ${events[0]?.year}–${events[events.length - 1]?.year}\n`
   );

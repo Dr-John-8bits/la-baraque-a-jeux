@@ -1,0 +1,419 @@
+{
+  "description": "Monuments historiques de Lille (base Mérimée, Licence Ouverte). Socle mutualisé pour La Frise (faits datés) et Lille-Mêle (familles patrimoine). Généré par tools/build-merimee-monuments.mjs.",
+  "source": "merimee",
+  "generatedAt": "2026-06-15",
+  "monuments": [
+    {
+      "ref": "PA00107586",
+      "label": "Hospice Comtesse",
+      "year": 1472,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "hospice",
+      "blurb": "Hospice — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107603",
+      "label": "Hôtel de Marchiennes",
+      "year": 1626,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107570",
+      "label": "Caserne Souham",
+      "year": 1650,
+      "precision": "siecle",
+      "century": 17,
+      "category": "patrimoine",
+      "denomination": "caserne",
+      "blurb": "Caserne — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107573",
+      "label": "Citadelle de Lille",
+      "year": 1650,
+      "precision": "siecle",
+      "century": 17,
+      "category": "patrimoine",
+      "denomination": "citadelle",
+      "blurb": "Citadelle — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107569",
+      "label": "Vieille bourse du commerce",
+      "year": 1650,
+      "precision": "siecle",
+      "century": 17,
+      "category": "patrimoine",
+      "denomination": "bourse de commerce",
+      "blurb": "Bourse de commerce — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107594",
+      "label": "Hôtel Bidé de la Grandville",
+      "year": 1750,
+      "precision": "siecle",
+      "century": 18,
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107602",
+      "label": "Hôtel de Madre",
+      "year": 1750,
+      "precision": "siecle",
+      "century": 18,
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107609",
+      "label": "Hôtel Van Zeller",
+      "year": 1750,
+      "precision": "siecle",
+      "century": 18,
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107593",
+      "label": "Hôtel Scrive, actuellement siège de la Direction régionale des Affaires culturelles du Nord-Pas-de-Calais",
+      "year": 1750,
+      "precision": "siecle",
+      "century": 18,
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107798",
+      "label": "Pavillon Louis XVI",
+      "year": 1750,
+      "precision": "siecle",
+      "century": 18,
+      "category": "patrimoine",
+      "denomination": "maison",
+      "blurb": "Maison — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107596",
+      "label": "Hôtel des Cariatides",
+      "year": 1850,
+      "precision": "siecle",
+      "century": 19,
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107607",
+      "label": "Hôtel Ramery",
+      "year": 1850,
+      "precision": "siecle",
+      "century": 19,
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107606",
+      "label": "Hôtel des Postes",
+      "year": 1850,
+      "precision": "siecle",
+      "century": 19,
+      "category": "patrimoine",
+      "denomination": "bureau de poste",
+      "blurb": "Bureau de poste — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107598",
+      "label": "Hôtel Delbecque",
+      "year": 1850,
+      "precision": "siecle",
+      "century": 19,
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107725",
+      "label": "Préfecture",
+      "year": 1850,
+      "precision": "siecle",
+      "century": 19,
+      "category": "patrimoine",
+      "denomination": "préfecture",
+      "blurb": "Préfecture — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000107",
+      "label": "Porte de Dunkerque",
+      "year": 1850,
+      "precision": "siecle",
+      "century": 19,
+      "category": "patrimoine",
+      "denomination": "porte de ville",
+      "blurb": "Porte de ville — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107743",
+      "label": "Ancien moulin Despretz",
+      "year": 1850,
+      "precision": "siecle",
+      "century": 19,
+      "category": "patrimoine",
+      "denomination": "moulin",
+      "blurb": "Moulin — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107720",
+      "label": "Palais Rameau",
+      "year": 1875,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "pavillon d'exposition",
+      "blurb": "Pavillon d'exposition — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000184",
+      "label": "Hôtel Catel-Béghin",
+      "year": 1877,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107597",
+      "label": "Hôtel Castiaux",
+      "year": 1885,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "hôtel",
+      "blurb": "Hôtel — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000008",
+      "label": "Ecole Nationale Supérieure des Arts et Métiers",
+      "year": 1886,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "école supérieure",
+      "blurb": "École supérieure — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107719",
+      "label": "Palais des Beaux-Arts",
+      "year": 1892,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "musée",
+      "blurb": "Musée — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA00107726",
+      "label": "Statue de Faidherbe",
+      "year": 1896,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "monument",
+      "blurb": "Monument — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000185",
+      "label": "Ancien siège social de la Société des Mines de Lens",
+      "year": 1903,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "mine",
+      "blurb": "Mine — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000043",
+      "label": "Opéra de Lille",
+      "year": 1907,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "opéra",
+      "blurb": "Opéra — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000191",
+      "label": "Chambre de Commerce et d'Industrie",
+      "year": 1910,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "bourse de commerce",
+      "blurb": "Bourse de commerce — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000078",
+      "label": "Hôtel de ville",
+      "year": 1920,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "hôtel de ville",
+      "blurb": "Hôtel de ville — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000071",
+      "label": "Grands Moulins de Paris",
+      "year": 1921,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "minoterie",
+      "blurb": "Minoterie — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000062",
+      "label": "Salle des fêtes, à Lille-Fives",
+      "year": 1925,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "salle des fêtes",
+      "blurb": "Salle des fêtes — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000192",
+      "label": "Poissonnerie A l'Huîtrière",
+      "year": 1928,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "magasin de commerce",
+      "blurb": "Magasin de commerce — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000079",
+      "label": "Observatoire de l'Institut de mathématiques appliquées et d'astronomie",
+      "year": 1932,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "observatoire",
+      "blurb": "Observatoire — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000010",
+      "label": "Lycée Baggio, anciennement dénommé Institut Diderot",
+      "year": 1934,
+      "precision": "an",
+      "category": "patrimoine",
+      "denomination": "lycée",
+      "blurb": "Lycée — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    },
+    {
+      "ref": "PA59000009",
+      "label": "Jardin des Plantes",
+      "year": 1950,
+      "precision": "siecle",
+      "century": 20,
+      "category": "patrimoine",
+      "denomination": "jardin botanique",
+      "blurb": "Jardin botanique — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ]
+    }
+  ]
+}

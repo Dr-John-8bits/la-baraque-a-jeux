@@ -28,6 +28,18 @@
       ]
     },
     {
+      "id": "hospice-comtesse",
+      "label": "Hospice Comtesse",
+      "year": 1472,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Hospice — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ],
+      "merimeeRef": "PA00107586"
+    },
+    {
       "id": "porte-de-roubaix",
       "label": "Porte de Roubaix",
       "year": 1621,
@@ -146,6 +158,18 @@
       "wikidataId": "Q134085"
     },
     {
+      "id": "palais-rameau",
+      "label": "Palais Rameau",
+      "year": 1875,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Pavillon d'exposition — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ],
+      "merimeeRef": "PA00107720"
+    },
+    {
       "id": "naissance-de-charles-de-gaulle",
       "label": "Naissance de Charles de Gaulle",
       "year": 1890,
@@ -170,6 +194,30 @@
       "wikidataId": "Q453683"
     },
     {
+      "id": "statue-de-faidherbe",
+      "label": "Statue de Faidherbe",
+      "year": 1896,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Monument — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ],
+      "merimeeRef": "PA00107726"
+    },
+    {
+      "id": "opera-de-lille",
+      "label": "Opéra de Lille",
+      "year": 1907,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Opéra — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ],
+      "merimeeRef": "PA59000043"
+    },
+    {
       "id": "mongy-tramway",
       "label": "Le Mongy (tramway Lille–Roubaix–Tourcoing)",
       "year": 1909,
@@ -179,6 +227,18 @@
       "sourceIds": [
         "wikipedia-fr"
       ]
+    },
+    {
+      "id": "chambre-de-commerce-et-d-industrie",
+      "label": "Chambre de Commerce et d'Industrie",
+      "year": 1910,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Bourse de commerce — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ],
+      "merimeeRef": "PA59000191"
     },
     {
       "id": "naissance-de-herve-bazin",
@@ -191,6 +251,18 @@
         "wikidata"
       ],
       "wikidataId": "Q358479"
+    },
+    {
+      "id": "poissonnerie-a-l-huitriere",
+      "label": "Poissonnerie A l'Huîtrière",
+      "year": 1928,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Magasin de commerce — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ],
+      "merimeeRef": "PA59000192"
     },
     {
       "id": "les-fusilles-lillois",
@@ -226,6 +298,18 @@
       "sourceIds": [
         "wikipedia-fr"
       ]
+    },
+    {
+      "id": "lycee-baggio",
+      "label": "Lycée Baggio",
+      "year": 1934,
+      "precision": "an",
+      "category": "patrimoine",
+      "blurb": "Lycée — monument historique de Lille.",
+      "sourceIds": [
+        "merimee"
+      ],
+      "merimeeRef": "PA59000010"
     },
     {
       "id": "centre-hospitalier-universitaire-de-lille",

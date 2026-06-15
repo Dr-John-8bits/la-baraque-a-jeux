@@ -18,6 +18,7 @@
     "build:station-vlille": "node packages/corpus/station-mystere/tools/build-vlille-corpus.mjs",
     "build:station-bus": "node packages/corpus/station-mystere/tools/build-bus-corpus.mjs",
     "sync:station-transport-notes": "node packages/corpus/station-mystere/tools/sync-transport-place-notes.mjs",
+    "build:merimee": "node packages/corpus/shared/tools/build-merimee-monuments.mjs",
     "build:frise-events": "node packages/corpus/la-frise/tools/build-events-from-wikidata.mjs",
     "check": "npm run check:js && npm run check:corpus && npm run check:blog && npm run check:static",
     "check:blog": "node scripts/build-news.mjs --check",

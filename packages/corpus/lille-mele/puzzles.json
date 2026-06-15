@@ -1604,17 +1604,12 @@
   {
     "id": "quatre-territoires-001",
     "number": 27,
-    "title": "Quatre coins de la métropole",
+    "title": "Communes et monuments classés",
     "intro": "Seize communes, quatre territoires : à toi de les ranger.",
-    "finalNote": "Quatre territoires, quatre coins de la métropole : couronnes sud et nord, est et Tourquennois. Que des communes, à toi de les trier.",
+    "finalNote": "Trois territoires de communes de la métropole et une série de monuments historiques classés de Lille.",
     "status": "reviewed",
-    "tags": [
-      "communes",
-      "metropole"
-    ],
-    "sourceIds": [
-      "mel-communes-datamel"
-    ],
+    "tags": ["communes", "lille", "patrimoine", "metropole"],
+    "sourceIds": ["mel-communes-datamel", "merimee"],
     "bonus": {
       "question": "Mons-en-Barœul appartient au territoire Est de la métropole.",
       "answer": true,
@@ -1651,20 +1646,18 @@
         ],
         "note": "Des communes du territoire Est."
       },
-      {
-        "id": "communes-tourquennois-4",
-        "title": "Communes du Tourquennois",
+            {
+        "id": "monuments-classes-lille-1",
+        "title": "Monuments classés de Lille",
         "difficulty": "tricky",
-        "sourceIds": [
-          "mel-communes-datamel"
-        ],
+        "sourceIds": ["merimee"],
         "items": [
-          "Linselles",
-          "Mouvaux",
-          "Neuville-en-Ferrain",
-          "Roncq"
+          "Palais des Beaux-Arts",
+          "Opéra de Lille",
+          "Citadelle de Lille",
+          "Hospice Comtesse"
         ],
-        "note": "Des communes du territoire du Tourquennois."
+        "note": "Des monuments historiques classés de Lille."
       },
       {
         "id": "communes-nord-4",

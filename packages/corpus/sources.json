@@ -286,5 +286,14 @@
     "license": "CC BY-SA 4.0",
     "consultedAt": "2026-06-15",
     "notes": "Faits historiques et patrimoniaux généraux (dates, contexte), reformulés et non recopiés. Sert de source aux faits-graines de La Frise du Nord."
+  },
+  {
+    "id": "merimee",
+    "label": "Base Mérimée — Monuments historiques",
+    "url": "https://data.culture.gouv.fr/explore/dataset/liste-des-immeubles-proteges-au-titre-des-monuments-historiques/",
+    "publisher": "Ministère de la Culture",
+    "license": "Licence Ouverte 2.0 (Etalab)",
+    "consultedAt": "2026-06-15",
+    "notes": "Immeubles protégés au titre des monuments historiques (API Opendatasoft). Datation + dénomination ; chaque édifice garde sa référence PA pour traçabilité. Réutilisation libre (Licence Ouverte)."
   }
 ]
