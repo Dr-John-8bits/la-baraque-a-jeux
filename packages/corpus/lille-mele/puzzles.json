@@ -47,7 +47,7 @@
       {
         "id": "tram-wasquehal",
         "title": "Arrêts du tramway",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "Clemenceau Hippodrome",
@@ -79,11 +79,8 @@
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "La grille mélange quartiers officiels et territoires MEL : le piège est de séparer Lille, Lomme, Hellemmes et le reste de la métropole.",
     "status": "reviewed",
-    "tags": ["quartiers", "communes", "metropole"],
-    "sourceIds": [
-      "ville-lille-quartiers-data-gouv",
-      "mel-communes-datamel"
-    ],
+    "tags": ["quartiers", "communes", "gastronomie", "metropole"],
+    "sourceIds": ["ville-lille-quartiers-data-gouv", "mel-communes-datamel", "banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
     "bonus": {
       "question": "Les exports de quartiers distinguent Lille, Lomme et Hellemmes.",
       "answer": true,
@@ -103,23 +100,23 @@
         ],
         "note": "Quatre entrées du jeu de données des quartiers Lille-Lomme-Hellemmes."
       },
-      {
-        "id": "quartiers-officiels-sud-ouest",
-        "title": "Quartiers officiels",
-        "difficulty": "easy",
-        "sourceIds": ["ville-lille-quartiers-data-gouv"],
+            {
+        "id": "douceurs-nord-1",
+        "title": "Douceurs du Nord",
+        "difficulty": "medium",
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
         "items": [
-          "Lille-Centre",
-          "Lille-Moulins",
-          "Lille-Sud",
-          "Lomme"
+          "Merveilleux",
+          "Babelutte",
+          "Cramique",
+          "Vergeoise"
         ],
-        "note": "Encore des quartiers officiels, avec deux noms qui portent Lille sans se cacher."
+        "note": "Des douceurs typiques du Nord."
       },
       {
         "id": "communes-couronne-sud",
         "title": "Territoire de la couronne Sud",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Allennes-les-Marais",
@@ -132,7 +129,7 @@
       {
         "id": "communes-territoire-est",
         "title": "Territoire Est",
-        "difficulty": "medium",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Anstaing",
@@ -192,7 +189,7 @@
       {
         "id": "tram-barbieux-cavrois",
         "title": "Arrêts du tramway",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "La Marque",
@@ -205,7 +202,7 @@
       {
         "id": "communes-tourquennois-lys",
         "title": "Tourquennois - Vallée de la Lys",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Bondues",
@@ -265,7 +262,7 @@
       {
         "id": "communes-armentierois-lys",
         "title": "Armentiérois - Vallée de la Lys",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Armentières",
@@ -278,7 +275,7 @@
       {
         "id": "communes-weppes-ouest",
         "title": "Territoire des Weppes",
-        "difficulty": "medium",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Aubers",
@@ -297,12 +294,8 @@
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "Le corpus gagne ici des cartes hors Lille intra-muros, avec des stations de métro et des communes de territoires distincts.",
     "status": "reviewed",
-    "tags": ["transport", "metro", "communes", "metropole"],
-    "sourceIds": [
-      "gtfs-ilevia-data-gouv",
-      "ilevia-arret-point-datamel",
-      "mel-communes-datamel"
-    ],
+    "tags": ["transport", "metro", "communes", "culture", "metropole"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel", "hello-lille"],
     "bonus": {
       "question": "La ligne 2 passe par Roubaix et Mons-en-Barœul.",
       "answer": true,
@@ -322,23 +315,23 @@
         ],
         "note": "Quatre stations de la ligne 2 côté Roubaix."
       },
-      {
-        "id": "m2-mons-baroeul",
-        "title": "Stations de la ligne 2",
+            {
+        "id": "culture-1",
+        "title": "Lieux de culture",
         "difficulty": "medium",
-        "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
+        "sourceIds": ["hello-lille"],
         "items": [
-          "Les Prés-E. Pisani",
-          "Fort de Mons",
-          "Mairie de Mons",
-          "Mons Sarts"
+          "Palais des Beaux-Arts",
+          "Opéra de Lille",
+          "Théâtre du Nord",
+          "L'Aéronef"
         ],
-        "note": "Une série de stations autour de Mons-en-Barœul."
+        "note": "Des scènes et lieux culturels de la métropole."
       },
       {
         "id": "communes-weppes-est",
         "title": "Territoire des Weppes",
-        "difficulty": "medium",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Englos",
@@ -399,7 +392,7 @@
       {
         "id": "liane-2-premiers-arrets",
         "title": "Arrêts de la Liane 2",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "Les Oliveaux",
@@ -412,7 +405,7 @@
       {
         "id": "communes-roubaisien",
         "title": "Territoire Roubaisien",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Croix",
@@ -425,7 +418,7 @@
       {
         "id": "patrimoine-civil-lille",
         "title": "Patrimoine civil lillois",
-        "difficulty": "tricky",
+        "difficulty": "easy",
         "sourceIds": ["ville-lille-monuments-historiques-data-gouv"],
         "items": [
           "Ancienne Maladrerie",
@@ -473,7 +466,7 @@
       {
         "id": "liane-99-premiers-arrets",
         "title": "Arrêts de la Liane 99",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "Le Bizet",
@@ -499,7 +492,7 @@
       {
         "id": "espaces-verts-lomme-esplanade",
         "title": "Parcs et jardins",
-        "difficulty": "tricky",
+        "difficulty": "easy",
         "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
         "items": [
           "Esplanade Léon Jouhaux",
@@ -547,7 +540,7 @@
       {
         "id": "m2-bois-blancs-canteleu",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "Bois Blancs",
@@ -560,7 +553,7 @@
       {
         "id": "communes-est-marque-melantois",
         "title": "Territoire Est",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Forest-sur-Marque",
@@ -573,7 +566,7 @@
       {
         "id": "espaces-verts-concorde-gare-eau",
         "title": "Parcs et jardins",
-        "difficulty": "tricky",
+        "difficulty": "easy",
         "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
         "items": [
           "Espace résidentiel Concorde",
@@ -609,7 +602,7 @@
       {
         "id": "communes-couronne-sud-emmerin",
         "title": "Territoire de la couronne Sud",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Emmerin",
@@ -622,7 +615,7 @@
       {
         "id": "communes-tourquennois-linselles",
         "title": "Tourquennois - Vallée de la Lys",
-        "difficulty": "medium",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Linselles",
@@ -635,7 +628,7 @@
       {
         "id": "jardins-comtesse-boulay",
         "title": "Parcs et jardins",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
         "items": [
           "Îlot Comtesse",
@@ -648,7 +641,7 @@
       {
         "id": "douceurs-habitudes-nord",
         "title": "Douceurs et habitudes du Nord",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "banque-chtimi-gastronomie-jeux",
           "comptoir-flandres-dictionnaire-chti",
@@ -685,7 +678,7 @@
       {
         "id": "liane-1-premiers-arrets",
         "title": "Arrêts de la Liane 1",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "Agrippin",
@@ -698,7 +691,7 @@
       {
         "id": "liane-3-premiers-arrets",
         "title": "Arrêts de la Liane 3",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "Quart. Beaulieu",
@@ -724,7 +717,7 @@
       {
         "id": "liane-5-premiers-arrets",
         "title": "Arrêts de la Liane 5",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "Ferme aux Oies",
@@ -754,7 +747,7 @@
       {
         "id": "m1-centre-lille",
         "title": "Stations de la ligne 1",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": [
           "République Beaux-Arts",
@@ -780,7 +773,7 @@
       {
         "id": "communes-weppes",
         "title": "Communes des Weppes",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": [
           "Aubers",
@@ -831,7 +824,7 @@
       {
         "id": "m1-lille-hellemmes",
         "title": "Stations de la ligne 1",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": ["Square Flandres", "Mairie D'Hellemmes", "Marbrerie", "Madeleine Caulier"],
         "note": "Quatre stations de la ligne 1 entre Lille et Hellemmes."
@@ -847,7 +840,7 @@
       {
         "id": "communes-couronne-sud-1",
         "title": "Communes de la couronne sud",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": ["Allennes-les-Marais", "Annœullin", "Bauvin", "Carnin"],
         "note": "Des communes du territoire de la couronne Sud."
@@ -872,7 +865,7 @@
       {
         "id": "m2-tourcoing-nord",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": ["C.H. Dron", "Bourgogne", "Pont De Neuville", "Colbert"],
         "note": "Quatre stations de la ligne 2 côté Tourcoing."
@@ -888,7 +881,7 @@
       {
         "id": "communes-roubaisien-2",
         "title": "Communes du Roubaisien",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": ["Lys-lez-Lannoy", "Roubaix", "Toufflers", "Wasquehal"],
         "note": "Des communes du territoire Roubaisien."
@@ -921,7 +914,7 @@
       {
         "id": "communes-couronne-sud-2",
         "title": "Communes de la couronne sud",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "sourceIds": ["mel-communes-datamel"],
         "items": ["Emmerin", "Faches-Thumesnil", "Fretin", "Houplin-Ancoisne"],
         "note": "Des communes du territoire de la couronne Sud."
@@ -937,7 +930,7 @@
       {
         "id": "m1-sud-est",
         "title": "Stations de la ligne 1",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": ["Chu-Centre O. Lambret", "Chu Eurasanté", "Fives", "Pont De Bois"],
         "note": "Quatre stations de la ligne 1, du sud à Villeneuve-d'Ascq."
@@ -986,7 +979,7 @@
       {
         "id": "m2-roubaix",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel"],
         "items": ["Roubaix Charles De Gaulle", "Roubaix Place", "Gare Jean Lebas", "Mercure"],
         "note": "Quatre stations de la ligne 2 côté Roubaix."
@@ -994,7 +987,7 @@
       {
         "id": "communes-armentierois",
         "title": "Communes de l'Armentiérois",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": ["mel-communes-datamel"],
         "items": ["Armentières", "Deûlémont", "Erquinghem-Lys", "Frelinghien"],
         "note": "Des communes de l'Armentiérois, le long de la Lys."
@@ -1028,7 +1021,7 @@
       {
         "id": "m2-lomme",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -1117,7 +1110,7 @@
       {
         "id": "m2-portes",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -1206,7 +1199,7 @@
       {
         "id": "m2-mons",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -1295,7 +1288,7 @@
       {
         "id": "m2-croix",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -1399,7 +1392,7 @@
       {
         "id": "m1-va-2",
         "title": "Stations de la ligne 1",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -1430,7 +1423,7 @@
       {
         "id": "communes-sud-3",
         "title": "Communes de la couronne sud",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -1470,7 +1463,7 @@
       {
         "id": "m2-lille-centre",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -1486,7 +1479,7 @@
       {
         "id": "communes-metro-2",
         "title": "Communes desservies par le métro",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -1516,7 +1509,7 @@
       {
         "id": "communes-est-3",
         "title": "Communes de l'est",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -1556,7 +1549,7 @@
       {
         "id": "m2-roubaix-2",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -1572,7 +1565,7 @@
       {
         "id": "communes-tourquennois-3",
         "title": "Communes du Tourquennois",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -1587,7 +1580,7 @@
       {
         "id": "communes-weppes-3",
         "title": "Communes des Weppes",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -1639,7 +1632,7 @@
       {
         "id": "communes-sud-4",
         "title": "Communes de la couronne sud",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -1654,7 +1647,7 @@
       {
         "id": "communes-est-4",
         "title": "Communes de l'est",
-        "difficulty": "hard",
+        "difficulty": "medium",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -1669,7 +1662,7 @@
       {
         "id": "communes-tourquennois-4",
         "title": "Communes du Tourquennois",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -1727,7 +1720,7 @@
       {
         "id": "quartiers-lille-1",
         "title": "Quartiers de Lille",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "ville-lille-quartiers-data-gouv"
         ],
@@ -1742,7 +1735,7 @@
       {
         "id": "patrimoine-lille-1",
         "title": "Patrimoine lillois",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "ville-lille-monuments-historiques-data-gouv"
         ],
@@ -1772,7 +1765,7 @@
       {
         "id": "douceurs-1",
         "title": "Douceurs du Nord",
-        "difficulty": "tricky",
+        "difficulty": "hard",
         "sourceIds": [
           "banque-chtimi-gastronomie-jeux",
           "comptoir-flandres-dictionnaire-chti"
@@ -1814,7 +1807,7 @@
       {
         "id": "quartiers-lille-2",
         "title": "Quartiers de Lille",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "ville-lille-quartiers-data-gouv"
         ],
@@ -1829,7 +1822,7 @@
       {
         "id": "patrimoine-lille-2",
         "title": "Patrimoine lillois",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "ville-lille-monuments-historiques-data-gouv"
         ],
@@ -1859,7 +1852,7 @@
       {
         "id": "plats-nord-1",
         "title": "Plats du Nord",
-        "difficulty": "tricky",
+        "difficulty": "hard",
         "sourceIds": [
           "hello-lille"
         ],
@@ -1902,7 +1895,7 @@
       {
         "id": "quartiers-lille-3",
         "title": "Quartiers de Lille",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "ville-lille-quartiers-data-gouv"
         ],
@@ -1917,7 +1910,7 @@
       {
         "id": "parcs-lille-1",
         "title": "Parcs et jardins",
-        "difficulty": "medium",
+        "difficulty": "tricky",
         "sourceIds": [
           "ville-lille-parcs-jardins-data-gouv"
         ],
@@ -1947,7 +1940,7 @@
       {
         "id": "douceurs-2",
         "title": "Douceurs du Nord",
-        "difficulty": "tricky",
+        "difficulty": "hard",
         "sourceIds": [
           "banque-chtimi-gastronomie-jeux",
           "comptoir-flandres-dictionnaire-chti"
@@ -1991,7 +1984,7 @@
       {
         "id": "eau-fortifs-1",
         "title": "Eau et fortifications",
-        "difficulty": "medium",
+        "difficulty": "hard",
         "sourceIds": [
           "ville-lille"
         ],
@@ -2006,7 +1999,7 @@
       {
         "id": "patrimoine-lille-3",
         "title": "Patrimoine lillois",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "ville-lille-monuments-historiques-data-gouv"
         ],
@@ -2021,7 +2014,7 @@
       {
         "id": "culture-lille-4",
         "title": "Lieux de culture",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "hello-lille"
         ],
@@ -2036,7 +2029,7 @@
       {
         "id": "plats-nord-2",
         "title": "Spécialités du Nord",
-        "difficulty": "tricky",
+        "difficulty": "medium",
         "sourceIds": [
           "banque-chtimi-gastronomie-jeux",
           "comptoir-flandres-dictionnaire-chti"
@@ -2058,17 +2051,8 @@
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
     "status": "reviewed",
-    "tags": [
-      "transport",
-      "metro",
-      "communes",
-      "metropole"
-    ],
-    "sourceIds": [
-      "gtfs-ilevia-data-gouv",
-      "ilevia-arret-point-datamel",
-      "mel-communes-datamel"
-    ],
+    "tags": ["transport", "metro", "communes", "gastronomie", "metropole"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel", "hello-lille"],
     "bonus": {
       "question": "La ligne 2 dessert à la fois Tourcoing et le sud de Lille.",
       "answer": true,
@@ -2078,7 +2062,7 @@
       {
         "id": "m2-tg",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -2091,26 +2075,23 @@
         ],
         "note": "La ligne 2 côté Tourcoing."
       },
-      {
-        "id": "m2-pt",
-        "title": "Stations de la ligne 2",
+            {
+        "id": "plats-1",
+        "title": "Plats du Nord",
         "difficulty": "medium",
-        "sourceIds": [
-          "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
-        ],
+        "sourceIds": ["hello-lille"],
         "items": [
-          "Grand Palais",
-          "Porte De Valenciennes",
-          "Porte De Douai",
-          "Porte D'Arras"
+          "Carbonnade",
+          "Potjevleesch",
+          "Hochepot",
+          "Welsh"
         ],
-        "note": "La ligne 2 au sud de Lille."
+        "note": "Des plats salés bien du Nord."
       },
       {
         "id": "co-tq",
         "title": "Communes du Tourquennois",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -2146,17 +2127,8 @@
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
     "status": "reviewed",
-    "tags": [
-      "transport",
-      "metro",
-      "communes",
-      "metropole"
-    ],
-    "sourceIds": [
-      "gtfs-ilevia-data-gouv",
-      "ilevia-arret-point-datamel",
-      "mel-communes-datamel"
-    ],
+    "tags": ["transport", "metro", "communes", "gastronomie", "metropole"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel", "banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
     "bonus": {
       "question": "La ligne 2 dessert Mons-en-Barœul et Croix.",
       "answer": true,
@@ -2166,7 +2138,7 @@
       {
         "id": "m2-mo",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -2179,21 +2151,18 @@
         ],
         "note": "La ligne 2 à Mons-en-Barœul."
       },
-      {
-        "id": "m2-cx",
-        "title": "Stations de la ligne 2",
+            {
+        "id": "specialites-1",
+        "title": "Spécialités du Nord",
         "difficulty": "medium",
-        "sourceIds": [
-          "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
-        ],
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
         "items": [
-          "Alsace",
-          "Mairie De Croix",
-          "Croix Centre",
-          "Ep. Montesquieu"
+          "Maroilles",
+          "Mimolette",
+          "Flamiche",
+          "Waterzoï"
         ],
-        "note": "La ligne 2 vers Croix."
+        "note": "Fromages et plats bien du Nord."
       },
       {
         "id": "co-rb",
@@ -2213,7 +2182,7 @@
       {
         "id": "co-arm",
         "title": "Communes de l'Armentiérois",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -2270,7 +2239,7 @@
       {
         "id": "m1-va",
         "title": "Stations de la ligne 1",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -2286,7 +2255,7 @@
       {
         "id": "co-we",
         "title": "Communes des Weppes",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -2322,17 +2291,8 @@
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
     "status": "reviewed",
-    "tags": [
-      "transport",
-      "metro",
-      "communes",
-      "metropole"
-    ],
-    "sourceIds": [
-      "gtfs-ilevia-data-gouv",
-      "ilevia-arret-point-datamel",
-      "mel-communes-datamel"
-    ],
+    "tags": ["transport", "metro", "communes", "biere", "metropole"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel", "comptoir-flandres-bieres-nord"],
     "bonus": {
       "question": "La ligne 2 dessert Lomme et l'ouest de Lille.",
       "answer": true,
@@ -2342,7 +2302,7 @@
       {
         "id": "m2-lo",
         "title": "Stations de la ligne 2",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -2355,21 +2315,18 @@
         ],
         "note": "La ligne 2 à Lomme."
       },
-      {
-        "id": "m2-we",
-        "title": "Stations de la ligne 2",
+            {
+        "id": "bieres-1",
+        "title": "Bières du Nord",
         "difficulty": "medium",
-        "sourceIds": [
-          "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
-        ],
+        "sourceIds": ["comptoir-flandres-bieres-nord"],
         "items": [
-          "Montebello",
-          "Cormontaigne",
-          "Port De Lille",
-          "Bois Blancs"
+          "Ch'ti",
+          "Jenlain",
+          "3 Monts",
+          "Goudale"
         ],
-        "note": "La ligne 2 à l'ouest de Lille."
+        "note": "Des bières brassées dans le Nord."
       },
       {
         "id": "co-no",
@@ -2389,7 +2346,7 @@
       {
         "id": "co-es2",
         "title": "Communes de l'est",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -2410,17 +2367,8 @@
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
     "status": "reviewed",
-    "tags": [
-      "transport",
-      "metro",
-      "communes",
-      "metropole"
-    ],
-    "sourceIds": [
-      "gtfs-ilevia-data-gouv",
-      "ilevia-arret-point-datamel",
-      "mel-communes-datamel"
-    ],
+    "tags": ["transport", "metro", "communes", "nature", "metropole"],
+    "sourceIds": ["gtfs-ilevia-data-gouv", "ilevia-arret-point-datamel", "mel-communes-datamel", "ville-lille-parcs-jardins-data-gouv"],
     "bonus": {
       "question": "La ligne 1 traverse le centre de Lille.",
       "answer": true,
@@ -2430,7 +2378,7 @@
       {
         "id": "m1-ce",
         "title": "Stations de la ligne 1",
-        "difficulty": "medium",
+        "difficulty": "easy",
         "sourceIds": [
           "gtfs-ilevia-data-gouv",
           "ilevia-arret-point-datamel"
@@ -2443,26 +2391,23 @@
         ],
         "note": "La ligne 1 au centre de Lille."
       },
-      {
-        "id": "m1-he",
-        "title": "Stations de la ligne 1",
+            {
+        "id": "parcs-1",
+        "title": "Parcs et jardins",
         "difficulty": "medium",
-        "sourceIds": [
-          "gtfs-ilevia-data-gouv",
-          "ilevia-arret-point-datamel"
-        ],
+        "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
         "items": [
-          "Square Flandres",
-          "Mairie D'Hellemmes",
-          "Marbrerie",
-          "Madeleine Caulier"
+          "Jardin des Géants",
+          "Jardin des Plantes",
+          "Jardin Vauban",
+          "Parc de la Citadelle"
         ],
-        "note": "La ligne 1 vers Hellemmes."
+        "note": "Des espaces verts de la métropole."
       },
       {
         "id": "co-tq2",
         "title": "Communes du Tourquennois",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -2498,13 +2443,8 @@
     "intro": "Connecte les mots avant la prochaine station.",
     "finalNote": "Grille bâtie depuis les exports structurés Ilévia et MEL (stations, lignes et communes), sans reprendre les textes des pages web.",
     "status": "reviewed",
-    "tags": [
-      "communes",
-      "metropole"
-    ],
-    "sourceIds": [
-      "mel-communes-datamel"
-    ],
+    "tags": ["communes", "ch-ti", "metropole"],
+    "sourceIds": ["mel-communes-datamel", "nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti"],
     "bonus": {
       "question": "Roubaix et Tourcoing sont desservies par le métro.",
       "answer": true,
@@ -2514,7 +2454,7 @@
       {
         "id": "co-me1",
         "title": "Communes desservies par le métro",
-        "difficulty": "hard",
+        "difficulty": "easy",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -2526,20 +2466,18 @@
         ],
         "note": "Des communes desservies par le métro."
       },
-      {
-        "id": "co-me2",
-        "title": "Communes desservies par le métro",
-        "difficulty": "hard",
-        "sourceIds": [
-          "mel-communes-datamel"
-        ],
+            {
+        "id": "mots-chti-1",
+        "title": "Mots ch'ti",
+        "difficulty": "medium",
+        "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti"],
         "items": [
-          "Mons-en-Barœul",
-          "Roubaix",
-          "Tourcoing",
-          "Villeneuve-d'Ascq"
+          "Biloute",
+          "Wassingue",
+          "Ducasse",
+          "Drache"
         ],
-        "note": "De grandes communes desservies par le métro."
+        "note": "Des mots et expressions du parler ch'ti."
       },
       {
         "id": "co-no2",
@@ -2559,7 +2497,7 @@
       {
         "id": "co-rb2",
         "title": "Communes du Roubaisien",
-        "difficulty": "hard",
+        "difficulty": "tricky",
         "sourceIds": [
           "mel-communes-datamel"
         ],
@@ -2570,6 +2508,420 @@
           "Hem"
         ],
         "note": "Territoire Roubaisien."
+      }
+    ]
+  },
+  {
+    "id": "saveurs-du-nord-001",
+    "number": 38,
+    "title": "Tout l'Nord dans l'assiette",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille gastronomie : douceurs, plats, fromages et bières du Nord, à partir de relevés éditoriaux locaux.",
+    "status": "reviewed",
+    "tags": ["gastronomie", "biere", "metropole"],
+    "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "hello-lille", "comptoir-flandres-bieres-nord"],
+    "bonus": {
+      "question": "Le maroilles est un fromage du Nord.",
+      "answer": true,
+      "explanation": "Vrai. Le maroilles est un fromage à pâte molle de l'Avesnois."
+    },
+    "groups": [
+      {
+        "id": "sn-douceurs",
+        "title": "Douceurs du Nord",
+        "difficulty": "easy",
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+        "items": [
+          "Gaufre",
+          "Spéculoos",
+          "Tarte au sucre",
+          "Merveilleux"
+        ],
+        "note": "Des douceurs typiques du Nord."
+      },
+      {
+        "id": "sn-plats",
+        "title": "Plats du Nord",
+        "difficulty": "medium",
+        "sourceIds": ["hello-lille"],
+        "items": [
+          "Carbonnade",
+          "Potjevleesch",
+          "Hochepot",
+          "Welsh"
+        ],
+        "note": "Des plats salés bien du Nord."
+      },
+      {
+        "id": "sn-fromages",
+        "title": "Spécialités du Nord",
+        "difficulty": "hard",
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+        "items": [
+          "Maroilles",
+          "Mimolette",
+          "Flamiche",
+          "Waterzoï"
+        ],
+        "note": "Fromages et plats bien du Nord."
+      },
+      {
+        "id": "sn-bieres",
+        "title": "Bières du Nord",
+        "difficulty": "tricky",
+        "sourceIds": ["comptoir-flandres-bieres-nord"],
+        "items": [
+          "Ch'ti",
+          "Jenlain",
+          "3 Monts",
+          "Goudale"
+        ],
+        "note": "Des bières brassées dans le Nord."
+      }
+    ]
+  },
+  {
+    "id": "lille-culture-001",
+    "number": 39,
+    "title": "Lille côté culture",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille patrimoine et culture : quartiers, scènes, musées et monuments lillois, à partir des données ouvertes de la Ville.",
+    "status": "reviewed",
+    "tags": ["lille", "culture", "patrimoine", "metropole"],
+    "sourceIds": ["ville-lille-quartiers-data-gouv", "hello-lille", "ville-lille-monuments-historiques-data-gouv", "ville-lille-parcs-jardins-data-gouv"],
+    "bonus": {
+      "question": "Le Palais des Beaux-Arts se trouve à Lille.",
+      "answer": true,
+      "explanation": "Vrai. C'est l'un des plus grands musées de France, place de la République."
+    },
+    "groups": [
+      {
+        "id": "lc-quartiers",
+        "title": "Quartiers de Lille",
+        "difficulty": "easy",
+        "sourceIds": ["ville-lille-quartiers-data-gouv"],
+        "items": [
+          "Vieux-Lille",
+          "Wazemmes",
+          "Lille-Sud",
+          "Bois-Blancs"
+        ],
+        "note": "Quatre quartiers officiels de Lille."
+      },
+      {
+        "id": "lc-culture",
+        "title": "Lieux de culture",
+        "difficulty": "medium",
+        "sourceIds": ["hello-lille"],
+        "items": [
+          "La Piscine",
+          "Le Fresnoy",
+          "LaM",
+          "Tripostal"
+        ],
+        "note": "Des lieux culturels de la métropole."
+      },
+      {
+        "id": "lc-parcs",
+        "title": "Parcs et jardins",
+        "difficulty": "hard",
+        "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
+        "items": [
+          "Jardin des Géants",
+          "Jardin des Plantes",
+          "Jardin Vauban",
+          "Parc de la Citadelle"
+        ],
+        "note": "Des espaces verts de la métropole."
+      },
+      {
+        "id": "lc-patrimoine",
+        "title": "Patrimoine lillois",
+        "difficulty": "tricky",
+        "sourceIds": ["ville-lille-monuments-historiques-data-gouv"],
+        "items": [
+          "Citadelle",
+          "Hospice Comtesse",
+          "Noble Tour",
+          "Caserne Souham"
+        ],
+        "note": "Des monuments inscrits au patrimoine lillois."
+      }
+    ]
+  },
+  {
+    "id": "ch-ti-saveurs-001",
+    "number": 40,
+    "title": "Parlache et bonnes choses",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille ch'ti : mots du parler, douceurs, bières et quartiers, à partir de dictionnaires et relevés locaux.",
+    "status": "reviewed",
+    "tags": ["ch-ti", "gastronomie", "biere", "metropole"],
+    "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti", "banque-chtimi-gastronomie-jeux", "comptoir-flandres-bieres-nord", "ville-lille-quartiers-data-gouv"],
+    "bonus": {
+      "question": "Une « wassingue », c'est une serpillière dans le Nord.",
+      "answer": true,
+      "explanation": "Vrai. « Wassingue » désigne la serpillière dans le parler du Nord."
+    },
+    "groups": [
+      {
+        "id": "cs-mots",
+        "title": "Mots ch'ti",
+        "difficulty": "easy",
+        "sourceIds": ["nord-escapade-dictionnaire-chti", "comptoir-flandres-dictionnaire-chti"],
+        "items": [
+          "Biloute",
+          "Wassingue",
+          "Ducasse",
+          "Drache"
+        ],
+        "note": "Des mots et expressions du parler ch'ti."
+      },
+      {
+        "id": "cs-douceurs",
+        "title": "Douceurs du Nord",
+        "difficulty": "medium",
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+        "items": [
+          "Babelutte",
+          "Cramique",
+          "Vergeoise",
+          "Cassonade"
+        ],
+        "note": "Des douceurs typiques du Nord."
+      },
+      {
+        "id": "cs-bieres",
+        "title": "Bières du Nord",
+        "difficulty": "hard",
+        "sourceIds": ["comptoir-flandres-bieres-nord"],
+        "items": [
+          "Angelus",
+          "La Choulette",
+          "Pelforth",
+          "Grain d'Orge"
+        ],
+        "note": "Des bières brassées dans le Nord."
+      },
+      {
+        "id": "cs-quartiers",
+        "title": "Quartiers de Lille",
+        "difficulty": "tricky",
+        "sourceIds": ["ville-lille-quartiers-data-gouv"],
+        "items": [
+          "Faubourg de Béthune",
+          "Vauban-Esquermes",
+          "Lille-Moulins",
+          "Lille-Centre"
+        ],
+        "note": "Quatre quartiers officiels de Lille."
+      }
+    ]
+  },
+  {
+    "id": "lille-patrimoine-003",
+    "number": 41,
+    "title": "Pierres et jardins lillois",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille patrimoine : quartiers, hôtels particuliers, parcs et culture, à partir des données ouvertes de la Ville de Lille.",
+    "status": "reviewed",
+    "tags": ["lille", "patrimoine", "nature", "metropole"],
+    "sourceIds": ["ville-lille-quartiers-data-gouv", "ville-lille-monuments-historiques-data-gouv", "ville-lille-parcs-jardins-data-gouv", "hello-lille"],
+    "bonus": {
+      "question": "L'Hospice Comtesse se trouve dans le Vieux-Lille.",
+      "answer": true,
+      "explanation": "Vrai. L'Hospice Comtesse, fondé au XIIIe siècle, est dans le Vieux-Lille."
+    },
+    "groups": [
+      {
+        "id": "lp-quartiers",
+        "title": "Quartiers de Lille",
+        "difficulty": "easy",
+        "sourceIds": ["ville-lille-quartiers-data-gouv"],
+        "items": [
+          "Lille-Centre",
+          "Fives",
+          "Lomme",
+          "Hellemmes"
+        ],
+        "note": "Quartiers de Lille (ou communes associées)."
+      },
+      {
+        "id": "lp-parcs",
+        "title": "Parcs et jardins",
+        "difficulty": "medium",
+        "sourceIds": ["ville-lille-parcs-jardins-data-gouv"],
+        "items": [
+          "Jardin botanique Nicolas Boulay",
+          "Jardin de la Treille",
+          "Parc Henri Matisse",
+          "Parc Jean-Baptiste Lebas"
+        ],
+        "note": "Des espaces verts de la métropole."
+      },
+      {
+        "id": "lp-culture",
+        "title": "Lieux de culture",
+        "difficulty": "hard",
+        "sourceIds": ["hello-lille"],
+        "items": [
+          "Opéra de Lille",
+          "Théâtre du Nord",
+          "Palais des Beaux-Arts",
+          "Le Splendid"
+        ],
+        "note": "Des scènes et lieux culturels de la métropole."
+      },
+      {
+        "id": "lp-hotels",
+        "title": "Patrimoine lillois",
+        "difficulty": "tricky",
+        "sourceIds": ["ville-lille-monuments-historiques-data-gouv"],
+        "items": [
+          "Hôtel des Postes",
+          "Hôtel de Madre",
+          "Hôtel de Tenremonde",
+          "Hospice Ganthois"
+        ],
+        "note": "Des hôtels et monuments du patrimoine lillois."
+      }
+    ]
+  },
+  {
+    "id": "table-et-terroir-001",
+    "number": 42,
+    "title": "Du terroir à la table",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille gastronomie et culture : plats, douceurs, lieux culturels et quartiers, à partir de relevés éditoriaux locaux.",
+    "status": "reviewed",
+    "tags": ["gastronomie", "culture", "lille", "metropole"],
+    "sourceIds": ["hello-lille", "banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti", "ville-lille-quartiers-data-gouv"],
+    "bonus": {
+      "question": "Le potjevleesch est une terrine de viandes du Nord.",
+      "answer": true,
+      "explanation": "Vrai. Le potjevleesch est une terrine flamande de viandes blanches en gelée."
+    },
+    "groups": [
+      {
+        "id": "tt-quartiers",
+        "title": "Quartiers de Lille",
+        "difficulty": "easy",
+        "sourceIds": ["ville-lille-quartiers-data-gouv"],
+        "items": [
+          "Vauban-Esquermes",
+          "Moulins",
+          "Wazemmes",
+          "Bois-Blancs"
+        ],
+        "note": "Des quartiers de Lille."
+      },
+      {
+        "id": "tt-douceurs",
+        "title": "Douceurs du Nord",
+        "difficulty": "medium",
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+        "items": [
+          "Merveilleux",
+          "Gaufre",
+          "Tarte au sucre",
+          "Spéculoos"
+        ],
+        "note": "Des douceurs typiques du Nord."
+      },
+      {
+        "id": "tt-culture",
+        "title": "Lieux de culture",
+        "difficulty": "hard",
+        "sourceIds": ["hello-lille"],
+        "items": [
+          "La Condition Publique",
+          "L'Aéronef",
+          "Maison Folie",
+          "Musée d'Histoire Naturelle"
+        ],
+        "note": "Des lieux de culture de la métropole."
+      },
+      {
+        "id": "tt-plats",
+        "title": "Plats du Nord",
+        "difficulty": "tricky",
+        "sourceIds": ["hello-lille"],
+        "items": [
+          "Carbonnade",
+          "Potjevleesch",
+          "Hochepot",
+          "Welsh"
+        ],
+        "note": "Des plats salés bien du Nord."
+      }
+    ]
+  },
+  {
+    "id": "metropole-douceurs-001",
+    "number": 43,
+    "title": "La métropole gourmande",
+    "intro": "Connecte les mots avant la prochaine station.",
+    "finalNote": "Grille mêlant culture, patrimoine, bières et fromages de la métropole, à partir de relevés éditoriaux locaux.",
+    "status": "reviewed",
+    "tags": ["culture", "gastronomie", "biere", "metropole"],
+    "sourceIds": ["hello-lille", "ville-lille-monuments-historiques-data-gouv", "comptoir-flandres-bieres-nord", "banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+    "bonus": {
+      "question": "La bière Jenlain est brassée dans l'Avesnois.",
+      "answer": true,
+      "explanation": "Vrai. La brasserie Duyck, qui produit la Jenlain, est installée à Jenlain près de Valenciennes."
+    },
+    "groups": [
+      {
+        "id": "md-culture",
+        "title": "Lieux de culture",
+        "difficulty": "easy",
+        "sourceIds": ["hello-lille"],
+        "items": [
+          "La Piscine",
+          "Le Fresnoy",
+          "LaM",
+          "Tripostal"
+        ],
+        "note": "Des lieux culturels de la métropole."
+      },
+      {
+        "id": "md-fromages",
+        "title": "Spécialités du Nord",
+        "difficulty": "medium",
+        "sourceIds": ["banque-chtimi-gastronomie-jeux", "comptoir-flandres-dictionnaire-chti"],
+        "items": [
+          "Maroilles",
+          "Mimolette",
+          "Flamiche",
+          "Waterzoï"
+        ],
+        "note": "Fromages et plats bien du Nord."
+      },
+      {
+        "id": "md-bieres",
+        "title": "Bières du Nord",
+        "difficulty": "hard",
+        "sourceIds": ["comptoir-flandres-bieres-nord"],
+        "items": [
+          "Ch'ti",
+          "Jenlain",
+          "3 Monts",
+          "Goudale"
+        ],
+        "note": "Des bières brassées dans le Nord."
+      },
+      {
+        "id": "md-patrimoine",
+        "title": "Patrimoine lillois",
+        "difficulty": "tricky",
+        "sourceIds": ["ville-lille-monuments-historiques-data-gouv"],
+        "items": [
+          "Chambre de Commerce et d'Industrie",
+          "Hospice Comtesse",
+          "Caserne Souham",
+          "Noble Tour"
+        ],
+        "note": "Des monuments inscrits au patrimoine lillois."
       }
     ]
   }

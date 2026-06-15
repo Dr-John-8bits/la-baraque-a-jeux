@@ -695,3 +695,55 @@ body.help-open {
   font-weight: 900;
   cursor: pointer;
 }
+
+/* Indices + score */
+.hint-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hint-bar .action-button {
+  width: auto;
+}
+
+.hint-score {
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.hints-revealed {
+  margin: 0;
+}
+
+.hints-revealed:empty {
+  display: none;
+}
+
+.hints-revealed__label {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hints-revealed ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hints-revealed li {
+  border: var(--labaj-border-strong);
+  border-radius: 999px;
+  padding: 5px 12px;
+  background: color-mix(in srgb, var(--yellow), white 55%);
+  font-weight: 850;
+  font-size: 0.86rem;
+}

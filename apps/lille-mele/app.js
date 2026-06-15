@@ -7,6 +7,11 @@ import { escapeHtml } from "../../packages/game-utils/text-render.js";
 import { renderCalepin, setupCalepinTools } from "../../packages/ui/calepin.js";
 
 const MAX_MISTAKES = 4;
+const BASE_SCORE = 1000;
+const MISTAKE_PENALTY = 100;
+const HINT_COSTS = [0, 150, 200, 250]; // 1er indice gratuit, les 3 suivants payants
+const MAX_HINTS = HINT_COSTS.length;
+const DIFFICULTY_ORDER = { easy: 0, medium: 1, hard: 2, tricky: 3 };
 const STORAGE_PREFIX = "lillemele.v1.";
 const HIDE_HELP_KEY = `${STORAGE_PREFIX}hideHelpOnLaunch`;
 const APP_VERSION = "26.06.02.4";
@@ -25,6 +30,7 @@ const DEFAULT_STATS = {
   won: 0,
   currentStreak: 0,
   bestStreak: 0,
+  bestScore: null,
   lastPlayedDateId: "",
   lastWinDateId: "",
   history: [],
@@ -61,6 +67,9 @@ const els = {
   submitButton: document.querySelector("#submitButton"),
   result: document.querySelector("#result"),
   rulesButton: document.querySelector("#rulesButton"),
+  hintButton: document.querySelector("#hintButton"),
+  hintScore: document.querySelector("#hintScore"),
+  hintsRevealed: document.querySelector("#hintsRevealed"),
   statsButton: document.querySelector("#statsButton"),
   statsDialog: document.querySelector("#statsDialog"),
   statsList: document.querySelector("#statsList"),
@@ -97,6 +106,8 @@ function makeInitialState() {
     selectedItems: [],
     foundGroupIds: [],
     mistakes: 0,
+    hintsUsed: 0,
+    revealedGroupIds: [],
     status: "in_progress",
     attempts: [],
     itemOrder: seededShuffle(
@@ -132,6 +143,8 @@ function hydrateState(saved) {
     puzzleId: puzzle.id,
     selectedItems: Array.isArray(saved.selectedItems) ? saved.selectedItems : [],
     foundGroupIds: Array.isArray(saved.foundGroupIds) ? saved.foundGroupIds : [],
+    hintsUsed: Number(saved.hintsUsed) || 0,
+    revealedGroupIds: Array.isArray(saved.revealedGroupIds) ? saved.revealedGroupIds : [],
     attempts: Array.isArray(saved.attempts) ? saved.attempts : [],
     itemOrder: Array.isArray(saved.itemOrder) ? saved.itemOrder : initial.itemOrder,
     officialResultRecorded: Boolean(saved.officialResultRecorded || saved.completedRecorded),
@@ -177,18 +190,21 @@ function updateStatsIfNeeded() {
   stats.played += 1;
   stats.lastPlayedDateId = todayId;
 
+  const score = computeScore();
+
   if (state.status === "won") {
     const previousDailyId = getPreviousDailyId(todayId);
     stats.won += 1;
     stats.currentStreak = stats.lastWinDateId === previousDailyId ? stats.currentStreak + 1 : 1;
     stats.bestStreak = Math.max(stats.bestStreak, stats.currentStreak);
     stats.lastWinDateId = todayId;
+    stats.bestScore = stats.bestScore ? Math.max(stats.bestScore, score) : score;
   } else {
     stats.currentStreak = 0;
   }
 
   stats.history = [
-    { dateId: todayId, won: state.status === "won", mistakes: state.mistakes },
+    { dateId: todayId, won: state.status === "won", mistakes: state.mistakes, score, hintsUsed: state.hintsUsed },
     ...(Array.isArray(stats.history) ? stats.history : []),
   ].slice(0, 30);
 
@@ -208,6 +224,7 @@ function render() {
   renderCountdown();
   els.mistakes.textContent = `${state.mistakes} / ${MAX_MISTAKES}`;
   els.streak.textContent = String(stats.currentStreak || 0);
+  renderHintControls();
   els.message.className = `message ${messageTone}`.trim();
   const feedbackActive = visualFeedback.items.length > 0;
   els.actions.hidden = state.status !== "in_progress";
@@ -334,7 +351,7 @@ function renderResult() {
         ? `${escapeHtml(puzzle.finalNote)} Reviens demain à midi pour une nouvelle grille.`
         : "Les familles sont révélées dans la grille. Reviens demain à midi pour retenter ta chance."
     }</p>
-    <p><strong>Erreurs :</strong> ${state.mistakes} / ${MAX_MISTAKES}</p>
+    <p><strong>Score :</strong> ${computeScore()} · <strong>Erreurs :</strong> ${state.mistakes}/${MAX_MISTAKES}${state.hintsUsed ? ` · <strong>Indices :</strong> ${state.hintsUsed}` : ""}</p>
     ${groupsHtml}
     ${bonusHtml}
     <div class="result-actions">
@@ -387,6 +404,61 @@ function toggleItem(item) {
     state.selectedItems.push(item);
   }
   render();
+}
+
+function hintCostSpent() {
+  return HINT_COSTS.slice(0, state.hintsUsed).reduce((sum, cost) => sum + cost, 0);
+}
+
+function computeScore() {
+  if (state.status === "lost") return 0;
+  return Math.max(0, BASE_SCORE - state.mistakes * MISTAKE_PENALTY - hintCostSpent());
+}
+
+function remainingHintableGroups() {
+  return puzzle.groups
+    .filter((group) => !state.foundGroupIds.includes(group.id) && !state.revealedGroupIds.includes(group.id))
+    .sort((a, b) => (DIFFICULTY_ORDER[a.difficulty] ?? 1) - (DIFFICULTY_ORDER[b.difficulty] ?? 1));
+}
+
+function canRequestHint() {
+  return (
+    state.status === "in_progress" &&
+    state.hintsUsed < MAX_HINTS &&
+    remainingHintableGroups().length > 0
+  );
+}
+
+function requestHint() {
+  if (!canRequestHint()) return;
+  const reveal = remainingHintableGroups()[0];
+  state.revealedGroupIds.push(reveal.id);
+  state.hintsUsed += 1;
+  messageTone = "";
+  els.message.textContent = `Indice : une famille à trouver = « ${reveal.title} ».`;
+  saveState();
+  render();
+}
+
+function renderHintControls() {
+  if (els.hintScore) els.hintScore.textContent = `Score : ${computeScore()}`;
+  if (els.hintButton) {
+    const cost = state.hintsUsed < MAX_HINTS ? HINT_COSTS[state.hintsUsed] : null;
+    els.hintButton.disabled = !canRequestHint();
+    els.hintButton.textContent =
+      cost === null ? "Indices épuisés" : cost === 0 ? "Indice gratuit" : `Indice (-${cost} pts)`;
+  }
+  if (els.hintsRevealed) {
+    const active = state.revealedGroupIds
+      .filter((id) => !state.foundGroupIds.includes(id))
+      .map((id) => puzzle.groups.find((group) => group.id === id))
+      .filter(Boolean);
+    els.hintsRevealed.innerHTML = active.length
+      ? `<p class="hints-revealed__label">Famille${active.length > 1 ? "s" : ""} révélée${active.length > 1 ? "s" : ""} :</p><ul>${active
+          .map((group) => `<li>${escapeHtml(group.title)}</li>`)
+          .join("")}</ul>`
+      : "";
+  }
 }
 
 function submitSelection() {
@@ -509,7 +581,7 @@ function buildShareText() {
     lines.push((SHARE_GLYPHS[getGroupIndex(groupId)] || "⬜").repeat(4));
   });
   while (lines.length < 5) lines.push("⬛⬛⬛⬛");
-  lines.push(`Erreurs : ${state.mistakes}/${MAX_MISTAKES}`);
+  lines.push(`Score : ${computeScore()} · Erreurs : ${state.mistakes}/${MAX_MISTAKES}`);
   lines.push(new URL(".", window.location.href).href);
   return lines.join("\n");
 }
@@ -797,7 +869,7 @@ function renderCalepinStats() {
         { label: "Parties", value: played },
         { label: "Réussites", value: won },
         { label: "Série", value: stats.currentStreak || 0 },
-        { label: "Meilleure série", value: stats.bestStreak || 0 },
+        { label: "Meilleur score", value: stats.bestScore || "-" },
         { label: "Réussite", value: played ? `${Math.round((won / played) * 100)}%` : "-" },
       ],
       historyLines: (stats.history || []).map(formatCalepinHistory),
@@ -805,10 +877,10 @@ function renderCalepinStats() {
         .slice(0, 7)
         .reverse()
         .map((entry) => ({
-          ratio: entry.won ? Math.max(0.2, (MAX_MISTAKES - (entry.mistakes || 0)) / MAX_MISTAKES) : 0.12,
-          label: `${entry.mistakes || 0}✗`,
+          ratio: Math.max(0, Math.min(1, (Number(entry.score) || 0) / BASE_SCORE)),
+          label: String(Number(entry.score) || 0),
           result: entry.won ? "won" : "lost",
-          ariaLabel: `${entry.dateId}, ${entry.mistakes || 0} erreurs, ${entry.won ? "réussi" : "raté"}`,
+          ariaLabel: `${entry.dateId}, ${entry.score || 0} points, ${entry.won ? "réussi" : "raté"}`,
         })),
       historyEmpty: "Aucune grille terminée pour l'instant.",
     }
@@ -817,13 +889,15 @@ function renderCalepinStats() {
 
 function formatCalepinHistory(entry) {
   const errors = entry.mistakes || 0;
-  return `${entry.dateId} · ${entry.won ? "réussi" : "raté"} · ${errors} erreur${errors > 1 ? "s" : ""}`;
+  const head = entry.won ? `${entry.score || 0} pts` : "raté";
+  return `${entry.dateId} · ${head} · ${errors} erreur${errors > 1 ? "s" : ""}`;
 }
 
 function sanitizeStats(raw) {
   const out = { ...DEFAULT_STATS };
   if (raw && typeof raw === "object") {
     for (const key of ["played", "won", "currentStreak", "bestStreak"]) out[key] = Number(raw[key]) || 0;
+    out.bestScore = Number.isFinite(Number(raw.bestScore)) ? Number(raw.bestScore) : null;
     if (typeof raw.lastPlayedDateId === "string") out.lastPlayedDateId = raw.lastPlayedDateId;
     if (typeof raw.lastWinDateId === "string") out.lastWinDateId = raw.lastWinDateId;
     if (Array.isArray(raw.history)) out.history = raw.history.slice(0, 30);
@@ -835,6 +909,7 @@ els.submitButton.addEventListener("click", submitSelection);
 els.clearButton.addEventListener("click", clearSelection);
 els.shuffleButton.addEventListener("click", shuffleActiveItems);
 els.rulesButton.addEventListener("click", showFirstHelp);
+els.hintButton?.addEventListener("click", requestHint);
 els.statsButton?.addEventListener("click", openCalepin);
 els.firstHelpStartButton?.addEventListener("click", () => hideFirstHelp());
 window.addEventListener("keydown", handleHelpKeydown);
