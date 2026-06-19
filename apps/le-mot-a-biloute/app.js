@@ -38,6 +38,35 @@ try {
   throw error;
 }
 
+// Le mot du jour est tiré séquentiellement dans WORDS (offset % longueur), donc
+// l'ordre du tableau = l'ordre des jours. Le corpus liste les mots par familles
+// (toutes les communes ensemble, etc.), ce qui faisait sortir la même thématique
+// plusieurs jours d'affilée. On étale donc les catégories en round-robin « glouton »
+// au chargement : à chaque pas on repart sur la catégorie la plus fournie qui n'est
+// pas celle du mot précédent. Résultat : jamais deux jours de suite la même
+// thématique, et un brassage qui se rééquilibre tout seul quand le corpus grandit.
+function spreadByCategory(words) {
+  const buckets = new Map();
+  for (const word of words) {
+    const key = word?.category || "";
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(word);
+  }
+  const spread = [];
+  let previous = null;
+  while (spread.length < words.length) {
+    const candidates = [...buckets.entries()]
+      .filter(([, items]) => items.length)
+      .sort((a, b) => b[1].length - a[1].length || (a[0] < b[0] ? -1 : 1));
+    const pick = candidates.find(([key]) => key !== previous) || candidates[0];
+    spread.push(pick[1].shift());
+    previous = pick[0];
+  }
+  return spread;
+}
+
+WORDS = spreadByCategory(WORDS);
+
 function loadFrenchGuesses() {
   fetchJson("../../packages/corpus/le-mot-a-biloute/french-guesses.json")
     .then((data) => {
