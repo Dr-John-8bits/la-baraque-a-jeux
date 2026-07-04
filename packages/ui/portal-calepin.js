@@ -1,8 +1,7 @@
 /*
  * « Mon calepin » du portail : une modale qui agrège les stats des jeux (localStorage,
- * même origine, zéro backend), une heatmap de régularité, des jalons, et « Le Palmarès
- * du jour » — une pop-up avec médailles (bronze/argent/or) et coupe partageable quand
- * les 4 jeux du jour sont bouclés.
+ * même origine, zéro backend), des jalons, et « Le Palmarès du jour » — une pop-up avec
+ * médailles (bronze/argent/or) et coupe partageable quand les 4 jeux du jour sont bouclés.
  *
  * Les jeux ne nomment pas leurs champs pareil (Le Mot : lastPlayed/won/streak ;
  * Lille-Mêle : lastPlayedDateId/won/currentStreak ; Station : lastPlayedDateId/wins/currentStreak),
@@ -16,8 +15,6 @@ const TIME_ZONE = "Europe/Paris";
 const ROLLOVER_HOUR = 12;
 const todayId = getDailyDateId(new Date(), { timeZone: TIME_ZONE, rolloverHour: ROLLOVER_HOUR });
 
-const ACTIVITY_KEY = "labaj:activity";
-const SEED_KEY = "labaj:activitySeeded";
 const PALMARES_SEEN_KEY = "labaj:palmaresSeen";
 
 const PORTAL_URL = "https://dr-john-8bits.github.io/la-baraque-a-jeux/";
@@ -46,13 +43,6 @@ function writeJson(key, value) {
 }
 
 const num = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
-const isDateId = (d) => typeof d === "string" && /^\d{4}-\d{2}-\d{2}$/.test(d);
-
-function dateIdMinus(days) {
-  const d = new Date(`${todayId}T12:00:00Z`);
-  d.setUTCDate(d.getUTCDate() - days);
-  return d.toISOString().slice(0, 10);
-}
 
 // --- Collecte des stats par jeu ---
 const games = GAMES.map((g) => {
@@ -180,31 +170,6 @@ function computePalmares() {
 
 const palmares = computePalmares();
 
-// --- Journal d'activité (pour la heatmap) ---
-function buildActivityLog() {
-  const log = readJson(ACTIVITY_KEY, {}) || {};
-  // Amorçage unique depuis les historiques des jeux qui en gardent un (Le Mot, Station).
-  if (!localStorage.getItem(SEED_KEY)) {
-    const perDate = {};
-    for (const g of games) {
-      const hist = Array.isArray(g.stats.history) ? g.stats.history : [];
-      for (const entry of hist) {
-        const d = entry?.date || entry?.dateId;
-        if (isDateId(d)) (perDate[d] ||= new Set()).add(g.key);
-      }
-    }
-    for (const [d, set] of Object.entries(perDate)) {
-      log[d] = Math.max(num(log[d]), set.size);
-    }
-    localStorage.setItem(SEED_KEY, "1");
-  }
-  // Mise à jour du jour à partir de l'état réel des jeux.
-  if (doneToday > 0) log[todayId] = Math.max(num(log[todayId]), doneToday);
-  writeJson(ACTIVITY_KEY, log);
-  return log;
-}
-const activityLog = buildActivityLog();
-
 // --- Rendu ---
 function renderStatCard(g) {
   const rows = [
@@ -221,24 +186,6 @@ function renderStatCard(g) {
         ${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}
       </dl>
     </article>`;
-}
-
-function renderHeatmap() {
-  const WEEKS = 12;
-  const days = [];
-  for (let i = WEEKS * 7 - 1; i >= 0; i -= 1) days.push(dateIdMinus(i));
-  const firstDow = (new Date(`${days[0]}T12:00:00Z`).getUTCDay() + 6) % 7; // lundi = 0
-  const blanks = Array.from({ length: firstDow }, () => '<span class="heatmap__cell heatmap__cell--blank"></span>');
-  const cells = days.map((d) => {
-    const level = Math.min(3, num(activityLog[d]));
-    return `<span class="heatmap__cell" data-level="${level}" title="${d} — ${num(activityLog[d])}/${GAMES.length}"></span>`;
-  });
-  return `
-    <section class="calepin-section">
-      <h3>Ta régularité <span class="calepin-section__sub">(12 dernières semaines)</span></h3>
-      <div class="heatmap" role="img" aria-label="Calendrier d'activité des 12 dernières semaines">${blanks.join("")}${cells.join("")}</div>
-      <p class="heatmap__legend"><span>moins</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><span>plus</span></p>
-    </section>`;
 }
 
 function renderBadges() {
@@ -274,7 +221,6 @@ function renderCalepin() {
     <section class="calepin-section">
       <div class="calepin-games">${games.map(renderStatCard).join("")}</div>
     </section>
-    ${renderHeatmap()}
     ${renderBadges()}`;
   if (allPlayed) {
     const slot = document.getElementById("calepinPalmares");
