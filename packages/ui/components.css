@@ -499,38 +499,172 @@ body.labaj-site {
   opacity: 1;
 }
 
-/* ===== Célébration : tous les jeux du jour bouclés ===== */
-.celebration {
-  position: fixed;
-  left: 50%;
-  /* sous l'en-tête sticky (62px, z-index 100) et au-dessus de lui, pour ne pas être tronqué */
-  top: 74px;
-  z-index: 200;
-  width: max-content;
-  max-width: min(520px, calc(100% - 24px));
-  margin: 0;
+/* ===== Le Palmarès du jour : médailles + coupe (les 4 jeux bouclés) ===== */
+.palmares-dialog {
+  width: min(460px, calc(100% - 24px));
+  max-height: min(88svh, 780px);
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--labaj-ink);
+}
+
+.palmares-dialog::backdrop {
+  background: rgba(7, 27, 49, 0.42);
+  backdrop-filter: blur(8px);
+}
+
+.palmares-dialog__panel {
+  max-height: min(88svh, 780px);
+  overflow: auto;
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--labaj-line);
+  border-radius: var(--labaj-radius);
+  padding: 16px;
+  background: var(--labaj-surface);
+  box-shadow: var(--labaj-shadow);
+}
+
+.palmares-dialog__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.palmares-dialog__top h2 {
+  margin: 2px 0 0;
+  font-size: 1.35rem;
+}
+
+.palmares-dialog__close {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
   border: var(--labaj-border-strong);
   border-radius: var(--labaj-radius);
-  box-shadow: var(--labaj-shadow-hard);
-  padding: 12px 16px;
+  box-shadow: var(--labaj-shadow-hard-sm);
   background: var(--labaj-gold);
   color: var(--labaj-ink);
+  font-size: 1.1rem;
   font-weight: 900;
-  text-align: center;
-  opacity: 0;
-  transform: translateX(-50%) translateY(-18px);
-  transition:
-    opacity 320ms ease,
-    transform 320ms ease;
+  cursor: pointer;
 }
 
-.celebration.is-visible {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+.palmares {
+  display: grid;
+  gap: 12px;
 }
 
-.celebration[hidden] {
-  display: none;
+.palmares-summary {
+  margin: 0;
+  color: var(--labaj-muted);
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+.palmares-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.palmares-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--labaj-line);
+  border-radius: var(--labaj-radius);
+  padding: 8px 12px;
+  background: var(--labaj-paper);
+}
+
+.palmares-row.is-lost {
+  opacity: 0.72;
+}
+
+.palmares-row__medal {
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.palmares-row__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+  gap: 1px;
+}
+
+.palmares-row__game {
+  font-weight: 850;
+}
+
+.palmares-row__perf {
+  color: var(--labaj-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.palmares-row__tier {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--labaj-muted);
+}
+
+.palmares-coupe {
+  margin: 0;
+  border: 1px solid var(--labaj-line);
+  border-radius: var(--labaj-radius);
+  padding: 12px;
+  background: var(--labaj-paper);
+  color: var(--labaj-muted);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.palmares-coupe.is-won {
+  border: var(--labaj-border-strong);
+  background: var(--labaj-gold);
+  color: var(--labaj-ink);
+  font-weight: 850;
+}
+
+.palmares-coupe__cup {
+  font-size: 1.15rem;
+}
+
+.palmares-share {
+  width: 100%;
+  min-height: 48px;
+  border: var(--labaj-border-strong);
+  border-radius: var(--labaj-radius);
+  box-shadow: var(--labaj-shadow-hard-sm);
+  background: var(--labaj-ink);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.palmares-share:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--labaj-shadow-hard);
+}
+
+.palmares-share:disabled {
+  background: var(--labaj-line);
+  color: var(--labaj-muted);
+  box-shadow: none;
+  cursor: default;
 }
 
 .confetti-layer {

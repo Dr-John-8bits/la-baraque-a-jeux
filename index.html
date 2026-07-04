@@ -140,7 +140,18 @@
 
     </main>
 
-    <div class="celebration" id="celebration" role="status" aria-live="polite" hidden></div>
+    <dialog class="palmares-dialog" id="palmaresDialog" aria-labelledby="palmaresTitle">
+      <div class="palmares-dialog__panel">
+        <div class="palmares-dialog__top">
+          <div>
+            <p class="eyebrow">La baraque à jeux</p>
+            <h2 id="palmaresTitle">Le Palmarès du jour</h2>
+          </div>
+          <button class="palmares-dialog__close" type="button" data-palmares-close aria-label="Fermer le palmarès">✕</button>
+        </div>
+        <div id="palmaresContent"></div>
+      </div>
+    </dialog>
 
     <dialog class="calepin-dialog" id="calepinDialog" aria-labelledby="calepinTitle">
       <div class="calepin-dialog__panel">
