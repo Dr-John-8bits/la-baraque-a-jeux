@@ -195,6 +195,12 @@ button.labaj-link {
   line-height: 1.55;
 }
 
+.about-dialog__credit {
+  font-size: 0.82rem;
+  font-style: italic;
+  opacity: 0.85;
+}
+
 @media (max-width: 560px) {
   .labaj-nav {
     width: min(100% - 16px, 920px);

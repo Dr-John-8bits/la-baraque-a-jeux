@@ -27,6 +27,9 @@ const aboutDialogHtml = `
           Merci de jouer, d'explorer, et de faire vivre cette petite baraque à
           jeux.
         </p>
+        <p class="about-dialog__credit">
+          Conception humaine, publication assistée par IA.
+        </p>
         <a
           class="support-button"
           href="https://ko-fi.com/drjohn88218"
